@@ -56,6 +56,59 @@ Groupe Pichet (rachats Burban, Dodim);score;"Grand promoteur national, rachats n
 Evoriel (ex-Nexity Services aux particuliers + Oralia, fonds Bridgepoint);privée;"Groupe national de 200 agences / 3 100 salariés intégrant Oralia et Nexity (exclus) ; hors cible 5-50 agences";AA8
 Catanéo Groupe (Lyon);email;Pas de rachat (croissance organique) et aucun email de l'entreprise trouvé dans les mentions légales;AA8
 Groupe L2M (Brest, reprise des agences Océanic);email;"Email masqué dans le résultat ; sites en marque blanche Orpi ; rachat non daté 2026";AA8
+Agence Etoile-Pradimmo (Marseille);besoin;"Aucun rachat 2026 trouvé ; intégrée au réseau IMOGROUP depuis 2023";BB1
+Thierry Immobilier (Nantes);besoin;Pas de rachat 2026 trouvé (dernières opérations : ouverture Angers 2025, Guérande 2018);BB1
+Hémon Camus (Nantes);score;Plusieurs marques/sites mais aucun signal daté 2026 : urgence trop faible;BB1
+Digit RE Group (Montpellier);privée;Groupe proptech (Safti) avec R&D interne : profil concurrent / trop gros;BB1
+Peak Immobilier (Haute-Savoie);preuves;Rachat Christelle Clauss antérieur à 2026 et hors régions ciblées;BB1
+Groupe Benedic (Cabinet Benedic, Metz);besoin;"Aucun rachat daté 2026 trouvé (Klein Immobilier, Habiter antérieurs) ; possède déjà la proptech Homeloop, besoin dev externe non documenté";BB2
+Christelle Clauss Immobilier (Obernai, ~30 agences);email;"Email servicecom@christelleclauss.com et tél 03 88 81 00 10 vus dans un résumé agrégé sans URL source certaine ; aucun rachat daté 2026 confirmé — piste à revérifier";BB2
+Thierry Immobilier (Nantes);besoin;Hors régions ciblées (Pays de la Loire), pas de rachat 2026 documenté;BB2
+Primmo Immobilier (Lyon / Monts d'Or);besoin;Dernier rachat documenté en 2014, aucun signal 2026;BB2
+Logis Conseil (Châtenay-Malabry);besoin;Aucun rachat ni signal 2026 trouvé;BB2
+Synalp (gestion de patrimoine, Savoie);privée;Hors cible : cabinet de gestion de patrimoine, pas un administrateur de biens immobiliers;BB2
+Citya Immobilier (reprise Square Habitat Nord de France);doublon;Consolidateur national (55 agences reprises, ~500 salariés), hors cible groupe régional indépendant, comme Evoriel;BB2
+Groupe Pozzo (Pozzo Immobilier);contrôle qualité;QA : source du téléphone incertaine (post LinkedIn 2023 ou annuaire, non confirmé);BB2
+Groupe Riester (Coulommiers, 77);score;Signal réel (Hyundai Compiègne racheté à Mary, XPENG Saint-Maximin, Leapmotor Beauvais, 30+ concessions, deux versions de mentions légales) mais seul email = DPO nominatif (gaelle.verpy@riester.fr) et téléphone d'une concession : score 68;BB3
+Transports Rabouin SAS (Le Cellier, 44);score;Candidat Transporteur de l'année 2026, exploitation@rabouin.com et 02 40 25 37 00 trouvés, mais aucun besoin digital documenté (seulement deux sites rabouin.com / grouperabouin.fr) : score 61;BB3
+Groupe Simon / Transports Simon (Rethel, 08);email;Candidat Transporteur de l'année 2026 (80 ans, 350 salariés) mais aucun email, téléphone ambigu (confusion avec un homonyme normand);BB3
+Multi Transports (43) / Groupe Ducournau (83);doublon;Candidats Transporteur de l'année 2026 déjà traités (EXCLUSIONS);BB3
+Transports Bon SA (Vaudherland, 95);email;"Non retraité faute de budget de recherche ; toujours aucun email connu";BB3
+Tissendo;contrôle qualité;QA : email nominatif du président dont la page source (lyon-finance.org) n'est pas confirmée;BB3
+Jacq Henrio (Gedimat, Bretagne);email;"8e Gedimat à Lanester mais aucun email ni site propre trouvé ; date de l'ouverture incertaine (probablement antérieure à 2026)";BB4
+Gedex (coopérative Gedimat-Gedibois);score;"Tête de groupement de 200+ adhérents (2,7 Md€) ; actualité trouvée datée de 2023 — hors cible";BB4
+Groupe Plattard (Plattard Négoce);score;"Reprise d'une seule agence Samse (Saint-Forgeux) en 2025 ; groupe détenu à 34 % par Samse, signal faible";BB4
+Partner Distribution (Ris-Orangis, 91);email;"Adhésion France Matériaux au 1/01/2026 ; seul le téléphone et l'email du groupement trouvés, aucun email propre";BB4
+Boulard Verdier / Groupe Bomeil (Gedimat, Clermont-Ferrand);email;Agrandissement du dépôt de Clermont-Ferrand (Village du Bâtiment) mais aucun email publié trouvé;BB4
+DSC / SGDB France (reprise ASDC, Ardennes);privée;Filiale d'un grand groupe (Saint-Gobain Distribution Bâtiment) — hors cible Capmedia;BB4
+Renovio (Sèvres, 92);email;"Groupe multi-rachats 2026 (Normandie, IDF) pertinent mais aucune adresse email publiée trouvée (formulaire seulement) ; tél 01 89 70 50 29 trouvé";BB5
+LBGE / LBGE Énergie (Kervignac, groupe Face);besoin;Rachat daté sept. 2025 (hors fenêtre 2026), intégré à un groupe adossé à un fonds;BB5
+Rateau Frères (rachat Bouet Saumelec);score;38 salariés, date du rachat non confirmée 2026, pas de besoin digital observé;BB5
+Groupe CEME (Lyon, rachat Technichauffe);email;Groupe >1 500 salariés (hors cible 20-300) et aucun email publié trouvé;BB5
+Hyperion Développement (diagnostics immobiliers, Château-Gontier-sur-Mayenne);email;"Signaux 2026 forts (Diag XV, rachat Acore Ingénierie, 180 salariés) mais email masqué ([email protected]) dans le résumé des mentions légales ; seul tél = mobile attachée de presse";BB5
+Netman (Rouen, rachat Acor-clean);score;ETI de propreté hors cible 20-300 salariés, pas de besoin digital observé;BB5
+RPQeau (Lorient);score;10 salariés, hors cible 20-300;BB5
+Groupe O / Inphyto;score;Petite structure en levée de fonds (1 M€), taille hors cible, pas de rachat ni agence daté 2026;BB5
+Ecoclean Services (Clichy);besoin;Propreté pure (hors périmètre services techniques), rachats décembre 2025, aucun besoin digital documenté;BB5
+Groupe Omnium (Marseille, rénovation enveloppe du bâtiment);score;"Rachat SATE daté 2025, besoin web faible (2 domaines), source email ambiguë ; score estimé ~59";BB6
+Maisons Comeca / groupe Maupiti (rachat MTC);besoin;Brève ancienne (non 2026), pas de signal récent;BB6
+SoCoo'c / Mobalpa / Ixina / Aviva;doublon;Grands réseaux nationaux ou déjà traités (groupe Fournier exclu);BB6
+Cuisines Références (réseau de cuisinistes);email;"Seul email trouvé = service.client@ (service client), résumé mêlant cuisine-plus.fr ; source incertaine";BB6
+Génération Piscine (Revel, rachat Boulevard de la Piscine);téléphone;"Seuls un email nominatif et un portable (06) issus d'un annuaire fédération + un 04 incohérent avec Revel ; sources mêlées";BB6
+Sud Ouest Habitat (Miélan, 32, menuiseries/vérandas);score;"Coordonnées trouvées (info@sudouesthabitat.fr, 05 62 62 06 20) mais signal de rachat daté fin 2025 et aucun besoin web observé ; score estimé 62";BB6
+Groupe Pando (reprise Menuiserie Moreau, Menuiserie Jung, France Volet);preuves;Brève 2025, quota de recherches épuisé avant vérification des coordonnées;BB6
+HDV (Alpha Constructions, ya'K construire.com…) racheté par Hexaom;doublon;"Désormais filiale d'Hexaom (groupe coté, Rénovert déjà traité) ; décision centralisée";BB6
+Irripiscine by Irrijardin (Irrijardin SA);contrôle qualité;"QA : email non visible dans le résumé de la page source citée ; non confirmé";BB6
+VPLUS (réseau vétérinaire, Bordeaux-Poitiers);email;"Seule adresse trouvée : rh@vplus.fr (inadaptée) ; contact groupe via formulaire uniquement";BB7
+HOMA Santé (ex-GAGN Groupement Ambulancier du Grand Nord, Saint-Omer);score;"Coordonnées trouvées (contact@gagn.care, 03 21 93 93 43) mais rachat SOS Ambulance non daté < 6 mois, rebranding déjà fait (homasante.com) ; besoin faible, score estimé 60";BB7
+Imalliance HDF (SELAS, Templeuve-en-Pévèle, imagerie médicale);email;"Seule adresse vue : rdv@imalliance-hdf.com (canal patients, source agrégée incertaine) ; groupe de 62 radiologues à flux patients = proche des données de santé";BB7
+My Vet France (6 cliniques vétérinaires, Alpes-Maritimes);email;"Aucun email groupe visible dans les résultats ; dernière ouverture (Beausoleil) en mars 2024, pas de signal 2026";BB7
+Phonème audioprothésistes (Combourg, Liffré, Rennes, 35);besoin;"Hors cible taille (3 centres) malgré ouverture juin 2026 ; non approfondi pour économiser le quota";BB7
+IK – Institut de Kinésithérapie (Cabinet Jérôme Auger SELARL, Paris, 15 centres);email;"Aucun email visible (mentions légales sans adresse) ; RDV déjà via Doctolib";BB7
+Groupe Hermès/Plage (cliniques vétérinaires, Marseille/Aubagne);score;"Coordonnées vues (contacthermes@hermes-plage.fr, 04 91 25 13 14 via annuaire-france.net/LinkedIn, source partiellement agrégée) ; 4 cliniques ; ouverture de capital (Sofipaca/Connect Pro) et projet de clinique de référence non datés < 6 mois, aucun signal 2026 ; domaines multiples (hermes-plage.fr, vetinmarseille.fr, clinique-veterinaire-hermes.com « Vetesia » ambigu) ; score estimé 61";BB7
+Biscuiterie Jeannette (Jeannette 1850, Démouville);email;Rachat par le DG en 2026 mais aucun email professionnel visible dans les résultats (seulement téléphone 02 50 01 14 46).;BB8
+Domaine Kirrenbourg (pôle vins du Groupe CAM, avec Domaine Hurst);contrôle qualité;QA : page source de l'email incertaine (résumés contradictoires);BB8
+Les Bienheureux;contrôle qualité;"QA : téléphone rattaché à Kompass sans certitude ; deux SIREN possibles";BB8
 Bureau Alpes Contrôles;score;DSI d'une trentaine de personnes, offre développeur web référencée janvier 2026 : fit et urgence faibles (<70);T01
 Primal (ex-Solem);score;"Fabricant IoT avec équipes de développement internes ; téléphone non trouvé ; fit faible";T01
 LIP Tertiaire;privée;Agence d'intérim/recrutement : l'offre est pour un client, pas un besoin propre;T01

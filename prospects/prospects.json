@@ -216,6 +216,244 @@
   "niveau": "QUALIFIÉ"
  },
  {
+  "id": "BB8-001",
+  "entreprise": "Brasserie de Bretagne (groupe Fabulous French Brasseurs)",
+  "siren": "418671749",
+  "secteur": "Brasserie artisanale / groupe brassicole multi-marques",
+  "ville": "Concarneau",
+  "departement": "29",
+  "region": "Bretagne",
+  "site_web": "https://www.brasserie-bretagne.fr",
+  "email": "contact@brasserie-bretagne.fr",
+  "telephone": "02 98 50 25 97",
+  "source_email": "https://www.brasserie-bretagne.fr/en/contact/",
+  "source_telephone": "https://www.brasserie-bretagne.fr/en/contact/",
+  "contact_nom": "Marc-Olivier Bernard",
+  "contact_fonction": "Président (directeur de la publication du site)",
+  "linkedin": "",
+  "effectif": "115 salariés (groupe, 2023)",
+  "capital": "",
+  "actualite": "Mai 2026 : FrenchFood Capital prend la majorité de Fabulous French Brasseurs (4 brasseries, 7 marques : Sant Erwann, Britt, Dremmwel, Armen, Face Nord…) avec Bpifrance et BNP Paribas Développement ; nouveautés canette et 0,0 % en 2026.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Groupe à 4 brasseries et 7 marques, nouvel actionnaire majoritaire : présence web multi-marques et canaux de vente (boutique « Boutik », pro CHR/cavistes) à structurer.",
+  "faits": [
+   {
+    "fait": "FrenchFood Capital devient actionnaire majoritaire (un peu plus de 50 %) de Fabulous French Brasseurs en mai 2026 pour accélérer le développement national, avec Bpifrance et BNP Paribas Développement (~20 %).",
+    "url": "https://presse.bpifrance.fr/le-groupe-brassicole-fabulous-french-brasseurs-acteur-referent-de-la-biere-artisanale-avec-des-marques-emblematiques-comme-sant-erwann-et-britt-ouvre-son-capital-au-fonds-specialiste-de-lalimentaire/?lang=fra",
+    "source_type": "presse",
+    "date": "2026-05"
+   },
+   {
+    "fait": "Le groupe réunit 4 brasseries régionales (Bretagne, Sud, Vézelay, Dauphiné) et 7 marques.",
+    "url": "https://www.rayon-boissons.com/bieres-et-cidres/de-nouveaux-actionnaires-et-de-grandes-ambitions-pour-fabulous-french-brasseurs",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "En 2026 le groupe mise sur la canette et le 0,0 % (nouveautés disponibles depuis mars 2026).",
+    "url": "https://biere-actu.fr/en-2026-fabulous-french-brasseurs-mise-sur-la-canette-et-le-0-0/",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Le site brasserie-bretagne.fr comporte une page boutique « Boutik » et une adresse dédiée aux particuliers (lebek@).",
+    "url": "https://www.brasserie-bretagne.fr/en/boutik/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Un fonds majoritaire qui vise l'accélération nationale d'un portefeuille de 7 marques issues de 4 brasseries va chercher à rationaliser les sites de marques, la vente directe et l'accès des professionnels (CHR, cavistes).",
+  "opportunite": "Audit de la présence web des 4 brasseries puis socle multi-marques (un back-office, plusieurs sites de marque), boutique en ligne commune et espace pro B2B pour les commandes CHR/cavistes.",
+  "service": "Site multi-marques + e-commerce + espace pro B2B",
+  "signal_achat": "Nouvel actionnaire majoritaire (FrenchFood Capital, mai 2026)",
+  "urgence": "moyenne — ouverture de capital de mai 2026, plan d'accélération en cours",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 16,
+   "fit": 16,
+   "capacite": 9,
+   "accessibilite": 8,
+   "preuves": 11
+  },
+  "score": 77,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://presse.bpifrance.fr/le-groupe-brassicole-fabulous-french-brasseurs-acteur-referent-de-la-biere-artisanale-avec-des-marques-emblematiques-comme-sant-erwann-et-britt-ouvre-son-capital-au-fonds-specialiste-de-lalimentaire/?lang=fra",
+   "https://www.rayon-boissons.com/bieres-et-cidres/de-nouveaux-actionnaires-et-de-grandes-ambitions-pour-fabulous-french-brasseurs",
+   "https://biere-actu.fr/en-2026-fabulous-french-brasseurs-mise-sur-la-canette-et-le-0-0/",
+   "https://www.brasserie-bretagne.fr/en/contact/",
+   "https://www.brasserie-bretagne.fr/en/legal-notice/"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Fabulous French Brasseurs — 7 marques, un seul socle web ?",
+  "email_personnalise": "Bonjour Monsieur Bernard,\n\nJ'ai lu que FrenchFood Capital était entré majoritairement au capital de Fabulous French Brasseurs en mai, avec l'objectif d'accélérer au niveau national. Avec 4 brasseries et 7 marques (Sant Erwann, Britt, Face Nord…), les sites, la boutique et les commandes des professionnels peuvent vite se disperser.\n\nChez Capmedia, nous construisons des sites multi-marques pilotés depuis un seul back-office, avec boutique en ligne et espace pro pour les CHR et cavistes.\n\nSeriez-vous d'accord pour un échange de 20 minutes sur la façon dont vous gérez aujourd'hui ces canaux ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu l'entrée de FrenchFood Capital au capital de Fabulous French Brasseurs en mai. Avec 7 marques et 4 brasseries, je voulais savoir qui s'occupe chez vous des sites de marque et de la vente en ligne aux particuliers et aux pros.",
+  "relance": "Les nouveautés canette et 0,0 % lancées cette année sont un bon test : une page produit commune à toutes les marques et un bon de commande pro en ligne peuvent en accélérer le référencement chez les cavistes. Cela vaut-il un appel ?",
+  "pourquoi_demain": "Un fonds vient de prendre la majorité d'un groupe à 7 marques pour accélérer : c'est le moment où l'on remet à plat les sites et la vente en ligne.",
+  "equipe": "BB8"
+ },
+ {
+  "id": "BB8-004",
+  "entreprise": "Brasserie Mélusine (groupe Newbeers)",
+  "siren": "",
+  "secteur": "Brasserie artisanale / groupe brassicole multi-marques",
+  "ville": "Chanverrie (Chambretaud)",
+  "departement": "85",
+  "region": "Pays de la Loire",
+  "site_web": "https://www.brasserie-melusine.com",
+  "email": "contact@brasserie-melusine.com",
+  "telephone": "02 51 61 51 52",
+  "source_email": "https://www.brasserie-melusine.com/contact/",
+  "source_telephone": "https://www.brasserie-melusine.com/contact/",
+  "contact_nom": "Laurent Boiteau",
+  "contact_fonction": "Fondateur du groupe Newbeers",
+  "linkedin": "",
+  "effectif": "environ 40 salariés (Mélusine)",
+  "capital": "",
+  "actualite": "Début 2026 : Newbeers (Mélusine, Parisis, Page 24, La Berlue) rachète les marques de la Brasserie Gobrecht à Lille (Lil, Carnavaleuse, Bradeuse), avec l'ambition de doubler les volumes de Lil en 4-5 ans. Groupe > 10 M€ de CA consolidé.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Groupe à 5 brasseries/marques régionales après le rachat de Gobrecht : sites de marques dispersés, vente directe et commandes CHR à unifier.",
+  "faits": [
+   {
+    "fait": "Newbeers rachète début 2026 les marques de la Brasserie Gobrecht (Lille) : Lil, Carnavaleuse, Bradeuse ; objectif de doubler les volumes de Lil en 4 ou 5 ans.",
+    "url": "https://aucoeurduchr.fr/decision-business/newbeers-rachete-brasserie-gobrecht/",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Même opération relayée : « Newbeers avale Gobrecht ».",
+    "url": "https://maltsethoublons.com/newbeers-avale-gobrecht-les-bieres-du-nord-ont-trouve-un-nouveau-foyer/",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Newbeers exploite déjà 4 brasseries : Mélusine (Pays de la Loire), Parisis (Île-de-France), Page 24 (Hauts-de-France) et La Fameuse Fabrique/La Berlue (Tarn, intégrée en janvier 2025).",
+    "url": "https://biere-actu.fr/exclusif-la-fameuse-fabrique-rejoint-le-groupe-newbeers/",
+    "source_type": "presse",
+    "date": "2025-01"
+   },
+   {
+    "fait": "Avec le rachat de Saint-Germain, le groupe revendiquait plus de 10 M€ de CA consolidé et 45 000 hl par an.",
+    "url": "https://www.rayon-boissons.com/bieres-et-cidres/newbeers-rachete-la-brasserie-saint-germain",
+    "source_type": "presse",
+    "date": "2022"
+   }
+  ],
+  "inference": "Chaque rachat ajoute un site de marque et une clientèle CHR régionale ; relancer Lil et piloter 5 marques pousse à mutualiser la présence web, la boutique et la prise de commande pro.",
+  "opportunite": "Plateforme multi-marques Newbeers (un back-office, un site par marque), boutique en ligne commune et portail B2B pour les CHR/cavistes des 4 régions.",
+  "service": "Site multi-marques + portail commandes B2B CHR",
+  "signal_achat": "Rachat des marques Gobrecht (début 2026)",
+  "urgence": "moyenne — rachat récent et plan de relance de Lil engagé",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 16,
+   "fit": 17,
+   "capacite": 8,
+   "accessibilite": 8,
+   "preuves": 11
+  },
+  "score": 77,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://aucoeurduchr.fr/decision-business/newbeers-rachete-brasserie-gobrecht/",
+   "https://maltsethoublons.com/newbeers-avale-gobrecht-les-bieres-du-nord-ont-trouve-un-nouveau-foyer/",
+   "https://biere-actu.fr/exclusif-la-fameuse-fabrique-rejoint-le-groupe-newbeers/",
+   "https://www.brasserie-melusine.com/contact/"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Newbeers — Lil, Mélusine, Page 24… et vos commandes pros",
+  "email_personnalise": "Bonjour Monsieur Boiteau,\n\nJ'ai vu que Newbeers a repris début 2026 les marques de la Brasserie Gobrecht, avec l'objectif de doubler les volumes de Lil. Le groupe compte désormais cinq marques régionales, chacune avec son site et ses clients CHR.\n\nCapmedia construit des plateformes multi-marques : un seul back-office, un site par marque, une boutique et un espace de commande pour les bars, restaurants et cavistes.\n\nQui suit ces sujets dans le groupe ? Un échange de 20 minutes serait-il envisageable ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu le rachat des marques Gobrecht par Newbeers cette année. Avec cinq marques, je voulais savoir qui s'occupe chez vous des sites et des commandes en ligne des professionnels.",
+  "relance": "Pour la relance de Lil à Lille, un bon de commande en ligne pour les bars et cavistes peut faire gagner du temps aux commerciaux. Voulez-vous en discuter ?",
+  "pourquoi_demain": "Newbeers vient d'ajouter une 5e marque et vise à doubler ses volumes : c'est le moment de mutualiser ses outils web.",
+  "equipe": "BB8"
+ },
+ {
+  "id": "BB1-002",
+  "entreprise": "Groupe Valrim (L'Immobilière Valrim)",
+  "siren": "394086706",
+  "secteur": "Immobilier — transaction, gestion locative, syndic de copropriété",
+  "ville": "Valence",
+  "departement": "26",
+  "region": "Auvergne-Rhône-Alpes (agence aussi à Orléans, Centre-Val de Loire)",
+  "site_web": "https://www.valrim-immobilier.com",
+  "email": "contact@valrim-immobilier.com",
+  "telephone": "04 75 44 04 77",
+  "source_email": "https://www.valrim-immobilier.com/mentions-legales/",
+  "source_telephone": "https://www.valrim-immobilier.com/mentions-legales/",
+  "contact_nom": "Stéphane Sautier",
+  "contact_fonction": "Directeur général (Caroline Graziano, directrice des services immobiliers)",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "3 000 000 €",
+  "actualite": "1er juin 2026 : Valrim rachète 100 % de la Régie Goudard-Patot (Annonay, 56 ans d'existence, 3 100 lots en syndic, 670 en gestion, 9 salariés, 1,05 M€ de CA).",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Intégrer la Régie Goudard-Patot (qui garde son propre site) dans une présence web déjà répartie sur plusieurs domaines et marques.",
+  "faits": [
+   {
+    "fait": "Le groupe Valrim acquiert 100 % de la Régie Goudard-Patot (Annonay), opération finalisée le 1er juin 2026 : 3 100 lots syndic, 670 lots gestion, 9 salariés.",
+    "url": "https://www.fusacq.com/buzz/le-groupe-valrim-renforce-son-maillage-rhonalpin-avec-l-acquisition-de-la-regie-goudard-patot-operation-organisee-par-a259853_fr_",
+    "source_type": "presse",
+    "date": "2026-06"
+   },
+   {
+    "fait": "Même opération décrite par le cabinet conseil Viou & Gouron ; objectif : renforcer la présence en Ardèche et Drôme.",
+    "url": "https://viou-gouron.fr/administration-de-biens/la-regie-goudard-patot-rejoint-le-groupe-valrim/",
+    "source_type": "communiqué",
+    "date": "2026-06"
+   },
+   {
+    "fait": "Le cabinet racheté conserve un site autonome (goudard-patot.com, avec page syndic et mentions légales propres).",
+    "url": "https://goudard-patot.com/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Le groupe apparaît sur plusieurs domaines : valrim-immobilier.com, groupe-valrim.com, une page Orpi « Valrim Orléans Droits de l'Homme » et une fiche Procivis « Immo de France Groupe Valrim ».",
+    "url": "https://www.groupe-valrim.com/mentions-legales/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Présence digitale éclatée (deux sites groupe, marque Orpi, marque Immo de France, site du cabinet racheté) ; l'intégration de Goudard-Patot pose la question d'un parcours client et d'un espace copropriétaire communs.",
+  "opportunite": "Audit de la présence web multi-marques puis site groupe unifié avec pages agences et espace client / app copropriétaires commun.",
+  "service": "Refonte site multi-agences + espace client copropriétaires",
+  "signal_achat": "Rachat de la Régie Goudard-Patot finalisé le 1er juin 2026",
+  "urgence": "moyenne — rachat finalisé il y a moins de 4 mois, intégration en cours",
+  "score_detail": {
+   "besoin": 18,
+   "urgence": 15,
+   "fit": 16,
+   "capacite": 9,
+   "accessibilite": 8,
+   "preuves": 11
+  },
+  "sources": [
+   "https://www.fusacq.com/buzz/le-groupe-valrim-renforce-son-maillage-rhonalpin-avec-l-acquisition-de-la-regie-goudard-patot-operation-organisee-par-a259853_fr_",
+   "https://viou-gouron.fr/administration-de-biens/la-regie-goudard-patot-rejoint-le-groupe-valrim/",
+   "https://goudard-patot.com/",
+   "https://www.valrim-immobilier.com/mentions-legales/",
+   "https://www.groupe-valrim.com/mentions-legales/",
+   "https://www.orpi.com/valrim-orleansadh/syndic",
+   "https://www.procivis.fr/societes/immo-de-france-groupe-valrim"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Valrim et Goudard-Patot — un ou plusieurs sites ?",
+  "email_personnalise": "Bonjour Monsieur Sautier,\n\nJ'ai lu l'annonce du rachat de la Régie Goudard-Patot en juin. En regardant votre présence en ligne, j'ai noté que le cabinet garde son site goudard-patot.com, à côté de valrim-immobilier.com, groupe-valrim.com et de vos pages Orpi et Immo de France.\n\nPour un copropriétaire d'Annonay, cela peut rendre moins évident où trouver ses documents ou son interlocuteur.\n\nCapmedia réalise des sites multi-agences et des espaces clients web et mobile pour des groupes qui grandissent par rachat. Je peux vous adresser une courte analyse de ces sites.\n\nQui suit ce sujet chez vous ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu le rachat de la Régie Goudard-Patot en juin. Le cabinet a toujours son propre site, à côté de deux sites Valrim. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Avec 3 100 lots de syndic en plus, un espace copropriétaire commun à toutes vos agences serait-il un projet à l'étude ?",
+  "pourquoi_demain": "Rachat finalisé en juin et un cabinet intégré qui garde son site autonome : le chantier d'harmonisation est ouvert maintenant.",
+  "equipe": "BB1",
+  "score": 77,
+  "niveau": "QUALIFIÉ"
+ },
+ {
   "id": "AA8-002",
   "entreprise": "Groupe Kermarrec (Kermarrec Syndic / Kermarrec Habitation)",
   "siren": "326650165",
@@ -290,6 +528,86 @@
   "equipe": "AA8"
  },
  {
+  "entreprise": "Sarreméjean Matériaux & Bricolage (SAS Sarremejean)",
+  "siren": "353187859",
+  "secteur": "Négoce multispécialiste matériaux, bois et bricolage (Tout Faire, vers Club Alteral au 1/01/2027)",
+  "ville": "Condom",
+  "departement": "32",
+  "region": "Occitanie",
+  "site_web": "https://www.sarremejean.fr/",
+  "email": "contact@sarremejean.fr",
+  "telephone": "05 62 28 12 41",
+  "source_email": "https://www.sarremejean.fr/contactez-nous",
+  "source_telephone": "https://www.sarremejean.fr/agence_condom",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "https://fr.linkedin.com/company/sarremejean",
+  "effectif": "240 salariés (selon presse)",
+  "capital": "",
+  "actualite": "Après le rachat de Mat Adour et Solumat (Landes), passage de 13 à 17 agences et de 48,7 M€ à 63 M€ de CA ; quitte Tout Faire pour rejoindre le Club Alteral au 1er janvier 2027.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Adapter le site marchand et la communication multi-agences au changement de groupement (Tout Faire → Alteral) et à l'intégration des 4 agences landaises.",
+  "faits": [
+   {
+    "fait": "Sarreméjean quitte le groupement Tout Faire et rejoindra le Club Alteral au 1er janvier 2027 (6e membre)",
+    "url": "https://www.lemoniteur.fr/negoce/sud-ouest-le-distributeur-multispecialiste-gersois-sarremejean-materiaux-quitte-tout-faire-pour-rejoindre-le-club-alteral.YFUUZ5ELANESBKLOG4FNAKV4SA.html",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Sarreméjean devient le 6e membre d'Alteral",
+    "url": "https://negoce.zepros.fr/actu-enseignes/sarremejean-devient-6eme-membre-alteral",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Reprise de Mat Adour et Solumat (4 agences landaises) : réseau porté de 13 à 17 agences, CA de 48,7 M€ à 63 M€",
+    "url": "https://negoce.zepros.fr/actu-enseignes/sarremejean-reprend-deux-ses-confreres-tout-faire-landes",
+    "source_type": "presse",
+    "date": "2024-2025"
+   },
+   {
+    "fait": "Le site sarremejean.fr propose un espace de connexion client, des promotions en ligne et une page agences intitulée « nos-agences2026 »",
+    "url": "https://www.sarremejean.fr/nos-agences2026",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Le changement de groupement au 1er janvier 2027 impose de retirer la marque Tout Faire des supports (site, catalogue, promotions) et de revoir l'offre en ligne ; c'est une fenêtre naturelle pour une refonte du site marchand et de l'espace pro sur 17 agences.",
+  "opportunite": "Refonte du site marchand multi-agences aux couleurs post-Tout Faire (catalogue, promos, stock par agence) + espace pro artisans (devis, factures, commandes).",
+  "service": "Refonte site e-commerce + portail client B2B",
+  "signal_achat": "Changement de groupement (Tout Faire → Alteral) au 1/01/2027 + intégration de 4 agences",
+  "urgence": "haute — bascule de groupement dans environ 3 mois (1er janvier 2027)",
+  "score_detail": {
+   "besoin": 19,
+   "urgence": 17,
+   "fit": 17,
+   "capacite": 8,
+   "accessibilite": 5,
+   "preuves": 10
+  },
+  "sources": [
+   "https://www.lemoniteur.fr/negoce/sud-ouest-le-distributeur-multispecialiste-gersois-sarremejean-materiaux-quitte-tout-faire-pour-rejoindre-le-club-alteral.YFUUZ5ELANESBKLOG4FNAKV4SA.html",
+   "https://negoce.zepros.fr/actu-enseignes/sarremejean-devient-6eme-membre-alteral",
+   "https://negoce.zepros.fr/actu-enseignes/sarremejean-reprend-deux-ses-confreres-tout-faire-landes",
+   "https://www.sarremejean.fr/contactez-nous",
+   "https://www.sarremejean.fr/agence_condom",
+   "https://annuaire-entreprises.data.gouv.fr/entreprise/sas-sarremejean-353187859"
+  ],
+  "objet_email": "Sarreméjean — le site au passage chez Alteral",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu que Sarreméjean quittera Tout Faire pour rejoindre le Club Alteral au 1er janvier 2027, après avoir intégré Mat Adour et Solumat et porté le réseau à 17 agences.\n\nUn changement de groupement touche souvent le site : marque, catalogue, promotions, pages agences, espace client. Autant de points à reprendre dans un délai court.\n\nChez Capmedia, nous concevons et refondons des sites marchands et des espaces pro pour des entreprises régionales multi-sites.\n\nQui pilote le site et les outils web chez vous pour cette transition ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que Sarreméjean rejoint le Club Alteral au 1er janvier 2027. Votre site porte aujourd'hui le catalogue et les promotions de 17 agences. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Autre angle : avec les agences landaises reprises, un espace pro unique où les artisans retrouvent devis et factures quelle que soit l'agence. Est-ce prévu dans vos chantiers 2027 ?",
+  "pourquoi_demain": "Un négoce de 17 agences et 63 M€ qui change de groupement dans trois mois et doit adapter son site marchand.",
+  "id": "BB4-001",
+  "equipe": "BB4",
+  "date_verification": "2026-09-24",
+  "score": 76,
+  "niveau": "QUALIFIÉ"
+ },
+ {
   "entreprise": "Crêpe Touch (CT CO)",
   "siren": "837781566",
   "secteur": "Restauration crêperie fast casual en franchise",
@@ -354,6 +672,77 @@
   "score": 76,
   "niveau": "QUALIFIÉ",
   "date_verification": "2026-09-24"
+ },
+ {
+  "id": "BB8-003",
+  "entreprise": "Maison Philippe Viallet (Vins Viallet, holding Clos Réserve)",
+  "siren": "",
+  "secteur": "Négoce-éleveur et propriétaire vigneron, vins de Savoie",
+  "ville": "Apremont",
+  "departement": "73",
+  "region": "Auvergne-Rhône-Alpes",
+  "site_web": "https://vins-viallet.com",
+  "email": "contact@vins-viallet.com",
+  "telephone": "04 79 28 33 29",
+  "source_email": "https://vins-viallet.com/contact/",
+  "source_telephone": "https://vins-viallet.com/contact/",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "actualite": "2026 : 1er négociant en vins de Savoie, la maison rachète le domaine Perrier et regroupe son développement commercial dans une nouvelle holding, Clos Réserve ; 131 ha répartis sur 4 domaines ; EBITDA S1 2026 de 640 k€ (vs 500 k€ budgétés) après un plan de continuation validé en juin 2025 avec la famille Chifflot.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Nouvelle entité commerciale et domaine racheté : présence web multi-domaines/multi-marques, vente directe et accès pro (CHR, cavistes) à organiser.",
+  "faits": [
+   {
+    "fait": "Viallet (négoce + production, 1er négociant en vins de Savoie) rachète le domaine Perrier et regroupe son offre de développement commercial dans la nouvelle holding Clos Réserve.",
+    "url": "https://www.vitisphere.com/actualite-106426-clos-reserve-nouvelle-entite-de-conquete-commerciale-du-1er-negociant-en-vins-de-savoie.html",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "La maison détient 131 ha sur 4 domaines propres et affiche un EBITDA de 640 k€ au premier semestre 2026, au-dessus du plan de redressement.",
+    "url": "https://www.vitisphere.com/actualite-106426-clos-reserve-nouvelle-entite-de-conquete-commerciale-du-1er-negociant-en-vins-de-savoie.html",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Le site vins-viallet.com présente la maison comme « propriétaire vigneron – négociant éleveur » avec des pages dédiées au Château d'Apremont.",
+    "url": "https://vins-viallet.com/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Un négociant qui crée une entité dédiée à la conquête commerciale et intègre un domaine supplémentaire doit présenter plusieurs domaines/marques et outiller ses ventes aux particuliers comme aux professionnels.",
+  "opportunite": "Site multi-domaines (Viallet, Château d'Apremont, domaine Perrier…) avec boutique en ligne, et espace pro B2B (tarifs CHR/cavistes, commandes, fiches techniques) pour Clos Réserve.",
+  "service": "Site multi-marques + espace pro B2B",
+  "signal_achat": "Rachat du domaine Perrier + création de Clos Réserve (2026)",
+  "urgence": "haute — nouvelle entité commerciale créée cette année, reprise en croissance",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 17,
+   "fit": 16,
+   "capacite": 7,
+   "accessibilite": 8,
+   "preuves": 10
+  },
+  "score": 75,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.vitisphere.com/actualite-106426-clos-reserve-nouvelle-entite-de-conquete-commerciale-du-1er-negociant-en-vins-de-savoie.html",
+   "https://vins-viallet.com/contact/",
+   "https://vins-viallet.com/"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Clos Réserve — vos domaines et vos pros en ligne",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu sur Vitisphere la création de Clos Réserve et le rachat du domaine Perrier. Avec désormais plusieurs domaines et une structure dédiée à la conquête commerciale, la question se pose souvent de présenter chaque domaine en ligne et de donner aux CHR et cavistes un accès simple aux tarifs et aux commandes.\n\nCapmedia conçoit des sites multi-domaines avec boutique et espace professionnel.\n\nQui pilote ce sujet chez vous ? Un échange de 20 minutes serait-il possible dans les prochaines semaines ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu la création de Clos Réserve et le rachat du domaine Perrier. Je voulais savoir qui s'occupe chez vous du site et des outils commerciaux pour les professionnels.",
+  "relance": "Un espace pro en ligne (tarifs, fiches techniques, commandes CHR et cavistes) peut soutenir directement l'objectif de conquête de Clos Réserve. Voulez-vous que je vous montre à quoi cela ressemble ?",
+  "pourquoi_demain": "Le 1er négociant savoyard vient de créer une entité de conquête commerciale et d'ajouter un domaine : ses outils web doivent suivre.",
+  "equipe": "BB8"
  },
  {
   "siren": "",
@@ -665,6 +1054,92 @@
   "equipe": "Y08"
  },
  {
+  "id": "BB3-002",
+  "entreprise": "Groupe Thivolle (Compagnie Financière Thivolle)",
+  "siren": "379436850",
+  "secteur": "Distribution automobile (Renault, Dacia, Nissan, Ford, Alpine, Mazda, XPENG)",
+  "ville": "Villefranche-sur-Saône",
+  "departement": "69",
+  "region": "Auvergne-Rhône-Alpes",
+  "site_web": "https://www.groupethivolle.com",
+  "email": "contact@thivolle.com",
+  "telephone": "04 74 07 07 03",
+  "source_email": "https://www.autothivolle.com/page/mentions-legales",
+  "source_telephone": "https://www.autothivolle.com/page/mentions-legales",
+  "contact_nom": "François-Xavier Thivolle",
+  "contact_fonction": "Responsable de la publication",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "8 097 000 €",
+  "actualite": "58 concessions ; reprise de 10 sites Renault-Dacia du groupe Meignan (Roanne, Tarare, Paray-le-Monial, Montbrison…) ; arrivée de XPENG à Villefranche-sur-Saône en 2026.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Présence web très fragmentée (deux domaines, un sous-domaine par concession, sites annexes) à maintenir alors que le réseau s'agrandit.",
+  "faits": [
+   {
+    "fait": "Le Groupe Thivolle reprend 10 sites Renault et Dacia du groupe Meignan",
+    "url": "https://www.autothivolle.com/actualites/groupe-thivolle/le-groupe-thivolle-sagrandit-avec-lacquisition-de-10-sites-renault-et-dacia-du-groupe-meignan",
+    "source_type": "site officiel",
+    "date": "2025"
+   },
+   {
+    "fait": "Les groupes Thivolle et Bony se répartissent les affaires Renault de Pascal Meignan",
+    "url": "https://journalauto.com/distribution/les-groupes-thivolle-et-bony-se-repartissent-les-affaires-renault-de-pascal-meignan/",
+    "source_type": "presse",
+    "date": "2025"
+   },
+   {
+    "fait": "Une même concession apparaît sous deux domaines : renault-villefranche.autothivolle.com et renault-villefranche.groupethivolle.com, chacun avec ses mentions légales ; autres sous-domaines par concession (alpine-villefranche, dacia-villefranche, nissan-le-creusot, ford-villefranche, renault-givors…)",
+    "url": "https://renault-villefranche.autothivolle.com/mentions-legales",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Sites annexes distincts : foireautothivolle.com (Foire de l'Occasion 2026) et recrutement.groupethivolle.com",
+    "url": "https://www.foireautothivolle.com/",
+    "source_type": "site officiel",
+    "date": "2026"
+   },
+   {
+    "fait": "58 concessions ; arrivée de XPENG à Villefranche-sur-Saône en 2026",
+    "url": "https://www.groupethivolle.com/",
+    "source_type": "site officiel",
+    "date": "2026"
+   }
+  ],
+  "inference": "Avec 58 concessions, deux domaines principaux et des dizaines de sous-domaines, chaque nouvelle marque ou reprise multiplie les pages à tenir à jour et disperse le référencement ; un groupe de cette taille peut chercher à rationaliser.",
+  "opportunite": "Audit de la présence web multi-domaines (autothivolle / groupethivolle / sites annexes) puis plan de consolidation : architecture unique, parcours RDV atelier et reprise communs.",
+  "service": "Audit technique et refonte / consolidation web multi-sites",
+  "signal_achat": "Croissance externe (10 sites Meignan) + nouvelle marque XPENG 2026",
+  "urgence": "moyenne — intégration des sites Meignan et nouvelle marque en 2026, sans appel d'offres visible",
+  "score_detail": {
+   "besoin": 19,
+   "urgence": 13,
+   "fit": 15,
+   "capacite": 10,
+   "accessibilite": 6,
+   "preuves": 12
+  },
+  "sources": [
+   "https://www.autothivolle.com/page/mentions-legales",
+   "https://www.groupethivolle.com/",
+   "https://www.autothivolle.com/actualites/groupe-thivolle/le-groupe-thivolle-sagrandit-avec-lacquisition-de-10-sites-renault-et-dacia-du-groupe-meignan",
+   "https://journalauto.com/distribution/les-groupes-thivolle-et-bony-se-repartissent-les-affaires-renault-de-pascal-meignan/",
+   "https://renault-villefranche.autothivolle.com/mentions-legales",
+   "https://renault-villefranche.groupethivolle.com/"
+  ],
+  "objet_email": "Groupe Thivolle — autothivolle.com et groupethivolle.com",
+  "email_personnalise": "Bonjour Monsieur Thivolle,\n\nEn consultant vos sites, j'ai remarqué que certaines concessions existent sous deux adresses, par exemple renault-villefranche.autothivolle.com et renault-villefranche.groupethivolle.com, en plus de sites annexes comme la Foire de l'Occasion. Avec la reprise des sites Meignan et l'arrivée de XPENG, ce type d'architecture tend à disperser le référencement et à alourdir les mises à jour.\n\nCapmedia réalise des audits de présence web multi-sites et propose ensuite un plan de consolidation concret.\n\nSeriez-vous d'accord pour que je vous envoie une synthèse d'une page sur ce que nous avons observé ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que plusieurs de vos concessions existent à la fois sur autothivolle.com et groupethivolle.com. Avec la reprise des sites Meignan, ça fait beaucoup de pages à tenir. Je voulais savoir qui s'occupe du digital chez vous.",
+  "relance": "Au-delà des sites, je peux regarder comment la prise de rendez-vous atelier est gérée d'une concession à l'autre, souvent le premier gain rapide dans un groupe de 58 sites.",
+  "pourquoi_demain": "58 concessions, deux domaines en doublon et une croissance externe récente : l'incohérence est visible et le groupe a les moyens d'agir.",
+  "date_verification": "2026-09-24",
+  "equipe": "BB3",
+  "score": 75,
+  "niveau": "QUALIFIÉ"
+ },
+ {
   "entreprise": "Supplay",
   "siren": "337080543",
   "secteur": "Travail temporaire / recrutement",
@@ -807,6 +1282,87 @@
   "date_verification": "2026-09-24",
   "equipe": "AA7",
   "id": "AA7-001"
+ },
+ {
+  "id": "BB1-001",
+  "entreprise": "Doméos Syndic (DOMEOS SARL)",
+  "siren": "504879032",
+  "secteur": "Immobilier — syndic de copropriété",
+  "ville": "Rennes",
+  "departement": "35",
+  "region": "Bretagne (agences Nantes 44 / Sarzeau 56)",
+  "site_web": "https://www.domeos-syndic.net",
+  "email": "syndic@domeos.net",
+  "telephone": "02 99 35 53 53",
+  "source_email": "https://www.domeos-syndic.net/mentions-legales/",
+  "source_telephone": "https://www.domeos-syndic.net/mentions-legales/",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Juin 2026 : Doméos se présente comme premier syndic indépendant de Bretagne (env. 20 000 lots) après trois rachats : Exa Gestion (Rennes), cabinet Morazin (Nantes), portefeuille de l'OFIC (Sarzeau).",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Unifier une présence web éclatée (4 sites/sous-domaines) et les espaces copropriétaires hérités des cabinets rachetés.",
+  "faits": [
+   {
+    "fait": "Doméos Syndic s'implante à Nantes et Sarzeau par croissance externe (rachats Morazin à Nantes, portefeuille OFIC à Sarzeau).",
+    "url": "https://www.lejournaldesentreprises.com/breve/le-rennais-domeos-syndic-simplante-nantes-et-sarzeau-par-croissance-externe-2143741",
+    "source_type": "presse",
+    "date": "2026-06-01"
+   },
+   {
+    "fait": "Trois opérations de rachat (Rennes, Nantes, Sarzeau), env. 20 000 logements gérés, premier syndic indépendant de Bretagne.",
+    "url": "https://www.bretagne-economique.com/actualites/domeos-syndic-accelere-avec-trois-operations-de-rachat-en-bretagne/",
+    "source_type": "presse",
+    "date": "2026-06"
+   },
+   {
+    "fait": "Au moins quatre sites distincts coexistent : domeos-syndic.net, domeos-syndic.fr, morazin.domeos-syndic.fr (« MORAZIN by DOMEOS ») et ofic.domeos-syndic.fr (« OFIC by DOMEOS »), chacun présentant son propre espace copropriétaire/extranet.",
+    "url": "https://morazin.domeos-syndic.fr/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Le site OFIC by DOMEOS met en avant espace client en ligne, vote électronique, extranet et tableaux de bord en ligne.",
+    "url": "https://ofic.domeos-syndic.fr/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Après trois rachats rapprochés, le groupe fonctionne avec plusieurs sites et sous-domaines par cabinet racheté ; l'harmonisation du parcours copropriétaire (site unique, espace client unifié, app) est un chantier probable.",
+  "opportunite": "Audit de la présence web multi-sites puis refonte vers un site groupe unique avec pages agences, et portail/app copropriétaires unifié connecté au logiciel de syndic.",
+  "service": "Refonte site multi-agences + espace client / app copropriétaires",
+  "signal_achat": "Rachats de cabinets (Nantes, Sarzeau, Rennes) annoncés juin 2026",
+  "urgence": "moyenne — annonce de juin 2026 (< 6 mois), intégration en cours",
+  "score_detail": {
+   "besoin": 18,
+   "urgence": 14,
+   "fit": 16,
+   "capacite": 8,
+   "accessibilite": 7,
+   "preuves": 11
+  },
+  "sources": [
+   "https://www.lejournaldesentreprises.com/breve/le-rennais-domeos-syndic-simplante-nantes-et-sarzeau-par-croissance-externe-2143741",
+   "https://www.bretagne-economique.com/actualites/domeos-syndic-accelere-avec-trois-operations-de-rachat-en-bretagne/",
+   "https://morazin.domeos-syndic.fr/",
+   "https://ofic.domeos-syndic.fr/",
+   "https://domeos-syndic.fr/",
+   "https://www.domeos-syndic.net/",
+   "https://www.domeos-syndic.net/mentions-legales/"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Doméos — quatre sites après les rachats de Nantes et Sarzeau",
+  "email_personnalise": "Bonjour,\n\nEn lisant l'annonce de vos rachats à Nantes et Sarzeau, j'ai remarqué que Doméos s'affiche aujourd'hui sur au moins quatre adresses : domeos-syndic.net, domeos-syndic.fr, morazin.domeos-syndic.fr et ofic.domeos-syndic.fr, chacune avec son espace copropriétaire.\n\nPour un copropriétaire ou un conseil syndical, cela peut rendre moins lisible le point d'entrée et l'accès aux documents.\n\nCapmedia conçoit des sites multi-agences et des espaces clients (web et mobile) pour des groupes qui se développent par croissance externe. Je peux vous envoyer une courte analyse de ces quatre sites, sans engagement.\n\nQui suit ce sujet chez vous ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu l'annonce de vos rachats à Nantes et Sarzeau. Aujourd'hui Doméos apparaît sur quatre sites différents, avec plusieurs espaces copropriétaires. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Avec 20 000 lots désormais gérés, une application copropriétaires commune aux quatre cabinets pourrait être un point à étudier : souhaitez-vous un exemple de ce que nous avons fait ?",
+  "pourquoi_demain": "Trois rachats annoncés en juin et quatre sites parallèles visibles : l'harmonisation digitale est un chantier ouvert.",
+  "equipe": "BB1",
+  "score": 74,
+  "niveau": "QUALIFIÉ"
  },
  {
   "id": "V05-001",
@@ -2488,6 +3044,86 @@
   "equipe": "Z01"
  },
  {
+  "entreprise": "Quincaillerie Angles (groupe Angles)",
+  "siren": "433830015",
+  "secteur": "Négoce quincaillerie, fournitures industrielles et outillage (multirégional)",
+  "ville": "Onet-le-Château",
+  "departement": "12",
+  "region": "Occitanie",
+  "site_web": "https://www.quincaillerie-angles.fr/",
+  "email": "info@quincaillerie-angles.fr",
+  "telephone": "05 65 78 10 10",
+  "source_email": "https://www.facebook.com/quincaillerie.angles/",
+  "source_telephone": "https://www.quincaillerie-angles.fr/mentions-legales.html",
+  "contact_nom": "Guillaume Angles",
+  "contact_fonction": "Dirigeant du groupe (selon presse)",
+  "linkedin": "https://fr.linkedin.com/company/quincaillerie-angles",
+  "effectif": "",
+  "capital": "10 110 000 €",
+  "actualite": "Croissance externe continue : Quincaillerie Boissonnade (IDF, 2024), Quincaillerie d'Arcole (Toulouse, 32e point de vente), un BigMat à Rodez, puis rachat du négoce électrique auvergnat Aurélec en 2026.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Intégrer dans l'offre en ligne des enseignes rachetées aux métiers différents (électricité avec Aurélec, BigMat, quincailleries locales).",
+  "faits": [
+   {
+    "fait": "Le groupe occitan Angles rachète le négoce spécialisé en matériel électrique auvergnat Aurélec",
+    "url": "https://negoce.zepros.fr/actu-enseignes/auvergnat-aurelec-allie-groupe-angles",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "La Quincaillerie Angles reprend la Quincaillerie d'Arcole à Toulouse, 32e point de vente du réseau, après Boissonnade (IDF) au printemps 2024",
+    "url": "https://negoce.zepros.fr/actu-enseignes/toulouse-quincaillerie-angles-reprend-emblematique-quincaillerie-arcole",
+    "source_type": "presse",
+    "date": "2024"
+   },
+   {
+    "fait": "À Rodez, la Quincaillerie Angles reprend un BigMat",
+    "url": "https://negoce.zepros.fr/actu-enseignes/rodez-quincaillerie-angles-reprend-bigmat",
+    "source_type": "presse",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Le site quincaillerie-angles.fr fait de la vente en ligne (plus de 50 000 références) et publie des pages magasins par ville (ex. Carcassonne)",
+    "url": "https://www.quincaillerie-angles.fr/quincaillerie-angles-carcassonne",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Un groupe qui enchaîne les rachats d'enseignes aux métiers différents (quincaillerie, matériaux, électricité) doit faire cohabiter plusieurs catalogues et clientèles pro ; l'arrivée d'Aurélec pose la question de l'intégration au site marchand et aux comptes clients.",
+  "opportunite": "Évolution du site marchand pour accueillir l'offre électricité et les nouveaux points de vente, avec espace pro unifié (tarifs clients, commandes, retrait en magasin).",
+  "service": "Évolution e-commerce B2B + portail client",
+  "signal_achat": "Rachat d'Aurélec (2026) après une série d'acquisitions",
+  "urgence": "moyenne — rachat 2026, intégration en cours",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 14,
+   "fit": 16,
+   "capacite": 9,
+   "accessibilite": 6,
+   "preuves": 10
+  },
+  "sources": [
+   "https://negoce.zepros.fr/actu-enseignes/auvergnat-aurelec-allie-groupe-angles",
+   "https://bati.zepros.fr/chez-distributeurs/groupe-occitan-angles-rachete-auvergnat-aurelec",
+   "https://negoce.zepros.fr/actu-enseignes/toulouse-quincaillerie-angles-reprend-emblematique-quincaillerie-arcole",
+   "https://negoce.zepros.fr/actu-enseignes/rodez-quincaillerie-angles-reprend-bigmat",
+   "https://www.quincaillerie-angles.fr/mentions-legales.html",
+   "https://www.facebook.com/quincaillerie.angles/"
+  ],
+  "objet_email": "Quincaillerie Angles — Aurélec et le site marchand",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu dans Zepros le rachat d'Aurélec, qui ajoute le matériel électrique à un réseau déjà enrichi de Boissonnade, de la Quincaillerie d'Arcole et d'un BigMat à Rodez.\n\nQuand les enseignes s'additionnent, le site marchand et les comptes pros doivent souvent absorber de nouveaux catalogues, tarifs et points de retrait.\n\nChez Capmedia, nous faisons évoluer des sites e-commerce B2B et des espaces clients pour des distributeurs multi-sites.\n\nL'intégration d'Aurélec au site est-elle déjà planifiée, ou le sujet reste-t-il ouvert ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu le rachat d'Aurélec par le groupe Angles. Votre site vend déjà plus de 50 000 références en ligne. Je voulais savoir qui s'occupe du site marchand chez vous.",
+  "relance": "Autre angle : une app ou un portail de commande rapide pour les artisans, avec retrait dans le point de vente le plus proche parmi vos 30+ magasins. Est-ce un sujet chez vous ?",
+  "pourquoi_demain": "Un groupe familial de 30+ points de vente qui vient d'ajouter une spécialité électricité et vend déjà en ligne.",
+  "id": "BB4-002",
+  "equipe": "BB4",
+  "date_verification": "2026-09-24",
+  "score": 72,
+  "niveau": "QUALIFIÉ"
+ },
+ {
   "entreprise": "Société Française de Garantie (SFG)",
   "siren": "391952264",
   "secteur": "Assurance / garanties et réparation d'appareils (filiale WERTGARANTIE)",
@@ -3086,6 +3722,92 @@
   "equipe": "U05"
  },
  {
+  "id": "BB6-002",
+  "entreprise": "Vie & Véranda (SAS)",
+  "siren": "320291057",
+  "secteur": "Fabricant de vérandas, extensions et pergolas – réseau d'agences en franchise + distribution",
+  "ville": "Feyzin",
+  "departement": "69",
+  "region": "Auvergne-Rhône-Alpes",
+  "site_web": "https://www.vie-veranda.com",
+  "email": "contact@vie-veranda.com",
+  "telephone": "04 72 89 08 08",
+  "source_email": "https://www.vie-veranda.com/page/mentions-legales",
+  "source_telephone": "https://www.vie-veranda.com/page/mentions-legales",
+  "contact_nom": "Céline Pascal",
+  "contact_fonction": "Directrice générale (président : Lucas Pinoncely)",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Février 2026 : lancement d'un contrat de distribution d'un an sans droit d'entrée ni exclusivité pour artisans et showrooms de l'habitat ; mai 2026 : premier contrat signé (showroom Komilfo, Seine-et-Marne) ; 45 agences, 37 M€ de CA, objectif 60 implantations en 2030.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Nouveau canal de distributeurs indépendants à outiller (catalogue, devis, leads) alors que des agences du réseau ont leurs propres sites séparés (ex. vieetveranda-mellac.fr).",
+  "faits": [
+   {
+    "fait": "Vie & Véranda lance un contrat de distribution d'un an, sans droit d'entrée ni exclusivité territoriale, pour artisans et showrooms menuiserie/fermetures/extérieur.",
+    "url": "https://www.choisir-sa-franchise.com/actualites-franchise/2026-02-19-vie-et-veranda-lance-nouveau-contrat-distribution",
+    "source_type": "presse",
+    "date": "2026-02-19"
+   },
+   {
+    "fait": "Premier contrat de distribution signé avec un showroom Komilfo du sud Seine-et-Marne ; réseau de 45 agences, 37 M€ de CA, objectif 60 implantations d'ici 2030.",
+    "url": "https://www.choisir-sa-franchise.com/actualites-franchise/2026-05-21-vie-et-veranda-contrat-distribution-opportunite-diversification-aux-entrepreneurs-independants",
+    "source_type": "presse",
+    "date": "2026-05-21"
+   },
+   {
+    "fait": "Interview du président Lucas Pinoncely dans Le Moniteur sur le lancement du contrat de distribution.",
+    "url": "https://www.lemoniteur.fr/stores-et-fermetures/fabricants/lucas-pinoncely-president-de-vie-veranda-nous-lancons-un-contrat-de-distribution-pour-des-acteurs-du-secteur-de-lhabitat-qui-veulent-diversifier-leur-offre.ZGXDVC4ZIZAQNFNL3RT66FKPOA.html",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Au moins une agence du réseau dispose d'un site distinct avec ses propres mentions légales (vieetveranda-mellac.fr), à côté du site national vie-veranda.com.",
+    "url": "https://www.vieetveranda-mellac.fr/fr/mentions-legales",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Nouvelle directrice générale avec l'ambition d'engager un virage industriel.",
+    "url": "https://www.lejournaldesentreprises.com/article/avec-sa-nouvelle-directrice-generale-vie-veranda-veut-engager-un-virage-industriel-2079542",
+    "source_type": "presse",
+    "date": ""
+   }
+  ],
+  "inference": "Un fabricant qui ajoute un réseau de distributeurs non exclusifs à ses franchisés a besoin d'un outil commun (portail partenaires, configurateur/devis, remontée des leads) et d'une présence web cohérente entre site national et sites d'agences.",
+  "opportunite": "Portail partenaires/distributeurs (catalogue, prix, commandes, suivi de chantier) et configurateur de véranda en ligne relié aux agences ; audit de cohérence des sites d'agences.",
+  "service": "Outil métier / espace partenaires + configurateur web",
+  "signal_achat": "Lancement d'un nouveau canal de distribution (févr.-mai 2026)",
+  "urgence": "moyenne – canal lancé en février, premières signatures en mai 2026, recrutement de distributeurs en cours",
+  "score_detail": {
+   "besoin": 15,
+   "urgence": 15,
+   "fit": 15,
+   "capacite": 8,
+   "accessibilite": 7,
+   "preuves": 11
+  },
+  "sources": [
+   "https://www.vie-veranda.com/page/mentions-legales",
+   "https://www.choisir-sa-franchise.com/actualites-franchise/2026-02-19-vie-et-veranda-lance-nouveau-contrat-distribution",
+   "https://www.choisir-sa-franchise.com/actualites-franchise/2026-05-21-vie-et-veranda-contrat-distribution-opportunite-diversification-aux-entrepreneurs-independants",
+   "https://lexpress-franchise.com/actualites/vie-veranda-elargit-modele-avec-contrat-distribution-sans-droit-entree/",
+   "https://www.vieetveranda-mellac.fr/fr/mentions-legales",
+   "https://annuaire-entreprises.data.gouv.fr/entreprise/vie-et-veranda-320291057"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Vie & Véranda – outiller vos nouveaux distributeurs",
+  "email_personnalise": "Bonjour Madame Pascal,\n\nJ'ai lu que Vie & Véranda a lancé en février un contrat de distribution sans droit d'entrée, avec une première signature en mai. J'ai aussi remarqué que certaines agences ont leur propre site, à côté de vie-veranda.com. Avec des distributeurs non exclusifs en plus des franchisés, la circulation des demandes de devis et des informations produits peut vite se disperser.\n\nCapmedia conçoit des portails partenaires et configurateurs web pour des réseaux multi-agences.\n\nQui suit ce sujet chez vous ? Un échange de 20 minutes vous conviendrait-il ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que Vie & Véranda a lancé cette année un contrat de distribution pour les professionnels de l'habitat. Vous visez 60 implantations en 2030 avec désormais deux types de partenaires. Je voulais savoir qui s'occupe des outils digitaux du réseau chez vous.",
+  "relance": "Autre piste : un configurateur de véranda en ligne qui transmet directement la demande à l'agence ou au distributeur le plus proche — je peux vous montrer à quoi cela ressemble.",
+  "pourquoi_demain": "Vie & Véranda recrute en ce moment des distributeurs non exclusifs et doit leur fournir des outils communs.",
+  "equipe": "BB6",
+  "score": 71,
+  "niveau": "QUALIFIÉ"
+ },
+ {
   "id": "W01-001",
   "entreprise": "Les Halles de la Transition (L'Agence des Halles de la Transition)",
   "siren": "919296293",
@@ -3172,6 +3894,86 @@
   "relance": "Pour vos futurs franchisés, un espace en ligne unique (procédures, supports, reporting) évite de tout gérer par e-mail dès la deuxième ouverture : je peux vous envoyer un exemple concret si cela vous intéresse.",
   "pourquoi_demain": "Réseau fraîchement financé qui doit outiller trois ouvertures début 2027 et n'a pas encore d'infrastructure numérique multi-sites visible.",
   "equipe": "W01"
+ },
+ {
+  "id": "BB5-001",
+  "entreprise": "Awen Services (Awen Propreté & Services)",
+  "siren": "910976141",
+  "secteur": "Propreté, multiservices aux entreprises, 3D (dératisation/désinsectisation) et espaces verts",
+  "ville": "Ambleville",
+  "departement": "95",
+  "region": "Île-de-France",
+  "site_web": "https://www.awen-services.fr",
+  "email": "contact@awen-services.fr",
+  "telephone": "01 30 36 17 76",
+  "source_email": "http://www.awen-services.fr/-Qui-sommes-nous-",
+  "source_telephone": "https://www.awen-services.fr/Nous-contacter",
+  "contact_nom": "Bruno Troadec",
+  "contact_fonction": "Fondateur / dirigeant",
+  "linkedin": "https://www.linkedin.com/in/bruno-troadec/",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Rachat des fonds de commerce Atout Bis et Keller (Villeneuve-le-Roi, 48 salariés, propreté + 3D) au 1er novembre 2025, puis fusion de deux filiales (L'Aventure Hygiène & Propreté et La Normande Hygiène & Propreté) pour rationaliser l'offre.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Groupe multi-filiales en croissance externe qui unifie ses entités : outil commun d'interventions terrain et espace client multisite.",
+  "faits": [
+   {
+    "fait": "Awen Services reprend les fonds de commerce d'Atout Bis et Keller (Villeneuve-le-Roi, 94), 48 salariés au total ; Atout Bis propose nettoyage, travaux, vitrerie et dératisation/désinsectisation, avec effet au 1er novembre 2025.",
+    "url": "https://services-proprete.fr/entreprises-marches/30694/awen-services-poursuit-sa-strategie-de-croissance",
+    "source_type": "presse",
+    "date": "2025-11-01"
+   },
+   {
+    "fait": "L'Aventure Hygiène & Propreté, filiale d'Awen Services, fusionne avec une autre filiale, La Normande Hygiène & Propreté, pour rationaliser l'offre (propreté + création/entretien d'espaces verts) et optimiser ressources et coûts.",
+    "url": "https://services-proprete.fr/entreprises-marches/32293/awen-services-fusionne-deux-entites",
+    "source_type": "presse",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Acquisition antérieure de L'Aventure (espaces verts) documentée par le conseil Auris Finance : le groupe se construit par rachats successifs.",
+    "url": "https://auris-finance.fr/awen-espaces-verts-acquisition-aventure/",
+    "source_type": "presse",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Bâtiment Entretien relaie aussi le développement du groupe (« Awen Services poursuit son développement »).",
+    "url": "https://www.batiment-entretien.fr/actualite/entreprises-de-proprete/awen-services-poursuit-son-developpement",
+    "source_type": "presse",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Avec au moins quatre entités intégrées (Awen Propreté & Services, L'Aventure, La Normande, Atout Bis/Keller) et des métiers différents (propreté, 3D, espaces verts), le suivi des interventions, des bons de passage et de la relation client risque de reposer sur des outils hétérogènes hérités de chaque société.",
+  "opportunite": "Application mobile pour les agents et techniciens (planning, pointage, bons d'intervention avec photos, rapports 3D) reliée à un espace client multisite (demandes, suivi des passages, documents), déployée entité par entité.",
+  "service": "Application terrain + espace client (outil métier sur mesure)",
+  "signal_achat": "Rachats fin 2025 + fusion de filiales en 2026",
+  "urgence": "moyenne : phase d'intégration post-rachat en cours (fusion 2026), fenêtre favorable pour harmoniser les outils",
+  "score_detail": {
+   "besoin": 16,
+   "urgence": 14,
+   "fit": 16,
+   "capacite": 7,
+   "accessibilite": 7,
+   "preuves": 11
+  },
+  "score": 71,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://services-proprete.fr/entreprises-marches/30694/awen-services-poursuit-sa-strategie-de-croissance",
+   "https://services-proprete.fr/entreprises-marches/32293/awen-services-fusionne-deux-entites",
+   "https://auris-finance.fr/awen-espaces-verts-acquisition-aventure/",
+   "https://www.batiment-entretien.fr/actualite/entreprises-de-proprete/awen-services-poursuit-son-developpement",
+   "https://www.awen-services.fr/Nous-contacter",
+   "http://www.awen-services.fr/-Qui-sommes-nous-"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Awen Services — intégration d'Atout Bis et fusion de vos filiales",
+  "email_personnalise": "Bonjour Monsieur Troadec,\n\nJ'ai lu dans Services-Propreté la reprise d'Atout Bis et Keller, puis la fusion de L'Aventure et de La Normande Hygiène & Propreté.\n\nQuand plusieurs sociétés aux métiers différents (propreté, 3D, espaces verts) se rapprochent, les bons d'intervention, plannings et échanges clients restent souvent sur les outils de chacune.\n\nCapmedia conçoit des applications terrain pour les équipes et des espaces clients multisites, déployables progressivement, entité par entité.\n\nSeriez-vous ouvert à un échange de 20 minutes pour voir comment vos équipes suivent aujourd'hui leurs passages ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu la reprise d'Atout Bis et Keller et la fusion de deux de vos filiales. Avec la propreté, la 3D et les espaces verts sous un même toit, le suivi des interventions est souvent un chantier en soi. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Je reviens vers vous sous un autre angle : vos clients multisites peuvent-ils aujourd'hui consulter en ligne les passages réalisés et les rapports de dératisation ? C'est souvent le premier outil que nous mettons en place.",
+  "pourquoi_demain": "Le groupe est en pleine intégration de ses rachats et fusionne ses filiales : c'est le moment où l'on choisit les outils communs.",
+  "equipe": "BB5"
  },
  {
   "id": "U08-001",
@@ -3710,6 +4512,84 @@
   "relance": "Autre angle : quand un cabinet repris rejoint le groupe, un outil simple de reprise des dossiers et d'accueil des clients fait gagner plusieurs semaines. Est-ce un point que vous anticipez ?",
   "pourquoi_demain": "Le nouvel actionnaire de Numéral a mis par écrit la transformation digitale clients et collaborateurs comme priorité : c'est un chantier qui s'ouvre maintenant.",
   "equipe": "Z04"
+ },
+ {
+  "id": "BB8-006",
+  "entreprise": "Brasserie Pietra (Groupe Boissons de Corse)",
+  "siren": "400016622",
+  "secteur": "Brasserie / groupe de boissons multi-marques",
+  "ville": "Furiani",
+  "departement": "2B",
+  "region": "Corse",
+  "site_web": "https://www.brasseriepietra.corsica",
+  "email": "contact@brasseriepietra.com",
+  "telephone": "04 95 30 14 70",
+  "source_email": "https://brasseriepietra.corsica/biere-corse-pietra/mentions-legales.php",
+  "source_telephone": "https://brasseriepietra.corsica/biere-corse-pietra/mentions-legales.php",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Le Groupe Boissons de Corse (Pietra) a intégré Prizm, Demory et Paname Brewing Company ; fusion Paname/Demory avec production mutualisée à Saint-Denis (site de 3 000 m² ouvert en mai 2025), arrivée des équipes Demory prévue en 2026.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Groupe à plusieurs marques (Pietra, Paname, Demory, Prizm) en cours d'intégration : sites de marques, boutique et commandes CHR à rationaliser.",
+  "faits": [
+   {
+    "fait": "Pietra, devenue Groupe Boissons de Corse, a intégré Prizm, Demory et Paname Brewing Company ; cité parmi les regroupements marquants de la consolidation brassicole 2026.",
+    "url": "https://superpotion.fr/consolidation-fusions-reprises-brasseries/",
+    "source_type": "presse spécialisée",
+    "date": "2026"
+   },
+   {
+    "fait": "Sous l'impulsion de GBC, Paname Brewing Company et Demory mutualisent leur production à Saint-Denis ; arrivée des équipes Demory dans l'usine attendue en 2026.",
+    "url": "https://biere-actu.fr/la-scene-brassicole-parisienne-bousculee-par-la-fusion-paname-demory/",
+    "source_type": "presse spécialisée",
+    "date": "2025-2026"
+   },
+   {
+    "fait": "Un distributeur CHR analyse l'impact de la fusion Paname/Demory pour les établissements clients.",
+    "url": "https://www.milliet.fr/fusion-paname-brewing-company-et-demory-quel-impact-pour-vous-chr/",
+    "source_type": "site distributeur",
+    "date": "2025"
+   },
+   {
+    "fait": "Le site de la brasserie est en .corsica alors que l'email publié dans les mentions légales est en @brasseriepietra.com ; Paname a son propre site (panamebrewingcompany.com).",
+    "url": "https://brasseriepietra.corsica/biere-corse-pietra/mentions-legales.php",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Un groupe qui additionne des marques corses et parisiennes et fusionne deux brasseries a intérêt à unifier ses outils web (sites de marque, vente en ligne, prise de commande des bars/restaurants).",
+  "opportunite": "Socle multi-marques GBC (Pietra, Paname, Demory, Prizm) avec boutique en ligne et portail pro CHR/cavistes (tarifs, commandes, fûts, PLV).",
+  "service": "Site multi-marques + portail B2B CHR",
+  "signal_achat": "Intégration Paname/Demory (fusion 2025, regroupement à Saint-Denis en 2026)",
+  "urgence": "moyenne — intégration des équipes Demory en 2026",
+  "score_detail": {
+   "besoin": 16,
+   "urgence": 13,
+   "fit": 16,
+   "capacite": 9,
+   "accessibilite": 7,
+   "preuves": 10
+  },
+  "score": 71,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://superpotion.fr/consolidation-fusions-reprises-brasseries/",
+   "https://biere-actu.fr/la-scene-brassicole-parisienne-bousculee-par-la-fusion-paname-demory/",
+   "https://www.milliet.fr/fusion-paname-brewing-company-et-demory-quel-impact-pour-vous-chr/",
+   "https://brasseriepietra.corsica/biere-corse-pietra/mentions-legales.php"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Pietra, Paname, Demory — un seul espace pro ?",
+  "email_personnalise": "Bonjour,\n\nJ'ai suivi l'intégration de Paname Brewing Company et de Demory au Groupe Boissons de Corse, avec la production regroupée à Saint-Denis et l'arrivée des équipes Demory cette année. Avec plusieurs marques, chacune avec son site, les commandes des bars et restaurants passent souvent par des canaux différents.\n\nCapmedia construit des plateformes multi-marques avec boutique en ligne et espace pro pour les CHR et cavistes.\n\nQui s'occupe de ce sujet au sein du groupe ? Un échange de 20 minutes vous conviendrait-il ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu l'intégration de Paname et Demory au Groupe Boissons de Corse, avec la production regroupée à Saint-Denis. Je voulais savoir qui s'occupe chez vous des sites des marques et des commandes en ligne des professionnels.",
+  "relance": "Avec des clients CHR à Paris et en Corse, un portail de commande commun aux marques du groupe peut simplifier le travail des commerciaux. Voulez-vous voir un exemple ?",
+  "pourquoi_demain": "Le groupe finalise en 2026 le regroupement de deux brasseries parisiennes rachetées : ses outils de vente doivent suivre.",
+  "equipe": "BB8"
  },
  {
   "id": "Y08-003",
@@ -4419,6 +5299,84 @@
   "equipe": "U03"
  },
  {
+  "id": "BB8-002",
+  "entreprise": "Distillerie Warenghem",
+  "siren": "",
+  "secteur": "Distillerie (whisky Armorik, gin, liqueurs)",
+  "ville": "Lannion",
+  "departement": "22",
+  "region": "Bretagne",
+  "site_web": "https://distillerie-warenghem.bzh",
+  "email": "info@distillerie-warenghem.com",
+  "telephone": "02 96 37 00 08",
+  "source_email": "https://distillerie-warenghem.com/distillerie-warenghem/contact.htm",
+  "source_telephone": "https://distillerie-warenghem.com/distillerie-warenghem/contact.htm",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "",
+  "effectif": "23 salariés",
+  "capital": "",
+  "actualite": "2026 : installation d'un laboratoire R&D dans les anciens abattoirs rachetés en 2022 pour lancer de nouveaux spiritueux au-delà du whisky ; gin repensé (Archipel remplace Dizonv). CA 2025 : 4,8 M€.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Nouvelle gamme de spiritueux en 2026 et deux sites coexistants (.com et .bzh) : vente directe en ligne et présentation de la gamme à consolider.",
+  "faits": [
+   {
+    "fait": "La distillerie (23 salariés, 4,8 M€ de CA 2025) installe un laboratoire R&D pour lancer de nouveaux spiritueux au-delà de ses whiskys.",
+    "url": "https://www.lejournaldesentreprises.com/article/la-distillerie-warenghem-va-lancer-de-nouveaux-spiritueux-au-dela-de-ses-whiskys-2141895",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Le gin de la maison est repensé : Archipel remplace Dizonv.",
+    "url": "https://www.rayon-boissons.com/nouveaux-produits/la-distillerie-warenghem-repense-son-gin",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Deux sites apparaissent en parallèle dans les résultats : distillerie-warenghem.com (page contact) et distillerie-warenghem.bzh (site principal).",
+    "url": "https://distillerie-warenghem.bzh/en/home/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "La gamme est largement vendue en ligne par des revendeurs tiers (Comptoir Irlandais, Breizh Odyssée, Aux Palais des Vignobles…).",
+    "url": "https://boutique.breizh-odyssee.bzh/fr/brand/12-distillerie-warenghem",
+    "source_type": "site revendeur",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Le lancement de nouveaux spiritueux en 2026 et la coexistence de deux domaines laissent penser que la vente directe en ligne et l'espace pro (cavistes, CHR) ne sont pas encore centralisés sur un site unique.",
+  "opportunite": "Refonte/consolidation du site sur un domaine unique avec boutique en ligne (whisky, gin, éditions limitées), réservation des visites et espace pro cavistes/CHR.",
+  "service": "E-commerce vente directe + espace pro B2B",
+  "signal_achat": "Lancement de nouveaux spiritueux (R&D 2026)",
+  "urgence": "moyenne — nouvelle gamme en cours de lancement",
+  "score_detail": {
+   "besoin": 15,
+   "urgence": 14,
+   "fit": 16,
+   "capacite": 7,
+   "accessibilite": 8,
+   "preuves": 10
+  },
+  "score": 70,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lejournaldesentreprises.com/article/la-distillerie-warenghem-va-lancer-de-nouveaux-spiritueux-au-dela-de-ses-whiskys-2141895",
+   "https://www.rayon-boissons.com/nouveaux-produits/la-distillerie-warenghem-repense-son-gin",
+   "https://distillerie-warenghem.com/distillerie-warenghem/contact.htm",
+   "https://distillerie-warenghem.bzh/en/home/"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Warenghem — vos nouveaux spiritueux en vente directe",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu dans Le Journal des Entreprises que la distillerie installe un laboratoire R&D pour lancer de nouveaux spiritueux, et que le gin Archipel remplace Dizonv. J'ai aussi remarqué que deux sites coexistent (distillerie-warenghem.com et .bzh), alors qu'une bonne partie des ventes en ligne passe par des revendeurs.\n\nCapmedia réalise des sites avec boutique intégrée et espace pro pour les cavistes et CHR, sur un seul domaine.\n\nQui s'occupe de ces sujets chez vous ? Un échange de 15 minutes vous conviendrait-il ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que la distillerie lance de nouveaux spiritueux cette année, avec le nouveau gin Archipel. Je voulais savoir qui s'occupe chez vous du site et de la vente en ligne.",
+  "relance": "Une nouvelle gamme se vend mieux en direct quand la boutique, les visites de la distillerie et les commandes des cavistes sont au même endroit. Voulez-vous que je vous montre un exemple ?",
+  "pourquoi_demain": "La distillerie lance de nouveaux spiritueux en 2026 alors que son site est réparti sur deux domaines.",
+  "equipe": "BB8"
+ },
+ {
   "entreprise": "L'Atelier Artisan Crêpier (SLB Holding)",
   "siren": "821612199",
   "secteur": "Restauration crêperie premium en franchise",
@@ -4699,6 +5657,78 @@
   "relance": "Autre angle : vos clients multi-sites en Normandie et Bretagne pourraient suivre passages et contrôles qualité depuis un seul espace, quelle que soit l'agence. Est-ce que cela vous parle ?",
   "pourquoi_demain": "Six rachats depuis 2018 et un objectif de croissance 2026 : le groupe doit homogénéiser ses outils entre 11 agences.",
   "equipe": "Z06",
+  "score": 70,
+  "niveau": "QUALIFIÉ"
+ },
+ {
+  "id": "BB3-003",
+  "entreprise": "Bony auto-mobile",
+  "siren": "",
+  "secteur": "Distribution automobile (Renault, Dacia, Nissan, Alpine)",
+  "ville": "Clermont-Ferrand",
+  "departement": "63",
+  "region": "Auvergne-Rhône-Alpes",
+  "site_web": "https://www.bonyauto-mobile.com",
+  "email": "contact@bonyautomobiles.com",
+  "telephone": "04 73 65 99 00",
+  "source_email": "https://www.domes-sancyartense.fr/annuaire/bony-automobiles-renault-dacia-massagettes/",
+  "source_telephone": "https://www.domes-sancyartense.fr/annuaire/bony-automobiles-renault-dacia-massagettes/",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "",
+  "effectif": "plus de 1 000 salariés",
+  "capital": "",
+  "actualite": "31 sites ; rachat d'une douzaine de concessions Renault, Dacia et Nissan du groupe Fabre (Aveyron, Cantal, Lot, Tarn) finalisé au 1er octobre ; reprise d'affaires Renault de Pascal Meignan ; plateforme logistique pièces de 6 000 m² inaugurée en 2025.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Présence web répartie entre deux domaines (bonyautomobiles.com et bonyauto-mobile.com) et des sous-domaines par concession, à étendre aux sites rachetés.",
+  "faits": [
+   {
+    "fait": "Rachat d'une douzaine de concessions Renault, Dacia et Nissan du groupe Fabre (Aveyron, Cantal, Lot, Tarn) ; 31 sites et plus de 1 000 salariés",
+    "url": "https://www.lejournaldesentreprises.com/article/bony-auto-mobile-accelere-bien-au-dela-de-ses-terres-dorigine-2136938",
+    "source_type": "presse",
+    "date": "2025"
+   },
+   {
+    "fait": "Deux domaines coexistent : www.bonyautomobiles.com (pages contact, carrosserie) et www.bonyauto-mobile.com (groupe, ateliers, stock), plus des sous-domaines par concession (renault-clermont-ferrand.bonyauto-mobile.com, nissan-clermont-ferrand.bonyauto-mobile.com)",
+    "url": "https://www.bonyauto-mobile.com/notre-groupe/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Les groupes Thivolle et Bony se répartissent les affaires Renault de Pascal Meignan",
+    "url": "https://journalauto.com/distribution/les-groupes-thivolle-et-bony-se-repartissent-les-affaires-renault-de-pascal-meignan/",
+    "source_type": "presse",
+    "date": "2025"
+   }
+  ],
+  "inference": "Un groupe passé à 31 sites par rachats successifs et qui fonctionne sur deux domaines web peut vouloir unifier sa présence en ligne et ses parcours clients (RDV atelier, reprise) pour les nouvelles concessions.",
+  "opportunite": "Audit de la présence web (deux domaines + sous-domaines) et feuille de route de consolidation ; parcours RDV atelier unifié pour les 31 sites.",
+  "service": "Audit technique et consolidation web multi-sites",
+  "signal_achat": "Rachats Fabre et Meignan, 31 sites",
+  "urgence": "moyenne — rachats finalisés il y a environ un an, intégration en cours",
+  "score_detail": {
+   "besoin": 18,
+   "urgence": 11,
+   "fit": 15,
+   "capacite": 10,
+   "accessibilite": 5,
+   "preuves": 11
+  },
+  "sources": [
+   "https://www.lejournaldesentreprises.com/article/bony-auto-mobile-accelere-bien-au-dela-de-ses-terres-dorigine-2136938",
+   "https://www.bonyautomobiles.com/contactez-nous/",
+   "https://www.bonyauto-mobile.com/notre-groupe/",
+   "https://www.domes-sancyartense.fr/annuaire/bony-automobiles-renault-dacia-massagettes/"
+  ],
+  "objet_email": "Bony auto-mobile — bonyautomobiles.com et bonyauto-mobile.com",
+  "email_personnalise": "Bonjour,\n\nEn préparant cet échange, j'ai remarqué que Bony auto-mobile est présent sur deux domaines, bonyautomobiles.com et bonyauto-mobile.com, avec en plus des sous-domaines par concession. Après l'intégration des concessions Fabre et Meignan, ce découpage peut compliquer les mises à jour et diluer la visibilité sur les recherches locales.\n\nCapmedia réalise des audits de présence web pour les groupes multi-sites et propose un plan de consolidation concret, étape par étape.\n\nPourriez-vous m'indiquer la personne en charge du digital au sein du groupe ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que Bony auto-mobile a deux sites, bonyautomobiles.com et bonyauto-mobile.com, en plus des sites par concession. Avec les 31 sites après les rachats, ça fait beaucoup à maintenir. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Autre angle : la prise de rendez-vous atelier sur 31 sites — je peux vous montrer comment d'autres groupes l'ont unifiée.",
+  "pourquoi_demain": "Groupe régional de 31 sites avec deux domaines web qui coexistent : l'incohérence est concrète et facile à montrer.",
+  "date_verification": "2026-09-24",
+  "equipe": "BB3",
   "score": 70,
   "niveau": "QUALIFIÉ"
  },

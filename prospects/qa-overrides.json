@@ -57,5 +57,20 @@
  },
  "AA2-001": {
   "rejet": "email vu uniquement dans des résumés ; source probable = page d'un club partenaire, non officielle"
+ },
+ "BB2-001": {
+  "rejet": "source du téléphone incertaine (post LinkedIn 2023 ou annuaire, non confirmé)"
+ },
+ "BB3-001": {
+  "rejet": "email nominatif du président dont la page source (lyon-finance.org) n'est pas confirmée"
+ },
+ "BB6-001": {
+  "rejet": "email non visible dans le résumé de la page source citée ; non confirmé"
+ },
+ "BB8-005": {
+  "rejet": "page source de l'email incertaine (résumés contradictoires)"
+ },
+ "BB8-007": {
+  "rejet": "téléphone rattaché à Kompass sans certitude ; deux SIREN possibles"
  }
 }
