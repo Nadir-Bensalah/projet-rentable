@@ -18,5 +18,7 @@ export function frDate(iso?: string) {
 
 export function frLongDate(iso?: string) {
   if (!iso) return "";
-  return new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(new Date(iso + "T00:00:00Z"));
+  return new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(
+    new Date(iso + "T00:00:00Z"),
+  );
 }

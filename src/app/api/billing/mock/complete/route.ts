@@ -18,8 +18,15 @@ export const POST = handler(async (req) => {
   const user = await getCurrentUser();
   if (!user || user.id !== data.userId) throw new HttpError(403, "Cette session de paiement appartient à un autre compte.", "forbidden");
   if (outcome === "canceled") return json({ redirect: data.cancelUrl });
-  if (outcome === "failed") return json({ error: "Paiement refusé par la banque (simulation). Aucun montant n'a été débité.", code: "payment_failed" }, 402);
-  const { body, signature } = signMockWebhook({ kind: "checkout.completed", userId: data.userId, product: data.product, outcome: "paid", ref: `${data.nonce}${randomToken(4)}` });
+  if (outcome === "failed")
+    return json({ error: "Paiement refusé par la banque (simulation). Aucun montant n'a été débité.", code: "payment_failed" }, 402);
+  const { body, signature } = signMockWebhook({
+    kind: "checkout.completed",
+    userId: data.userId,
+    product: data.product,
+    outcome: "paid",
+    ref: `${data.nonce}${randomToken(4)}`,
+  });
   await processWebhook(mockProvider, body, new Headers({ "x-mock-signature": signature }));
   return json({ redirect: data.successUrl });
 });

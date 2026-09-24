@@ -25,6 +25,11 @@ export const POST = handler(async (req) => {
     body.topic,
     body.message,
   ]);
-  await sendEmail("support_message", env().SUPPORT_EMAIL, { from: body.email, topic: body.topic, message: body.message }, { replyTo: body.email });
+  await sendEmail(
+    "support_message",
+    env().SUPPORT_EMAIL,
+    { from: body.email, topic: body.topic, message: body.message },
+    { replyTo: body.email },
+  );
   return json({ ok: true });
 });

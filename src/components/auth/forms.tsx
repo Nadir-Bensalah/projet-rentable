@@ -10,12 +10,41 @@ import { Button } from "@/components/ui/button";
 import { Checkbox, Field, Input } from "@/components/ui/field";
 import { fetchMe } from "@/components/layout/use-account";
 
-function PasswordInput({ id, value, onChange, autoComplete, invalid, describedBy }: { id: string; value: string; onChange: (v: string) => void; autoComplete: string; invalid?: boolean; describedBy?: string }) {
+function PasswordInput({
+  id,
+  value,
+  onChange,
+  autoComplete,
+  invalid,
+  describedBy,
+}: {
+  id: string;
+  value: string;
+  onChange: (v: string) => void;
+  autoComplete: string;
+  invalid?: boolean;
+  describedBy?: string;
+}) {
   const [show, setShow] = useState(false);
   return (
     <div className="relative">
-      <Input id={id} type={show ? "text" : "password"} value={value} onChange={(e) => onChange(e.target.value)} autoComplete={autoComplete} required className="pr-12" aria-invalid={invalid || undefined} aria-describedby={describedBy} />
-      <button type="button" onClick={() => setShow((s) => !s)} className="absolute inset-y-0 right-1 my-auto flex size-9 items-center justify-center rounded-lg text-subtle hover:text-[var(--fg)]" aria-label={show ? "Masquer le mot de passe" : "Afficher le mot de passe"}>
+      <Input
+        id={id}
+        type={show ? "text" : "password"}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        autoComplete={autoComplete}
+        required
+        className="pr-12"
+        aria-invalid={invalid || undefined}
+        aria-describedby={describedBy}
+      />
+      <button
+        type="button"
+        onClick={() => setShow((s) => !s)}
+        className="absolute inset-y-0 right-1 my-auto flex size-9 items-center justify-center rounded-lg text-subtle hover:text-[var(--fg)]"
+        aria-label={show ? "Masquer le mot de passe" : "Afficher le mot de passe"}
+      >
         {show ? <EyeOff className="size-4" aria-hidden /> : <Eye className="size-4" aria-hidden />}
       </button>
     </div>
@@ -59,7 +88,12 @@ export function SignupForm({ onSuccess, onSwitch, compact }: { onSuccess: () => 
         acceptTerms: true,
         marketingOptIn: marketing,
         referralCode: readRefCode(),
-        firstTouch: { source: utm.source ?? null, medium: utm.medium ?? null, campaign: utm.campaign ?? null, landing: utm.landing ?? null },
+        firstTouch: {
+          source: utm.source ?? null,
+          medium: utm.medium ?? null,
+          campaign: utm.campaign ?? null,
+          landing: utm.landing ?? null,
+        },
       },
     });
     setLoading(false);
@@ -85,10 +119,31 @@ export function SignupForm({ onSuccess, onSwitch, compact }: { onSuccess: () => 
         </Alert>
       ) : null}
       <Field id={`${uid}-email`} label="Adresse e-mail" error={fieldError.email}>
-        <Input id={`${uid}-email`} type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} required aria-invalid={!!fieldError.email || undefined} aria-describedby={fieldError.email ? `${uid}-email-error` : undefined} />
+        <Input
+          id={`${uid}-email`}
+          type="email"
+          autoComplete="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          aria-invalid={!!fieldError.email || undefined}
+          aria-describedby={fieldError.email ? `${uid}-email-error` : undefined}
+        />
       </Field>
-      <Field id={`${uid}-password`} label="Mot de passe" hint="10 caractères minimum. Une phrase de passe est idéale." error={fieldError.password}>
-        <PasswordInput id={`${uid}-password`} value={password} onChange={setPassword} autoComplete="new-password" invalid={!!fieldError.password} describedBy={fieldError.password ? `${uid}-password-error` : `${uid}-password-hint`} />
+      <Field
+        id={`${uid}-password`}
+        label="Mot de passe"
+        hint="10 caractères minimum. Une phrase de passe est idéale."
+        error={fieldError.password}
+      >
+        <PasswordInput
+          id={`${uid}-password`}
+          value={password}
+          onChange={setPassword}
+          autoComplete="new-password"
+          invalid={!!fieldError.password}
+          describedBy={fieldError.password ? `${uid}-password-error` : `${uid}-password-hint`}
+        />
       </Field>
       <div className="grid gap-2.5">
         <Checkbox
@@ -108,8 +163,18 @@ export function SignupForm({ onSuccess, onSwitch, compact }: { onSuccess: () => 
             </>
           }
         />
-        {fieldError.terms ? <p role="alert" className="text-sm font-medium text-rose-600">{fieldError.terms}</p> : null}
-        {!compact ? <Checkbox checked={marketing} onChange={(e) => setMarketing(e.target.checked)} label="Je souhaite recevoir les nouveautés de Relevéo (un e-mail par mois au plus, désinscription en un clic)." /> : null}
+        {fieldError.terms ? (
+          <p role="alert" className="text-sm font-medium text-rose-600">
+            {fieldError.terms}
+          </p>
+        ) : null}
+        {!compact ? (
+          <Checkbox
+            checked={marketing}
+            onChange={(e) => setMarketing(e.target.checked)}
+            label="Je souhaite recevoir les nouveautés de Relevéo (un e-mail par mois au plus, désinscription en un clic)."
+          />
+        ) : null}
       </div>
       <Button type="submit" size="lg" loading={loading} className="w-full">
         Créer mon compte gratuit
@@ -161,7 +226,10 @@ export function LoginForm({ onSuccess, onSwitch }: { onSuccess: () => void; onSw
         <Field id={`${uid}-password`} label="Mot de passe">
           <PasswordInput id={`${uid}-password`} value={password} onChange={setPassword} autoComplete="current-password" />
         </Field>
-        <Link href="/mot-de-passe-oublie" className="mt-2 inline-block text-sm font-medium text-brand-600 hover:underline dark:text-brand-300">
+        <Link
+          href="/mot-de-passe-oublie"
+          className="mt-2 inline-block text-sm font-medium text-brand-600 hover:underline dark:text-brand-300"
+        >
           Mot de passe oublié ?
         </Link>
       </div>

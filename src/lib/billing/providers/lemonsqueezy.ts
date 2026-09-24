@@ -2,13 +2,7 @@ import "server-only";
 import { PRODUCTS, type ProductId } from "@/config/plans";
 import { env } from "@/lib/env";
 import { hmacSha256Hex, safeEqualHex, sha256 } from "@/lib/security/tokens";
-import {
-  ProviderConfigError,
-  WebhookSignatureError,
-  type BillingEvent,
-  type PaymentProvider,
-  type SubscriptionStatus,
-} from "../types";
+import { ProviderConfigError, WebhookSignatureError, type BillingEvent, type PaymentProvider, type SubscriptionStatus } from "../types";
 
 /**
  * Lemon Squeezy (merchant of record: collects and remits VAT worldwide, which suits a

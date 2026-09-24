@@ -42,7 +42,7 @@ export const PLANS: Record<PlanId, Plan> = {
     highlight: true,
     features: [
       "400 pages par mois",
-      "Tous les formats : Excel, CSV, OFX, QIF, JSON, écritures (colonnes FEC)",
+      "Tous les formats : Excel, CSV, OFX, QIF, JSON, journal de banque 512/471 paramétrable",
       "Plusieurs relevés à la fois et fusion en un seul fichier",
       "Rapport de contrôle imprimable pour chaque relevé",
       "Ré-export gratuit d'un même relevé pendant le mois",
@@ -57,7 +57,7 @@ export const PLANS: Record<PlanId, Plan> = {
     features: [
       "2 500 pages par mois",
       "Tout le plan Pro",
-      "Journal de banque en partie double (512 / 471) paramétrable",
+      "Volume adapté au traitement des dossiers clients",
       "Support prioritaire par e-mail",
     ],
   },
@@ -83,10 +83,31 @@ export interface ProductInfo {
 
 export const PRODUCTS: Record<ProductId, ProductInfo> = {
   pack: { id: "pack", kind: "pack", price: PACK.price, label: PACK.name },
-  pro_monthly: { id: "pro_monthly", kind: "subscription", plan: "pro", interval: "month", price: PLANS.pro.priceMonthly, label: "Pro mensuel" },
+  pro_monthly: {
+    id: "pro_monthly",
+    kind: "subscription",
+    plan: "pro",
+    interval: "month",
+    price: PLANS.pro.priceMonthly,
+    label: "Pro mensuel",
+  },
   pro_yearly: { id: "pro_yearly", kind: "subscription", plan: "pro", interval: "year", price: PLANS.pro.priceYearly, label: "Pro annuel" },
-  business_monthly: { id: "business_monthly", kind: "subscription", plan: "business", interval: "month", price: PLANS.business.priceMonthly, label: "Cabinet mensuel" },
-  business_yearly: { id: "business_yearly", kind: "subscription", plan: "business", interval: "year", price: PLANS.business.priceYearly, label: "Cabinet annuel" },
+  business_monthly: {
+    id: "business_monthly",
+    kind: "subscription",
+    plan: "business",
+    interval: "month",
+    price: PLANS.business.priceMonthly,
+    label: "Cabinet mensuel",
+  },
+  business_yearly: {
+    id: "business_yearly",
+    kind: "subscription",
+    plan: "business",
+    interval: "year",
+    price: PLANS.business.priceYearly,
+    label: "Cabinet annuel",
+  },
 };
 
 export function isProductId(v: unknown): v is ProductId {

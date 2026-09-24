@@ -43,7 +43,10 @@ export function clientIp(req: Request): string {
   const hops = Math.max(1, Number(process.env.TRUSTED_PROXY_HOPS ?? "1"));
   const fwd = req.headers.get("x-forwarded-for");
   if (fwd) {
-    const parts = fwd.split(",").map((s) => s.trim()).filter(Boolean);
+    const parts = fwd
+      .split(",")
+      .map((s) => s.trim())
+      .filter(Boolean);
     const ip = parts[Math.max(0, parts.length - hops)];
     if (ip) return ip;
   }

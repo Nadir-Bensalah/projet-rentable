@@ -36,7 +36,8 @@ export function ReconciliationCard({ st, onBalances }: { st: ParsedStatement; on
 
   const equation = (
     <p className="tabular mt-1 text-sm">
-      {money(r.opening, c)} + {money(r.totalCredits, c)} − {money(r.totalDebits, c)} = {money((r.opening ?? 0) + r.totalCredits - r.totalDebits, c)}
+      {money(r.opening, c)} + {money(r.totalCredits, c)} − {money(r.totalDebits, c)} ={" "}
+      {money((r.opening ?? 0) + r.totalCredits - r.totalDebits, c)}
     </p>
   );
 
@@ -67,32 +68,44 @@ export function ReconciliationCard({ st, onBalances }: { st: ParsedStatement; on
               <p className="font-semibold text-emerald-900 dark:text-emerald-100">Relevé vérifié au centime</p>
               {r.opening !== undefined ? <div className="text-emerald-900/80 dark:text-emerald-200/90">{equation}</div> : null}
               {r.opening === undefined && r.printedTotals ? (
-                <p className="mt-1 text-sm text-emerald-900/80 dark:text-emerald-200/90">Les totaux calculés correspondent aux totaux imprimés sur le relevé.</p>
+                <p className="mt-1 text-sm text-emerald-900/80 dark:text-emerald-200/90">
+                  Les totaux calculés correspondent aux totaux imprimés sur le relevé.
+                </p>
               ) : null}
             </>
           ) : r.status === "mismatch" ? (
             <>
               <p className="font-semibold text-rose-900 dark:text-rose-100">
-                {r.difference !== undefined ? `Écart de ${money(Math.abs(r.difference), c)} avec le solde final` : "Les totaux ne correspondent pas à ceux du relevé"}
+                {r.difference !== undefined
+                  ? `Écart de ${money(Math.abs(r.difference), c)} avec le solde final`
+                  : "Les totaux ne correspondent pas à ceux du relevé"}
               </p>
               {r.opening !== undefined ? <div className="text-rose-900/80 dark:text-rose-200/90">{equation}</div> : null}
               <p className="mt-2 text-sm text-rose-900/80 dark:text-rose-200/90">
-                Solde final imprimé : <span className="tabular font-semibold">{money(r.closing, c)}</span>. Vérifiez les lignes signalées, le sens des montants (débit/crédit) ou une opération manquante.
+                Solde final imprimé : <span className="tabular font-semibold">{money(r.closing, c)}</span>. Vérifiez les lignes signalées,
+                le sens des montants (débit/crédit) ou une opération manquante.
               </p>
             </>
           ) : (
             <>
               <p className="font-semibold text-amber-900 dark:text-amber-100">Contrôle impossible : soldes non trouvés sur le relevé</p>
-              <p className="mt-1 text-sm text-amber-900/80 dark:text-amber-200/90">Saisissez le solde de départ et le solde final indiqués sur votre relevé pour lancer la vérification.</p>
+              <p className="mt-1 text-sm text-amber-900/80 dark:text-amber-200/90">
+                Saisissez le solde de départ et le solde final indiqués sur votre relevé pour lancer la vérification.
+              </p>
             </>
           )}
           {r.printedTotals && r.status !== "verified" ? (
             <p className="mt-2 text-sm opacity-80">
-              Totaux imprimés : débits {money(r.printedTotals.debits, c)}, crédits {money(r.printedTotals.credits, c)} — calculés : débits {money(r.totalDebits, c)}, crédits {money(r.totalCredits, c)}.
+              Totaux imprimés : débits {money(r.printedTotals.debits, c)}, crédits {money(r.printedTotals.credits, c)} — calculés : débits{" "}
+              {money(r.totalDebits, c)}, crédits {money(r.totalCredits, c)}.
             </p>
           ) : null}
           {!editing ? (
-            <button type="button" onClick={() => setEditing(true)} className="mt-3 text-sm font-semibold underline underline-offset-4 opacity-90 hover:opacity-100">
+            <button
+              type="button"
+              onClick={() => setEditing(true)}
+              className="mt-3 text-sm font-semibold underline underline-offset-4 opacity-90 hover:opacity-100"
+            >
               {r.status === "unverifiable" ? "Saisir les soldes" : "Modifier les soldes"}
             </button>
           ) : (
@@ -104,18 +117,44 @@ export function ReconciliationCard({ st, onBalances }: { st: ParsedStatement; on
               }}
             >
               <div>
-                <label htmlFor={`opening-${st.fileName}`} className="mb-1 block text-xs font-semibold">Solde de départ</label>
-                <Input id={`opening-${st.fileName}`} inputMode="decimal" value={opening} onChange={(e) => setOpening(e.target.value)} placeholder="1 520,34" className="h-10 bg-white dark:bg-slate-900" />
+                <label htmlFor={`opening-${st.fileName}`} className="mb-1 block text-xs font-semibold">
+                  Solde de départ
+                </label>
+                <Input
+                  id={`opening-${st.fileName}`}
+                  inputMode="decimal"
+                  value={opening}
+                  onChange={(e) => setOpening(e.target.value)}
+                  placeholder="1 520,34"
+                  className="h-10 bg-white dark:bg-slate-900"
+                />
               </div>
               <div>
-                <label htmlFor={`closing-${st.fileName}`} className="mb-1 block text-xs font-semibold">Solde final</label>
-                <Input id={`closing-${st.fileName}`} inputMode="decimal" value={closing} onChange={(e) => setClosing(e.target.value)} placeholder="2 630,78" className="h-10 bg-white dark:bg-slate-900" />
+                <label htmlFor={`closing-${st.fileName}`} className="mb-1 block text-xs font-semibold">
+                  Solde final
+                </label>
+                <Input
+                  id={`closing-${st.fileName}`}
+                  inputMode="decimal"
+                  value={closing}
+                  onChange={(e) => setClosing(e.target.value)}
+                  placeholder="2 630,78"
+                  className="h-10 bg-white dark:bg-slate-900"
+                />
               </div>
               <div className="flex gap-2">
-                <Button type="submit" size="sm">Vérifier</Button>
-                <Button type="button" size="sm" variant="ghost" onClick={() => setEditing(false)}>Annuler</Button>
+                <Button type="submit" size="sm">
+                  Vérifier
+                </Button>
+                <Button type="button" size="sm" variant="ghost" onClick={() => setEditing(false)}>
+                  Annuler
+                </Button>
               </div>
-              {error ? <p role="alert" className="text-sm font-medium text-rose-700 sm:col-span-3 dark:text-rose-300">{error}</p> : null}
+              {error ? (
+                <p role="alert" className="text-sm font-medium text-rose-700 sm:col-span-3 dark:text-rose-300">
+                  {error}
+                </p>
+              ) : null}
             </form>
           )}
         </div>

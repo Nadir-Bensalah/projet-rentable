@@ -30,11 +30,7 @@ export const GUIDES: Guide[] = [
         type: "table",
         head: ["Méthode", "Avantages", "Limites"],
         rows: [
-          [
-            "Copier-coller depuis le lecteur PDF",
-            "Gratuit, immédiat",
-            "Colonnes mélangées, retouches manuelles longues, aucun contrôle",
-          ],
+          ["Copier-coller depuis le lecteur PDF", "Gratuit, immédiat", "Colonnes mélangées, retouches manuelles longues, aucun contrôle"],
           [
             "Export CSV ou OFX depuis l’espace client",
             "Données natives de la banque",
@@ -197,7 +193,11 @@ export const GUIDES: Guide[] = [
         type: "table",
         head: ["Situation", "Connue de", "Traitement"],
         rows: [
-          ["Chèque émis, pas encore encaissé par le bénéficiaire", "Comptabilité seulement", "À mentionner dans l’état de rapprochement, pas d’écriture"],
+          [
+            "Chèque émis, pas encore encaissé par le bénéficiaire",
+            "Comptabilité seulement",
+            "À mentionner dans l’état de rapprochement, pas d’écriture",
+          ],
           ["Remise de chèques en cours", "Comptabilité seulement", "À mentionner, apparaîtra sur le relevé suivant"],
           ["Prélèvement automatique non saisi", "Banque seulement", "À comptabiliser"],
           ["Frais et commissions bancaires", "Banque seulement", "À comptabiliser (souvent en 627)"],
@@ -296,11 +296,7 @@ export const GUIDES: Guide[] = [
         a: "Non. Relevéo transcrit le relevé en tableau et vérifie que la transcription est complète. Le pointage avec votre comptabilité reste à faire dans votre tableur ou votre logiciel.",
       },
     ],
-    related: [
-      "convertir-releve-bancaire-pdf-excel",
-      "expert-comptable-releves-pdf-clients",
-      "importer-releve-ofx-logiciel-comptable",
-    ],
+    related: ["convertir-releve-bancaire-pdf-excel", "expert-comptable-releves-pdf-clients", "importer-releve-ofx-logiciel-comptable"],
   },
 
   // ─────────────────────────────────────────────────────────────────────────
@@ -341,7 +337,12 @@ export const GUIDES: Guide[] = [
           ["Soldes inclus", "Oui (solde de fin)", "Non", "Selon le fichier"],
           ["Paramétrage à l’import", "Généralement aucun", "Format de date parfois", "Correspondance des colonnes"],
           ["Lisible dans un tableur", "Non", "Non", "Oui"],
-          ["Usage typique", "Logiciels comptables et de gestion", "Logiciels de budget personnels, anciens outils", "Tableurs, outils sur mesure, imports paramétrables"],
+          [
+            "Usage typique",
+            "Logiciels comptables et de gestion",
+            "Logiciels de budget personnels, anciens outils",
+            "Tableurs, outils sur mesure, imports paramétrables",
+          ],
         ],
         caption: "OFX, QIF et CSV comparés",
       },
@@ -431,11 +432,7 @@ export const GUIDES: Guide[] = [
         a: "Ce n’est pas prévu pour : l’OFX est un format d’échange entre logiciels. Pour travailler dans un tableur, exportez plutôt en .xlsx.",
       },
     ],
-    related: [
-      "csv-excel-point-virgule-virgule-decimale",
-      "rapprochement-bancaire",
-      "expert-comptable-releves-pdf-clients",
-    ],
+    related: ["csv-excel-point-virgule-virgule-decimale", "rapprochement-bancaire", "expert-comptable-releves-pdf-clients"],
   },
 
   // ─────────────────────────────────────────────────────────────────────────
@@ -557,11 +554,7 @@ export const GUIDES: Guide[] = [
         a: "Non, Relevéo ne fait pas de reconnaissance de caractères (OCR). Il faut soit obtenir une version PDF numérique, soit passer d’abord par un outil d’OCR et vérifier soigneusement le résultat.",
       },
     ],
-    related: [
-      "convertir-releve-bancaire-pdf-excel",
-      "releve-bancaire-scanne-pdf-image",
-      "expert-comptable-releves-pdf-clients",
-    ],
+    related: ["convertir-releve-bancaire-pdf-excel", "releve-bancaire-scanne-pdf-image", "expert-comptable-releves-pdf-clients"],
   },
 
   // ─────────────────────────────────────────────────────────────────────────
@@ -616,8 +609,16 @@ export const GUIDES: Guide[] = [
         head: ["Statut", "Signification", "Action"],
         rows: [
           ["Vérifié", "La transcription est arithmétiquement complète", "Passer à la suite"],
-          ["Écart de X €", "Une ligne manque, est en double ou mal classée", "Contrôler les lignes signalées, corriger la cellule, exclure ou inverser un signe"],
-          ["Non vérifiable", "Le relevé n’imprime pas de soldes", "Saisir les soldes à partir d’une autre source (relevé précédent, attestation)"],
+          [
+            "Écart de X €",
+            "Une ligne manque, est en double ou mal classée",
+            "Contrôler les lignes signalées, corriger la cellule, exclure ou inverser un signe",
+          ],
+          [
+            "Non vérifiable",
+            "Le relevé n’imprime pas de soldes",
+            "Saisir les soldes à partir d’une autre source (relevé précédent, attestation)",
+          ],
         ],
         caption: "Les statuts de contrôle et la conduite à tenir",
       },
@@ -825,11 +826,7 @@ export const GUIDES: Guide[] = [
         a: "Non, ce sont deux choses différentes. Un PDF protégé peut très bien contenir du texte : Relevéo vous demande alors le mot de passe, qui est utilisé localement dans votre navigateur pour ouvrir le fichier.",
       },
     ],
-    related: [
-      "convertir-releve-bancaire-pdf-excel",
-      "recuperer-anciens-releves-bancaires",
-      "expert-comptable-releves-pdf-clients",
-    ],
+    related: ["convertir-releve-bancaire-pdf-excel", "recuperer-anciens-releves-bancaires", "expert-comptable-releves-pdf-clients"],
   },
 
   // ─────────────────────────────────────────────────────────────────────────
@@ -946,10 +943,6 @@ export const GUIDES: Guide[] = [
         a: "Oui : ils sont probablement stockés en texte et ignorés par les formules de somme. Réimportez le fichier en précisant le séparateur décimal, ou utilisez le format .xlsx.",
       },
     ],
-    related: [
-      "convertir-releve-bancaire-pdf-excel",
-      "importer-releve-ofx-logiciel-comptable",
-      "rapprochement-bancaire",
-    ],
+    related: ["convertir-releve-bancaire-pdf-excel", "importer-releve-ofx-logiciel-comptable", "rapprochement-bancaire"],
   },
 ];

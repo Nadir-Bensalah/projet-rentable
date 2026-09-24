@@ -72,7 +72,8 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-[var(--border)]">
         <p className="mx-auto max-w-6xl px-4 py-6 text-xs text-subtle sm:px-6">
-          © {new Date().getFullYear()} Relevéo. Outil d&apos;aide à la saisie : vérifiez toujours vos données avant de les utiliser. Relevéo n&apos;est affilié à aucune banque.
+          © {new Date().getFullYear()} Relevéo. Outil d&apos;aide à la saisie : vérifiez toujours vos données avant de les utiliser. Relevéo
+          n&apos;est affilié à aucune banque.
         </p>
       </div>
     </footer>

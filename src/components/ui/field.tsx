@@ -14,7 +14,14 @@ export function Textarea({ className, ...rest }: ComponentProps<"textarea">) {
 
 export function Select({ className, children, ...rest }: ComponentProps<"select">) {
   return (
-    <select className={cn(control, "h-11 appearance-none bg-[length:16px] bg-[right_0.75rem_center] bg-no-repeat pr-10", className)} {...rest} style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E\")" }}>
+    <select
+      className={cn(control, "h-11 appearance-none bg-[length:16px] bg-[right_0.75rem_center] bg-no-repeat pr-10", className)}
+      {...rest}
+      style={{
+        backgroundImage:
+          "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E\")",
+      }}
+    >
       {children}
     </select>
   );
@@ -59,7 +66,11 @@ export function Field({
 export function Checkbox({ label, className, ...rest }: ComponentProps<"input"> & { label: ReactNode }) {
   return (
     <label className={cn("flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-muted", className)}>
-      <input type="checkbox" className="mt-0.5 size-4.5 shrink-0 cursor-pointer rounded border-[var(--border-strong)] accent-brand-600" {...rest} />
+      <input
+        type="checkbox"
+        className="mt-0.5 size-4.5 shrink-0 cursor-pointer rounded border-[var(--border-strong)] accent-brand-600"
+        {...rest}
+      />
       <span>{label}</span>
     </label>
   );

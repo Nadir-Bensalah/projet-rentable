@@ -5,7 +5,10 @@ import { deleteAccount } from "@/lib/auth/service";
 import { rateLimit } from "@/lib/security/rate-limit";
 import { HttpError, assertSameOrigin, handler, json, readJson } from "@/lib/security/request";
 
-const schema = z.object({ password: z.string().min(1, "Mot de passe requis.").max(200), confirm: z.literal("SUPPRIMER", { message: "Tapez SUPPRIMER pour confirmer." }) });
+const schema = z.object({
+  password: z.string().min(1, "Mot de passe requis.").max(200),
+  confirm: z.literal("SUPPRIMER", { message: "Tapez SUPPRIMER pour confirmer." }),
+});
 
 export const POST = handler(async (req) => {
   assertSameOrigin(req);

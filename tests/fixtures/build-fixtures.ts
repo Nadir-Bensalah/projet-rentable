@@ -49,7 +49,13 @@ const CREDIT_LABELS = [
   ["VIREMENT SALAIRE AOUT"],
   ["REMBOURSEMENT CARTE X4821 FNAC"],
 ];
-const EN_DEBIT = [["CARD PURCHASE WHOLE FOODS #123"], ["ATM WITHDRAWAL 5TH AVE"], ["DIRECT DEBIT CITY WATER"], ["ONLINE TRANSFER TO SAVINGS"], ["CARD PURCHASE AMAZON MKTPLACE", "SEATTLE WA"]];
+const EN_DEBIT = [
+  ["CARD PURCHASE WHOLE FOODS #123"],
+  ["ATM WITHDRAWAL 5TH AVE"],
+  ["DIRECT DEBIT CITY WATER"],
+  ["ONLINE TRANSFER TO SAVINGS"],
+  ["CARD PURCHASE AMAZON MKTPLACE", "SEATTLE WA"],
+];
 const EN_CREDIT = [["PAYROLL DEPOSIT ACME CORP"], ["TRANSFER FROM J SMITH"], ["REFUND ACME STORE"]];
 
 function makeTxs(seed: number, n: number, year: number, month: number, en = false, startDay = 1, span = 28): Tx[] {
@@ -77,12 +83,16 @@ function makeTxs(seed: number, n: number, year: number, month: number, en = fals
 const pad = (n: number) => n.toString().padStart(2, "0");
 function fr(cents: number) {
   const abs = Math.abs(cents);
-  const int = Math.floor(abs / 100).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  const int = Math.floor(abs / 100)
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   return `${int},${pad(abs % 100)}`;
 }
 function en(cents: number) {
   const abs = Math.abs(cents);
-  const int = Math.floor(abs / 100).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  const int = Math.floor(abs / 100)
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   return `${int}.${pad(abs % 100)}`;
 }
 const FR_MONTHS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."];
@@ -328,7 +338,10 @@ function layoutH(): Fixture {
   const wrongClosing = 48210 + sum(txs) + 1000;
   return {
     name: "fr-mismatch",
-    html: f.html.replace(/NOUVEAU SOLDE (DEBITEUR|CREDITEUR) AU 31.07.2026 &nbsp;&nbsp;&nbsp;&nbsp; [\d ,]+/, `NOUVEAU SOLDE ${wrongClosing < 0 ? "DEBITEUR" : "CREDITEUR"} AU 31.07.2026 &nbsp;&nbsp;&nbsp;&nbsp; ${fr(wrongClosing)}`),
+    html: f.html.replace(
+      /NOUVEAU SOLDE (DEBITEUR|CREDITEUR) AU 31.07.2026 &nbsp;&nbsp;&nbsp;&nbsp; [\d ,]+/,
+      `NOUVEAU SOLDE ${wrongClosing < 0 ? "DEBITEUR" : "CREDITEUR"} AU 31.07.2026 &nbsp;&nbsp;&nbsp;&nbsp; ${fr(wrongClosing)}`,
+    ),
     expected: { opening: 48210, closing: wrongClosing, status: "mismatch" },
   };
 }
@@ -344,9 +357,13 @@ async function main() {
     fs.writeFileSync(path.join(OUT, `${f.name}.json`), JSON.stringify(f.expected, null, 2));
   }
   // Scanned statement: the same content rendered as an image only (no text layer).
-  await page.setContent(`<!doctype html><html><head><meta charset="utf-8"><style>${CSS}</style></head><body>${layoutB().html}</body></html>`);
+  await page.setContent(
+    `<!doctype html><html><head><meta charset="utf-8"><style>${CSS}</style></head><body>${layoutB().html}</body></html>`,
+  );
   const png = await page.screenshot({ fullPage: true });
-  await page.setContent(`<!doctype html><html><body style="margin:0"><img style="width:100%" src="data:image/png;base64,${png.toString("base64")}"></body></html>`);
+  await page.setContent(
+    `<!doctype html><html><body style="margin:0"><img style="width:100%" src="data:image/png;base64,${png.toString("base64")}"></body></html>`,
+  );
   await page.pdf({ path: path.join(OUT, "scanned.pdf"), format: "A4" });
   fs.writeFileSync(path.join(OUT, "scanned.json"), JSON.stringify({ status: "unverifiable", kind: "scanned" }, null, 2));
   await browser.close();

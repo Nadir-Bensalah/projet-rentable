@@ -13,7 +13,8 @@ export async function fetchMe(force = false): Promise<MeState> {
   try {
     const res = await fetch("/api/me", { cache: "no-store", credentials: "same-origin" });
     const data = (await res.json()) as { authenticated: boolean; account?: AccountView };
-    const value: MeState = data.authenticated && data.account ? { status: "authenticated", account: data.account } : { status: "anonymous" };
+    const value: MeState =
+      data.authenticated && data.account ? { status: "authenticated", account: data.account } : { status: "anonymous" };
     cache = { at: Date.now(), value };
     listeners.forEach((l) => l(value));
     return value;

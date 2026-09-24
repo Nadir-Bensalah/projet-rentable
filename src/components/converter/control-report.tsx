@@ -8,7 +8,9 @@ export function ControlReport({ statements }: { statements: ParsedStatement[] })
     <div className="print-area hidden print:block" aria-hidden>
       <div style={{ fontFamily: "Arial, sans-serif", fontSize: 11, color: "#000" }}>
         <h1 style={{ fontSize: 18, margin: 0 }}>Rapport de contrôle des relevés</h1>
-        <p style={{ margin: "4px 0 16px", color: "#444" }}>Généré par Relevéo le {now}. Contrôle : solde de départ + crédits − débits = solde final imprimé.</p>
+        <p style={{ margin: "4px 0 16px", color: "#444" }}>
+          Généré par Relevéo le {now}. Contrôle : solde de départ + crédits − débits = solde final imprimé.
+        </p>
         {statements.map((st) => {
           const r = st.reconciliation;
           const included = st.transactions.filter((t) => !t.excluded);
@@ -28,7 +30,11 @@ export function ControlReport({ statements }: { statements: ParsedStatement[] })
                     ["Solde final imprimé", money(r.closing, st.currency)],
                     [
                       "Résultat",
-                      r.status === "verified" ? "VÉRIFIÉ AU CENTIME" : r.status === "mismatch" ? `ÉCART de ${money(Math.abs(r.difference ?? 0), st.currency)}` : "NON VÉRIFIABLE (soldes absents)",
+                      r.status === "verified"
+                        ? "VÉRIFIÉ AU CENTIME"
+                        : r.status === "mismatch"
+                          ? `ÉCART de ${money(Math.abs(r.difference ?? 0), st.currency)}`
+                          : "NON VÉRIFIABLE (soldes absents)",
                     ],
                   ].map(([k, v]) => (
                     <tr key={k}>
@@ -51,7 +57,9 @@ export function ControlReport({ statements }: { statements: ParsedStatement[] })
                     <tr key={t.id}>
                       <td style={{ padding: 3, borderBottom: "1px solid #ddd", whiteSpace: "nowrap" }}>{frDate(t.date)}</td>
                       <td style={{ padding: 3, borderBottom: "1px solid #ddd" }}>{t.description}</td>
-                      <td style={{ padding: 3, borderBottom: "1px solid #ddd", textAlign: "right", whiteSpace: "nowrap" }}>{money(t.amount, st.currency, true)}</td>
+                      <td style={{ padding: 3, borderBottom: "1px solid #ddd", textAlign: "right", whiteSpace: "nowrap" }}>
+                        {money(t.amount, st.currency, true)}
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -59,7 +67,9 @@ export function ControlReport({ statements }: { statements: ParsedStatement[] })
             </section>
           );
         })}
-        <p style={{ color: "#666", fontSize: 9 }}>Relevéo est un outil d&apos;aide à la saisie. Ce rapport ne constitue pas une attestation bancaire.</p>
+        <p style={{ color: "#666", fontSize: 9 }}>
+          Relevéo est un outil d&apos;aide à la saisie. Ce rapport ne constitue pas une attestation bancaire.
+        </p>
       </div>
     </div>
   );

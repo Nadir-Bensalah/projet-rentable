@@ -14,13 +14,62 @@ export interface ExportFormatInfo {
 }
 
 export const EXPORT_FORMATS: ExportFormatInfo[] = [
-  { id: "xlsx", label: "Excel (.xlsx)", extension: "xlsx", mime: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", description: "Dates et montants reconnus comme de vraies valeurs par Excel, LibreOffice et Google Sheets.", free: true },
-  { id: "csv-fr", label: "CSV (Excel France)", extension: "csv", mime: "text/csv", description: "Séparateur point-virgule, virgule décimale, dates JJ/MM/AAAA.", free: true },
-  { id: "csv-intl", label: "CSV international", extension: "csv", mime: "text/csv", description: "Séparateur virgule, point décimal, dates ISO (AAAA-MM-JJ).", free: false },
-  { id: "ofx", label: "OFX", extension: "ofx", mime: "application/x-ofx", description: "Format d'import bancaire standard (OFX 1.0.2), accepté par la plupart des logiciels de comptabilité et de budget.", free: false },
-  { id: "qif", label: "QIF", extension: "qif", mime: "application/qif", description: "Ancien format d'échange (Quicken, certains logiciels de gestion).", free: false },
-  { id: "fec", label: "Écritures (colonnes FEC)", extension: "txt", mime: "text/plain", description: "Journal de banque en partie double (512 / 471) avec les 18 colonnes du FEC, séparateur tabulation.", free: false },
-  { id: "json", label: "JSON", extension: "json", mime: "application/json", description: "Données structurées pour développeurs et automatisations.", free: false },
+  {
+    id: "xlsx",
+    label: "Excel (.xlsx)",
+    extension: "xlsx",
+    mime: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    description: "Dates et montants reconnus comme de vraies valeurs par Excel, LibreOffice et Google Sheets.",
+    free: true,
+  },
+  {
+    id: "csv-fr",
+    label: "CSV (Excel France)",
+    extension: "csv",
+    mime: "text/csv",
+    description: "Séparateur point-virgule, virgule décimale, dates JJ/MM/AAAA.",
+    free: true,
+  },
+  {
+    id: "csv-intl",
+    label: "CSV international",
+    extension: "csv",
+    mime: "text/csv",
+    description: "Séparateur virgule, point décimal, dates ISO (AAAA-MM-JJ).",
+    free: false,
+  },
+  {
+    id: "ofx",
+    label: "OFX",
+    extension: "ofx",
+    mime: "application/x-ofx",
+    description: "Format d'import bancaire standard (OFX 1.0.2), accepté par la plupart des logiciels de comptabilité et de budget.",
+    free: false,
+  },
+  {
+    id: "qif",
+    label: "QIF",
+    extension: "qif",
+    mime: "application/qif",
+    description: "Ancien format d'échange (Quicken, certains logiciels de gestion).",
+    free: false,
+  },
+  {
+    id: "fec",
+    label: "Écritures (colonnes FEC)",
+    extension: "txt",
+    mime: "text/plain",
+    description: "Journal de banque en partie double (512 / 471) avec les 18 colonnes du FEC, séparateur tabulation.",
+    free: false,
+  },
+  {
+    id: "json",
+    label: "JSON",
+    extension: "json",
+    mime: "application/json",
+    description: "Données structurées pour développeurs et automatisations.",
+    free: false,
+  },
 ];
 
 export function formatInfo(id: ExportFormat): ExportFormatInfo {
@@ -108,14 +157,15 @@ export function toCsv(statements: ParsedStatement[], variant: "fr" | "intl"): st
 }
 
 function xmlEscape(s: string) {
-  return s
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    // Strip control characters that are invalid in XML 1.0.
-    // eslint-disable-next-line no-control-regex
-    .replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g, "");
+  return (
+    s
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      // Strip control characters that are invalid in XML 1.0.
+      .replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g, "")
+  );
 }
 
 function excelSerial(iso: string): number {
@@ -212,9 +262,21 @@ function sgml(s: string) {
 export function toOfx(statements: ParsedStatement[], opts: { accountId?: string; bankId?: string } = {}): string {
   const rows = rowsFor(statements);
   const currency = statements[0]?.currency ?? "EUR";
-  const dates = rows.map((r) => r.tx.date).filter(Boolean).sort();
-  const start = statements.map((s) => s.periodStart).filter(Boolean).sort()[0] ?? dates[0];
-  const end = statements.map((s) => s.periodEnd).filter(Boolean).sort().at(-1) ?? dates.at(-1);
+  const dates = rows
+    .map((r) => r.tx.date)
+    .filter(Boolean)
+    .sort();
+  const start =
+    statements
+      .map((s) => s.periodStart)
+      .filter(Boolean)
+      .sort()[0] ?? dates[0];
+  const end =
+    statements
+      .map((s) => s.periodEnd)
+      .filter(Boolean)
+      .sort()
+      .at(-1) ?? dates.at(-1);
   const last = statements[statements.length - 1];
   const closing = last?.closingBalance ?? last?.transactions.at(-1)?.balance;
   const stmttrn = rows
@@ -283,8 +345,24 @@ export function toFec(
   const bank = opts.bankAccount ?? "512000";
   const suspense = opts.suspenseAccount ?? "471000";
   const cols = [
-    "JournalCode", "JournalLib", "EcritureNum", "EcritureDate", "CompteNum", "CompteLib", "CompAuxNum", "CompAuxLib",
-    "PieceRef", "PieceDate", "EcritureLib", "Debit", "Credit", "EcritureLet", "DateLet", "ValidDate", "Montantdevise", "Idevise",
+    "JournalCode",
+    "JournalLib",
+    "EcritureNum",
+    "EcritureDate",
+    "CompteNum",
+    "CompteLib",
+    "CompAuxNum",
+    "CompAuxLib",
+    "PieceRef",
+    "PieceDate",
+    "EcritureLib",
+    "Debit",
+    "Credit",
+    "EcritureLet",
+    "DateLet",
+    "ValidDate",
+    "Montantdevise",
+    "Idevise",
   ];
   const clean = (s: string) => s.replace(/[\t\r\n|]/g, " ").slice(0, 200);
   const lines = [cols.join("\t")];
@@ -293,8 +371,46 @@ export function toFec(
     const d = compactDate(tx.date);
     const amt = money(Math.abs(tx.amount), ",");
     const lib = clean(tx.description);
-    const bankLine = [journal, "Banque", num, d, bank, "Banque", "", "", num, d, lib, tx.amount >= 0 ? amt : "0,00", tx.amount < 0 ? amt : "0,00", "", "", "", "", ""];
-    const otherLine = [journal, "Banque", num, d, suspense, "Compte d'attente", "", "", num, d, lib, tx.amount < 0 ? amt : "0,00", tx.amount >= 0 ? amt : "0,00", "", "", "", "", ""];
+    const bankLine = [
+      journal,
+      "Banque",
+      num,
+      d,
+      bank,
+      "Banque",
+      "",
+      "",
+      num,
+      d,
+      lib,
+      tx.amount >= 0 ? amt : "0,00",
+      tx.amount < 0 ? amt : "0,00",
+      "",
+      "",
+      "",
+      "",
+      "",
+    ];
+    const otherLine = [
+      journal,
+      "Banque",
+      num,
+      d,
+      suspense,
+      "Compte d'attente",
+      "",
+      "",
+      num,
+      d,
+      lib,
+      tx.amount < 0 ? amt : "0,00",
+      tx.amount >= 0 ? amt : "0,00",
+      "",
+      "",
+      "",
+      "",
+      "",
+    ];
     lines.push(bankLine.join("\t"), otherLine.join("\t"));
   });
   return lines.join("\r\n") + "\r\n";
@@ -326,12 +442,18 @@ export function toJson(statements: ParsedStatement[]): string {
   );
 }
 
-export function buildExport(format: ExportFormat, statements: ParsedStatement[]): { data: Uint8Array | string; mime: string; filename: string } {
+export interface ExportOptions {
+  fec?: { journal?: string; bankAccount?: string; suspenseAccount?: string };
+}
+
+export function buildExport(
+  format: ExportFormat,
+  statements: ParsedStatement[],
+  options: ExportOptions = {},
+): { data: Uint8Array | string; mime: string; filename: string } {
   const info = formatInfo(format);
   const base =
-    statements.length === 1
-      ? statements[0].fileName.replace(/\.pdf$/i, "")
-      : `releves-fusionnes-${new Date().toISOString().slice(0, 10)}`;
+    statements.length === 1 ? statements[0].fileName.replace(/\.pdf$/i, "") : `releves-fusionnes-${new Date().toISOString().slice(0, 10)}`;
   const safeBase =
     base
       .replace(/[^\p{L}\p{N}._-]+/gu, "-")
@@ -356,7 +478,7 @@ export function buildExport(format: ExportFormat, statements: ParsedStatement[])
       data = toQif(statements);
       break;
     case "fec":
-      data = toFec(statements);
+      data = toFec(statements, options.fec);
       break;
     case "json":
       data = toJson(statements);

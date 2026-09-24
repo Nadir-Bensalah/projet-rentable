@@ -53,7 +53,12 @@ export function Dialog({
               </h2>
               {description ? <p className="mt-1 text-sm text-muted">{description}</p> : null}
             </div>
-            <button type="button" onClick={onClose} className="-m-2 rounded-lg p-2 text-subtle hover:bg-[var(--bg-subtle)] hover:text-[var(--fg)]" aria-label="Fermer">
+            <button
+              type="button"
+              onClick={onClose}
+              className="-m-2 rounded-lg p-2 text-subtle hover:bg-[var(--bg-subtle)] hover:text-[var(--fg)]"
+              aria-label="Fermer"
+            >
               <X className="size-5" aria-hidden />
             </button>
           </div>

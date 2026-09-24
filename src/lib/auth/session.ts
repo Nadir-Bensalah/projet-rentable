@@ -34,10 +34,13 @@ function cookieOptions(expires: Date) {
 export async function createSession(userId: string, meta: { userAgent?: string | null; ipHash?: string }) {
   const token = randomToken(32);
   const expires = new Date(Date.now() + SESSION_DAYS * 86400_000);
-  await query(
-    `INSERT INTO sessions (id, user_id, expires_at, user_agent, ip_hash) VALUES ($1, $2, $3, $4, $5)`,
-    [sha256(token), userId, expires, meta.userAgent?.slice(0, 300) ?? null, meta.ipHash ?? null],
-  );
+  await query(`INSERT INTO sessions (id, user_id, expires_at, user_agent, ip_hash) VALUES ($1, $2, $3, $4, $5)`, [
+    sha256(token),
+    userId,
+    expires,
+    meta.userAgent?.slice(0, 300) ?? null,
+    meta.ipHash ?? null,
+  ]);
   await query(`UPDATE users SET last_login_at = now() WHERE id = $1`, [userId]);
   // Opportunistic cleanup of expired sessions.
   await query(`DELETE FROM sessions WHERE expires_at < now() - interval '1 day'`);

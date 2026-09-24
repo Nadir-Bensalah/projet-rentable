@@ -136,10 +136,12 @@ describe("reconcile", () => {
 });
 
 describe("exports", () => {
-  const s = statement(
-    [tx("2026-08-02", -123456, "=HYPERLINK(\"http://evil\")"), tx("2026-08-03", 250000, 'VIR "SALAIRE"; août')],
-    { openingBalance: 0, closingBalance: 126544, periodStart: "2026-08-01", periodEnd: "2026-08-31" },
-  );
+  const s = statement([tx("2026-08-02", -123456, '=HYPERLINK("http://evil")'), tx("2026-08-03", 250000, 'VIR "SALAIRE"; août')], {
+    openingBalance: 0,
+    closingBalance: 126544,
+    periodStart: "2026-08-01",
+    periodEnd: "2026-08-31",
+  });
 
   it("writes French CSV with BOM, semicolons and formula protection", () => {
     const csv = toCsv([s], "fr");
@@ -151,7 +153,7 @@ describe("exports", () => {
   it("writes international CSV", () => {
     const csv = toCsv([s], "intl");
     expect(csv.split("\r\n")[0]).toBe("date,value_date,description,debit,credit,amount,balance");
-    expect(csv).toContain("2026-08-03,,\"VIR \"\"SALAIRE\"\"; août\",,2500.00,2500.00,");
+    expect(csv).toContain('2026-08-03,,"VIR ""SALAIRE""; août",,2500.00,2500.00,');
   });
 
   it("writes a valid xlsx package", () => {
@@ -181,7 +183,11 @@ describe("exports", () => {
 
   it("writes balanced FEC journal entries", () => {
     const fec = toFec([s]);
-    const rows = fec.replace(/\r\n$/, "").split("\r\n").slice(1).map((r) => r.split("\t"));
+    const rows = fec
+      .replace(/\r\n$/, "")
+      .split("\r\n")
+      .slice(1)
+      .map((r) => r.split("\t"));
     expect(rows).toHaveLength(4);
     expect(rows.every((r) => r.length === 18)).toBe(true);
     const toNum = (v: string) => Number(v.replace(",", "."));

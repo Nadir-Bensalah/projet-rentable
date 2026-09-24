@@ -23,7 +23,10 @@ export async function POST(req: Request) {
   );
   let nudged = 0;
   for (const u of inactive) {
-    if (await sendEmail("activation_nudge", u.email, { appUrl: absoluteUrl("/convertir") }, { userId: u.id, dedupeKey: `activation:${u.id}` })) nudged++;
+    if (
+      await sendEmail("activation_nudge", u.email, { appUrl: absoluteUrl("/convertir") }, { userId: u.id, dedupeKey: `activation:${u.id}` })
+    )
+      nudged++;
   }
 
   // Housekeeping.

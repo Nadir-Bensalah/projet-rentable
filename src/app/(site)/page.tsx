@@ -75,10 +75,21 @@ export default function HomePage() {
             offers: [
               { "@type": "Offer", name: "Gratuit", price: "0", priceCurrency: "EUR" },
               { "@type": "Offer", name: PACK.name, price: (PACK.price / 100).toFixed(2), priceCurrency: "EUR" },
-              { "@type": "Offer", name: `${PLANS.pro.name} mensuel`, price: (PLANS.pro.priceMonthly / 100).toFixed(2), priceCurrency: "EUR" },
+              {
+                "@type": "Offer",
+                name: `${PLANS.pro.name} mensuel`,
+                price: (PLANS.pro.priceMonthly / 100).toFixed(2),
+                priceCurrency: "EUR",
+              },
             ],
           },
-          { "@context": "https://schema.org", "@type": "Organization", name: site.name, url: absoluteUrl("/"), logo: absoluteUrl("/icon.svg") },
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: site.name,
+            url: absoluteUrl("/"),
+            logo: absoluteUrl("/icon.svg"),
+          },
         ]}
       />
 
@@ -95,13 +106,21 @@ export default function HomePage() {
               Vos relevés bancaires PDF en Excel, <span className="text-brand-600 dark:text-brand-300">vérifiés au centime.</span>
             </h1>
             <p className="mt-5 max-w-xl text-pretty text-lg leading-relaxed text-muted">
-              Déposez un relevé : Relevéo en extrait toutes les opérations, vérifie que le solde de départ plus les opérations donne bien le solde final, puis produit votre fichier Excel, CSV, OFX ou vos écritures comptables. Le fichier ne quitte jamais votre ordinateur.
+              Déposez un relevé : Relevéo en extrait toutes les opérations, vérifie que le solde de départ plus les opérations donne bien le
+              solde final, puis produit votre fichier Excel, CSV, OFX ou vos écritures comptables. Le fichier ne quitte jamais votre
+              ordinateur.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="/convertir" size="lg" data-cta="hero-convert" icon={<Upload className="size-5" aria-hidden />}>
                 Convertir un relevé gratuitement
               </ButtonLink>
-              <ButtonLink href="/convertir?exemple=1" size="lg" variant="secondary" data-cta="hero-sample" icon={<Eye className="size-5" aria-hidden />}>
+              <ButtonLink
+                href="/convertir?exemple=1"
+                size="lg"
+                variant="secondary"
+                data-cta="hero-sample"
+                icon={<Eye className="size-5" aria-hidden />}
+              >
                 Voir avec un exemple
               </ButtonLink>
             </div>
@@ -123,12 +142,23 @@ export default function HomePage() {
       {/* Problem */}
       <section className="border-y border-[var(--border)] bg-[var(--bg-subtle)]">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-          <h2 className="max-w-2xl text-balance text-2xl font-bold tracking-tight sm:text-3xl">Recopier un relevé à la main, c&apos;est long, et une erreur passe vite inaperçue.</h2>
+          <h2 className="max-w-2xl text-balance text-2xl font-bold tracking-tight sm:text-3xl">
+            Recopier un relevé à la main, c&apos;est long, et une erreur passe vite inaperçue.
+          </h2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
-              { t: "Le copier-coller casse tout", d: "Colonnes décalées, montants collés au libellé, lignes coupées en deux : un PDF n'est pas un tableau." },
-              { t: "Une ligne oubliée ne se voit pas", d: "Sur 80 opérations, une ligne manquante ou un signe inversé fausse tout le mois, sans alerte." },
-              { t: "Les relevés PDF sont partout", d: "Historique ancien, compte clôturé, relevés envoyés par un client, dossier de prêt : souvent, seul le PDF existe." },
+              {
+                t: "Le copier-coller casse tout",
+                d: "Colonnes décalées, montants collés au libellé, lignes coupées en deux : un PDF n'est pas un tableau.",
+              },
+              {
+                t: "Une ligne oubliée ne se voit pas",
+                d: "Sur 80 opérations, une ligne manquante ou un signe inversé fausse tout le mois, sans alerte.",
+              },
+              {
+                t: "Les relevés PDF sont partout",
+                d: "Historique ancien, compte clôturé, relevés envoyés par un client, dossier de prêt : souvent, seul le PDF existe.",
+              },
             ].map((p) => (
               <div key={p.t} className="surface p-6">
                 <h3 className="font-semibold">{p.t}</h3>
@@ -142,12 +172,26 @@ export default function HomePage() {
       {/* How it works */}
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6" aria-labelledby="how">
         <p className="text-sm font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-300">Comment ça marche</p>
-        <h2 id="how" className="mt-2 text-balance text-3xl font-bold tracking-tight sm:text-4xl">Trois étapes, moins d&apos;une minute.</h2>
+        <h2 id="how" className="mt-2 text-balance text-3xl font-bold tracking-tight sm:text-4xl">
+          Trois étapes, moins d&apos;une minute.
+        </h2>
         <ol className="mt-12 grid gap-6 md:grid-cols-3">
           {[
-            { icon: MousePointerClick, t: "1. Déposez vos PDF", d: "Glissez un ou plusieurs relevés dans la page. S'ils sont protégés par un mot de passe, vous le saisissez localement." },
-            { icon: Scale, t: "2. Vérifiez", d: "Les opérations apparaissent dans un tableau, avec le contrôle du solde. Corrigez une cellule ou excluez une ligne si besoin." },
-            { icon: FileSpreadsheet, t: "3. Exportez", d: "Excel, CSV, OFX, QIF, JSON ou journal de banque : choisissez le format attendu par votre logiciel." },
+            {
+              icon: MousePointerClick,
+              t: "1. Déposez vos PDF",
+              d: "Glissez un ou plusieurs relevés dans la page. S'ils sont protégés par un mot de passe, vous le saisissez localement.",
+            },
+            {
+              icon: Scale,
+              t: "2. Vérifiez",
+              d: "Les opérations apparaissent dans un tableau, avec le contrôle du solde. Corrigez une cellule ou excluez une ligne si besoin.",
+            },
+            {
+              icon: FileSpreadsheet,
+              t: "3. Exportez",
+              d: "Excel, CSV, OFX, QIF, JSON ou journal de banque : choisissez le format attendu par votre logiciel.",
+            },
           ].map((s) => (
             <li key={s.t} className="surface relative p-6">
               <span className="inline-flex size-11 items-center justify-center rounded-xl bg-brand-50 text-brand-600 dark:bg-brand-950/60 dark:text-brand-300">
@@ -167,7 +211,9 @@ export default function HomePage() {
             <p className="text-sm font-semibold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">La différence Relevéo</p>
             <h2 className="mt-2 text-balance text-3xl font-bold tracking-tight">Une preuve, pas une promesse.</h2>
             <p className="mt-4 leading-relaxed text-muted">
-              Un convertisseur qui « a l&apos;air de marcher » ne suffit pas quand les chiffres partent en comptabilité. Relevéo refait le calcul de la banque : si le solde de départ plus les crédits moins les débits ne tombe pas exactement sur le solde final, vous le savez immédiatement, avec l&apos;écart exact.
+              Un convertisseur qui « a l&apos;air de marcher » ne suffit pas quand les chiffres partent en comptabilité. Relevéo refait le
+              calcul de la banque : si le solde de départ plus les crédits moins les débits ne tombe pas exactement sur le solde final, vous
+              le savez immédiatement, avec l&apos;écart exact.
             </p>
             <ul className="mt-6 grid gap-3 text-[0.97rem]">
               {[
@@ -189,7 +235,10 @@ export default function HomePage() {
               { l: "+ Crédits (9 opérations)", v: "4 912,00 €" },
               { l: "− Débits (37 opérations)", v: "3 801,56 €" },
             ].map((r) => (
-              <div key={r.l} className="flex items-center justify-between rounded-xl border border-[var(--border)] bg-[var(--bg-subtle)] px-5 py-4">
+              <div
+                key={r.l}
+                className="flex items-center justify-between rounded-xl border border-[var(--border)] bg-[var(--bg-subtle)] px-5 py-4"
+              >
                 <span className="text-muted">{r.l}</span>
                 <span className="tabular font-semibold">{r.v}</span>
               </div>
@@ -211,7 +260,8 @@ export default function HomePage() {
             <ShieldCheck className="size-10 text-emerald-400" aria-hidden />
             <h2 className="mt-4 text-balance text-3xl font-bold tracking-tight">Votre relevé ne quitte jamais votre ordinateur.</h2>
             <p className="mt-4 max-w-xl leading-relaxed text-slate-300">
-              Un relevé contient votre IBAN, votre adresse, vos salaires et vos dépenses. Relevéo le lit localement, dans l&apos;onglet de votre navigateur. Il n&apos;y a pas d&apos;envoi de fichier, pas de stockage, pas d&apos;IA externe qui lit vos données.
+              Un relevé contient votre IBAN, votre adresse, vos salaires et vos dépenses. Relevéo le lit localement, dans l&apos;onglet de
+              votre navigateur. Il n&apos;y a pas d&apos;envoi de fichier, pas de stockage, pas d&apos;IA externe qui lit vos données.
             </p>
             <Link href="/securite" className="mt-6 inline-flex items-center gap-1.5 font-semibold text-emerald-300 hover:text-emerald-200">
               Comment le vérifier vous-même <ArrowRight className="size-4" aria-hidden />
@@ -235,15 +285,41 @@ export default function HomePage() {
 
       {/* Features */}
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-        <h2 className="text-balance text-3xl font-bold tracking-tight sm:text-4xl">Tout ce qu&apos;il faut pour passer du PDF au tableur.</h2>
+        <h2 className="text-balance text-3xl font-bold tracking-tight sm:text-4xl">
+          Tout ce qu&apos;il faut pour passer du PDF au tableur.
+        </h2>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { icon: FileSpreadsheet, t: "7 formats d'export", d: "Excel avec vraies dates et vrais nombres, CSV français (point-virgule) ou international, OFX, QIF, JSON, journal 512/471 aux colonnes FEC." },
-            { icon: Files, t: "Plusieurs relevés d'un coup", d: "Déposez une année de relevés et obtenez un seul fichier trié, sans doublons entre relevés qui se chevauchent." },
-            { icon: PencilLine, t: "Corrections avant export", d: "Modifiez une date, un libellé ou un montant, inversez un signe, excluez une ligne : le contrôle du solde se met à jour." },
-            { icon: Scale, t: "Formats de dates et de montants", d: "02/08, 02.08.2026, 2 août 2026, 1 234,56 ou 1,234.56, montants signés ou colonnes débit/crédit, années manquantes complétées." },
-            { icon: Lock, t: "PDF protégés", d: "Si votre relevé a un mot de passe, vous le saisissez dans la page : il reste sur votre appareil." },
-            { icon: Building2, t: "Pensé pour les cabinets", d: "Traitement par lot, fusion, journal de banque en partie double et rapport de contrôle pour vos dossiers clients." },
+            {
+              icon: FileSpreadsheet,
+              t: "7 formats d'export",
+              d: "Excel avec vraies dates et vrais nombres, CSV français (point-virgule) ou international, OFX, QIF, JSON, journal 512/471 aux colonnes FEC.",
+            },
+            {
+              icon: Files,
+              t: "Plusieurs relevés d'un coup",
+              d: "Déposez une année de relevés et obtenez un seul fichier trié, sans doublons entre relevés qui se chevauchent.",
+            },
+            {
+              icon: PencilLine,
+              t: "Corrections avant export",
+              d: "Modifiez une date, un libellé ou un montant, inversez un signe, excluez une ligne : le contrôle du solde se met à jour.",
+            },
+            {
+              icon: Scale,
+              t: "Formats de dates et de montants",
+              d: "02/08, 02.08.2026, 2 août 2026, 1 234,56 ou 1,234.56, montants signés ou colonnes débit/crédit, années manquantes complétées.",
+            },
+            {
+              icon: Lock,
+              t: "PDF protégés",
+              d: "Si votre relevé a un mot de passe, vous le saisissez dans la page : il reste sur votre appareil.",
+            },
+            {
+              icon: Building2,
+              t: "Pensé pour les cabinets",
+              d: "Traitement par lot, fusion, journal de banque en partie double et rapport de contrôle pour vos dossiers clients.",
+            },
           ].map((f) => (
             <div key={f.t} className="rounded-2xl border border-[var(--border)] p-6">
               <f.icon className="size-6 text-brand-600 dark:text-brand-300" aria-hidden />
@@ -258,9 +334,24 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
         <div className="grid gap-6 lg:grid-cols-3">
           {[
-            { icon: UserRound, t: "Indépendants et micro-entrepreneurs", d: "Préparez votre livre des recettes, votre déclaration ou le dossier de votre comptable à partir de vos relevés.", href: "/guides/convertir-releve-bancaire-pdf-excel" },
-            { icon: Building2, t: "Experts-comptables et gestionnaires", d: "Les clients envoient des PDF ? Convertissez-les par lot, contrôlés, au format de votre logiciel.", href: "/cabinets-comptables" },
-            { icon: FileSpreadsheet, t: "Particuliers", d: "Budget, dossier de prêt, succession, historique d'un compte clôturé : retrouvez vos opérations dans un tableur.", href: "/guides/recuperer-anciens-releves-bancaires" },
+            {
+              icon: UserRound,
+              t: "Indépendants et micro-entrepreneurs",
+              d: "Préparez votre livre des recettes, votre déclaration ou le dossier de votre comptable à partir de vos relevés.",
+              href: "/guides/convertir-releve-bancaire-pdf-excel",
+            },
+            {
+              icon: Building2,
+              t: "Experts-comptables et gestionnaires",
+              d: "Les clients envoient des PDF ? Convertissez-les par lot, contrôlés, au format de votre logiciel.",
+              href: "/cabinets-comptables",
+            },
+            {
+              icon: FileSpreadsheet,
+              t: "Particuliers",
+              d: "Budget, dossier de prêt, succession, historique d'un compte clôturé : retrouvez vos opérations dans un tableur.",
+              href: "/guides/recuperer-anciens-releves-bancaires",
+            },
           ].map((a) => (
             <Link key={a.t} href={a.href} className="group surface flex flex-col p-6 transition-shadow hover:shadow-[var(--shadow-lift)]">
               <a.icon className="size-6 text-brand-600 dark:text-brand-300" aria-hidden />
@@ -280,7 +371,8 @@ export default function HomePage() {
           <div>
             <h2 className="text-balance text-3xl font-bold tracking-tight">Gratuit pour commencer. Simple ensuite.</h2>
             <p className="mt-3 max-w-2xl leading-relaxed text-muted">
-              {FREE_MONTHLY_PAGES} pages gratuites chaque mois. Besoin ponctuel : {PACK.pages} pages pour {formatPrice(PACK.price)}, sans abonnement. Usage régulier : {PLANS.pro.name} à {formatPrice(PLANS.pro.priceMonthly)} par mois.
+              {FREE_MONTHLY_PAGES} pages gratuites chaque mois. Besoin ponctuel : {PACK.pages} pages pour {formatPrice(PACK.price)}, sans
+              abonnement. Usage régulier : {PLANS.pro.name} à {formatPrice(PLANS.pro.priceMonthly)} par mois.
             </p>
           </div>
           <ButtonLink href="/tarifs" size="lg" variant="secondary" data-cta="home-pricing">
@@ -291,7 +383,9 @@ export default function HomePage() {
 
       {/* FAQ */}
       <section className="mx-auto max-w-3xl px-4 py-20 sm:px-6" aria-labelledby="faq">
-        <h2 id="faq" className="text-balance text-3xl font-bold tracking-tight">Questions fréquentes</h2>
+        <h2 id="faq" className="text-balance text-3xl font-bold tracking-tight">
+          Questions fréquentes
+        </h2>
         <div className="mt-8">
           <Faq items={FAQ} />
         </div>
@@ -302,7 +396,9 @@ export default function HomePage() {
         <div className="relative overflow-hidden rounded-3xl bg-brand-600 px-6 py-14 text-center text-white sm:px-12 dark:bg-brand-700">
           <div className="bg-grid pointer-events-none absolute inset-0 opacity-20" aria-hidden />
           <h2 className="relative text-balance text-3xl font-bold tracking-tight sm:text-4xl">Essayez sur votre prochain relevé.</h2>
-          <p className="relative mx-auto mt-3 max-w-xl text-brand-100">Sans inscription pour voir le résultat. Sans carte bancaire pour le télécharger.</p>
+          <p className="relative mx-auto mt-3 max-w-xl text-brand-100">
+            Sans inscription pour voir le résultat. Sans carte bancaire pour le télécharger.
+          </p>
           <div className="relative mt-8 flex justify-center">
             <ButtonLink href="/convertir" size="lg" variant="secondary" className="border-transparent" data-cta="footer-convert">
               Convertir un relevé <ArrowRight className="size-4" aria-hidden />

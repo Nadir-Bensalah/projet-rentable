@@ -19,7 +19,9 @@ export const POST = handler(async (req) => {
   const byEmail = await rateLimit(`login:email:${sha256(normaliseEmail(body.email))}`, 10, 900);
   if (!byIp.ok || !byEmail.ok) {
     const retry = Math.max(byIp.retryAfter, byEmail.retryAfter);
-    throw new HttpError(429, "Trop de tentatives de connexion. Patientez quelques minutes.", "rate_limited", { "Retry-After": String(retry) });
+    throw new HttpError(429, "Trop de tentatives de connexion. Patientez quelques minutes.", "rate_limited", {
+      "Retry-After": String(retry),
+    });
   }
   const user = await authenticate(body.email, body.password);
   if (!user) throw new HttpError(401, "E-mail ou mot de passe incorrect.", "invalid_credentials");

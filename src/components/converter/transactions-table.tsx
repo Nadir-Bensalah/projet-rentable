@@ -55,7 +55,13 @@ export function TransactionsTable({ st, onChange }: Props) {
       setError("Date invalide.");
       return;
     }
-    update(id, { date: draft.date, description: draft.description.trim(), amount: a.sign === -1 ? -a.cents : a.cents, signGuessed: false, balanceCheck: undefined });
+    update(id, {
+      date: draft.date,
+      description: draft.description.trim(),
+      amount: a.sign === -1 ? -a.cents : a.cents,
+      signGuessed: false,
+      balanceCheck: undefined,
+    });
     setEditing(null);
     setDraft(null);
     setError(null);
@@ -63,7 +69,13 @@ export function TransactionsTable({ st, onChange }: Props) {
 
   const addRow = () => {
     const last = rows[rows.length - 1];
-    const t: Transaction = { id: `m-${newId()}`, date: last?.date ?? st.periodEnd ?? new Date().toISOString().slice(0, 10), description: "", amount: 0, page: last?.page ?? 1 };
+    const t: Transaction = {
+      id: `m-${newId()}`,
+      date: last?.date ?? st.periodEnd ?? new Date().toISOString().slice(0, 10),
+      description: "",
+      amount: 0,
+      page: last?.page ?? 1,
+    };
     onChange([...rows, t]);
     startEdit(t);
   };
@@ -77,12 +89,39 @@ export function TransactionsTable({ st, onChange }: Props) {
           saveEdit(t.id);
         }}
       >
-        <label className="sr-only" htmlFor={`d-${t.id}`}>Date</label>
-        <Input id={`d-${t.id}`} type="date" value={draft.date} onChange={(e) => setDraft({ ...draft, date: e.target.value })} className="h-9 text-sm" required />
-        <label className="sr-only" htmlFor={`l-${t.id}`}>Libellé</label>
-        <Input id={`l-${t.id}`} value={draft.description} onChange={(e) => setDraft({ ...draft, description: e.target.value })} className="h-9 text-sm" placeholder="Libellé" autoFocus />
-        <label className="sr-only" htmlFor={`a-${t.id}`}>Montant (négatif pour un débit)</label>
-        <Input id={`a-${t.id}`} inputMode="decimal" value={draft.amount} onChange={(e) => setDraft({ ...draft, amount: e.target.value })} className="h-9 text-right text-sm tabular" placeholder="-42,18" />
+        <label className="sr-only" htmlFor={`d-${t.id}`}>
+          Date
+        </label>
+        <Input
+          id={`d-${t.id}`}
+          type="date"
+          value={draft.date}
+          onChange={(e) => setDraft({ ...draft, date: e.target.value })}
+          className="h-9 text-sm"
+          required
+        />
+        <label className="sr-only" htmlFor={`l-${t.id}`}>
+          Libellé
+        </label>
+        <Input
+          id={`l-${t.id}`}
+          value={draft.description}
+          onChange={(e) => setDraft({ ...draft, description: e.target.value })}
+          className="h-9 text-sm"
+          placeholder="Libellé"
+          autoFocus
+        />
+        <label className="sr-only" htmlFor={`a-${t.id}`}>
+          Montant (négatif pour un débit)
+        </label>
+        <Input
+          id={`a-${t.id}`}
+          inputMode="decimal"
+          value={draft.amount}
+          onChange={(e) => setDraft({ ...draft, amount: e.target.value })}
+          className="h-9 text-right text-sm tabular"
+          placeholder="-42,18"
+        />
         <div className="flex gap-1">
           <Button type="submit" size="sm" aria-label="Enregistrer la ligne" icon={<Check className="size-4" aria-hidden />} />
           <Button
@@ -99,19 +138,41 @@ export function TransactionsTable({ st, onChange }: Props) {
             icon={<X className="size-4" aria-hidden />}
           />
         </div>
-        {error ? <p role="alert" className="text-sm font-medium text-rose-600 sm:col-span-4">{error}</p> : null}
+        {error ? (
+          <p role="alert" className="text-sm font-medium text-rose-600 sm:col-span-4">
+            {error}
+          </p>
+        ) : null}
       </form>
     ) : null;
 
   const actions = (t: Transaction) => (
     <div className="flex items-center justify-end gap-0.5">
-      <button type="button" className="rounded-lg p-2 text-subtle hover:bg-[var(--bg-subtle)] hover:text-[var(--fg)]" onClick={() => startEdit(t)} aria-label={`Modifier l'opération du ${frDate(t.date)}`} title="Modifier">
+      <button
+        type="button"
+        className="rounded-lg p-2 text-subtle hover:bg-[var(--bg-subtle)] hover:text-[var(--fg)]"
+        onClick={() => startEdit(t)}
+        aria-label={`Modifier l'opération du ${frDate(t.date)}`}
+        title="Modifier"
+      >
         <Pencil className="size-4" aria-hidden />
       </button>
-      <button type="button" className="rounded-lg p-2 text-subtle hover:bg-[var(--bg-subtle)] hover:text-[var(--fg)]" onClick={() => update(t.id, { amount: -t.amount, signGuessed: false })} aria-label={`Inverser le sens de l'opération du ${frDate(t.date)}`} title="Inverser débit / crédit">
+      <button
+        type="button"
+        className="rounded-lg p-2 text-subtle hover:bg-[var(--bg-subtle)] hover:text-[var(--fg)]"
+        onClick={() => update(t.id, { amount: -t.amount, signGuessed: false })}
+        aria-label={`Inverser le sens de l'opération du ${frDate(t.date)}`}
+        title="Inverser débit / crédit"
+      >
         <ArrowLeftRight className="size-4" aria-hidden />
       </button>
-      <button type="button" className="rounded-lg p-2 text-subtle hover:bg-rose-50 hover:text-rose-600 dark:hover:bg-rose-950/50" onClick={() => onChange(rows.filter((r) => r.id !== t.id))} aria-label={`Supprimer l'opération du ${frDate(t.date)}`} title="Supprimer">
+      <button
+        type="button"
+        className="rounded-lg p-2 text-subtle hover:bg-rose-50 hover:text-rose-600 dark:hover:bg-rose-950/50"
+        onClick={() => onChange(rows.filter((r) => r.id !== t.id))}
+        aria-label={`Supprimer l'opération du ${frDate(t.date)}`}
+        title="Supprimer"
+      >
         <Trash2 className="size-4" aria-hidden />
       </button>
     </div>
@@ -122,7 +183,9 @@ export function TransactionsTable({ st, onChange }: Props) {
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[var(--border)] px-4 py-3">
         <h3 className="font-semibold">
           {rows.length} opération{rows.length > 1 ? "s" : ""}
-          {rows.some((r) => r.excluded) ? <span className="ml-2 text-sm font-normal text-subtle">({rows.filter((r) => r.excluded).length} exclue(s))</span> : null}
+          {rows.some((r) => r.excluded) ? (
+            <span className="ml-2 text-sm font-normal text-subtle">({rows.filter((r) => r.excluded).length} exclue(s))</span>
+          ) : null}
         </h3>
         <Button size="sm" variant="secondary" onClick={addRow} icon={<Plus className="size-4" aria-hidden />}>
           Ajouter une ligne
@@ -137,10 +200,20 @@ export function TransactionsTable({ st, onChange }: Props) {
               <th scope="col" className="w-12 px-4 py-2.5 font-semibold">
                 <span className="sr-only">Inclure</span>
               </th>
-              <th scope="col" className="w-28 px-2 py-2.5 font-semibold">Date</th>
-              <th scope="col" className="px-2 py-2.5 font-semibold">Libellé</th>
-              <th scope="col" className="w-36 px-2 py-2.5 text-right font-semibold">Montant</th>
-              {st.transactions.some((t) => t.balance !== undefined) ? <th scope="col" className="w-36 px-2 py-2.5 text-right font-semibold">Solde</th> : null}
+              <th scope="col" className="w-28 px-2 py-2.5 font-semibold">
+                Date
+              </th>
+              <th scope="col" className="px-2 py-2.5 font-semibold">
+                Libellé
+              </th>
+              <th scope="col" className="w-36 px-2 py-2.5 text-right font-semibold">
+                Montant
+              </th>
+              {st.transactions.some((t) => t.balance !== undefined) ? (
+                <th scope="col" className="w-36 px-2 py-2.5 text-right font-semibold">
+                  Solde
+                </th>
+              ) : null}
               <th scope="col" className="w-32 px-4 py-2.5 text-right font-semibold">
                 <span className="sr-only">Actions</span>
               </th>
@@ -150,10 +223,18 @@ export function TransactionsTable({ st, onChange }: Props) {
             {visible.map((t) =>
               editing === t.id ? (
                 <tr key={t.id} className="bg-brand-50/50 dark:bg-brand-950/30">
-                  <td colSpan={6} className="px-4 py-3">{editor(t)}</td>
+                  <td colSpan={6} className="px-4 py-3">
+                    {editor(t)}
+                  </td>
                 </tr>
               ) : (
-                <tr key={t.id} className={cn(t.excluded && "opacity-45", (t.balanceCheck === "mismatch" || t.signGuessed) && "bg-amber-50/70 dark:bg-amber-950/20")}>
+                <tr
+                  key={t.id}
+                  className={cn(
+                    t.excluded && "opacity-45",
+                    (t.balanceCheck === "mismatch" || t.signGuessed) && "bg-amber-50/70 dark:bg-amber-950/20",
+                  )}
+                >
                   <td className="px-4 py-2">
                     <input
                       type="checkbox"
@@ -165,12 +246,27 @@ export function TransactionsTable({ st, onChange }: Props) {
                   </td>
                   <td className="tabular whitespace-nowrap px-2 py-2 text-muted">{frDate(t.date)}</td>
                   <td className="px-2 py-2">
-                    <span className={cn(t.excluded && "line-through")}>{t.description || <em className="text-subtle">Sans libellé</em>}</span>
-                    {t.signGuessed ? <span className="ml-2 text-xs font-medium text-amber-700 dark:text-amber-400">sens estimé</span> : null}
-                    {t.balanceCheck === "mismatch" ? <span className="ml-2 text-xs font-medium text-amber-700 dark:text-amber-400">solde de ligne incohérent</span> : null}
+                    <span className={cn(t.excluded && "line-through")}>
+                      {t.description || <em className="text-subtle">Sans libellé</em>}
+                    </span>
+                    {t.signGuessed ? (
+                      <span className="ml-2 text-xs font-medium text-amber-700 dark:text-amber-400">sens estimé</span>
+                    ) : null}
+                    {t.balanceCheck === "mismatch" ? (
+                      <span className="ml-2 text-xs font-medium text-amber-700 dark:text-amber-400">solde de ligne incohérent</span>
+                    ) : null}
                   </td>
-                  <td className={cn("tabular whitespace-nowrap px-2 py-2 text-right font-medium", t.amount > 0 && "text-emerald-700 dark:text-emerald-400")}>{money(t.amount, c, true)}</td>
-                  {st.transactions.some((x) => x.balance !== undefined) ? <td className="tabular whitespace-nowrap px-2 py-2 text-right text-muted">{money(t.balance, c)}</td> : null}
+                  <td
+                    className={cn(
+                      "tabular whitespace-nowrap px-2 py-2 text-right font-medium",
+                      t.amount > 0 && "text-emerald-700 dark:text-emerald-400",
+                    )}
+                  >
+                    {money(t.amount, c, true)}
+                  </td>
+                  {st.transactions.some((x) => x.balance !== undefined) ? (
+                    <td className="tabular whitespace-nowrap px-2 py-2 text-right text-muted">{money(t.balance, c)}</td>
+                  ) : null}
                   <td className="px-4 py-1">{actions(t)}</td>
                 </tr>
               ),
@@ -182,16 +278,31 @@ export function TransactionsTable({ st, onChange }: Props) {
       {/* Mobile cards */}
       <ul className="divide-y divide-[var(--border)] md:hidden" data-testid="transactions-list">
         {visible.map((t) => (
-          <li key={t.id} className={cn("px-4 py-3", t.excluded && "opacity-50", (t.balanceCheck === "mismatch" || t.signGuessed) && "bg-amber-50/70 dark:bg-amber-950/20")}>
+          <li
+            key={t.id}
+            className={cn(
+              "px-4 py-3",
+              t.excluded && "opacity-50",
+              (t.balanceCheck === "mismatch" || t.signGuessed) && "bg-amber-50/70 dark:bg-amber-950/20",
+            )}
+          >
             {editing === t.id ? (
               editor(t)
             ) : (
               <div className="flex items-start gap-3">
-                <input type="checkbox" className="mt-1 size-4 accent-brand-600" checked={!t.excluded} onChange={(e) => update(t.id, { excluded: !e.target.checked })} aria-label={`Inclure l'opération du ${frDate(t.date)}`} />
+                <input
+                  type="checkbox"
+                  className="mt-1 size-4 accent-brand-600"
+                  checked={!t.excluded}
+                  onChange={(e) => update(t.id, { excluded: !e.target.checked })}
+                  aria-label={`Inclure l'opération du ${frDate(t.date)}`}
+                />
                 <div className="min-w-0 flex-1">
                   <div className="flex items-baseline justify-between gap-3">
                     <span className="tabular text-xs text-subtle">{frDate(t.date)}</span>
-                    <span className={cn("tabular text-sm font-semibold", t.amount > 0 && "text-emerald-700 dark:text-emerald-400")}>{money(t.amount, c, true)}</span>
+                    <span className={cn("tabular text-sm font-semibold", t.amount > 0 && "text-emerald-700 dark:text-emerald-400")}>
+                      {money(t.amount, c, true)}
+                    </span>
                   </div>
                   <p className={cn("mt-0.5 break-words text-sm", t.excluded && "line-through")}>{t.description || "Sans libellé"}</p>
                   {t.signGuessed ? <p className="text-xs font-medium text-amber-700">sens estimé</p> : null}
@@ -210,7 +321,9 @@ export function TransactionsTable({ st, onChange }: Props) {
           </Button>
         </div>
       ) : null}
-      {rows.length === 0 ? <p className="p-6 text-center text-sm text-muted">Aucune opération. Ajoutez-en une manuellement ou vérifiez le fichier.</p> : null}
+      {rows.length === 0 ? (
+        <p className="p-6 text-center text-sm text-muted">Aucune opération. Ajoutez-en une manuellement ou vérifiez le fichier.</p>
+      ) : null}
     </div>
   );
 }

@@ -55,10 +55,7 @@ export type Env = z.infer<typeof schema>;
 function load(): Env {
   const parsed = schema.safeParse(process.env);
   if (!parsed.success) {
-    throw new Error(
-      "Invalid environment configuration: " +
-        parsed.error.issues.map((i) => `${i.path.join(".")}: ${i.message}`).join("; "),
-    );
+    throw new Error("Invalid environment configuration: " + parsed.error.issues.map((i) => `${i.path.join(".")}: ${i.message}`).join("; "));
   }
   const env = parsed.data;
   if (env.NODE_ENV === "production" && process.env.NEXT_PHASE !== "phase-production-build") {

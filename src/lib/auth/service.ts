@@ -8,7 +8,8 @@ import { grantCredits, latestSubscription, paymentProvider, toRef } from "@/lib/
 import { randomToken, referralCode, sha256 } from "@/lib/security/tokens";
 import { dummyPasswordHash, hashPassword, verifyPassword } from "./password";
 
-export const MAX_REFERRAL_REWARDS = 20;
+export { MAX_REFERRAL_REWARDS } from "@/lib/referral-rules";
+import { MAX_REFERRAL_REWARDS } from "@/lib/referral-rules";
 
 export function normaliseEmail(email: string) {
   return email.trim().toLowerCase();
@@ -25,10 +26,12 @@ async function createEmailToken(userId: string, purpose: "verify_email" | "reset
   const token = randomToken(32);
   // Only one live token per purpose.
   await query(`DELETE FROM email_tokens WHERE user_id = $1 AND purpose = $2`, [userId, purpose]);
-  await query(
-    `INSERT INTO email_tokens (id, user_id, purpose, expires_at) VALUES ($1, $2, $3, now() + make_interval(mins => $4))`,
-    [sha256(token), userId, purpose, ttlMinutes],
-  );
+  await query(`INSERT INTO email_tokens (id, user_id, purpose, expires_at) VALUES ($1, $2, $3, now() + make_interval(mins => $4))`, [
+    sha256(token),
+    userId,
+    purpose,
+    ttlMinutes,
+  ]);
   return token;
 }
 
@@ -46,7 +49,12 @@ export async function consumeEmailToken(token: string, purpose: "verify_email" |
 
 export async function sendVerificationEmail(user: { id: string; email: string; name?: string | null }) {
   const token = await createEmailToken(user.id, "verify_email", 48 * 60);
-  return sendEmail("verify_email", user.email, { url: absoluteUrl(`/verifier-email?token=${token}`), name: user.name }, { userId: user.id });
+  return sendEmail(
+    "verify_email",
+    user.email,
+    { url: absoluteUrl(`/verifier-email?token=${token}`), name: user.name },
+    { userId: user.id },
+  );
 }
 
 export class SignupError extends Error {}
@@ -74,7 +82,15 @@ export async function signup(input: {
       user = await queryOne<{ id: string; email: string }>(
         `INSERT INTO users (email, password_hash, name, marketing_opt_in, referral_code, referred_by, first_touch)
          VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id, email`,
-        [email, passwordHash, input.name?.trim() || null, !!input.marketingOptIn, referralCode(), referredBy, input.firstTouch ? JSON.stringify(input.firstTouch) : null],
+        [
+          email,
+          passwordHash,
+          input.name?.trim() || null,
+          !!input.marketingOptIn,
+          referralCode(),
+          referredBy,
+          input.firstTouch ? JSON.stringify(input.firstTouch) : null,
+        ],
       );
     } catch (e) {
       const code = (e as { code?: string; constraint?: string }).code;
@@ -131,7 +147,12 @@ async function rewardReferral(referrerId: string, refereeId: string) {
     if (referrer && Number(referrer.rewards) < MAX_REFERRAL_REWARDS) {
       const granted = await grantCredits(db, referrer.id, REFERRAL_REWARD_PAGES, "referral", `${refereeId}:referrer`);
       if (granted) {
-        await sendEmail("referral_reward", referrer.email, { pages: REFERRAL_REWARD_PAGES, appUrl: absoluteUrl("/convertir") }, { userId: referrer.id, dedupeKey: `referral:${refereeId}` });
+        await sendEmail(
+          "referral_reward",
+          referrer.email,
+          { pages: REFERRAL_REWARD_PAGES, appUrl: absoluteUrl("/convertir") },
+          { userId: referrer.id, dedupeKey: `referral:${refereeId}` },
+        );
       }
     }
   });
@@ -175,10 +196,18 @@ export async function exportUserData(userId: string) {
     [userId],
   );
   const [subscriptions, orders, credits, usage, sessions] = await Promise.all([
-    query(`SELECT provider, plan, interval, status, current_period_end, cancel_at_period_end, created_at FROM subscriptions WHERE user_id = $1`, [userId]),
-    query(`SELECT provider, kind, product, amount_cents, currency, status, created_at FROM orders WHERE user_id = $1 ORDER BY created_at`, [userId]),
+    query(
+      `SELECT provider, plan, interval, status, current_period_end, cancel_at_period_end, created_at FROM subscriptions WHERE user_id = $1`,
+      [userId],
+    ),
+    query(`SELECT provider, kind, product, amount_cents, currency, status, created_at FROM orders WHERE user_id = $1 ORDER BY created_at`, [
+      userId,
+    ]),
     query(`SELECT pages, remaining, source, expires_at, created_at FROM credit_grants WHERE user_id = $1`, [userId]),
-    query(`SELECT period, pages, from_allowance, from_credits, format, bank_id, reconciled, created_at FROM usage_events WHERE user_id = $1 ORDER BY created_at`, [userId]),
+    query(
+      `SELECT period, pages, from_allowance, from_credits, format, bank_id, reconciled, created_at FROM usage_events WHERE user_id = $1 ORDER BY created_at`,
+      [userId],
+    ),
     query(`SELECT created_at, last_seen_at, expires_at, user_agent FROM sessions WHERE user_id = $1`, [userId]),
   ]);
   return {

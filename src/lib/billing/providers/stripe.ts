@@ -2,13 +2,7 @@ import "server-only";
 import { PRODUCTS, type ProductId } from "@/config/plans";
 import { env } from "@/lib/env";
 import { hmacSha256Hex, safeEqualHex } from "@/lib/security/tokens";
-import {
-  ProviderConfigError,
-  WebhookSignatureError,
-  type BillingEvent,
-  type PaymentProvider,
-  type SubscriptionStatus,
-} from "../types";
+import { ProviderConfigError, WebhookSignatureError, type BillingEvent, type PaymentProvider, type SubscriptionStatus } from "../types";
 
 /**
  * Stripe integration through the REST API (no SDK needed).
@@ -41,7 +35,12 @@ function form(data: Record<string, string | number | boolean | undefined>): stri
   return p.toString();
 }
 
-async function stripe<T>(method: "GET" | "POST" | "DELETE", path: string, body?: Record<string, string | number | boolean | undefined>, idempotencyKey?: string): Promise<T> {
+async function stripe<T>(
+  method: "GET" | "POST" | "DELETE",
+  path: string,
+  body?: Record<string, string | number | boolean | undefined>,
+  idempotencyKey?: string,
+): Promise<T> {
   const key = env().STRIPE_SECRET_KEY;
   if (!key) throw new ProviderConfigError("STRIPE_SECRET_KEY is not configured");
   const res = await fetch(`${API}${path}`, {
@@ -135,7 +134,11 @@ export const stripeProvider: PaymentProvider = {
       "metadata[product]": product.id,
       ...(isSub
         ? { "subscription_data[metadata][user_id]": user.id, "subscription_data[metadata][product]": product.id }
-        : { "payment_intent_data[metadata][user_id]": user.id, "payment_intent_data[metadata][product]": product.id, "invoice_creation[enabled]": true }),
+        : {
+            "payment_intent_data[metadata][user_id]": user.id,
+            "payment_intent_data[metadata][product]": product.id,
+            "invoice_creation[enabled]": true,
+          }),
       allow_promotion_codes: true,
       locale: "fr",
       success_url: successUrl,
@@ -169,7 +172,15 @@ export const stripeProvider: PaymentProvider = {
     switch (evt.type) {
       case "checkout.session.completed":
       case "checkout.session.async_payment_succeeded": {
-        const s = obj as { id: string; mode: string; payment_status: string; amount_total: number; currency: string; metadata?: Record<string, string>; client_reference_id?: string };
+        const s = obj as {
+          id: string;
+          mode: string;
+          payment_status: string;
+          amount_total: number;
+          currency: string;
+          metadata?: Record<string, string>;
+          client_reference_id?: string;
+        };
         const userId = s.metadata?.user_id ?? s.client_reference_id;
         if (s.mode === "payment" && s.payment_status === "paid" && userId && s.metadata?.product === "pack") {
           events.push({ type: "pack.paid", userId, orderId: s.id, amount: s.amount_total, currency: s.currency.toUpperCase() });
@@ -203,7 +214,9 @@ export const stripeProvider: PaymentProvider = {
           break;
         }
         const line = inv.lines?.data?.[0];
-        const product = productFromPrice(line?.price?.id ?? line?.pricing?.price_details?.price) ?? (inv.parent?.subscription_details?.metadata?.product as ProductId | undefined);
+        const product =
+          productFromPrice(line?.price?.id ?? line?.pricing?.price_details?.price) ??
+          (inv.parent?.subscription_details?.metadata?.product as ProductId | undefined);
         if (!product) {
           events.push({ type: "ignored", reason: "invoice with unknown price" });
           break;

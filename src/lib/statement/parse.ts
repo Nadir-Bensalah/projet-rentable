@@ -32,10 +32,22 @@ interface Anchor {
 
 const HEADER_PATTERNS: [ColumnRole, RegExp][] = [
   ["valueDate", /^(date )?(de )?valeur$|^value( date)?$|^val\.?$|^date val\.?$/],
-  ["date", /^date( operation| d'operation| op\.?| comptable| de l'operation| posted| transaction)?$|^jour$|^posting date$|^trans(action)? date$/],
-  ["description", /^(libelle|libelles|operation|operations|nature|nature de l'operation|description|details?|designation|transaction|transactions|particulars|payee|memo|narrative|objet|intitule|detail des operations|libelle de l'operation)$/],
-  ["debit", /^(debit|debits|sorties?|withdrawals?|paid out|money out|montant debit|debit eur|debit \(eur\)|debit en euros|payments?|charges|retraits?)$/],
-  ["credit", /^(credit|credits|entrees?|deposits?|paid in|money in|montant credit|credit eur|credit \(eur\)|credit en euros|receipts|versements?)$/],
+  [
+    "date",
+    /^date( operation| d'operation| op\.?| comptable| de l'operation| posted| transaction)?$|^jour$|^posting date$|^trans(action)? date$/,
+  ],
+  [
+    "description",
+    /^(libelle|libelles|operation|operations|nature|nature de l'operation|description|details?|designation|transaction|transactions|particulars|payee|memo|narrative|objet|intitule|detail des operations|libelle de l'operation)$/,
+  ],
+  [
+    "debit",
+    /^(debit|debits|sorties?|withdrawals?|paid out|money out|montant debit|debit eur|debit \(eur\)|debit en euros|payments?|charges|retraits?)$/,
+  ],
+  [
+    "credit",
+    /^(credit|credits|entrees?|deposits?|paid in|money in|montant credit|credit eur|credit \(eur\)|credit en euros|receipts|versements?)$/,
+  ],
   ["amount", /^(montant|montants|amount|somme|montant eur|montant \(eur\)|montant en euros|amount \(eur\)|amount \(usd\))$/],
   ["balance", /^(solde|soldes|balance|running balance|solde eur|solde \(eur\))$/],
 ];
@@ -139,8 +151,7 @@ function joinLabel(parts: string[]): string {
 function detectPeriod(text: string, order: DateOrder): { start?: string; end?: string } {
   const n = normaliseText(text);
   // "du 01/08/2026 au 31/08/2026", "période du ... au ...", "from ... to ..."
-  const m =
-    /(?:du|periode du|period|from|statement period|releve du)\s*:?\s*(.{6,22}?)\s+(?:au|to|-|–)\s+(.{6,22}?)(?:\s|$|,|\))/.exec(n);
+  const m = /(?:du|periode du|period|from|statement period|releve du)\s*:?\s*(.{6,22}?)\s+(?:au|to|-|–)\s+(.{6,22}?)(?:\s|$|,|\))/.exec(n);
   if (m) {
     const a = findFullDates(m[1], order)[0];
     const b = findFullDates(m[2], order)[0];
@@ -178,13 +189,18 @@ export function parseStatement(pages: PageText[], fileName = "releve.pdf"): Pars
   // Locale detection from all amounts in the document.
   let commaCount = 0;
   let dotCount = 0;
-  for (const l of lines) for (const c of l.cells) {
-    const a = parseAmount(c.text);
-    if (a) (a.decimal === "," ? commaCount++ : dotCount++);
-  }
+  for (const l of lines)
+    for (const c of l.cells) {
+      const a = parseAmount(c.text);
+      if (a?.decimal === ",") commaCount++;
+      else if (a) dotCount++;
+    }
   const decimalSeparator: "," | "." = dotCount > commaCount ? "." : ",";
   const currency = detectCurrency(allText);
-  const firstPageText = lines.filter((l) => l.page === 1).map((l) => l.text).join("\n");
+  const firstPageText = lines
+    .filter((l) => l.page === 1)
+    .map((l) => l.text)
+    .join("\n");
   const bank = detectBank(firstPageText) ?? detectBank(allText);
 
   // Date order from the leading dates of every line.
@@ -271,7 +287,10 @@ export function parseStatement(pages: PageText[], fileName = "releve.pdf"): Pars
         if (d) continue;
         descCells.push(c);
       }
-      const desc = descCells.map((c) => c.text).join(" ").trim();
+      const desc = descCells
+        .map((c) => c.text)
+        .join(" ")
+        .trim();
       if (amounts.length === 0 && !desc) {
         current = undefined;
         continue;
@@ -299,9 +318,11 @@ export function parseStatement(pages: PageText[], fileName = "releve.pdf"): Pars
     }
     const amounts = amountCells(line, 0);
     const textCells = line.cells.filter((c) => !parseAmount(c.text));
-    const text = textCells.map((c) => c.text).join(" ").trim();
-    const aligned =
-      current.descX0 === undefined || textCells.length === 0 || Math.abs(textCells[0].x0 - current.descX0) < line.height * 3;
+    const text = textCells
+      .map((c) => c.text)
+      .join(" ")
+      .trim();
+    const aligned = current.descX0 === undefined || textCells.length === 0 || Math.abs(textCells[0].x0 - current.descX0) < line.height * 3;
     if (!aligned) continue;
 
     if (amounts.length === 0) {
@@ -339,14 +360,20 @@ export function parseStatement(pages: PageText[], fileName = "releve.pdf"): Pars
   // Pass 2: column model. Cluster amount right edges (amounts are right-aligned in most statements).
   const allAmounts = rows.flatMap((r) => r.amounts);
   const tol = 9;
-  const byRight = cluster(allAmounts.map((a) => a.x1), tol);
-  const byLeft = cluster(allAmounts.map((a) => a.x0), tol);
+  const byRight = cluster(
+    allAmounts.map((a) => a.x1),
+    tol,
+  );
+  const byLeft = cluster(
+    allAmounts.map((a) => a.x0),
+    tol,
+  );
   const useLeft = byLeft.length < byRight.length;
   const centers = useLeft ? byLeft : byRight;
   const key = (a: PositionedAmount) => (useLeft ? a.x0 : a.x1);
 
   const roleOfCluster: AmountRole[] = new Array(centers.length).fill("amount");
-  const headerAmountCols = (header.length ? header : [...headerByPage.values()][0] ?? []).filter((c) =>
+  const headerAmountCols = (header.length ? header : ([...headerByPage.values()][0] ?? [])).filter((c) =>
     ["debit", "credit", "amount", "balance"].includes(c.role),
   );
 
@@ -429,7 +456,7 @@ export function parseStatement(pages: PageText[], fileName = "releve.pdf"): Pars
     }
     const period2 = period;
     const date = resolveDate(r.date, dateOrder, period2) ?? "";
-    const valueDate = r.valueDate ? resolveDate(r.valueDate, dateOrder, period2) ?? undefined : undefined;
+    const valueDate = r.valueDate ? (resolveDate(r.valueDate, dateOrder, period2) ?? undefined) : undefined;
     return {
       id: `t${idx + 1}`,
       date,
@@ -453,7 +480,8 @@ export function parseStatement(pages: PageText[], fileName = "releve.pdf"): Pars
     if (NEGATIVE_BALANCE_RE.test(n)) sign = -1;
     if (a.x1 > 0 && amounts.length) {
       const role = roleOfCluster[nearestIndex(centers, key(a as PositionedAmount))];
-      if (role === "debit" && Math.abs(key(a as PositionedAmount) - centers[nearestIndex(centers, key(a as PositionedAmount))]) < 30) sign = -1;
+      if (role === "debit" && Math.abs(key(a as PositionedAmount) - centers[nearestIndex(centers, key(a as PositionedAmount))]) < 30)
+        sign = -1;
     }
     return sign * a.cents;
   };

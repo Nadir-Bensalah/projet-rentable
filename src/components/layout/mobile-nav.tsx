@@ -31,12 +31,19 @@ export function MobileNav() {
         {open ? <X className="size-5" aria-hidden /> : <Menu className="size-5" aria-hidden />}
       </button>
       {open ? (
-        <div id="mobile-menu" className="absolute inset-x-0 top-full border-b border-[var(--border)] bg-[var(--bg-elevated)] px-4 pb-5 pt-2 shadow-[var(--shadow-lift)] animate-fade-up">
+        <div
+          id="mobile-menu"
+          className="absolute inset-x-0 top-full border-b border-[var(--border)] bg-[var(--bg-elevated)] px-4 pb-5 pt-2 shadow-[var(--shadow-lift)] animate-fade-up"
+        >
           <nav aria-label="Navigation principale">
             <ul className="grid">
               {NAV.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="block rounded-lg px-3 py-3 text-base font-medium text-[var(--fg)] hover:bg-[var(--bg-subtle)]" aria-current={pathname === item.href ? "page" : undefined}>
+                  <Link
+                    href={item.href}
+                    className="block rounded-lg px-3 py-3 text-base font-medium text-[var(--fg)] hover:bg-[var(--bg-subtle)]"
+                    aria-current={pathname === item.href ? "page" : undefined}
+                  >
                     {item.label}
                   </Link>
                 </li>

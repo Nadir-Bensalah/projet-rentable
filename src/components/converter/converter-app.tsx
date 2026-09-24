@@ -1,19 +1,7 @@
 "use client";
 
 import { strToU8, zipSync } from "fflate";
-import {
-  AlertTriangle,
-  Download,
-  FileText,
-  Flag,
-  KeyRound,
-  Lock,
-  Printer,
-  RotateCcw,
-  Sparkles,
-  Upload,
-  X,
-} from "lucide-react";
+import { AlertTriangle, Download, FileText, Flag, KeyRound, Lock, Printer, RotateCcw, Sparkles, Upload, X } from "lucide-react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -71,36 +59,25 @@ export function ConverterApp() {
   const [format, setFormat] = useState<ExportFormat>("xlsx");
   const [scope, setScope] = useState<Scope>("current");
   const [dragging, setDragging] = useState(false);
-  const [notice, setNotice] = useState<{ tone: "success" | "error" | "info" | "warning"; text: string } | null>(null);
+  const [notice, setNotice] = useState<{
+    tone: "success" | "error" | "info" | "warning";
+    text: string;
+  } | null>(null);
   const [exporting, setExporting] = useState(false);
   const [authOpen, setAuthOpen] = useState(false);
   const [verifyOpen, setVerifyOpen] = useState(false);
   const [paywall, setPaywall] = useState<string | null>(null);
   const [reportOpen, setReportOpen] = useState(false);
   const [passwords, setPasswords] = useState<Record<string, string>>({});
+  const [fec, setFec] = useState({
+    journal: "BQ",
+    bankAccount: "512000",
+    suspenseAccount: "471000",
+  });
   const bytesRef = useRef(new Map<string, ArrayBuffer>());
   const inputRef = useRef<HTMLInputElement>(null);
   const pendingExport = useRef(false);
   const restored = useRef(false);
-
-  // Restore the local workspace (this tab only) and load the sample on ?exemple=1.
-  useEffect(() => {
-    if (restored.current) return;
-    restored.current = true;
-    const saved = loadWorkspace();
-    if (saved.length) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setDocs(saved);
-      setActiveId(saved[0].id);
-    }
-    if (params.get("exemple") === "1" && !saved.some((d) => d.fileName === "releve-exemple.pdf")) {
-      fetch("/exemples/releve-exemple.pdf")
-        .then((r) => r.arrayBuffer())
-        .then((buf) => addBuffers([{ name: "releve-exemple.pdf", size: buf.byteLength, buffer: buf }]))
-        .catch(() => setNotice({ tone: "error", text: "L'exemple n'a pas pu être chargé." }));
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   useEffect(() => {
     saveWorkspace(docs);
@@ -118,7 +95,11 @@ export function ConverterApp() {
     async (id: string, fileName: string, password?: string) => {
       const buffer = bytesRef.current.get(id);
       if (!buffer) return;
-      patchDoc(id, { status: "reading", error: undefined, progress: undefined });
+      patchDoc(id, {
+        status: "reading",
+        error: undefined,
+        progress: undefined,
+      });
       const started = performance.now();
       const res = await processPdf(buffer, fileName, {
         password,
@@ -138,7 +119,12 @@ export function ConverterApp() {
           track("parse_failed", { reason: st.kind });
           return;
         }
-        patchDoc(id, { status: "parsed", statement: st, hash: res.hash, progress: undefined });
+        patchDoc(id, {
+          status: "parsed",
+          statement: st,
+          hash: res.hash,
+          progress: undefined,
+        });
         bytesRef.current.delete(id);
         track("parse_succeeded", {
           pages: st.pageCount,
@@ -148,7 +134,11 @@ export function ConverterApp() {
           ms: Math.round(performance.now() - started),
         });
       } else if (res.kind === "password") {
-        patchDoc(id, { status: "password", hash: res.hash, passwordIncorrect: res.incorrect });
+        patchDoc(id, {
+          status: "password",
+          hash: res.hash,
+          passwordIncorrect: res.incorrect,
+        });
       } else {
         patchDoc(id, { status: "error", error: res.message, hash: res.hash });
         track("parse_failed", { reason: "invalid" });
@@ -157,44 +147,82 @@ export function ConverterApp() {
     [patchDoc],
   );
 
-  const addBuffers = useCallback(
-    (files: { name: string; size: number; buffer: ArrayBuffer }[]) => {
-      const created: Doc[] = files.map((f) => ({ id: newId(), fileName: f.name, size: f.size, status: "reading" }));
-      created.forEach((d, i) => bytesRef.current.set(d.id, files[i].buffer));
-      setDocs((ds) => [...ds, ...created]);
-      setActiveId((a) => a ?? created[0]?.id ?? null);
-      if (created[0]) setActiveId(created[0].id);
-      // Parse sequentially to keep the tab responsive on large batches.
-      (async () => {
-        for (const d of created) await runParse(d.id, d.fileName);
-      })();
-    },
-    [runParse],
-  );
+  const addBuffers = (files: { name: string; size: number; buffer: ArrayBuffer }[]) => {
+    const created: Doc[] = files.map((f) => ({
+      id: newId(),
+      fileName: f.name,
+      size: f.size,
+      status: "reading",
+    }));
+    created.forEach((d, i) => bytesRef.current.set(d.id, files[i].buffer));
+    setDocs((ds) => [...ds, ...created]);
+    setActiveId((a) => a ?? created[0]?.id ?? null);
+    if (created[0]) setActiveId(created[0].id);
+    // Parse sequentially to keep the tab responsive on large batches.
+    (async () => {
+      for (const d of created) await runParse(d.id, d.fileName);
+    })();
+  };
 
-  const onFiles = useCallback(
-    async (list: FileList | File[]) => {
-      setNotice(null);
-      const files = Array.from(list);
-      const room = MAX_FILES - docs.length;
-      const accepted: { name: string; size: number; buffer: ArrayBuffer }[] = [];
-      const rejected: string[] = [];
-      for (const f of files.slice(0, Math.max(0, room))) {
-        const isPdf = f.type === "application/pdf" || f.name.toLowerCase().endsWith(".pdf");
-        if (!isPdf) rejected.push(`${f.name} n'est pas un PDF`);
-        else if (f.size > MAX_FILE_BYTES) rejected.push(`${f.name} dépasse ${formatBytes(MAX_FILE_BYTES)}`);
-        else if (f.size === 0) rejected.push(`${f.name} est vide`);
-        else accepted.push({ name: f.name, size: f.size, buffer: await f.arrayBuffer() });
-      }
-      if (files.length > room) rejected.push(`maximum ${MAX_FILES} relevés à la fois`);
-      if (rejected.length) setNotice({ tone: "warning", text: `Fichier(s) ignoré(s) : ${rejected.join(" ; ")}.` });
-      if (accepted.length) {
-        track("file_selected", { count: accepted.length });
-        addBuffers(accepted);
-      }
-    },
-    [addBuffers, docs.length],
-  );
+  const onFiles = async (list: FileList | File[]) => {
+    setNotice(null);
+    const files = Array.from(list);
+    const room = MAX_FILES - docs.length;
+    const accepted: { name: string; size: number; buffer: ArrayBuffer }[] = [];
+    const rejected: string[] = [];
+    for (const f of files.slice(0, Math.max(0, room))) {
+      const isPdf = f.type === "application/pdf" || f.name.toLowerCase().endsWith(".pdf");
+      if (!isPdf) rejected.push(`${f.name} n'est pas un PDF`);
+      else if (f.size > MAX_FILE_BYTES) rejected.push(`${f.name} dépasse ${formatBytes(MAX_FILE_BYTES)}`);
+      else if (f.size === 0) rejected.push(`${f.name} est vide`);
+      else
+        accepted.push({
+          name: f.name,
+          size: f.size,
+          buffer: await f.arrayBuffer(),
+        });
+    }
+    if (files.length > room) rejected.push(`maximum ${MAX_FILES} relevés à la fois`);
+    if (rejected.length)
+      setNotice({
+        tone: "warning",
+        text: `Fichier(s) ignoré(s) : ${rejected.join(" ; ")}.`,
+      });
+    if (accepted.length) {
+      track("file_selected", { count: accepted.length });
+      addBuffers(accepted);
+    }
+  };
+
+  // Restore the local workspace (this tab only) and load the sample on ?exemple=1.
+  useEffect(() => {
+    if (restored.current) return;
+    restored.current = true;
+    const saved = loadWorkspace();
+    if (saved.length) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setDocs(saved);
+      setActiveId(saved[0].id);
+    }
+    if (params.get("bienvenue") === "1") {
+      setNotice({
+        tone: "success",
+        text: "Compte créé ! Confirmez votre adresse grâce à l'e-mail que nous venons de vous envoyer, puis déposez votre premier relevé.",
+      });
+    }
+    if (params.get("exemple") === "1" && !saved.some((d) => d.fileName === "releve-exemple.pdf")) {
+      fetch("/exemples/releve-exemple.pdf")
+        .then((r) => r.arrayBuffer())
+        .then((buf) => addBuffers([{ name: "releve-exemple.pdf", size: buf.byteLength, buffer: buf }]))
+        .catch(() =>
+          setNotice({
+            tone: "error",
+            text: "L'exemple n'a pas pu être chargé.",
+          }),
+        );
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const updateStatement = (id: string, fn: (st: ParsedStatement) => ParsedStatement) => {
     setDocs((ds) => ds.map((d) => (d.id === id && d.statement ? { ...d, statement: withReconciliation(fn(d.statement)) } : d)));
@@ -244,7 +272,11 @@ export function ConverterApp() {
     }
     setExporting(true);
     setNotice(null);
-    const res = await api<{ charged: number; reExports: number; account: AccountView }>("/api/usage/consume", {
+    const res = await api<{
+      charged: number;
+      reExports: number;
+      account: AccountView;
+    }>("/api/usage/consume", {
       body: {
         format,
         documents: targets.map((d) => ({
@@ -267,7 +299,10 @@ export function ConverterApp() {
         pendingExport.current = true;
         setAuthOpen(true);
       } else {
-        setNotice({ tone: "error", text: res.data.error ?? "L'export a échoué. Réessayez." });
+        setNotice({
+          tone: "error",
+          text: res.data.error ?? "L'export a échoué. Réessayez.",
+        });
       }
       return;
     }
@@ -276,7 +311,7 @@ export function ConverterApp() {
       if (scope === "zip" && statements.length > 1) {
         const files: Record<string, Uint8Array> = {};
         for (const st of statements) {
-          const out = buildExport(format, [st]);
+          const out = buildExport(format, [st], { fec });
           let name = out.filename;
           let n = 2;
           while (files[name]) name = out.filename.replace(/(\.[a-z]+)$/, `-${n++}$1`);
@@ -284,10 +319,14 @@ export function ConverterApp() {
         }
         download(zipSync(files), "application/zip", `releves-${new Date().toISOString().slice(0, 10)}.zip`);
       } else {
-        const out = buildExport(format, statements);
+        const out = buildExport(format, statements, { fec });
         download(out.data, out.mime, out.filename);
       }
-      track("export_completed", { format, documents: statements.length, charged: res.data.charged });
+      track("export_completed", {
+        format,
+        documents: statements.length,
+        charged: res.data.charged,
+      });
       const charged = res.data.charged;
       setNotice({
         tone: "success",
@@ -298,9 +337,12 @@ export function ConverterApp() {
       });
     } catch (e) {
       console.error(e);
-      setNotice({ tone: "error", text: "Le fichier n'a pas pu être généré dans votre navigateur." });
+      setNotice({
+        tone: "error",
+        text: "Le fichier n'a pas pu être généré dans votre navigateur.",
+      });
     }
-  }, [format, scope, targets]);
+  }, [format, scope, targets, fec]);
 
   const resumeAfterAuth = useCallback(async () => {
     setAuthOpen(false);
@@ -325,7 +367,9 @@ export function ConverterApp() {
   const checkout = async (product: ProductId): Promise<string | null> => {
     track("checkout_clicked", { product });
     saveWorkspace(docs);
-    const res = await api<{ url: string }>("/api/billing/checkout", { body: { product } });
+    const res = await api<{ url: string }>("/api/billing/checkout", {
+      body: { product },
+    });
     if (!res.ok || !res.data.url) return res.data.error ?? "Le paiement est indisponible pour le moment.";
     window.location.href = res.data.url;
     return null;
@@ -367,20 +411,35 @@ export function ConverterApp() {
           }}
         />
         <div className={cn("flex flex-col items-center text-center", docs.length && "sm:flex-row sm:text-left sm:gap-5")}>
-          <span className={cn("inline-flex items-center justify-center rounded-2xl bg-brand-50 text-brand-600 dark:bg-brand-950/60 dark:text-brand-300", docs.length ? "size-12" : "size-16")}>
+          <span
+            className={cn(
+              "inline-flex items-center justify-center rounded-2xl bg-brand-50 text-brand-600 dark:bg-brand-950/60 dark:text-brand-300",
+              docs.length ? "size-12" : "size-16",
+            )}
+          >
             <Upload className={docs.length ? "size-6" : "size-8"} aria-hidden />
           </span>
           <div className={cn(docs.length ? "mt-3 flex-1 sm:mt-0" : "mt-5")}>
-            <p className={cn("font-semibold", !docs.length && "text-lg")}>{docs.length ? "Ajouter d'autres relevés" : "Déposez vos relevés bancaires PDF ici"}</p>
+            <p className={cn("font-semibold", !docs.length && "text-lg")}>
+              {docs.length ? "Ajouter d'autres relevés" : "Déposez vos relevés bancaires PDF ici"}
+            </p>
             <p className="mt-1 text-sm text-muted">
               ou{" "}
-              <label htmlFor="pdf-input" className="cursor-pointer font-semibold text-brand-600 underline underline-offset-4 dark:text-brand-300">
+              <label
+                htmlFor="pdf-input"
+                className="cursor-pointer font-semibold text-brand-600 underline underline-offset-4 dark:text-brand-300"
+              >
                 choisissez des fichiers
               </label>{" "}
               — jusqu&apos;à {MAX_FILES} PDF de {formatBytes(MAX_FILE_BYTES)} maximum.
             </p>
           </div>
-          <p className={cn("inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-800 dark:bg-emerald-950/50 dark:text-emerald-300", docs.length ? "mt-3 sm:mt-0" : "mt-5")}>
+          <p
+            className={cn(
+              "inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-800 dark:bg-emerald-950/50 dark:text-emerald-300",
+              docs.length ? "mt-3 sm:mt-0" : "mt-5",
+            )}
+          >
             <Lock className="size-3.5" aria-hidden /> Lu sur votre appareil, jamais envoyé
           </p>
         </div>
@@ -393,7 +452,15 @@ export function ConverterApp() {
               onClick={() =>
                 fetch("/exemples/releve-exemple.pdf")
                   .then((r) => r.arrayBuffer())
-                  .then((buf) => addBuffers([{ name: "releve-exemple.pdf", size: buf.byteLength, buffer: buf }]))
+                  .then((buf) =>
+                    addBuffers([
+                      {
+                        name: "releve-exemple.pdf",
+                        size: buf.byteLength,
+                        buffer: buf,
+                      },
+                    ]),
+                  )
               }
               data-cta="converter-sample"
             >
@@ -407,7 +474,12 @@ export function ConverterApp() {
         <Alert tone={notice.tone} action={notice.tone === "success" ? undefined : undefined}>
           <div className="flex items-start justify-between gap-3">
             <span>{notice.text}</span>
-            <button type="button" onClick={() => setNotice(null)} aria-label="Fermer le message" className="-m-1 rounded p-1 opacity-70 hover:opacity-100">
+            <button
+              type="button"
+              onClick={() => setNotice(null)}
+              aria-label="Fermer le message"
+              className="-m-1 rounded p-1 opacity-70 hover:opacity-100"
+            >
               <X className="size-4" aria-hidden />
             </button>
           </div>
@@ -429,10 +501,18 @@ export function ConverterApp() {
                     onClick={() => setActiveId(d.id)}
                     className={cn(
                       "flex shrink-0 items-center gap-2 rounded-xl border px-3 py-2 text-sm font-medium",
-                      d.id === active?.id ? "border-brand-500 bg-brand-50 text-brand-900 dark:bg-brand-950/50 dark:text-brand-100" : "border-[var(--border)] bg-[var(--bg-elevated)] hover:bg-[var(--bg-subtle)]",
+                      d.id === active?.id
+                        ? "border-brand-500 bg-brand-50 text-brand-900 dark:bg-brand-950/50 dark:text-brand-100"
+                        : "border-[var(--border)] bg-[var(--bg-elevated)] hover:bg-[var(--bg-subtle)]",
                     )}
                   >
-                    {d.status === "reading" ? <Spinner /> : d.status === "parsed" ? <StatusDot status={d.statement!.reconciliation.status} /> : <AlertTriangle className="size-4 text-amber-500" aria-hidden />}
+                    {d.status === "reading" ? (
+                      <Spinner />
+                    ) : d.status === "parsed" ? (
+                      <StatusDot status={d.statement!.reconciliation.status} />
+                    ) : (
+                      <AlertTriangle className="size-4 text-amber-500" aria-hidden />
+                    )}
                     <span className="max-w-44 truncate">{d.fileName}</span>
                   </button>
                 ))}
@@ -450,7 +530,11 @@ export function ConverterApp() {
                     {st ? (
                       <p className="mt-1 flex flex-wrap gap-x-3 gap-y-1 text-sm text-muted">
                         {st.bankName ? <span>{st.bankName}</span> : null}
-                        {st.periodStart ? <span>du {frLongDate(st.periodStart)} au {frLongDate(st.periodEnd)}</span> : null}
+                        {st.periodStart ? (
+                          <span>
+                            du {frLongDate(st.periodStart)} au {frLongDate(st.periodEnd)}
+                          </span>
+                        ) : null}
                         <span>
                           {st.pageCount} page{st.pageCount > 1 ? "s" : ""}
                         </span>
@@ -464,7 +548,13 @@ export function ConverterApp() {
                         Signaler
                       </Button>
                     ) : null}
-                    <Button variant="ghost" size="sm" icon={<X className="size-4" aria-hidden />} onClick={() => removeDoc(active.id)} aria-label={`Retirer ${active.fileName}`}>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      icon={<X className="size-4" aria-hidden />}
+                      onClick={() => removeDoc(active.id)}
+                      aria-label={`Retirer ${active.fileName}`}
+                    >
                       Retirer
                     </Button>
                   </div>
@@ -492,13 +582,30 @@ export function ConverterApp() {
                       <KeyRound className="mt-0.5 size-6 text-brand-600 dark:text-brand-300" aria-hidden />
                       <div>
                         <p className="font-semibold">Ce PDF est protégé par un mot de passe</p>
-                        <p className="mt-1 text-sm text-muted">Le mot de passe est utilisé uniquement dans votre navigateur pour ouvrir le fichier.</p>
+                        <p className="mt-1 text-sm text-muted">
+                          Le mot de passe est utilisé uniquement dans votre navigateur pour ouvrir le fichier.
+                        </p>
                       </div>
                     </div>
                     {active.passwordIncorrect ? <Alert tone="error">Mot de passe incorrect. Réessayez.</Alert> : null}
                     <div className="flex flex-col gap-2 sm:flex-row">
-                      <label htmlFor={`pwd-${active.id}`} className="sr-only">Mot de passe du PDF</label>
-                      <Input id={`pwd-${active.id}`} type="password" autoComplete="off" value={passwords[active.id] ?? ""} onChange={(e) => setPasswords((p) => ({ ...p, [active.id]: e.target.value }))} placeholder="Mot de passe du PDF" autoFocus />
+                      <label htmlFor={`pwd-${active.id}`} className="sr-only">
+                        Mot de passe du PDF
+                      </label>
+                      <Input
+                        id={`pwd-${active.id}`}
+                        type="password"
+                        autoComplete="off"
+                        value={passwords[active.id] ?? ""}
+                        onChange={(e) =>
+                          setPasswords((p) => ({
+                            ...p,
+                            [active.id]: e.target.value,
+                          }))
+                        }
+                        placeholder="Mot de passe du PDF"
+                        autoFocus
+                      />
                       <Button type="submit">Ouvrir</Button>
                     </div>
                   </form>
@@ -516,12 +623,19 @@ export function ConverterApp() {
                     <ReconciliationCard
                       key={`${active.id}-${st.openingBalance}-${st.closingBalance}`}
                       st={st}
-                      onBalances={(o, c) => updateStatement(active.id, (s) => ({ ...s, openingBalance: o, closingBalance: c }))}
+                      onBalances={(o, c) =>
+                        updateStatement(active.id, (s) => ({
+                          ...s,
+                          openingBalance: o,
+                          closingBalance: c,
+                        }))
+                      }
                     />
                     {st.warnings.length ? (
                       <details className="rounded-xl border border-[var(--border)] bg-[var(--bg-elevated)] px-4 py-3 text-sm">
                         <summary className="cursor-pointer font-medium">
-                          {st.warnings.length} remarque{st.warnings.length > 1 ? "s" : ""} sur la lecture
+                          {st.warnings.length} remarque
+                          {st.warnings.length > 1 ? "s" : ""} sur la lecture
                         </summary>
                         <ul className="mt-2 grid list-disc gap-1 pl-5 text-muted">
                           {st.warnings.map((w) => (
@@ -530,7 +644,15 @@ export function ConverterApp() {
                         </ul>
                       </details>
                     ) : null}
-                    <TransactionsTable st={st} onChange={(tx: Transaction[]) => updateStatement(active.id, (s) => ({ ...s, transactions: tx }))} />
+                    <TransactionsTable
+                      st={st}
+                      onChange={(tx: Transaction[]) =>
+                        updateStatement(active.id, (s) => ({
+                          ...s,
+                          transactions: tx,
+                        }))
+                      }
+                    />
                   </>
                 ) : null}
               </section>
@@ -544,7 +666,9 @@ export function ConverterApp() {
                 <h2 className="font-bold">Exporter</h2>
                 {account ? (
                   <p className="mt-1 text-sm text-muted" data-testid="quota">
-                    {account.allowanceRemaining} page{account.allowanceRemaining > 1 ? "s" : ""} restante{account.allowanceRemaining > 1 ? "s" : ""} ce mois
+                    {account.allowanceRemaining} page
+                    {account.allowanceRemaining > 1 ? "s" : ""} restante
+                    {account.allowanceRemaining > 1 ? "s" : ""} ce mois
                     {account.credits ? ` + ${account.credits} en crédit` : ""}
                   </p>
                 ) : (
@@ -562,10 +686,19 @@ export function ConverterApp() {
                         key={f.id}
                         className={cn(
                           "flex cursor-pointer items-start gap-3 rounded-xl border p-3 text-sm transition-colors",
-                          format === f.id ? "border-brand-500 bg-brand-50/60 dark:bg-brand-950/40" : "border-[var(--border)] hover:bg-[var(--bg-subtle)]",
+                          format === f.id
+                            ? "border-brand-500 bg-brand-50/60 dark:bg-brand-950/40"
+                            : "border-[var(--border)] hover:bg-[var(--bg-subtle)]",
                         )}
                       >
-                        <input type="radio" name="format" value={f.id} checked={format === f.id} onChange={() => setFormat(f.id)} className="mt-0.5 accent-brand-600" />
+                        <input
+                          type="radio"
+                          name="format"
+                          value={f.id}
+                          checked={format === f.id}
+                          onChange={() => setFormat(f.id)}
+                          className="mt-0.5 accent-brand-600"
+                        />
                         <span className="min-w-0 flex-1">
                           <span className="flex items-center gap-2 font-semibold">
                             {f.label}
@@ -579,6 +712,37 @@ export function ConverterApp() {
                 </div>
               </fieldset>
 
+              {format === "fec" ? (
+                <fieldset className="grid grid-cols-3 gap-2">
+                  <legend className="mb-2 text-sm font-semibold">Paramètres des écritures</legend>
+                  {(
+                    [
+                      ["journal", "Journal", 6],
+                      ["bankAccount", "Banque", 12],
+                      ["suspenseAccount", "Attente", 12],
+                    ] as const
+                  ).map(([k, l, max]) => (
+                    <div key={k}>
+                      <label htmlFor={`fec-${k}`} className="mb-1 block text-xs text-subtle">
+                        {l}
+                      </label>
+                      <Input
+                        id={`fec-${k}`}
+                        value={fec[k]}
+                        maxLength={max}
+                        onChange={(e) =>
+                          setFec((f) => ({
+                            ...f,
+                            [k]: e.target.value.replace(/[^A-Za-z0-9]/g, "").toUpperCase(),
+                          }))
+                        }
+                        className="h-9 px-2 text-sm"
+                      />
+                    </div>
+                  ))}
+                </fieldset>
+              ) : null}
+
               {parsed.length > 1 ? (
                 <fieldset>
                   <legend className="mb-2 text-sm font-semibold">Relevés à exporter</legend>
@@ -591,10 +755,19 @@ export function ConverterApp() {
                       ] as [Scope, string][]
                     ).map(([v, l]) => (
                       <label key={v} className="flex cursor-pointer items-center gap-2.5">
-                        <input type="radio" name="scope" value={v} checked={scope === v} onChange={() => setScope(v)} className="accent-brand-600" />
+                        <input
+                          type="radio"
+                          name="scope"
+                          value={v}
+                          checked={scope === v}
+                          onChange={() => setScope(v)}
+                          className="accent-brand-600"
+                        />
                         <span>
                           {l}
-                          {v !== "current" && !(account?.paidFeatures ?? false) ? <Lock className="ml-1.5 inline size-3.5 text-subtle" aria-label="offre payante" /> : null}
+                          {v !== "current" && !(account?.paidFeatures ?? false) ? (
+                            <Lock className="ml-1.5 inline size-3.5 text-subtle" aria-label="offre payante" />
+                          ) : null}
                         </span>
                       </label>
                     ))}
@@ -603,10 +776,20 @@ export function ConverterApp() {
               ) : null}
 
               {targets.some((d) => d.statement?.reconciliation.status === "mismatch") ? (
-                <Alert tone="warning">Un relevé présente un écart de solde. Vous pouvez exporter, mais vérifiez les lignes signalées.</Alert>
+                <Alert tone="warning">
+                  Un relevé présente un écart de solde. Vous pouvez exporter, mais vérifiez les lignes signalées.
+                </Alert>
               ) : null}
 
-              <Button size="lg" className="w-full" onClick={doExport} loading={exporting} disabled={!targets.length || busy} icon={<Download className="size-5" aria-hidden />} data-testid="export-button">
+              <Button
+                size="lg"
+                className="w-full"
+                onClick={doExport}
+                loading={exporting}
+                disabled={!targets.length || busy}
+                icon={<Download className="size-5" aria-hidden />}
+                data-testid="export-button"
+              >
                 {locked ? "Débloquer et télécharger" : "Télécharger"}
               </Button>
               {targets.length ? (
@@ -662,8 +845,23 @@ export function ConverterApp() {
       )}
 
       <ControlReport statements={parsed.map((d) => d.statement!)} />
-      <AuthDialog open={authOpen} onClose={() => { setAuthOpen(false); pendingExport.current = false; }} onAuthenticated={resumeAfterAuth} />
-      <VerifyDialog open={verifyOpen} email={account?.user.email} onClose={() => { setVerifyOpen(false); pendingExport.current = false; }} onVerified={resumeAfterVerify} />
+      <AuthDialog
+        open={authOpen}
+        onClose={() => {
+          setAuthOpen(false);
+          pendingExport.current = false;
+        }}
+        onAuthenticated={resumeAfterAuth}
+      />
+      <VerifyDialog
+        open={verifyOpen}
+        email={account?.user.email}
+        onClose={() => {
+          setVerifyOpen(false);
+          pendingExport.current = false;
+        }}
+        onVerified={resumeAfterVerify}
+      />
       <PaywallDialog open={!!paywall} reason={paywall ?? ""} onClose={() => setPaywall(null)} onCheckout={checkout} />
       <ReportLayoutDialog open={reportOpen} onClose={() => setReportOpen(false)} statement={st} />
     </div>
@@ -672,6 +870,14 @@ export function ConverterApp() {
 
 function StatusDot({ status }: { status: ParsedStatement["reconciliation"]["status"] }) {
   const label = status === "verified" ? "vérifié" : status === "mismatch" ? "écart" : "non vérifiable";
-  return <span className={cn("size-2.5 shrink-0 rounded-full", status === "verified" ? "bg-emerald-500" : status === "mismatch" ? "bg-rose-500" : "bg-amber-500")} aria-label={label} role="img" />;
+  return (
+    <span
+      className={cn(
+        "size-2.5 shrink-0 rounded-full",
+        status === "verified" ? "bg-emerald-500" : status === "mismatch" ? "bg-rose-500" : "bg-amber-500",
+      )}
+      aria-label={label}
+      role="img"
+    />
+  );
 }
-

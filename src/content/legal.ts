@@ -1,3 +1,4 @@
+import { site } from "@/config/site";
 import type { Block, LegalPage } from "./types";
 
 /**
@@ -14,18 +15,17 @@ const DRAFT_CALLOUT: Block = {
   type: "callout",
   tone: "warning",
   title: "Document à valider",
-  text:
-    "Ce texte est un **projet** rédigé avant le lancement du service. Il n'a pas encore été validé par un professionnel du droit et doit l'être avant toute mise en ligne commerciale. Les mentions entre crochets (« [À COMPLÉTER : ...] », « [À CONFIRMER] ») sont des champs provisoires qui doivent être complétés ou vérifiés.",
+  text: "Ce texte est un **projet** rédigé avant le lancement du service. Il n'a pas encore été validé par un professionnel du droit et doit l'être avant toute mise en ligne commerciale. Les mentions entre crochets (« [À COMPLÉTER : ...] », « [À CONFIRMER] ») sont des champs provisoires qui doivent être complétés ou vérifiés.",
 };
 
-const CONTACT_EMAIL = "[À COMPLÉTER : adresse e-mail de contact]";
-const PUBLISHER = "[À COMPLÉTER : nom et prénom de l'entrepreneur]";
-const STATUS = "[À COMPLÉTER : Entrepreneur individuel (micro-entreprise)]";
-const SIREN = "[À COMPLÉTER : SIREN]";
-const ADDRESS = "[À COMPLÉTER : adresse de domiciliation]";
-const VAT = "TVA non applicable, art. 293 B du CGI [À CONFIRMER]";
-const DIRECTOR = "[À COMPLÉTER : directeur de la publication]";
-const APP_HOST = "[À COMPLÉTER : hébergeur de l'application]";
+const CONTACT_EMAIL = process.env.NEXT_PUBLIC_SUPPORT_EMAIL || "[À COMPLÉTER : adresse e-mail de contact]";
+const PUBLISHER = site.legal.publisherName;
+const STATUS = site.legal.status;
+const SIREN = site.legal.siren;
+const ADDRESS = site.legal.address;
+const VAT = site.legal.vat;
+const DIRECTOR = site.legal.director;
+const APP_HOST = site.legal.host.startsWith("[") ? "[À COMPLÉTER : hébergeur de l'application]" : site.legal.host;
 const DB_HOST = "[À COMPLÉTER : hébergeur de la base de données]";
 const PAYMENT_PROVIDER = "[À COMPLÉTER : Lemon Squeezy ou Stripe selon configuration]";
 const EMAIL_PROVIDER = "[À COMPLÉTER : Resend ou fournisseur SMTP]";
@@ -36,8 +36,7 @@ export const LEGAL_PAGES: LegalPage[] = [
   {
     slug: "mentions-legales",
     title: "Mentions légales",
-    description:
-      "Mentions légales de Relevéo : éditeur du site, directeur de la publication, hébergeurs et contact.",
+    description: "Mentions légales de Relevéo : éditeur du site, directeur de la publication, hébergeurs et contact.",
     updated: UPDATED,
     blocks: [
       DRAFT_CALLOUT,
@@ -104,8 +103,7 @@ export const LEGAL_PAGES: LegalPage[] = [
         type: "callout",
         tone: "success",
         title: "L'essentiel",
-        text:
-          "Vos relevés bancaires sont lus **uniquement dans votre navigateur**. Leur contenu (libellés, montants, numéros de compte) n'est **jamais transmis** à Relevéo ni stocké sur nos serveurs. Nous ne conservons que ce qui est nécessaire pour gérer votre compte, votre facturation et votre quota de pages.",
+        text: "Vos relevés bancaires sont lus **uniquement dans votre navigateur**. Leur contenu (libellés, montants, numéros de compte) n'est **jamais transmis** à Relevéo ni stocké sur nos serveurs. Nous ne conservons que ce qui est nécessaire pour gérer votre compte, votre facturation et votre quota de pages.",
       },
 
       { type: "h2", id: "responsable", text: "Responsable du traitement" },
@@ -185,12 +183,7 @@ export const LEGAL_PAGES: LegalPage[] = [
             "Envoyer les e-mails de service et, si vous l'avez accepté, des informations sur le produit",
             "Exécution du contrat ; consentement (e-mails d'information)",
           ],
-          [
-            "Contact",
-            "Adresse e-mail, sujet et contenu du message",
-            "Répondre à vos demandes",
-            "Intérêt légitime ; exécution du contrat",
-          ],
+          ["Contact", "Adresse e-mail, sujet et contenu du message", "Répondre à vos demandes", "Intérêt légitime ; exécution du contrat"],
           [
             "Rapports de mise en page",
             "Structure anonymisée d'un relevé mal lu (voir ci-dessus), banque, commentaire facultatif",
@@ -336,8 +329,18 @@ export const LEGAL_PAGES: LegalPage[] = [
         type: "table",
         head: ["Clé", "Type", "Contenu et finalité", "Durée"],
         rows: [
-          ["rv_aid", "sessionStorage", "Identifiant de visite aléatoire, utilisé pour la mesure d'audience", "Jusqu'à la fermeture de l'onglet"],
-          ["rv_utm", "sessionStorage", "Première source de visite (paramètres utm), pour la mesure d'audience", "Jusqu'à la fermeture de l'onglet"],
+          [
+            "rv_aid",
+            "sessionStorage",
+            "Identifiant de visite aléatoire, utilisé pour la mesure d'audience",
+            "Jusqu'à la fermeture de l'onglet",
+          ],
+          [
+            "rv_utm",
+            "sessionStorage",
+            "Première source de visite (paramètres utm), pour la mesure d'audience",
+            "Jusqu'à la fermeture de l'onglet",
+          ],
           [
             "releveo:workspace",
             "sessionStorage",
@@ -432,8 +435,7 @@ export const LEGAL_PAGES: LegalPage[] = [
         type: "callout",
         tone: "info",
         title: "Un outil d'aide à la saisie",
-        text:
-          "Relevéo est une **aide à la transcription**. La lecture automatique d'un PDF peut comporter des erreurs (mise en page inhabituelle, document scanné, libellés sur plusieurs lignes...). Il vous appartient de **vérifier les données exportées** avant de les utiliser, en particulier lorsque le statut du contrôle n'est pas « vérifié ».",
+        text: "Relevéo est une **aide à la transcription**. La lecture automatique d'un PDF peut comporter des erreurs (mise en page inhabituelle, document scanné, libellés sur plusieurs lignes...). Il vous appartient de **vérifier les données exportées** avant de les utiliser, en particulier lorsque le statut du contrôle n'est pas « vérifié ».",
       },
       {
         type: "p",
@@ -562,8 +564,7 @@ export const LEGAL_PAGES: LegalPage[] = [
         type: "callout",
         tone: "warning",
         title: "Clause à faire valider",
-        text:
-          "La rédaction de cet article et le mécanisme de recueil du consentement au moment du paiement (case à cocher) doivent être validés par un professionnel du droit.",
+        text: "La rédaction de cet article et le mécanisme de recueil du consentement au moment du paiement (case à cocher) doivent être validés par un professionnel du droit.",
       },
       {
         type: "p",
@@ -616,8 +617,7 @@ export const LEGAL_PAGES: LegalPage[] = [
   {
     slug: "remboursement",
     title: "Politique de remboursement",
-    description:
-      "Quand et comment obtenir un remboursement d'un pack ou d'un abonnement Relevéo, au-delà des obligations légales.",
+    description: "Quand et comment obtenir un remboursement d'un pack ou d'un abonnement Relevéo, au-delà des obligations légales.",
     updated: UPDATED,
     blocks: [
       DRAFT_CALLOUT,
@@ -625,8 +625,7 @@ export const LEGAL_PAGES: LegalPage[] = [
         type: "callout",
         tone: "info",
         title: "Geste commercial",
-        text:
-          "Les règles ci-dessous sont un **choix commercial** de l'éditeur, plus favorable que le minimum légal. Elles peuvent être modifiées pour l'avenir ; les achats déjà effectués restent soumis à la politique en vigueur au moment de l'achat. [À CONFIRMER par l'éditeur : seuils et délais]",
+        text: "Les règles ci-dessous sont un **choix commercial** de l'éditeur, plus favorable que le minimum légal. Elles peuvent être modifiées pour l'avenir ; les achats déjà effectués restent soumis à la politique en vigueur au moment de l'achat. [À CONFIRMER par l'éditeur : seuils et délais]",
       },
 
       { type: "h2", id: "pack", text: "Pack 150 pages" },
@@ -662,7 +661,10 @@ export const LEGAL_PAGES: LegalPage[] = [
       { type: "h2", id: "droits-legaux", text: "Vos droits légaux" },
       {
         type: "p",
-        text: "Cette politique s'ajoute, sans les remplacer, aux droits que vous tenez de la loi : droit de rétractation dans les conditions de l'article 6 des [CGV](/cgv) et garantie légale de conformité des contenus et services numériques. En cas de désaccord, vous pouvez recourir au médiateur de la consommation : " + MEDIATOR + ".",
+        text:
+          "Cette politique s'ajoute, sans les remplacer, aux droits que vous tenez de la loi : droit de rétractation dans les conditions de l'article 6 des [CGV](/cgv) et garantie légale de conformité des contenus et services numériques. En cas de désaccord, vous pouvez recourir au médiateur de la consommation : " +
+          MEDIATOR +
+          ".",
       },
     ],
   },

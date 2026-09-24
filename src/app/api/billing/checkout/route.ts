@@ -22,7 +22,11 @@ export const POST = handler(async (req) => {
   if (product.kind === "subscription") {
     const existing = await currentSubscription(user.id);
     if (existing && existing.status !== "canceled") {
-      throw new HttpError(409, "Vous avez déjà un abonnement actif. Changez d'offre depuis la gestion de votre abonnement.", "already_subscribed");
+      throw new HttpError(
+        409,
+        "Vous avez déjà un abonnement actif. Changez d'offre depuis la gestion de votre abonnement.",
+        "already_subscribed",
+      );
     }
   }
   const provider = paymentProvider();

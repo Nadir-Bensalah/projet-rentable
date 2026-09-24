@@ -16,7 +16,12 @@ const schema = z.object({
       z.object({
         hash: z.string().regex(/^[0-9a-f]{64}$/, "Empreinte de document invalide."),
         pages: z.number().int().min(1).max(200),
-        bankId: z.string().max(40).regex(/^[a-z0-9-]*$/).optional().nullable(),
+        bankId: z
+          .string()
+          .max(40)
+          .regex(/^[a-z0-9-]*$/)
+          .optional()
+          .nullable(),
         reconciled: z.enum(["verified", "mismatch", "unverifiable"]).optional().nullable(),
       }),
     )
@@ -83,6 +88,9 @@ export const POST = handler(async (req) => {
     }
     throw e;
   }
-  await trackServer("export_charged", { userId: user.id, props: { format: body.format, documents: body.documents.length, pages: charged, reExports } });
+  await trackServer("export_charged", {
+    userId: user.id,
+    props: { format: body.format, documents: body.documents.length, pages: charged, reExports },
+  });
   return json({ ok: true, charged, reExports, account: await loadAccountView(user) });
 });

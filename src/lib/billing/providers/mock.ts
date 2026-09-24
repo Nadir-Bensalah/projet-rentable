@@ -43,7 +43,15 @@ export function verifyMockToken<T>(token: string): T | null {
 
 export type MockWebhookPayload =
   | { kind: "checkout.completed"; userId: string; product: ProductId; outcome: "paid"; ref: string }
-  | { kind: "subscription.change"; userId: string; subscriptionId: string; product: ProductId; status: SubscriptionStatus; cancelAtPeriodEnd: boolean; periodEnd: string }
+  | {
+      kind: "subscription.change";
+      userId: string;
+      subscriptionId: string;
+      product: ProductId;
+      status: SubscriptionStatus;
+      cancelAtPeriodEnd: boolean;
+      periodEnd: string;
+    }
   | { kind: "subscription.renewal"; userId: string; subscriptionId: string; product: ProductId; outcome: "paid" | "failed"; ref: string };
 
 export function signMockWebhook(payload: MockWebhookPayload): { body: string; signature: string } {

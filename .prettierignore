@@ -1,0 +1,5 @@
+node_modules
+.next
+public
+tests/fixtures/pdf
+package-lock.json

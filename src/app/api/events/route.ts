@@ -12,7 +12,11 @@ const schema = z.object({
   path: z.string().max(200).optional().nullable(),
   referrer: z.string().max(300).optional().nullable(),
   utm: z
-    .object({ source: z.string().max(100).nullable().optional(), medium: z.string().max(100).nullable().optional(), campaign: z.string().max(100).nullable().optional() })
+    .object({
+      source: z.string().max(100).nullable().optional(),
+      medium: z.string().max(100).nullable().optional(),
+      campaign: z.string().max(100).nullable().optional(),
+    })
     .optional(),
   props: z.record(z.string().max(40), primitive).optional(),
 });

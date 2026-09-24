@@ -12,7 +12,10 @@ const ROWS = [
 export function ProductPreview() {
   return (
     <figure className="relative" aria-label="Aperçu illustratif de Relevéo avec des données fictives">
-      <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-brand-200/60 via-transparent to-emerald-200/50 blur-2xl dark:from-brand-700/30 dark:to-emerald-700/20" aria-hidden />
+      <div
+        className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-brand-200/60 via-transparent to-emerald-200/50 blur-2xl dark:from-brand-700/30 dark:to-emerald-700/20"
+        aria-hidden
+      />
       <div className="surface overflow-hidden shadow-[var(--shadow-lift)]">
         <div className="flex items-center justify-between gap-3 border-b border-[var(--border)] px-4 py-3">
           <div className="flex min-w-0 items-center gap-2 text-sm font-semibold">
@@ -34,9 +37,15 @@ export function ProductPreview() {
         <table className="w-full text-left text-[13px]">
           <thead className="bg-[var(--bg-subtle)] text-xs text-subtle">
             <tr>
-              <th scope="col" className="px-4 py-2 font-medium">Date</th>
-              <th scope="col" className="px-2 py-2 font-medium">Libellé</th>
-              <th scope="col" className="px-4 py-2 text-right font-medium">Montant</th>
+              <th scope="col" className="px-4 py-2 font-medium">
+                Date
+              </th>
+              <th scope="col" className="px-2 py-2 font-medium">
+                Libellé
+              </th>
+              <th scope="col" className="px-4 py-2 text-right font-medium">
+                Montant
+              </th>
             </tr>
           </thead>
           <tbody className="divide-y divide-[var(--border)]">
@@ -44,14 +53,20 @@ export function ProductPreview() {
               <tr key={r.l}>
                 <td className="tabular whitespace-nowrap px-4 py-2 text-muted">{r.d}</td>
                 <td className="max-w-0 truncate px-2 py-2">{r.l}</td>
-                <td className={`tabular whitespace-nowrap px-4 py-2 text-right font-medium ${r.a.startsWith("+") ? "text-emerald-700 dark:text-emerald-400" : ""}`}>{r.a}</td>
+                <td
+                  className={`tabular whitespace-nowrap px-4 py-2 text-right font-medium ${r.a.startsWith("+") ? "text-emerald-700 dark:text-emerald-400" : ""}`}
+                >
+                  {r.a}
+                </td>
               </tr>
             ))}
           </tbody>
         </table>
         <div className="flex flex-wrap items-center gap-2 border-t border-[var(--border)] px-4 py-3">
           {["Excel", "CSV", "OFX", "QIF", "Écritures"].map((f) => (
-            <span key={f} className="rounded-lg border border-[var(--border)] px-2.5 py-1 text-xs font-medium text-muted">{f}</span>
+            <span key={f} className="rounded-lg border border-[var(--border)] px-2.5 py-1 text-xs font-medium text-muted">
+              {f}
+            </span>
           ))}
         </div>
       </div>

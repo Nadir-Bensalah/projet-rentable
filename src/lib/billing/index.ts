@@ -77,7 +77,7 @@ export interface AccountState {
 }
 
 export async function accountState(userId: string, db: Pick<PoolClient, "query"> | null = null): Promise<AccountState> {
-  const run = async <T,>(sql: string, params: unknown[]): Promise<T[]> =>
+  const run = async <T>(sql: string, params: unknown[]): Promise<T[]> =>
     db ? ((await db.query(sql, params)).rows as T[]) : ((await query(sql, params)) as T[]);
   const period = currentPeriod();
   const sub = await currentSubscription(userId, db);
@@ -153,10 +153,11 @@ export async function consumePages(input: ConsumeInput): Promise<{ charged: numb
       );
     }
     const period = state.period;
-    const existing = await db.query(
-      `SELECT id FROM usage_events WHERE user_id = $1 AND document_hash = $2 AND period = $3`,
-      [input.userId, input.documentHash, period],
-    );
+    const existing = await db.query(`SELECT id FROM usage_events WHERE user_id = $1 AND document_hash = $2 AND period = $3`, [
+      input.userId,
+      input.documentHash,
+      period,
+    ]);
     if (existing.rows.length) return { charged: 0, alreadyPaid: true, email: user.email };
 
     const fromAllowance = Math.min(input.pages, state.allowanceRemaining);
@@ -187,7 +188,17 @@ export async function consumePages(input: ConsumeInput): Promise<{ charged: numb
     await db.query(
       `INSERT INTO usage_events (user_id, period, pages, from_allowance, from_credits, document_hash, format, bank_id, reconciled)
        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)`,
-      [input.userId, period, input.pages, fromAllowance, fromCredits, input.documentHash, input.format, input.bankId ?? null, input.reconciled ?? null],
+      [
+        input.userId,
+        period,
+        input.pages,
+        fromAllowance,
+        fromCredits,
+        input.documentHash,
+        input.format,
+        input.bankId ?? null,
+        input.reconciled ?? null,
+      ],
     );
     return { charged: input.pages, alreadyPaid: false, email: user.email };
   });
@@ -296,9 +307,19 @@ async function applyEvent(db: PoolClient, providerName: string, ev: BillingEvent
       if (inserted.rows.length && granted) {
         const expires = new Date(Date.now() + PACK.validityMonths * 30.5 * 86400_000);
         emails.push(() =>
-          sendEmail("pack_purchased", user.email, { pages: PACK.pages, expires: frDate(expires)!, appUrl: absoluteUrl("/convertir") }, { userId: user.id, dedupeKey: `pack:${providerName}:${ev.orderId}` }),
+          sendEmail(
+            "pack_purchased",
+            user.email,
+            { pages: PACK.pages, expires: frDate(expires)!, appUrl: absoluteUrl("/convertir") },
+            { userId: user.id, dedupeKey: `pack:${providerName}:${ev.orderId}` },
+          ),
         );
-        emails.push(() => trackServer("purchase_completed", { userId: user.id, props: { product: "pack", amount: ev.amount, currency: ev.currency, provider: providerName } }));
+        emails.push(() =>
+          trackServer("purchase_completed", {
+            userId: user.id,
+            props: { product: "pack", amount: ev.amount, currency: ev.currency, provider: providerName },
+          }),
+        );
       }
       return;
     }
@@ -321,19 +342,43 @@ async function applyEvent(db: PoolClient, providerName: string, ev: BillingEvent
            cancel_at_period_end = EXCLUDED.cancel_at_period_end,
            portal_url = COALESCE(EXCLUDED.portal_url, subscriptions.portal_url),
            updated_at = now()`,
-        [user.id, providerName, ev.subscriptionId, ev.customerId ?? null, ev.plan, ev.interval, ev.status, ev.currentPeriodEnd ?? null, ev.cancelAtPeriodEnd, ev.portalUrl ?? null],
+        [
+          user.id,
+          providerName,
+          ev.subscriptionId,
+          ev.customerId ?? null,
+          ev.plan,
+          ev.interval,
+          ev.status,
+          ev.currentPeriodEnd ?? null,
+          ev.cancelAtPeriodEnd,
+          ev.portalUrl ?? null,
+        ],
       );
       const planName = PLANS[ev.plan].name;
       if (!before && ev.status === "active") {
         emails.push(() =>
-          sendEmail("subscription_started", user.email, { planName, pages: PLANS[ev.plan].monthlyPages, appUrl: absoluteUrl("/convertir") }, { userId: user.id, dedupeKey: `sub_started:${providerName}:${ev.subscriptionId}` }),
+          sendEmail(
+            "subscription_started",
+            user.email,
+            { planName, pages: PLANS[ev.plan].monthlyPages, appUrl: absoluteUrl("/convertir") },
+            { userId: user.id, dedupeKey: `sub_started:${providerName}:${ev.subscriptionId}` },
+          ),
         );
-        emails.push(() => trackServer("subscription_started", { userId: user.id, props: { plan: ev.plan, interval: ev.interval, provider: providerName } }));
+        emails.push(() =>
+          trackServer("subscription_started", { userId: user.id, props: { plan: ev.plan, interval: ev.interval, provider: providerName } }),
+        );
       }
-      const nowCanceling = (ev.cancelAtPeriodEnd || ev.status === "canceled") && !(before?.cancel_at_period_end || before?.status === "canceled");
+      const nowCanceling =
+        (ev.cancelAtPeriodEnd || ev.status === "canceled") && !(before?.cancel_at_period_end || before?.status === "canceled");
       if (before && nowCanceling) {
         emails.push(() =>
-          sendEmail("subscription_canceled", user.email, { planName, endDate: frDate(ev.currentPeriodEnd), billingUrl: absoluteUrl("/compte/abonnement") }, { userId: user.id, dedupeKey: `sub_canceled:${providerName}:${ev.subscriptionId}:${ev.currentPeriodEnd?.toISOString() ?? ""}` }),
+          sendEmail(
+            "subscription_canceled",
+            user.email,
+            { planName, endDate: frDate(ev.currentPeriodEnd), billingUrl: absoluteUrl("/compte/abonnement") },
+            { userId: user.id, dedupeKey: `sub_canceled:${providerName}:${ev.subscriptionId}:${ev.currentPeriodEnd?.toISOString() ?? ""}` },
+          ),
         );
         emails.push(() => trackServer("subscription_canceled", { userId: user.id, props: { plan: ev.plan, provider: providerName } }));
       }
@@ -343,7 +388,10 @@ async function applyEvent(db: PoolClient, providerName: string, ev: BillingEvent
       const user = await resolveUser(db, ev.userId, providerName, ev.subscriptionId);
       if (!user) throw new Error(`subscription payment for unknown subscription ${ev.subscriptionId}`);
       const sub = (
-        await db.query(`SELECT plan, interval FROM subscriptions WHERE provider = $1 AND provider_subscription_id = $2`, [providerName, ev.subscriptionId])
+        await db.query(`SELECT plan, interval FROM subscriptions WHERE provider = $1 AND provider_subscription_id = $2`, [
+          providerName,
+          ev.subscriptionId,
+        ])
       ).rows[0] as { plan: "pro" | "business"; interval: "month" | "year" } | undefined;
       const product = ev.product ?? (sub ? (`${sub.plan}_${sub.interval === "year" ? "yearly" : "monthly"}` as const) : "subscription");
       await db.query(
@@ -359,7 +407,12 @@ async function applyEvent(db: PoolClient, providerName: string, ev: BillingEvent
         );
         const planName = sub ? PLANS[sub.plan].name : "Relevéo";
         emails.push(() =>
-          sendEmail("payment_failed", user.email, { planName, billingUrl: absoluteUrl("/compte/abonnement") }, { userId: user.id, dedupeKey: `payment_failed:${providerName}:${ev.orderId}` }),
+          sendEmail(
+            "payment_failed",
+            user.email,
+            { planName, billingUrl: absoluteUrl("/compte/abonnement") },
+            { userId: user.id, dedupeKey: `payment_failed:${providerName}:${ev.orderId}` },
+          ),
         );
         emails.push(() => trackServer("payment_failed", { userId: user.id, props: { provider: providerName } }));
       } else {
@@ -367,21 +420,28 @@ async function applyEvent(db: PoolClient, providerName: string, ev: BillingEvent
           `UPDATE subscriptions SET status = 'active', updated_at = now() WHERE provider = $1 AND provider_subscription_id = $2 AND status = 'past_due'`,
           [providerName, ev.subscriptionId],
         );
-        emails.push(() => trackServer("payment_succeeded", { userId: user.id, props: { amount: ev.amount, currency: ev.currency, product, provider: providerName } }));
+        emails.push(() =>
+          trackServer("payment_succeeded", {
+            userId: user.id,
+            props: { amount: ev.amount, currency: ev.currency, product, provider: providerName },
+          }),
+        );
       }
       return;
     }
     case "order.refunded": {
       if (!ev.orderId) return;
       const order = (
-        await db.query(
-          `UPDATE orders SET status = 'refunded' WHERE provider = $1 AND provider_order_id = $2 RETURNING user_id, kind`,
-          [providerName, ev.orderId],
-        )
+        await db.query(`UPDATE orders SET status = 'refunded' WHERE provider = $1 AND provider_order_id = $2 RETURNING user_id, kind`, [
+          providerName,
+          ev.orderId,
+        ])
       ).rows[0] as { user_id: string; kind: string } | undefined;
       if (order?.kind === "pack") {
         // Remove the unused part of the refunded pack.
-        await db.query(`UPDATE credit_grants SET remaining = 0 WHERE source = 'pack' AND reference = $1`, [`${providerName}:${ev.orderId}`]);
+        await db.query(`UPDATE credit_grants SET remaining = 0 WHERE source = 'pack' AND reference = $1`, [
+          `${providerName}:${ev.orderId}`,
+        ]);
       }
       return;
     }

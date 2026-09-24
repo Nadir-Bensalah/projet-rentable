@@ -15,7 +15,9 @@ export default function ConvertPage() {
     <div className="mx-auto max-w-6xl px-4 pb-10 pt-8 sm:px-6 sm:pt-12">
       <div className="mb-8 max-w-3xl">
         <h1 className="text-balance text-3xl font-bold tracking-tight sm:text-4xl">Convertir un relevé bancaire PDF</h1>
-        <p className="mt-3 text-pretty text-lg text-muted">Le fichier est lu par votre navigateur : il n&apos;est jamais envoyé. Chaque relevé est contrôlé au centime avant l&apos;export.</p>
+        <p className="mt-3 text-pretty text-lg text-muted">
+          Le fichier est lu par votre navigateur : il n&apos;est jamais envoyé. Chaque relevé est contrôlé au centime avant l&apos;export.
+        </p>
       </div>
       <Suspense
         fallback={

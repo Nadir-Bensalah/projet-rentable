@@ -119,10 +119,13 @@ export async function sendEmail<T extends TemplateName>(
       // Release the dedupe key so a later retry can send it.
       await query(`DELETE FROM email_log WHERE dedupe_key = $1`, [opts.dedupeKey]).catch(() => {});
     }
-    await query(
-      `INSERT INTO email_log (user_id, to_address, template, provider, status, error) VALUES ($1, $2, $3, $4, 'failed', $5)`,
-      [opts.userId ?? null, to, name, provider.name, error],
-    ).catch(() => {});
+    await query(`INSERT INTO email_log (user_id, to_address, template, provider, status, error) VALUES ($1, $2, $3, $4, 'failed', $5)`, [
+      opts.userId ?? null,
+      to,
+      name,
+      provider.name,
+      error,
+    ]).catch(() => {});
     return false;
   }
 }

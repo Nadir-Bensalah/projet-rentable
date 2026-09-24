@@ -21,8 +21,7 @@ interface LayoutOptions {
 
 /** Table-based, inline-styled layout that renders in Gmail, Outlook, Apple Mail and on mobile. */
 function layout(o: LayoutOptions): { html: string; text: string } {
-  const p = (t: string) =>
-    `<p style="margin:0 0 16px;font-size:16px;line-height:1.6;color:#1f2937;">${esc(t)}</p>`;
+  const p = (t: string) => `<p style="margin:0 0 16px;font-size:16px;line-height:1.6;color:#1f2937;">${esc(t)}</p>`;
   const button = o.cta
     ? `<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:8px 0 24px;"><tr><td bgcolor="#1d4ed8" style="border-radius:10px;">
 <a href="${esc(o.cta.url)}" style="display:inline-block;padding:14px 24px;font-size:16px;font-weight:600;color:#ffffff;text-decoration:none;border-radius:10px;">${esc(o.cta.label)}</a>

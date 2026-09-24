@@ -7,9 +7,7 @@ import type { Cell, Line, PageText, TextItem } from "./types";
 export function buildLines(pages: PageText[]): Line[] {
   const lines: Line[] = [];
   for (const page of pages) {
-    const items = page.items
-      .filter((it) => it.str.trim().length > 0 && it.height > 0)
-      .sort((a, b) => a.y - b.y || a.x - b.x);
+    const items = page.items.filter((it) => it.str.trim().length > 0 && it.height > 0).sort((a, b) => a.y - b.y || a.x - b.x);
 
     const rows: TextItem[][] = [];
     for (const it of items) {
@@ -57,10 +55,5 @@ export function buildLines(pages: PageText[]): Line[] {
 
 /** Lower-case, accent-free, single-spaced text for keyword matching. */
 export function normaliseText(s: string) {
-  return s
-    .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
-    .toLowerCase()
-    .replace(/\s+/g, " ")
-    .trim();
+  return s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/\s+/g, " ").trim();
 }

@@ -12,18 +12,47 @@ export interface RawDate {
 }
 
 const MONTHS: Record<string, number> = {
-  janv: 1, janvier: 1, jan: 1, january: 1,
-  fevr: 2, fevrier: 2, fev: 2, feb: 2, february: 2,
-  mars: 3, mar: 3, march: 3,
-  avr: 4, avril: 4, apr: 4, april: 4,
-  mai: 5, may: 5,
-  juin: 6, jun: 6, june: 6,
-  juil: 7, juillet: 7, jul: 7, july: 7,
-  aout: 8, aug: 8, august: 8,
-  sept: 9, septembre: 9, sep: 9, september: 9,
-  oct: 10, octobre: 10, october: 10,
-  nov: 11, novembre: 11, november: 11,
-  dec: 12, decembre: 12, december: 12,
+  janv: 1,
+  janvier: 1,
+  jan: 1,
+  january: 1,
+  fevr: 2,
+  fevrier: 2,
+  fev: 2,
+  feb: 2,
+  february: 2,
+  mars: 3,
+  mar: 3,
+  march: 3,
+  avr: 4,
+  avril: 4,
+  apr: 4,
+  april: 4,
+  mai: 5,
+  may: 5,
+  juin: 6,
+  jun: 6,
+  june: 6,
+  juil: 7,
+  juillet: 7,
+  jul: 7,
+  july: 7,
+  aout: 8,
+  aug: 8,
+  august: 8,
+  sept: 9,
+  septembre: 9,
+  sep: 9,
+  september: 9,
+  oct: 10,
+  octobre: 10,
+  october: 10,
+  nov: 11,
+  novembre: 11,
+  november: 11,
+  dec: 12,
+  decembre: 12,
+  december: 12,
 };
 
 function stripAccents(s: string) {
@@ -131,11 +160,7 @@ export function dayMonth(d: RawDate, order: DateOrder): { day: number; month: nu
  * Resolves a raw date into ISO, inferring the missing year from the statement period.
  * If the statement spans December → January, months after the end month belong to the previous year.
  */
-export function resolveDate(
-  d: RawDate,
-  order: DateOrder,
-  period?: { start?: string; end?: string },
-): string | null {
+export function resolveDate(d: RawDate, order: DateOrder, period?: { start?: string; end?: string }): string | null {
   const { day, month } = dayMonth(d, order);
   if (d.year) return toISO(d.year, month, day);
   const end = period?.end ?? period?.start;

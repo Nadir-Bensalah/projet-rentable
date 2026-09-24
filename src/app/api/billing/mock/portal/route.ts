@@ -22,7 +22,13 @@ export const POST = handler(async (req) => {
   if (!data) throw new HttpError(400, "Session expirée.", "invalid_token");
   const user = await getCurrentUser();
   if (!user || user.id !== data.userId) throw new HttpError(403, "Accès refusé.", "forbidden");
-  const sub = await queryOne<{ plan: string; interval: string; status: string; current_period_end: Date | null; cancel_at_period_end: boolean }>(
+  const sub = await queryOne<{
+    plan: string;
+    interval: string;
+    status: string;
+    current_period_end: Date | null;
+    cancel_at_period_end: boolean;
+  }>(
     `SELECT plan, interval, status, current_period_end, cancel_at_period_end FROM subscriptions WHERE provider = 'mock' AND provider_subscription_id = $1 AND user_id = $2`,
     [data.subscriptionId, user.id],
   );
@@ -44,14 +50,26 @@ export const POST = handler(async (req) => {
     case "renew": {
       const next = new Date(Math.max(periodEnd.getTime(), Date.now()) + (sub.interval === "year" ? 365 : 30) * 86400_000);
       await emit({ kind: "subscription.renewal", ...base, outcome: "paid", ref: randomToken(8) });
-      await emit({ kind: "subscription.change", ...base, status: "active", cancelAtPeriodEnd: sub.cancel_at_period_end, periodEnd: next.toISOString() });
+      await emit({
+        kind: "subscription.change",
+        ...base,
+        status: "active",
+        cancelAtPeriodEnd: sub.cancel_at_period_end,
+        periodEnd: next.toISOString(),
+      });
       break;
     }
     case "fail_renewal":
       await emit({ kind: "subscription.renewal", ...base, outcome: "failed", ref: randomToken(8) });
       break;
     case "expire":
-      await emit({ kind: "subscription.change", ...base, status: "expired", cancelAtPeriodEnd: false, periodEnd: new Date().toISOString() });
+      await emit({
+        kind: "subscription.change",
+        ...base,
+        status: "expired",
+        cancelAtPeriodEnd: false,
+        periodEnd: new Date().toISOString(),
+      });
       break;
   }
   return json({ ok: true, redirect: data.returnUrl });

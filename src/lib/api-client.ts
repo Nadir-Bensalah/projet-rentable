@@ -27,7 +27,10 @@ export async function api<T = Record<string, unknown>>(url: string, init: { meth
     return {
       ok: false,
       status: 0,
-      data: { error: "Connexion impossible. Vérifiez votre accès à Internet et réessayez.", code: "network" } as T & { error?: string; code?: string },
+      data: { error: "Connexion impossible. Vérifiez votre accès à Internet et réessayez.", code: "network" } as T & {
+        error?: string;
+        code?: string;
+      },
     };
   }
 }
