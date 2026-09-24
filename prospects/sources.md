@@ -6,24 +6,28 @@ Toutes les URLs sont reprises fiche par fiche dans `prospects.csv` (colonnes `fa
 
 | Valeur | Nombre | % |
 |---|---:|---:|
-| presse | 161 | 51.8 % |
-| site officiel | 94 | 30.2 % |
-| avis store | 14 | 4.5 % |
-| annuaire | 7 | 2.3 % |
-| offre d'emploi | 5 | 1.6 % |
-| communiqué | 3 | 1.0 % |
+| presse | 174 | 50.3 % |
+| site officiel | 104 | 30.1 % |
+| avis store | 19 | 5.5 % |
+| annuaire | 7 | 2.0 % |
+| offre d'emploi | 5 | 1.4 % |
+| presse spécialisée | 4 | 1.2 % |
+| communiqué | 3 | 0.9 % |
+| store | 3 | 0.9 % |
 | plateforme de réservation | 2 | 0.6 % |
 | avis store (agrégateur) | 2 | 0.6 % |
 | signalement de pannes | 2 | 0.6 % |
-| store | 2 | 0.6 % |
-| presse spécialisée | 2 | 0.6 % |
+| annuaire franchise | 2 | 0.6 % |
 | plateforme | 1 | 0.3 % |
 | presse (interview, stade de 14 000 places dont 2 000 places VIP) | 1 | 0.3 % |
 | site officiel / plateformes | 1 | 0.3 % |
 | forum avis app | 1 | 0.3 % |
 | agrégateur d'avis | 1 | 0.3 % |
+| plateforme tierce | 1 | 0.3 % |
 | avis clients | 1 | 0.3 % |
 | App Store | 1 | 0.3 % |
+| communiqué conseil M&A | 1 | 0.3 % |
+| presse franchise | 1 | 0.3 % |
 | site prestataire | 1 | 0.3 % |
 | réseau social officiel | 1 | 0.3 % |
 | site officiel (investisseur) | 1 | 0.3 % |
@@ -32,40 +36,40 @@ Toutes les URLs sont reprises fiche par fiche dans `prospects.csv` (colonnes `fa
 | forum d'avis d'apps | 1 | 0.3 % |
 | suivi de pannes | 1 | 0.3 % |
 | site revendeur | 1 | 0.3 % |
-| annuaire franchise | 1 | 0.3 % |
 | agrégateur d'avis store | 1 | 0.3 % |
 
 ### Domaines les plus cités (faits)
 
 | Valeur | Nombre | % |
 |---|---:|---:|
-| lejournaldesentreprises.com | 57 | 18.3 % |
-| apps.apple.com | 13 | 4.2 % |
-| journalauto.com | 8 | 2.6 % |
-| negoce.zepros.fr | 6 | 1.9 % |
-| franchise-magazine.com | 6 | 1.9 % |
-| lexpress-franchise.com | 6 | 1.9 % |
-| justuseapp.com | 4 | 1.3 % |
-| annuaire-entreprises.data.gouv.fr | 4 | 1.3 % |
-| totalbug.com | 4 | 1.3 % |
-| services-proprete.fr | 4 | 1.3 % |
-| rayon-boissons.com | 3 | 1.0 % |
-| biere-actu.fr | 3 | 1.0 % |
-| vitisphere.com | 3 | 1.0 % |
-| sportbusiness.club | 3 | 1.0 % |
-| gazette-du-midi.fr | 3 | 1.0 % |
-| groupe-grim.com | 3 | 1.0 % |
-| hellowork.com | 3 | 1.0 % |
+| lejournaldesentreprises.com | 61 | 17.6 % |
+| apps.apple.com | 18 | 5.2 % |
+| journalauto.com | 8 | 2.3 % |
+| negoce.zepros.fr | 6 | 1.7 % |
+| franchise-magazine.com | 6 | 1.7 % |
+| lexpress-franchise.com | 6 | 1.7 % |
+| sportbusiness.club | 4 | 1.2 % |
+| justuseapp.com | 4 | 1.2 % |
+| annuaire-entreprises.data.gouv.fr | 4 | 1.2 % |
+| totalbug.com | 4 | 1.2 % |
+| services-proprete.fr | 4 | 1.2 % |
+| rayon-boissons.com | 3 | 0.9 % |
+| biere-actu.fr | 3 | 0.9 % |
+| vitisphere.com | 3 | 0.9 % |
+| gazette-du-midi.fr | 3 | 0.9 % |
+| play.google.com | 3 | 0.9 % |
+| groupe-grim.com | 3 | 0.9 % |
+| hellowork.com | 3 | 0.9 % |
 | barraine-immo.com | 2 | 0.6 % |
 | provenceactu.fr | 2 | 0.6 % |
 | aucoeurduchr.fr | 2 | 0.6 % |
 | fusacq.com | 2 | 0.6 % |
 | lemoniteur.fr | 2 | 0.6 % |
+| informateurjudiciaire.fr | 2 | 0.6 % |
 | rugbypass.com | 2 | 0.6 % |
 | forums.justuseapp.com | 2 | 0.6 % |
 | le-spot-brasseriecastelain.com | 2 | 0.6 % |
 | bretagne-economique.com | 2 | 0.6 % |
-| play.google.com | 2 | 0.6 % |
 | ac-franchise.com | 2 | 0.6 % |
 | bleucitron.net | 2 | 0.6 % |
 | actusnews.com | 2 | 0.6 % |
@@ -74,6 +78,7 @@ Toutes les URLs sont reprises fiche par fiche dans `prospects.csv` (colonnes `fa
 | lhotellerie-restauration.fr | 2 | 0.6 % |
 | meuble-info.fr | 2 | 0.6 % |
 | nanterre92.com | 2 | 0.6 % |
+| observatoiredelafranchise.fr | 2 | 0.6 % |
 | lofficieldestransporteurs.fr | 2 | 0.6 % |
 | monky.fr | 2 | 0.6 % |
 | choisir-sa-franchise.com | 2 | 0.6 % |
@@ -93,6 +98,10 @@ Toutes les URLs sont reprises fiche par fiche dans `prospects.csv` (colonnes `fa
 | presse.bpifrance.fr | 1 | 0.3 % |
 | brasserie-bretagne.fr | 1 | 0.3 % |
 | maltsethoublons.com | 1 | 0.3 % |
+| 10minhotel.com | 1 | 0.3 % |
+| gestion-camping.com | 1 | 0.3 % |
+| ot-campings.com | 1 | 0.3 % |
+| vacances-seasonova.com | 1 | 0.3 % |
 | viou-gouron.fr | 1 | 0.3 % |
 | goudard-patot.com | 1 | 0.3 % |
 | groupe-valrim.com | 1 | 0.3 % |
@@ -100,6 +109,7 @@ Toutes les URLs sont reprises fiche par fiche dans `prospects.csv` (colonnes `fa
 | kermarrec-habitation.fr | 1 | 0.3 % |
 | sarremejean.fr | 1 | 0.3 % |
 | vins-viallet.com | 1 | 0.3 % |
+| groupegendreau.com | 1 | 0.3 % |
 | racing92.fr | 1 | 0.3 % |
 | debardautomobiles.com | 1 | 0.3 % |
 | compta-online.com | 1 | 0.3 % |
@@ -122,6 +132,8 @@ Toutes les URLs sont reprises fiche par fiche dans `prospects.csv` (colonnes `fa
 | colmar.maxi-flash.com | 1 | 0.3 % |
 | moquet-jardins.com | 1 | 0.3 % |
 | adi-incendie.fr | 1 | 0.3 % |
+| pozzo-immobilier.fr | 1 | 0.3 % |
+| pozzo-immobilier.immofy.fr | 1 | 0.3 % |
 | groupesavarieau.com | 1 | 0.3 % |
 | savarieau-tvi.com | 1 | 0.3 % |
 | j2rauto.com | 1 | 0.3 % |
@@ -130,11 +142,14 @@ Toutes les URLs sont reprises fiche par fiche dans `prospects.csv` (colonnes `fa
 | reserving.com | 1 | 0.3 % |
 | tendancehotellerie.fr | 1 | 0.3 % |
 | shop.quadra-terra.com | 1 | 0.3 % |
+| anybuddyapp.com | 1 | 0.3 % |
 | batineo-groupe.com | 1 | 0.3 % |
 | journaldericduval.fr | 1 | 0.3 % |
 | toute-la-franchise.com | 1 | 0.3 % |
 | exteco-epinal-nancy.fr | 1 | 0.3 % |
 | ed-trans.com | 1 | 0.3 % |
+| altoneo-hello.com | 1 | 0.3 % |
+| altoneo.com | 1 | 0.3 % |
 | green-opinion.com | 1 | 0.3 % |
 | pelraslegend.fr | 1 | 0.3 % |
 | ventespriveespelras.fr | 1 | 0.3 % |
@@ -148,6 +163,9 @@ Toutes les URLs sont reprises fiche par fiche dans `prospects.csv` (colonnes `fa
 | bobet-materiel.com | 1 | 0.3 % |
 | journaldespalaces.com | 1 | 0.3 % |
 | hotel-verlaine-cannes.com | 1 | 0.3 % |
+| thecfigroup.com | 1 | 0.3 % |
+| chlorodis.fr | 1 | 0.3 % |
+| agrodistribution.fr | 1 | 0.3 % |
 | grim-occasion.com | 1 | 0.3 % |
 | fordgroupegrim.fr | 1 | 0.3 % |
 | quincaillerie-angles.fr | 1 | 0.3 % |
@@ -156,13 +174,14 @@ Toutes les URLs sont reprises fiche par fiche dans `prospects.csv` (colonnes `fa
 | courrierdumeuble.fr | 1 | 0.3 % |
 | shop.story.fr | 1 | 0.3 % |
 | lmcservices.fr | 1 | 0.3 % |
+| lyonpeople.com | 1 | 0.3 % |
+| la-brigade.fr | 1 | 0.3 % |
 | vie-economique.com | 1 | 0.3 % |
 | transports-darrieussecq.fr | 1 | 0.3 % |
 | niortinfo.media | 1 | 0.3 % |
 | vieetveranda-mellac.fr | 1 | 0.3 % |
 | fr.vignelaure.com | 1 | 0.3 % |
 | pagesjaunes.fr | 1 | 0.3 % |
-| informateurjudiciaire.fr | 1 | 0.3 % |
 | maventesolidaire.fr | 1 | 0.3 % |
 | chocodic.com | 1 | 0.3 % |
 | lejournaltoulousain.fr | 1 | 0.3 % |
@@ -184,6 +203,9 @@ Toutes les URLs sont reprises fiche par fiche dans `prospects.csv` (colonnes `fa
 | brasseriepietra.corsica | 1 | 0.3 % |
 | burotikgroup.com | 1 | 0.3 % |
 | burotikr.fr | 1 | 0.3 % |
+| francebleu.fr | 1 | 0.3 % |
+| jaimeradio.fr | 1 | 0.3 % |
+| latrinitaine.com | 1 | 0.3 % |
 | sarevi.com | 1 | 0.3 % |
 | revmat-tvi.com | 1 | 0.3 % |
 | largus.fr | 1 | 0.3 % |
@@ -199,6 +221,8 @@ Toutes les URLs sont reprises fiche par fiche dans `prospects.csv` (colonnes `fa
 | senfas.com | 1 | 0.3 % |
 | lesinfosdupaysgallo.com | 1 | 0.3 % |
 | metalperformances.com | 1 | 0.3 % |
+| clermontinfos63.fr | 1 | 0.3 % |
+| info.fr | 1 | 0.3 % |
 | distillerie-warenghem.bzh | 1 | 0.3 % |
 | boutique.breizh-odyssee.bzh | 1 | 0.3 % |
 | franchise-concepts.fr | 1 | 0.3 % |
@@ -206,6 +230,7 @@ Toutes les URLs sont reprises fiche par fiche dans `prospects.csv` (colonnes `fa
 | transports-gauthier.fr | 1 | 0.3 % |
 | groupe-jbs.fr | 1 | 0.3 % |
 | bonyauto-mobile.com | 1 | 0.3 % |
+| capitole-taxi.com | 1 | 0.3 % |
 | worldsapps.com | 1 | 0.3 % |
 | franchise.elephantbleu.com | 1 | 0.3 % |
 | elephantbleu.com | 1 | 0.3 % |
@@ -214,174 +239,192 @@ Toutes les URLs sont reprises fiche par fiche dans `prospects.csv` (colonnes `fa
 
 | Valeur | Nombre | % |
 |---|---:|---:|
-| volkswagen.fr | 2 | 2.3 % |
-| barraine-immo.com | 1 | 1.1 % |
-| maison-sarroche.com | 1 | 1.1 % |
-| picque-caillou.com | 1 | 1.1 % |
-| eurobrillance.com | 1 | 1.1 % |
-| domaine-lamballe.bzh | 1 | 1.1 % |
-| sneg-proprete.com | 1 | 1.1 % |
-| brasserie-bretagne.fr | 1 | 1.1 % |
-| brasserie-melusine.com | 1 | 1.1 % |
-| valrim-immobilier.com | 1 | 1.1 % |
-| kermarrec-habitation.fr | 1 | 1.1 % |
-| sarremejean.fr | 1 | 1.1 % |
-| crepetouch.com | 1 | 1.1 % |
-| vins-viallet.com | 1 | 1.1 % |
-| top14.lnr.fr | 1 | 1.1 % |
-| debardautomobiles.com | 1 | 1.1 % |
-| fidsud.fr | 1 | 1.1 % |
-| ljhco.fr | 1 | 1.1 % |
-| autothivolle.com | 1 | 1.1 % |
-| supplay.fr | 1 | 1.1 % |
-| bouteau.com | 1 | 1.1 % |
-| brasseriecastelain.com | 1 | 1.1 % |
-| domeos-syndic.net | 1 | 1.1 % |
-| boehli.fr | 1 | 1.1 % |
-| washin.fr | 1 | 1.1 % |
-| daniel-moquet.com | 1 | 1.1 % |
-| adi-incendie.fr | 1 | 1.1 % |
-| groupesavarieau.com | 1 | 1.1 % |
-| hetzi.fr | 1 | 1.1 % |
-| beers-corner.fr | 1 | 1.1 % |
-| nsi-groupe.com | 1 | 1.1 % |
-| franchise.quadra-terra.com | 1 | 1.1 % |
-| maisons-demeurance.com | 1 | 1.1 % |
-| exteco.fr | 1 | 1.1 % |
-| bleucitron.net | 1 | 1.1 % |
-| ed-trans.com | 1 | 1.1 % |
-| sergic.com | 1 | 1.1 % |
-| assurance-mutuelle-poitiers.fr | 1 | 1.1 % |
-| partenaire.bmw.fr | 1 | 1.1 % |
-| gifas.fr | 1 | 1.1 % |
-| jacksburgers.fr | 1 | 1.1 % |
-| duranet.fr | 1 | 1.1 % |
-| clemence-antonin.com | 1 | 1.1 % |
-| sarreguemines.fr | 1 | 1.1 % |
-| eurochef.fr | 1 | 1.1 % |
-| bobet-materiel.com | 1 | 1.1 % |
-| hotel-verlaine-cannes.com | 1 | 1.1 % |
-| groupe-grim.com | 1 | 1.1 % |
-| facebook.com | 1 | 1.1 % |
-| sfg.fr | 1 | 1.1 % |
-| gelvar.gral-gie.com | 1 | 1.1 % |
-| literie123sommeil.fr | 1 | 1.1 % |
-| nanterre92.com | 1 | 1.1 % |
-| shop.story.fr | 1 | 1.1 % |
-| lmcservices.fr | 1 | 1.1 % |
-| transports-darrieussecq.fr | 1 | 1.1 % |
-| monky.fr | 1 | 1.1 % |
-| vie-veranda.com | 1 | 1.1 % |
-| fr.vignelaure.com | 1 | 1.1 % |
-| ville-coueron.fr | 1 | 1.1 % |
-| chocodic.com | 1 | 1.1 % |
-| leshallesdelatransition.com | 1 | 1.1 % |
-| awen-services.fr | 1 | 1.1 % |
-| stellaetsuzie.com | 1 | 1.1 % |
-| deltafluid.fr | 1 | 1.1 % |
-| maviflex.com | 1 | 1.1 % |
-| assas-hotels.com | 1 | 1.1 % |
-| choukran.fr | 1 | 1.1 % |
-| numeral.fr | 1 | 1.1 % |
-| brasseriepietra.corsica | 1 | 1.1 % |
-| burotikgroup.com | 1 | 1.1 % |
-| keepcool.fr | 1 | 1.1 % |
-| espace.mutualia.fr | 1 | 1.1 % |
-| warsemann.fr | 1 | 1.1 % |
-| paris-taxis.fr | 1 | 1.1 % |
-| mutuellemgc.fr | 1 | 1.1 % |
-| elypse-autos.fr | 1 | 1.1 % |
-| senfas.com | 1 | 1.1 % |
-| metalperformances.com | 1 | 1.1 % |
-| distillerie-warenghem.com | 1 | 1.1 % |
-| artisancrepier.com | 1 | 1.1 % |
-| groupe-kyriel.fr | 1 | 1.1 % |
-| transports-gauthier.fr | 1 | 1.1 % |
-| groupe-jbs.fr | 1 | 1.1 % |
-| domes-sancyartense.fr | 1 | 1.1 % |
-| franchise.elephantbleu.com | 1 | 1.1 % |
+| volkswagen.fr | 2 | 2.1 % |
+| barraine-immo.com | 1 | 1.0 % |
+| maison-sarroche.com | 1 | 1.0 % |
+| picque-caillou.com | 1 | 1.0 % |
+| eurobrillance.com | 1 | 1.0 % |
+| domaine-lamballe.bzh | 1 | 1.0 % |
+| sneg-proprete.com | 1 | 1.0 % |
+| brasserie-bretagne.fr | 1 | 1.0 % |
+| brasserie-melusine.com | 1 | 1.0 % |
+| vacances-seasonova.com | 1 | 1.0 % |
+| valrim-immobilier.com | 1 | 1.0 % |
+| kermarrec-habitation.fr | 1 | 1.0 % |
+| sarremejean.fr | 1 | 1.0 % |
+| crepetouch.com | 1 | 1.0 % |
+| vins-viallet.com | 1 | 1.0 % |
+| groupegendreau.com | 1 | 1.0 % |
+| top14.lnr.fr | 1 | 1.0 % |
+| debardautomobiles.com | 1 | 1.0 % |
+| fidsud.fr | 1 | 1.0 % |
+| ljhco.fr | 1 | 1.0 % |
+| autothivolle.com | 1 | 1.0 % |
+| supplay.fr | 1 | 1.0 % |
+| bouteau.com | 1 | 1.0 % |
+| brasseriecastelain.com | 1 | 1.0 % |
+| domeos-syndic.net | 1 | 1.0 % |
+| boehli.fr | 1 | 1.0 % |
+| washin.fr | 1 | 1.0 % |
+| daniel-moquet.com | 1 | 1.0 % |
+| adi-incendie.fr | 1 | 1.0 % |
+| pozzo-immobilier.fr | 1 | 1.0 % |
+| groupesavarieau.com | 1 | 1.0 % |
+| hetzi.fr | 1 | 1.0 % |
+| beers-corner.fr | 1 | 1.0 % |
+| nsi-groupe.com | 1 | 1.0 % |
+| franchise.quadra-terra.com | 1 | 1.0 % |
+| 4padel.fr | 1 | 1.0 % |
+| maisons-demeurance.com | 1 | 1.0 % |
+| exteco.fr | 1 | 1.0 % |
+| bleucitron.net | 1 | 1.0 % |
+| ed-trans.com | 1 | 1.0 % |
+| altoneo.com | 1 | 1.0 % |
+| sergic.com | 1 | 1.0 % |
+| assurance-mutuelle-poitiers.fr | 1 | 1.0 % |
+| partenaire.bmw.fr | 1 | 1.0 % |
+| gifas.fr | 1 | 1.0 % |
+| jacksburgers.fr | 1 | 1.0 % |
+| duranet.fr | 1 | 1.0 % |
+| clemence-antonin.com | 1 | 1.0 % |
+| sarreguemines.fr | 1 | 1.0 % |
+| eurochef.fr | 1 | 1.0 % |
+| bobet-materiel.com | 1 | 1.0 % |
+| hotel-verlaine-cannes.com | 1 | 1.0 % |
+| cobalys-espacesverts.fr | 1 | 1.0 % |
+| groupe-grim.com | 1 | 1.0 % |
+| facebook.com | 1 | 1.0 % |
+| sfg.fr | 1 | 1.0 % |
+| gelvar.gral-gie.com | 1 | 1.0 % |
+| literie123sommeil.fr | 1 | 1.0 % |
+| nanterre92.com | 1 | 1.0 % |
+| shop.story.fr | 1 | 1.0 % |
+| lmcservices.fr | 1 | 1.0 % |
+| la-brigade.fr | 1 | 1.0 % |
+| transports-darrieussecq.fr | 1 | 1.0 % |
+| monky.fr | 1 | 1.0 % |
+| vie-veranda.com | 1 | 1.0 % |
+| fr.vignelaure.com | 1 | 1.0 % |
+| ville-coueron.fr | 1 | 1.0 % |
+| chocodic.com | 1 | 1.0 % |
+| leshallesdelatransition.com | 1 | 1.0 % |
+| awen-services.fr | 1 | 1.0 % |
+| stellaetsuzie.com | 1 | 1.0 % |
+| deltafluid.fr | 1 | 1.0 % |
+| maviflex.com | 1 | 1.0 % |
+| assas-hotels.com | 1 | 1.0 % |
+| choukran.fr | 1 | 1.0 % |
+| numeral.fr | 1 | 1.0 % |
+| brasseriepietra.corsica | 1 | 1.0 % |
+| burotikgroup.com | 1 | 1.0 % |
+| latrinitaine.com | 1 | 1.0 % |
+| keepcool.fr | 1 | 1.0 % |
+| espace.mutualia.fr | 1 | 1.0 % |
+| warsemann.fr | 1 | 1.0 % |
+| paris-taxis.fr | 1 | 1.0 % |
+| mutuellemgc.fr | 1 | 1.0 % |
+| elypse-autos.fr | 1 | 1.0 % |
+| senfas.com | 1 | 1.0 % |
+| metalperformances.com | 1 | 1.0 % |
+| billetterie.clermontfoot.com | 1 | 1.0 % |
+| distillerie-warenghem.com | 1 | 1.0 % |
+| artisancrepier.com | 1 | 1.0 % |
+| groupe-kyriel.fr | 1 | 1.0 % |
+| transports-gauthier.fr | 1 | 1.0 % |
+| groupe-jbs.fr | 1 | 1.0 % |
+| domes-sancyartense.fr | 1 | 1.0 % |
+| capitole-taxi.com | 1 | 1.0 % |
+| franchise.elephantbleu.com | 1 | 1.0 % |
 
 ### Où les téléphones ont été trouvés
 
 | Valeur | Nombre | % |
 |---|---:|---:|
-| pagesjaunes.fr | 6 | 6.9 % |
-| volkswagen.fr | 2 | 2.3 % |
-| infobel.com | 2 | 2.3 % |
-| barraine-immo.com | 1 | 1.1 % |
-| maison-sarroche.com | 1 | 1.1 % |
-| picque-caillou.com | 1 | 1.1 % |
-| eurobrillance.com | 1 | 1.1 % |
-| domaine-lamballe.bzh | 1 | 1.1 % |
-| sneg-proprete.com | 1 | 1.1 % |
-| brasserie-bretagne.fr | 1 | 1.1 % |
-| brasserie-melusine.com | 1 | 1.1 % |
-| valrim-immobilier.com | 1 | 1.1 % |
-| sarremejean.fr | 1 | 1.1 % |
-| crepetouch.com | 1 | 1.1 % |
-| vins-viallet.com | 1 | 1.1 % |
-| top14.lnr.fr | 1 | 1.1 % |
-| debardautomobiles.com | 1 | 1.1 % |
-| fidsud.fr | 1 | 1.1 % |
-| ljhco.fr | 1 | 1.1 % |
-| autothivolle.com | 1 | 1.1 % |
-| supplay.fr | 1 | 1.1 % |
-| toutfaire.fr | 1 | 1.1 % |
-| annuaire-inverse-france.com | 1 | 1.1 % |
-| domeos-syndic.net | 1 | 1.1 % |
-| boehli.fr | 1 | 1.1 % |
-| washin.fr | 1 | 1.1 % |
-| daniel-moquet.com | 1 | 1.1 % |
-| adi-incendie.fr | 1 | 1.1 % |
-| groupesavarieau.com | 1 | 1.1 % |
-| hetzi.fr | 1 | 1.1 % |
-| beers-corner.fr | 1 | 1.1 % |
-| nsi-groupe.com | 1 | 1.1 % |
-| franchise.quadra-terra.com | 1 | 1.1 % |
-| maisons-demeurance.com | 1 | 1.1 % |
-| exteco.fr | 1 | 1.1 % |
-| ed-trans.com | 1 | 1.1 % |
-| sergic.com | 1 | 1.1 % |
-| assurance-mutuelle-poitiers.fr | 1 | 1.1 % |
-| partenaire.bmw.fr | 1 | 1.1 % |
-| gifas.fr | 1 | 1.1 % |
-| jacksburgers.fr | 1 | 1.1 % |
-| duranet.fr | 1 | 1.1 % |
-| tours.clemence-antonin.com | 1 | 1.1 % |
-| eurochef.fr | 1 | 1.1 % |
-| hotel-verlaine-cannes.com | 1 | 1.1 % |
-| partenaire.mini.fr | 1 | 1.1 % |
-| quincaillerie-angles.fr | 1 | 1.1 % |
-| allbiz.fr | 1 | 1.1 % |
-| gelvar.gral-gie.com | 1 | 1.1 % |
-| nanterre92.com | 1 | 1.1 % |
-| shop.story.fr | 1 | 1.1 % |
-| lmcservices.fr | 1 | 1.1 % |
-| transports-darrieussecq.fr | 1 | 1.1 % |
-| monky.fr | 1 | 1.1 % |
-| vie-veranda.com | 1 | 1.1 % |
-| fr.vignelaure.com | 1 | 1.1 % |
-| ville-coueron.fr | 1 | 1.1 % |
-| chocodic.com | 1 | 1.1 % |
-| awen-services.fr | 1 | 1.1 % |
-| stellaetsuzie.com | 1 | 1.1 % |
-| deltafluid.fr | 1 | 1.1 % |
-| maviflex.com | 1 | 1.1 % |
-| assas-hotels.com | 1 | 1.1 % |
-| numeral.fr | 1 | 1.1 % |
-| brasseriepietra.corsica | 1 | 1.1 % |
-| burotikgroup.com | 1 | 1.1 % |
-| keepcool.fr | 1 | 1.1 % |
-| mutualia.fr | 1 | 1.1 % |
-| warsemann.fr | 1 | 1.1 % |
-| allexi.fr | 1 | 1.1 % |
-| mutuellemgc.fr | 1 | 1.1 % |
-| elypse-autos.fr | 1 | 1.1 % |
-| senfas.com | 1 | 1.1 % |
-| distillerie-warenghem.com | 1 | 1.1 % |
-| artisancrepier.com | 1 | 1.1 % |
-| groupe-kyriel.fr | 1 | 1.1 % |
-| transports-gauthier.fr | 1 | 1.1 % |
-| groupe-jbs.fr | 1 | 1.1 % |
-| domes-sancyartense.fr | 1 | 1.1 % |
-| franchise.elephantbleu.com | 1 | 1.1 % |
+| pagesjaunes.fr | 8 | 8.2 % |
+| volkswagen.fr | 2 | 2.1 % |
+| infobel.com | 2 | 2.1 % |
+| barraine-immo.com | 1 | 1.0 % |
+| maison-sarroche.com | 1 | 1.0 % |
+| picque-caillou.com | 1 | 1.0 % |
+| eurobrillance.com | 1 | 1.0 % |
+| domaine-lamballe.bzh | 1 | 1.0 % |
+| sneg-proprete.com | 1 | 1.0 % |
+| brasserie-bretagne.fr | 1 | 1.0 % |
+| brasserie-melusine.com | 1 | 1.0 % |
+| vacances-seasonova.com | 1 | 1.0 % |
+| valrim-immobilier.com | 1 | 1.0 % |
+| sarremejean.fr | 1 | 1.0 % |
+| crepetouch.com | 1 | 1.0 % |
+| vins-viallet.com | 1 | 1.0 % |
+| groupegendreau.com | 1 | 1.0 % |
+| top14.lnr.fr | 1 | 1.0 % |
+| debardautomobiles.com | 1 | 1.0 % |
+| fidsud.fr | 1 | 1.0 % |
+| ljhco.fr | 1 | 1.0 % |
+| autothivolle.com | 1 | 1.0 % |
+| supplay.fr | 1 | 1.0 % |
+| toutfaire.fr | 1 | 1.0 % |
+| annuaire-inverse-france.com | 1 | 1.0 % |
+| domeos-syndic.net | 1 | 1.0 % |
+| boehli.fr | 1 | 1.0 % |
+| washin.fr | 1 | 1.0 % |
+| daniel-moquet.com | 1 | 1.0 % |
+| adi-incendie.fr | 1 | 1.0 % |
+| groupesavarieau.com | 1 | 1.0 % |
+| hetzi.fr | 1 | 1.0 % |
+| beers-corner.fr | 1 | 1.0 % |
+| nsi-groupe.com | 1 | 1.0 % |
+| franchise.quadra-terra.com | 1 | 1.0 % |
+| 4padel.fr | 1 | 1.0 % |
+| maisons-demeurance.com | 1 | 1.0 % |
+| exteco.fr | 1 | 1.0 % |
+| ed-trans.com | 1 | 1.0 % |
+| altoneo.com | 1 | 1.0 % |
+| sergic.com | 1 | 1.0 % |
+| assurance-mutuelle-poitiers.fr | 1 | 1.0 % |
+| partenaire.bmw.fr | 1 | 1.0 % |
+| gifas.fr | 1 | 1.0 % |
+| jacksburgers.fr | 1 | 1.0 % |
+| duranet.fr | 1 | 1.0 % |
+| tours.clemence-antonin.com | 1 | 1.0 % |
+| eurochef.fr | 1 | 1.0 % |
+| hotel-verlaine-cannes.com | 1 | 1.0 % |
+| cobalys-espacesverts.fr | 1 | 1.0 % |
+| partenaire.mini.fr | 1 | 1.0 % |
+| quincaillerie-angles.fr | 1 | 1.0 % |
+| allbiz.fr | 1 | 1.0 % |
+| gelvar.gral-gie.com | 1 | 1.0 % |
+| nanterre92.com | 1 | 1.0 % |
+| shop.story.fr | 1 | 1.0 % |
+| lmcservices.fr | 1 | 1.0 % |
+| transports-darrieussecq.fr | 1 | 1.0 % |
+| monky.fr | 1 | 1.0 % |
+| vie-veranda.com | 1 | 1.0 % |
+| fr.vignelaure.com | 1 | 1.0 % |
+| ville-coueron.fr | 1 | 1.0 % |
+| chocodic.com | 1 | 1.0 % |
+| awen-services.fr | 1 | 1.0 % |
+| stellaetsuzie.com | 1 | 1.0 % |
+| deltafluid.fr | 1 | 1.0 % |
+| maviflex.com | 1 | 1.0 % |
+| assas-hotels.com | 1 | 1.0 % |
+| numeral.fr | 1 | 1.0 % |
+| brasseriepietra.corsica | 1 | 1.0 % |
+| burotikgroup.com | 1 | 1.0 % |
+| latrinitaine.com | 1 | 1.0 % |
+| keepcool.fr | 1 | 1.0 % |
+| mutualia.fr | 1 | 1.0 % |
+| warsemann.fr | 1 | 1.0 % |
+| allexi.fr | 1 | 1.0 % |
+| mutuellemgc.fr | 1 | 1.0 % |
+| elypse-autos.fr | 1 | 1.0 % |
+| senfas.com | 1 | 1.0 % |
+| clermontfoot.com | 1 | 1.0 % |
+| distillerie-warenghem.com | 1 | 1.0 % |
+| artisancrepier.com | 1 | 1.0 % |
+| groupe-kyriel.fr | 1 | 1.0 % |
+| transports-gauthier.fr | 1 | 1.0 % |
+| groupe-jbs.fr | 1 | 1.0 % |
+| domes-sancyartense.fr | 1 | 1.0 % |
+| capitole-taxi.com | 1 | 1.0 % |
+| franchise.elephantbleu.com | 1 | 1.0 % |

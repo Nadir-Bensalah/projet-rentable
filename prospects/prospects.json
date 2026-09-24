@@ -608,6 +608,86 @@
   "equipe": "BB8"
  },
  {
+  "id": "DD7-001",
+  "entreprise": "Groupe Seasonova",
+  "siren": "538695560",
+  "secteur": "Hôtellerie de plein air (groupe de campings)",
+  "ville": "Merville-Franceville-Plage",
+  "departement": "14",
+  "region": "Normandie",
+  "site_web": "https://vacances-seasonova.com/",
+  "email": "contact@vacances-seasonova.com",
+  "telephone": "02 36 81 00 03",
+  "source_email": "https://vacances-seasonova.com/en/legal-information/",
+  "source_telephone": "https://vacances-seasonova.com/en/legal-information/",
+  "contact_nom": "Guillaume Lemarchand",
+  "contact_fonction": "Fondateur et dirigeant (directeur de la publication)",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "actualite": "2 avril 2026 : le tribunal de commerce de Paris retient Seasonova pour reprendre 15 campings du réseau Alpha Camping (marques Camping Paradis, Ushuaïa, Bel Air Village, ~10 M€ de CA) ; le groupe approche 40 campings.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Intégrer 15 campings repris (vendus jusqu'ici sous trois autres marques) dans le site et le parcours de réservation Seasonova.",
+  "faits": [
+   {
+    "fait": "Le tribunal de commerce de Paris a retenu Seasonova (décision du 2 avril 2026) pour reprendre 15 établissements d'Alpha Camping, en redressement judiciaire depuis le 12 novembre 2025 ; le portefeuille passe à près de 40 campings",
+    "url": "https://10minhotel.com/blog/2026/04/28/groupe-seasonova-loutsider-du-tourisme-de-plein-air-remporte-la-reprise-dalpha-camping-et-accelere-son-developpement/",
+    "source_type": "presse",
+    "date": "2026-04-28"
+   },
+   {
+    "fait": "Les 15 campings repris étaient vendus sous les marques Camping Paradis, Ushuaïa et Bel Air Village (~10 M€ de CA)",
+    "url": "https://www.gestion-camping.com/guide-gerant-camping/article/174/alpha-camping-seasonova-reussit-un-rachat-strategique-qui-rebattre-les-carte.html",
+    "source_type": "presse spécialisée",
+    "date": "2026-04"
+   },
+   {
+    "fait": "L'Officiel des terrains de camping confirme la reprise de 15 établissements d'Alpha Camping par le Groupe Seasonova",
+    "url": "https://www.ot-campings.com/l-actualite/chaines-groupes-to/chaines-et-groupes/le-groupe-seasonova-reprend-15-etablissements-du-groupe-alpha-camping/",
+    "source_type": "presse spécialisée",
+    "date": "2026-04"
+   },
+   {
+    "fait": "Les demandes de groupe passent par téléphone, email ou la rubrique « Contactez-nous » de chaque camping (pas de réservation groupe en ligne mentionnée)",
+    "url": "https://vacances-seasonova.com/en/information-camping-pratiques/comment-reserver/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Faire passer 15 campings d'autres marques sur le site et la réservation Seasonova en quelques mois (fiches, contenus, redirections, moteur de réservation, outils internes) est un chantier lourd pour un groupe familial qui double presque de taille.",
+  "opportunite": "Accompagnement de l'intégration numérique : migration des fiches et redirections des anciens sites, évolution du site Seasonova, espace groupes/CE en ligne, tableau de bord multi-campings pour la direction.",
+  "service": "Refonte/évolution site multi-campings + outils internes (dashboard)",
+  "signal_achat": "Reprise de 15 campings Alpha Camping (avril 2026)",
+  "urgence": "haute : reprise actée le 2 avril 2026, intégration à boucler avant la saison 2027",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 16,
+   "fit": 17,
+   "capacite": 9,
+   "accessibilite": 7,
+   "preuves": 11
+  },
+  "score": 77,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://10minhotel.com/blog/2026/04/28/groupe-seasonova-loutsider-du-tourisme-de-plein-air-remporte-la-reprise-dalpha-camping-et-accelere-son-developpement/",
+   "https://vacances-seasonova.com/en/conditions-generales-de-vente/",
+   "https://vacances-seasonova.com/en/information-camping-pratiques/comment-reserver/",
+   "https://vacances-seasonova.com/en/legal-information/",
+   "https://www.gestion-camping.com/guide-gerant-camping/article/174/alpha-camping-seasonova-reussit-un-rachat-strategique-qui-rebattre-les-carte.html",
+   "https://www.ot-campings.com/l-actualite/chaines-groupes-to/chaines-et-groupes/le-groupe-seasonova-reprend-15-etablissements-du-groupe-alpha-camping/"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Seasonova — intégration des 15 campings Alpha",
+  "email_personnalise": "Bonjour Monsieur Lemarchand,\n\nJ'ai lu que le tribunal de commerce avait retenu Seasonova pour reprendre 15 campings d'Alpha Camping, jusqu'ici commercialisés sous les marques Camping Paradis, Ushuaïa et Bel Air Village. Faire basculer ces établissements vers votre site et votre réservation avant la saison 2027 représente souvent beaucoup de petits chantiers : fiches, redirections, contenus, suivi.\n\nChez Capmedia, nous concevons des sites multi-établissements et des outils internes (tableaux de bord, espaces groupes). Nous pourrions faire un point de 20 minutes sur votre plan d'intégration, avec un premier regard sur ce qui peut être automatisé.\n\nSeriez-vous disponible en octobre ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu la reprise des 15 campings d'Alpha Camping par Seasonova en avril. Ces campings étaient sous trois autres marques et vont devoir rejoindre votre site. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Avec près de 40 campings, un tableau de bord commun (remplissage, CA, avis) peut faire gagner du temps à la direction : est-ce un sujet chez vous ?",
+  "pourquoi_demain": "Seasonova vient de reprendre 15 campings d'autres marques et doit les intégrer à son site avant la saison 2027.",
+  "equipe": "DD7"
+ },
+ {
   "id": "BB1-002",
   "entreprise": "Groupe Valrim (L'Immobilière Valrim)",
   "siren": "394086706",
@@ -978,6 +1058,72 @@
   "relance": "Un espace pro en ligne (tarifs, fiches techniques, commandes CHR et cavistes) peut soutenir directement l'objectif de conquête de Clos Réserve. Voulez-vous que je vous montre à quoi cela ressemble ?",
   "pourquoi_demain": "Le 1er négociant savoyard vient de créer une entité de conquête commerciale et d'ajouter un domaine : ses outils web doivent suivre.",
   "equipe": "BB8"
+ },
+ {
+  "id": "EE3-002",
+  "entreprise": "Groupe Gendreau (SAS Gendreau)",
+  "siren": "342010725",
+  "secteur": "Conserverie de produits de la mer",
+  "ville": "Saint-Gilles-Croix-de-Vie",
+  "departement": "85",
+  "region": "Pays de la Loire",
+  "site_web": "https://www.groupegendreau.com/",
+  "email": "commercial@gendreau.fr",
+  "telephone": "02 51 55 49 88",
+  "source_email": "https://www.groupegendreau.com/mentions-legales/",
+  "source_telephone": "https://www.groupegendreau.com/mentions-legales/",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "1 000 000 €",
+  "actualite": "Rachat de Capitaine Cook (conserverie, Plozévet, 29) au 1er juillet 2026, annoncé le 28 juillet : 2e site finistérien intégré en un an.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Groupe multi-sociétés / multi-marques avec plusieurs sites web à harmoniser et un canal commercial B2B",
+  "faits": [
+   {
+    "fait": "Gendreau a racheté Capitaine Cook (Plozévet) au 1er juillet 2026, deuxième site finistérien intégré en un an",
+    "url": "https://www.informateurjudiciaire.fr/actualites/gendreau-renforce-son-maillage-breton/",
+    "source_type": "presse",
+    "date": "2026-07-28"
+   },
+   {
+    "fait": "Le site groupe présente plusieurs 'sociétés du groupe' ; les mentions légales renvoient aussi à une adresse letresordesdieux@gendreau.fr (marque distincte)",
+    "url": "https://www.groupegendreau.com/mentions-legales/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Avec l'intégration de Capitaine Cook, le groupe additionne marques et sites web ; les clients professionnels (GMS, épiceries fines, CHR) ont intérêt à un point d'accès unique.",
+  "opportunite": "Portail B2B de commande/catalogue commun aux marques du groupe et harmonisation des sites de marques.",
+  "service": "Portail B2B + refonte multi-sites",
+  "signal_achat": "Rachat de Capitaine Cook (juillet 2026)",
+  "urgence": "haute — intégration d'une acquisition datée de moins de 3 mois",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 17,
+   "fit": 16,
+   "capacite": 8,
+   "accessibilite": 7,
+   "preuves": 10
+  },
+  "score": 75,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.informateurjudiciaire.fr/actualites/gendreau-renforce-son-maillage-breton/",
+   "https://www.groupegendreau.com/mentions-legales/",
+   "https://www.groupegendreau.com/contact/",
+   "https://www.pagesjaunes.fr/pros/50945523"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Gendreau et Capitaine Cook — vos sites de marques",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu que Gendreau a intégré Capitaine Cook au 1er juillet, deuxième site finistérien en un an. Le groupe réunit désormais plusieurs sociétés et marques, chacune avec sa présence en ligne ; pour un acheteur professionnel, cela multiplie les points d'entrée.\n\nCapmedia conçoit des sites et des portails B2B (catalogue, commandes, documents) pour des PME industrielles.\n\nL'harmonisation des sites ou un espace commandes pour vos clients pro fait-elle partie de vos chantiers d'intégration ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu le rachat de Capitaine Cook cet été. Le groupe compte maintenant plusieurs marques avec chacune sa présence web. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Autre angle : un portail commun où vos clients pros retrouvent fiches techniques et commandes pour Gendreau comme pour Capitaine Cook — est-ce un besoin remonté par vos commerciaux ?",
+  "pourquoi_demain": "Le rachat de Capitaine Cook date de juillet : l'intégration commerciale et web se décide maintenant.",
+  "equipe": "EE3"
  },
  {
   "siren": "",
@@ -2059,6 +2205,78 @@
   "date_verification": "2026-09-24"
  },
  {
+  "id": "BB2-001",
+  "entreprise": "Groupe Pozzo (Pozzo Immobilier)",
+  "siren": "805016649",
+  "secteur": "Immobilier : transaction, gestion locative, syndic, promotion, location saisonnière",
+  "ville": "Caen",
+  "departement": "14",
+  "region": "Normandie",
+  "site_web": "https://www.pozzo-immobilier.fr",
+  "email": "contact@pozzo.immo",
+  "telephone": "02 31 30 49 49",
+  "source_email": "https://www.pozzo-immobilier.fr/fr/mentions-legales",
+  "source_telephone": "https://www.pagesjaunes.fr/pros/61012694",
+  "contact_nom": "Julien Pozzo",
+  "contact_fonction": "Dirigeant (à confirmer)",
+  "linkedin": "https://fr.linkedin.com/in/julien-pozzo-b350ab4a",
+  "effectif": "230 collaborateurs",
+  "capital": "",
+  "actualite": "Rachat fin 2025 de l'agence Kappa / Côté Ouest Immobilier (Caen, 25 salariés) pour se développer sur l'immobilier de loisirs (PRL, campings) — article Journal des Entreprises janvier 2026",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Outils de réservation / gestion pour la nouvelle activité location de PRL et campings, et intégration digitale des agences rachetées",
+  "faits": [
+   {
+    "fait": "Pozzo (230 collaborateurs, 55 M€ de CA 2025, 34 agences Manche/Calvados) a racheté Kappa (Caen, 25 salariés) fin 2025 ; l'ex-dirigeant développe l'immobilier de loisirs avec cinq projets de location de PRL/campings en cours",
+    "url": "https://www.lejournaldesentreprises.com/article/pozzo-sappuie-sur-le-rachat-de-kappa-pour-se-developper-sur-limmobilier-de-loisirs-2134265",
+    "source_type": "presse",
+    "date": "2026-01"
+   },
+   {
+    "fait": "Acquisitions successives : cabinet Hastings-Barré (Caen, décembre 2023) et agences Malapel (3 nouvelles villes)",
+    "url": "https://www.pozzo-immobilier.fr/fr/blog/le-groupe-pozzo-a-fait-l-acquisition-des-agences-malapel-et-etend-son-perimetre-d-activites-a-3-nouvelles-villes",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Présence web éclatée : pozzo-immobilier.fr, extranet My Pozzo, sous-domaine pozzo-immobilier.immofy.fr",
+    "url": "https://pozzo-immobilier.immofy.fr/fr/groupe-pozzo",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Une nouvelle ligne métier (location de chalets de PRL et campings) avec cinq projets en cours exige un parcours de réservation en ligne et un outil de gestion des séjours que le site transactionnel actuel n'a pas vocation à porter ; les rachats successifs multiplient les outils à harmoniser.",
+  "opportunite": "Module/plateforme de réservation pour l'offre loisirs (PRL, campings) connecté au site Pozzo, puis audit de l'écosystème web (site, My Pozzo, sous-domaines) pour unifier le parcours client.",
+  "service": "Plateforme de réservation en ligne / outil métier location de loisirs",
+  "signal_achat": "Rachat Kappa + lancement activité immobilier de loisirs (5 projets)",
+  "urgence": "moyenne — rachat fin 2025, projets de loisirs en cours de développement pour les saisons 2027",
+  "score_detail": {
+   "besoin": 18,
+   "urgence": 13,
+   "fit": 16,
+   "capacite": 9,
+   "accessibilite": 7,
+   "preuves": 11
+  },
+  "score": 74,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lejournaldesentreprises.com/article/pozzo-sappuie-sur-le-rachat-de-kappa-pour-se-developper-sur-limmobilier-de-loisirs-2134265",
+   "https://www.pozzo-immobilier.fr/fr/contact",
+   "https://www.pozzo-immobilier.fr/fr/my-pozzo",
+   "https://www.pozzo-immobilier.fr/fr/blog/le-groupe-pozzo-a-fait-l-acquisition-des-agences-malapel-et-etend-son-perimetre-d-activites-a-3-nouvelles-villes"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Pozzo — réservation en ligne des séjours PRL et campings",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu dans Le Journal des Entreprises que le rachat de Kappa ouvre à Pozzo l'immobilier de loisirs, avec cinq projets de location de PRL et de campings en préparation dans la Manche et le Calvados.\n\nCe type d'activité repose sur la réservation en ligne, le calendrier de disponibilités et le suivi des séjours, des fonctions qu'un site de transaction et de gestion locative ne couvre généralement pas.\n\nChez Capmedia, nous concevons des modules de réservation et des outils métiers reliés à un site existant. Qui pilote ce chantier chez vous, et un échange de 20 minutes aurait-il du sens ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que Pozzo développait l'immobilier de loisirs après le rachat de Kappa. Cinq projets de location de PRL et campings sont annoncés. Je voulais savoir qui s'occupe de la partie réservation en ligne chez vous.",
+  "relance": "Avec Hastings-Barré, Malapel puis Kappa, vos outils (site, My Pozzo, sous-domaines) se sont multipliés : un audit rapide de cet ensemble vous intéresserait-il ?",
+  "pourquoi_demain": "Pozzo lance cinq projets de location de loisirs après un rachat et doit équiper cette nouvelle activité en réservation en ligne.",
+  "equipe": "BB2"
+ },
+ {
   "id": "DD5-002",
   "entreprise": "Groupe Savarieau (G. Savarieau SAS)",
   "siren": "547350546",
@@ -2438,6 +2656,85 @@
   "equipe": "U01"
  },
  {
+  "id": "Y06-001",
+  "entreprise": "4PADEL (exploité par Le Five SAS)",
+  "siren": "523860658",
+  "secteur": "Réseau de clubs de padel indoor (loisirs sportifs)",
+  "ville": "Créteil",
+  "departement": "94",
+  "region": "Île-de-France",
+  "site_web": "https://www.4padel.fr",
+  "email": "contact@4padel.fr",
+  "telephone": "01 80 51 41 38",
+  "source_email": "https://www.4padel.fr/mentions-legales",
+  "source_telephone": "https://www.4padel.fr/nos-centres/25/creteil",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Annonce d'une quinzaine d'ouvertures de clubs d'ici fin 2026 (+50 % de réseau, 31 sites existants) ; nouvelle app « 4PADEL - Ça joue » publiée sur les stores.",
+  "site_existant": "oui",
+  "app_ios": "oui",
+  "app_android": "oui",
+  "besoin": "Fiabiliser l'app de réservation (bugs de connexion/réservation signalés) pendant une forte phase d'ouvertures.",
+  "faits": [
+   {
+    "fait": "4PADEL, leader avec 31 sites, annonce l'ouverture d'une quinzaine de nouveaux clubs d'ici fin 2026 (Mérignac, Cannes, Vélizy, Dijon Chevigny, Amiens, Chartres, Rennes, Auxerre, Athis-Mons…), soit +50 % de réseau.",
+    "url": "https://www.sportbusiness.club/4padel-va-ouvrir-une-quinzaine-de-clubs-de-padel-en-2026/",
+    "source_type": "presse",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Avis App Store sur l'app « 4PADEL - Ça joue » : application jugée « vraiment naze », bugs « sans arrêt », problèmes de connexion, de réinitialisation de mot de passe et de parcours de réservation « depuis 2 ans ».",
+    "url": "https://apps.apple.com/fr/app/4padel-%C3%A7a-joue/id6754981294?see-all=reviews&platform=iphone",
+    "source_type": "avis store",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Bug signalé sur « utiliser ma position » (reste sur le club de départ) ; l'éditeur répond transmettre à son équipe technique.",
+    "url": "https://apps.apple.com/fr/app/4padel-%C3%A7a-joue/id6754981294?see-all=reviews&platform=iphone",
+    "source_type": "avis store",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Les créneaux 4PADEL Créteil sont aussi vendus via la plateforme tierce Anybuddy.",
+    "url": "https://www.anybuddyapp.com/club-4padel-creteil/reservation",
+    "source_type": "plateforme tierce",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Avec +15 clubs à ouvrir en 2026, chaque friction de l'app (connexion, réservation, géolocalisation) se multiplie ; l'app vient d'être reconstruite et génère encore des avis négatifs : besoin probable de QA mobile et de renfort de maintenance.",
+  "opportunite": "Audit QA mobile iOS/Android du parcours réservation (connexion, mot de passe, géolocalisation club, paiement) + offre de maintenance évolutive pour absorber les ouvertures.",
+  "service": "QA mobile / maintenance d'application existante",
+  "signal_achat": "15 ouvertures de clubs en 2026 + avis store négatifs sur l'app",
+  "urgence": "moyenne — ouvertures étalées jusqu'à fin 2026, app récemment relancée donc prestataire probablement en place",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 16,
+   "fit": 15,
+   "capacite": 9,
+   "accessibilite": 6,
+   "preuves": 10
+  },
+  "score": 73,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.sportbusiness.club/4padel-va-ouvrir-une-quinzaine-de-clubs-de-padel-en-2026/",
+   "https://apps.apple.com/fr/app/4padel-%C3%A7a-joue/id6754981294?see-all=reviews&platform=iphone",
+   "https://www.4padel.fr/mentions-legales",
+   "https://www.4padel.fr/nos-centres/25/creteil",
+   "https://www.anybuddyapp.com/club-4padel-creteil/reservation"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "4PADEL — l'app « Ça joue » et vos 15 ouvertures",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu que 4PADEL prévoit une quinzaine d'ouvertures de clubs d'ici fin 2026. En parallèle, sur l'App Store, plusieurs avis récents de « 4PADEL - Ça joue » évoquent des soucis de connexion, de mot de passe et de géolocalisation du club.\n\nAvec autant de nouveaux sites, ces frictions touchent vite beaucoup de joueurs au moment de réserver.\n\nChez Capmedia, nous faisons de la recette mobile iOS/Android et de la maintenance d'apps existantes, en complément d'une équipe en place. Un passage en revue du parcours de réservation pourrait être un premier pas.\n\nQui suit ce sujet chez vous ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que 4PADEL prévoit une quinzaine d'ouvertures d'ici fin 2026. Sur l'App Store, des avis récents de votre app signalent des bugs de connexion et de réservation. Je voulais savoir qui s'occupe de l'application chez vous.",
+  "relance": "Je me permets de revenir vers vous sous un autre angle : pour chaque nouveau club, nous pouvons tester l'app sur une série d'appareils avant l'ouverture, pour limiter les retours négatifs des premiers joueurs.",
+  "pourquoi_demain": "Un réseau qui grandit de 50 % en 2026 avec une app encore critiquée sur les stores a besoin de fiabiliser la réservation maintenant.",
+  "equipe": "Y06"
+ },
+ {
   "id": "AA6-001",
   "entreprise": "Batinéo Groupe (ex-Maisons Demeurance, groupe Duval)",
   "siren": "377539317",
@@ -2752,6 +3049,86 @@
   "relance": "Avec la marque unique ED-Trans, vos clients ont-ils aujourd'hui un seul point d'accès pour suivre leurs envois, quelle que soit l'agence ? C'est précisément ce que nous construisons.",
   "pourquoi_demain": "ED-Trans vient d'ouvrir sa 11e agence et vise 15 agences avec un plan explicitement nommé « Connect 2030 » : le moment idéal pour parler outils clients unifiés.",
   "equipe": "W03"
+ },
+ {
+  "id": "AA2-001",
+  "entreprise": "Altonéo (Altonéo Développement)",
+  "siren": "501830475",
+  "secteur": "Expertise comptable, audit, conseil",
+  "ville": "Angers",
+  "departement": "49",
+  "region": "Pays de la Loire",
+  "site_web": "https://altoneo.com/",
+  "email": "contact@altoneo.com",
+  "telephone": "02 41 47 91 91",
+  "source_email": "https://altoneo.com/mentions-legales/",
+  "source_telephone": "https://altoneo.com/nos-bureaux-comptables/",
+  "contact_nom": "Camille Carron",
+  "contact_fonction": "Secrétaire générale (depuis janvier 2026) ; publication : Christopher Bazin ; groupe dirigé par Loïc Granger",
+  "linkedin": "https://fr.linkedin.com/company/altoneo",
+  "effectif": "près de 300 salariés visés fin 2026",
+  "capital": "8 218 015 €",
+  "actualite": "Recrutement d'une secrétaire générale pour orchestrer la transformation du groupe (automatisation, IA, recentrage conseil) ; 7 agences après fusion des sites mayennais de Laval et Changé",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Unifier l'expérience client d'un groupe multi-agences en transformation (plusieurs sites web, espace client à outils séparés)",
+  "faits": [
+   {
+    "fait": "Altonéo a recruté en janvier 2026 une secrétaire générale, Camille Carron, pour coordonner la transformation des métiers (RH, achats, marketing) ; le groupe mise sur l'automatisation par le numérique et l'IA et pourrait approcher 300 salariés fin 2026",
+    "url": "https://www.lejournaldesentreprises.com/article/altoneo-recrute-une-secretaire-generale-pour-orchestrer-sa-transformation-2146377",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Le groupe compte 7 agences (Rennes, Le Mans, Mayenne, Maine-et-Loire) après la fusion des sites de Laval et Changé en 2025",
+    "url": "https://www.lejournaldesentreprises.com/article/altoneo-recrute-une-secretaire-generale-pour-orchestrer-sa-transformation-2146377",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Deux sites web distincts coexistent : altoneo.com et altoneo-hello.com (pages « nos cabinets comptables » séparées)",
+    "url": "https://www.altoneo-hello.com/nos-cabinets-comptables/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "La page espace client renvoie vers plusieurs outils (Néopilot, Néopaie, assistance)",
+    "url": "https://altoneo.com/espace-client/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Un groupe en croissance qui fusionne des sites et automatise sa production a intérêt à regrouper ses deux sites web et ses accès clients séparés en un seul parcours ; la nouvelle secrétaire générale pilote justement ces chantiers transverses.",
+  "opportunite": "Audit de l'écosystème web (altoneo.com / altoneo-hello.com / espace client) puis portail client unifié : point d'entrée unique vers Néopilot/Néopaie, dépôt de pièces, suivi des missions, pages agences homogènes.",
+  "service": "Espace client / portail unifié + refonte multi-sites",
+  "signal_achat": "Transformation pilotée par une secrétaire générale recrutée en 2026, croissance vers 300 salariés",
+  "urgence": "moyenne — chantier de transformation lancé en 2026, mais aucun appel d'offres web public",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 14,
+   "fit": 17,
+   "capacite": 9,
+   "accessibilite": 7,
+   "preuves": 9
+  },
+  "score": 73,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lejournaldesentreprises.com/article/altoneo-recrute-une-secretaire-generale-pour-orchestrer-sa-transformation-2146377",
+   "https://altoneo.com/mentions-legales/",
+   "https://altoneo.com/espace-client/",
+   "https://www.altoneo-hello.com/nos-cabinets-comptables/",
+   "https://www.usguecelard.fr/partenaires/altoneo-142689",
+   "https://www.pagesjaunes.fr/pros/06218340"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Altonéo — un seul accès pour vos clients",
+  "email_personnalise": "Bonjour Madame Carron,\n\nJ'ai lu dans Le Journal des Entreprises que vous coordonnez depuis janvier la transformation d'Altonéo, avec l'automatisation au cœur du projet. En parcourant vos pages, j'ai vu deux sites (altoneo.com et altoneo-hello.com) et un espace client qui renvoie vers plusieurs outils distincts (Néopilot, Néopaie, assistance).\n\nPour un client, cela peut faire plusieurs portes d'entrée pour un même cabinet. Capmedia conçoit des espaces clients et des sites multi-agences qui regroupent ces accès en un seul parcours, sans remplacer vos logiciels métiers.\n\nSeriez-vous ouverte à un échange de 20 minutes pour voir si le sujet est dans votre feuille de route ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu qu'Altonéo a recruté une secrétaire générale pour piloter sa transformation. J'ai remarqué deux sites web et un espace client réparti sur plusieurs outils ; je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Avec sept agences et près de 300 salariés visés, avez-vous prévu d'harmoniser les pages agences et l'accès client ? Je peux vous envoyer un exemple de portail regroupant plusieurs outils métiers.",
+  "pourquoi_demain": "Altonéo vient de confier sa transformation à une secrétaire générale et son accès client est dispersé entre deux sites et plusieurs outils.",
+  "equipe": "AA2"
  },
  {
   "id": "W06-001",
@@ -3577,6 +3954,85 @@
   "equipe": "W08"
  },
  {
+  "id": "DD6-001",
+  "entreprise": "Cobalys",
+  "siren": "448982967",
+  "secteur": "Distribution de produits et équipements pour les professionnels des espaces verts (filiale du groupe coopératif Noriap)",
+  "ville": "Limours",
+  "departement": "91",
+  "region": "Île-de-France",
+  "site_web": "https://www.cobalys-espacesverts.fr",
+  "email": "contact@cobalys.fr",
+  "telephone": "01 64 91 44 28",
+  "source_email": "https://www.cobalys-espacesverts.fr/contact.php",
+  "source_telephone": "https://www.cobalys-espacesverts.fr/contact.php",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Rachat de Chlorodis (distributeur espaces verts, 8 M€ de CA 2025) auprès des coopératives Natup et Advitam, opération finalisée le 31 mars 2026.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Intégrer l'offre et les clients de Chlorodis (site chlorodis.fr distinct) à l'écosystème web et outils de Cobalys",
+  "faits": [
+   {
+    "fait": "Natup et Advitam cèdent Chlorodis à Cobalys, société basée en Essonne ; opération finalisée le 31 mars 2026 ; Chlorodis a réalisé 8 M€ de CA en 2025",
+    "url": "https://www.lejournaldesentreprises.com/breve/les-cooperatives-natup-et-advitam-cedent-chlorodis-la-societe-francilienne-cobalys-2142238",
+    "source_type": "presse",
+    "date": "2026-03-31"
+   },
+   {
+    "fait": "Transaction confirmée par le conseil The CFI Group",
+    "url": "https://www.thecfigroup.com/transactions/advitam-and-natup-have-divested-chlorodis-to-cobalys/",
+    "source_type": "communiqué conseil M&A",
+    "date": "2026"
+   },
+   {
+    "fait": "Deux sites web distincts coexistent : cobalys-espacesverts.fr et chlorodis.fr (« 1er distributeur de produits espaces verts »)",
+    "url": "https://www.chlorodis.fr/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Cobalys est filiale de Noriap (1 237 salariés, 865 M€ de CA 2025), implantée à Seclin (59) et Limours (91)",
+    "url": "https://www.agrodistribution.fr/noriap/article/897799/noriap-reprend-les-activites-de-chlorodis",
+    "source_type": "presse",
+    "date": "2026"
+   }
+  ],
+  "inference": "Six mois après le closing, la coexistence de deux marques et deux sites (catalogues, comptes clients pros, commandes) pose la question d'un portail commun ou d'un espace client B2B unifié.",
+  "opportunite": "Audit des deux sites + proposition d'un espace client pro commun (catalogue, devis, commandes, historique) ou d'une passerelle entre les deux catalogues.",
+  "service": "Espace client B2B / refonte et unification de sites",
+  "signal_achat": "Rachat de Chlorodis (closing 31/03/2026)",
+  "urgence": "moyenne — rachat daté de moins de 6 mois, intégration en cours",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 15,
+   "fit": 15,
+   "capacite": 9,
+   "accessibilite": 6,
+   "preuves": 10
+  },
+  "score": 72,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lejournaldesentreprises.com/breve/les-cooperatives-natup-et-advitam-cedent-chlorodis-la-societe-francilienne-cobalys-2142238",
+   "https://www.thecfigroup.com/transactions/advitam-and-natup-have-divested-chlorodis-to-cobalys/",
+   "https://www.chlorodis.fr/",
+   "https://www.cobalys-espacesverts.fr/contact.php",
+   "https://www.cobalys-espacesverts.fr/mentions-legales.php"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Cobalys et Chlorodis — deux sites, un seul client pro",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu que Cobalys a finalisé fin mars le rachat de Chlorodis. Aujourd'hui, les deux marques ont chacune leur site (cobalys-espacesverts.fr et chlorodis.fr).\n\nPour un paysagiste client des deux, cela peut vouloir dire deux catalogues, deux interlocuteurs et deux façons de commander.\n\nCapmedia conçoit des sites et des espaces clients B2B (catalogue, devis, suivi de commandes) pour des distributeurs. Nous pourrions regarder avec vous comment rapprocher les deux offres en ligne, sans tout refaire.\n\nQui suit ce sujet d'intégration chez vous ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que Cobalys a finalisé le rachat de Chlorodis fin mars. Les deux marques ont encore chacune leur site web. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Au-delà du site, avez-vous prévu un outil commun pour les commerciaux terrain des deux enseignes (tarifs, stocks, devis sur mobile) ?",
+  "pourquoi_demain": "Rachat finalisé il y a six mois et deux sites toujours séparés : l'intégration digitale est probablement sur la table.",
+  "equipe": "DD6"
+ },
+ {
   "id": "Z01-001",
   "entreprise": "Groupe GRIM",
   "siren": "908608854",
@@ -4191,6 +4647,86 @@
   "relance": "Pour les clients copropriétés et santé repris aux Sables-d'Olonne, un espace de suivi des passages peut faciliter la transition : je peux vous montrer à quoi cela ressemble.",
   "pourquoi_demain": "Reprise effective depuis moins d'un mois : c'est le moment où la nouvelle agence doit apparaître en ligne et où l'organisation terrain se réorganise.",
   "equipe": "AA1"
+ },
+ {
+  "id": "X01-001",
+  "entreprise": "La Brigade (street food carnivore — Big Str'EAT SAS / La Brigade Expansion)",
+  "siren": "921280921",
+  "secteur": "Restauration rapide en franchise (street food viande)",
+  "ville": "Paris 11e",
+  "departement": "75",
+  "region": "Île-de-France",
+  "site_web": "https://www.la-brigade.fr/",
+  "email": "contact@la-brigade.fr",
+  "telephone": "01 48 06 79 56",
+  "source_email": "https://www.la-brigade.fr/mentions-l%C3%A9gales",
+  "source_telephone": "https://www.pagesjaunes.fr/pros/57681577",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "https://fr.linkedin.com/company/labrigade",
+  "effectif": "",
+  "capital": "10 000 € (La Brigade Expansion)",
+  "actualite": "3 ouvertures franchisées en avril 2026 (Brest, Toulouse-Blagnac, Anglet), Montauban inauguré le 25 juin 2026 (17 restaurants), Lyon rue Mercière à l'été 2026, Vélizy à venir.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Réseau franchisé en forte accélération (17 restaurants, ouvertures mensuelles) : outils numériques réseau (commande en ligne, fidélité, extranet franchisés) à structurer.",
+  "faits": [
+   {
+    "fait": "En avril 2026, trois restaurants franchisés ont ouvert (Brest, Toulouse-Blagnac, Anglet) ; d'autres suivent à Montauban, Lyon et Vélizy.",
+    "url": "https://www.observatoiredelafranchise.fr/indiscretions-actualite/LA-BRIGADE-la-brigade-un-concept-en-pleine-ascension-avec-des-resultats-tres-stimulants-82936.htm",
+    "source_type": "presse franchise",
+    "date": "2026"
+   },
+   {
+    "fait": "Ouverture d'un restaurant franchisé La Brigade rue Mercière à Lyon à l'été 2026.",
+    "url": "https://www.lyonpeople.com/bar-restaurants/lyon-la-brigade-street-food-carnivore-sinstalle-rue-merciere-2026-07-08.html",
+    "source_type": "presse",
+    "date": "2026-07-08"
+   },
+   {
+    "fait": "Restaurant franchisé de Montauban inauguré le 25 juin 2026, portant le réseau à 17 restaurants ; 10 franchisés ont rejoint l'enseigne.",
+    "url": "https://www.observatoiredelafranchise.fr/creation-entreprise/franchise-la-brigade-3307.htm",
+    "source_type": "annuaire franchise",
+    "date": "2026-06-25"
+   },
+   {
+    "fait": "Le site officiel indexe une page nommée « copie-de-home » en plus de la page d'accueil (page de travail publiée).",
+    "url": "https://www.la-brigade.fr/copie-de-home",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Passer d'une poignée de comptoirs parisiens à un réseau national de 17+ restaurants franchisés crée des besoins d'outillage commun (commande/click & collect, fidélité, pages restaurants locales, extranet franchisés) ; aucun outil propriétaire n'a été observé dans les résultats.",
+  "opportunite": "Audit rapide du parcours digital client et franchisé, puis proposition d'une app/commande en ligne marque propre avec fidélité et d'un espace franchisés (remontées, docs, formation).",
+  "service": "Application mobile de commande/fidélité + espace franchisés",
+  "signal_achat": "Accélération franchise : 4 ouvertures avril-juin 2026, Lyon été 2026",
+  "urgence": "moyenne — ouvertures datées avril-juillet 2026, réseau en structuration",
+  "score_detail": {
+   "besoin": 14,
+   "urgence": 17,
+   "fit": 15,
+   "capacite": 7,
+   "accessibilite": 7,
+   "preuves": 11
+  },
+  "score": 71,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.la-brigade.fr/mentions-l%C3%A9gales",
+   "https://www.pagesjaunes.fr/pros/57681577",
+   "https://www.observatoiredelafranchise.fr/indiscretions-actualite/LA-BRIGADE-la-brigade-un-concept-en-pleine-ascension-avec-des-resultats-tres-stimulants-82936.htm",
+   "https://www.lyonpeople.com/bar-restaurants/lyon-la-brigade-street-food-carnivore-sinstalle-rue-merciere-2026-07-08.html",
+   "https://www.observatoiredelafranchise.fr/creation-entreprise/franchise-la-brigade-3307.htm",
+   "https://www.pappers.fr/entreprise/la-brigade-expansion-921280921"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "La Brigade — 17 restaurants et après ?",
+  "email_personnalise": "Bonjour,\n\nJ'ai vu que La Brigade a ouvert Brest, Blagnac et Anglet en avril, Montauban fin juin, puis Lyon rue Mercière cet été : le réseau compte désormais 17 restaurants.\n\nÀ ce rythme, la commande à emporter, la fidélité et le partage d'informations avec les franchisés deviennent souvent difficiles à gérer avec des outils dispersés.\n\nChez Capmedia, nous concevons des applications de commande et de fidélité et des espaces franchisés pour des réseaux en croissance. Je peux vous envoyer deux ou trois pistes concrètes après un rapide tour de votre parcours actuel.\n\nQui s'occupe de ces sujets digitaux chez vous ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu les ouvertures de La Brigade à Brest, Anglet, Montauban et Lyon ces derniers mois. Le réseau atteint 17 restaurants, et c'est souvent le moment où la commande en ligne et les outils franchisés se structurent. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Je reviens vers vous sous un autre angle : pour les nouveaux franchisés, un espace en ligne commun (procédures, formation, remontées de ventes) fait gagner du temps à chaque ouverture. Est-ce un sujet d'actualité chez vous ?",
+  "pourquoi_demain": "Le réseau vient d'enchaîner quatre à cinq ouvertures franchisées en quelques mois et vise encore Vélizy : c'est le moment où il structure ses outils.",
+  "equipe": "X01"
  },
  {
   "id": "Z05-001",
@@ -5431,6 +5967,78 @@
   "equipe": "DD2"
  },
  {
+  "id": "DD7-003",
+  "entreprise": "La Trinitaine (Biscuiterie La Trinitaine)",
+  "siren": "",
+  "secteur": "Biscuiterie bretonne + réseau de magasins",
+  "ville": "Saint-Philibert",
+  "departement": "56",
+  "region": "Bretagne",
+  "site_web": "https://www.latrinitaine.com/",
+  "email": "contact@latrinitaine.com",
+  "telephone": "02 90 74 21 28",
+  "source_email": "https://www.latrinitaine.com/pages/contact",
+  "source_telephone": "https://www.latrinitaine.com/pages/contact",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "",
+  "effectif": "environ 200 emplois conservés",
+  "capital": "",
+  "actualite": "23 janvier 2026 : le tribunal de commerce de Rennes valide la reprise par le fonds régional Breizh Rebond ; 200 emplois sur 300 conservés ; recentrage sur les biscuits secs ; les 47 magasins sont un « actif clé » ; retour à l'équilibre visé sous deux ans.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Relancer les ventes (réseau de 47 magasins + boutique en ligne) après la reprise, avec des outils adaptés au nouveau périmètre.",
+  "faits": [
+   {
+    "fait": "Le tribunal de commerce de Rennes a validé le 23 janvier 2026 la reprise de La Trinitaine par Breizh Rebond ; 200 des 300 emplois conservés ; les 47 magasins sont un actif clé",
+    "url": "https://www.francebleu.fr/infos/economie-social/sauvetage-de-la-biscuiterie-la-trinitaine-le-tribunal-de-commerce-de-rennes-valide-le-plan-de-reprise-de-breizh-rebond-2158265",
+    "source_type": "presse",
+    "date": "2026-01-23"
+   },
+   {
+    "fait": "Questions sur l'avenir de la biscuiterie avant la décision de reprise",
+    "url": "https://www.jaimeradio.fr/2026/01/15/avenir-biscuiterie-la-trinitaine-saint-philibert/",
+    "source_type": "presse",
+    "date": "2026-01-15"
+   },
+   {
+    "fait": "La boutique en ligne est éditée sous le nom « La Trinitaine Distribution »",
+    "url": "https://www.latrinitaine.com/pages/contact",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Un plan de retour à l'équilibre en deux ans s'appuyant sur 47 magasins passe par la vente en ligne, la fidélisation et le pilotage des ventes ; la nouvelle direction revoit probablement ses outils.",
+  "opportunite": "Audit du site e-commerce et du parcours client, programme de fidélité magasins + web, tableau de bord des ventes par magasin.",
+  "service": "Audit + évolution e-commerce / fidélité",
+  "signal_achat": "Reprise par Breizh Rebond (janvier 2026)",
+  "urgence": "moyenne : reprise de janvier 2026 (8 mois), plan de redressement sur deux ans",
+  "score_detail": {
+   "besoin": 16,
+   "urgence": 13,
+   "fit": 16,
+   "capacite": 8,
+   "accessibilite": 7,
+   "preuves": 11
+  },
+  "score": 71,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.crozon-tourisme.bzh/en/commerce/la-trinitaine/",
+   "https://www.francebleu.fr/infos/economie-social/sauvetage-de-la-biscuiterie-la-trinitaine-le-tribunal-de-commerce-de-rennes-valide-le-plan-de-reprise-de-breizh-rebond-2158265",
+   "https://www.jaimeradio.fr/2026/01/15/avenir-biscuiterie-la-trinitaine-saint-philibert/",
+   "https://www.latrinitaine.com/pages/contact"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "La Trinitaine — 47 magasins et vente en ligne",
+  "email_personnalise": "Bonjour,\n\nJ'ai suivi la reprise de La Trinitaine par Breizh Rebond en janvier, avec un objectif de retour à l'équilibre en deux ans et des magasins présentés comme un actif clé. Dans ce type de relance, relier les 47 boutiques et la vente en ligne (fidélité, suivi des ventes par magasin) aide souvent à mesurer vite ce qui fonctionne.\n\nCapmedia réalise sites e-commerce, programmes de fidélité et tableaux de bord sur mesure. Je peux vous proposer un court audit de votre boutique en ligne, sans engagement. Qui suit ce sujet chez vous ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu la reprise de La Trinitaine par Breizh Rebond en janvier. Le plan mise sur les 47 magasins et sur un retour à l'équilibre en deux ans. Je voulais savoir qui s'occupe de la vente en ligne et des outils magasins chez vous.",
+  "relance": "Un tableau de bord des ventes par magasin et par canal, mis en place en quelques semaines, pourrait-il aider au suivi du plan de redressement ?",
+  "pourquoi_demain": "La Trinitaine se relance après sa reprise de janvier 2026 en s'appuyant sur 47 magasins et doit prouver son redressement en deux ans.",
+  "equipe": "DD7"
+ },
+ {
   "id": "Y08-003",
   "entreprise": "Groupe Lecluse Automobiles (branche poids lourds Sarevi Revmat)",
   "siren": "480117662",
@@ -6131,6 +6739,78 @@
   "equipe": "U03"
  },
  {
+  "siren": "",
+  "contact_nom": "Stéphane Tessier",
+  "contact_fonction": "Nouveau président / actionnaire majoritaire (ABL Finance)",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "entreprise": "Clermont Foot 63 (SASP)",
+  "secteur": "Club de football professionnel (Ligue 2)",
+  "ville": "Clermont-Ferrand",
+  "departement": "63",
+  "region": "Auvergne-Rhône-Alpes",
+  "site_web": "https://www.clermontfoot.com",
+  "email": "commercial@clermontfoot.com",
+  "telephone": "04 73 25 79 02",
+  "source_email": "https://billetterie.clermontfoot.com/fr/contact/service_commercial",
+  "source_telephone": "https://www.clermontfoot.com/contact/",
+  "actualite": "Rachat de 94,33 % de la SASP par ABL Finance (Stéphane Tessier), validé par la DNCG le 24 juin 2026 ; arrivée de David Guion comme entraîneur.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "oui",
+  "besoin": "Nouvelle direction qui reprend en main l'écosystème digital (app fans, billetterie, espace partenaires).",
+  "faits": [
+   {
+    "fait": "Accord de cession de 94,33 % des actions de la SASP Clermont Foot 63 à ABL Finance (Stéphane Tessier), signé le 21 juin 2026",
+    "url": "https://www.clermontinfos63.fr/actualite-21878-abl-finance-et-stephane-tessier-rachetent-le-clermont-foot-63.html",
+    "source_type": "presse",
+    "date": "2026-06-21"
+   },
+   {
+    "fait": "Feu vert de la DNCG et passation officielle entre Ahmet Schaefer et Stéphane Tessier le 24 juin 2026",
+    "url": "https://info.fr/rachat-clermont-foot-feu-vert-dncg-passation-officielle-arrivee-david-guion/",
+    "source_type": "presse",
+    "date": "2026-06-24"
+   },
+   {
+    "fait": "Le club publie une application Android « Clermont Foot 63 » (com.clermont.app) et une billetterie en ligne dédiée (billetterie.clermontfoot.com)",
+    "url": "https://play.google.com/store/apps/details?id=com.clermont.app&hl=en_US",
+    "source_type": "store",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Un changement d'actionnaire s'accompagne souvent d'une revue des outils fans/partenaires et des prestataires ; fenêtre favorable en début de saison 2026-2027.",
+  "opportunite": "Audit rapide de l'app fans et du parcours billetterie/partenaires, puis feuille de route de modernisation (app, espace partenaires, outils internes).",
+  "service": "Audit et modernisation d'application mobile / espace partenaires",
+  "signal_achat": "Nouveau propriétaire (juin 2026)",
+  "urgence": "moyenne — changement de propriétaire il y a 3 mois, nouvelle saison lancée",
+  "score_detail": {
+   "besoin": 16,
+   "urgence": 15,
+   "fit": 15,
+   "capacite": 8,
+   "accessibilite": 6,
+   "preuves": 10
+  },
+  "sources": [
+   "https://www.clermontinfos63.fr/actualite-21878-abl-finance-et-stephane-tessier-rachetent-le-clermont-foot-63.html",
+   "https://info.fr/rachat-clermont-foot-feu-vert-dncg-passation-officielle-arrivee-david-guion/",
+   "https://www.clermontfoot.com/contact/",
+   "https://play.google.com/store/apps/details?id=com.clermont.app&hl=en_US"
+  ],
+  "objet_email": "Clermont Foot 63 — app fans et espace partenaires",
+  "email_personnalise": "Bonjour,\n\nAvec la reprise du club par ABL Finance validée fin juin, j'ai regardé l'écosystème digital actuel : une app Android, une billetterie en ligne séparée et un site institutionnel. Ces briques distinctes rendent parfois le parcours supporter ou partenaire moins fluide, surtout en début de saison.\n\nChez Capmedia, nous concevons et reprenons des applications mobiles et des espaces clients (iOS, Android, web). Nous pourrions vous proposer un audit court de l'app et du parcours billetterie/partenaires, avec des pistes concrètes.\n\nQui suit ces sujets digitaux au club depuis le changement de direction ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu la reprise du club par ABL Finance validée par la DNCG fin juin. Le club a une app Android et une billetterie séparée, et une nouvelle direction revoit souvent ces outils. Je voulais savoir qui s'occupe du digital et de l'app chez vous.",
+  "relance": "Je reviens vers vous avec un autre angle : un espace partenaires en ligne (contreparties, invitations, hospitalités) peut simplifier le travail de l'équipe commerciale — est-ce un sujet cette saison ?",
+  "pourquoi_demain": "Nouveau propriétaire depuis juin 2026 : période où les outils digitaux et les prestataires sont remis à plat.",
+  "id": "V06-001",
+  "score": 70,
+  "niveau": "QUALIFIÉ",
+  "date_verification": "2026-09-24",
+  "equipe": "V06"
+ },
+ {
   "id": "BB8-002",
   "entreprise": "Distillerie Warenghem",
   "siren": "",
@@ -6563,6 +7243,85 @@
   "equipe": "BB3",
   "score": 70,
   "niveau": "QUALIFIÉ"
+ },
+ {
+  "id": "T05-002",
+  "entreprise": "Capitole Taxi",
+  "siren": "",
+  "secteur": "Taxi / transport de personnes",
+  "ville": "Toulouse",
+  "departement": "31",
+  "region": "Occitanie",
+  "site_web": "https://www.capitole-taxi.com",
+  "email": "contact@capitole-taxi.com",
+  "telephone": "05 34 25 02 50",
+  "source_email": "https://www.capitole-taxi.com/en/legal-notice",
+  "source_telephone": "https://www.capitole-taxi.com/mentions-legales",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "",
+  "effectif": "≈170-180 taxis affiliés",
+  "capital": "",
+  "actualite": "Présenté comme le plus grand groupement de taxis de Toulouse et Midi-Pyrénées (180 taxis).",
+  "site_existant": "oui",
+  "app_ios": "oui",
+  "app_android": "oui",
+  "besoin": "App de commande notée 3,4/5 avec inscription/authentification signalées comme cassées.",
+  "faits": [
+   {
+    "fait": "L'application Capitole Taxi est notée 3,4/5 (10 000+ téléchargements).",
+    "url": "https://apps.apple.com/fr/app/capitole-taxi/id960249914",
+    "source_type": "avis store",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Avis : « L'inscription ne fonctionne pas », erreurs d'authentification avec message « company disabled », SMS de validation non reçus et limite de SMS atteinte, saisie du numéro sans remplissage automatique.",
+    "url": "https://apps.apple.com/fr/app/capitole-taxi/id960249914",
+    "source_type": "avis store",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Les notes de version récentes mentionnent des correctifs sur le format du numéro de téléphone à l'inscription, confirmant un problème sur le parcours d'inscription.",
+    "url": "https://apps.apple.com/fr/app/capitole-taxi/id960249914",
+    "source_type": "avis store",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Le site annonce que l'app permet de commander parmi 170 taxis.",
+    "url": "https://www.capitole-taxi.com/fr/actualites/telechargez-170-taxis-avec-lapplication-capitole-taxi",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Un nouvel utilisateur bloqué à l'inscription se reporte sur Uber/VTC : chaque échec du parcours SMS est une course perdue pour les 170 taxis du groupement.",
+  "opportunite": "Audit du parcours d'inscription/authentification (SMS, formats de numéro), QA mobile iOS/Android, puis modernisation ou reprise de l'app.",
+  "service": "Audit technique + QA mobile / reprise d'application",
+  "signal_achat": "App de commande à 3,4/5, inscription signalée impossible",
+  "urgence": "moyenne — problème structurel sur l'inscription, dates des avis non visibles",
+  "score_detail": {
+   "besoin": 18,
+   "urgence": 10,
+   "fit": 17,
+   "capacite": 8,
+   "accessibilite": 8,
+   "preuves": 9
+  },
+  "score": 70,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://apps.apple.com/fr/app/capitole-taxi/id960249914",
+   "https://apps.apple.com/fr/developer/capitole-taxi/id1470212110",
+   "https://www.capitole-taxi.com/fr/actualites/telechargez-170-taxis-avec-lapplication-capitole-taxi",
+   "https://www.capitole-taxi.com/en/contact-taxi-toulouse",
+   "https://www.infobel.com/fr/france/capitole_taxi_toulouse/toulouse/FR102827143-0534250250/businessdetails.aspx"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "À propos de l'inscription sur l'app Capitole Taxi",
+  "email_personnalise": "Bonjour,\n\nSur l'App Store, l'application Capitole Taxi est notée 3,4/5, et plusieurs avis décrivent un blocage à l'inscription : SMS de validation non reçu, limite de SMS atteinte, message « company disabled ».\n\nUn client qui n'arrive pas à créer son compte se tourne en général vers une application VTC concurrente.\n\nCapmedia audite et teste des applications mobiles existantes (parcours d'inscription, SMS, compatibilité iOS/Android) et peut reprendre ou moderniser l'app si besoin.\n\nQui gère l'application chez vous ? Seriez-vous ouvert à un court échange ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que l'app Capitole Taxi est notée 3,4 sur l'App Store, avec des clients qui n'arrivent pas à s'inscrire à cause du SMS de validation. Je voulais savoir qui s'occupe de l'application chez vous.",
+  "relance": "Je peux tester gratuitement le parcours d'inscription de l'app sur quelques téléphones et vous envoyer ce que je constate : cela vous intéresse-t-il ?",
+  "pourquoi_demain": "Les clients de Capitole Taxi signalent qu'ils ne peuvent pas créer de compte dans l'app : chaque inscription ratée est une course perdue face aux VTC.",
+  "equipe": "T05"
  },
  {
   "id": "U04-002",

@@ -3,7 +3,13 @@
   "rejet": "coordonnées (gmail + mobile) relevées sur la fiche de l'établissement d'Aurillac ; exploitant commun avec Rodez non confirmé"
  },
  "T05-002": {
-  "rejet": "source de l'email non traçable (résumé sans page) ; téléphone contradictoire entre deux sources (…50 / …55)"
+  "set": {
+   "email": "contact@capitole-taxi.com",
+   "source_email": "https://www.capitole-taxi.com/en/legal-notice",
+   "telephone": "05 34 25 02 50",
+   "source_telephone": "https://www.capitole-taxi.com/mentions-legales"
+  },
+  "note": "rattrapage contact : email et téléphone confirmés sur pages précises"
  },
  "T08-001": {
   "set": {
@@ -20,13 +26,25 @@
   "rejet": "email vu uniquement dans un résumé de recherche sur le domaine ; page source non confirmée"
  },
  "V06-001": {
-  "rejet": "email vu dans un résumé mêlant plusieurs pages du club ; page source non confirmée"
+  "set": {
+   "email": "commercial@clermontfoot.com",
+   "source_email": "https://billetterie.clermontfoot.com/fr/contact/service_commercial",
+   "telephone": "04 73 25 79 02",
+   "source_telephone": "https://www.clermontfoot.com/contact/"
+  },
+  "note": "rattrapage contact : email et téléphone confirmés sur pages précises"
  },
  "W02-001": {
   "rejet": "coordonnées nominatives (portable) dont la page source n'est pas certaine ; besoin déduit uniquement de l'URL"
  },
  "X01-001": {
-  "rejet": "source du téléphone supposée (fiche PagesJaunes citée par défaut, non lue dans le résultat)"
+  "set": {
+   "email": "contact@la-brigade.fr",
+   "source_email": "https://www.la-brigade.fr/mentions-l%C3%A9gales",
+   "telephone": "01 48 06 79 56",
+   "source_telephone": "https://www.pagesjaunes.fr/pros/57681577"
+  },
+  "note": "rattrapage contact : email et téléphone confirmés sur pages précises"
  },
  "X02-001": {
   "rejet": "page source de l'email non confirmée ; besoin déduit uniquement des URL du site"
@@ -47,7 +65,13 @@
   "rejet": "seule adresse = presse (inadaptée) et page source non confirmée"
  },
  "Y06-001": {
-  "rejet": "source du téléphone incertaine (résumé mêlant page centre et annuaires)"
+  "set": {
+   "email": "contact@4padel.fr",
+   "source_email": "https://www.4padel.fr/mentions-legales",
+   "telephone": "01 80 51 41 38",
+   "source_telephone": "https://www.4padel.fr/nos-centres/25/creteil"
+  },
+  "note": "rattrapage contact : email et téléphone confirmés sur pages précises"
  },
  "Y02-001": {
   "rejet": "téléphone issu d'un résumé mêlant plusieurs pages ; tête de réseau associative (email @ecf.asso.fr)"
@@ -56,10 +80,22 @@
   "rejet": "page source de l'email incertaine ; téléphone 08 90 surtaxé, alternative de source incertaine"
  },
  "AA2-001": {
-  "rejet": "email vu uniquement dans des résumés ; source probable = page d'un club partenaire, non officielle"
+  "set": {
+   "email": "contact@altoneo.com",
+   "source_email": "https://altoneo.com/mentions-legales/",
+   "telephone": "02 41 47 91 91",
+   "source_telephone": "https://altoneo.com/nos-bureaux-comptables/"
+  },
+  "note": "rattrapage contact : coordonnées confirmées sur pages précises"
  },
  "BB2-001": {
-  "rejet": "source du téléphone incertaine (post LinkedIn 2023 ou annuaire, non confirmé)"
+  "set": {
+   "email": "contact@pozzo.immo",
+   "source_email": "https://www.pozzo-immobilier.fr/fr/mentions-legales",
+   "telephone": "02 31 30 49 49",
+   "source_telephone": "https://www.pagesjaunes.fr/pros/61012694"
+  },
+  "note": "rattrapage contact : coordonnées confirmées sur pages précises"
  },
  "BB3-001": {
   "rejet": "email nominatif du président dont la page source (lyon-finance.org) n'est pas confirmée"
@@ -121,18 +157,45 @@
   "rejet": "page source de l'email incertaine (résumé multi-pages)"
  },
  "DD6-001": {
-  "rejet": "source de l'email mêlée à Corporama ; filiale d'un groupe coopératif de 1 200 salariés"
+  "set": {
+   "email": "contact@cobalys.fr",
+   "source_email": "https://www.cobalys-espacesverts.fr/contact.php",
+   "telephone": "01 64 91 44 28",
+   "source_telephone": "https://www.cobalys-espacesverts.fr/contact.php"
+  },
+  "note": "rattrapage contact : coordonnées confirmées sur pages précises"
  },
  "DD1-001": {
   "rejet": "deux standards téléphoniques contradictoires ; date d'article non lue"
  },
  "DD7-001": {
-  "rejet": "source du téléphone incertaine (résumé multi-pages / page non vue)"
+  "set": {
+   "email": "contact@vacances-seasonova.com",
+   "source_email": "https://vacances-seasonova.com/en/legal-information/",
+   "telephone": "02 36 81 00 03",
+   "source_telephone": "https://vacances-seasonova.com/en/legal-information/"
+  },
+  "note": "rattrapage contact : coordonnées confirmées sur pages précises"
  },
  "DD7-002": {
   "rejet": "source du téléphone incertaine (résumé multi-pages / page non vue)"
  },
  "DD7-003": {
-  "rejet": "source du téléphone incertaine (résumé multi-pages / page non vue)"
+  "set": {
+   "email": "contact@latrinitaine.com",
+   "source_email": "https://www.latrinitaine.com/pages/contact",
+   "telephone": "02 90 74 21 28",
+   "source_telephone": "https://www.latrinitaine.com/pages/contact"
+  },
+  "note": "rattrapage contact : coordonnées confirmées sur pages précises"
+ },
+ "EE5-001": {
+  "rejet": "page source de l'email incertaine (résumé sans page)"
+ },
+ "EE3-001": {
+  "rejet": "page source de l'email incertaine (résumé multi-pages) ; téléphone une seule source"
+ },
+ "EE3-003": {
+  "rejet": "page source de l'email incertaine (résumé multi-pages)"
  }
 }

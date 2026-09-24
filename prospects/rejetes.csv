@@ -13,7 +13,6 @@ Exco Nexiom (Villers-lès-Nancy, rapprochement Comptalor / Confente Knob);email;
 Safigec / Ekylis (Lyon);doublon;Safigec = Numans (exclu), opération ancienne;AA2
 Groupe BBM (Forvis Mazars);score;Absorbé par Forvis Mazars (très grand groupe), décision non régionale;AA2
 Adecia (La Roche-sur-Yon);besoin;Aucune opération datée 2026 trouvée (rachat Ponts-de-Cé ancien), coordonnées non vérifiées;AA2
-Altonéo (Altonéo Développement);contrôle qualité;"QA : email vu uniquement dans des résumés ; source probable = page d'un club partenaire, non officielle";AA2
 Transports Veynat (Tresses, 33);privée;"Hors cible : 1 235 salariés (CA 2024 : 217 M€), bien au-dessus de 300 ; rachat de Translait Mauges en déc. 2025";AA3
 Groupe Jardel (Saint-Jory, 31);privée;Hors cible : 2 400 salariés, 250 M€ de CA;AA3
 FL Trans (Fayssac, 81);besoin;Trop petit (4 conducteurs + 4 salariés repris chez Transports Lombard), capacité insuffisante;AA3
@@ -68,7 +67,6 @@ Primmo Immobilier (Lyon / Monts d'Or);besoin;Dernier rachat documenté en 2014, 
 Logis Conseil (Châtenay-Malabry);besoin;Aucun rachat ni signal 2026 trouvé;BB2
 Synalp (gestion de patrimoine, Savoie);privée;Hors cible : cabinet de gestion de patrimoine, pas un administrateur de biens immobiliers;BB2
 Citya Immobilier (reprise Square Habitat Nord de France);doublon;Consolidateur national (55 agences reprises, ~500 salariés), hors cible groupe régional indépendant, comme Evoriel;BB2
-Groupe Pozzo (Pozzo Immobilier);contrôle qualité;QA : source du téléphone incertaine (post LinkedIn 2023 ou annuaire, non confirmé);BB2
 Groupe Riester (Coulommiers, 77);score;Signal réel (Hyundai Compiègne racheté à Mary, XPENG Saint-Maximin, Leapmotor Beauvais, 30+ concessions, deux versions de mentions légales) mais seul email = DPO nominatif (gaelle.verpy@riester.fr) et téléphone d'une concession : score 68;BB3
 Transports Rabouin SAS (Le Cellier, 44);score;Candidat Transporteur de l'année 2026, exploitation@rabouin.com et 02 40 25 37 00 trouvés, mais aucun besoin digital documenté (seulement deux sites rabouin.com / grouperabouin.fr) : score 61;BB3
 Groupe Simon / Transports Simon (Rethel, 08);email;Candidat Transporteur de l'année 2026 (80 ans, 350 salariés) mais aucun email, téléphone ambigu (confusion avec un homonyme normand);BB3
@@ -238,16 +236,64 @@ La Route (reprise Fredon Logistique International);besoin;Transporteur de Girond
 Artemis Design & Build (rachat Clue Me);score;Rachat d'août 2023, hors fenêtre;DD6
 Brique House;besoin;Brasseur lillois, hors Île-de-France;DD6
 Batisanté (rachat Techmo Hygiène);privée;"Réseau national de taille importante, siège hors IDF ; non approfondi";DD6
-Cobalys;contrôle qualité;"QA : source de l'email mêlée à Corporama ; filiale d'un groupe coopératif de 1 200 salariés";DD6
 Groupe Prismeo (transport, Houplines, 59);email;"Deux recherches dédiées (mentions légales, @prismeo) : aucune adresse email publiée ; en outre ~1000 salariés/12 sites selon Hellowork, taille limite";DD7
 Brasserie Akerbeltz (Ascain, 64);besoin;Aucun signal 2026 : dernier investissement connu (800 k€, distillerie) en 2017;DD7
 Groupe Ogeu (eaux minérales);besoin;Aucun signal daté 2026 (rachats Luchon, Plancoët… anciens);DD7
 Campings Tikayan (Sud Est Investments, Agay/Le Muy, 83);score;Email ce@tikayan.fr et tél. 04 94 82 16 04 trouvés, site CE encore sous l'ancien nom (comites-entreprises-sudestvacances.fr), mais dernier rachat (16e camping) en mars 2024 : signal trop ancien;DD7
 ClicoChic (camping Les Bastets, Marsanne, 26);privée;Marque rattachée au groupe Capfun (dpo@capfun.com) : grand groupe;DD7
 Capfun / Sandaya / Yelloh! Village / Flower Campings;score;Grands groupes/chaînes HPA vus sur ot-campings.com, inaccessibles;DD7
-Groupe Seasonova;contrôle qualité;QA : source du téléphone incertaine (résumé multi-pages / page non vue);DD7
 Slow Village (Inspire Villages / Groupe Inspire);contrôle qualité;QA : source du téléphone incertaine (résumé multi-pages / page non vue);DD7
-La Trinitaine (Biscuiterie La Trinitaine);contrôle qualité;QA : source du téléphone incertaine (résumé multi-pages / page non vue);DD7
+Summer Hotels (Nice, rachat Best Western Plus Cosy Nice, juillet 2026);email;"Email masqué sur les mentions légales officielles ; contact@summerhotelsgroup.com (agrégateurs ZoomInfo/ContactOut) et contact@summerhotelsgroup.fr (résumé ambigu) non confirmés ; seul rh@ vu ; téléphones divergents (04 92 00 10 18 / 04 92 00 14 05)";EE1
+Mellow Mood Hôtels Collection (Montpellier, rachat Le Marquis de la Baume Nîmes 2026);email;"Aucun email ni téléphone du groupe trouvé dans les résultats (mentions légales mellowmood.fr non indexées) ; site central mellowmood.fr avec réservation directe déjà en place";EE1
+Sowell Hôtels & Résidences (SAS Sofisol, Aix-en-Provence, rachat 2 sites Lot-et-Garonne 2026);besoin;"Coordonnées trouvées (reservation@sowell.fr, 04 13 91 00 54) mais site central sowell.fr avec moteur de réservation propre : aucun besoin observable sourcé ; email de réservation peu adapté";EE1
+Groupe Eoden (rachat Courtyard by Marriott Montpellier);besoin;"Hôtel sous enseigne Marriott : site et réservation gérés par la chaîne ; signal non daté 2026 confirmé";EE1
+Vacances Bleues (Marseille, reprise Castel Luberon / Club Le Grand Air Oléron);privée;Structure associative de tourisme, hors cible;EE1
+Akena Hôtels (Nantes);besoin;Ouverture (pas un rachat), chaîne avec site central et réservation intégrée;EE1
+Épopée Gestion / Vicartem (rachat Escale Oceania Pornichet);doublon;"Vicartem déjà traité (Younight Hospitality) ; Épopée Gestion = société d'investissement";EE1
+Boch & Frères (Mâcot-la-Plagne, 73, rachat par SPO Invest);email;Signal rachat 2026 OK (groupe-ecomedia.com/travaux-publics-spo-invest-rachete-boch-freres/), tél 04 79 09 78 59 trouvé, mais aucun email publié (site, mentions légales, annuaires);EE2
+Altivio / Groupe Stebat (Albertville, 73);email;"Déjà dans EXCLUSIONS ; relance demandée pour email non-RH : contact@groupe-stebat.fr n'apparaît que dans un résumé mêlé à rocketreach, non confirmé par une recherche dédiée (source incertaine). Tél 04 79 10 42 15 trouvé. Lien Altivio non documenté";EE2
+Techmeta (Epagny Metz-Tessy, 74, rachat Bodycote Haute-Savoie devenu Techmeta Welding);score;Email contact@techmeta.com et tél +33 4 50 27 20 90 (techmeta-engineering.com/en/contact-2/) mais date du rachat non établie (urgence plafonnée à 12), besoin numérique faible, industriel machines spéciales : score estimé 57/100;EE2
+Batim'Alu (Saint-Étienne, 42);doublon;Filiale du Groupe Micholet, déjà en EXCLUSIONS;EE2
+Robaut Conception (Sainte-Hélène-du-Lac, 73, groupe Siléane);email;"Aucun email générique publié (seulement format nominatif deviné par contactout) ; rachat daté 2022";EE2
+Pracartis (Peillonnex, 74, rachat GM Érosion);preuves;"Rachat daté de juin 2023, pas de signal 2026 ; coordonnées non trouvées";EE2
+Entreprise Paret (Villefontaine, 38);email;Aucun email ni téléphone dans les résultats;EE2
+Groupe Réguillon (Nord-Isère, ouverture site Belmont-Tramonet);privée;"Hors cible taille (400 salariés > plafond 300 de la mission) ; non creusé";EE2
+Léon Grosse (rachat Grupo IC);score;Grand groupe BTP (plusieurs milliers de salariés), hors cible;EE2
+Jarnias (rachat Hydrokarst);score;750 salariés après rachat, hors cible 20-300;EE2
+Gardeners / Savoie Micro;privée;Agence de communication et intégrateur informatique : concurrents / métier numérique, exclus;EE2
+Groupe Fast / Sovetours;score;Rachat Voyages Goujeau daté de 2024 (pas 2026) et groupe de plus de 2 600 salariés, hors cible PME;EE3
+Arzel Management (hôtels Demain, Oldegar, Le Lieu Dit);email;"Email groupe vu sur un domaine différent du site officiel (source incertaine), seul téléphone groupe = mobile ; structure très petite (capital 10 k€)";EE3
+HorizonH / Edicia;privée;Edicia est un éditeur de logiciels (concurrent), exclu;EE3
+Dynamips (rachat UpLink);privée;Acteur télécom/IT, métier numérique proche de Capmedia;EE3
+Vkard (rachat Cardynale);privée;Solution numérique de cartes de visite digitales : éditeur, concurrent potentiel;EE3
+Next Pack (acquisition Inapa Packaging);preuves;Budget de recherches épuisé avant vérification des coordonnées et du besoin;EE3
+Tôlerie Service (Mayenne);preuves;Agrandissement repéré (JDE 2135322) mais non vérifié faute de budget;EE3
+Noxi Agencement;contrôle qualité;"QA : page source de l'email incertaine (résumé multi-pages) ; téléphone une seule source";EE3
+Blanchisserie du Maine;contrôle qualité;QA : page source de l'email incertaine (résumé multi-pages);EE3
+Groupe Hygifie (La Financière de Hygifie, Saint-Étienne, rachat ALPHA 74 / LCM / N2S);preuves;"contact@hygifie.com (hygifie.com/contact) et 04 77 41 05 71 (pages hygifie.com) trouvés, mais le rachat triple (fusacq a256946) n'a pas de date de publication visible (probablement fin 2025/début 2026) ; le téléphone n'a pas de 2e source ; score estimé à 70 au mieux avec urgence plafonnée à 12 : non retenu. Piste à revoir si la date 2026 est confirmée";EE4
+Groupe Anemos (Chrono'Propre / AQS / New'R, Saint-Grégoire);score;Coordonnées trouvées (contact@groupeanemos.fr, 0 805 62 00 79, page contact) mais les signaux (rachat HCM par AQS, nouveau siège) datent de 2025 : aucun signal daté 2026;EE4
+2'NM Propreté (Bayeux);doublon;Filiale du Groupe JBS, déjà traité;EE4
+Chrome Nettoyage (Blois / Chartres, rachat Everclean);score;Rachat Everclean et agence de Bourges datent de 2021, rien en 2026;EE4
+LMC Services (rachats ECA Propreté, Nickel Star);doublon;Déjà traité;EE4
+NSI Groupe (RM Propreté, EPSO, Ashub);doublon;Déjà traité;EE4
+Ecoclean Services (Lotis, Execo, ELP, Nani);doublon;Déjà traité (Ecoclean Services Clichy);EE4
+Spie batignolles paysage (rachat ID Jardins);doublon;"Déjà traité ; grand groupe";EE4
+Atalian Servest (Cadiou, Traversier Nettoyage);score;Très grand groupe, inaccessible pour Capmedia;EE4
+GSF (rachat Ithaque / Pénélope);score;Très grand groupe, inaccessible pour Capmedia;EE4
+Aber Propreté (agence du Havre);doublon;Déjà traité;EE4
+Caves Jules Gautret / Jules Gautret (Cognac-Jonzac, SIREN 839840220);score;"Lancement d'une liqueur en septembre 2026 et plusieurs sites (julesgautret.fr, lescavesjulesgautret.com), email nominatif cdufaure@ trouvé sur cirkwi.com, tél. 05 46 06 49 99 ; mais article JdE non daté, pas de besoin digital explicite : 66/100";EE5
+Domaine / Vignoble des Terre-Neuvas (Laurent Houzé, Erquy, 22);téléphone;"Premier millésime mis en bouteille en avril 2026 ; seul un email gmail trouvé, aucun téléphone dans les résultats ; très petite structure";EE5
+Domaine Uma (Emmanuel Clausel, Valflaunès, 34);besoin;Domaine créé avant 2026 (article Vitisphere ancien), site officiel déjà en place, seul un mobile 06 en contact : aucun signal 2026;EE5
+Les Fumées Blanches (rachat par le groupe Boisset, août 2026);score;Acheteur grand groupe (Boisset), décideur inaccessible, marque intégrée au groupe;EE5
+Château Virant (Coteaux d'Aix-en-Provence);score;Rachat en MBI daté de décembre 2024 : signal trop ancien;EE5
+Murgier Distribution (Groupe Murgier);contrôle qualité;QA : page source de l'email incertaine (résumé sans page);EE5
+Maison Alsacienne de Biscuiterie (Colmar, reprise par Raphaël Kiesele);email;"Aucun email publié visible (formulaire de contact uniquement) ; téléphone 03 89 21 85 10 trouvé";EE6
+Cocorico & Co / Brasserie Les Deux Amants (Rouen / Val-de-Reuil);score;"Rachat daté de mai 2025 (> 6 mois, pas de signal 2026) ; seul téléphone trouvé = mobile 06 ; score estimé < 70";EE6
+Aux Trois Cigognes (Bondues, 59 — Biscuiteries Tourniayre, Dutoit, La Mère Poulard);email;"Aucun email du groupe trouvé ; seul email vu = boutique.usine@merepoulard.com (domaine de l'ancien propriétaire, source de résumé incertaine, site breton hors zone) ; rachat annoncé oct. 2025";EE6
+Nigay SAS (Feurs, 42 — 3e site à Saint-Quentin, 30 M€);email;"Aucun email publié visible (formulaire de contact) ; effectif 250-499 hors cible ; tél 04 77 26 21 33 trouvé";EE6
+Fortwenger (Gertwiller, 67 — pains d'épices + Fortwenger Chocolaterie Molsheim);score;"Coordonnées trouvées (info@fortwenger.fr, 03 88 08 96 06, fiche office de tourisme) mais signal de rachat Cémoi daté de sept. 2023 / 2024, aucun signal 2026 trouvé ; score estimé ~57 < 70";EE6
+Méo-Fichaux (La Madeleine, 59 — relance marque Legal 2026);privée;"Hors cible : 300 salariés / 300 M€ CA (au-delà de 20-250) ; coordonnées non recherchées faute de budget";EE6
+Klein & Wanner (Ingwiller, 67 — filiale Terroirs Distillers / Picard Vins & Spiritueux);email;"Aucun email ni téléphone complet visible ; filiale de groupe (décision au niveau PVS) ; pas de signal rachat/investissement 2026";EE6
 Bureau Alpes Contrôles;score;DSI d'une trentaine de personnes, offre développeur web référencée janvier 2026 : fit et urgence faibles (<70);T01
 Primal (ex-Solem);score;"Fabricant IoT avec équipes de développement internes ; téléphone non trouvé ; fit faible";T01
 LIP Tertiaire;privée;Agence d'intérim/recrutement : l'offre est pour un client, pas un besoin propre;T01
@@ -294,7 +340,6 @@ La Mie Câline;preuves;Aucune note ni plainte d'app visible dans les résultats;
 Feuillette;besoin;Pas d'app client identifiée (fidélité par SMS/carte);T05
 Monday Sports Club;preuves;Une seule difficulté de connexion, résolue par l'utilisateur;T05
 Club Connect – GF;privée;Éditeur d'app marque blanche pour salles (métier = logiciel), non cible;T05
-Capitole Taxi;contrôle qualité;"QA : source de l'email non traçable (résumé sans page) ; téléphone contradictoire entre deux sources (…50 / …55)";T05
 Camping Naturiste Millefleurs (Gudas, 09);score;Signal extension 2025/2026 + réservation par formulaire avec confirmation manuelle, mais petite structure et signal peu daté : 67/100;T06
 Escape Max (Cormeilles-en-Parisis);email;Aucun email visible dans les résultats;T06
 Krapa Park / projet complexe loisirs Les Sétives (Bourgoin-Jallieu, 38);email;Signal daté fév. 2026 (projet 15 M€, ouverture fin 2027) mais email/téléphone non vérifiés : quota WebSearch de la session épuisé;T06
@@ -422,7 +467,6 @@ Delta Agency (Delta Festival);privée;SAS en liquidation judiciaire (août 2026)
 French Flair Agency (French Flair, Paris);email;Recrute un chef de projet digital & événementiel mais aucun email/téléphone publié dans les résultats;V06
 Stade Français Paris (SASP);email;Nouveau président (François Lhospitalier, avril 2026) et réorganisation revenus/infrastructures, téléphone trouvé (01 46 51 00 75) mais aucun email publié dans les résultats;V06
 Groupe Doublet (intégration d'Ideactif, Avelin);score;"Intégration d'Ideactif finalisée en janvier 2026 mais aucun besoin digital observé ; email du résumé (contact@doublet.com) non rattaché avec certitude au site doublet.fr ; score estimé 62/100";V06
-Clermont Foot 63 (SASP);contrôle qualité;"QA : email vu dans un résumé mêlant plusieurs pages du club ; page source non confirmée";V06
 H2O Piscines Concept (Fragnes-La Loyère, 71);email;Nouvelle agence juin 2026 + offre Bleu Pool, téléphone trouvé (03 85 41 06 55) mais aucun email publié dans les résultats;V07
 Caséo (Centrale Caséo, Saint-Laurent-Blangy, 62);score;"Réseau menuiseries/cuisines, 12 nouveaux points de vente mai 2025-mai 2026 ; email (appeler.fr) et tél 03 21 59 21 28 trouvés mais besoin uniquement inféré, preuves faibles : 69/100";V07
 Botanic (jardineries);score;"Réseau de 79 magasins/2500 salariés avec DSI interne ; ouvertures 2026 mais peu accessible pour Capmedia";V08
@@ -490,7 +534,6 @@ Venidom (Venidom France, Coulounieix-Chamiers, 24);email;Mentions légales trouv
 JMT Le Royaume des Animaux;besoin;Non traité : quota de 22 recherches épuisé.;X01
 Cuisines Raison;besoin;Non traité : quota de 22 recherches épuisé.;X01
 Les Services d'Aline;besoin;Non traité : quota de 22 recherches épuisé.;X01
-La Brigade (street food carnivore — Big Str'EAT SAS / La Brigade Expansion);contrôle qualité;QA : source du téléphone supposée (fiche PagesJaunes citée par défaut, non lue dans le résultat);X01
 FC Girondins de Bordeaux (SASP);besoin;Coordonnées trouvées (contact@girondins.com, 08 92 68 34 33) mais club maintenu en Régional 1 et en route vers la liquidation (sept. 2026) : pas de capacité d'investissement.;X02
 Sélestat Alsace Handball (SASP Alsace Promo Handball);score;Promu en Starligue 2026-27, coordonnées trouvées (secretariat@sa-hb.com, 03 67 17 60 80) mais besoin digital faible (seul signal : post billetterie « à nouveau accessible » non daté) et budget modeste : 68/100.;X02
 AS Monaco Basket;privée;Hors France (Monaco) et non maintenu en championnat professionnel français malgré nouvel investisseur (août 2026).;X02
@@ -602,7 +645,6 @@ Youpi Parc (SA Youpi Parc France);téléphone;Email contact@youpiparc.com trouv�
 Jump Session (Vannes);besoin;Parc unique repris, hors cible 5-50 sites;Y06
 Climb Up (réseau escalade);preuves;32 salles, levée envisagée 2026-2027, mais signal non daté 2026 et coordonnées non recherchées faute de quota;Y06
 Armoric Sports (Saint-Brieuc, 22);besoin;3 clubs de padel seulement, aucun besoin digital documenté;Y06
-4PADEL (exploité par Le Five SAS);contrôle qualité;QA : source du téléphone incertaine (résumé mêlant page centre et annuaires);Y06
 Olympic Location (Marseille);score;Rachat de Lutam (juin 2026) mais activité surtout location de voitures B2C, besoin digital non documenté, source exacte de contact@olympiclocation.com incertaine (résumé multi-pages) : score estimé 64.;Y07
 Manuloc (Metz);score;1 400 salariés, 400 M€ de CA (hors cible PME) et dernière acquisition connue en 2024 : signal pas récent.;Y07
 Guibout Matériaux;doublon;Déjà dans la liste d'exclusions.;Y07
