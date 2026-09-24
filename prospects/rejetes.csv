@@ -73,3 +73,65 @@ Ceralp;doublon;Intégré à la fiche Groupe Cofimé (fusion);T08
 Shaka School (Neuville-de-Poitou);email;Ouverture 07/06/2026 mais ni email ni téléphone trouvés (budget de recherche épuisé);T08
 École de restauration près de Toulouse (monpoleformation.fr);privée;Structure non nommée dans l'article, statut et contacts non vérifiables;T08
 AFDI (Agence Française De l'Immobilier);contrôle qualité;score < 70;T08
+Cafés BOC (Le Mans);score;Coordonnées OK (bienvenue@cafesboc.fr, 02 43 24 19 06) et signal Révélations Franchise 2026, mais e-shop déjà en place et besoin non documenté : score estimé 68;U01
+Family Plus (Lyon/Paris);score;"Lancement franchise 2026 (3 premières franchises) ; seuls emails d'agences trouvés (tête de réseau non identifiée), signal non daté précisément : score estimé 65";U01
+Rénovert (groupe Hexaom);score;contact@renovert.fr + 04 72 53 17 81 trouvés, mais filiale d'un groupe coté (Hexaom) avec outils groupe : fit et accessibilité faibles, score estimé 62;U01
+Work&You (Estillac);score;contact@workandyou.fr + 05 53 77 20 73 trouvés, mais aucun signal daté 2026 précis et outils digitaux déjà revendiqués : score estimé 60;U01
+Gyraya (Montpellier);téléphone;contact@gyraya.fr trouvé, signal ouvertures 2026 (Mérignac, Anglet) mais aucun téléphone de la tête de réseau dans les résultats;U01
+Novettino;email;"Mentions légales remontées = société homonyme Novetio (BTP) ; aucun email Novettino vu";U01
+Le Roi Solaire;email;Pages mentions légales/contact repérées mais email et téléphone non affichés dans les résumés;U01
+Yatta! (Yatta! Group, Annecy);email;"Plusieurs entités homonymes (Yatta Bento, Yatta Ramen) ; aucun email de la tête de réseau";U01
+Verébo (Groupe Verebo, Latresne);email;Formulaire de contact uniquement, ni email ni téléphone dans les résumés;U01
+E-Cars Concept;email;Email et téléphone non affichés dans les résumés des mentions légales;U01
+Just'Fit (EMS);email;Seul un email/mobile d'un studio franchisé (Montferrier) trouvé, pas la tête de réseau;U01
+Chikin Bang;doublon;Déjà dans la liste EXCLUSIONS;U01
+Docteur Canalisation (Predator Liner SAS);contrôle qualité;"QA : email issu d'un résumé mêlant plusieurs mentions légales de sites locaux : page source exacte incertaine ; téléphone uniquement via annuaires";U01
+L'Egoïste (Toulouse);email;Offre Webmaster/E-commerce CDI (HelloWork 81510777, 21/07/2026) et tél. +33 9 52 37 80 03 trouvés, mais email masqué dans tous les résultats (FAQ legoiste.fr);U02
+Groupe Coravia (Bordeaux / Montastruc-la-Conseillère);email;"Offre Webmaster Groupe CDI (HelloWork 82604521, 24/08/2026) ; ETI 5,3 M€ capital ; aucun email ni téléphone visibles (mentions légales coravia.fr non restituées)";U02
+Azertyui (Malissard);privée;Société de conseil en systèmes/logiciels (concurrent), recrute un développeur WordPress pour ses propres prestations;U02
+Les Secrets de Loly (Paris 12e);score;Coordonnées OK (contact@secretsdeloly.com, 01 44 68 34 84) mais offre Responsable E-commerce orientée acquisition/growth (non datée), site Shopify déjà migré par l'agence Rainbow : fit Capmedia faible, score estimé 62/100;U02
+Club Employés (Lyon);privée;Plateforme numérique CSE (éditeur/tech), recrute développeur WordPress en interne;U02
+Weldom;privée;Grand réseau national (non PME), exclu par consigne;U02
+Anthills / Manpower (Ligne Roset) / Altaide / OPTEVIA;privée;Offres publiées par cabinets de recrutement/intérim, employeur final masqué ou grand groupe;U02
+Viveris / NEXA Digital School / 2i Academy / Digital Collège;privée;ESN ou écoles (offres d'alternance de formation), exclus;U02
+MyPiscine (JN3S, Colomiers);score;Email sav@mypiscine.com confirmé (SAV, zendesk et pages mypiscine.com) et téléphone 05 34 26 91 40 lu dans les mentions légales. Marque SwimExpert lancée en mai 2026 avec électrolyseur connecté pilotable depuis une application dédiée qui existe déjà. Pure player e-commerce de 18 M€ probablement équipé en interne, et seule l'adresse SAV est disponible : score estimé 67;U03
+DCMA (Beaucouzé);email;3 recherches dédiées : aucun email ni téléphone dans les résultats (seulement PagesJaunes et annuaires sans coordonnées affichées);U03
+Avenir Rénovations;besoin;contact@avenir-renovations.fr et 01 72 54 00 71 trouvés dans les mentions légales, mais c'est un réseau de plus de 240 agences, élu meilleure enseigne 2026, dont la tête de réseau est structurée : aucun besoin numérique documenté;U03
+Marquis Transports (Téteghem);besoin;Téléphone +33 3 28 26 90 00 vu. Les emails vus (nominatif de l'ancien dirigeant et adresse wanadoo) viennent d'annuaires sans source nette. Passage à la 3e génération à l'automne 2025, mais aucun projet numérique documenté;U03
+Acorus (antenne Toulouse);score;Groupe d'environ 1 900 salariés, probablement doté d'une DSI : faible accessibilité et faible adéquation. Non recherché de nouveau pour économiser le quota;U03
+Kleyling France;besoin;Extension logistique de 7,5 M€ en Alsace sans besoin web ou mobile documenté. Non recherché de nouveau pour économiser le quota;U03
+Cleansoft services & solutions (Aubagne);email;Nouvelle agence à Grenoble (JDE, 20/05/2026), 60 salariés. Téléphone 04 42 32 78 78 vu mais aucun email (formulaire de contact seulement);U03
+Les Nettoyeurs (Montpellier);besoin;Intégrés au groupe Immopropre (1 500 salariés) en juin 2026 : les décisions numériques reviennent au groupe;U03
+La Foir'Fouille (FF Digital);score;App fidélité avec bugs de connexion documentés, mais seul l'email du service clients est trouvé (via un annuaire tiers), note non confirmée sous 3,5 : score 66;U04
+Mégarama (cinémas);besoin;Nouvelle app récente sur plateforme de billetterie imsWeb (marque blanche), aucune note ni aucun bug relevé;U04
+Cinéville (Les Cinémas Cinéville);besoin;App de billetterie probablement en marque blanche, aucune note ni avis négatif dans les résultats;U04
+N'PY;privée;Groupement de stations à capitaux publics/SEM, et aucune difficulté d'app relevée;U04
+Speed Rabbit Pizza;besoin;Aucune app propriétaire trouvée sur l'App Store FR;U04
+L'Orange Bleue;doublon;"App ClubConnect (marque blanche, Club Connect déjà exclu) ; avis plutôt positifs";U04
+Magic Form;besoin;App jugée « très complète » dans les avis, aucune difficulté relevée;U04
+ADA (Ada Mobilités);besoin;"Filiale d'un grand groupe (Rousselet) ; seuls des avis sur la facturation, pas de défaut d'app documenté";U04
+V and B;besoin;Seule l'app festival V and B Fest' trouvée, aucune difficulté relevée;U04
+Brioche Dorée;score;Groupe Le Duff : grand groupe hors cible PME/ETI malgré les avis de connexion;U04
+Krapa Park / projet complexe loisirs Les Sétives (Bourgoin-Jallieu, 38);email;Téléphone trouvé (04 74 28 23 76, PagesJaunes/krapa-park.fr) mais aucun email : le site n'a qu'un formulaire, et les recherches mentions légales et @krapa-park.fr n'ont rien donné;U05
+Groupe Annie Famose;email;"Téléphone 04 50 74 20 60 trouvé ; seul email visible : recrutement@afgroupe.com (RH, pas une adresse commerciale) ; aucune adresse contact ni presse";U05
+Domaine de la Ferme de Fourges (salle de réception);score;Coordonnées trouvées (contact@ferme-de-fourges.com, 06 83 32 51 48, ferme-de-fourges.com/contactez-nous) et nouvelle orangerie de réception ouverte en 2026, mais aucun besoin digital observé : site récent déjà en ligne, présence sur mariages.net. Petite structure. Score estimé 64/100 (15+12+13+5+9+10);U05
+Complexe padel premium Vertou (sud Nantes, projet 6,5 M€);email;"Complexe sans nom à ce jour ni structure identifiée (porteur : Cedrik Kerdilès, DG de Galeo) ; ouverture fin 2026 ; aucune coordonnée propre";U05
+Groupe HFP Loisirs (Central 8, Speedpark Le Mans);email;"Téléphone 02 43 29 29 71 trouvé et ouvertures Central 8 en 2026 (Châteaubriant, sud du Mans) ; aucun email générique publié, seulement un format nominatif deviné par RocketReach (interdit)";U05
+Karrousel (Le Versoud, 38);email;"Ouvert le 3 décembre 2025 (6 M€, 10 000 m²), téléphone 06 85 89 38 19 trouvé ; aucun email visible (@karrousel.fr ne renvoie que des réseaux sociaux)";U05
+Dentego (Adental Groupe, siège Boulogne-Billancourt);score;"Coordonnées siège trouvées (contact@dentego.fr, 01 75 90 90 00) mais ~100 centres, LBO >200 M€ repris par le créancier Tikehau : grand groupe difficile d'accès, parcours patient déjà digitalisé (ClicRDV, Avis Vérifiés), aucun besoin explicite ; score estimé 64";U06
+Sarool (AGX Informatique);privée;Éditeur de logiciel pour auto-écoles : métier = développement, concurrent;U06
+Ornikar / En Voiture Simone (rachat juin 2026);privée;Auto-écoles en ligne avec équipes tech internes (métier = plateforme numérique), groupe de ~278 salariés : pas un client Capmedia;U06
+ATSI / ATSI Forma'Log (Châteauneuf-les-Martigues, 13);score;Coordonnées trouvées (olivier.duport@groupeatsi.com, 01 64 27 07 89 via cseee.fr) et croissance (centre du Rheu ouvert en mars 2026, 29 centres, rachats), mais outils déjà en place (MyATSI Client, Stagiaire, Formateur) et aucun problème observé : score estimé 65;U06
+Alpivet (groupement vétérinaire, Saint-Ismier, 38);email;~40 cliniques, app iOS et extranet existants, mais aucun email du groupement (seulement contact@agence-mey.fr, adresse de leur agence) ni téléphone central;U06
+Skolae (campus Tours rentrée 2026) / Eduservices / ISEN / Purple Campus / EGC;privée;Grands groupes d'enseignement (Skolae, Eduservices), écoles associatives ou consulaires (ISEN, Purple Campus/CCI, EGC) : hors cible;U06
+Numans (Caluire-et-Cuire);email;Rachats AJC et Sodac 2026, téléphone 04 72 00 59 60 trouvé mais aucun email publié dans les résultats;U07
+Clarens Automobiles (Groupe Dubreuil);email;"Rebranding 2026 déjà doté d'un site clarens.auto ; aucun email/téléphone visible ; grand groupe";U07
+Amarris (Nantes);email;"Levée 39 M€ 2026 mais développe ses outils en interne ; aucun email visible";U07
+Groupe Archipel (Paris);email;Rachats 2026 (Avei'a, Prospective & Finance…) mais aucun email/téléphone dans les résultats;U07
+Maestro Syndic (Groupe Giboire);preuves;Signal de rachat daté 2023, pas de signal 2025-2026;U07
+L'Adresse (réseau immobilier);besoin;App existante repérée, aucun signal de besoin daté;U07
+Groupe DMD;contrôle qualité;"QA : email vu uniquement dans un résumé de recherche sur le domaine ; page source non confirmée";U07
+Normandie Textiles (Pierrecourt, 76);email;Signal fort (boutique en ligne en préparation, JDE 2026) mais aucun email/téléphone publié trouvé en 2 recherches;U08
+L'Équipe 1083 (Romans-sur-Isère);email;Nouveau magasin d'usine (FashionNetwork 2026) mais pas d'email publié dans les résultats;U08
+Kalamá Tata (Sixte de Poulpiquet);email;Jeune marque agro en forte croissance (500 magasins, LSA/Linéaires 2026) mais aucun email ni téléphone publié trouvé;U08
+Cafés Chocolats Voisin (Lyon);téléphone;"Signal 2026 (nouvelle boutique glaces Montplaisir, JDE) ; email accueil@chocolat-voisin.com vu (lyon-entreprises.com) mais aucun numéro complet dans les résultats ; 180 salariés/30 boutiques, besoin digital non documenté";U08

@@ -104,7 +104,7 @@ th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;le
   <header class="top">
     <div>
       <h1>Capmedia Radar</h1>
-      <p class="sub">Opportunités B2B documentées : email et téléphone trouvés, signal d'achat sourcé, score de qualification sur 100. Aucune prise de contact n'est faite depuis cette page.</p>
+      <p class="sub">Objectif : 1 000 opportunités B2B documentées : email et téléphone trouvés, signal d'achat sourcé, score de qualification sur 100. Aucune prise de contact n'est faite depuis cette page.</p>
     </div>
     <div class="live"><span class="dot" id="dot"></span><span id="liveTxt">connexion…</span></div>
   </header>
@@ -156,7 +156,7 @@ const link=(u,t)=>safeUrl(u)?`<a href="${esc(u)}" target="_blank" rel="noopener"
 function kpis(){
   const p=S.p, n=k=>p.filter(x=>x.niveau===k).length;
   const an=S.t.reduce((a,t)=>a+(+t.analysees||0),0), rj=S.t.reduce((a,t)=>a+(+t.rejetees||0),0);
-  const cells=[["Prospects retenus",p.length,""],["Très chauds (90+)",n("TRÈS CHAUD"),"hot"],["Chauds (80-89)",n("CHAUD"),"warm"],["Qualifiés (70-79)",n("QUALIFIÉ"),"ok"],["Entreprises analysées",Math.max(an,p.length+S.r.length),""],["Rejetées",Math.max(rj,S.r.length),""]];
+  const cells=[["Prospects retenus · objectif 1 000",p.length,""],["Très chauds (90+)",n("TRÈS CHAUD"),"hot"],["Chauds (80-89)",n("CHAUD"),"warm"],["Qualifiés (70-79)",n("QUALIFIÉ"),"ok"],["Entreprises analysées",Math.max(an,p.length+S.r.length),""],["Rejetées",Math.max(rj,S.r.length),""]];
   $("kpis").innerHTML=cells.map(([l,v,c])=>`<div class="kpi ${c}"><div class="l">${l}</div><div class="v">${v}</div></div>`).join("");
 }
 function bars(el,key){
@@ -231,6 +231,7 @@ render();
   if(!db){$("liveTxt").textContent="données en direct indisponibles dans cette vue";return;}
   $("dot").classList.add("on");$("liveTxt").textContent="en direct";
   const sub=(col,key)=>db.collection(col).onSnapshot(s=>{S[key]=s.docs.map(d=>({id:d.id,...d.data()}));render();$("liveTxt").textContent="en direct · maj "+new Date().toLocaleTimeString("fr-FR")},()=>{$("liveTxt").textContent="flux interrompu"});
-  sub("prospects","p");sub("rejets","r");sub("opposition","o");sub("equipes","t");
+  sub("prospects","p");
+  db.doc("synthese/etat").onSnapshot(d=>{const x=d.data()||{};S.r=x.rejets||[];S.t=x.equipes||[];S.o=x.opposition||[];render();$("liveTxt").textContent="en direct · maj "+new Date().toLocaleTimeString("fr-FR")},()=>{$("liveTxt").textContent="flux interrompu"});
 })();
 </script>

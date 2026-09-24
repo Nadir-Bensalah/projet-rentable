@@ -212,6 +212,153 @@
   "equipe": "T07"
  },
  {
+  "id": "U01-002",
+  "entreprise": "Quadra Terra (APHAÏA SAS)",
+  "siren": "918005539",
+  "secteur": "Tête de réseau franchise – création et entretien de jardins écoresponsables et potagers",
+  "ville": "La Teste-de-Buch",
+  "departement": "33",
+  "region": "Nouvelle-Aquitaine",
+  "site_web": "https://franchise.quadra-terra.com",
+  "email": "contact@quadra-terra.com",
+  "telephone": "05 40 27 81 08",
+  "source_email": "https://franchise.quadra-terra.com/mentions-legales/",
+  "source_telephone": "https://franchise.quadra-terra.com/mentions-legales/",
+  "contact_nom": "Christelle Cesa",
+  "contact_fonction": "Contact développement franchise (christelle.cesa@quadra-terra.com)",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "145 500 €",
+  "actualite": "Avril 2026 : 25 contrats signés et 13 agences ouvertes ou en cours ; objectif 35 contrats fin 2026 et 100 fin 2027 (interview du cofondateur Kevin Bernard, Franchise Magazine).",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Passage visé de 25 à 100 franchisés d'ici fin 2027 : besoin probable d'outils réseau (extranet franchisés, planification des entretiens récurrents, espace client suivi du jardin).",
+  "faits": [
+   {
+    "fait": "Fin mars 2026 : 25 contrats de franchise signés, 13 agences ouvertes ou en cours ; objectif 35 contrats fin 2026 et 100 fin 2027",
+    "url": "https://www.franchise-magazine.com/news-franchise/reseau-paysagistes-quadra-terra-avril-2026",
+    "source_type": "presse",
+    "date": "2026-04"
+   },
+   {
+    "fait": "Ouvertures annoncées : Balma, Castanet-Tolosan, Rouffiac-Tolosan, Martignas-sur-Jalles, Saussan, Montpellier",
+    "url": "https://lexpress-franchise.com/franchise/quadra-terra/actualites/",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "L'enseigne gère plusieurs sites distincts : quadra-terra.com, franchise.quadra-terra.com et shop.quadra-terra.com",
+    "url": "https://shop.quadra-terra.com/mentions-legales",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Un réseau qui veut quadrupler en 18 mois sur une activité d'entretien récurrent doit industrialiser la planification, le suivi client et l'animation des franchisés ; c'est typiquement le moment où l'on commande un outil métier ou une app.",
+  "opportunite": "Extranet franchisés + outil métier de planification/suivi des jardins (web et mobile), éventuellement espace client connecté aux sites existants.",
+  "service": "Outil métier / application réseau pour franchisés",
+  "signal_achat": "Plan de croissance daté : 35 contrats fin 2026, 100 fin 2027",
+  "urgence": "moyenne — plan annoncé en avril 2026, montée en charge fin 2026-2027",
+  "score_detail": {
+   "besoin": 16,
+   "urgence": 16,
+   "fit": 17,
+   "capacite": 6,
+   "accessibilite": 8,
+   "preuves": 10
+  },
+  "score": 73,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.franchise-magazine.com/news-franchise/reseau-paysagistes-quadra-terra-avril-2026",
+   "https://franchise.quadra-terra.com/mentions-legales/",
+   "https://lexpress-franchise.com/franchise/quadra-terra/actualites/",
+   "https://lexpress-franchise.com/franchise/quadra-terra/actualites/prochaine-ouverture-pour-quadra-terra/",
+   "https://www.observatoiredelafranchise.fr/creation-entreprise/franchise-quadra-terra-5781.htm"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Quadra Terra — objectif 100 franchisés en 2027",
+  "email_personnalise": "Bonjour,\n\nDans l'interview de Kevin Bernard publiée en avril par Franchise Magazine, j'ai lu que Quadra Terra vise 35 contrats fin 2026 et 100 fin 2027, contre 25 fin mars.\n\nSur une activité d'entretien récurrent, cette montée en charge pèse souvent sur la planification des passages, le suivi des jardins clients et l'animation des franchisés.\n\nCapmedia conçoit des outils métiers web et mobiles et des extranets pour réseaux en croissance.\n\nComment vos franchisés organisent-ils aujourd'hui leurs plannings et leur suivi client ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu votre objectif de 100 contrats de franchise fin 2027 dans Franchise Magazine. Vous étiez à 25 fin mars. Je voulais savoir qui s'occupe des outils numériques du réseau chez vous.",
+  "relance": "Autre angle : lorsqu'un nouveau franchisé ouvre, quels outils lui remettez-vous pour gérer ses clients et ses interventions ? C'est souvent là que l'on gagne le plus de temps au démarrage.",
+  "pourquoi_demain": "Plan chiffré et daté (x4 d'ici fin 2027) sur une activité récurrente qui dépend fortement de la planification : outil métier très pertinent.",
+  "equipe": "U01"
+ },
+ {
+  "id": "U07-001",
+  "entreprise": "WeMa (WEMA International Groupe)",
+  "siren": "500253802",
+  "secteur": "Expertise comptable, audit, conseil",
+  "ville": "Strasbourg",
+  "departement": "67",
+  "region": "Grand Est",
+  "site_web": "https://www.wema.fr",
+  "email": "sarreguemines@wema.fr",
+  "telephone": "03 88 30 12 21",
+  "source_email": "https://www.sarreguemines.fr/commerces/56-services/294-wema",
+  "source_telephone": "https://www.pagesjaunes.fr/pros/63023833",
+  "contact_nom": "Arnaud Bodier",
+  "contact_fonction": "Dirigeant (président du groupe)",
+  "linkedin": "",
+  "effectif": "430 salariés, 21 bureaux",
+  "capital": "",
+  "actualite": "2026 : LBO minoritaire avec Kresk Développement (20 %, 15-20 M€ + 105 M€ de dette Apera) pour financer croissance externe et transformation digitale (IA, facturation électronique). CA 2025 ~50 M€.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Transformation digitale annoncée (IA, facturation électronique) et intégration de cabinets rachetés : outils clients et internes à harmoniser.",
+  "faits": [
+   {
+    "fait": "WeMa ouvre son capital à Kresk Développement via un LBO minoritaire pour financer sa croissance externe et sa transformation digitale",
+    "url": "https://www.lejournaldesentreprises.com/article/le-cabinet-comptable-strasbourgeois-wema-ouvre-son-capital-pour-accelerer-sa-croissance-2145926",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "La transformation digitale par l'IA et la facturation électronique est présentée comme priorité stratégique ; 430 salariés, 21 bureaux, ~50 M€ de CA 2025",
+    "url": "https://www.laprofessioncomptable.com/article/vie-des-cabinets/wema-franchit-un-nouveau-cap-dans-sa-strategie-de-consolidation-avec-lentree-au-capital-de-kresk-developpement",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Opération également relayée par CFNEWS (LBO primaire) et Finyear",
+    "url": "https://www.cfnews.net/Les-alertes-de-CFNEWS/Wema-signe-un-LBO-primaire-709426",
+    "source_type": "presse",
+    "date": "2026"
+   }
+  ],
+  "inference": "Un groupe comptable qui consolide des cabinets et investit dans le digital doit unifier espace client, collecte de pièces, portails et outils internes des cabinets rachetés ; une partie de ces chantiers est souvent externalisée.",
+  "opportunite": "Proposer un audit rapide de l'espace client / des parcours de collecte de documents et un chantier d'outil métier (portail client unifié, tableaux de bord, intégration facturation électronique) pour les cabinets intégrés.",
+  "service": "Espace client / outil métier et dashboards",
+  "signal_achat": "LBO 2026 fléché sur croissance externe + transformation digitale",
+  "urgence": "moyenne à haute — financement fraîchement levé en 2026 et réforme facturation électronique en cours",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 16,
+   "fit": 14,
+   "capacite": 9,
+   "accessibilite": 5,
+   "preuves": 11
+  },
+  "score": 72,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lejournaldesentreprises.com/article/le-cabinet-comptable-strasbourgeois-wema-ouvre-son-capital-pour-accelerer-sa-croissance-2145926",
+   "https://www.lejournaldesentreprises.com/breve/le-cabinet-strasbourgeois-dexpertise-comptable-wema-ouvre-son-capital-kresk-developpement-2143456",
+   "https://www.laprofessioncomptable.com/article/vie-des-cabinets/wema-franchit-un-nouveau-cap-dans-sa-strategie-de-consolidation-avec-lentree-au-capital-de-kresk-developpement",
+   "https://www.cfnews.net/Les-alertes-de-CFNEWS/Wema-signe-un-LBO-primaire-709426",
+   "https://www.pagesjaunes.fr/pros/63023833",
+   "https://www.sarreguemines.fr/commerces/56-services/294-wema"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "WeMa — outils clients après l'entrée de Kresk au capital",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu que WeMa a fait entrer Kresk Développement à son capital pour financer sa croissance externe et sa transformation digitale, avec l'IA et la facturation électronique en priorité.\n\nQuand plusieurs cabinets rejoignent un groupe, les espaces clients, la collecte de pièces et les tableaux de bord internes restent souvent hétérogènes pendant un moment.\n\nCapmedia conçoit des espaces clients, outils métiers et dashboards sur mesure, et peut démarrer par un audit court de l'existant.\n\nQui pilote ces sujets chez WeMa : pourriez-vous me mettre en relation ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu l'entrée de Kresk Développement au capital de WeMa, fléchée sur la croissance externe et la transformation digitale. Nous construisons des espaces clients et outils métiers pour des groupes en consolidation. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Avec la facturation électronique qui arrive, avez-vous prévu de faire évoluer le portail client commun aux 21 bureaux ? Je peux vous partager une méthode d'audit en 10 jours.",
+  "pourquoi_demain": "WeMa vient de lever des fonds explicitement pour sa transformation digitale et intègre des cabinets : c'est le moment où les chantiers outils se décident.",
+  "equipe": "U07"
+ },
+ {
   "entreprise": "Société Française de Garantie (SFG)",
   "siren": "391952264",
   "secteur": "Assurance / garanties et réparation d'appareils (filiale WERTGARANTIE)",
@@ -282,6 +429,177 @@
   "score": 72,
   "niveau": "QUALIFIÉ",
   "date_verification": "2026-09-24"
+ },
+ {
+  "id": "U05-001",
+  "entreprise": "Monky (groupe de complexes de loisirs indoor)",
+  "siren": "",
+  "secteur": "Loisirs indoor multi-activités (bowling, laser game, karting, jump park, bar-restaurant)",
+  "ville": "Estillac (Agen)",
+  "departement": "47",
+  "region": "Nouvelle-Aquitaine",
+  "site_web": "https://monky.fr/",
+  "email": "contact@monky.fr",
+  "telephone": "05 33 08 09 10",
+  "source_email": "https://monky.fr/estillac/contact",
+  "source_telephone": "https://monky.fr/estillac/contact",
+  "contact_nom": "Jérôme et Anthony Delbos",
+  "contact_fonction": "Cofondateurs",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Ouverture à Niort (79) prévue en novembre 2026, après Agen (2021), Laval (2024), Mont-de-Marsan et Châteauroux ; Carcassonne et près de Bordeaux annoncés pour 2026.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Outils de réservation, de fidélité et de gestion communs à un réseau de parcs en forte croissance",
+  "faits": [
+   {
+    "fait": "Monky ouvrira à Niort (Deux-Sèvres) en novembre 2026 ; travaux lancés au premier trimestre 2026 ; parcs actifs à Agen, Laval, Mont-de-Marsan et Châteauroux",
+    "url": "https://www.lejournaldesentreprises.com/article/dagen-niort-le-grand-bond-des-complexes-de-loisirs-indoor-monky-2140247",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Annonce officielle d'un parc Monky à Niort en 2026",
+    "url": "https://niortinfo.media/parc-loisirs-indoor-monky-niort-2026/",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Implantations annoncées : Agen, Laval (2024), Mont-de-Marsan (2025), Châteauroux (2025), Carcassonne (2026), près de Bordeaux (2026) ; parcs de 3 000 à 11 000 m²",
+    "url": "https://monky.fr/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Le parc d'Agen apparaît sous deux arborescences du site (monky.fr/agen/... et monky.fr/estillac/...)",
+    "url": "https://monky.fr/estillac/contact",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Un réseau qui ouvre environ deux parcs par an doit faire tenir sur plusieurs sites la réservation (anniversaires, groupes, séminaires), la billetterie et la fidélité. Ces outils sont souvent à reprendre au moment d'une nouvelle ouverture.",
+  "opportunite": "Audit du parcours de réservation multi-parcs, puis refonte ou module de réservation unifié ; app mobile de fidélité et de réservation commune au réseau.",
+  "service": "Application web/mobile de réservation et fidélité multi-sites",
+  "signal_achat": "Ouverture d'un nouveau parc à Niort en novembre 2026 (expansion réseau)",
+  "urgence": "haute : ouverture à Niort dans environ 2 mois, et d'autres sites annoncés en 2026",
+  "score_detail": {
+   "besoin": 15,
+   "urgence": 16,
+   "fit": 15,
+   "capacite": 8,
+   "accessibilite": 6,
+   "preuves": 11
+  },
+  "score": 71,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lejournaldesentreprises.com/article/dagen-niort-le-grand-bond-des-complexes-de-loisirs-indoor-monky-2140247",
+   "https://niortinfo.media/parc-loisirs-indoor-monky-niort-2026/",
+   "https://monky.fr/",
+   "https://monky.fr/estillac/contact",
+   "https://www.findglocal.com/FR/Estillac/354374077919978/Monky-Agen"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Monky Niort — réservation et fidélité sur tous vos parcs",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu dans Le Journal des Entreprises que Monky ouvre à Niort en novembre 2026, après Agen, Laval, Mont-de-Marsan et Châteauroux, avec Carcassonne et Bordeaux annoncés.\n\nQuand un réseau passe de un à six ou sept parcs en quelques années, la réservation en ligne, les anniversaires, les offres entreprises et la fidélité client doivent souvent tourner sur plusieurs sites à la fois, avec les mêmes outils.\n\nCapmedia conçoit des sites web, des applications mobiles et des outils métiers pour des entreprises multi-sites : par exemple un parcours de réservation commun à tous les parcs, ou une app de fidélité.\n\nQui s'occupe de ces sujets chez vous ? Est-ce qu'un échange de 15 minutes aurait du sens avant l'ouverture de Niort ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que Monky ouvre à Niort en novembre, après Agen, Laval, Mont-de-Marsan et Châteauroux. Avec autant de parcs, la réservation et la fidélité client doivent fonctionner partout de la même façon. Je voulais savoir qui s'occupe des outils digitaux chez vous.",
+  "relance": "Autre angle : une app Monky commune à tous les parcs, avec des points de fidélité utilisables d'une ville à l'autre, pourrait faire venir aux ouvertures les clients des parcs existants. Voulez-vous que je vous envoie un exemple ?",
+  "pourquoi_demain": "Monky ouvre Niort dans environ deux mois et annonce d'autres parcs : c'est le moment où les outils de réservation du réseau sont revus.",
+  "equipe": "U05"
+ },
+ {
+  "id": "U08-001",
+  "entreprise": "Maison Stella & Suzie (Marmax Company)",
+  "siren": "833453442",
+  "secteur": "Mode / prêt-à-porter féminin (marque DNVB)",
+  "ville": "Toulouse",
+  "departement": "31",
+  "region": "Occitanie",
+  "site_web": "https://stellaetsuzie.com",
+  "email": "contact@stellaetsuzie.com",
+  "telephone": "09 83 49 12 75",
+  "source_email": "https://stellaetsuzie.com/en-us/pages/mentions-et-cgv",
+  "source_telephone": "https://stellaetsuzie.com/en-us/pages/mentions-et-cgv",
+  "contact_nom": "Margaux Minguez Lahana",
+  "contact_fonction": "Fondatrice",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Premier flagship parisien (120 m², 24 rue du Temple, Marais) ouvert au printemps 2026 ; CA 15 M€ en 2024",
+  "site_existant": "oui",
+  "app_ios": "oui",
+  "app_android": "oui",
+  "besoin": "Unifier web, application (Tapcart, solution no-code) et boutiques physiques après l'ouverture du flagship parisien",
+  "faits": [
+   {
+    "fait": "Stella & Suzie a ouvert sa première boutique parisienne au 24 rue du Temple (Marais), 120 m², au printemps 2026",
+    "url": "https://www.journaldutextile.com/stella-suzie-paris-flagship-le-marais",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Presse spécialisée : la marque peaufine l'ouverture de sa première boutique parisienne ; créée en 2019, 15 M€ de CA en 2024",
+    "url": "https://fr.fashionnetwork.com/news/Stella-suzie-peaufine-l-ouverture-de-sa-premiere-boutique-parisienne,1698464.html",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "L'application Android de la marque porte l'identifiant co.tapcart.app, c'est-à-dire qu'elle est générée par la plateforme Tapcart (application Shopify en marque blanche)",
+    "url": "https://play.google.com/store/apps/details?id=co.tapcart.app.id_Ony8bSlGLr&hl=en_US",
+    "source_type": "store",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Application iOS publiée sur l'App Store",
+    "url": "https://apps.apple.com/fr/app/maison-stella-suzie/id6472225610",
+    "source_type": "store",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Établissement secondaire parisien immatriculé (SIRET 833 453 442 00109, 75004)",
+    "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/83345344200109",
+    "source_type": "annuaire",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "FashionNetwork : la marque vise ensuite des implantations à Nice, Cannes, Marseille, Nantes, Strasbourg et Annecy",
+    "url": "https://fr.fashionnetwork.com/news/Stella-suzie-peaufine-l-ouverture-de-sa-premiere-boutique-parisienne,1698464.html",
+    "source_type": "presse",
+    "date": "2026"
+   }
+  ],
+  "inference": "Une marque digitale à 15 M€ qui passe au retail physique (Toulouse + Paris) avec une app template Tapcart va rencontrer des limites : stock boutique/web, fidélité commune, click & collect, outils vendeuses. Aucune équipe tech interne n'est visible (app no-code).",
+  "opportunite": "Audit du parcours omnicanal puis développement de briques sur mesure autour de Shopify : app mobile native (remplacement ou complément de Tapcart), programme de fidélité web+boutique, réservation en boutique, outil vendeuses.",
+  "service": "Application mobile / outils métiers omnicanal (audit + développement)",
+  "signal_achat": "Ouverture d'un flagship parisien en 2026 (expansion retail)",
+  "urgence": "moyenne — flagship ouvert au printemps 2026 et d'autres ouvertures en projet (Nice, Cannes, Marseille, Nantes…)",
+  "score_detail": {
+   "besoin": 15,
+   "urgence": 14,
+   "fit": 15,
+   "capacite": 9,
+   "accessibilite": 7,
+   "preuves": 11
+  },
+  "score": 71,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.journaldutextile.com/stella-suzie-paris-flagship-le-marais",
+   "https://fr.fashionnetwork.com/news/Stella-suzie-peaufine-l-ouverture-de-sa-premiere-boutique-parisienne,1698464.html",
+   "https://stellaetsuzie.com/en-us/pages/mentions-et-cgv",
+   "https://play.google.com/store/apps/details?id=co.tapcart.app.id_Ony8bSlGLr&hl=en_US",
+   "https://apps.apple.com/fr/app/maison-stella-suzie/id6472225610",
+   "https://annuaire-entreprises.data.gouv.fr/etablissement/83345344200059"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Stella & Suzie — web, app et boutique du Marais",
+  "email_personnalise": "Bonjour Madame Minguez Lahana,\n\nAvec le flagship du 24 rue du Temple ouvert ce printemps, Stella & Suzie vend désormais par trois canaux : le site Shopify, l'application (construite sur Tapcart) et deux boutiques physiques, Toulouse et Paris.\n\nÀ ce stade, les marques qui ouvrent des boutiques se heurtent souvent au même point : le stock, le compte client et la fidélité ne sont pas visibles de la même façon partout.\n\nCapmedia conçoit des applications mobiles et des outils métiers sur mesure, en prolongement de Shopify : réservation en boutique, fidélité commune au web et à la boutique, outils pour les vendeuses.\n\nQui s'occupe de ces sujets digitaux chez vous ? Je peux vous envoyer deux ou trois exemples concrets.\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu l'ouverture de votre boutique rue du Temple ce printemps. Votre application tourne sur Tapcart et vous avez maintenant deux boutiques physiques. Je voulais savoir qui s'occupe des sujets web et application chez vous.",
+  "relance": "Autre piste : un petit outil pour les vendeuses de Toulouse et du Marais, qui leur montre le stock en ligne et l'historique de la cliente. Voulez-vous que je vous montre à quoi cela peut ressembler ?",
+  "pourquoi_demain": "Une marque à 15 M€ qui vient d'ouvrir sa deuxième boutique avec une app template est exactement au moment où l'omnicanal sur mesure devient rentable.",
+  "equipe": "U08"
  },
  {
   "id": "T05-001",
@@ -364,6 +682,163 @@
   "equipe": "T05"
  },
  {
+  "id": "U04-001",
+  "entreprise": "France Taxi (application Allexi)",
+  "siren": "524119948",
+  "secteur": "Réservation de taxis / plateforme de mobilité",
+  "ville": "Paris",
+  "departement": "75",
+  "region": "Île-de-France",
+  "site_web": "https://allexi.fr/",
+  "email": "contact@france-taxi.com",
+  "telephone": "04 48 25 02 50",
+  "source_email": "https://paris-taxis.fr/contacter-france-taxi/",
+  "source_telephone": "https://allexi.fr/cgu/",
+  "contact_nom": "Daniel Prom",
+  "contact_fonction": "Dirigeant (représentant légal de France Taxi SAS)",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "1 500 €",
+  "actualite": "",
+  "site_existant": "oui",
+  "app_ios": "oui",
+  "app_android": "oui",
+  "besoin": "Application Allexi notée 1,6/5 sur l'App Store avec des avis sur des réservations introuvables",
+  "faits": [
+   {
+    "fait": "L'app iOS Allexi (éditeur France Taxi) affiche une note de 1,6/5 sur 17 avis",
+    "url": "https://apps.apple.com/fr/app/allexi/id1450288252",
+    "source_type": "avis store",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Un avis rapporte qu'après une réservation, le service client n'a retrouvé ni la réservation ni le profil au bout de 10 minutes d'attente",
+    "url": "https://apps.apple.com/fr/app/allexi/id1450288252",
+    "source_type": "avis store",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "France Taxi SAS, capital 1 500 €, 13 avenue d'Italie 75013 Paris, RCS 524119948, tél. 0 448 250 250, représentée par Daniel Prom",
+    "url": "https://allexi.fr/cgu/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "France Taxi publie aussi les apps France Taxi et Radio Taxis Saint Etienne",
+    "url": "https://apps.apple.com/fr/developer/france-taxi/id393321446",
+    "source_type": "avis store",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Une app de réservation grand public notée 1,6/5 perd des clients au profit des applis VTC ; le dysfonctionnement semble toucher la synchronisation réservation/profil (back-office), pas seulement l'interface.",
+  "opportunite": "Audit technique et QA de l'app Allexi et de son back-office de réservation, puis plan de correction ou de reprise (React Native) mutualisable avec les apps France Taxi et Radio Taxis Saint Etienne.",
+  "service": "Audit / reprise et maintenance d'application mobile",
+  "signal_achat": "App propriétaire notée 1,6/5",
+  "urgence": "moyenne : note très basse, mais avis non datés dans le résumé",
+  "score_detail": {
+   "besoin": 20,
+   "urgence": 10,
+   "fit": 18,
+   "capacite": 5,
+   "accessibilite": 8,
+   "preuves": 10
+  },
+  "score": 71,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://apps.apple.com/fr/app/allexi/id1450288252",
+   "https://allexi.fr/cgu/",
+   "https://paris-taxis.fr/contacter-france-taxi/",
+   "https://apps.apple.com/fr/developer/france-taxi/id393321446"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "À propos de l'app Allexi",
+  "email_personnalise": "Bonjour Monsieur Prom,\n\nEn regardant l'app Allexi sur l'App Store, j'ai vu qu'elle est notée 1,6/5. Un avis récent raconte qu'une réservation ne se retrouvait plus côté service client, pas plus que le profil du client.\n\nCe type de problème vient souvent de la synchronisation entre l'app et l'outil de réservation. Une note aussi basse peut aussi freiner les téléchargements face aux applis VTC.\n\nChez Capmedia, nous auditons et reprenons des apps iOS/Android existantes : diagnostic, corrections prioritaires, puis maintenance.\n\nSeriez-vous d'accord pour un échange de 15 minutes afin que je vous présente ce que nous avons relevé ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que l'app Allexi est notée 1,6/5 sur l'App Store, avec des avis sur des réservations introuvables. Je voulais savoir qui s'occupe de l'application chez vous.",
+  "relance": "Je me permets de revenir vers vous : les mêmes corrections pourraient profiter aussi à vos apps France Taxi et Radio Taxis Saint Etienne. Un audit rapide de l'ensemble vous intéresserait-il ?",
+  "pourquoi_demain": "Leur app grand public est notée 1,6/5 et le dirigeant est directement joignable.",
+  "equipe": "U04"
+ },
+ {
+  "id": "U03-001",
+  "entreprise": "Métal Performances",
+  "siren": "",
+  "secteur": "Chaudronnerie, tuyauterie et métallerie industrielle (inox)",
+  "ville": "Beignon",
+  "departement": "56",
+  "region": "Bretagne",
+  "site_web": "https://metalperformances.com/",
+  "email": "commercial@metalperformances.com",
+  "telephone": "02 97 75 73 93",
+  "source_email": "https://metalperformances.com/en/",
+  "source_telephone": "https://www.pagesjaunes.fr/pros/06750305",
+  "contact_nom": "Jimmy Fauchoux",
+  "contact_fonction": "Dirigeant",
+  "linkedin": "https://fr.linkedin.com/company/m%C3%A9tal-performances",
+  "effectif": "plus de 40 salariés",
+  "capital": "",
+  "actualite": "Investit 3 M€ en 2026 (extension de 1 500 m² et nouveaux outils de production) pour entrer dans l'aéronautique et la défense ; travaille sur l'IA et la donnée ; a fêté ses 20 ans en mai 2026.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Digitaliser et tracer ses processus pour répondre aux exigences aéronautique et défense",
+  "faits": [
+   {
+    "fait": "Métal Performances investit 3 M€ pour agrandir son site et ses outils de production, vise l'aéronautique et engage une réflexion sur l'automatisation et la digitalisation de ses processus (recrutement d'un apprenti en informatique industrielle)",
+    "url": "https://www.lejournaldesentreprises.com/article/metal-performances-investit-3-millions-deuros-pour-muscler-son-outil-industriel-2143484",
+    "source_type": "presse",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "L'entreprise familiale dirigée par Jimmy Fauchoux travaille sur l'intelligence artificielle et la donnée pour répondre aux exigences des marchés aéronautique et défense ; 2 M€ pour une extension de 1 500 m² et 1 M€ pour de nouveaux outils",
+    "url": "https://www.bretagne-economique.com/actualites/metal-performances-investit-3me-dans-son-outil-industriel/",
+    "source_type": "presse",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Métal Performances fête ses 20 ans et se tourne vers le spatial et l'aéronautique",
+    "url": "https://www.lesinfosdupaysgallo.com/2026/05/04/beignon-metal-performances-fete-ses-20-ans-la-tete-dans-les-etoiles/",
+    "source_type": "presse",
+    "date": "2026-05-04"
+   },
+   {
+    "fait": "L'email commercial@metalperformances.com et le téléphone 0297757393 apparaissent dans un résumé de recherche qui décrit le site officiel (non ouvert directement)",
+    "url": "https://metalperformances.com/en/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Pour être qualifiée par des donneurs d'ordre de l'aéronautique et de la défense, une PME de 40 personnes doit tracer ses fabrications (matières, soudures, contrôles). Elle cherche déjà comment digitaliser ses processus mais n'a pas d'équipe logicielle : un apprenti ne suffira pas pour construire un outil.",
+  "opportunite": "Un outil métier sur mesure de suivi d'atelier et de traçabilité (dossiers de fabrication, contrôles, photos terrain sur tablette) avec un tableau de bord pour la direction, relié aux outils déjà en place.",
+  "service": "Outil métier / digitalisation de processus (traçabilité de production, tableau de bord)",
+  "signal_achat": "Investissement de 3 M€ et réflexion engagée sur la digitalisation (2026)",
+  "urgence": "moyenne : investissement et réflexion en cours en 2026, qui précèdent l'entrée sur les marchés aéronautique et défense",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 15,
+   "fit": 13,
+   "capacite": 7,
+   "accessibilite": 7,
+   "preuves": 11
+  },
+  "score": 70,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lejournaldesentreprises.com/article/metal-performances-investit-3-millions-deuros-pour-muscler-son-outil-industriel-2143484",
+   "https://www.bretagne-economique.com/actualites/metal-performances-investit-3me-dans-son-outil-industriel/",
+   "https://www.lesinfosdupaysgallo.com/2026/05/04/beignon-metal-performances-fete-ses-20-ans-la-tete-dans-les-etoiles/",
+   "https://www.pagesjaunes.fr/pros/06750305",
+   "https://metalperformances.com/en/"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Métal Performances — digitalisation des processus et exigences aéro",
+  "email_personnalise": "Bonjour Monsieur Fauchoux,\n\nJ'ai lu dans Le Journal des Entreprises que Métal Performances investit 3 M€ pour aller vers l'aéronautique et la défense, et que vous réfléchissez à la digitalisation de vos processus.\n\nSur ces marchés, les donneurs d'ordre demandent souvent une traçabilité complète : matières, soudures, contrôles. Quand ce suivi reste sur papier ou dans des tableurs, il prend vite beaucoup de temps.\n\nChez Capmedia, nous concevons des outils métiers sur mesure : suivi d'atelier sur tablette, dossiers de fabrication, tableau de bord pour la direction.\n\nSeriez-vous d'accord pour un échange de 20 minutes afin de voir où en est votre réflexion ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que Métal Performances investit 3 millions d'euros pour aller vers l'aéronautique et réfléchit à la digitalisation de ses processus. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Je reviens vers vous sous un autre angle : un premier outil peut être très simple, par exemple la saisie des contrôles qualité sur tablette à l'atelier, puis évoluer avec vos certifications aéro.",
+  "pourquoi_demain": "Cette PME de 40 personnes a annoncé en 2026 qu'elle réfléchit à digitaliser ses processus pour entrer dans l'aéronautique, sans équipe logicielle pour le faire.",
+  "equipe": "U03"
+ },
+ {
   "entreprise": "L'Atelier Artisan Crêpier (SLB Holding)",
   "siren": "821612199",
   "secteur": "Restauration crêperie premium en franchise",
@@ -435,5 +910,92 @@
   "score": 70,
   "niveau": "QUALIFIÉ",
   "date_verification": "2026-09-24"
+ },
+ {
+  "id": "U04-002",
+  "entreprise": "Hypromat France (Eléphant Bleu)",
+  "siren": "738504448",
+  "secteur": "Réseau de centres de lavage automobile",
+  "ville": "Hoerdt",
+  "departement": "67",
+  "region": "Grand Est",
+  "site_web": "https://www.elephantbleu.fr/",
+  "email": "france@hypromat.com",
+  "telephone": "03 88 69 23 69",
+  "source_email": "https://franchise.elephantbleu.com/cr%C3%A9dits-et-mentions-l%C3%A9gales.html",
+  "source_telephone": "https://franchise.elephantbleu.com/cr%C3%A9dits-et-mentions-l%C3%A9gales.html",
+  "contact_nom": "Franck Rapold",
+  "contact_fonction": "Directeur Web (responsable de la publication)",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Paiement intégré et abonnement « L'Abonnement par Eléphant Bleu » ajoutés à l'app",
+  "site_existant": "oui",
+  "app_ios": "oui",
+  "app_android": "oui",
+  "besoin": "App de paiement du lavage notée 3,32/5, avec des bugs signalés sur l'ajout de carte bancaire et le lancement du lavage",
+  "faits": [
+   {
+    "fait": "Note moyenne de l'app Eléphant Bleu en France : 3,32/5 sur 68 notes (éditeur HYPROMAT France)",
+    "url": "https://worldsapps.com/fr/reviews-el%C3%A9phant-bleu",
+    "source_type": "agrégateur d'avis store",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Avis App Store : app jugée « très buggée », impossible d'ajouter une carte bancaire (message « les données n'ont pas pu être lues »), profil non enregistré",
+    "url": "https://apps.apple.com/fr/app/el%C3%A9phant-bleu/id1455323669?see-all=reviews&platform=iphone",
+    "source_type": "avis store",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Notes de version : corrections d'un bug empêchant le lancement du cycle de lavage ; utilisateurs signalant des échecs de paiement et un historique de lavages manquant",
+    "url": "https://apps.apple.com/fr/app/el%C3%A9phant-bleu/id1455323669",
+    "source_type": "avis store",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Mentions légales : Hypromat France SAS, 15 rue du Travail 67720 Hoerdt, tél. 03 88 69 23 69, france@hypromat.com, RCS Strasbourg 738 504 448",
+    "url": "https://franchise.elephantbleu.com/cr%C3%A9dits-et-mentions-l%C3%A9gales.html",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Franck Rapold cité comme Directeur Web responsable de la publication",
+    "url": "https://www.elephantbleu.com/mentions-legales-labonnement/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "L'app est le point de paiement des centres : chaque échec d'ajout de carte ou de lancement de lavage se traduit par une vente perdue ou un client mécontent sur site. Attention, l'agence Keyneo présente Hypromat comme client : un prestataire est peut-être déjà en place.",
+  "opportunite": "Audit QA mobile ciblé sur le parcours paiement (ajout de carte, lancement du cycle, historique) et proposition de renfort maintenance / tierce maintenance applicative.",
+  "service": "QA mobile et maintenance d'application",
+  "signal_achat": "App de paiement notée 3,32/5 avec bugs de paiement",
+  "urgence": "moyenne : bugs sur le parcours de paiement, avis non datés dans les résumés",
+  "score_detail": {
+   "besoin": 18,
+   "urgence": 10,
+   "fit": 15,
+   "capacite": 9,
+   "accessibilite": 7,
+   "preuves": 11
+  },
+  "score": 70,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://worldsapps.com/fr/reviews-el%C3%A9phant-bleu",
+   "https://apps.apple.com/fr/app/el%C3%A9phant-bleu/id1455323669?see-all=reviews&platform=iphone",
+   "https://apps.apple.com/fr/app/el%C3%A9phant-bleu/id1455323669",
+   "https://franchise.elephantbleu.com/cr%C3%A9dits-et-mentions-l%C3%A9gales.html",
+   "https://www.elephantbleu.com/mentions-legales-labonnement/",
+   "https://journalauto.com/services/elephant-bleu-boost-son-application-mobile/",
+   "https://keyneo.com/clients/hypromat-cas-client/"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Eléphant Bleu — parcours de paiement dans l'app",
+  "email_personnalise": "Bonjour Monsieur Rapold,\n\nSur l'App Store, plusieurs avis de l'app Eléphant Bleu signalent qu'il est impossible d'ajouter une carte bancaire (« les données n'ont pas pu être lues ») ou de lancer un lavage. La note moyenne relevée est de 3,32/5.\n\nComme l'app sert à payer directement en station, chaque blocage peut coûter un lavage.\n\nCapmedia fait de la QA mobile et de la maintenance d'apps iOS/Android. Nous pouvons tester le parcours de paiement sur un panel d'appareils et vous remettre une liste de bugs reproductibles.\n\nSeriez-vous ouvert à un court échange ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu des avis sur l'app Eléphant Bleu qui signalent des échecs d'ajout de carte bancaire et de lancement de lavage, pour une note de 3,32/5. Je voulais savoir qui s'occupe de l'application chez vous.",
+  "relance": "Autre piste : un test de non-régression à chaque mise à jour de l'app, pour que les corrections de paiement ne cassent pas l'abonnement. Est-ce un sujet chez vous ?",
+  "pourquoi_demain": "Leur app encaisse les lavages et des avis signalent des paiements bloqués : c'est du chiffre perdu chaque jour.",
+  "equipe": "U04"
  }
 ]

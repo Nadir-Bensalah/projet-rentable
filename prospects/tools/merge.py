@@ -186,7 +186,7 @@ def main():
             for k in ks:
                 seen[k] = idx
             nk += 1
-        teams.append({"nom": team, "statut": data.get("statut", "en cours"), "analysees": int(data.get("analysees") or (nk + nr)),
+        teams.append({"nom": team, "statut": data.get("statut", "terminée" if data.get("termine") else "en cours"), "analysees": int(data.get("analysees") or (nk + nr)),
                       "retenues": nk, "rejetees": nr})
     # recount kept per team after dedup replacement
     for t in teams:
@@ -198,13 +198,7 @@ def main():
     docs = {}
     for p in kept:
         docs[f"prospects__{p['id']}"] = p
-    for r in rejects:
-        rid = "r" + h([r.get("entreprise"), r.get("equipe"), r.get("etape")])[:14]
-        docs[f"rejets__{rid}"] = r
-    for t in teams:
-        docs[f"equipes__{t['nom']}"] = t
-    for o in optout:
-        docs[f"opposition__o{h(o)[:12]}"] = o
+    docs["synthese__etat"] = {"rejets": rejects, "equipes": teams, "opposition": optout}
     live = set(docs)
     deletes = [k for k in synced if k not in live and k.startswith("prospects__")]
     hashes, writes = {}, []
@@ -213,6 +207,7 @@ def main():
         if synced.get(k) != hv:
             path = os.path.join(st, "out", k + ".json")
             json.dump(d, open(path, "w"), ensure_ascii=False)
+            path = path.replace("/state/out/", "/o/")
             col, did = k.split("__", 1)
             writes.append({"op": "set", "collection": col, "doc_id": did, "file_path": path})
             hashes[k] = hv

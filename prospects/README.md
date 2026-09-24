@@ -3,7 +3,7 @@
 Tableau de bord en direct (privé) : https://claude.ai/artifact/7nbPQ3qDTULnyZY9sf4A8y
 
 ## Résultat de cette session
-- **6 prospects retenus**, tous au niveau QUALIFIÉ (70-76/100), sur **80 entreprises analysées** et 74 rejets documentés.
+- Collecte en cours par passages successifs, objectif 1 000 fiches validées. Chiffres à jour dans `statistiques.md` et sur le tableau de bord.
 - Chaque fiche comporte un email et un téléphone vus à la source (URLs citées), des faits datés et sourcés, un score détaillé, un email personnalisé, une accroche téléphonique et un angle de relance.
 - Le volume est faible pour deux raisons, décrites dans `methodologie.md` : le proxy de l'environnement bloquait l'accès direct aux sites, et le quota de 200 recherches web de la session a été épuisé en quelques minutes.
 
