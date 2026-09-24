@@ -7,7 +7,11 @@ import { currentSubscription, paymentProvider } from "@/lib/billing";
 import { rateLimit } from "@/lib/security/rate-limit";
 import { HttpError, assertSameOrigin, handler, json, readJson } from "@/lib/security/request";
 
-const schema = z.object({ product: z.string().refine(isProductId, "Offre inconnue.") });
+const schema = z.object({
+  product: z.string().refine(isProductId, "Offre inconnue."),
+  // Where the checkout was started, to bring the user back to their work afterwards.
+  from: z.enum(["convertir", "tarifs"]).optional(),
+});
 
 export const POST = handler(async (req) => {
   assertSameOrigin(req);
@@ -17,7 +21,7 @@ export const POST = handler(async (req) => {
   }
   const rl = await rateLimit(`checkout:${user.id}`, 20, 3600);
   if (!rl.ok) throw new HttpError(429, "Trop de tentatives. Réessayez plus tard.", "rate_limited");
-  const { product: productId } = await readJson(req, schema);
+  const { product: productId, from } = await readJson(req, schema);
   const product = PRODUCTS[productId as keyof typeof PRODUCTS];
   if (product.kind === "subscription") {
     const existing = await currentSubscription(user.id);
@@ -35,8 +39,8 @@ export const POST = handler(async (req) => {
     ({ url } = await provider.createCheckout({
       product,
       user: { id: user.id, email: user.email },
-      successUrl: absoluteUrl(`/compte/abonnement?paiement=succes&offre=${product.id}`),
-      cancelUrl: absoluteUrl(`/tarifs?paiement=annule`),
+      successUrl: absoluteUrl(`/compte/abonnement?paiement=succes&offre=${product.id}${from === "convertir" ? "&retour=convertir" : ""}`),
+      cancelUrl: absoluteUrl(from === "convertir" ? "/convertir?paiement=annule" : "/tarifs?paiement=annule"),
     }));
   } catch (e) {
     console.error("[checkout] provider error", e);

@@ -140,9 +140,18 @@ export async function authenticate(email: string, password: string) {
   return ok ? user : null;
 }
 
-export async function verifyEmail(token: string): Promise<{ userId: string } | null> {
+export async function verifyEmail(token: string): Promise<{ userId: string; alreadyVerified?: boolean } | null> {
   const userId = await consumeEmailToken(token, "verify_email");
-  if (!userId) return null;
+  if (!userId) {
+    // A link clicked twice: say the address is confirmed rather than "invalid".
+    if (!token || token.length > 100) return null;
+    const used = await queryOne<{ user_id: string }>(
+      `SELECT t.user_id FROM email_tokens t JOIN users u ON u.id = t.user_id
+        WHERE t.id = $1 AND t.purpose = 'verify_email' AND t.used_at IS NOT NULL AND u.email_verified_at IS NOT NULL`,
+      [sha256(token)],
+    );
+    return used ? { userId: used.user_id, alreadyVerified: true } : null;
+  }
   const updated = await queryOne<{ id: string; email: string; referred_by: string | null }>(
     `UPDATE users SET email_verified_at = now(), updated_at = now() WHERE id = $1 AND email_verified_at IS NULL RETURNING id, email, referred_by`,
     [userId],

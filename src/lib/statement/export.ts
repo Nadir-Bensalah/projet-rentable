@@ -417,26 +417,38 @@ export function toFec(
 }
 
 export function toJson(statements: ParsedStatement[]): string {
-  return JSON.stringify(
-    statements.map((s) => ({
-      file: s.fileName,
-      bank: s.bankName ?? null,
-      currency: s.currency,
-      period: { start: s.periodStart ?? null, end: s.periodEnd ?? null },
-      openingBalance: s.openingBalance !== undefined ? s.openingBalance / 100 : null,
-      closingBalance: s.closingBalance !== undefined ? s.closingBalance / 100 : null,
-      reconciliation: {
-        status: s.reconciliation.status,
-        difference: s.reconciliation.difference !== undefined ? s.reconciliation.difference / 100 : null,
-      },
-      transactions: included(s).map((t) => ({
-        date: t.date,
-        valueDate: t.valueDate ?? null,
-        description: t.description,
-        amount: t.amount / 100,
-        balance: t.balance !== undefined ? t.balance / 100 : null,
-      })),
+  const perStatement = statements.map((s) => ({
+    file: s.fileName,
+    bank: s.bankName ?? null,
+    currency: s.currency,
+    period: { start: s.periodStart ?? null, end: s.periodEnd ?? null },
+    openingBalance: s.openingBalance !== undefined ? s.openingBalance / 100 : null,
+    closingBalance: s.closingBalance !== undefined ? s.closingBalance / 100 : null,
+    reconciliation: {
+      status: s.reconciliation.status,
+      difference: s.reconciliation.difference !== undefined ? s.reconciliation.difference / 100 : null,
+    },
+    transactions: included(s).map((t) => ({
+      date: t.date,
+      valueDate: t.valueDate ?? null,
+      description: t.description,
+      amount: t.amount / 100,
+      balance: t.balance !== undefined ? t.balance / 100 : null,
     })),
+  }));
+  if (statements.length === 1) return JSON.stringify(perStatement, null, 2);
+  // Several statements: the same merged, de-duplicated list as the other formats, plus the detail.
+  return JSON.stringify(
+    {
+      merged: mergeTransactions(statements).map(({ tx, source }) => ({
+        date: tx.date,
+        valueDate: tx.valueDate ?? null,
+        description: tx.description,
+        amount: tx.amount / 100,
+        statement: source,
+      })),
+      statements: perStatement,
+    },
     null,
     2,
   );

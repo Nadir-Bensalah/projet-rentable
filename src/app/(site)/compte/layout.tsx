@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { redirect } from "next/navigation";
 import { getCurrentUser } from "@/lib/auth/session";
 import { LogoutButton } from "@/components/account/actions";
 import { AccountNav } from "@/components/account/account-nav";
@@ -8,7 +7,8 @@ export const metadata: Metadata = { title: "Mon compte", robots: { index: false,
 
 export default async function AccountLayout({ children }: { children: React.ReactNode }) {
   const user = await getCurrentUser();
-  if (!user) redirect("/connexion?suite=/compte");
+  // Each page redirects to the login with its own path; the layout only renders for signed-in users.
+  if (!user) return <>{children}</>;
   return (
     <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
       <div className="flex flex-wrap items-center justify-between gap-3">

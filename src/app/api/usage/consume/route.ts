@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { pages } from "@/config/plans";
 import { formatInfo, type ExportFormat } from "@/lib/statement/export";
 import { trackServer } from "@/lib/analytics/server";
 import { loadAccountView } from "@/lib/account-view";
@@ -55,7 +56,7 @@ export const POST = handler(async (req) => {
     if (state.paidFeatures && needed > state.totalAvailable) {
       return json(
         {
-          error: `Ces relevés comptent ${needed} page(s) et il vous en reste ${state.totalAvailable}. Achetez un pack ou changez d'offre pour continuer.`,
+          error: `Ces relevés comptent ${pages(needed)} et il vous en reste ${state.totalAvailable}. Achetez un pack ou changez d'offre pour continuer.`,
           code: "quota_exceeded",
           charged: 0,
           account: await loadAccountView(user),

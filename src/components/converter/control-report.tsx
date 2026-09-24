@@ -1,11 +1,23 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import type { ParsedStatement } from "@/lib/statement/types";
 import { frDate, frLongDate, money } from "./format";
 
 /** Printable control report (paid feature). Rendered off-screen and printed with window.print(). */
 export function ControlReport({ statements }: { statements: ParsedStatement[] }) {
+  const [mounted, setMounted] = useState(false);
+  // eslint-disable-next-line react-hooks/set-state-in-effect
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
+  return createPortal(<ReportContent statements={statements} />, document.body);
+}
+
+function ReportContent({ statements }: { statements: ParsedStatement[] }) {
   const now = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long", timeStyle: "short" }).format(new Date());
   return (
-    <div className="print-area hidden print:block" aria-hidden>
+    <div className="print-root hidden print:block" aria-hidden>
       <div style={{ fontFamily: "Arial, sans-serif", fontSize: 11, color: "#000" }}>
         <div style={{ fontSize: 18, margin: 0, fontWeight: 700 }}>Rapport de contrôle des relevés</div>
         <p style={{ margin: "4px 0 16px", color: "#444" }}>

@@ -1,6 +1,6 @@
 import "server-only";
 import type { PoolClient } from "pg";
-import { PACK, PLANS, PRODUCTS, type PlanId } from "@/config/plans";
+import { PACK, PLANS, PRODUCTS, pages, type PlanId } from "@/config/plans";
 import { absoluteUrl } from "@/config/site";
 import { env } from "@/lib/env";
 import { query, queryOne, transaction } from "@/lib/db";
@@ -182,7 +182,7 @@ export async function consumePages(input: ConsumeInput): Promise<{ charged: numb
     if (rest > state.credits) {
       throw new QuotaError(
         "quota_exceeded",
-        `Ce relevé compte ${toCharge} page(s) à décompter et il vous en reste ${state.totalAvailable}. Achetez un pack ou changez d'offre pour continuer.`,
+        `Ce relevé compte ${pages(toCharge)} à décompter et il vous en reste ${state.totalAvailable}. Achetez un pack ou changez d'offre pour continuer.`,
       );
     }
     const fromCredits = rest;
@@ -331,7 +331,9 @@ async function applyEvent(db: PoolClient, providerName: string, ev: BillingEvent
       );
       const granted = await grantCredits(db, user.id, PACK.pages, "pack", `${providerName}:${ev.orderId}`, PACK.validityMonths);
       if (inserted.rows.length && granted) {
-        const expires = new Date(Date.now() + PACK.validityMonths * 30.5 * 86400_000);
+        // Same calendar arithmetic as the credit grant (now + N months).
+        const expires = new Date();
+        expires.setUTCMonth(expires.getUTCMonth() + PACK.validityMonths);
         emails.push(() =>
           sendEmail(
             "pack_purchased",

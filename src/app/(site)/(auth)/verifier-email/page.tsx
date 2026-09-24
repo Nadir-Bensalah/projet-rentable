@@ -13,7 +13,7 @@ export default function Page() {
   return (
     <div className="surface p-6 sm:p-8">
       <h1 className="text-2xl font-bold tracking-tight">Confirmation de votre adresse</h1>
-      <p className="mt-2 mb-6 text-muted">Un instant…</p>
+      <p className="mt-2 mb-6 text-muted">Nous vérifions votre lien de confirmation.</p>
       <Suspense fallback={null}>
         <VerifyPageClient />
       </Suspense>

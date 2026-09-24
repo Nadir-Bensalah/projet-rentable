@@ -23,8 +23,8 @@ export default function SecurityPage() {
           { href: "/securite", label: "Confidentialité" },
         ]}
       />
-      <div className="mx-auto grid max-w-4xl gap-12 px-4 py-12 sm:px-6">
-        <section className="grid gap-6 md:grid-cols-2">
+      <div className="mx-auto grid max-w-4xl gap-12 px-4 py-12 sm:px-6 [&>*]:min-w-0">
+        <section className="grid gap-6 md:grid-cols-2 [&>*]:min-w-0">
           <div className="surface p-6">
             <h2 className="flex items-center gap-2 font-bold">
               <Check className="size-5 text-emerald-600" aria-hidden /> Ce qui reste sur votre appareil

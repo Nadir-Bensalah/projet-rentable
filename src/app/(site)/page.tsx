@@ -17,6 +17,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Faq } from "@/components/marketing/faq";
 import { JsonLd } from "@/components/marketing/json-ld";
+import { HomeNotice } from "@/components/marketing/home-notice";
 import { ProductPreview } from "@/components/marketing/product-preview";
 import { ButtonLink } from "@/components/ui/button";
 import { FREE_MONTHLY_PAGES, PACK, PLANS, formatPrice } from "@/config/plans";
@@ -94,6 +95,8 @@ export default function HomePage() {
           },
         ]}
       />
+
+      <HomeNotice />
 
       {/* Hero */}
       <section className="relative overflow-hidden">

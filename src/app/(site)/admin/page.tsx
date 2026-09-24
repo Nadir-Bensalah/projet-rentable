@@ -8,8 +8,11 @@ import { loadMetrics } from "@/lib/metrics";
 export const metadata: Metadata = { title: "Tableau de bord", robots: { index: false, follow: false } };
 
 function pct(a: number, b: number) {
-  return b ? `${Math.round((a / b) * 1000) / 10} %` : "—";
+  return b ? `${new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 1 }).format((a / b) * 100)} %` : "—";
 }
+
+const eur = (cents: number, currency = "EUR") => new Intl.NumberFormat("fr-FR", { style: "currency", currency }).format(cents / 100);
+const RECONCILED_LABELS: Record<string, string> = { verified: "Vérifié", mismatch: "Écart", unverifiable: "Non vérifiable" };
 
 export default async function AdminPage(props: { searchParams: Promise<{ jours?: string }> }) {
   const user = await getCurrentUser();
@@ -55,12 +58,12 @@ export default async function AdminPage(props: { searchParams: Promise<{ jours?:
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {[
-          ["MRR (abonnements actifs)", `${(m.mrr / 100).toFixed(2).replace(".", ",")} €`],
+          ["MRR (abonnements actifs)", eur(m.mrr)],
           [
             "Chiffre encaissé",
             m.revenue.length
-              ? m.revenue.map((r) => `${(Number(r.paid) / 100).toFixed(2).replace(".", ",")} ${r.currency}`).join(" · ")
-              : "0,00 €",
+              ? m.revenue.map((r) => eur(Number(r.paid), r.currency)).join(" · ")
+              : eur(0),
           ],
           ["Abonnements actifs", String(m.activeSubs.reduce((s, r) => s + Number(r.n), 0))],
           ["Résiliations", String(m.churned)],
@@ -97,7 +100,7 @@ export default async function AdminPage(props: { searchParams: Promise<{ jours?:
         {[
           { t: "Sources d'inscription", rows: m.sources.map((s) => [s.source ?? "(direct)", s.n]) },
           { t: "Pages les plus vues", rows: m.topPages.map((p) => [p.path, p.n]) },
-          { t: "Contrôle des relevés exportés", rows: m.reconciliation.map((r) => [r.reconciled ?? "—", r.n]) },
+          { t: "Contrôle des relevés exportés", rows: m.reconciliation.map((r) => [RECONCILED_LABELS[r.reconciled ?? ""] ?? "Inconnu", r.n]) },
         ].map((b) => (
           <section key={b.t} className="surface overflow-hidden">
             <h2 className="border-b border-[var(--border)] px-5 py-3 font-bold">{b.t}</h2>

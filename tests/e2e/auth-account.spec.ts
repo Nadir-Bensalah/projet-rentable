@@ -37,6 +37,8 @@ test.describe("authentication and account", () => {
     await page.goto("/compte");
     await expect(page.getByText("Confirmez votre adresse e-mail")).toHaveCount(0);
     await page.goto(`/verifier-email?token=${token}`);
+    await expect(page.getByText("Votre adresse est déjà confirmée.")).toBeVisible();
+    await page.goto(`/verifier-email?token=${token}x`);
     await expect(page.getByText(/invalide ou a expiré/)).toBeVisible();
   });
 

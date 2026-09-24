@@ -1,6 +1,9 @@
 import "server-only";
 import { NextResponse } from "next/server";
 import { z } from "zod";
+
+// Validation messages shown to users are in French.
+z.config(z.locales.fr());
 import { env } from "@/lib/env";
 import { sha256 } from "./tokens";
 

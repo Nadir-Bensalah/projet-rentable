@@ -33,12 +33,15 @@ export function BalanceChecker() {
         const found = scanAmounts(l);
         const a = found[found.length - 1];
         if (!a) return null;
-        const neg = a.sign === -1 || /^[-−–]/.test(l.trim());
+        const neg = a.sign === -1 || /^[-−–]/.test(l.trim()) || /[-−–]\s*€?\s*$/.test(l.trim());
         return neg ? -a.cents : a.cents;
       });
     const invalid = amounts.filter((a) => a === null).length;
     const valid = amounts.filter((a): a is number => a !== null);
-    if (o === null || c === null) return null;
+    if (o === null || c === null) return {
+        kind: "error" as const,
+        error: opening.trim() && closing.trim() ? "Soldes invalides : utilisez le format 1 234,56 (signe moins si débiteur)." : null,
+      };
     const credits = valid.filter((a) => a > 0).reduce((s, a) => s + a, 0);
     const debits = valid.filter((a) => a < 0).reduce((s, a) => s - a, 0);
     const diff = c - (o + credits - debits);
@@ -58,7 +61,9 @@ export function BalanceChecker() {
       if (!hints.length)
         hints.push("Vérifiez qu'aucune opération ne manque (frais bancaires, agios, cotisations) et que les soldes saisis sont les bons.");
     }
-    return { o, c, credits, debits, diff, invalid, count: valid.length, hints };
+    const creditCount = valid.filter((a) => a > 0).length;
+    const debitCount = valid.filter((a) => a < 0).length;
+    return { kind: "ok" as const, o, c, credits, debits, diff, invalid, creditCount, debitCount, hints };
   }, [opening, closing, lines]);
 
   return (
@@ -108,7 +113,7 @@ export function BalanceChecker() {
         </Field>
       </form>
       <div className="grid content-start gap-4" aria-live="polite">
-        {result ? (
+        {result?.kind === "ok" ? (
           <>
             <div className="surface grid gap-2 p-6 text-sm">
               <div className="flex justify-between">
@@ -116,11 +121,15 @@ export function BalanceChecker() {
                 <span className="tabular font-semibold">{money(result.o)}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-muted">+ Crédits ({result.count} opérations)</span>
+                <span className="text-muted">
+                  + Crédits ({result.creditCount} opération{result.creditCount > 1 ? "s" : ""})
+                </span>
                 <span className="tabular font-semibold">{money(result.credits)}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-muted">− Débits</span>
+                <span className="text-muted">
+                  − Débits ({result.debitCount} opération{result.debitCount > 1 ? "s" : ""})
+                </span>
                 <span className="tabular font-semibold">{money(result.debits)}</span>
               </div>
               <div className="flex justify-between border-t border-[var(--border)] pt-2">
@@ -147,6 +156,8 @@ export function BalanceChecker() {
             )}
             {result.invalid ? <Alert tone="warning">{result.invalid} ligne(s) sans montant reconnu ont été ignorées.</Alert> : null}
           </>
+        ) : result?.kind === "error" && result.error ? (
+          <Alert tone="error">{result.error}</Alert>
         ) : (
           <div className="rounded-2xl border border-dashed border-[var(--border-strong)] p-8 text-center text-sm text-muted">
             Saisissez le solde de départ, le solde final et les opérations : le résultat s&apos;affiche ici instantanément. Rien n&apos;est

@@ -13,6 +13,15 @@ const schema = z.object({
   website: z.string().max(0).optional(), // honeypot
 });
 
+const TOPIC_LABELS: Record<string, string> = {
+  question: "Question sur le produit",
+  facturation: "Facturation et abonnement",
+  "releve-non-reconnu": "Relevé mal lu",
+  partenariat: "Cabinet / partenariat",
+  "donnees-personnelles": "Données personnelles",
+  autre: "Autre",
+};
+
 export const POST = handler(async (req) => {
   assertSameOrigin(req);
   const rl = await rateLimit(`contact:${ipHash(req)}`, 5, 3600);
@@ -28,7 +37,7 @@ export const POST = handler(async (req) => {
   await sendEmail(
     "support_message",
     env().SUPPORT_EMAIL,
-    { from: body.email, topic: body.topic, message: body.message },
+    { from: body.email, topic: TOPIC_LABELS[body.topic] ?? body.topic, message: body.message },
     { replyTo: body.email },
   );
   return json({ ok: true });

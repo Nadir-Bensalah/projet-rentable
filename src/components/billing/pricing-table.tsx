@@ -70,7 +70,7 @@ export function PricingTable() {
       </div>
       <p className="mt-6 text-center text-sm text-subtle">
         Prix TTC. Une « page » = une page de relevé PDF exportée. {FREE_MONTHLY_PAGES} pages gratuites renouvelées chaque mois. Les pages du
-        pack s&apos;ajoutent à votre forfait mensuel.
+        pack s&apos;ajoutent à votre forfait mensuel. Ré-exporter un même relevé dans un autre format pendant le mois ne consomme pas de page (toutes offres).
       </p>
     </div>
   );

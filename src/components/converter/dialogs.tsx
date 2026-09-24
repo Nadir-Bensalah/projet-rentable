@@ -2,7 +2,7 @@
 
 import { Check, MailCheck } from "lucide-react";
 import { useEffect, useState } from "react";
-import { PACK, PLANS, formatPrice, type ProductId } from "@/config/plans";
+import { PACK, PLANS, formatNumber, formatPrice, type ProductId } from "@/config/plans";
 import { track } from "@/lib/analytics/client";
 import { api } from "@/lib/api-client";
 import type { ParsedStatement } from "@/lib/statement/types";
@@ -148,14 +148,14 @@ export function PaywallDialog({
       price: `${formatPrice(PLANS.pro.priceMonthly)}`,
       note: "par mois, sans engagement",
       highlight: true,
-      features: [`${PLANS.pro.monthlyPages} pages / mois`, "Tous les formats", "Rapport de contrôle"],
+      features: [`${formatNumber(PLANS.pro.monthlyPages)} pages / mois`, "Tous les formats", "Rapport de contrôle"],
     },
     {
       id: "business_monthly",
       title: `${PLANS.business.name}`,
       price: `${formatPrice(PLANS.business.priceMonthly)}`,
       note: "par mois, sans engagement",
-      features: [`${PLANS.business.monthlyPages} pages / mois`, "Tous les formats", "Support prioritaire"],
+      features: [`${formatNumber(PLANS.business.monthlyPages)} pages / mois`, "Tous les formats", "Support prioritaire"],
     },
   ];
   return (

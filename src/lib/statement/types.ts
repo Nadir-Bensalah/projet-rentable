@@ -86,4 +86,6 @@ export interface ParsedStatement {
   warnings: string[];
   /** "text" when the PDF has a text layer, "scanned" when it is an image-only document. */
   kind: "text" | "scanned" | "empty";
+  /** True when the user typed the opening/closing balances (they are no longer "printed"). */
+  balancesEdited?: boolean;
 }

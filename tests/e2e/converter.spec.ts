@@ -72,6 +72,12 @@ test.describe("converter (anonymous)", () => {
     await page.reload();
     await expect(page.getByTestId("reconciliation")).toHaveAttribute("data-status", "verified");
     await page.getByRole("button", { name: "Tout effacer" }).click();
+    const confirm = page.getByRole("dialog");
+    await expect(confirm).toContainText("Tout effacer ?");
+    await confirm.getByRole("button", { name: "Annuler" }).click();
+    await expect(page.getByTestId("reconciliation")).toBeVisible();
+    await page.getByRole("button", { name: "Tout effacer" }).click();
+    await page.getByRole("dialog").getByRole("button", { name: "Tout effacer" }).click();
     await expect(page.getByText("Déposez vos relevés bancaires PDF ici")).toBeVisible();
     await page.reload();
     await expect(page.getByText("Déposez vos relevés bancaires PDF ici")).toBeVisible();
@@ -90,5 +96,27 @@ test.describe("converter (anonymous)", () => {
       expect(b).toMatch(/\/api\/events/);
       expect(Number(b.split(" ").pop())).toBeLessThan(2000);
     }
+  });
+
+  test("row deletion can be undone and duplicate files are not loaded twice", async ({ page }) => {
+    await loadSample(page);
+    const rows = page.getByTestId("transactions-table").locator("tbody tr");
+    const firstLabel = (await rows.first().locator("td").nth(2).innerText()).trim();
+    await rows.first().getByRole("button", { name: /Supprimer/ }).click();
+    await expect(page.getByTestId("reconciliation")).toHaveAttribute("data-status", "mismatch");
+    await page.getByRole("button", { name: "Annuler la suppression" }).click();
+    await expect(rows.first().locator("td").nth(2)).toHaveText(firstLabel);
+    await expect(page.getByTestId("reconciliation")).toHaveAttribute("data-status", "verified");
+    await page.getByTestId("file-input").setInputFiles("public/exemples/releve-exemple.pdf");
+    await expect(page.getByText(/est identique à/)).toBeVisible({ timeout: 20_000 });
+    await expect(page.getByRole("tab")).toHaveCount(0);
+  });
+
+  test("escape cancels a row edit", async ({ page }) => {
+    await loadSample(page);
+    await page.getByTestId("transactions-table").locator("tbody tr").first().getByRole("button", { name: /Modifier/ }).click();
+    await expect(page.getByLabel("Libellé", { exact: true })).toBeFocused();
+    await page.keyboard.press("Escape");
+    await expect(page.getByLabel("Libellé", { exact: true })).toHaveCount(0);
   });
 });

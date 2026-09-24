@@ -106,7 +106,9 @@ export const mockProvider: PaymentProvider = {
         events.push({ type: "pack.paid", userId: p.userId, orderId: `mock_order_${p.ref}`, amount: product.price, currency: "EUR" });
       } else {
         const subscriptionId = `mock_sub_${sha256(p.userId + p.ref).slice(0, 16)}`;
-        const end = new Date(Date.now() + (product.interval === "year" ? 365 : 30) * 86400_000);
+        const end = new Date();
+        if (product.interval === "year") end.setUTCFullYear(end.getUTCFullYear() + 1);
+        else end.setUTCMonth(end.getUTCMonth() + 1);
         events.push({
           type: "subscription.upsert",
           userId: p.userId,

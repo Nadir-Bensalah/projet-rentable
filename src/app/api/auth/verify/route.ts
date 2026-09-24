@@ -4,7 +4,7 @@ import { verifyEmail } from "@/lib/auth/service";
 import { rateLimit } from "@/lib/security/rate-limit";
 import { HttpError, assertSameOrigin, handler, ipHash, json, readJson } from "@/lib/security/request";
 
-const schema = z.object({ token: z.string().min(10).max(100) });
+const schema = z.object({ token: z.string().min(10, "Ce lien de confirmation est incomplet.").max(100, "Ce lien de confirmation est invalide.") });
 
 export const POST = handler(async (req) => {
   assertSameOrigin(req);
@@ -17,5 +17,5 @@ export const POST = handler(async (req) => {
   // The link only confirms the address. It never signs anyone in: a forwarded or planted
   // link must not attach the visitor's browser to someone else's account.
   const current = await getCurrentUser();
-  return json({ ok: true, signedIn: current?.id === res.userId });
+  return json({ ok: true, signedIn: current?.id === res.userId, alreadyVerified: !!res.alreadyVerified });
 });

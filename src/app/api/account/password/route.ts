@@ -14,6 +14,7 @@ export const POST = handler(async (req) => {
   const rl = await rateLimit(`pwchange:${user.id}`, 10, 900);
   if (!rl.ok) throw new HttpError(429, "Trop de tentatives. Réessayez plus tard.", "rate_limited");
   const body = await readJson(req, schema);
+  if (body.next === body.current) throw new HttpError(422, "Le nouveau mot de passe doit être différent de l'actuel.", "same_password");
   const problem = passwordProblem(body.next, user.email);
   if (problem) throw new HttpError(422, problem, "weak_password");
   const ok = await changePassword(user.id, body.current, body.next);

@@ -63,6 +63,7 @@
     font-family: var(--font-sans);
     font-feature-settings: "cv11", "ss01";
     -webkit-font-smoothing: antialiased;
+    overflow-wrap: break-word;
   }
   ::selection {
     background: color-mix(in srgb, var(--color-brand-500) 25%, transparent);
@@ -218,19 +219,13 @@
   animation: shimmer 1.4s infinite;
 }
 
-/* Printable control report: only the report is printed. */
+/* Printable control report: only the report (rendered as a direct child of body) is printed. */
 @media print {
-  body * {
-    visibility: hidden !important;
+  body > *:not(.print-root) {
+    display: none !important;
   }
-  .print-area,
-  .print-area * {
-    visibility: visible !important;
-  }
-  .print-area {
-    position: absolute;
-    inset: 0;
-    padding: 0;
+  .print-root {
+    display: block !important;
     color: #000;
     background: #fff;
   }

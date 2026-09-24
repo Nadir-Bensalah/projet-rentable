@@ -7,13 +7,18 @@ import { ButtonLink } from "@/components/ui/button";
 /** Renders the tiny inline markdown subset: **bold** and [label](href). Everything else is plain text. */
 export function RichText({ text }: { text: string }) {
   const out: ReactNode[] = [];
-  const re = /\*\*([^*]+)\*\*|\[([^\]]+)\]\(([^)\s]+)\)/g;
+  const re = /\*\*(.+?)\*\*|\[([^\]]+)\]\(([^)\s]+)\)/g;
   let last = 0;
   let m: RegExpExecArray | null;
   let i = 0;
   while ((m = re.exec(text))) {
     if (m.index > last) out.push(<Fragment key={i++}>{text.slice(last, m.index)}</Fragment>);
-    if (m[1]) out.push(<strong key={i++}>{m[1]}</strong>);
+    if (m[1])
+      out.push(
+        <strong key={i++}>
+          <RichText text={m[1]} />
+        </strong>,
+      );
     else {
       const href = m[3];
       if (/^\/(?!\/)/.test(href))

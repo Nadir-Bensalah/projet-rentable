@@ -82,7 +82,7 @@ export function ReconciliationCard({ st, onBalances }: { st: ParsedStatement; on
               </p>
               {r.opening !== undefined ? <div className="text-rose-900/80 dark:text-rose-200/90">{equation}</div> : null}
               <p className="mt-2 text-sm text-rose-900/80 dark:text-rose-200/90">
-                Solde final imprimé : <span className="tabular font-semibold">{money(r.closing, c)}</span>. Vérifiez les lignes signalées,
+                {st.balancesEdited ? "Solde final saisi" : "Solde final imprimé"} : <span className="tabular font-semibold">{money(r.closing, c)}</span>. Vérifiez les lignes signalées,
                 le sens des montants (débit/crédit) ou une opération manquante.
               </p>
             </>

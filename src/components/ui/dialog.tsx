@@ -24,7 +24,11 @@ export function Dialog({
   useEffect(() => {
     const d = ref.current;
     if (!d) return;
-    if (open && !d.open) d.showModal();
+    if (open && !d.open) {
+      d.showModal();
+      // Start on the first form field rather than on the close button.
+      requestAnimationFrame(() => d.querySelector<HTMLElement>("input:not([type=hidden]), select, textarea")?.focus());
+    }
     if (!open && d.open) d.close();
   }, [open]);
   return (

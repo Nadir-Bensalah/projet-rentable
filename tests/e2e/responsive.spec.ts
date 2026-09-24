@@ -27,4 +27,13 @@ test.describe("responsive / mobile", () => {
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
     expect(overflow).toBeLessThanOrEqual(1);
   });
+
+  test("small phones (360 px) have no horizontal scroll", async ({ page }) => {
+    await page.setViewportSize({ width: 360, height: 740 });
+    for (const path of PAGES) {
+      await page.goto(path);
+      const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+      expect(overflow, path).toBeLessThanOrEqual(1);
+    }
+  });
 });

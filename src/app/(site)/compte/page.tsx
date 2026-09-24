@@ -63,7 +63,7 @@ export default async function AccountOverview(props: { searchParams: Promise<Rec
             />
           </div>
           <p className="mt-3 text-sm text-muted">
-            {account.allowanceRemaining} pages restantes, renouvelées le 1er du mois.
+            {account.allowanceRemaining} page{account.allowanceRemaining > 1 ? "s" : ""} restante{account.allowanceRemaining > 1 ? "s" : ""}, renouvelées le 1er du mois.
             {account.credits
               ? ` Plus ${account.credits} pages de crédit${account.creditsNextExpiry ? ` (première expiration le ${new Intl.DateTimeFormat("fr-FR", { dateStyle: "long" }).format(new Date(account.creditsNextExpiry))})` : ""}.`
               : ""}

@@ -181,15 +181,17 @@ export function VerifyPageClient() {
   const token = params.get("token") ?? "";
   const [state, setState] = useState<"loading" | "ok" | "error">(token ? "loading" : "error");
   const [signedIn, setSignedIn] = useState(false);
+  const [already, setAlready] = useState(false);
   const [error, setError] = useState<string | null>(token ? null : "Ce lien de confirmation est incomplet.");
   const once = useRef(false);
   useEffect(() => {
     if (!token || once.current) return;
     once.current = true;
-    api<{ signedIn: boolean }>("/api/auth/verify", { body: { token } }).then(async (res) => {
+    api<{ signedIn: boolean; alreadyVerified: boolean }>("/api/auth/verify", { body: { token } }).then(async (res) => {
       if (res.ok) {
         await fetchMe(true);
         setSignedIn(!!res.data.signedIn);
+        setAlready(!!res.data.alreadyVerified);
         setState("ok");
       } else {
         setState("error");
@@ -209,7 +211,7 @@ export function VerifyPageClient() {
       <div className="grid gap-5 text-center">
         <CheckCircle2 className="mx-auto size-12 text-emerald-600" aria-hidden />
         <div>
-          <p className="text-lg font-semibold">Adresse confirmée, merci !</p>
+          <p className="text-lg font-semibold">{already ? "Votre adresse est déjà confirmée." : "Adresse confirmée, merci !"}</p>
           <p className="mt-1 text-muted">
             {signedIn
               ? "Si une conversion attend dans un autre onglet, votre téléchargement y démarre automatiquement. Vous pouvez fermer cet onglet."

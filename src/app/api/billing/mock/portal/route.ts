@@ -48,7 +48,10 @@ export const POST = handler(async (req) => {
       await emit({ kind: "subscription.change", ...base, status: "active", cancelAtPeriodEnd: false, periodEnd: periodEnd.toISOString() });
       break;
     case "renew": {
-      const next = new Date(Math.max(periodEnd.getTime(), Date.now()) + (sub.interval === "year" ? 365 : 30) * 86400_000);
+      // Calendar arithmetic (leap years, month lengths), like real billing providers.
+      const next = new Date(Math.max(periodEnd.getTime(), Date.now()));
+      if (sub.interval === "year") next.setUTCFullYear(next.getUTCFullYear() + 1);
+      else next.setUTCMonth(next.getUTCMonth() + 1);
       await emit({ kind: "subscription.renewal", ...base, outcome: "paid", ref: randomToken(8) });
       await emit({
         kind: "subscription.change",

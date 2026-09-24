@@ -16,6 +16,7 @@ import { Alert } from "@/components/ui/alert";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/field";
+import { Dialog } from "@/components/ui/dialog";
 import { Spinner } from "@/components/ui/spinner";
 import { ControlReport } from "./control-report";
 import { AuthDialog, PaywallDialog, ReportLayoutDialog, VerifyDialog } from "./dialogs";
@@ -73,11 +74,13 @@ export function ConverterApp() {
     suspenseAccount: "471000",
   });
   const bytesRef = useRef(new Map<string, ArrayBuffer>());
+  const docsRef = useRef<Doc[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const pendingExport = useRef(false);
   const restored = useRef(false);
 
   useEffect(() => {
+    docsRef.current = docs;
     // Do not overwrite the saved workspace before it has been restored.
     if (restored.current) saveWorkspace(docs);
   }, [docs]);
@@ -112,18 +115,25 @@ export function ConverterApp() {
             hash: res.hash,
             error:
               st.kind === "scanned"
-                ? "Ce PDF est une image (document scanné) : il ne contient pas de texte à lire. Téléchargez plutôt le relevé depuis votre banque en ligne."
-                : "Ce PDF est vide.",
+                ? "Ce PDF ne contient pas de texte lisible : il est vide ou il s'agit d'une image (document scanné). Téléchargez plutôt le relevé depuis votre banque en ligne."
+                : "Ce PDF ne contient aucune page.",
           });
           track("parse_failed", { reason: st.kind });
           return;
         }
-        patchDoc(id, {
-          status: "parsed",
-          statement: st,
-          hash: res.hash,
-          progress: undefined,
-        });
+        // setState updaters may run later: detect duplicates on the latest committed list.
+        const duplicateOf = docsRef.current.find((d) => d.id !== id && d.hash === res.hash && d.status === "parsed")?.fileName;
+        if (!duplicateOf) patchDoc(id, { status: "parsed", statement: st, hash: res.hash, progress: undefined });
+        else setDocs((ds) => ds.filter((d) => d.id !== id));
+        if (duplicateOf) {
+          bytesRef.current.delete(id);
+          setActiveId((a) => (a === id ? null : a));
+          setNotice({
+            tone: "info",
+            text: `« ${fileName} » est identique à « ${duplicateOf} », déjà chargé : il n'a pas été ajouté une seconde fois.`,
+          });
+          return;
+        }
         bytesRef.current.delete(id);
         track("parse_succeeded", {
           pages: st.pageCount,
@@ -204,6 +214,9 @@ export function ConverterApp() {
       setDocs(saved);
       setActiveId(saved[0].id);
     }
+    if (params.get("paiement") === "annule") {
+      setNotice({ tone: "info", text: "Paiement annulé : aucun montant n'a été débité. Votre conversion est toujours là." });
+    }
     if (params.get("bienvenue") === "1") {
       setNotice({
         tone: "success",
@@ -237,7 +250,9 @@ export function ConverterApp() {
     });
   };
 
+  const [confirmReset, setConfirmReset] = useState(false);
   const resetAll = () => {
+    setConfirmReset(false);
     bytesRef.current.clear();
     setDocs([]);
     setActiveId(null);
@@ -368,7 +383,7 @@ export function ConverterApp() {
     track("checkout_clicked", { product });
     saveWorkspace(docs);
     const res = await api<{ url: string }>("/api/billing/checkout", {
-      body: { product },
+      body: { product, from: "convertir" },
     });
     if (!res.ok || !res.data.url) return res.data.error ?? "Le paiement est indisponible pour le moment.";
     window.location.href = res.data.url;
@@ -378,7 +393,7 @@ export function ConverterApp() {
   const st = active?.statement;
 
   return (
-    <div className="grid gap-6">
+    <div className="grid gap-6 [&>*]:min-w-0">
       {/* Drop zone */}
       <div
         onDragOver={(e) => {
@@ -392,7 +407,7 @@ export function ConverterApp() {
           if (e.dataTransfer.files.length) onFiles(e.dataTransfer.files);
         }}
         className={cn(
-          "relative rounded-2xl border-2 border-dashed transition-colors",
+          "relative rounded-2xl border-2 border-dashed transition-colors has-[input:focus-visible]:ring-4 has-[input:focus-visible]:ring-brand-500/40",
           dragging ? "border-brand-500 bg-brand-50 dark:bg-brand-950/40" : "border-[var(--border-strong)] bg-[var(--bg-elevated)]",
           docs.length ? "p-5" : "p-8 sm:p-12",
         )}
@@ -463,6 +478,7 @@ export function ConverterApp() {
                   )
               }
               data-cta="converter-sample"
+              className="h-auto whitespace-normal py-2 text-center"
             >
               Essayer avec un relevé d&apos;exemple (fictif)
             </Button>
@@ -612,23 +628,27 @@ export function ConverterApp() {
                 ) : active.status === "error" ? (
                   <Alert tone="error" title="Ce fichier n'a pas pu être converti">
                     <p>{active.error}</p>
-                    <p className="mt-2">
-                      <Link href="/guides/releve-bancaire-scanne-pdf-image" className="font-semibold underline">
-                        Que faire avec un relevé scanné ?
-                      </Link>
-                    </p>
+                    {active.error?.includes("scanné") ? (
+                      <p className="mt-2">
+                        <Link href="/guides/releve-bancaire-scanne-pdf-image" className="font-semibold underline">
+                          Que faire avec un relevé scanné ?
+                        </Link>
+                      </p>
+                    ) : null}
                   </Alert>
                 ) : st ? (
                   <>
+                    <a
+                      href="#export"
+                      className="sr-only rounded-lg bg-[var(--bg-elevated)] px-3 py-2 text-sm font-semibold focus:not-sr-only focus:w-fit"
+                    >
+                      Aller directement à l&apos;export
+                    </a>
                     <ReconciliationCard
                       key={`${active.id}-${st.openingBalance}-${st.closingBalance}`}
                       st={st}
                       onBalances={(o, c) =>
-                        updateStatement(active.id, (s) => ({
-                          ...s,
-                          openingBalance: o,
-                          closingBalance: c,
-                        }))
+                        updateStatement(active.id, (s) => ({ ...s, openingBalance: o, closingBalance: c, balancesEdited: true }))
                       }
                     />
                     {st.warnings.length ? (
@@ -660,174 +680,181 @@ export function ConverterApp() {
           </div>
 
           {/* Export panel */}
-          <aside className="lg:sticky lg:top-24 lg:self-start" aria-label="Export">
-            <div className="surface grid gap-5 p-5">
-              <div>
-                <h2 className="font-bold">Exporter</h2>
-                {account ? (
-                  <p className="mt-1 text-sm text-muted" data-testid="quota">
-                    {account.allowanceRemaining} page
-                    {account.allowanceRemaining > 1 ? "s" : ""} restante
-                    {account.allowanceRemaining > 1 ? "s" : ""} ce mois
-                    {account.credits ? ` + ${account.credits} en crédit` : ""}
-                  </p>
-                ) : (
-                  <p className="mt-1 text-sm text-muted">Compte gratuit requis pour télécharger.</p>
-                )}
-              </div>
-
-              <fieldset>
-                <legend className="mb-2 text-sm font-semibold">Format</legend>
-                <div className="grid gap-2">
-                  {EXPORT_FORMATS.map((f) => {
-                    const lockedFormat = !f.free && !(account?.paidFeatures ?? false);
-                    return (
-                      <label
-                        key={f.id}
-                        className={cn(
-                          "flex cursor-pointer items-start gap-3 rounded-xl border p-3 text-sm transition-colors",
-                          format === f.id
-                            ? "border-brand-500 bg-brand-50/60 dark:bg-brand-950/40"
-                            : "border-[var(--border)] hover:bg-[var(--bg-subtle)]",
-                        )}
-                      >
-                        <input
-                          type="radio"
-                          name="format"
-                          value={f.id}
-                          checked={format === f.id}
-                          onChange={() => setFormat(f.id)}
-                          className="mt-0.5 accent-brand-600"
-                        />
-                        <span className="min-w-0 flex-1">
-                          <span className="flex items-center gap-2 font-semibold">
-                            {f.label}
-                            {lockedFormat ? <Lock className="size-3.5 text-subtle" aria-label="offre payante" /> : null}
-                          </span>
-                          <span className="mt-0.5 block text-xs leading-relaxed text-subtle">{f.description}</span>
-                        </span>
-                      </label>
-                    );
-                  })}
+          {parsed.length ? (
+            <aside id="export" tabIndex={-1} className="lg:sticky lg:top-24 lg:self-start" aria-label="Export">
+              <div className="surface grid gap-5 p-5">
+                <div>
+                  <h2 className="font-bold">Exporter</h2>
+                  {account ? (
+                    <p className="mt-1 text-sm text-muted" data-testid="quota">
+                      {account.allowanceRemaining} page
+                      {account.allowanceRemaining > 1 ? "s" : ""} restante
+                      {account.allowanceRemaining > 1 ? "s" : ""} ce mois
+                      {account.credits ? ` + ${account.credits} en crédit` : ""}
+                    </p>
+                  ) : (
+                    <p className="mt-1 text-sm text-muted">Compte gratuit requis pour télécharger.</p>
+                  )}
                 </div>
-              </fieldset>
 
-              {format === "fec" ? (
-                <fieldset className="grid grid-cols-3 gap-2">
-                  <legend className="mb-2 text-sm font-semibold">Paramètres des écritures</legend>
-                  {(
-                    [
-                      ["journal", "Journal", 6],
-                      ["bankAccount", "Banque", 12],
-                      ["suspenseAccount", "Attente", 12],
-                    ] as const
-                  ).map(([k, l, max]) => (
-                    <div key={k}>
-                      <label htmlFor={`fec-${k}`} className="mb-1 block text-xs text-subtle">
-                        {l}
-                      </label>
-                      <Input
-                        id={`fec-${k}`}
-                        value={fec[k]}
-                        maxLength={max}
-                        onChange={(e) =>
-                          setFec((f) => ({
-                            ...f,
-                            [k]: e.target.value.replace(/[^A-Za-z0-9]/g, "").toUpperCase(),
-                          }))
-                        }
-                        className="h-9 px-2 text-sm"
-                      />
-                    </div>
-                  ))}
-                </fieldset>
-              ) : null}
-
-              {parsed.length > 1 ? (
                 <fieldset>
-                  <legend className="mb-2 text-sm font-semibold">Relevés à exporter</legend>
-                  <div className="grid gap-2 text-sm">
-                    {(
-                      [
-                        ["current", "Le relevé affiché uniquement"],
-                        ["merge", `Les ${parsed.length} relevés fusionnés en un fichier`],
-                        ["zip", `Les ${parsed.length} relevés, un fichier chacun (.zip)`],
-                      ] as [Scope, string][]
-                    ).map(([v, l]) => (
-                      <label key={v} className="flex cursor-pointer items-center gap-2.5">
-                        <input
-                          type="radio"
-                          name="scope"
-                          value={v}
-                          checked={scope === v}
-                          onChange={() => setScope(v)}
-                          className="accent-brand-600"
-                        />
-                        <span>
-                          {l}
-                          {v !== "current" && !(account?.paidFeatures ?? false) ? (
-                            <Lock className="ml-1.5 inline size-3.5 text-subtle" aria-label="offre payante" />
-                          ) : null}
-                        </span>
-                      </label>
-                    ))}
+                  <legend className="mb-2 text-sm font-semibold">Format</legend>
+                  <div className="grid gap-2">
+                    {EXPORT_FORMATS.map((f) => {
+                      const lockedFormat = !f.free && !(account?.paidFeatures ?? false);
+                      return (
+                        <label
+                          key={f.id}
+                          className={cn(
+                            "flex cursor-pointer items-start gap-3 rounded-xl border p-3 text-sm transition-colors",
+                            format === f.id
+                              ? "border-brand-500 bg-brand-50/60 dark:bg-brand-950/40"
+                              : "border-[var(--border)] hover:bg-[var(--bg-subtle)]",
+                          )}
+                        >
+                          <input
+                            type="radio"
+                            name="format"
+                            value={f.id}
+                            checked={format === f.id}
+                            onChange={() => setFormat(f.id)}
+                            className="mt-0.5 accent-brand-600"
+                          />
+                          <span className="min-w-0 flex-1">
+                            <span className="flex items-center gap-2 font-semibold">
+                              {f.label}
+                              {lockedFormat ? <Lock className="size-3.5 text-subtle" aria-label="offre payante" /> : null}
+                            </span>
+                            <span className="mt-0.5 block text-xs leading-relaxed text-subtle">{f.description}</span>
+                          </span>
+                        </label>
+                      );
+                    })}
                   </div>
                 </fieldset>
-              ) : null}
 
-              {targets.some((d) => d.statement?.reconciliation.status === "mismatch") ? (
-                <Alert tone="warning">
-                  Un relevé présente un écart de solde. Vous pouvez exporter, mais vérifiez les lignes signalées.
-                </Alert>
-              ) : null}
+                {format === "fec" ? (
+                  <fieldset className="grid grid-cols-3 gap-2">
+                    <legend className="mb-2 text-sm font-semibold">Paramètres des écritures</legend>
+                    {(
+                      [
+                        ["journal", "Journal", 6],
+                        ["bankAccount", "Banque", 12],
+                        ["suspenseAccount", "Attente", 12],
+                      ] as const
+                    ).map(([k, l, max]) => (
+                      <div key={k}>
+                        <label htmlFor={`fec-${k}`} className="mb-1 block text-xs text-subtle">
+                          {l}
+                        </label>
+                        <Input
+                          id={`fec-${k}`}
+                          value={fec[k]}
+                          maxLength={max}
+                          onChange={(e) =>
+                            setFec((f) => ({
+                              ...f,
+                              [k]: e.target.value.replace(/[^A-Za-z0-9]/g, "").toUpperCase(),
+                            }))
+                          }
+                          className="h-9 px-2 text-sm"
+                        />
+                      </div>
+                    ))}
+                  </fieldset>
+                ) : null}
 
-              <Button
-                size="lg"
-                className="w-full"
-                onClick={doExport}
-                loading={exporting}
-                disabled={!targets.length || busy}
-                icon={<Download className="size-5" aria-hidden />}
-                data-testid="export-button"
-              >
-                {locked ? "Débloquer et télécharger" : "Télécharger"}
-              </Button>
-              {targets.length ? (
-                <p className="-mt-2 text-center text-xs text-subtle">
-                  {pagesNeeded} page{pagesNeeded > 1 ? "s" : ""} · ré-export gratuit du même relevé ce mois-ci
+                {parsed.length > 1 ? (
+                  <fieldset>
+                    <legend className="mb-2 text-sm font-semibold">Relevés à exporter</legend>
+                    <div className="grid gap-2 text-sm">
+                      {(
+                        [
+                          ["current", "Le relevé affiché uniquement"],
+                          ["merge", `Les ${parsed.length} relevés fusionnés en un fichier`],
+                          ["zip", `Les ${parsed.length} relevés, un fichier chacun (.zip)`],
+                        ] as [Scope, string][]
+                      ).map(([v, l]) => (
+                        <label key={v} className="flex cursor-pointer items-center gap-2.5">
+                          <input
+                            type="radio"
+                            name="scope"
+                            value={v}
+                            checked={scope === v}
+                            onChange={() => setScope(v)}
+                            className="accent-brand-600"
+                          />
+                          <span>
+                            {l}
+                            {v !== "current" && !(account?.paidFeatures ?? false) ? (
+                              <Lock className="ml-1.5 inline size-3.5 text-subtle" aria-label="offre payante" />
+                            ) : null}
+                          </span>
+                        </label>
+                      ))}
+                    </div>
+                  </fieldset>
+                ) : null}
+
+                {targets.some((d) => d.statement?.reconciliation.status === "mismatch") ? (
+                  <Alert tone="warning">
+                    Un relevé présente un écart de solde. Vous pouvez exporter, mais vérifiez les lignes signalées.
+                  </Alert>
+                ) : null}
+
+                <Button
+                  size="lg"
+                  className="w-full"
+                  onClick={doExport}
+                  loading={exporting}
+                  disabled={!targets.length || busy}
+                  icon={<Download className="size-5" aria-hidden />}
+                  data-testid="export-button"
+                >
+                  {locked ? "Débloquer et télécharger" : "Télécharger"}
+                </Button>
+                {targets.length ? (
+                  <p className="-mt-2 text-center text-xs text-subtle">
+                    {pagesNeeded} page{pagesNeeded > 1 ? "s" : ""} · ré-export gratuit du même relevé ce mois-ci
+                  </p>
+                ) : null}
+
+                <div className="grid gap-2 border-t border-[var(--border)] pt-4">
+                  <Button
+                    variant="secondary"
+                    size="sm"
+                    icon={<Printer className="size-4" aria-hidden />}
+                    disabled={!parsed.length}
+                    onClick={() => {
+                      if (!(account?.paidFeatures ?? false)) {
+                        setPaywall("Le rapport de contrôle imprimable est inclus dans les offres payantes.");
+                        return;
+                      }
+                      window.print();
+                    }}
+                  >
+                    Rapport de contrôle {account?.paidFeatures ? "" : "🔒"}
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    icon={<RotateCcw className="size-4" aria-hidden />}
+                    onClick={() => setConfirmReset(true)}
+                  >
+                    Tout effacer
+                  </Button>
+                </div>
+              </div>
+              {account && account.plan === "free" ? (
+                <p className="mt-3 text-center text-xs text-subtle">
+                  Plan gratuit.{" "}
+                  <Link href="/tarifs" className="font-semibold text-brand-600 underline dark:text-brand-300">
+                    Voir les offres
+                  </Link>
                 </p>
               ) : null}
-
-              <div className="grid gap-2 border-t border-[var(--border)] pt-4">
-                <Button
-                  variant="secondary"
-                  size="sm"
-                  icon={<Printer className="size-4" aria-hidden />}
-                  disabled={!parsed.length}
-                  onClick={() => {
-                    if (!(account?.paidFeatures ?? false)) {
-                      setPaywall("Le rapport de contrôle imprimable est inclus dans les offres payantes.");
-                      return;
-                    }
-                    window.print();
-                  }}
-                >
-                  Rapport de contrôle {account?.paidFeatures ? "" : "🔒"}
-                </Button>
-                <Button variant="ghost" size="sm" icon={<RotateCcw className="size-4" aria-hidden />} onClick={resetAll}>
-                  Tout effacer
-                </Button>
-              </div>
-            </div>
-            {account && account.plan === "free" ? (
-              <p className="mt-3 text-center text-xs text-subtle">
-                Plan gratuit.{" "}
-                <Link href="/tarifs" className="font-semibold text-brand-600 underline dark:text-brand-300">
-                  Voir les offres
-                </Link>
-              </p>
-            ) : null}
-          </aside>
+            </aside>
+          ) : null}
         </div>
       ) : (
         <div className="grid gap-4 text-sm text-muted sm:grid-cols-3">
@@ -845,6 +872,21 @@ export function ConverterApp() {
       )}
 
       <ControlReport statements={parsed.map((d) => d.statement!)} />
+      <Dialog
+        open={confirmReset}
+        onClose={() => setConfirmReset(false)}
+        title="Tout effacer ?"
+        description="Les relevés chargés et vos corrections seront retirés de cet onglet. Cette action ne peut pas être annulée."
+      >
+        <div className="flex flex-col-reverse gap-2 sm:flex-row sm:justify-end">
+          <Button variant="secondary" onClick={() => setConfirmReset(false)}>
+            Annuler
+          </Button>
+          <Button variant="danger" onClick={resetAll}>
+            Tout effacer
+          </Button>
+        </div>
+      </Dialog>
       <AuthDialog
         open={authOpen}
         onClose={() => {

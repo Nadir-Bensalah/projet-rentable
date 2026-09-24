@@ -28,7 +28,7 @@ export const PLANS: Record<PlanId, Plan> = {
     priceYearly: 0,
     features: [
       `${FREE_MONTHLY_PAGES} pages exportées par mois`,
-      "Excel (.xlsx) et CSV",
+      "Excel (.xlsx) et CSV (format Excel France)",
       "Vérification du solde au centime",
       "Traitement 100 % dans votre navigateur",
     ],
@@ -45,7 +45,6 @@ export const PLANS: Record<PlanId, Plan> = {
       "Tous les formats : Excel, CSV, OFX, QIF, JSON, journal de banque 512/471 paramétrable",
       "Plusieurs relevés à la fois et fusion en un seul fichier",
       "Rapport de contrôle imprimable pour chaque relevé",
-      "Ré-export gratuit d'un même relevé pendant le mois",
     ],
   },
   business: {
@@ -115,6 +114,15 @@ export function isProductId(v: unknown): v is ProductId {
 }
 
 export const REFERRAL_REWARD_PAGES = 30;
+
+/** "1 page", "2 pages", "0 page" (French plural rule). */
+export function pages(n: number): string {
+  return `${formatNumber(n)} page${n > 1 ? "s" : ""}`;
+}
+
+export function formatNumber(n: number): string {
+  return new Intl.NumberFormat("fr-FR").format(n);
+}
 
 export function formatPrice(cents: number): string {
   const euros = cents / 100;

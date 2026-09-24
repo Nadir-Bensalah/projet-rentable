@@ -42,7 +42,7 @@ export async function loadMetrics(days: number) {
       ),
       count("export_clicked"),
       count("paywall_shown"),
-      count("checkout_clicked"),
+      Number((await queryOne<{ n: string }>(`SELECT count(*) AS n FROM analytics_events WHERE name = 'checkout_clicked' AND created_at > ${since}`))?.n ?? 0),
     ]);
   const signups = Number((await queryOne<{ n: string }>(`SELECT count(*) AS n FROM users WHERE created_at > ${since}`))?.n ?? 0);
   const verified = Number(

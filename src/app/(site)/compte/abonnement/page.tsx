@@ -51,12 +51,14 @@ export default async function BillingPage(props: { searchParams: Promise<Record<
           title="Merci, votre paiement est confirmé !"
           action={
             <ButtonLink href="/convertir" size="sm">
-              Reprendre ma conversion
+              {sp.retour === "convertir" ? "Reprendre ma conversion" : "Convertir un relevé"}
             </ButtonLink>
           }
         >
           {account.paidFeatures
-            ? "Vos avantages sont actifs. Votre conversion en cours a été conservée dans cet onglet."
+            ? sp.retour === "convertir"
+              ? "Vos avantages sont actifs. Votre conversion en cours a été conservée dans cet onglet."
+              : "Vos avantages sont actifs."
             : "La confirmation de notre prestataire peut prendre quelques secondes. Actualisez la page si vos avantages n'apparaissent pas encore."}
         </Alert>
       ) : null}
@@ -75,9 +77,11 @@ export default async function BillingPage(props: { searchParams: Promise<Record<
             <p className="text-sm text-muted">
               {formatPrice(sub.interval === "year" ? PLANS[sub.plan].priceYearly : PLANS[sub.plan].priceMonthly)} par{" "}
               {sub.interval === "year" ? "an" : "mois"} · {PLANS[sub.plan].monthlyPages} pages par mois.{" "}
-              {sub.cancel_at_period_end || sub.status === "canceled"
-                ? `Accès jusqu'au ${d(sub.current_period_end)}.`
-                : `Prochain renouvellement le ${d(sub.current_period_end)}.`}
+              {sub.status === "past_due"
+                ? "Renouvellement en attente de paiement."
+                : sub.cancel_at_period_end || sub.status === "canceled"
+                  ? `Accès jusqu'au ${d(sub.current_period_end)}.`
+                  : `Prochain renouvellement le ${d(sub.current_period_end)}.`}
             </p>
             {sub.status === "past_due" ? (
               <Alert tone="warning">
@@ -144,7 +148,9 @@ export default async function BillingPage(props: { searchParams: Promise<Record<
                       )}
                     </td>
                     <td className="px-6 py-2.5">
-                      {o.receipt_url && /^https:\/\//.test(o.receipt_url) ? (
+                      {o.status === "failed" ? (
+                        <span className="text-subtle">—</span>
+                      ) : o.receipt_url && /^https:\/\//.test(o.receipt_url) ? (
                         <a
                           href={o.receipt_url}
                           target="_blank"

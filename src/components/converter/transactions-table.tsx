@@ -69,6 +69,14 @@ export function TransactionsTable({ st, onChange }: Props) {
     setError(null);
   };
 
+  const [undo, setUndo] = useState<{ row: Transaction; index: number } | null>(null);
+  const cancelEdit = (t: Transaction) => {
+    if (t.id.startsWith("m-") && !t.description && t.amount === 0) onChange(rows.filter((r) => r.id !== t.id));
+    setEditing(null);
+    setDraft(null);
+    setError(null);
+  };
+
   const addRow = () => {
     const last = rows[rows.length - 1];
     const t: Transaction = {
@@ -85,6 +93,12 @@ export function TransactionsTable({ st, onChange }: Props) {
   const editor = (t: Transaction) =>
     draft ? (
       <form
+        onKeyDown={(e) => {
+          if (e.key === "Escape") {
+            e.preventDefault();
+            cancelEdit(t);
+          }
+        }}
         className="grid gap-2 sm:grid-cols-[9.5rem_1fr_8rem_auto] sm:items-center"
         onSubmit={(e) => {
           e.preventDefault();
@@ -171,7 +185,10 @@ export function TransactionsTable({ st, onChange }: Props) {
       <button
         type="button"
         className="rounded-lg p-2 text-subtle hover:bg-rose-50 hover:text-rose-600 dark:hover:bg-rose-950/50"
-        onClick={() => onChange(rows.filter((r) => r.id !== t.id))}
+        onClick={() => {
+          setUndo({ row: t, index: rows.findIndex((r) => r.id === t.id) });
+          onChange(rows.filter((r) => r.id !== t.id));
+        }}
         aria-label={`Supprimer l'opération du ${frDate(t.date)}`}
         title="Supprimer"
       >
@@ -322,6 +339,28 @@ export function TransactionsTable({ st, onChange }: Props) {
           <Button variant="ghost" size="sm" onClick={() => setShowAll(true)}>
             Afficher les {rows.length - LIMIT} autres opérations
           </Button>
+        </div>
+      ) : null}
+      {undo ? (
+        <div role="status" className="flex items-center justify-between gap-3 border-t border-[var(--border)] bg-[var(--bg-subtle)] px-4 py-2.5 text-sm">
+          <span>Ligne supprimée.</span>
+          <span className="flex gap-1">
+            <Button
+              size="sm"
+              variant="secondary"
+              onClick={() => {
+                const next = [...rows];
+                next.splice(Math.min(undo.index, next.length), 0, undo.row);
+                onChange(next);
+                setUndo(null);
+              }}
+            >
+              Annuler la suppression
+            </Button>
+            <Button size="sm" variant="ghost" onClick={() => setUndo(null)} aria-label="Fermer">
+              <X className="size-4" aria-hidden />
+            </Button>
+          </span>
         </div>
       ) : null}
       {rows.length === 0 ? (
