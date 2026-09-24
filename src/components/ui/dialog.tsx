@@ -30,7 +30,6 @@ export function Dialog({
   return (
     <dialog
       ref={ref}
-      onClose={onClose}
       onCancel={(e) => {
         e.preventDefault();
         onClose();

@@ -80,7 +80,8 @@ export function ConverterApp() {
   const restored = useRef(false);
 
   useEffect(() => {
-    saveWorkspace(docs);
+    // Do not overwrite the saved workspace before it has been restored.
+    if (restored.current) saveWorkspace(docs);
   }, [docs]);
 
   const parsed = useMemo(() => docs.filter((d) => d.status === "parsed" && d.statement), [docs]);

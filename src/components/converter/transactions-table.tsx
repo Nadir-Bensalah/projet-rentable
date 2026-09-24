@@ -7,6 +7,7 @@ import type { ParsedStatement, Transaction } from "@/lib/statement/types";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/field";
 import { cn } from "@/lib/cn";
+import { useMediaQuery } from "@/lib/use-media-query";
 import { frDate, money } from "./format";
 import { newId } from "./workspace";
 
@@ -30,6 +31,7 @@ export function TransactionsTable({ st, onChange }: Props) {
   const [draft, setDraft] = useState<Draft | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [showAll, setShowAll] = useState(false);
+  const desktop = useMediaQuery("(min-width: 768px)");
   const c = st.currency;
   const rows = st.transactions;
   const LIMIT = 150;
@@ -192,127 +194,128 @@ export function TransactionsTable({ st, onChange }: Props) {
         </Button>
       </div>
 
-      {/* Desktop table */}
-      <div className="hidden overflow-x-auto md:block">
-        <table className="w-full text-left text-sm" data-testid="transactions-table">
-          <thead className="bg-[var(--bg-subtle)] text-xs uppercase tracking-wide text-subtle">
-            <tr>
-              <th scope="col" className="w-12 px-4 py-2.5 font-semibold">
-                <span className="sr-only">Inclure</span>
-              </th>
-              <th scope="col" className="w-28 px-2 py-2.5 font-semibold">
-                Date
-              </th>
-              <th scope="col" className="px-2 py-2.5 font-semibold">
-                Libellé
-              </th>
-              <th scope="col" className="w-36 px-2 py-2.5 text-right font-semibold">
-                Montant
-              </th>
-              {st.transactions.some((t) => t.balance !== undefined) ? (
-                <th scope="col" className="w-36 px-2 py-2.5 text-right font-semibold">
-                  Solde
+      {/* Desktop table (only one of the two views is rendered, to keep ids unique) */}
+      {desktop ? (
+        <div className="overflow-x-auto">
+          <table className="w-full text-left text-sm" data-testid="transactions-table">
+            <thead className="bg-[var(--bg-subtle)] text-xs uppercase tracking-wide text-subtle">
+              <tr>
+                <th scope="col" className="w-12 px-4 py-2.5 font-semibold">
+                  <span className="sr-only">Inclure</span>
                 </th>
-              ) : null}
-              <th scope="col" className="w-32 px-4 py-2.5 text-right font-semibold">
-                <span className="sr-only">Actions</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-[var(--border)]">
-            {visible.map((t) =>
-              editing === t.id ? (
-                <tr key={t.id} className="bg-brand-50/50 dark:bg-brand-950/30">
-                  <td colSpan={6} className="px-4 py-3">
-                    {editor(t)}
-                  </td>
-                </tr>
-              ) : (
-                <tr
-                  key={t.id}
-                  className={cn(
-                    t.excluded && "opacity-45",
-                    (t.balanceCheck === "mismatch" || t.signGuessed) && "bg-amber-50/70 dark:bg-amber-950/20",
-                  )}
-                >
-                  <td className="px-4 py-2">
-                    <input
-                      type="checkbox"
-                      className="size-4 cursor-pointer accent-brand-600"
-                      checked={!t.excluded}
-                      onChange={(e) => update(t.id, { excluded: !e.target.checked })}
-                      aria-label={`Inclure l'opération du ${frDate(t.date)} dans l'export`}
-                    />
-                  </td>
-                  <td className="tabular whitespace-nowrap px-2 py-2 text-muted">{frDate(t.date)}</td>
-                  <td className="px-2 py-2">
-                    <span className={cn(t.excluded && "line-through")}>
-                      {t.description || <em className="text-subtle">Sans libellé</em>}
-                    </span>
-                    {t.signGuessed ? (
-                      <span className="ml-2 text-xs font-medium text-amber-700 dark:text-amber-400">sens estimé</span>
-                    ) : null}
-                    {t.balanceCheck === "mismatch" ? (
-                      <span className="ml-2 text-xs font-medium text-amber-700 dark:text-amber-400">solde de ligne incohérent</span>
-                    ) : null}
-                  </td>
-                  <td
+                <th scope="col" className="w-28 px-2 py-2.5 font-semibold">
+                  Date
+                </th>
+                <th scope="col" className="px-2 py-2.5 font-semibold">
+                  Libellé
+                </th>
+                <th scope="col" className="w-36 px-2 py-2.5 text-right font-semibold">
+                  Montant
+                </th>
+                {st.transactions.some((t) => t.balance !== undefined) ? (
+                  <th scope="col" className="w-36 px-2 py-2.5 text-right font-semibold">
+                    Solde
+                  </th>
+                ) : null}
+                <th scope="col" className="w-32 px-4 py-2.5 text-right font-semibold">
+                  <span className="sr-only">Actions</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-[var(--border)]">
+              {visible.map((t) =>
+                editing === t.id ? (
+                  <tr key={t.id} className="bg-brand-50/50 dark:bg-brand-950/30">
+                    <td colSpan={6} className="px-4 py-3">
+                      {editor(t)}
+                    </td>
+                  </tr>
+                ) : (
+                  <tr
+                    key={t.id}
                     className={cn(
-                      "tabular whitespace-nowrap px-2 py-2 text-right font-medium",
-                      t.amount > 0 && "text-emerald-700 dark:text-emerald-400",
+                      t.excluded && "opacity-45",
+                      (t.balanceCheck === "mismatch" || t.signGuessed) && "bg-amber-50/70 dark:bg-amber-950/20",
                     )}
                   >
-                    {money(t.amount, c, true)}
-                  </td>
-                  {st.transactions.some((x) => x.balance !== undefined) ? (
-                    <td className="tabular whitespace-nowrap px-2 py-2 text-right text-muted">{money(t.balance, c)}</td>
-                  ) : null}
-                  <td className="px-4 py-1">{actions(t)}</td>
-                </tr>
-              ),
-            )}
-          </tbody>
-        </table>
-      </div>
-
-      {/* Mobile cards */}
-      <ul className="divide-y divide-[var(--border)] md:hidden" data-testid="transactions-list">
-        {visible.map((t) => (
-          <li
-            key={t.id}
-            className={cn(
-              "px-4 py-3",
-              t.excluded && "opacity-50",
-              (t.balanceCheck === "mismatch" || t.signGuessed) && "bg-amber-50/70 dark:bg-amber-950/20",
-            )}
-          >
-            {editing === t.id ? (
-              editor(t)
-            ) : (
-              <div className="flex items-start gap-3">
-                <input
-                  type="checkbox"
-                  className="mt-1 size-4 accent-brand-600"
-                  checked={!t.excluded}
-                  onChange={(e) => update(t.id, { excluded: !e.target.checked })}
-                  aria-label={`Inclure l'opération du ${frDate(t.date)}`}
-                />
-                <div className="min-w-0 flex-1">
-                  <div className="flex items-baseline justify-between gap-3">
-                    <span className="tabular text-xs text-subtle">{frDate(t.date)}</span>
-                    <span className={cn("tabular text-sm font-semibold", t.amount > 0 && "text-emerald-700 dark:text-emerald-400")}>
+                    <td className="px-4 py-2">
+                      <input
+                        type="checkbox"
+                        className="size-4 cursor-pointer accent-brand-600"
+                        checked={!t.excluded}
+                        onChange={(e) => update(t.id, { excluded: !e.target.checked })}
+                        aria-label={`Inclure l'opération du ${frDate(t.date)} dans l'export`}
+                      />
+                    </td>
+                    <td className="tabular whitespace-nowrap px-2 py-2 text-muted">{frDate(t.date)}</td>
+                    <td className="px-2 py-2">
+                      <span className={cn(t.excluded && "line-through")}>
+                        {t.description || <em className="text-subtle">Sans libellé</em>}
+                      </span>
+                      {t.signGuessed ? (
+                        <span className="ml-2 text-xs font-medium text-amber-700 dark:text-amber-400">sens estimé</span>
+                      ) : null}
+                      {t.balanceCheck === "mismatch" ? (
+                        <span className="ml-2 text-xs font-medium text-amber-700 dark:text-amber-400">solde de ligne incohérent</span>
+                      ) : null}
+                    </td>
+                    <td
+                      className={cn(
+                        "tabular whitespace-nowrap px-2 py-2 text-right font-medium",
+                        t.amount > 0 && "text-emerald-700 dark:text-emerald-400",
+                      )}
+                    >
                       {money(t.amount, c, true)}
-                    </span>
+                    </td>
+                    {st.transactions.some((x) => x.balance !== undefined) ? (
+                      <td className="tabular whitespace-nowrap px-2 py-2 text-right text-muted">{money(t.balance, c)}</td>
+                    ) : null}
+                    <td className="px-4 py-1">{actions(t)}</td>
+                  </tr>
+                ),
+              )}
+            </tbody>
+          </table>
+        </div>
+      ) : (
+        <ul className="divide-y divide-[var(--border)]" data-testid="transactions-list">
+          {visible.map((t) => (
+            <li
+              key={t.id}
+              className={cn(
+                "px-4 py-3",
+                t.excluded && "opacity-50",
+                (t.balanceCheck === "mismatch" || t.signGuessed) && "bg-amber-50/70 dark:bg-amber-950/20",
+              )}
+            >
+              {editing === t.id ? (
+                editor(t)
+              ) : (
+                <div className="flex items-start gap-3">
+                  <input
+                    type="checkbox"
+                    className="mt-1 size-4 accent-brand-600"
+                    checked={!t.excluded}
+                    onChange={(e) => update(t.id, { excluded: !e.target.checked })}
+                    aria-label={`Inclure l'opération du ${frDate(t.date)}`}
+                  />
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-baseline justify-between gap-3">
+                      <span className="tabular text-xs text-subtle">{frDate(t.date)}</span>
+                      <span className={cn("tabular text-sm font-semibold", t.amount > 0 && "text-emerald-700 dark:text-emerald-400")}>
+                        {money(t.amount, c, true)}
+                      </span>
+                    </div>
+                    <p className={cn("mt-0.5 break-words text-sm", t.excluded && "line-through")}>{t.description || "Sans libellé"}</p>
+                    {t.signGuessed ? <p className="text-xs font-medium text-amber-700">sens estimé</p> : null}
+                    <div className="-ml-2 mt-1">{actions(t)}</div>
                   </div>
-                  <p className={cn("mt-0.5 break-words text-sm", t.excluded && "line-through")}>{t.description || "Sans libellé"}</p>
-                  {t.signGuessed ? <p className="text-xs font-medium text-amber-700">sens estimé</p> : null}
-                  <div className="-ml-2 mt-1">{actions(t)}</div>
                 </div>
-              </div>
-            )}
-          </li>
-        ))}
-      </ul>
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
 
       {rows.length > LIMIT && !showAll ? (
         <div className="border-t border-[var(--border)] p-3 text-center">

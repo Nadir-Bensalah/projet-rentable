@@ -5,7 +5,8 @@ import { Blocks } from "@/components/marketing/rich-text";
 import { PageHeader } from "@/components/marketing/page-header";
 import { LEGAL_PAGES } from "@/content/legal";
 
-export const dynamicParams = false;
+// Unknown slugs render the 404 page (notFound below) instead of raising NoFallbackError.
+export const dynamicParams = true;
 
 export function generateStaticParams() {
   return LEGAL_PAGES.map((p) => ({ legal: p.slug }));

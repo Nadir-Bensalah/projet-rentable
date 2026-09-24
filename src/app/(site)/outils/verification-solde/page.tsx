@@ -6,7 +6,7 @@ import { ButtonLink } from "@/components/ui/button";
 export const metadata: Metadata = {
   title: "Vérifier un solde bancaire : calculateur gratuit d'écart",
   description:
-    "Solde de départ + opérations = solde final ? Collez vos opérations : le calculateur trouve l'écart et suggère sa cause (ligne manquante, signe inversé, chiffres inversés). Gratuit, sans envoi.",
+    "Collez vos opérations : le calculateur vérifie solde de départ + opérations = solde final et suggère la cause d'un écart. Gratuit, sans envoi de données.",
   alternates: { canonical: "/outils/verification-solde" },
 };
 

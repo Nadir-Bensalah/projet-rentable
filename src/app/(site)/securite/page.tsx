@@ -7,7 +7,7 @@ import { ButtonLink } from "@/components/ui/button";
 export const metadata: Metadata = {
   title: "Confidentialité : votre relevé ne quitte pas votre ordinateur",
   description:
-    "Comment Relevéo convertit vos relevés bancaires sans jamais les recevoir : lecture locale par le navigateur, politique de sécurité stricte, données minimales. Et comment le vérifier.",
+    "Comment Relevéo convertit vos relevés bancaires sans jamais les recevoir : lecture locale par le navigateur, sécurité stricte, données minimales. Et comment le vérifier.",
   alternates: { canonical: "/securite" },
 };
 

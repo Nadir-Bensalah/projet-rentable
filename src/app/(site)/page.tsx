@@ -24,6 +24,8 @@ import { absoluteUrl, site } from "@/config/site";
 import type { FaqItem } from "@/content/types";
 
 export const metadata: Metadata = {
+  description:
+    "Convertissez vos relevés bancaires PDF en Excel, CSV, OFX ou écritures comptables. Lecture dans votre navigateur, aucun envoi, contrôle du solde au centime.",
   alternates: { canonical: "/" },
 };
 

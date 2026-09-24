@@ -5,7 +5,7 @@ import { ButtonLink } from "@/components/ui/button";
 export const metadata: Metadata = {
   title: "Relevé PDF vers Excel : comparer les méthodes",
   description:
-    "Saisie manuelle, export CSV de la banque, convertisseur en ligne, IA généraliste ou Relevéo : avantages, limites et risques de chaque méthode pour exploiter un relevé bancaire PDF.",
+    "Saisie manuelle, export CSV de la banque, convertisseur en ligne, IA généraliste ou Relevéo : avantages et limites de chaque méthode pour un relevé PDF.",
   alternates: { canonical: "/comparatif" },
 };
 

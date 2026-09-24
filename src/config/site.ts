@@ -3,7 +3,7 @@ export const site = {
   tagline: "Vos relevés bancaires PDF, convertis et vérifiés au centime.",
   description:
     "Convertissez vos relevés bancaires PDF en Excel, CSV, OFX ou écritures comptables. Le fichier ne quitte jamais votre ordinateur, et chaque relevé est contrôlé : solde de départ + opérations = solde final.",
-  url: process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000",
+  url: process.env.APP_URL ?? process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000",
   locale: "fr_FR",
   supportEmail: process.env.NEXT_PUBLIC_SUPPORT_EMAIL ?? "support@releveo.fr",
   /**

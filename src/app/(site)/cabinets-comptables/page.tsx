@@ -6,7 +6,7 @@ import { ButtonLink } from "@/components/ui/button";
 import { PLANS, formatPrice } from "@/config/plans";
 
 export const metadata: Metadata = {
-  title: "Relevés PDF des clients : conversion par lot pour cabinets comptables",
+  title: "Cabinets comptables : relevés PDF clients convertis par lot",
   description:
     "Convertissez par lot les relevés bancaires PDF de vos clients, contrôlés au centime, en journal de banque 512/471 aux colonnes FEC, OFX, CSV ou Excel. Sans envoi de fichier.",
   alternates: { canonical: "/cabinets-comptables" },
@@ -65,7 +65,7 @@ export default function FirmsPage() {
           ))}
         </div>
 
-        <section className="mt-16 grid gap-10 lg:grid-cols-2 lg:items-center">
+        <section className="mt-16 grid gap-10 lg:grid-cols-2 lg:items-center [&>*]:min-w-0">
           <div>
             <h2 className="text-3xl font-bold tracking-tight">Le secret professionnel respecté par construction</h2>
             <p className="mt-4 leading-relaxed text-muted">

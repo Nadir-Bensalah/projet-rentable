@@ -7,7 +7,7 @@ export function ControlReport({ statements }: { statements: ParsedStatement[] })
   return (
     <div className="print-area hidden print:block" aria-hidden>
       <div style={{ fontFamily: "Arial, sans-serif", fontSize: 11, color: "#000" }}>
-        <h1 style={{ fontSize: 18, margin: 0 }}>Rapport de contrôle des relevés</h1>
+        <div style={{ fontSize: 18, margin: 0, fontWeight: 700 }}>Rapport de contrôle des relevés</div>
         <p style={{ margin: "4px 0 16px", color: "#444" }}>
           Généré par Relevéo le {now}. Contrôle : solde de départ + crédits − débits = solde final imprimé.
         </p>

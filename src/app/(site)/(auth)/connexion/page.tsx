@@ -4,7 +4,7 @@ import { LoginPageClient } from "@/components/auth/auth-pages";
 
 export const metadata: Metadata = {
   title: "Connexion",
-  description: "Connectez-vous à votre compte Relevéo.",
+  description: "Connectez-vous à votre compte Relevéo pour convertir vos relevés bancaires PDF et gérer votre abonnement.",
   alternates: { canonical: "/connexion" },
   robots: { index: true, follow: true },
 };
