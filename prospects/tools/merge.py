@@ -132,6 +132,8 @@ def main():
     optkeys = set()
     for o in optout:
         optkeys |= {k for k in keys(o) if not k.startswith("tel:") or len(k) > 5}
+    qa_path = os.path.join(st, "qa.json")
+    qa = json.load(open(qa_path)) if os.path.exists(qa_path) else {}
     kept, rejects, teams, seen = [], [], [], {}
     for f in sorted(glob.glob(os.path.join(teams_dir, "*.json"))):
         try:
@@ -148,7 +150,15 @@ def main():
         for p in data.get("retenus", []):
             p = dict(p)
             p.setdefault("equipe", team)
+            fix = qa.get(p.get("id"), {})
+            for k, v in fix.get("set", {}).items():
+                if isinstance(v, dict) and isinstance(p.get(k), dict):
+                    p[k].update(v)
+                else:
+                    p[k] = v
             errs = validate(p)
+            if fix.get("rejet"):
+                errs.append("QA : " + fix["rejet"])
             ks = keys(p)
             dup = next((seen[k] for k in ks if k in seen), None)
             if ks & optkeys:

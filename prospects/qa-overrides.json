@@ -1,0 +1,5 @@
+{
+ "T06-001": {"rejet": "coordonnées (gmail + mobile) relevées sur la fiche de l'établissement d'Aurillac ; exploitant commun avec Rodez non confirmé"},
+ "T05-002": {"rejet": "source de l'email non traçable (résumé sans page) ; téléphone contradictoire entre deux sources (…50 / …55)"},
+ "T08-001": {"set": {"score_detail": {"urgence": 10}}, "note": "offre datée de janvier 2026 (> 6 mois) : urgence ramenée de 12 à 10"}
+}

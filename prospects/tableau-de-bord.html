@@ -1,0 +1,236 @@
+<title>Capmedia Radar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --bg:#EEF1F4; --surface:#FFFFFF; --surface2:#F6F8FA; --ink:#15212E; --muted:#5B6878; --line:#D8DEE5;
+  --accent:#1F5F8B; --accent-soft:#E1ECF5;
+  --hot:#C0392B; --hot-soft:#FBE6E3; --warm:#B7700F; --warm-soft:#FBF0DC; --ok:#2F6A4F; --ok-soft:#E2F1E8;
+  --font:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){color-scheme:dark;
+    --bg:#0F1720; --surface:#16212C; --surface2:#1B2835; --ink:#E4EAF0; --muted:#94A3B3; --line:#2A3947;
+    --accent:#7FB6DE; --accent-soft:#1D3447;
+    --hot:#F08070; --hot-soft:#3A1F1C; --warm:#E8B25A; --warm-soft:#382A14; --ok:#7CC6A0; --ok-soft:#18332A;}
+}
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0F1720; --surface:#16212C; --surface2:#1B2835; --ink:#E4EAF0; --muted:#94A3B3; --line:#2A3947;
+  --accent:#7FB6DE; --accent-soft:#1D3447;
+  --hot:#F08070; --hot-soft:#3A1F1C; --warm:#E8B25A; --warm-soft:#382A14; --ok:#7CC6A0; --ok-soft:#18332A;}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:14px;line-height:1.5}
+.wrap{max-width:1280px;margin:0 auto;padding:20px 16px 48px;display:flex;flex-direction:column;gap:18px}
+header.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px}
+h1{font-size:24px;margin:0;letter-spacing:-.01em;text-wrap:balance}
+.sub{color:var(--muted);margin:2px 0 0;max-width:70ch}
+.live{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--muted)}
+.dot.on{background:var(--ok);box-shadow:0 0 0 0 var(--ok);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--ok) 60%,transparent)}100%{box-shadow:0 0 0 8px transparent}}
+@media (prefers-reduced-motion:reduce){.dot.on{animation:none}}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+.kpi .l{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.kpi .v{font-family:var(--mono);font-size:26px;font-weight:600;font-variant-numeric:tabular-nums}
+.kpi.hot .v{color:var(--hot)} .kpi.warm .v{color:var(--warm)} .kpi.ok .v{color:var(--accent)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px}
+.panel h2{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 10px;font-weight:600}
+.bars{display:flex;flex-direction:column;gap:6px}
+.bar{display:grid;grid-template-columns:minmax(90px,38%) 1fr 36px;gap:8px;align-items:center;font-size:12.5px}
+.bar .n{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar .t{height:8px;background:var(--surface2);border-radius:4px;overflow:hidden}
+.bar .t i{display:block;height:100%;background:var(--accent);border-radius:4px}
+.bar .c{font-family:var(--mono);text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}
+.teams{display:flex;flex-direction:column;gap:6px}
+.team{display:grid;grid-template-columns:1fr auto;gap:8px;font-size:12.5px;padding:6px 0;border-bottom:1px dashed var(--line)}
+.team:last-child{border-bottom:0}
+.team .m{font-family:var(--mono);color:var(--muted);font-size:11.5px;font-variant-numeric:tabular-nums}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.tabs button{font:inherit;background:none;border:0;padding:8px 12px;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;font-weight:600}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.tabs button:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.filters input,.filters select{font:inherit;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:7px 10px;min-width:0}
+.filters input{flex:1 1 220px}
+.count{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.list{display:flex;flex-direction:column;gap:8px}
+.row{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px;display:grid;grid-template-columns:64px 1fr;gap:12px;cursor:pointer;text-align:left;font:inherit;color:inherit;width:100%}
+.row:hover{border-color:var(--accent)}
+.score{display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:6px;padding:6px 0;font-family:var(--mono)}
+.score b{font-size:20px;line-height:1}
+.score span{font-size:9.5px;letter-spacing:.04em;margin-top:3px;text-transform:uppercase}
+.lv-tc{background:var(--hot-soft);color:var(--hot)} .lv-c{background:var(--warm-soft);color:var(--warm)} .lv-q{background:var(--accent-soft);color:var(--accent)}
+.row .h{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline}
+.row .h strong{font-size:15px}
+.meta{color:var(--muted);font-size:12.5px}
+.why{margin:4px 0 0;font-size:13.5px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.chip{font-size:11.5px;padding:2px 8px;border-radius:999px;background:var(--surface2);border:1px solid var(--line);color:var(--muted)}
+.chip.sig{background:var(--ok-soft);color:var(--ok);border-color:transparent}
+.empty{padding:28px;text-align:center;color:var(--muted);background:var(--surface);border:1px dashed var(--line);border-radius:8px}
+dialog{border:1px solid var(--line);border-radius:10px;padding:0;max-width:820px;width:calc(100% - 32px);background:var(--surface);color:var(--ink)}
+dialog::backdrop{background:rgba(10,18,26,.45)}
+.dlg{padding:18px 20px;display:flex;flex-direction:column;gap:14px;max-height:85vh;overflow:auto}
+.dlg header{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.dlg h3{margin:0;font-size:20px}
+.close{font:inherit;background:var(--surface2);border:1px solid var(--line);color:var(--ink);border-radius:6px;padding:4px 10px;cursor:pointer}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px 16px}
+.kv div{display:flex;flex-direction:column;min-width:0}
+.kv .k{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.kv .val{overflow-wrap:anywhere}
+.sec h4{margin:0 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.facts{display:flex;flex-direction:column;gap:8px;margin:0;padding:0;list-style:none}
+.facts li{border-left:3px solid var(--accent);padding:2px 0 2px 10px}
+.facts a,.kv a,.src a{color:var(--accent);overflow-wrap:anywhere}
+.tri{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.tri div{background:var(--surface2);border-radius:6px;padding:10px}
+.tri .k{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+.mail{background:var(--surface2);border:1px solid var(--line);border-radius:6px;padding:12px;white-space:pre-wrap;font-size:13.5px}
+.copy{font:inherit;font-size:12px;background:var(--accent);color:var(--surface);border:0;border-radius:5px;padding:4px 10px;cursor:pointer}
+.sd{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;font-family:var(--mono);font-size:11.5px}
+.sd div{background:var(--surface2);border-radius:5px;padding:6px;text-align:center}
+@media (max-width:560px){.sd{grid-template-columns:repeat(3,1fr)}.row{grid-template-columns:54px 1fr}}
+table{border-collapse:collapse;width:100%;font-size:12.5px}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.tw{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+.note{font-size:12.5px;color:var(--muted);max-width:90ch}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1>Capmedia Radar</h1>
+      <p class="sub">Opportunités B2B documentées : email et téléphone trouvés, signal d'achat sourcé, score de qualification sur 100. Aucune prise de contact n'est faite depuis cette page.</p>
+    </div>
+    <div class="live"><span class="dot" id="dot"></span><span id="liveTxt">connexion…</span></div>
+  </header>
+
+  <section class="kpis" id="kpis"></section>
+
+  <section class="grid2">
+    <div class="panel"><h2>Par secteur</h2><div class="bars" id="bSect"></div></div>
+    <div class="panel"><h2>Par région</h2><div class="bars" id="bReg"></div></div>
+    <div class="panel"><h2>Équipes de recherche</h2><div class="teams" id="teams"></div></div>
+  </section>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" id="tab-p" aria-selected="true">Prospects retenus</button>
+    <button role="tab" id="tab-r" aria-selected="false">Rejets</button>
+    <button role="tab" id="tab-o" aria-selected="false">Opposition</button>
+  </nav>
+
+  <section id="paneP" class="list-wrap" style="display:flex;flex-direction:column;gap:10px">
+    <div class="filters">
+      <input id="q" type="search" placeholder="Entreprise, ville, signal, service…" aria-label="Rechercher">
+      <select id="fLv" aria-label="Niveau"><option value="">Tous niveaux</option><option>TRÈS CHAUD</option><option>CHAUD</option><option>QUALIFIÉ</option></select>
+      <select id="fSec" aria-label="Secteur"><option value="">Tous secteurs</option></select>
+      <select id="fReg" aria-label="Région"><option value="">Toutes régions</option></select>
+      <span class="count" id="cnt"></span>
+    </div>
+    <div class="list" id="list"></div>
+  </section>
+
+  <section id="paneR" hidden>
+    <div class="tw"><table><thead><tr><th>Entreprise</th><th>Étape de rejet</th><th>Raison</th><th>Équipe</th></tr></thead><tbody id="rej"></tbody></table></div>
+  </section>
+  <section id="paneO" hidden>
+    <p class="note">Entreprises ou contacts ayant demandé à ne plus être sollicités. Toute entrée ici est exclue définitivement des futures collectes.</p>
+    <div class="tw"><table><thead><tr><th>Entreprise / domaine</th><th>Date</th><th>Motif</th></tr></thead><tbody id="opp"></tbody></table></div>
+  </section>
+</div>
+
+<dialog id="dlg"><div class="dlg" id="dlgBody"></div></dialog>
+
+<script>
+const S={p:[],r:[],o:[],t:[]};
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const lvCls=l=>l==="TRÈS CHAUD"?"lv-tc":l==="CHAUD"?"lv-c":"lv-q";
+const safeUrl=u=>/^https?:\/\//i.test(u||"")?u:"";
+const link=(u,t)=>safeUrl(u)?`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t||u)}</a>`:esc(t||u||"—");
+
+function kpis(){
+  const p=S.p, n=k=>p.filter(x=>x.niveau===k).length;
+  const an=S.t.reduce((a,t)=>a+(+t.analysees||0),0), rj=S.t.reduce((a,t)=>a+(+t.rejetees||0),0);
+  const cells=[["Prospects retenus",p.length,""],["Très chauds (90+)",n("TRÈS CHAUD"),"hot"],["Chauds (80-89)",n("CHAUD"),"warm"],["Qualifiés (70-79)",n("QUALIFIÉ"),"ok"],["Entreprises analysées",Math.max(an,p.length+S.r.length),""],["Rejetées",Math.max(rj,S.r.length),""]];
+  $("kpis").innerHTML=cells.map(([l,v,c])=>`<div class="kpi ${c}"><div class="l">${l}</div><div class="v">${v}</div></div>`).join("");
+}
+function bars(el,key){
+  const m={}; S.p.forEach(x=>{const k=x[key]||"Non précisé"; m[k]=(m[k]||0)+1});
+  const e=Object.entries(m).sort((a,b)=>b[1]-a[1]).slice(0,9), mx=e[0]?.[1]||1;
+  $(el).innerHTML=e.length?e.map(([k,v])=>`<div class="bar"><span class="n" title="${esc(k)}">${esc(k)}</span><span class="t"><i style="width:${(v/mx*100).toFixed(1)}%"></i></span><span class="c">${v}</span></div>`).join(""):`<span class="meta">En attente des premières fiches.</span>`;
+}
+function teams(){
+  const t=[...S.t].sort((a,b)=>String(a.nom).localeCompare(b.nom));
+  $("teams").innerHTML=t.length?t.map(x=>`<div class="team"><div><strong>${esc(x.nom)}</strong><div class="meta">${esc(x.statut||"")}</div></div><div class="m">${+x.retenues||0} retenus · ${+x.rejetees||0} rejets</div></div>`).join(""):`<span class="meta">Aucune équipe active.</span>`;
+}
+function fillSelect(id,key,label){
+  const cur=$(id).value, vals=[...new Set(S.p.map(x=>x[key]).filter(Boolean))].sort();
+  $(id).innerHTML=`<option value="">${label}</option>`+vals.map(v=>`<option${v===cur?" selected":""}>${esc(v)}</option>`).join("");
+}
+function list(){
+  const q=$("q").value.toLowerCase().trim(), lv=$("fLv").value, sc=$("fSec").value, rg=$("fReg").value;
+  const f=S.p.filter(x=>(!lv||x.niveau===lv)&&(!sc||x.secteur===sc)&&(!rg||x.region===rg)&&(!q||JSON.stringify([x.entreprise,x.ville,x.signal_achat,x.service,x.besoin,x.secteur]).toLowerCase().includes(q)))
+    .sort((a,b)=>(b.score||0)-(a.score||0));
+  $("cnt").textContent=`${f.length} / ${S.p.length}`;
+  $("list").innerHTML=f.length?f.map(x=>`<button class="row" data-id="${esc(x.id)}">
+    <div class="score ${lvCls(x.niveau)}"><b>${+x.score||0}</b><span>${esc(x.niveau)}</span></div>
+    <div><div class="h"><strong>${esc(x.entreprise)}</strong><span class="meta">${esc(x.secteur)} · ${esc(x.ville)}${x.departement?" ("+esc(x.departement)+")":""}</span></div>
+    <p class="why">${esc(x.pourquoi_demain||x.besoin)}</p>
+    <div class="chips"><span class="chip sig">${esc(x.signal_achat)}</span><span class="chip">${esc(x.service)}</span><span class="chip">${esc(x.id)}</span></div></div></button>`).join("")
+    :`<div class="empty">${S.p.length?"Aucune fiche ne correspond à ces filtres.":"Les équipes recherchent. Les fiches validées apparaissent ici dès qu'elles passent le contrôle."}</div>`;
+}
+function copyBtn(txt){return `<button class="copy" data-copy="${esc(txt)}">Copier</button>`}
+function open(id){
+  const x=S.p.find(p=>p.id===id); if(!x) return;
+  const sd=x.score_detail||{};
+  const facts=(x.faits||[]).map(f=>`<li>${esc(f.fait)}<div class="meta">${esc(f.source_type||"source")} · observé le ${esc(f.date||x.date_verification)} · ${link(f.url,"voir la source")}</div></li>`).join("");
+  $("dlgBody").innerHTML=`<header><div><h3>${esc(x.entreprise)}</h3><div class="meta">${esc(x.secteur)} · ${esc(x.ville)} · ${esc(x.region)} · ${esc(x.id)}</div></div>
+   <div style="display:flex;gap:8px;align-items:center"><div class="score ${lvCls(x.niveau)}" style="padding:6px 10px"><b>${+x.score}</b><span>${esc(x.niveau)}</span></div><button class="close" id="cls">Fermer</button></div></header>
+   <div class="sd"><div>Besoin<br>${sd.besoin??"–"}/25</div><div>Urgence<br>${sd.urgence??"–"}/20</div><div>Fit<br>${sd.fit??"–"}/20</div><div>Capacité<br>${sd.capacite??"–"}/10</div><div>Accès<br>${sd.accessibilite??"–"}/10</div><div>Preuves<br>${sd.preuves??"–"}/15</div></div>
+   <div class="kv">
+    <div><span class="k">Email</span><span class="val">${esc(x.email)} ${copyBtn(x.email)}</span><span class="meta">${link(x.source_email,"source email")}</span></div>
+    <div><span class="k">Téléphone</span><span class="val">${esc(x.telephone)} ${copyBtn(x.telephone)}</span><span class="meta">${link(x.source_telephone,"source téléphone")}</span></div>
+    <div><span class="k">Site</span><span class="val">${link(x.site_web)}</span></div>
+    <div><span class="k">Contact</span><span class="val">${esc(x.contact_nom||"—")}${x.contact_fonction?" · "+esc(x.contact_fonction):""}</span></div>
+    <div><span class="k">SIREN</span><span class="val">${esc(x.siren||"—")}</span></div>
+    <div><span class="k">Effectif / capital</span><span class="val">${esc(x.effectif||"—")} · ${esc(x.capital||"—")}</span></div>
+    <div><span class="k">Site · iOS · Android</span><span class="val">${esc(x.site_existant)} · ${esc(x.app_ios)} · ${esc(x.app_android)}</span></div>
+    <div><span class="k">Urgence</span><span class="val">${esc(x.urgence)}</span></div>
+   </div>
+   <div class="sec"><h4>Pourquoi l'appeler demain matin</h4><div>${esc(x.pourquoi_demain)}</div></div>
+   <div class="sec"><h4>Faits observés</h4><ul class="facts">${facts||"<li>—</li>"}</ul></div>
+   <div class="tri"><div><div class="k">Inférence commerciale</div>${esc(x.inference)}</div><div><div class="k">Opportunité Capmedia</div>${esc(x.opportunite)}</div><div><div class="k">Service à proposer</div>${esc(x.service)}</div></div>
+   ${x.actualite?`<div class="sec"><h4>Actualité</h4><div>${esc(x.actualite)}</div></div>`:""}
+   <div class="sec"><h4>Email · objet : ${esc(x.objet_email)} ${copyBtn(x.email_personnalise)}</h4><div class="mail">${esc(x.email_personnalise)}</div></div>
+   <div class="sec"><h4>Accroche téléphonique</h4><div class="mail">${esc(x.accroche_tel)}</div></div>
+   <div class="sec"><h4>Angle de relance</h4><div>${esc(x.relance)}</div></div>
+   <div class="sec src"><h4>Sources · vérifié le ${esc(x.date_verification)}</h4>${(x.sources||[]).map(u=>`<div>${link(u)}</div>`).join("")}</div>`;
+  $("dlg").showModal();
+  $("cls").onclick=()=>$("dlg").close();
+}
+document.addEventListener("click",e=>{
+  const c=e.target.closest("[data-copy]");
+  if(c){e.stopPropagation();const t=c.dataset.copy;navigator.clipboard?.writeText(t).then(()=>{c.textContent="Copié"},()=>{c.textContent="Sélectionnez le texte"}).catch(()=>{});return;}
+  const r=e.target.closest(".row"); if(r) open(r.dataset.id);
+});
+$("dlg").addEventListener("click",e=>{if(e.target===$("dlg"))$("dlg").close()});
+["q","fLv","fSec","fReg"].forEach(i=>$(i).addEventListener("input",list));
+const tabs={p:"paneP",r:"paneR",o:"paneO"};
+Object.keys(tabs).forEach(k=>$("tab-"+k).onclick=()=>{Object.entries(tabs).forEach(([kk,pn])=>{$("tab-"+kk).setAttribute("aria-selected",kk===k);$(pn).hidden=kk!==k});});
+function rej(){$("rej").innerHTML=S.r.length?S.r.slice(-400).reverse().map(x=>`<tr><td>${esc(x.entreprise)}</td><td>${esc(x.etape)}</td><td>${esc(x.raison)}</td><td>${esc(x.equipe)}</td></tr>`).join(""):`<tr><td colspan="4" class="meta">Aucun rejet enregistré pour l'instant.</td></tr>`}
+function opp(){$("opp").innerHTML=S.o.length?S.o.map(x=>`<tr><td>${esc(x.entreprise||x.domaine)}</td><td>${esc(x.date)}</td><td>${esc(x.motif)}</td></tr>`).join(""):`<tr><td colspan="3" class="meta">Liste vide.</td></tr>`}
+function render(){kpis();bars("bSect","secteur");bars("bReg","region");teams();fillSelect("fSec","secteur","Tous secteurs");fillSelect("fReg","region","Toutes régions");list();rej();opp();}
+render();
+(async()=>{
+  const db=await window.claude?.use?.("db");
+  if(!db){$("liveTxt").textContent="données en direct indisponibles dans cette vue";return;}
+  $("dot").classList.add("on");$("liveTxt").textContent="en direct";
+  const sub=(col,key)=>db.collection(col).onSnapshot(s=>{S[key]=s.docs.map(d=>({id:d.id,...d.data()}));render();$("liveTxt").textContent="en direct · maj "+new Date().toLocaleTimeString("fr-FR")},()=>{$("liveTxt").textContent="flux interrompu"});
+  sub("prospects","p");sub("rejets","r");sub("opposition","o");sub("equipes","t");
+})();
+</script>

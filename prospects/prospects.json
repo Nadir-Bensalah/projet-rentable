@@ -1,0 +1,439 @@
+[
+ {
+  "entreprise": "Crêpe Touch (CT CO)",
+  "siren": "837781566",
+  "secteur": "Restauration crêperie fast casual en franchise",
+  "ville": "Paris",
+  "departement": "75",
+  "region": "Île-de-France",
+  "site_web": "https://www.crepetouch.com",
+  "email": "developpement@crepetouch.com",
+  "telephone": "01 40 25 47 10",
+  "source_email": "https://www.crepetouch.com/mentions-legales/",
+  "source_telephone": "https://www.crepetouch.com/mentions-legales/",
+  "contact_nom": "Mickaël Lipari",
+  "contact_fonction": "Fondateur",
+  "linkedin": "https://fr.linkedin.com/company/crepe-touch",
+  "effectif": "",
+  "capital": "205 000 €",
+  "actualite": "30e restaurant en juillet 2026 ; objectif 40 fin 2026 et 50 fin 2027 ; Bertrand Franchise au capital depuis mars 2025.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Accompagner un rythme de 8 à 12 ouvertures par an avec des outils réseau et une expérience client (commande, fidélité) homogène.",
+  "faits": [
+   {
+    "fait": "29 restaurants fin 2025 après 12 ouvertures dans l'année ; objectifs 40 fin 2026 et 50 fin 2027",
+    "url": "https://www.franchise-magazine.com/news-franchise/reseau-restaurant-crepe-touch-juillet-2026",
+    "source_type": "presse",
+    "date": "2026-07"
+   },
+   {
+    "fait": "Bertrand Franchise entre au capital de Crêpe Touch pour accélérer son développement",
+    "url": "https://lexpress-franchise.com/actualites/le-groupe-bertrand-entre-au-capital-de-crepe-touch-pour-accelerer-son-developpement/",
+    "source_type": "presse",
+    "date": "2025-03"
+   }
+  ],
+  "inference": "Passer de 30 à 50 restaurants en 18 mois impose de fiabiliser le pilotage multi-sites et la relation client digitale ; l'entrée d'un investisseur renforce la capacité d'investissement.",
+  "opportunite": "Application fidélité / commande à emporter commune aux restaurants et back-office de reporting franchisés.",
+  "service": "App mobile fidélité + back-office réseau",
+  "signal_achat": "30e restaurant (juillet 2026), objectif 50 fin 2027",
+  "urgence": "haute — 10 ouvertures visées d'ici fin 2026",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 17,
+   "fit": 16,
+   "capacite": 8,
+   "accessibilite": 7,
+   "preuves": 11
+  },
+  "sources": [
+   "https://www.crepetouch.com/mentions-legales/",
+   "https://www.franchise-magazine.com/news-franchise/reseau-restaurant-crepe-touch-juillet-2026",
+   "https://lexpress-franchise.com/actualites/le-groupe-bertrand-entre-au-capital-de-crepe-touch-pour-accelerer-son-developpement/",
+   "https://www.franchise-magazine.com/news-franchise/reseau-restaurant-crepe-touch-developpement-octobre-2025"
+  ],
+  "objet_email": "Crêpe Touch — de 30 à 50 restaurants",
+  "email_personnalise": "Bonjour Monsieur Lipari,\n\nJ'ai vu que Crêpe Touch a ouvert son 30e restaurant cet été et vise 40 unités fin 2026, puis 50 fin 2027.\n\nAvec une dizaine d'ouvertures par an, la fidélisation des clients d'un restaurant à l'autre et la remontée des indicateurs des franchisés deviennent des sujets à part entière.\n\nCapmedia conçoit des applications de fidélité et de commande ainsi que des back-offices de pilotage pour réseaux multi-sites.\n\nQui suit ces sujets digitaux chez vous ? Un appel de 20 minutes suffirait pour voir si cela vous intéresse.\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que Crêpe Touch a ouvert son 30e restaurant et vise 50 fin 2027. Je voulais savoir qui s'occupe chez vous du digital réseau : fidélité, commande, reporting franchisés.",
+  "relance": "Autre angle : vos restaurants sont souvent en centres commerciaux ; une commande en ligne avec retrait au comptoir peut absorber les pics du samedi — est-ce un sujet chez vous ?",
+  "pourquoi_demain": "Réseau en pleine accélération (10 ouvertures d'ici fin 2026) avec un actionnaire qui finance la croissance.",
+  "equipe": "T04",
+  "id": "T04-002",
+  "score": 76,
+  "niveau": "QUALIFIÉ",
+  "date_verification": "2026-09-24"
+ },
+ {
+  "entreprise": "Beer's Corner",
+  "siren": "833972524",
+  "secteur": "Bar à bières en franchise",
+  "ville": "Le Plessis-Belleville",
+  "departement": "60",
+  "region": "Hauts-de-France",
+  "site_web": "https://www.beers-corner.fr",
+  "email": "franchise@beers-corner.fr",
+  "telephone": "03 60 35 59 75",
+  "source_email": "https://www.beers-corner.fr/fr/contact",
+  "source_telephone": "https://www.beers-corner.fr/fr/contact",
+  "contact_nom": "Damien Amico",
+  "contact_fonction": "Cofondateur",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Élu Révélation de la Franchise 2026 (mars 2026) ; 5 bars ouverts, 11 en cours d'ouverture, objectif 30 établissements d'ici 2029.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Structurer les outils d'un réseau qui passe de 5 à 16 bars en un an (intranet franchisés, reporting multi-bars, fidélité).",
+  "faits": [
+   {
+    "fait": "Révélation de la Franchise 2026 ; 5 établissements ouverts, 11 en cours d'ouverture, CA moyen 500 000 € par point de vente",
+    "url": "https://lexpress-franchise.com/franchise/beers-corner/actualites/de-revelation-beers-corner-entame-son-acceleration-strategique/",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Objectif de 30 établissements d'ici 2029 ; ouvertures 2026 : Lamorlaye, Merlevenez, Laon (juin), Serris (septembre), Mâcon (octobre)",
+    "url": "https://www.franchise-magazine.com/news-franchise/beers-corner-30-etablissements-vises-dici-2029",
+    "source_type": "presse",
+    "date": "2026"
+   }
+  ],
+  "inference": "Un réseau qui triple son parc en 12-18 mois voit vite les limites des outils artisanaux : partage des procédures, remontée des chiffres par bar, animations et fidélité clients à harmoniser.",
+  "opportunite": "Intranet/back-office franchisés avec reporting multi-bars, et programme de fidélité ou agenda d'animations commun sur le site par établissement.",
+  "service": "Outil métier réseau (intranet franchisés + reporting)",
+  "signal_achat": "Révélation Franchise 2026 + 11 ouvertures en cours",
+  "urgence": "haute — ouvertures échelonnées juin-octobre 2026",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 17,
+   "fit": 16,
+   "capacite": 6,
+   "accessibilite": 7,
+   "preuves": 10
+  },
+  "sources": [
+   "https://www.beers-corner.fr/fr/contact",
+   "https://lexpress-franchise.com/franchise/beers-corner/actualites/de-revelation-beers-corner-entame-son-acceleration-strategique/",
+   "https://www.franchise-magazine.com/news-franchise/beers-corner-30-etablissements-vises-dici-2029",
+   "https://www.societe.com/societe/beer-s-corner-833972524.html"
+  ],
+  "objet_email": "Beer's Corner — 11 ouvertures à outiller",
+  "email_personnalise": "Bonjour Monsieur Amico,\n\nJ'ai lu que Beer's Corner, Révélation de la Franchise 2026, compte 5 bars ouverts et 11 en cours d'ouverture, avec 30 établissements visés d'ici 2029.\n\nÀ ce rythme, le partage des procédures, la remontée des chiffres par bar et l'agenda des animations deviennent souvent difficiles à tenir avec des fichiers et des groupes de messagerie.\n\nChez Capmedia, nous concevons des outils de réseau sur mesure : intranet franchisés, tableau de bord multi-établissements, pages bar par bar sur le site.\n\nSeriez-vous ouvert à un échange de 20 minutes pour voir ce qui vous serait utile avant les prochaines ouvertures ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que Beer's Corner a 11 bars en cours d'ouverture après son titre de Révélation de la Franchise 2026. Je voulais savoir qui s'occupe chez vous des outils de pilotage du réseau et du site.",
+  "relance": "Autre angle : pour vos soirées et animations, un agenda par bar et une carte de fidélité numérique commune peuvent faire revenir les clients dans chaque établissement — ça vous parle ?",
+  "pourquoi_demain": "Le réseau ouvre Serris et Mâcon cet automne et doit outiller 11 nouveaux franchisés maintenant.",
+  "equipe": "T04",
+  "id": "T04-001",
+  "score": 73,
+  "niveau": "QUALIFIÉ",
+  "date_verification": "2026-09-24"
+ },
+ {
+  "id": "T07-001",
+  "entreprise": "NSI Groupe",
+  "siren": "798125209",
+  "secteur": "Propreté / nettoyage professionnel multiservices",
+  "ville": "Marly",
+  "departement": "59",
+  "region": "Hauts-de-France",
+  "site_web": "https://www.nsi-groupe.com",
+  "email": "contact@nsi-groupe.com",
+  "telephone": "03 27 30 29 70",
+  "source_email": "https://www.nsi-groupe.com/contact/",
+  "source_telephone": "https://www.nsi-groupe.com/contact/",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "https://fr.linkedin.com/company/nsi-groupe",
+  "effectif": "environ 5 000 salariés (après acquisitions, selon Le Journal des Entreprises)",
+  "capital": "",
+  "actualite": "Trois acquisitions bouclées en 2026 (RM Propreté en Normandie, EPSO Multi-Services à Toulouse en avril, ASHUB Propreté), après GPNI Bordeaux en décembre 2025 ; objectif 100 M€ de CA en 2026 et 150 M€ en 2030 (plan Ambition 2030).",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Harmoniser le suivi des prestations terrain (contrôles qualité, bons d'intervention, planning) et la relation client entre les sociétés rachetées.",
+  "faits": [
+   {
+    "fait": "NSI Groupe boucle une troisième acquisition en 2026 avec ASHUB Propreté (6,5 M€ de CA, environ 500 clients professionnels, nettoyage de salles de sport).",
+    "url": "https://www.lejournaldesentreprises.com/breve/nsi-groupe-boucle-une-troisieme-acquisition-en-2026-avec-ashub-proprete-2146185",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "NSI Groupe (80 M€ de CA en 2025) vise 100 M€ de CA en 2026 après deux nouvelles acquisitions, avec environ 5 000 salariés une fois les rachats finalisés.",
+    "url": "https://www.lejournaldesentreprises.com/article/nsi-groupe-vise-les-100-millions-deuros-de-chiffre-daffaires-en-2026-apres-deux-nouvelles-2134003",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Rachat d'EPSO Multi-Services en Haute-Garonne (avril 2026).",
+    "url": "https://www.lejournaldesentreprises.com/breve/la-societe-de-nettoyage-nordiste-nsi-groupe-rachete-son-homologue-epso-multi-services-en-haute-2142194",
+    "source_type": "presse",
+    "date": "2026-04"
+   },
+   {
+    "fait": "Rachat du normand RM Propreté (100 salariés).",
+    "url": "https://www.lejournaldesentreprises.com/breve/le-nordiste-nsi-groupe-boucle-lacquisition-du-normand-rm-proprete-2134836",
+    "source_type": "presse",
+    "date": "2026"
+   }
+  ],
+  "inference": "Un groupe qui intègre quatre sociétés en moins d'un an (Normandie, Toulouse, Bordeaux, clientèle de salles de sport) doit faire converger des pratiques terrain hétérogènes : planning des équipes, preuves de passage, contrôles qualité photo, remontées aux clients. C'est typiquement le moment où des outils disparates ou papier deviennent un frein.",
+  "opportunite": "Application mobile terrain commune (pointage de passage, check-lists qualité avec photos, signatures, incidents) reliée à un espace client multi-sites et à un tableau de bord par agence ; audit préalable des outils hérités des sociétés rachetées.",
+  "service": "Application métier terrain + espace client / dashboard",
+  "signal_achat": "Build-up : 3 acquisitions en 2026, objectif 100 M€",
+  "urgence": "moyenne — acquisitions 2026 en cours d'intégration, mais pas d'appel d'offres ni de projet digital annoncé publiquement",
+  "score_detail": {
+   "besoin": 16,
+   "urgence": 16,
+   "fit": 16,
+   "capacite": 9,
+   "accessibilite": 6,
+   "preuves": 10
+  },
+  "score": 73,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lejournaldesentreprises.com/breve/nsi-groupe-boucle-une-troisieme-acquisition-en-2026-avec-ashub-proprete-2146185",
+   "https://www.lejournaldesentreprises.com/article/nsi-groupe-vise-les-100-millions-deuros-de-chiffre-daffaires-en-2026-apres-deux-nouvelles-2134003",
+   "https://www.lejournaldesentreprises.com/breve/la-societe-de-nettoyage-nordiste-nsi-groupe-rachete-son-homologue-epso-multi-services-en-haute-2142194",
+   "https://www.lejournaldesentreprises.com/breve/le-nordiste-nsi-groupe-boucle-lacquisition-du-normand-rm-proprete-2134836",
+   "https://www.nsi-groupe.com/contact/",
+   "https://annuaire-entreprises.data.gouv.fr/entreprise/nsi-2-nsi-groupe-418919684"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "NSI Groupe — intégration d'ASHUB, EPSO et RM Propreté",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu dans Le Journal des Entreprises que NSI Groupe a bouclé trois acquisitions en 2026 (RM Propreté, EPSO Multi-Services, ASHUB Propreté) avec un objectif de 100 M€ de chiffre d'affaires.\n\nQuand plusieurs sociétés se rejoignent, les équipes terrain gardent souvent chacune leurs outils : plannings, preuves de passage, contrôles qualité, remontées aux clients.\n\nCapmedia conçoit des applications mobiles terrain (check-lists, photos, signatures) reliées à un espace client et à un tableau de bord par agence, et peut commencer par un court état des lieux des outils existants.\n\nQui pilote ce sujet d'harmonisation chez vous ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que NSI Groupe a réalisé trois rachats cette année, dont ASHUB Propreté et EPSO à Toulouse. Nous aidons les entreprises de services à harmoniser le suivi terrain entre agences avec une application mobile et un espace client. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Autre angle : avec environ 500 clients professionnels arrivés via ASHUB, un espace client où chaque site consulte ses passages et contrôles qualité peut réduire les échanges par mail ; souhaitez-vous un exemple concret ?",
+  "pourquoi_demain": "Quatre rachats en moins d'un an imposent d'unifier maintenant les outils terrain et la relation client entre les agences.",
+  "equipe": "T07"
+ },
+ {
+  "entreprise": "Société Française de Garantie (SFG)",
+  "siren": "391952264",
+  "secteur": "Assurance / garanties et réparation d'appareils (filiale WERTGARANTIE)",
+  "ville": "Rousset",
+  "departement": "13",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "site_web": "https://www.sfg.fr",
+  "email": "sfg@sfg.fr",
+  "telephone": "04 88 78 59 00",
+  "source_email": "https://www.sfg.fr/contact/",
+  "source_telephone": "https://www.allbiz.fr/soci%C3%A9t%C3%A9-fran%C3%A7aise-de-garantie-04-88-78-59-00",
+  "contact_nom": "",
+  "contact_fonction": "Direction des systèmes d'information",
+  "linkedin": "https://fr.linkedin.com/company/soci-t-fran-aise-de-garantie",
+  "effectif": "environ 200 salariés",
+  "capital": "",
+  "actualite": "Plusieurs offres successives de développeur web junior (CDI) et une offre d'alternance développeur web Bac+3/+4 publiées sur Hellowork en 2026",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Renfort de capacité de développement web (applications métiers internes et nouvelles applications web)",
+  "faits": [
+   {
+    "fait": "Offre CDI Développeur Web Junior à Rousset : développement de nouvelles applications web et maintenance des applications existantes, rattaché à la DSI",
+    "url": "https://www.hellowork.com/fr-fr/emplois/81076296.html",
+    "source_type": "offre d'emploi",
+    "date": "2026-08"
+   },
+   {
+    "fait": "Offre répétée : au moins trois annonces 'Développeur Web Junior en CDI' distinctes (80909328, 81076296, 81743803) — poste difficile à pourvoir",
+    "url": "https://www.hellowork.com/fr-fr/emplois/81743803.html",
+    "source_type": "offre d'emploi",
+    "date": "2026"
+   },
+   {
+    "fait": "Offre 'Développeur Web Junior - Alternance Bac+3 Bac+4' à Rousset",
+    "url": "https://www.hellowork.com/fr-fr/emplois/82422956.html",
+    "source_type": "offre d'emploi",
+    "date": "2026"
+   }
+  ],
+  "inference": "La republication de l'offre CDI et l'ouverture en parallèle d'une alternance suggèrent un besoin de capacité non couvert sur des applications web métiers, avec un profil junior à encadrer.",
+  "opportunite": "Proposer un renfort Capmedia au forfait sur les développements web en attente (nouvelles applications, maintenance), et un accompagnement technique de l'alternant (revues de code, cadrage).",
+  "service": "Développement d'applications web métiers / renfort et reprise d'existant",
+  "signal_achat": "Recrutement répété développeur web junior + alternant",
+  "urgence": "moyenne — offres republiées en 2026, poste manifestement non pourvu",
+  "score_detail": {
+   "besoin": 20,
+   "urgence": 14,
+   "fit": 13,
+   "capacite": 9,
+   "accessibilite": 5,
+   "preuves": 11
+  },
+  "sources": [
+   "https://www.hellowork.com/fr-fr/emplois/81076296.html",
+   "https://www.hellowork.com/fr-fr/emplois/81743803.html",
+   "https://www.hellowork.com/fr-fr/emplois/82422956.html",
+   "https://www.sfg.fr/contact/"
+  ],
+  "objet_email": "Votre recrutement développeur web junior à Rousset",
+  "email_personnalise": "Bonjour,\n\nJ'ai vu que SFG a publié plusieurs fois cette année une offre de développeur web junior en CDI, ainsi qu'une alternance, pour développer de nouvelles applications web et maintenir l'existant.\n\nQuand un poste reste ouvert plusieurs mois, les évolutions prévues attendent souvent. Capmedia peut prendre en charge une partie de ces développements au forfait pendant votre recrutement, puis accompagner le junior ou l'alternant à son arrivée (cadrage, revues de code).\n\nNous développons des applications web métiers et des espaces clients pour des PME et ETI.\n\nSeriez-vous d'accord pour un échange de 15 minutes avec la personne qui pilote ces projets ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que SFG recrute un développeur web junior et un alternant à Rousset. L'offre a été publiée plusieurs fois cette année. Je voulais savoir qui s'occupe de ce sujet chez vous, à la DSI.",
+  "relance": "Si le recrutement avance, nous pouvons aussi intervenir ponctuellement sur un projet précis (une application ou un module) sans engagement dans la durée.",
+  "pourquoi_demain": "SFG republie depuis des mois la même offre de développeur web junior : le besoin de capacité est réel et toujours ouvert.",
+  "equipe": "T01",
+  "id": "T01-001",
+  "score": 72,
+  "niveau": "QUALIFIÉ",
+  "date_verification": "2026-09-24"
+ },
+ {
+  "id": "T05-001",
+  "entreprise": "Keepcool (DG Développement)",
+  "siren": "",
+  "secteur": "Réseau de salles de sport (franchise)",
+  "ville": "Ventabren",
+  "departement": "13",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "site_web": "https://www.keepcool.fr",
+  "email": "contact@keepcool.fr",
+  "telephone": "09 72 60 45 00",
+  "source_email": "https://www.keepcool.fr/mentions-legales",
+  "source_telephone": "https://www.keepcool.fr/mentions-legales",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Groupe partagé avec Neoness (site commun neoness-keepcool-pro.com) ; les deux enseignes ont des apps membres de même structure (fr.keepcool.memberapp / fr.neoness.memberapp).",
+  "site_existant": "oui",
+  "app_ios": "oui",
+  "app_android": "oui",
+  "besoin": "Application adhérents signalée inaccessible (« Error null », « service indisponible ») ; l'app sœur Neoness est notée 1,9/5.",
+  "faits": [
+   {
+    "fait": "Des utilisateurs signalent « Error null impossible de se connecter à l'application », « Service indisponible » à l'ouverture et « Impossible d'aller sur l'appli depuis 1 mois sur mes 2 téléphones ».",
+    "url": "https://www.totalbug.com/keepcool/",
+    "source_type": "site de signalement de pannes",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "La fiche App Store Keepcool n'affiche pas assez de notes pour un aperçu ; les notes de version mentionnent la correction de « déconnexions automatiques dans certains cas ».",
+    "url": "https://apps.apple.com/us/app/keepcool/id1582437445?l=fr-FR",
+    "source_type": "avis store",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "L'application de l'enseigne sœur Neoness (même groupe) a une note moyenne de 1,9/5 : erreurs « internal server error » / « utilisateur introuvable », quota de réservation atteint sans réservation, cours réservés supprimés sans notification, « l'ancienne application était mieux ».",
+    "url": "https://justuseapp.com/fr/app/6449222631/neoness/reviews",
+    "source_type": "avis store (agrégateur)",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Keepcool et Neoness partagent un site entreprises commun (neoness-keepcool-pro.com).",
+    "url": "https://www.neoness-keepcool-pro.com/mentions-legales",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "La plateforme d'apps adhérents du groupe (Keepcool/Neoness) semble instable côté connexion/back-end ; la réservation de cours et l'accès club sont au cœur de l'expérience adhérent, donc chaque panne génère du support et de l'insatisfaction en club.",
+  "opportunite": "Audit technique + QA mobile de l'app adhérents (connexion, réservation, stabilité API), puis plan de stabilisation ou refonte React Native mutualisée pour les deux enseignes.",
+  "service": "Audit technique et QA mobile / reprise d'application",
+  "signal_achat": "App adhérents avec erreurs de connexion signalées + app sœur à 1,9/5",
+  "urgence": "moyenne — plaintes récurrentes mais non datées précisément ; app Neoness récemment refondue et critiquée",
+  "score_detail": {
+   "besoin": 18,
+   "urgence": 12,
+   "fit": 16,
+   "capacite": 9,
+   "accessibilite": 6,
+   "preuves": 10
+  },
+  "score": 71,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.totalbug.com/keepcool/",
+   "https://apps.apple.com/us/app/keepcool/id1582437445?l=fr-FR",
+   "https://play.google.com/store/apps/details?id=fr.keepcool.memberapp&hl=en_US",
+   "https://justuseapp.com/fr/app/6449222631/neoness/reviews",
+   "https://apps.apple.com/fr/app/neoness/id6449222631",
+   "https://www.keepcool.fr/mentions-legales"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "À propos de l'app adhérents Keepcool",
+  "email_personnalise": "Bonjour,\n\nEn regardant les retours publics sur l'application Keepcool, j'ai relevé plusieurs signalements d'adhérents bloqués à la connexion (« Error null », « service indisponible », parfois pendant plusieurs semaines). L'app Neoness, qui semble reposer sur la même base, affiche 1,9/5 avec des cours réservés qui disparaissent.\n\nQuand la réservation passe par l'app, ces blocages remontent souvent directement à l'accueil des clubs.\n\nCapmedia réalise des audits techniques et des campagnes de QA sur des apps mobiles existantes, puis accompagne la stabilisation ou la refonte (React Native).\n\nQui suit l'application côté siège ? Un échange de 20 minutes serait-il utile ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu plusieurs signalements d'adhérents Keepcool qui ne peuvent plus se connecter à l'application, et l'app Neoness du même groupe est à 1,9 sur 5. Je voulais savoir qui s'occupe de l'application chez vous.",
+  "relance": "Je peux vous envoyer une courte synthèse des irritants relevés dans les avis Keepcool et Neoness (connexion, réservation, notifications), sans engagement : cela vous serait-il utile ?",
+  "pourquoi_demain": "Leurs adhérents signalent publiquement ne plus pouvoir se connecter à l'app et l'app sœur Neoness est à 1,9/5 : un audit/QA est un point d'entrée concret.",
+  "equipe": "T05"
+ },
+ {
+  "entreprise": "L'Atelier Artisan Crêpier (SLB Holding)",
+  "siren": "821612199",
+  "secteur": "Restauration crêperie premium en franchise",
+  "ville": "Neuilly-sur-Seine",
+  "departement": "92",
+  "region": "Île-de-France",
+  "site_web": "https://www.artisancrepier.com",
+  "email": "contact@artisancrepier.com",
+  "telephone": "01 56 39 92 41",
+  "source_email": "https://www.artisancrepier.com/en/legal-notice/",
+  "source_telephone": "https://www.artisancrepier.com/en/legal-notice/",
+  "contact_nom": "Emeric Berthet",
+  "contact_fonction": "Représentant légal (SLB Holding)",
+  "linkedin": "https://fr.linkedin.com/company/l-atelier-artisan-cr%C3%AApier",
+  "effectif": "",
+  "capital": "2 000 € (SLB Holding)",
+  "actualite": "20e restaurant ouvert en 2026 ; plus de 10 ouvertures annoncées en 2027 ; ambition affichée de 50 franchises d'ici 2027.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Outiller l'accélération en franchise (20 restaurants, 10+ ouvertures en 2027) : pilotage multi-sites et relation client homogène.",
+  "faits": [
+   {
+    "fait": "Le réseau vient d'ouvrir son 20e restaurant en France ; franchiseur depuis 2022, il annonce plus de 10 ouvertures en 2027",
+    "url": "https://www.franchise-magazine.com/actu-des-franchises/breve-actu/",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Ambition d'ouvrir 50 nouvelles franchises d'ici 2027",
+    "url": "https://ac-franchise.com/annuaire/franchise-latelier-artisan-crepier",
+    "source_type": "annuaire franchise",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Article « une vision premium et accessible de la crêperie » (mars 2026)",
+    "url": "https://www.franchise-concepts.fr/secteurs/2026/03/latelier-artisan-crepier-une-vision-premium-et-accessible-de-la-creperie/",
+    "source_type": "presse",
+    "date": "2026-03"
+   }
+  ],
+  "inference": "Un réseau encore majoritairement en propre qui bascule vers la franchise doit formaliser ses outils (procédures, reporting, pages restaurant) avant la vague d'ouvertures de 2027.",
+  "opportunite": "Intranet/back-office franchisés et site multi-restaurants avec pages locales et réservation ou commande en ligne.",
+  "service": "Outil métier réseau + site multi-établissements",
+  "signal_achat": "20e restaurant + 10 ouvertures annoncées pour 2027",
+  "urgence": "moyenne — ouvertures planifiées pour 2027, outils à préparer en amont",
+  "score_detail": {
+   "besoin": 16,
+   "urgence": 14,
+   "fit": 16,
+   "capacite": 6,
+   "accessibilite": 8,
+   "preuves": 10
+  },
+  "sources": [
+   "https://www.artisancrepier.com/en/legal-notice/",
+   "https://www.artisancrepier.com/contact/",
+   "https://www.franchise-magazine.com/actu-des-franchises/breve-actu/",
+   "https://ac-franchise.com/annuaire/franchise-latelier-artisan-crepier",
+   "https://lp.artisancrepier.com/"
+  ],
+  "objet_email": "L'Atelier Artisan Crêpier — préparer les ouvertures 2027",
+  "email_personnalise": "Bonjour Monsieur Berthet,\n\nJ'ai lu que L'Atelier Artisan Crêpier a ouvert son 20e restaurant et annonce plus de 10 ouvertures en 2027.\n\nQuand un réseau bascule vers la franchise, la transmission des procédures, le suivi des chiffres par restaurant et la cohérence des pages locales sur le site prennent vite beaucoup de temps à l'équipe siège.\n\nCapmedia réalise des outils sur mesure pour réseaux : intranet franchisés, tableau de bord multi-restaurants, site multi-établissements.\n\nSeriez-vous d'accord pour un échange de 20 minutes afin de voir ce qui serait utile avant 2027 ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que L'Atelier Artisan Crêpier a ouvert son 20e restaurant et prévoit plus de 10 ouvertures en 2027. Je voulais savoir qui s'occupe chez vous des outils du réseau franchisé et du site.",
+  "relance": "Autre angle : une page par restaurant avec réservation en ligne et avis clients aide chaque franchisé à démarrer plus vite localement — est-ce prévu dans votre kit d'ouverture ?",
+  "pourquoi_demain": "Le réseau prépare une vague de plus de 10 ouvertures en 2027 et c'est maintenant qu'il choisit ses outils.",
+  "equipe": "T04",
+  "id": "T04-003",
+  "score": 70,
+  "niveau": "QUALIFIÉ",
+  "date_verification": "2026-09-24"
+ }
+]
