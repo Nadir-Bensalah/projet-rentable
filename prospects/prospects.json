@@ -66,6 +66,243 @@
   "date_verification": "2026-09-24"
  },
  {
+  "siren": "",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "entreprise": "Racing 92 (SASP)",
+  "secteur": "Club de rugby professionnel (Top 14)",
+  "ville": "Le Plessis-Robinson",
+  "departement": "92",
+  "region": "Île-de-France",
+  "site_web": "https://www.racing92.fr",
+  "email": "contact@racing92.fr",
+  "telephone": "01 41 87 51 10",
+  "source_email": "https://top14.lnr.fr/club/racing-92/informations",
+  "source_telephone": "https://top14.lnr.fr/club/racing-92/informations",
+  "actualite": "Retour au stade Yves-du-Manoir (Colombes) en 2026-2027, stade rénové à 14 000 places livré au printemps 2027 ; sortie au 1er janvier 2027 du modèle de gestion liée à la Paris La Défense Arena, retour à une structure totalement autonome.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Reconstruire en autonomie billetterie, hospitalités et relation partenaires pour le nouveau stade de Colombes.",
+  "faits": [
+   {
+    "fait": "À partir du 1er janvier 2027, le Racing 92 sort du modèle de gestion qui le liait à l'Arena de Nanterre et revient à une structure complètement autonome",
+    "url": "https://www.rugbypass.com/fr/news/racing-92-retour-stade-yves-du-manoir-colombes-2027/",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Stade Yves-du-Manoir porté à 14 000 places, livraison du stade rénové attendue au printemps 2027, AOT sur cinquante ans",
+    "url": "https://www.rugbypass.com/fr/news/racing-92-retour-stade-yves-du-manoir-colombes-2027/",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Article « Retour à Colombes, naming du stade, équilibre financier... les ambitions du nouveau Racing 92 »",
+    "url": "https://www.sportbusiness.club/retour-a-colombes-naming-du-stade-equilibre-financier-les-ambitions-du-nouveau-racing-92/",
+    "source_type": "presse (interview, stade de 14 000 places dont 2 000 places VIP)",
+    "date": "2026-09"
+   },
+   {
+    "fait": "Communication officielle du club « Saison 2026-2027 : Le voyage du Racing 92 »",
+    "url": "https://www.racing92.fr/article/saison-2026-2027-le-voyage-du-racing-92/63484/",
+    "source_type": "site officiel",
+    "date": "2026"
+   }
+  ],
+  "inference": "Quitter l'écosystème de l'Arena implique de reprendre en main des outils jusque-là mutualisés (billetterie, hospitalités, CRM partenaires) avant le printemps 2027.",
+  "opportunite": "Espace partenaires/hospitalités en ligne et app fans pour l'ouverture d'Yves-du-Manoir ; audit des outils actuels.",
+  "service": "Espace partenaires / hospitalités et application fans",
+  "signal_achat": "Nouveau stade + structure autonome (janv. 2027)",
+  "urgence": "haute — bascule en autonomie au 1er janvier 2027, stade livré au printemps 2027",
+  "score_detail": {
+   "besoin": 18,
+   "urgence": 16,
+   "fit": 15,
+   "capacite": 10,
+   "accessibilite": 5,
+   "preuves": 11
+  },
+  "sources": [
+   "https://www.rugbypass.com/fr/news/racing-92-retour-stade-yves-du-manoir-colombes-2027/",
+   "https://www.sportbusiness.club/retour-a-colombes-naming-du-stade-equilibre-financier-les-ambitions-du-nouveau-racing-92/",
+   "https://www.racing92.fr/article/saison-2026-2027-le-voyage-du-racing-92/63484/",
+   "https://top14.lnr.fr/club/racing-92/informations"
+  ],
+  "objet_email": "Racing 92 — outils partenaires pour Yves-du-Manoir",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu que le Racing 92 reviendra à une structure totalement autonome au 1er janvier 2027, avant l'ouverture du stade Yves-du-Manoir rénové au printemps. Cette bascule oblige souvent à reprendre en main des outils jusque-là partagés : billetterie, hospitalités, suivi des partenaires.\n\nCapmedia conçoit des espaces partenaires, des applications mobiles et des outils métiers sur mesure. Nous pourrions vous aider à cadrer ce qui doit être prêt pour Colombes, en partant de l'existant.\n\nQui pilote ces chantiers digitaux au club ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai lu que le club redevient autonome au 1er janvier 2027 avant le retour à Yves-du-Manoir. Cela implique de reprendre la main sur les outils billetterie, hospitalités et partenaires. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Autre angle : pour 14 000 places et un nouveau naming, une app fans (billets, accès, offres partenaires) peut accompagner l'ouverture du stade — est-ce déjà cadré ?",
+  "pourquoi_demain": "Le club doit être autonome sur ses outils au 1er janvier 2027 : les décisions se prennent cet automne.",
+  "id": "V06-003",
+  "score": 75,
+  "niveau": "QUALIFIÉ",
+  "date_verification": "2026-09-24",
+  "equipe": "V06"
+ },
+ {
+  "id": "V05-001",
+  "entreprise": "WASHiN",
+  "siren": "852726165",
+  "secteur": "Laveries libre-service connectées (exploitation et solutions)",
+  "ville": "Montpellier / Baillargues",
+  "departement": "34",
+  "region": "Occitanie",
+  "site_web": "https://washin.fr",
+  "email": "contact@washin.fr",
+  "telephone": "08 00 94 80 06",
+  "source_email": "https://washin.fr/en/contact/",
+  "source_telephone": "https://washin.fr/en/contact/",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "https://www.linkedin.com/company/washinfree",
+  "effectif": "12 salariés (JDE)",
+  "capital": "",
+  "actualite": "CA 2024 4,5 M EUR, croissance 25-37 %/an, 700 laveries, objectif 1 000 en 2026 ; lauréat promotion 2026 Scale Up Excellence (French Tech) ; achat d'un 2e site à Valergues (600 k EUR)",
+  "site_existant": "oui",
+  "app_ios": "oui",
+  "app_android": "oui",
+  "besoin": "Fiabiliser l'app de paiement/réservation (développée par un prestataire lituanien) qui cumule des avis de bugs et double débit",
+  "faits": [
+   {
+    "fait": "Avis App Store : utilisateurs débités deux fois pour des séchoirs qui ne démarrent pas, service client injoignable",
+    "url": "https://apps.apple.com/fr/app/washin/id1574161271",
+    "source_type": "avis store",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "JustUseApp recense des problèmes : bugs dès la création de compte, paiement carte sans possibilité de modifier la carte dans l'app, machines hors service plusieurs jours",
+    "url": "https://justuseapp.com/en/app/1574161271/washin/problems",
+    "source_type": "agrégateur d'avis",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "L'app WASHiN est éditée par INNOVATION SCRIPT, UAB (prestataire étranger) et non en interne",
+    "url": "https://play.google.com/store/apps/details?id=com.innovationscript.washin&hl=en&gl=US",
+    "source_type": "avis store",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Start-up créée en 2019, 12 salariés, CA 2024 4,5 M EUR, 700 laveries, objectif 1 000 en 2026, croissance 25-30 %/an",
+    "url": "https://www.lejournaldesentreprises.com/article/washin-etend-sa-gamme-de-solutions-pour-laveries-connectees-2127794",
+    "source_type": "presse",
+    "date": "2025"
+   },
+   {
+    "fait": "Lauréat de la promotion 2026 du programme Scale Up Excellence (French Tech)",
+    "url": "https://gazette-du-midi.fr/au-sommaire/entreprises/avec-washin-les-laveries-automatiques-deviennent-intelligentes-et-eco",
+    "source_type": "presse",
+    "date": "2026"
+   }
+  ],
+  "inference": "L'application est le guichet unique du modèle économique (paiement des machines) : chaque bug se traduit en remboursements, avis négatifs et charge de support, au moment où le parc doit passer de 700 à 1 000 laveries.",
+  "opportunite": "Audit technique et QA de l'app existante (parcours paiement, gestion carte, création de compte), puis reprise/maintenance en France ou accompagnement du prestataire actuel.",
+  "service": "Audit technique + QA mobile, reprise/maintenance d'app existante",
+  "signal_achat": "App cœur de métier critiquée (double débit) + forte croissance 2026",
+  "urgence": "moyenne - avis non datés précisément mais croissance forte et objectif 1 000 laveries en 2026",
+  "score_detail": {
+   "besoin": 19,
+   "urgence": 14,
+   "fit": 17,
+   "capacite": 7,
+   "accessibilite": 6,
+   "preuves": 11
+  },
+  "score": 74,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://apps.apple.com/fr/app/washin/id1574161271",
+   "https://justuseapp.com/en/app/1574161271/washin/problems",
+   "https://play.google.com/store/apps/details?id=com.innovationscript.washin&hl=en&gl=US",
+   "https://www.lejournaldesentreprises.com/article/washin-etend-sa-gamme-de-solutions-pour-laveries-connectees-2127794",
+   "https://gazette-du-midi.fr/au-sommaire/entreprises/avec-washin-les-laveries-automatiques-deviennent-intelligentes-et-eco",
+   "https://washin.fr/en/contact/"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "À propos de l'app WASHiN et des paiements machines",
+  "email_personnalise": "Bonjour,\n\nEn consultant l'App Store et JustUseApp, j'ai relevé plusieurs avis récurrents sur l'app WASHiN : double débit sur des séchoirs qui ne démarrent pas, impossibilité de modifier sa carte bancaire, bugs à la création de compte.\n\nComme l'app est le point de paiement de vos laveries, ces incidents pèsent sur les remboursements et le support, alors que vous visez 1 000 sites.\n\nNous pouvons réaliser un audit ciblé du parcours paiement (tests sur appareils réels, revue du code et des logs) et vous remettre une liste priorisée de corrections, que votre prestataire actuel peut appliquer ou que nous reprenons.\n\nQui suit ce sujet chez vous ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu plusieurs avis sur l'app WASHiN qui mentionnent des doubles débits et des séchoirs qui ne démarrent pas. Avec votre objectif de 1 000 laveries, je voulais savoir qui s'occupe de l'application chez vous.",
+  "relance": "Je reviens vers vous avec un autre angle : un audit QA de 5 jours sur le seul parcours création de compte + paiement suffit souvent à supprimer la majorité des tickets support ; souhaitez-vous que je vous envoie le détail ?",
+  "pourquoi_demain": "Leur app est leur caisse, elle génère des doubles débits publiquement signalés, et ils accélèrent vers 1 000 laveries en 2026 avec un développement sous-traité à l'étranger.",
+  "equipe": "V05"
+ },
+ {
+  "id": "V07-003",
+  "entreprise": "Daniel Moquet (tête de réseau : Daniel Moquet Signe Vos Allées)",
+  "siren": "478022304",
+  "secteur": "Franchiseur aménagement extérieur : allées, clôtures, jardins et, depuis janvier 2026, piscines & spas",
+  "ville": "Moulay (Mayenne)",
+  "departement": "53",
+  "region": "Pays de la Loire",
+  "site_web": "https://www.daniel-moquet.com/",
+  "email": "contact@daniel-moquet.com",
+  "telephone": "0 800 50 00 45",
+  "source_email": "https://www.daniel-moquet.com/createur-allees/creation_allees_extras.php?part=mentions",
+  "source_telephone": "https://www.daniel-moquet.com/createur-allees/creation_allees_extras.php?part=mentions",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "100 000 €",
+  "actualite": "Janvier 2026 : lancement d'une 4e enseigne sous franchise dédiée aux piscines et spas, 8 ouvertures (Laval, Redon, Ancenis, Châteaubriant, Nogent-le-Rotrou, Saint-Quentin, Nevers, Arcachon), une dizaine d'ouvertures attendues par an ; objectif « interlocuteur unique » pour les particuliers.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Parcours client unifié (devis/configurateur multi-métiers) alors que chaque enseigne a son propre site",
+  "faits": [
+   {
+    "fait": "Daniel Moquet lance une 4e enseigne sous franchise dédiée aux piscines et spas (janvier 2026), 8 ouvertures déjà, une dizaine attendues chaque année ; objectif : répondre aux particuliers avec un interlocuteur unique / offre globale",
+    "url": "https://www.franchise-magazine.com/news-franchise/reseaux-amenagement-exterieur-daniel-moquet-mars-2026",
+    "source_type": "presse",
+    "date": "2026-03"
+   },
+   {
+    "fait": "Article « Notre quatrième enseigne pour l'installation de piscines va nous permettre d'avoir une offre globale »",
+    "url": "https://www.lejournaldesentreprises.com/article/notre-nouvelle-enseigne-dediee-linstallation-de-piscines-va-nous-permettre-davoir-une-offre-globale-2138734",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Les enseignes disposent de sites distincts : daniel-moquet.com (allées), moquet-clotures.com (clôtures), moquet-jardins.com (jardins), rejoindre-daniel-moquet.fr (recrutement franchisés), chacun avec ses propres mentions légales",
+    "url": "https://www.moquet-jardins.com/mentions-legales",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Le discours « offre globale / interlocuteur unique » contraste avec des parcours web séparés par enseigne ; l'ajout d'une 4e enseigne (piscines) accentue le besoin d'un parcours de demande de devis commun, qui redistribue les leads vers le bon franchisé et permet la vente croisée.",
+  "opportunite": "Configurateur/demande de devis unifié multi-métiers (allée + clôture + jardin + piscine) avec routage vers le franchisé local, et espace client de suivi de projet ; option : outil de gestion des leads pour franchisés.",
+  "service": "Configurateur / devis en ligne + espace client multi-enseignes",
+  "signal_achat": "Lancement 4e enseigne piscines (janvier 2026) + rythme d'ouvertures",
+  "urgence": "moyenne – lancement janvier 2026, déploiement en cours (≈10 ouvertures/an)",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 14,
+   "fit": 17,
+   "capacite": 9,
+   "accessibilite": 6,
+   "preuves": 11
+  },
+  "score": 74,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.franchise-magazine.com/news-franchise/reseaux-amenagement-exterieur-daniel-moquet-mars-2026",
+   "https://www.lejournaldesentreprises.com/article/notre-nouvelle-enseigne-dediee-linstallation-de-piscines-va-nous-permettre-davoir-une-offre-globale-2138734",
+   "https://www.daniel-moquet.com/createur-allees/creation_allees_extras.php?part=mentions",
+   "https://www.moquet-clotures.com/entreprise-portail-cloture-pergola.php?part=mentions",
+   "https://www.moquet-jardins.com/mentions-legales"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Daniel Moquet – un seul parcours de devis pour vos 4 enseignes ?",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu le lancement de votre quatrième enseigne dédiée aux piscines et spas, avec l'objectif d'offrir aux particuliers un interlocuteur unique.\n\nEn parallèle, j'ai remarqué que allées, clôtures et jardins ont chacun leur propre site. Un client qui veut une allée et une clôture passe donc par deux parcours différents.\n\nCapmedia conçoit des configurateurs et des parcours de devis qui regroupent plusieurs métiers et transmettent la demande au bon franchisé local.\n\nQui s'occupe du digital côté tête de réseau ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu le lancement de votre enseigne piscines en janvier, avec l'objectif d'un interlocuteur unique pour les particuliers. Aujourd'hui, allées, clôtures et jardins ont chacun leur site ; je voulais savoir qui s'occupe du parcours de demande de devis côté réseau.",
+  "relance": "Autre angle : un espace client commun permettrait au particulier de suivre son projet (allée, clôture, piscine) et à vos franchisés de proposer les autres métiers du réseau. Est-ce que ce sujet est déjà prévu ?",
+  "pourquoi_demain": "Le réseau vient d'ajouter une 4e enseigne en promettant un interlocuteur unique, alors que ses parcours web restent séparés par métier.",
+  "equipe": "V07"
+ },
+ {
   "entreprise": "Beer's Corner",
   "siren": "833972524",
   "secteur": "Bar à bières en franchise",
@@ -285,6 +522,234 @@
   "equipe": "U01"
  },
  {
+  "id": "V01-001",
+  "entreprise": "EXTECO (Exteco France / EXTECO DVPT)",
+  "siren": "930894068",
+  "secteur": "Services — nettoyage extérieur écologique (franchise)",
+  "ville": "Épinal / Chantraine",
+  "departement": "88",
+  "region": "Grand Est",
+  "site_web": "https://www.exteco.fr",
+  "email": "contact@exteco.fr",
+  "telephone": "03 72 73 51 88",
+  "source_email": "https://www.exteco.fr/mentions-legales",
+  "source_telephone": "https://www.exteco.fr/nos-agences",
+  "contact_nom": "Augustin Ayad",
+  "contact_fonction": "Co-fondateur Exteco France",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "actualite": "3e franchise ouverte à Montbéliard-Belfort (mars 2026), agence Cannes-Fréjus opérationnelle depuis mars 2026 ; objectif de passer de 10 agences (sept. 2026) à 30-50 d'ici 2030.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Réseau en accélération (10 → 30-50 agences) dont la présence web est éclatée entre plusieurs domaines ; outillage réseau (devis, planning, suivi chantiers) à structurer.",
+  "faits": [
+   {
+    "fait": "EXTECO a ouvert sa troisième franchise à Montbéliard-Belfort début mars 2026",
+    "url": "https://www.toute-la-franchise.com/news-exteco-montbeliard-belfort",
+    "source_type": "presse",
+    "date": "2026-03"
+   },
+   {
+    "fait": "Agence franchisée Cannes-Fréjus opérationnelle depuis mars 2026 (Olivier Portet)",
+    "url": "https://ac-franchise.com/article/exteco-accelere-son-expansion-sur-la-cote-dazur-avec-une-nouvelle-agence-a-cannes-frejus",
+    "source_type": "presse",
+    "date": "2026-03"
+   },
+   {
+    "fait": "Ambition : passer de 10 agences en septembre 2026 à 30-50 implantations d'ici 2030",
+    "url": "https://lexpress-franchise.com/articles/exteco-implante-une-nouvelle-agence-a-montbeliard-belfort/",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Extéco s'implante dans le Var et vise un premier recrutement d'ici fin 2026",
+    "url": "https://www.lejournaldesentreprises.com/article/exteco-simplante-dans-le-var-et-vise-un-premier-recrutement-dici-fin-2026-2147217",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Deux sites coexistent : exteco.fr (réseau, page prendre-rendez-vous) et exteco-epinal-nancy.fr (agence Épinal-Nancy)",
+    "url": "https://www.exteco-epinal-nancy.fr/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Un réseau qui triple sa taille doit industrialiser la prise de demande de devis, la répartition des leads vers les franchisés et le suivi d'intervention ; aujourd'hui la présence est répartie entre site national et sites locaux.",
+  "opportunite": "Espace franchisés + outil de gestion des leads/devis/planning (web + app terrain avec photos avant/après), et harmonisation des sites agences sous exteco.fr.",
+  "service": "Outil métier réseau / app terrain",
+  "signal_achat": "Accélération réseau franchise 2026 (10 → 30-50 agences)",
+  "urgence": "moyenne — ouvertures datées mars 2026 et plan 2030 : les outils se décident pendant la phase de croissance",
+  "score_detail": {
+   "besoin": 16,
+   "urgence": 15,
+   "fit": 17,
+   "capacite": 6,
+   "accessibilite": 8,
+   "preuves": 11
+  },
+  "score": 73,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.exteco.fr/mentions-legales",
+   "https://www.exteco.fr/nos-agences",
+   "https://www.toute-la-franchise.com/news-exteco-montbeliard-belfort",
+   "https://lexpress-franchise.com/articles/exteco-implante-une-nouvelle-agence-a-montbeliard-belfort/",
+   "https://www.lejournaldesentreprises.com/article/exteco-simplante-dans-le-var-et-vise-un-premier-recrutement-dici-fin-2026-2147217"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "EXTECO — outiller le passage à 30 agences",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu qu'EXTECO compte 10 agences en septembre 2026, après Montbéliard-Belfort et Cannes-Fréjus, et vise 30 à 50 implantations d'ici 2030. J'ai aussi remarqué que la présence en ligne est répartie entre exteco.fr et des sites d'agence comme exteco-epinal-nancy.fr.\n\nÀ ce rythme, la répartition des demandes de devis vers les franchisés et le suivi des chantiers deviennent vite des sujets de temps perdu.\n\nChez Capmedia, nous concevons des outils métiers et applications terrain pour des réseaux (leads, devis, planning, photos avant/après).\n\nSeriez-vous d'accord pour un échange de 20 minutes sur la façon dont vos agences gèrent ces demandes aujourd'hui ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu qu'EXTECO vise 30 à 50 agences d'ici 2030 après les ouvertures de Montbéliard et Cannes-Fréjus cette année. Je voulais savoir qui s'occupe chez vous des outils de gestion des devis et des agences.",
+  "relance": "Pour les nouvelles agences comme Cannes-Fréjus, un espace franchisé commun (leads, documents, reporting) peut raccourcir le démarrage : est-ce un sujet ouvert chez vous ?",
+  "pourquoi_demain": "Jeune réseau qui annonce vouloir tripler en quatre ans, avec une présence web éclatée : les outils réseau se choisissent maintenant.",
+  "equipe": "V01"
+ },
+ {
+  "siren": "338156425",
+  "contact_nom": "Sophie Lévy Valensi",
+  "contact_fonction": "Directrice de la publication",
+  "linkedin": "",
+  "effectif": "50 à 99 salariés (2023)",
+  "capital": "",
+  "entreprise": "Bleu Citron Productions (Editions et Productions Bleu Citron)",
+  "secteur": "Production et organisation de spectacles et festivals",
+  "ville": "Toulouse",
+  "departement": "31",
+  "region": "Occitanie",
+  "site_web": "https://www.bleucitron.net",
+  "email": "contact@bleucitron.net",
+  "telephone": "05 62 73 44 77",
+  "source_email": "https://www.bleucitron.net/nous-contacter",
+  "source_telephone": "https://www.pagesjaunes.fr/pros/08515963",
+  "actualite": "Recrutement en CDI d'un(e) chef(fe) de projet billetterie tournée à pourvoir dès le 1er septembre 2026.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Structuration de la billetterie tournée : outils internes et parcours d'achat en ligne.",
+  "faits": [
+   {
+    "fait": "Offre de CDI « Chef.fe de projet billetterie tournée » à pourvoir dès le 1er septembre 2026",
+    "url": "https://www.bleucitron.net/stages-emplois/cdi-chef-fe-de-projet-billetterie-tournee",
+    "source_type": "offre d'emploi",
+    "date": "2026-09-01"
+   },
+   {
+    "fait": "Le site présente une activité d'organisation, programmation et production de spectacles, artistes et festivals avec billetterie en ligne",
+    "url": "https://www.bleucitron.net/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "SAS créée en 1986, 50 à 99 salariés",
+    "url": "https://annuaire-entreprises.data.gouv.fr/entreprise/338156425",
+    "source_type": "annuaire",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "La création d'un poste dédié à la billetterie tournée montre un volume croissant et un besoin d'outillage (suivi des jauges, reporting, intégrations billetterie).",
+  "opportunite": "Dashboard billetterie tournée (agrégation des ventes multi-dates / multi-réseaux) et optimisation du parcours d'achat sur le site.",
+  "service": "Outil métier / dashboard billetterie",
+  "signal_achat": "Recrutement chef de projet billetterie (sept. 2026)",
+  "urgence": "moyenne — poste ouvert à la rentrée 2026, prise de fonction récente",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 15,
+   "fit": 16,
+   "capacite": 8,
+   "accessibilite": 7,
+   "preuves": 10
+  },
+  "sources": [
+   "https://www.bleucitron.net/stages-emplois/cdi-chef-fe-de-projet-billetterie-tournee",
+   "https://www.bleucitron.net/nous-contacter",
+   "https://www.pagesjaunes.fr/pros/08515963",
+   "https://annuaire-entreprises.data.gouv.fr/entreprise/338156425"
+  ],
+  "objet_email": "Votre recrutement chef de projet billetterie tournée",
+  "email_personnalise": "Bonjour,\n\nJ'ai vu que Bleu Citron recrute un(e) chef(fe) de projet billetterie tournée depuis septembre. Sur une tournée, les ventes sont souvent éclatées entre plusieurs réseaux et dates, ce qui prend du temps à consolider.\n\nChez Capmedia, nous développons des outils métiers et tableaux de bord sur mesure : une vue unique des ventes par date et par réseau peut faire gagner des heures chaque semaine à la personne qui prendra le poste.\n\nSeriez-vous d'accord pour un échange de 15 minutes pour voir si c'est pertinent chez vous ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu votre offre de chef de projet billetterie tournée. Nous développons des tableaux de bord qui consolident les ventes multi-dates et multi-réseaux. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Autre piste : le parcours d'achat de billets sur bleucitron.net depuis mobile — nous pouvons vous faire un retour rapide et gratuit sur ce point si cela vous intéresse.",
+  "pourquoi_demain": "Ils viennent d'ouvrir un poste dédié à la billetterie tournée : l'outillage de ce poste est un sujet de la rentrée.",
+  "id": "V06-002",
+  "score": 73,
+  "niveau": "QUALIFIÉ",
+  "date_verification": "2026-09-24",
+  "equipe": "V06"
+ },
+ {
+  "id": "V01-002",
+  "entreprise": "Jack's Burgers",
+  "siren": "953904463",
+  "secteur": "Restauration — burgers (jeune réseau de franchise)",
+  "ville": "Saint-Geours-de-Maremne / Capbreton",
+  "departement": "40",
+  "region": "Nouvelle-Aquitaine",
+  "site_web": "http://www.jacksburgers.fr",
+  "email": "jacksburgers@orange.fr",
+  "telephone": "05 58 48 16 90",
+  "source_email": "http://www.jacksburgers.fr/mentions-legales.html",
+  "source_telephone": "http://www.jacksburgers.fr/mentions-legales.html",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "15 000 € (SARL Capucine / SARL Hortensia, exploitantes)",
+  "actualite": "Réseau de franchise lancé en 2025 : trois premiers franchisés signés, ouvertures à Biarritz (octobre 2026), Tournefeuille (novembre 2026) et Saint-Paul-lès-Dax (décembre 2026).",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Le site présente encore l'enseigne comme « Capbreton, Hossegor et Soustons » alors que trois restaurants franchisés ouvrent d'octobre à décembre 2026.",
+  "faits": [
+   {
+    "fait": "Jack's Burgers signe ses trois premiers franchisés : Biarritz (oct. 2026), Tournefeuille (nov. 2026), Saint-Paul-lès-Dax (déc. 2026)",
+    "url": "https://lexpress-franchise.com/actualites/premiers-franchises-jacks-burgers-biarritz-tournefeuille-saint-paul-les-dax/",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Le titre des pages du site officiel est « JACK'S BURGERS - Capbreton, Hossegor et Soustons », pages en .html, email de contact sur orange.fr",
+    "url": "http://www.jacksburgers.fr/mentions-legales.html",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Tête de réseau JACK'S BURGERS immatriculée à Saint-Geours-de-Maremne (SIRET 953 904 463 00023)",
+    "url": "https://annuaire-entreprises.data.gouv.fr/etablissement/95390446300023",
+    "source_type": "annuaire",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Avec trois ouvertures en trois mois hors du berceau landais, le site devra présenter plusieurs restaurants, une page recrutement franchisés et probablement la commande en ligne par établissement.",
+  "opportunite": "Refonte du site en site réseau multi-restaurants (fiches restaurant, menus, click & collect, page devenir franchisé) avant l'ouverture de Biarritz.",
+  "service": "Refonte site web réseau + commande en ligne",
+  "signal_achat": "Lancement de la franchise, 3 ouvertures oct.-déc. 2026",
+  "urgence": "haute — première ouverture franchisée en octobre 2026",
+  "score_detail": {
+   "besoin": 16,
+   "urgence": 17,
+   "fit": 16,
+   "capacite": 5,
+   "accessibilite": 8,
+   "preuves": 10
+  },
+  "score": 72,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://lexpress-franchise.com/actualites/premiers-franchises-jacks-burgers-biarritz-tournefeuille-saint-paul-les-dax/",
+   "http://www.jacksburgers.fr/mentions-legales.html",
+   "https://annuaire-entreprises.data.gouv.fr/etablissement/95390446300023"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Jack's Burgers — Biarritz, Tournefeuille, Saint-Paul-lès-Dax",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu que Jack's Burgers ouvre ses trois premiers restaurants franchisés à Biarritz en octobre, Tournefeuille en novembre et Saint-Paul-lès-Dax en décembre. Sur jacksburgers.fr, l'enseigne est encore présentée comme « Capbreton, Hossegor et Soustons ».\n\nLes clients de Biarritz ou Tournefeuille risquent donc de ne pas trouver leur restaurant, ses horaires ou son menu en ligne.\n\nCapmedia réalise des sites de réseaux de restauration : une fiche par restaurant, commande à emporter et page « devenir franchisé ».\n\nPourrait-on en parler 15 minutes avant l'ouverture de Biarritz ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que Jack's Burgers ouvre à Biarritz en octobre, puis Tournefeuille et Saint-Paul-lès-Dax. Le site présente encore uniquement Capbreton, Hossegor et Soustons. Je voulais savoir qui s'occupe du site et de la communication du réseau.",
+  "relance": "Au-delà du site, un module de commande en ligne commun aux restaurants franchisés permet de suivre les ventes du réseau : est-ce prévu pour les ouvertures de fin d'année ?",
+  "pourquoi_demain": "Première ouverture franchisée dans quelques semaines et un site qui ne présente que les trois restaurants historiques.",
+  "equipe": "V01"
+ },
+ {
   "id": "U07-001",
   "entreprise": "WeMa (WEMA International Groupe)",
   "siren": "500253802",
@@ -359,6 +824,72 @@
   "equipe": "U07"
  },
  {
+  "id": "V07-001",
+  "entreprise": "Groupe Lanef",
+  "siren": "",
+  "secteur": "Conception, fabrication et installation de cuisines professionnelles (inox) – restauration, collectivités, métiers de bouche",
+  "ville": "Fontaine-sous-Préaux (siège) / Déville-lès-Rouen",
+  "departement": "76",
+  "region": "Normandie",
+  "site_web": "https://lanef-pro.fr/",
+  "email": "lanef@lanef.fr",
+  "telephone": "02 32 10 74 74",
+  "source_email": "https://www.eurochef.fr/LANEF-PRO_a42.html",
+  "source_telephone": "https://www.eurochef.fr/LANEF-PRO_a42.html",
+  "contact_nom": "François Sand",
+  "contact_fonction": "Dirigeant (repreneur en 2018)",
+  "linkedin": "https://fr.linkedin.com/company/lanef-pro",
+  "effectif": "104 salariés",
+  "capital": "",
+  "actualite": "Juin 2026 : rachat de Debcia (Alençon, 61), 3e acquisition après SBCP (2022) et Belliard ACM (2023) ; 9 agences dans le grand Ouest ; CA passé de 9 à 31 M€ depuis 2018.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Harmoniser suivi de projets, interventions SAV et relation client entre 9 agences issues de rachats successifs",
+  "faits": [
+   {
+    "fait": "Groupe Lanef (104 salariés) rachète le cuisiniste professionnel ornais Debcia, 3e acquisition depuis 2018 ; 9 agences dans le grand Ouest ; CA de 9 à 31 M€",
+    "url": "https://www.lejournaldesentreprises.com/article/le-cuisiniste-normand-groupe-lanef-etend-son-maillage-avec-lacquisition-de-son-confrere-ornais-2144722",
+    "source_type": "presse",
+    "date": "2026-06"
+   },
+   {
+    "fait": "Le groupe opère plusieurs marques (Lanef Pro, Artinox, Lanef Mobilier, Lanef Blanchisserie) et accompagne les projets de cuisine pro de bout en bout",
+    "url": "https://lanef-pro.fr/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Après trois rachats et 9 agences, les outils (devis, planification des poses, interventions SAV, suivi client) sont probablement hétérogènes entre sociétés intégrées ; c'est le moment typique où un groupe cherche à unifier ses process terrain.",
+  "opportunite": "Application terrain pour techniciens SAV/installateurs (rapports d'intervention, photos, signature) + espace client restaurateurs/collectivités pour suivre projets et demandes de maintenance, communs aux 9 agences.",
+  "service": "App terrain + espace client (outil métier multi-agences)",
+  "signal_achat": "Rachat de Debcia (juin 2026), 3e acquisition",
+  "urgence": "moyenne – rachat daté de juin 2026, phase d'intégration en cours",
+  "score_detail": {
+   "besoin": 15,
+   "urgence": 16,
+   "fit": 15,
+   "capacite": 9,
+   "accessibilite": 7,
+   "preuves": 10
+  },
+  "score": 72,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lejournaldesentreprises.com/article/le-cuisiniste-normand-groupe-lanef-etend-son-maillage-avec-lacquisition-de-son-confrere-ornais-2144722",
+   "https://lanef-pro.fr/",
+   "https://www.eurochef.fr/LANEF-PRO_a42.html",
+   "https://lanef-pro.fr/le-groupe/nos-agences/"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Groupe Lanef – intégration de Debcia et suivi des interventions",
+  "email_personnalise": "Bonjour Monsieur Sand,\n\nJ'ai lu dans Le Journal des Entreprises le rachat de Debcia, troisième acquisition du groupe, qui porte Lanef à neuf agences dans le grand Ouest.\n\nQuand plusieurs sociétés se rejoignent, le suivi des poses et des interventions SAV reste souvent réparti entre des outils différents, ce qui complique la vision d'ensemble.\n\nChez Capmedia, nous concevons des applications terrain (rapports d'intervention, photos, signature client) et des espaces clients qui centralisent ces informations pour toutes les agences.\n\nEst-ce un sujet ouvert chez vous en ce moment ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu le rachat de Debcia en juin, qui porte le groupe à neuf agences. Je voulais savoir qui s'occupe chez vous des outils de suivi des interventions et des chantiers entre agences.",
+  "relance": "Sur un autre angle : vos clients restaurateurs et collectivités pourraient suivre l'avancement de leur projet et déclarer une panne depuis un espace client unique Lanef. Est-ce une piste que vous avez déjà envisagée ?",
+  "pourquoi_demain": "Le groupe vient de réaliser sa 3e acquisition (juin 2026) et doit maintenant faire fonctionner 9 agences ensemble.",
+  "equipe": "V07"
+ },
+ {
   "entreprise": "Société Française de Garantie (SFG)",
   "siren": "391952264",
   "secteur": "Assurance / garanties et réparation d'appareils (filiale WERTGARANTIE)",
@@ -429,6 +960,164 @@
   "score": 72,
   "niveau": "QUALIFIÉ",
   "date_verification": "2026-09-24"
+ },
+ {
+  "entreprise": "Gel Var (Gelvar)",
+  "siren": "431323583",
+  "secteur": "Distribution alimentaire CHR (surgelés, frais, épicerie)",
+  "ville": "Signes",
+  "departement": "83",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "site_web": "https://www.gelvar.com",
+  "email": "contact@gelvar.com",
+  "telephone": "04 94 90 65 80",
+  "source_email": "https://gelvar.gral-gie.com/contactez-nous/",
+  "source_telephone": "https://gelvar.gral-gie.com/contactez-nous/",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "https://fr.linkedin.com/company/gelvar",
+  "effectif": "",
+  "capital": "",
+  "actualite": "CA 2025 de 48,3 M€, objectif 50 M€ en 2026 ; construction d'un second entrepôt à Signes ; adoption d'une solution d'IA en 2025 pour la supply chain.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Faire commander davantage de références à ses 2 000 clients CHR : parcours de commande B2B (web/mobile) à renforcer",
+  "faits": [
+   {
+    "fait": "Gelvar vise 50 M€ de CA en 2026 (48,3 M€ en 2025) et investit dans un second entrepôt à Signes",
+    "url": "https://www.lejournaldesentreprises.com/article/gelvar-met-les-bouchees-doubles-et-investit-signes-dans-le-var-2144291",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Deux leviers de croissance annoncés : plus de clients et plus de références commandées par client ; plus de 2 000 professionnels CHR livrés 6 jours sur 7 dans le Var et les Bouches-du-Rhône",
+    "url": "https://www.lejournaldesentreprises.com/article/gelvar-met-les-bouchees-doubles-et-investit-signes-dans-le-var-2144291",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Le distributeur a adopté une solution d'IA pour moderniser sa supply chain",
+    "url": "https://aucoeurduchr.fr/article/distribution-alimentaire/le-distributeur-alimentaire-gelvar-ia/",
+    "source_type": "presse",
+    "date": "2025"
+   },
+   {
+    "fait": "Le site gelvar.com est présenté comme un site e-commerce (formulaire de contact 'Gel Var - eCommerce')",
+    "url": "https://www.gelvar.com/formulaire-de-contact",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Le levier « plus de références par client » passe en grande partie par l'outil de commande : suggestions, recommandes rapides, application mobile pour les chefs. Avec l'extension logistique, le volume de commandes à absorber augmente.",
+  "opportunite": "Audit du parcours de commande B2B existant puis app mobile de commande (recommande en un clic, suggestions de produits, suivi de livraison) connectée à l'ERP.",
+  "service": "Application mobile de commande B2B / modernisation e-commerce",
+  "signal_achat": "Croissance + nouvel entrepôt 2026, objectif panier moyen",
+  "urgence": "moyenne : investissement logistique en cours en 2026, objectif CA 2026",
+  "score_detail": {
+   "besoin": 16,
+   "urgence": 14,
+   "fit": 15,
+   "capacite": 9,
+   "accessibilite": 7,
+   "preuves": 11
+  },
+  "sources": [
+   "https://www.lejournaldesentreprises.com/article/gelvar-met-les-bouchees-doubles-et-investit-signes-dans-le-var-2144291",
+   "https://aucoeurduchr.fr/article/distribution-alimentaire/le-distributeur-alimentaire-gelvar-ia/",
+   "https://presseagence.fr/signes-gelvar-lia-au-service-de-la-croissance-du-distributeur-alimentaire/",
+   "https://gelvar.gral-gie.com/contactez-nous/",
+   "https://www.societe.com/societe/gel-var-431323583.html"
+  ],
+  "objet_email": "Gelvar — commandes des restaurateurs sur mobile",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu dans Le Journal des Entreprises que Gelvar vise 50 M€ en 2026 et compte notamment sur une hausse du nombre de références commandées par chaque client.\n\nChez beaucoup de distributeurs CHR, ce levier dépend de l'outil de commande : un chef qui recommande sa liste habituelle depuis son téléphone, avec des suggestions adaptées, ajoute plus facilement une référence.\n\nCapmedia conçoit des applications web et mobiles de commande B2B connectées aux ERP. Je peux vous proposer un court diagnostic de votre parcours de commande actuel.\n\nQui s'occupe de ce sujet chez vous ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai lu que Gelvar vise 50 M€ en 2026 en augmentant le nombre de références commandées par client. C'est souvent l'outil de commande en ligne qui fait la différence. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Avec le second entrepôt de Signes, le nombre de commandes à traiter va grimper : une commande mobile bien intégrée réduit aussi les saisies par téléphone. Ça vaut 15 minutes d'échange ?",
+  "pourquoi_demain": "Gelvar investit en 2026 et mise explicitement sur le panier moyen de ses 2 000 clients, ce qui passe par son outil de commande.",
+  "score": 72,
+  "niveau": "QUALIFIÉ",
+  "id": "V03-001",
+  "date_verification": "2026-09-24",
+  "equipe": "V03"
+ },
+ {
+  "id": "V08-001",
+  "entreprise": "1.2.3 Sommeil (Literie 123 Sommeil)",
+  "siren": "",
+  "secteur": "Distribution spécialisée literie (réseau de magasins, franchise)",
+  "ville": "Coudekerque-Branche (Dunkerque)",
+  "departement": "59",
+  "region": "Hauts-de-France",
+  "site_web": "https://literie123sommeil.fr/",
+  "email": "contact@literie123sommeil.fr",
+  "telephone": "03 28 29 76 63",
+  "source_email": "https://literie123sommeil.fr/mentions-legales/",
+  "source_telephone": "https://www.infobel.com/fr/france/1_2_3_sommeil_dunkerque/coudekerque_branche/FR111894194-0328297663/businessdetails.aspx",
+  "contact_nom": "Marina et Jérôme Gheeraert",
+  "contact_fonction": "Cofondateurs",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Enseigne créée début 2024 (Calais, Dunkerque, Saint-Omer) ; 1re franchise à Herblay-sur-Seine en juin 2025 ; 5e magasin à Vélizy-Villacoublay (La Maison Villacoublay), 2e en Île-de-France.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Site multi-magasins unifié et outils réseau pour accompagner le développement en franchise",
+  "faits": [
+   {
+    "fait": "1.2.3 Sommeil a ouvert son 4e magasin et 1re franchise à Herblay-sur-Seine (230 m², exploité par David et Sarah Belilty), lançant son développement en franchise",
+    "url": "https://meuble-info.fr/lenseigne-de-literie-1-2-3-sommeil-a-ouvert-sa-premiere-franchise-a-herblay/",
+    "source_type": "presse",
+    "date": "2025-06"
+   },
+   {
+    "fait": "1.2.3 Sommeil s'implante à Vélizy-Villacoublay et porte son réseau à cinq unités",
+    "url": "https://meuble-info.fr/1-2-3-sommeil-simplante-a-velizy-villacoublay-et-porte-son-reseau-a-cinq-unites/",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Chaque magasin dispose d'un sous-site distinct avec ses propres mentions légales et email (dunkerque., saint-omer., herblay., velizy.literie123sommeil.fr)",
+    "url": "https://velizy.literie123sommeil.fr/mentions-legales/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Article Courrier du Meuble : 1.2.3 Sommeil amorce son développement en franchise",
+    "url": "https://www.courrierdumeuble.fr/blog/1-2-3-sommeil-amorce-son-developpement-en-franchise-avec-louverture-de-son-quatrieme-magasin",
+    "source_type": "presse",
+    "date": "2025"
+   }
+  ],
+  "inference": "Jeune réseau en phase de franchise : la multiplication des sous-sites par magasin et le recrutement de franchisés créent un besoin de socle digital commun (site multi-magasins, pages locales, prise de RDV/réservation, extranet franchisés).",
+  "opportunite": "Refonte en site multi-magasins unique (catalogue commun, pages magasins SEO locales, réservation d'essai literie / click & collect), plus page recrutement franchise avec suivi des candidatures.",
+  "service": "Site web multi-magasins / e-commerce + outil réseau franchise",
+  "signal_achat": "Lancement franchise + 5e magasin (2025-2026)",
+  "urgence": "moyenne — 1re franchise juin 2025 et 5e magasin 2026, réseau en croissance active",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 14,
+   "fit": 16,
+   "capacite": 6,
+   "accessibilite": 8,
+   "preuves": 11
+  },
+  "score": 72,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://meuble-info.fr/lenseigne-de-literie-1-2-3-sommeil-a-ouvert-sa-premiere-franchise-a-herblay/",
+   "https://meuble-info.fr/1-2-3-sommeil-simplante-a-velizy-villacoublay-et-porte-son-reseau-a-cinq-unites/",
+   "https://www.courrierdumeuble.fr/blog/1-2-3-sommeil-amorce-son-developpement-en-franchise-avec-louverture-de-son-quatrieme-magasin",
+   "https://literie123sommeil.fr/mentions-legales/",
+   "https://www.infobel.com/fr/france/1_2_3_sommeil_dunkerque/coudekerque_branche/FR111894194-0328297663/businessdetails.aspx"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "1.2.3 Sommeil — un site pour vos 5 magasins",
+  "email_personnalise": "Bonjour Madame, Monsieur,\n\nEn suivant l'ouverture de votre premier franchisé à Herblay puis de votre magasin de Vélizy, j'ai remarqué que chaque point de vente 1.2.3 Sommeil dispose de son propre sous-site (dunkerque., saint-omer., herblay., velizy.literie123sommeil.fr).\n\nAvec un réseau qui grandit, maintenir plusieurs sites séparés peut vite devenir lourd : contenus à dupliquer, référencement dispersé, demandes clients difficiles à suivre magasin par magasin.\n\nChez Capmedia, nous concevons des sites multi-magasins avec une seule base produits, des pages locales par point de vente, et au besoin une prise de rendez-vous ou une réservation en magasin.\n\nSeriez-vous d'accord pour un échange de 15 minutes sur la façon dont vous gérez aujourd'hui vos sites ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que 1.2.3 Sommeil a ouvert Vélizy et se développe en franchise depuis Herblay. J'ai remarqué que chaque magasin a aujourd'hui son propre sous-site. Je voulais savoir qui s'occupe du site et du digital du réseau chez vous.",
+  "relance": "Je reviens vers vous sous un autre angle : pour un réseau qui recrute des franchisés, une page candidature avec suivi des dossiers fait souvent gagner du temps — est-ce un sujet chez vous en ce moment ?",
+  "pourquoi_demain": "Jeune enseigne de literie passée à 5 magasins et en franchise, avec un site éclaté en sous-sites par magasin : le bon moment pour proposer un socle multi-magasins.",
+  "equipe": "V08"
  },
  {
   "id": "U05-001",
@@ -910,6 +1599,73 @@
   "score": 70,
   "niveau": "QUALIFIÉ",
   "date_verification": "2026-09-24"
+ },
+ {
+  "id": "V07-002",
+  "entreprise": "Groupe Kyriel",
+  "siren": "753726066",
+  "secteur": "Menuiserie générale, aluminium, réhabilitation et dépannage (5 sociétés : Martin Menuiserie, Glaver Ouest, M Atlantique, Ster Ouen, Beg Salus)",
+  "ville": "Pacé",
+  "departement": "35",
+  "region": "Bretagne",
+  "site_web": "https://groupe-kyriel.fr/",
+  "email": "info@groupe-kyriel.fr",
+  "telephone": "02 99 66 79 76",
+  "source_email": "https://groupe-kyriel.fr/contact/",
+  "source_telephone": "https://groupe-kyriel.fr/contact/",
+  "contact_nom": "Antoine Martin",
+  "contact_fonction": "Dirigeant",
+  "linkedin": "https://fr.linkedin.com/company/groupe-kyriel",
+  "effectif": "environ 100 salariés",
+  "capital": "",
+  "actualite": "2026 : les cinq sociétés historiques sont réunies sous la marque Groupe Kyriel ; 20 M€ de CA, objectif de doubler à 40 M€ d'ici 2030 ; ouverture de nouvelles agences et développement de métiers connexes (agencement, métallerie, serrurerie) prévus ; croissance >20 % en 2025.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Outiller un groupe multi-sociétés en forte croissance (demandes de dépannage particuliers via Beg Salus, suivi de chantiers)",
+  "faits": [
+   {
+    "fait": "Naissance du groupe Kyriel : 5 sociétés réunies sous une marque commune, croissance >20 % sur l'exercice 2025, projet d'ouvrir de nouvelles agences et de développer des métiers connexes",
+    "url": "https://www.lejournaldesentreprises.com/article/naissance-du-groupe-kyriel-un-expert-de-la-menuiserie-en-pleine-croissance-2145929",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "100 salariés, 20 M€ de CA, feuille de route visant 40 M€ d'ici 2030 ; Beg Salus intervient pour particuliers et tertiaire en dépannage/réparations",
+    "url": "https://www.7jours.fr/actualites/groupe-kyriel-vingt-annees-de-croissance-et-cinq-ans-pour-doubler-son-activite-en-menuiserie/",
+    "source_type": "presse",
+    "date": "2026"
+   }
+  ],
+  "inference": "Un groupe qui unifie cinq sociétés et vise le doublement de son activité avec de nouvelles agences doit standardiser la prise de demandes (dépannage, devis) et le suivi de chantier ; l'activité dépannage B2C se prête à un parcours de demande en ligne.",
+  "opportunite": "Formulaire intelligent de demande de dépannage/devis sur groupe-kyriel.fr routé vers la bonne société + application terrain commune (suivi de chantier, rapports d'intervention) pour les 5 entités.",
+  "service": "Outil métier / app terrain + demande d'intervention en ligne",
+  "signal_achat": "Création de la marque groupe + plan de doublement et nouvelles agences",
+  "urgence": "moyenne – structuration du groupe en 2026, date exacte de l'article non vue",
+  "score_detail": {
+   "besoin": 15,
+   "urgence": 14,
+   "fit": 15,
+   "capacite": 9,
+   "accessibilite": 7,
+   "preuves": 10
+  },
+  "score": 70,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lejournaldesentreprises.com/article/naissance-du-groupe-kyriel-un-expert-de-la-menuiserie-en-pleine-croissance-2145929",
+   "https://www.7jours.fr/actualites/groupe-kyriel-vingt-annees-de-croissance-et-cinq-ans-pour-doubler-son-activite-en-menuiserie/",
+   "https://groupe-kyriel.fr/contact/",
+   "https://www.facebook.com/groupe.kyriel/",
+   "https://annuaire-entreprises.data.gouv.fr/entreprise/groupe-kyriel-753726066"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Groupe Kyriel – cinq sociétés, un même suivi de chantier ?",
+  "email_personnalise": "Bonjour Monsieur Martin,\n\nJ'ai lu que Martin Menuiserie, Glaver Ouest, M Atlantique, Ster Ouen et Beg Salus sont désormais réunies sous la marque Groupe Kyriel, avec l'objectif de doubler l'activité d'ici 2030.\n\nAvec de nouvelles agences en vue, les demandes de dépannage et le suivi des chantiers passent souvent par des circuits différents selon la société.\n\nCapmedia conçoit des applications terrain et des parcours de demande en ligne qui orientent chaque demande vers la bonne équipe et donnent une vue commune des chantiers.\n\nSeriez-vous d'accord pour en parler 15 minutes ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu la création de la marque Groupe Kyriel et votre objectif de 40 millions d'euros d'ici 2030. Je voulais savoir qui s'occupe chez vous des outils de suivi de chantier et des demandes clients entre les cinq sociétés.",
+  "relance": "Autre angle : pour Beg Salus, une demande de dépannage en ligne avec photos et créneau proposé peut réduire les appels de qualification. Voulez-vous que je vous montre un exemple ?",
+  "pourquoi_demain": "Le groupe vient d'unifier ses cinq sociétés sous une marque et prépare l'ouverture de nouvelles agences : c'est le moment où l'on choisit les outils communs.",
+  "equipe": "V07"
  },
  {
   "id": "U04-002",

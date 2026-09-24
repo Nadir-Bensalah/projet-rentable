@@ -18,5 +18,8 @@
  },
  "U07-002": {
   "rejet": "email vu uniquement dans un résumé de recherche sur le domaine ; page source non confirmée"
+ },
+ "V06-001": {
+  "rejet": "email vu dans un résumé mêlant plusieurs pages du club ; page source non confirmée"
  }
 }

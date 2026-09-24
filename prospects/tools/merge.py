@@ -57,7 +57,7 @@ def validate(p):
     elif email.split("@")[1].lower() in BANNED_EMAIL_DOMAINS:
         errs.append("email de plateforme")
     ph = phone_norm(p.get("telephone"))
-    if not (len(ph) == 10 and ph.startswith("0") and ph[1] in "12345679"):
+    if not (len(ph) == 10 and ph.startswith("0") and ph[1] in "123456789"):
         errs.append("téléphone incomplet ou non français")
     for k in ("source_email", "source_telephone"):
         if not str(p.get(k, "")).startswith("http"):
