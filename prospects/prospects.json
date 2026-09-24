@@ -78,6 +78,84 @@
   "equipe": "AA8"
  },
  {
+  "id": "CC2-001",
+  "entreprise": "Château Picque Caillou",
+  "siren": "",
+  "secteur": "Domaine viticole (AOC Pessac-Léognan)",
+  "ville": "Mérignac",
+  "departement": "33",
+  "region": "Nouvelle-Aquitaine",
+  "site_web": "https://www.picque-caillou.com/",
+  "email": "contact@picque-caillou.com",
+  "telephone": "05 56 47 37 98",
+  "source_email": "http://www.picque-caillou.com/chateau-picque-caillou-pessac-leognan-fr/visites-et-contact.html",
+  "source_telephone": "http://www.picque-caillou.com/chateau-picque-caillou-pessac-leognan-fr/visites-et-contact.html",
+  "contact_nom": "Laurent Marti",
+  "contact_fonction": "Nouveau propriétaire (président de TopTex et de l'UBB)",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Mars 2026 : rachat du château par Laurent Marti ; projet annoncé de réaménagement des bâtiments, de création d'une offre œnotouristique et de développement de la marque Picque-Caillou.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Nouvelle offre œnotouristique et relance de la marque à outiller (site, réservation de visites, boutique en ligne).",
+  "faits": [
+   {
+    "fait": "Laurent Marti, président de l'UBB, rachète le château Picque-Caillou (25 ha, Pessac-Léognan, ~130 000 bouteilles/an).",
+    "url": "https://www.lejournaldesentreprises.com/breve/laurent-marti-president-du-club-de-rugby-union-bordeaux-begles-rachete-le-chateau-picque-caillou-2139175",
+    "source_type": "presse",
+    "date": "2026-03"
+   },
+   {
+    "fait": "La nouvelle direction prévoit de réaménager une partie des bâtiments, de construire une offre œnotouristique et de développer la marque Picque-Caillou.",
+    "url": "https://www.bougerabordeaux.com/actu/laurent-marti-president-de-lubb-rachete-le-chateau-picque-caillou/",
+    "source_type": "presse",
+    "date": "2026-03"
+   },
+   {
+    "fait": "Interview du nouveau propriétaire publiée par l'Union des Grands Crus de Bordeaux.",
+    "url": "https://vintagebyugcb.com/fr/2026/05/11/chateau-picque-caillou/",
+    "source_type": "presse",
+    "date": "2026-05-11"
+   },
+   {
+    "fait": "Les pages de contact du site actuel sont servies sous une arborescence en .html (/chateau-picque-caillou-pessac-leognan-fr/visites-et-contact.html) ; visites proposées du mardi au dimanche avec un numéro dédié 07 83 06 84 00.",
+    "url": "http://www.picque-caillou.com/chateau-picque-caillou-pessac-leognan-fr/visites-et-contact.html",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Un changement de propriétaire avec un projet œnotouristique et de marque explicitement annoncé s'accompagne généralement d'une refonte du site et d'outils de réservation/vente en ligne.",
+  "opportunite": "Refonte du site vitrine bilingue avec réservation de visites/dégustations en ligne et boutique e-commerce, intégrée à la nouvelle identité de marque.",
+  "service": "Refonte site web + module de réservation œnotourisme + e-shop",
+  "signal_achat": "Rachat mars 2026 + projet œnotourisme et marque",
+  "urgence": "haute — rachat daté de mars 2026, projet œnotouristique en cours de structuration",
+  "score_detail": {
+   "besoin": 19,
+   "urgence": 16,
+   "fit": 17,
+   "capacite": 8,
+   "accessibilite": 7,
+   "preuves": 12
+  },
+  "score": 79,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lejournaldesentreprises.com/breve/laurent-marti-president-du-club-de-rugby-union-bordeaux-begles-rachete-le-chateau-picque-caillou-2139175",
+   "https://www.bougerabordeaux.com/actu/laurent-marti-president-de-lubb-rachete-le-chateau-picque-caillou/",
+   "https://vintagebyugcb.com/fr/2026/05/11/chateau-picque-caillou/",
+   "http://www.picque-caillou.com/chateau-picque-caillou-pessac-leognan-fr/visites-et-contact.html"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Picque Caillou — l'offre œnotouristique en préparation",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu que la nouvelle direction du château Picque Caillou prévoit de créer une offre œnotouristique et de développer la marque. Aujourd'hui, les visites se réservent par téléphone via la page contact du site.\n\nQuand une offre de visites s'étoffe, la réservation et le paiement en ligne évitent souvent de perdre des demandes, notamment de visiteurs étrangers.\n\nChez Capmedia, nous concevons des sites de domaines avec réservation de dégustations et boutique en ligne, en lien avec l'identité de marque.\n\nQui pilote ce chantier chez vous : est-ce que je peux vous présenter deux ou trois exemples en 20 minutes ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que le château prépare une offre œnotouristique et le développement de la marque Picque-Caillou après le rachat de mars. Nous faisons des sites de domaines avec réservation de visites et boutique en ligne. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Pour Pessac-Léognan, une bonne partie des visiteurs vient de Bordeaux et de l'étranger : un parcours de réservation bilingue peut être prêt pour la saison 2027 si on commence cet automne.",
+  "pourquoi_demain": "Le nouveau propriétaire a annoncé publiquement une offre œnotouristique et une relance de marque, avec un site encore sur une ancienne structure.",
+  "equipe": "CC2"
+ },
+ {
   "id": "W04-001",
   "entreprise": "Eurobrillance",
   "siren": "830830311",
@@ -142,6 +220,78 @@
   "relance": "Avec 35 personnes à intégrer, un tableau de bord de production lisible par tous peut accélérer la montée en compétence : est-ce un sujet que vous avez prévu dans le projet ?",
   "pourquoi_demain": "Eurobrillance vient d'annoncer (sept. 2026) un nouvel ERP et un projet IA dans un plan de 7,5 M€ : c'est le moment où les besoins d'outils périphériques se décident.",
   "equipe": "W04"
+ },
+ {
+  "id": "CC2-002",
+  "entreprise": "Domaine Lamballe",
+  "siren": "910087782",
+  "secteur": "Domaine viticole et gîtes (vignoble breton)",
+  "ville": "Baden",
+  "departement": "56",
+  "region": "Bretagne",
+  "site_web": "https://www.domaine-lamballe.bzh/",
+  "email": "contact@domaine-lamballe.bzh",
+  "telephone": "06 52 95 18 73",
+  "source_email": "https://www.domaine-lamballe.bzh/",
+  "source_telephone": "https://www.domaine-lamballe.bzh/",
+  "contact_nom": "Dominique Lamballe",
+  "contact_fonction": "Codirigeant",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Investissement de 6,2 M€ dans un chai et un espace œnotouristique (ouverture prévue en août 2026) ; premières bouteilles de blanc annoncées pour le printemps 2027 ; 4 gîtes sur le domaine.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Lancement commercial (premières bouteilles 2027) et ouverture d'un espace œnotouristique : vente en ligne et réservation à mettre en place.",
+  "faits": [
+   {
+    "fait": "Le Domaine Lamballe investit 6,2 millions d'euros dans son chai, avec un espace dédié à l'œnotourisme.",
+    "url": "https://www.lejournaldesentreprises.com/article/le-domaine-lamballe-investit-62-millions-deuros-dans-son-chai-2125286",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Pose de la première pierre du chai et de l'activité œnotouristique ; ouverture du chai prévue en août 2026.",
+    "url": "https://www.lejournaldesentreprises.com/article/le-domaine-lamballe-pose-la-premiere-pierre-de-son-chai-et-de-son-activite-oenotouristique-2131895",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Le domaine exploite 4 gîtes et prévoit de sortir ses premières bouteilles de vin blanc au printemps 2027 ; les gîtes sont commercialisés via Booking, Gîtes de France et gites.fr.",
+    "url": "https://www.booking.com/hotel/fr/gite-l-appart-au-vignoble-domaine-lamballe-baden-golfe-du-morbihan.fr.html",
+    "source_type": "plateforme de réservation",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Un domaine qui ouvre un chai œnotouristique et commercialise sa première cuvée a besoin de vendre en direct (e-shop, précommandes) et de centraliser réservations de gîtes et de visites aujourd'hui dispersées sur des plateformes.",
+  "opportunite": "Site vitrine + boutique en ligne (précommande de la première cuvée) + module de réservation direct visites/gîtes.",
+  "service": "Site e-commerce + réservation en ligne",
+  "signal_achat": "Nouveau chai et espace œnotouristique 2026, première cuvée 2027",
+  "urgence": "haute — chai ouvert en août 2026, premières bouteilles au printemps 2027",
+  "score_detail": {
+   "besoin": 18,
+   "urgence": 17,
+   "fit": 16,
+   "capacite": 7,
+   "accessibilite": 8,
+   "preuves": 11
+  },
+  "score": 77,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lejournaldesentreprises.com/article/le-domaine-lamballe-investit-62-millions-deuros-dans-son-chai-2125286",
+   "https://www.lejournaldesentreprises.com/article/le-domaine-lamballe-pose-la-premiere-pierre-de-son-chai-et-de-son-activite-oenotouristique-2131895",
+   "https://www.domaine-lamballe.bzh/",
+   "https://annuaire-entreprises.data.gouv.fr/entreprise/domaine-lamballe-910087782"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Domaine Lamballe — première cuvée et nouveau chai",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu dans Le Journal des Entreprises que votre chai et son espace œnotouristique ouvrent en 2026, avec une première cuvée de blanc attendue au printemps 2027. J'ai aussi vu que vos gîtes sont aujourd'hui réservés via Booking et Gîtes de France.\n\nUne première cuvée se vend souvent bien en précommande, et une réservation en direct évite les commissions des plateformes.\n\nChez Capmedia, nous réalisons des sites avec boutique en ligne et réservation (visites, hébergements).\n\nSeriez-vous d'accord pour en parler 15 minutes ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que votre chai œnotouristique ouvre cette année et que la première cuvée arrive au printemps 2027. Nous faisons des sites avec précommande en ligne et réservation directe des visites et des gîtes. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Une campagne de précommande de la première cuvée à l'automne-hiver peut financer une partie du lancement : c'est un projet que nous pouvons cadrer rapidement.",
+  "pourquoi_demain": "Le chai vient d'ouvrir et la première cuvée sort au printemps 2027 : c'est maintenant qu'il faut mettre en place la vente et la réservation en direct.",
+  "equipe": "CC2"
  },
  {
   "id": "Z06-001",
@@ -1284,6 +1434,79 @@
   "id": "AA7-001"
  },
  {
+  "id": "CC1-001",
+  "entreprise": "Brasserie Castelain",
+  "siren": "315255752",
+  "secteur": "Brasserie (bières Ch'ti, Jade)",
+  "ville": "Bénifontaine",
+  "departement": "62",
+  "region": "Hauts-de-France",
+  "site_web": "https://brasseriecastelain.com",
+  "email": "contact@brasseriecastelain.com",
+  "telephone": "03 21 08 68 68",
+  "source_email": "https://brasseriecastelain.com/contact",
+  "source_telephone": "https://www.annuaire-inverse-france.com/0321086868/brasserie-castelain",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "",
+  "effectif": "50 salariés",
+  "capital": "3 000 000 €",
+  "actualite": "Investit 6 M€ pour accélérer sa transformation (Journal des Entreprises, 2026) ; CA 2025 : 25 M€",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Unifier site de marque et boutique/visites « Le Spot » (deux domaines distincts) et ajouter un espace pro CHR/cavistes",
+  "faits": [
+   {
+    "fait": "La brasserie Castelain (50 salariés, 25 M€ de CA 2025) investit 6 M€ pour accélérer sa transformation",
+    "url": "https://www.lejournaldesentreprises.com/article/la-brasserie-castelain-investit-6-millions-deuros-pour-accelerer-sa-transformation-2144869",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "La boutique, le shop et les ateliers sont portés par un site séparé le-spot-brasseriecastelain.com, distinct du site brasseriecastelain.com",
+    "url": "https://le-spot-brasseriecastelain.com/boutique/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Le Spot Castelain dispose de coordonnées distinctes (contact@le-spot-brasseriecastelain.fr, 03 21 08 68 61) de la brasserie",
+    "url": "https://le-spot-brasseriecastelain.com/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Une transformation industrielle de 6 M€ s'accompagne souvent d'une remise à plat de la présence digitale ; deux sites et deux jeux de coordonnées pour une même marque fragmentent l'expérience client et la vente en ligne.",
+  "opportunite": "Refonte en plateforme multi-marques unique (Ch'ti, Jade, Le Spot) avec e-boutique, billetterie visites/ateliers et espace pro CHR/cavistes (tarifs, commandes, fiches produits).",
+  "service": "Refonte site multi-marques + e-commerce + espace pro B2B",
+  "signal_achat": "Investissement 6 M€ transformation 2026",
+  "urgence": "moyenne — investissement annoncé en 2026, chantier en cours",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 15,
+   "fit": 16,
+   "capacite": 9,
+   "accessibilite": 7,
+   "preuves": 10
+  },
+  "score": 74,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lejournaldesentreprises.com/article/la-brasserie-castelain-investit-6-millions-deuros-pour-accelerer-sa-transformation-2144869",
+   "https://brasseriecastelain.com/mentions-legales",
+   "https://brasseriecastelain.com/contact",
+   "https://le-spot-brasseriecastelain.com/",
+   "https://www.annuaire-inverse-france.com/0321086868/brasserie-castelain"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Brasserie Castelain — site de marque et Le Spot",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu que la brasserie Castelain investit 6 M€ pour accélérer sa transformation. En regardant votre présence en ligne, j'ai remarqué que la boutique et les ateliers du Spot vivent sur un site distinct de brasseriecastelain.com, avec leurs propres coordonnées.\n\nPour un visiteur ou un caviste, ce double parcours peut rendre la commande moins directe. Capmedia conçoit des sites multi-marques avec boutique en ligne et espace pro (tarifs CHR, commandes, fiches produits).\n\nSeriez-vous ouvert à un échange de 15 minutes pour voir si ce sujet est dans vos priorités ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu votre investissement de 6 M€ pour accélérer la transformation de la brasserie. Votre boutique Le Spot et le site de la brasserie sont aujourd'hui sur deux sites séparés. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Au-delà du site grand public, un espace pro où bars et cavistes commandent Ch'ti et Jade en quelques clics est-il un sujet pour vos équipes commerciales ?",
+  "pourquoi_demain": "Brasserie de 50 salariés en pleine transformation financée (6 M€) avec une présence web éclatée sur deux domaines.",
+  "equipe": "CC1"
+ },
+ {
   "id": "BB1-001",
   "entreprise": "Doméos Syndic (DOMEOS SARL)",
   "siren": "504879032",
@@ -1363,6 +1586,87 @@
   "equipe": "BB1",
   "score": 74,
   "niveau": "QUALIFIÉ"
+ },
+ {
+  "id": "CC3-001",
+  "entreprise": "Boehli (Boehli SAS, La Fabrique à Bretzels)",
+  "siren": "",
+  "secteur": "Biscuiterie salée (bretzels, sticks, biscuits)",
+  "ville": "Gundershoffen",
+  "departement": "67",
+  "region": "Grand Est",
+  "site_web": "https://www.boehli.fr/",
+  "email": "communication@boehli.fr",
+  "telephone": "03 88 07 16 71",
+  "source_email": "https://www.boehli.fr/pages/politique-de-confidentialite",
+  "source_telephone": "https://www.boehli.fr/pages/contact",
+  "contact_nom": "Nicolas Meckert",
+  "contact_fonction": "Dirigeant du groupe (représentant légal cité : Edouard Meckert)",
+  "linkedin": "https://fr.linkedin.com/company/boehli",
+  "effectif": "inconnu pour Boehli ; +25 salariés avec Alsace Biscuits Tradition",
+  "capital": "",
+  "actualite": "Début 2026 : Boehli reprend Alsace Biscuits Tradition (Geudertheim, 25 salariés, ~7 M€ CA, ~70 biscuits MDD) ; 6 M€ investis sur 2 ans pour une 8e ligne de bretzels ; production désormais sur 2 sites.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Unifier une présence web éclatée (site marque, boutique séparée, site Fabrique à Bretzels) et intégrer la nouvelle activité biscuits / MDD avec un espace pro.",
+  "faits": [
+   {
+    "fait": "Boehli reprend Alsace Biscuits Tradition (Geudertheim, 25 salariés, ~7 M€ CA) et produira désormais sur deux sites de ~10 000 m²",
+    "url": "https://www.lejournaldesentreprises.com/article/avec-alsace-biscuits-tradition-boehli-muscle-son-outil-de-production-2136124",
+    "source_type": "presse",
+    "date": "2026-01"
+   },
+   {
+    "fait": "LSA : Boehli reprend Alsace Biscuits Tradition pour développer des gâteaux diététiques ; investissement de 6 M€ sur deux ans",
+    "url": "https://www.lsa-conso.fr/biscuits-boehli-le-specialiste-du-bretzel-reprend-alsace-biscuits-tradition-pour-developper-des-gateaux-dietetiques,464161",
+    "source_type": "presse",
+    "date": "2026-01"
+   },
+   {
+    "fait": "Trois sites web distincts visibles dans les résultats : boehli.fr, boehli-shop.fr (boutique avec ses propres mentions légales) et lafabriqueabretzels.fr",
+    "url": "https://www.boehli-shop.fr/pages/mentions-legales",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Portrait de Nicolas Meckert, dirigeant, dans la presse locale en mai 2026",
+    "url": "https://colmar.maxi-flash.com/2026/05/05/nicolas-meckert-coeur-de-bretzel/",
+    "source_type": "presse",
+    "date": "2026-05-05"
+   }
+  ],
+  "inference": "Avec une nouvelle entité (biscuits sucrés/salés, MDD, diététique) et une présence web déjà répartie sur trois domaines, la question d'une architecture multi-marques et d'un espace pro (MDD, distributeurs) se pose probablement en 2026-2027.",
+  "opportunite": "Audit de la présence web puis site multi-marques (Boehli, Fabrique à Bretzels, Alsace Biscuits Tradition) avec boutique en ligne unifiée et espace pro (catalogue, fiches techniques, demandes MDD).",
+  "service": "Refonte site multi-marques + e-commerce + espace professionnel",
+  "signal_achat": "Rachat d'Alsace Biscuits Tradition + 2e site de production (2026)",
+  "urgence": "moyenne — rachat daté de janvier 2026 (8 mois), investissement sur 2 ans en cours",
+  "score_detail": {
+   "besoin": 18,
+   "urgence": 14,
+   "fit": 17,
+   "capacite": 8,
+   "accessibilite": 6,
+   "preuves": 11
+  },
+  "score": 74,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lejournaldesentreprises.com/article/avec-alsace-biscuits-tradition-boehli-muscle-son-outil-de-production-2136124",
+   "https://www.lsa-conso.fr/biscuits-boehli-le-specialiste-du-bretzel-reprend-alsace-biscuits-tradition-pour-developper-des-gateaux-dietetiques,464161",
+   "https://colmar.maxi-flash.com/2026/05/05/nicolas-meckert-coeur-de-bretzel/",
+   "https://www.boehli.fr/pages/politique-de-confidentialite",
+   "https://www.boehli.fr/pages/contact",
+   "https://www.boehli-shop.fr/pages/mentions-legales",
+   "https://www.lafabriqueabretzels.fr/"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Boehli et Alsace Biscuits Tradition : une seule vitrine web ?",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu dans Le Journal des Entreprises la reprise d'Alsace Biscuits Tradition et le passage à deux sites de production. En parallèle, j'ai remarqué que Boehli est aujourd'hui présent sur trois sites distincts : boehli.fr, boehli-shop.fr et lafabriqueabretzels.fr.\n\nAvec une nouvelle gamme de biscuits et une activité MDD, cette dispersion peut compliquer la lecture de l'offre pour les acheteurs professionnels comme pour les clients de la boutique.\n\nChez Capmedia, nous concevons des sites multi-marques avec boutique en ligne et espace pro (catalogue, fiches techniques, demandes de devis).\n\nEst-ce un sujet que vous prévoyez d'aborder dans les prochains mois ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu la reprise d'Alsace Biscuits Tradition par Boehli cette année. Aujourd'hui, la marque est répartie sur trois sites web différents. Je voulais savoir qui s'occupe du digital et de la boutique en ligne chez vous.",
+  "relance": "Je reviens vers vous sous un autre angle : un espace pro dédié à vos clients MDD et distributeurs (catalogue, fiches produits, commandes) pourrait-il être utile avec l'arrivée des biscuits de Geudertheim ?",
+  "pourquoi_demain": "Boehli vient d'absorber une deuxième usine et une nouvelle gamme alors que sa présence web est déjà éclatée sur trois domaines.",
+  "equipe": "CC3"
  },
  {
   "id": "V05-001",
@@ -1594,6 +1898,86 @@
   "id": "Y07-001",
   "equipe": "Y07",
   "date_verification": "2026-09-24"
+ },
+ {
+  "id": "CC7-001",
+  "entreprise": "Groupe HETZI (pôle hôtellerie-restauration : Bizipoz, Villa Koegui Bayonne)",
+  "siren": "441648771",
+  "secteur": "Groupe familial diversifié (immobilier, hôtellerie-restauration)",
+  "ville": "Urrugne",
+  "departement": "64",
+  "region": "Nouvelle-Aquitaine",
+  "site_web": "https://hetzi.fr",
+  "email": "contact@hetzi.fr",
+  "telephone": "05 59 20 12 01",
+  "source_email": "https://hetzi.fr/fr/mentions-legales/",
+  "source_telephone": "https://hetzi.fr/fr/mentions-legales/",
+  "contact_nom": "Daniel Hiribarren",
+  "contact_fonction": "Fondateur du groupe",
+  "linkedin": "https://fr.linkedin.com/company/hetzi",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Signature le 24 juillet 2026 du rachat de l'hôtel 4* Villa Koegui à Bayonne, après l'ouverture de l'hôtel Bizipoz à Saint-Jean-de-Luz (avril 2025).",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Unifier sous le groupe des hôtels aux sites et domaines séparés et pousser la réservation directe",
+  "faits": [
+   {
+    "fait": "Le groupe HETZI a signé le 24/07/2026 l'acquisition de l'hôtel 4* Villa Koegui à Bayonne, qui complète le Bizipoz de Saint-Jean-de-Luz",
+    "url": "https://latribunedelhotellerie.com/hetzi-acquisition-villa-koegui-bayonne/",
+    "source_type": "presse",
+    "date": "2026-07-24"
+   },
+   {
+    "fait": "Chaque établissement a son propre domaine : bizipoz.com, hotel-villakoegui-bayonne.fr, en plus du site groupe hetzi.fr (rubrique hôtellerie-restauration)",
+    "url": "https://hetzi.fr/fr/hotellerie-restauration/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "La Villa Koegui Bayonne est distribuée sur des plateformes tierces (reserving.com, Expedia/Travelocity)",
+    "url": "https://reserving.com/hotels/europe/france/aquitaine/pyrenees-atlantiques/biarritz/hotel-villa-koegui-biarritz",
+    "source_type": "plateforme de réservation",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Bizipoz a ouvert le 1er avril 2025 à Saint-Jean-de-Luz",
+    "url": "https://www.tendancehotellerie.fr/articles-breves/communique-de-presse/23695-article/l-hotel-bizipoz-ouvrira-ses-portes-le-1er-avril-2025-au-coeur-de-saint-jean-de-luz",
+    "source_type": "presse",
+    "date": "2025"
+   }
+  ],
+  "inference": "Un hôtel racheté en juillet conserve un site hérité de l'ancien propriétaire ; le groupe doit l'intégrer à son identité (Bizipoz/HETZI) et réduire la part des OTA avant la saison 2027.",
+  "opportunite": "Site vitrine multi-hôtels HETZI avec moteur de réservation direct commun, reprise/refonte du site Villa Koegui, option app ou web-app séjour (check-in, services, restaurants du groupe).",
+  "service": "Site multi-établissements + réservation directe",
+  "signal_achat": "Rachat d'un hôtel 4* en juillet 2026",
+  "urgence": "haute — rachat signé il y a 2 mois, préparation de la saison 2027",
+  "score_detail": {
+   "besoin": 15,
+   "urgence": 18,
+   "fit": 15,
+   "capacite": 8,
+   "accessibilite": 7,
+   "preuves": 10
+  },
+  "score": 73,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://latribunedelhotellerie.com/hetzi-acquisition-villa-koegui-bayonne/",
+   "https://hetzi.fr/fr/mentions-legales/",
+   "https://hetzi.fr/fr/hotellerie-restauration/",
+   "https://hotel-villakoegui-bayonne.fr/en/contact.html",
+   "https://www.bizipoz.com/mentions-legales",
+   "https://www.pappers.fr/entreprise/hetzi-441648771"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Villa Koegui Bayonne — intégration au groupe HETZI",
+  "email_personnalise": "Bonjour,\n\nJ'ai vu que le groupe HETZI a signé fin juillet le rachat de la Villa Koegui à Bayonne, après l'ouverture du Bizipoz à Saint-Jean-de-Luz. Aujourd'hui, chaque hôtel a son propre site (bizipoz.com, hotel-villakoegui-bayonne.fr) et la Villa Koegui reste très visible sur les plateformes de réservation.\n\nAvant la saison 2027, cela peut valoir la peine de réunir les hôtels sous un même parcours de réservation directe, aux couleurs du groupe. Chez Capmedia, nous concevons des sites multi-établissements et des applications séjour pour des acteurs du tourisme.\n\nQui s'occupe du digital des hôtels chez vous ? Un échange de 15 minutes vous conviendrait-il ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que le groupe HETZI a racheté la Villa Koegui à Bayonne fin juillet. Aujourd'hui, elle et le Bizipoz ont chacun leur site séparé. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Une piste simple : un moteur de réservation commun Bizipoz / Villa Koegui qui propose l'autre hôtel quand l'un est complet, pour garder la réservation dans le groupe.",
+  "pourquoi_demain": "Rachat signé il y a deux mois : le site hérité de la Villa Koegui va devoir être repris avant la saison 2027.",
+  "equipe": "CC7"
  },
  {
   "entreprise": "Beer's Corner",
@@ -3806,6 +4190,142 @@
   "equipe": "BB6",
   "score": 71,
   "niveau": "QUALIFIÉ"
+ },
+ {
+  "id": "CC2-003",
+  "entreprise": "Château Vignelaure",
+  "siren": "",
+  "secteur": "Domaine viticole (Coteaux d'Aix-en-Provence)",
+  "ville": "Rians",
+  "departement": "83",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "site_web": "https://fr.vignelaure.com/",
+  "email": "info@vignelaure.com",
+  "telephone": "04 94 37 21 10",
+  "source_email": "https://fr.vignelaure.com/contact/",
+  "source_telephone": "https://fr.vignelaure.com/contact/",
+  "contact_nom": "Neil Utley",
+  "contact_fonction": "Nouveau propriétaire",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Château en redressement judiciaire depuis fin 2025, racheté en 2026 par Neil Utley, qui annonce une diversification vers la cosmétique naturelle (ligne Maison Minu) et l'ouverture à terme d'un spa au château.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Nouveau propriétaire, nouvelle marque cosmétique et projet de spa : présence digitale et vente en ligne à reconstruire.",
+  "faits": [
+   {
+    "fait": "En redressement, le château Vignelaure est racheté par Neil Utley ; le nouveau propriétaire prévoit une diversification vers la cosmétique naturelle (Maison Minu) et l'ouverture d'un spa.",
+    "url": "https://www.vitisphere.com/actualite-107117-en-redressement-le-chateau-vignelaure-rachete-par-un-nouveau-millionnaire-dans-les-vignes-de-provence.html",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Le site officiel publie des adresses de contact par fonction (info@, directeur œnologue, comptabilité) et existe en deux versions (vignelaure.com et fr.vignelaure.com).",
+    "url": "https://fr.vignelaure.com/contact/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Une reprise après redressement, avec lancement d'une marque cosmétique et d'un spa, implique de nouveaux parcours en ligne (e-shop vins et cosmétiques, réservation spa/visites).",
+  "opportunite": "Refonte du site château intégrant la marque Maison Minu, e-shop multi-produits et réservation spa/dégustations.",
+  "service": "Refonte site + e-commerce multi-marques",
+  "signal_achat": "Nouveau propriétaire 2026 + nouvelle marque cosmétique",
+  "urgence": "moyenne — rachat récent, spa annoncé à terme",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 15,
+   "fit": 16,
+   "capacite": 6,
+   "accessibilite": 7,
+   "preuves": 10
+  },
+  "score": 71,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.vitisphere.com/actualite-107117-en-redressement-le-chateau-vignelaure-rachete-par-un-nouveau-millionnaire-dans-les-vignes-de-provence.html",
+   "https://fr.vignelaure.com/contact/"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Vignelaure — Maison Minu et le futur spa",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu dans Vitisphere la reprise du château Vignelaure et le projet de diversification vers la cosmétique naturelle avec Maison Minu, puis d'un spa au château.\n\nAjouter une marque et une activité de soins à un domaine viticole pose souvent la question d'un site commun : boutique vins et cosmétiques, réservation des visites puis des soins.\n\nChez Capmedia, nous concevons ce type de site et d'e-shop multi-produits.\n\nQui suit ce projet chez vous : pourrions-nous échanger 20 minutes ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu la reprise du château et le lancement de la ligne cosmétique Maison Minu, avec un spa en projet. Nous faisons des sites avec boutique multi-produits et réservation en ligne. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Si la ligne Maison Minu doit se vendre aussi hors du domaine, une boutique en ligne dédiée, reliée au site du château, peut être lancée indépendamment du spa.",
+  "pourquoi_demain": "Le nouveau propriétaire lance une marque cosmétique et un spa sur un domaine qui sort de redressement : tout le dispositif en ligne est à repenser.",
+  "equipe": "CC2"
+ },
+ {
+  "entreprise": "Delta Meca (SCOP) — désormais avec Delta Sacmo",
+  "siren": "504307828",
+  "secteur": "Usinage, chaudronnerie, mécanique de précision",
+  "ville": "Couëron",
+  "departement": "44",
+  "region": "Pays de la Loire",
+  "site_web": "https://www.deltameca.fr/",
+  "email": "contact@deltameca.fr",
+  "telephone": "02 51 25 01 00",
+  "source_email": "https://www.ville-coueron.fr/entreprise/usinage-industriel-delta-meca-scop/",
+  "source_telephone": "https://www.ville-coueron.fr/entreprise/usinage-industriel-delta-meca-scop/",
+  "contact_nom": "Arnaud Chevalier",
+  "contact_fonction": "collaborateur Delta Sacmo (fonction non précisée sur LinkedIn)",
+  "linkedin": "https://www.linkedin.com/in/arnaud-chevalier-15b4441ba/",
+  "effectif": "environ 55 (Delta Meca) + 21 (Delta Sacmo)",
+  "capital": "",
+  "actualite": "Rachat de Sacmo (Couëron), devenue Delta Sacmo au 13 avril 2026 (société DELTAMECA SACMO, SIREN 103685160).",
+  "site_existant": "oui",
+  "app_ios": "non",
+  "app_android": "non",
+  "besoin": "Unifier la présence web de Delta Meca et Delta Sacmo (site groupe, capacités machines, demande de devis/plans).",
+  "faits": [
+   {
+    "fait": "Delta Meca annonce le rachat de Sacmo, également à Couëron ; l'entité devient Delta Sacmo au 13 avril 2026, avec intégration de nouveaux équipements (fraiseuses portiques, centres d'usinage, tours) pour les grandes pièces.",
+    "url": "https://www.lejournaldesentreprises.com/breve/delta-meca-reprend-sacmo-coueron-et-renforce-ses-capacites-industrielles-2140909",
+    "source_type": "presse",
+    "date": "2026-04"
+   },
+   {
+    "fait": "Une société distincte DELTAMECA SACMO (SIREN 103685160) est immatriculée à Couëron, à côté de DELTA MECA (SIREN 504307828) : deux entités juridiques et deux marques.",
+    "url": "https://www.pappers.fr/entreprise/deltameca-sacmo-103685160",
+    "source_type": "annuaire",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Sacmo conserve des fiches annuaires sous son ancien nom (PagesJaunes, Mappy) alors que Delta Meca a son propre site deltameca.fr.",
+    "url": "https://www.pagesjaunes.fr/pros/02925919",
+    "source_type": "annuaire",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Deux sociétés et deux noms sur un même bassin, avec des capacités élargies (grandes pièces) qui ne sont probablement pas encore présentées de façon unifiée aux acheteurs industriels (nucléaire, défense, aéro).",
+  "opportunite": "Site groupe Delta Meca / Delta Sacmo : parc machines consolidé, secteurs servis, formulaire de devis avec dépôt de plans (STEP/PDF), éventuellement espace client pour le suivi des commandes.",
+  "service": "Refonte / site groupe unifié avec module de demande de devis",
+  "signal_achat": "Rachat de Sacmo (avril 2026)",
+  "urgence": "moyenne : rachat daté d'avril 2026 (< 6 mois), intégration en cours",
+  "score_detail": {
+   "besoin": 16,
+   "urgence": 15,
+   "fit": 15,
+   "capacite": 7,
+   "accessibilite": 7,
+   "preuves": 11
+  },
+  "sources": [
+   "https://www.lejournaldesentreprises.com/breve/delta-meca-reprend-sacmo-coueron-et-renforce-ses-capacites-industrielles-2140909",
+   "https://www.pappers.fr/entreprise/deltameca-sacmo-103685160",
+   "https://www.ville-coueron.fr/entreprise/usinage-industriel-delta-meca-scop/",
+   "https://www.fabriquons.fr/entreprises/delta-sacmo"
+  ],
+  "objet_email": "Delta Meca et Delta Sacmo : une seule vitrine ?",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu que Delta Meca a repris Sacmo au printemps, devenue Delta Sacmo, avec des capacités nouvelles sur les grandes pièces (fraiseuses portiques, tours).\n\nAujourd'hui, un acheteur qui cherche en ligne trouve encore deltameca.fr d'un côté et des fiches « Sacmo » de l'autre : il peut passer à côté de ces nouvelles capacités.\n\nChez Capmedia, nous réalisons des sites industriels qui présentent un parc machines consolidé et permettent d'envoyer un plan pour devis en quelques clics.\n\nEst-ce un sujet que vous avez prévu de traiter cette année ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que Delta Meca a repris Sacmo en avril, devenue Delta Sacmo. Les deux sociétés apparaissent encore séparément en ligne. Je voulais savoir qui s'occupe de la communication et du site chez vous.",
+  "relance": "Avec l'arrivée des fraiseuses portiques, un formulaire de devis avec dépôt de plans sur le site pourrait vous amener des demandes grandes pièces : voulez-vous que je vous montre un exemple ?",
+  "pourquoi_demain": "Rachat daté d'avril 2026 qui crée une deuxième marque sur le même site industriel, et coordonnées directes publiées par la mairie.",
+  "score": 71,
+  "niveau": "QUALIFIÉ",
+  "id": "CC8-001",
+  "equipe": "CC8",
+  "date_verification": "2026-09-24"
  },
  {
   "id": "W01-001",

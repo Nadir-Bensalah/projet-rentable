@@ -72,5 +72,11 @@
  },
  "BB8-007": {
   "rejet": "téléphone rattaché à Kompass sans certitude ; deux SIREN possibles"
+ },
+ "CC7-002": {
+  "rejet": "site déjà unifié et développeur interne apparent : besoin non crédible au seuil de 70"
+ },
+ "CC8-002": {
+  "rejet": "email issu d'un résumé citant plusieurs pages ; page exacte non confirmée"
  }
 }

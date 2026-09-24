@@ -109,6 +109,78 @@ Groupe Hermès/Plage (cliniques vétérinaires, Marseille/Aubagne);score;"Coordo
 Biscuiterie Jeannette (Jeannette 1850, Démouville);email;Rachat par le DG en 2026 mais aucun email professionnel visible dans les résultats (seulement téléphone 02 50 01 14 46).;BB8
 Domaine Kirrenbourg (pôle vins du Groupe CAM, avec Domaine Hurst);contrôle qualité;QA : page source de l'email incertaine (résumés contradictoires);BB8
 Les Bienheureux;contrôle qualité;"QA : téléphone rattaché à Kompass sans certitude ; deux SIREN possibles";BB8
+Distillerie Génestine (Orcines, 63);score;12 salariés (< 15), déménagement 2026 mais taille hors cible et déjà outillée en numérique;CC1
+Brasserie régionale de l'Ouest (Groupe Mat!, Tonquédec);score;12 salariés (< 15) malgré lancement marque de sodas Houl;CC1
+Eaux minérales de Plancoët (groupe Ogeu);besoin;Aucun signal 2026 daté confirmé (lancement limonade non daté), coordonnées non cherchées;CC1
+Maison Fisselier / Distillerie du Gorvello (Pacé, groupe Coreff);score;10 + 6 salariés (< 15 chacune), prise de participation non datée en 2026;CC1
+Distillerie Grallet-Dupic / Maison de la Mirabelle (Rozelieures, 54);email;"Mentions légales : email hotmail ; email pro sabine@maisondelamirabelle.com vu dans un résumé à source incertaine ; effectif inconnu";CC1
+La Débauche (Angoulême, Océalia);score;Rachat par Océalia daté de décembre 2023 : signal trop ancien;CC1
+Perret Solution Vinicole (ex-Viséa Couturier, groupe Perret, Violès);email;Filiale créée le 1er août 2026 (bon signal) mais aucun email complet visible dans les résultats;CC2
+Le Vigneron Savoyard (coopérative, Apremont);email;"Chai partagé à 900 k€ en 2026 ; téléphone 04 79 28 33 23 trouvé mais aucun email publié (formulaire uniquement)";CC2
+Domaine de la Citadelle (Ménerbes) / rachat de La Royère (Oppède);score;Contact trouvé (contact@domaine-citadelle.com, 04 90 72 41 58) mais rachat 2026 documenté par une seule source (blog Lully Conseil) sans date précise : 68/100;CC2
+Vignobles K (Peter Kwok, Saint-Christophe-des-Bardes) / Château La Couspaude;score;"Contact trouvé (contact@vignoblesk.com, 05 57 24 77 15) ; reprise de La Couspaude en février 2026 (> 6 mois) et aucun besoin digital explicite : 69/100";CC2
+Ternovéo (chai viticole, Hauts-de-France);preuves;"Signal (inauguration de chai) non daté dans le résumé ; non approfondi faute de budget de recherches";CC2
+Domaine St Patrice (Châteauneuf-du-Pape) / Vignobles & Vins Picard;besoin;Rachat par un groupe bourguignon structuré : le domaine est intégré au groupe, pas de besoin propre observable;CC2
+La Trinitaine (Saint-Philibert, 56, reprise Breizh Rebond janvier 2026);email;"Seul email trouvé (mentions légales) : service-client@latrinitaine.com, une adresse de SAV e-commerce inadaptée ; pas d'adresse direction/commerciale. Le signal est bon (200 salariés, 47 magasins, repositionnement) : à reprendre si une adresse de direction apparaît. Tél. 02 90 74 21 28";CC3
+Drôme Ardèche Tradition (Bourg-de-Péage, 26);email;contact@da-tradition.fr vu dans un résumé à la source incertaine, pas confirmé par une recherche dédiée;CC3
+Goulibeur (Poitiers);score;rachat par Maison Duprez fin 2023, pas de signal en 2026;CC3
+Maison Duprez / La Manufacture du Biscuit (Lambersart);score;dernières acquisitions en 2023, aucun signal en 2026 trouvé;CC3
+Guyader Gastronomie / Andouillerie de Fouesnant;score;"rachat daté de 2012 ; groupe de plus de 250 salariés";CC3
+Groupe Buton / Monbana;score;rachat de 2017, groupe d'environ 600 salariés, hors cible;CC3
+Fromagerie d'Entrammes (53);besoin;en redressement judiciaire et cherche un repreneur (février 2026) : aucune capacité d'achat;CC3
+Maurer Tempé (Alsace);privée;en liquidation judiciaire depuis juin 2026;CC3
+Biscuiterie Jeannette;doublon;déjà dans les exclusions;CC3
+Hyperion Développement (diagnostics immobiliers, Château-Gontier-sur-Mayenne);email;"Seule adresse vue : formation@hyperion-dev.com, dans un résumé agrégé sans URL officielle identifiable (et adresse du service formation) ; 2 recherches complémentaires sans résultat";CC4
+Renovio (Sèvres, 92);email;"Déjà constaté par BB5 : formulaire seul ; non retraité faute d'élément nouveau (budget)";CC4
+Christelle Clauss Immobilier (Obernai / Strasbourg);email;"Pas d'email générique sur une page officielle ; seule adresse d'agence strasbourg.cronenbourg@christelleclauss.com, vue via Facebook/résumé agrégé ; aucun signal de rachat daté 2026";CC4
+Groupe Pozzo (Pozzo Immobilier, Caen);doublon;"Déjà retenu par BB2 (BB2-001). Complément : tél 02 31 30 49 49 confirmé pour Pozzo Caen Location sur https://www.immobilier-basse-normandie.com/agence/104353___/pozzo-caen-location.html (portail, pas pozzo.immo) ; email contact@pozzo.immo confirmé sur la fiche siège https://www.pozzo-immobilier.fr/fr/nos-agences/siege-calvados/71";CC4
+Lorcamat (Gedimat, Moselle, 9 agences);preuves;"Le seul signal (ouverture de Rohrbach-lès-Bitche, 9e agence) date d'avril 2023 (zepros, univers-habitat) ; aucun signal 2026 ; entité proche de LORCA (déjà exclue)";CC4
+Inard Bois (SOFOLA, Villemoustaussou, 11);urgence;"Coordonnées trouvées (info.bois@inard-bois.com, 04 68 47 82 82, mentions légales inard-bois.com) mais l'adhésion à Gedibois date du 01/01/2023 ; aucun besoin digital documenté en 2026 → score < 70";CC4
+Atout Bat (Bréhand, 22, nouvel adhérent France Matériaux au 01/01/2026);email;"Aucun email publié (page contact atoutbat.bzh = formulaire) ; tél 02 96 42 64 00 ; TPE de 6 salariés, capacité faible";CC4
+Groupe Prismeo (transport, Houplines, 59);email;"Signal fort (rachat de Transports Perrier à Geodis, septembre 2026, après Catroux et Global Road Runner ; ~750 salariés, 10 sites ; tél 03 20 14 91 49) mais aucune adresse email publiée trouvée (""@prismeo.fr"" ne donne rien)";CC4
+Immobilière Zimmermann (Strasbourg, cession 2026 accompagnée par ARC Capital);doublon;Le repreneur semble être Citya Immobilier (agence listée sur citya.com), réseau déjà exclu et grand groupe;CC4
+TGS France (intégration d'Experfi, Angers, mai 2026);score;"Grand réseau national d'expertise comptable (fusacq buzz) ; hors cible PME accessible, non approfondi";CC4
+Marion Matériaux (Quillan / Limoux, 11, Gedimat);email;"Ouverture Gedimat Limoux au 1/10/2025 (signal > 11 mois) ; aucun email ni téléphone vu dans les résultats ; site sous marque Gedimat";CC5
+Atout Bat (Bréhand, 22);score;"Adhésion France Matériaux au 1/01/2026 (> 8 mois) ; point de vente unique géré par deux frères, capacité faible ; score estimé < 60";CC5
+Bricogémo (Gémozac, 17);score;"Adhésion France Matériaux (date 2025), point de vente unique ; signal ancien, score < 70";CC5
+Delingette (Chablis, 89);score;"Adhésion France Matériaux (2025), agence unique de 900 m² ; signal ancien, score < 70";CC5
+Géoloc (Saint-Laurent-de-Mure, 69);score;"Adhésion France Matériaux (2025) ; signal ancien, score < 70";CC5
+BJC – Bricolage Jardinage Castelbriantais (Châteaubriant, 44);score;"Adhésion BigMat annoncée fin 2025 (~10 mois) ; structure mono-site, pas de besoin digital sourcé";CC5
+Union Matériaux (Languedoc, Club Altéral);score;"Rachat La Maison Gomez effectif juin 2025 (15 mois) ; e-commerce déjà en place ; urgence faible";CC5
+Pompac Développement / Orvif (Île-de-France);privée;"Rachat mai 2025 ; filiale du groupe allemand GC-Gruppe (décision hors France), signal ancien";CC5
+Groupe Samse (rachat VM Matériaux / Hérige);score;"Opération finalisée mai 2024 ; groupe coté, trop grand pour Capmedia";CC5
+BigMat Girardon (rachats Kilburg, Béréziat);score;Rachats antérieurs à 2026, aucun signal daté récent;CC5
+Groupe Derrey (rachat Bati Colman, Gedibois);score;Opération 2025 selon fusacq, signal > 6 mois, non approfondi faute de budget;CC5
+AGIR (groupement peinture, adhésion CMEM);privée;"Groupement/centrale, pas un négoce indépendant ciblable ; signal 1/01/2026";CC5
+Mon Véto (Rouen);privée;Grand groupe (231 cliniques, >180 M€ CA, 100 M€ d'un fonds) : hors cible 5-40 cliniques;CC6
+Qovetia Cliniques (SIREN 798074191);privée;80 établissements, financé en unitranche/LBO : hors cible 5-40 cliniques;CC6
+Fovéa (groupe vétérinaire);score;"Plus de 80 associés, 400+ collaborateurs, fonds EMZ ; dernier signal de levée daté 2023 : pas de signal 2026, taille hors cible";CC6
+Argos Vétérinaire (Bordeaux);privée;Une centaine de cliniques, soutenu par G Square : grand groupe;CC6
+Univet;privée;Réseau national soutenu par un fonds infra : grand groupe;CC6
+Groupe Vétérinaire de Brocéliande (Saint-Méen-le-Grand, 35);score;"4 cliniques, coordonnées trouvées (02 99 09 60 44, gvbsaintmeen@yahoo.fr, adresse webmail perso) mais aucun rachat ni levée datés 2026 ; urgence nulle, score < 70";CC6
+Centre hospitalier vétérinaire Languedocia (Montpellier);besoin;"Agrandissement d'un site unique, pas un groupe multi-cliniques ; aucun signal daté 2026 exploitable";CC6
+Atlantia (CHV, Nantes);privée;Capital ouvert à VetPartners (groupe international) : sort du périmètre indépendant;CC6
+Acuitis / Direct Optic;privée;Enseigne nationale (161 M€ CA) : grand groupe;CC6
+Audition Conseil (LMCA / Schertz);privée;440 centres franchisés, 170 M€ CA : grand réseau;CC6
+Groupe François (centres auditifs);privée;15 centres rachetés par Amplifon : l'entité est absorbée par un grand groupe;CC6
+Pastel Audition (Occitanie);privée;13 centres rachetés par Amplifon : absorbée par un grand groupe;CC6
+Optique Lafayette (Hygie 31);privée;"Filiale d'un grand groupe (Hygie 31) ; signaux datés 2023-2024 seulement";CC6
+Mirabel Campings & Résidences (Ouistreham);score;"Dernier rachat (Ermitage) en mars 2025, plus de 6 mois ; sites réalisés par l'agence d'un membre de la famille (Ouest-Communication)";CC7
+Aloa Vacances (Vendée);besoin;"Site de chaîne déjà unifié, aucun fait de besoin daté ; coordonnées non trouvées";CC7
+Groupe BBR (tête de Welcome Camping);score;Signaux de rachat anciens, aucun signal daté de 2026;CC7
+Alcama Holding (Hôtel de la Plage, Saint-Michel-en-Grève);score;"Premier hôtel, ouverture prévue fin 2027/2028 : trop tôt ; coordonnées non recherchées";CC7
+Emeraude Hotels (Paris);téléphone;"Numéro du siège fictif (01 23 45 67 89) dans l'annuaire ; seul un email d'hôtel trouvé";CC7
+Groupe Giroud (hôtels franchisés Louvre Hotels);besoin;Hôtels sous enseigne Louvre Hotels : site et réservation gérés par l'enseigne;CC7
+Slow Village / Groupe Inspire;email;Coordonnées non recherchées faute de budget (levée de 100 M€, rachat Belle-Île 2026 : piste à reprendre);CC7
+Roussillhotel (groupe hôtelier familial);contrôle qualité;QA : site déjà unifié et développeur interne apparent : besoin non crédible au seuil de 70;CC7
+BAM Emballages (Saint-Évarzec, 29);besoin;"Rachat d'Acti Emballages daté de 2021 (vérifié), pas de signal 2026 ; négoce plutôt qu'industriel";CC8
+Calip Group (Moult, 14);score;"370 salariés après rachat de MGF Grimaldi (janv. 2026), hors cible 30-250 ; site groupe calip-group.fr déjà actif avec actualités";CC8
+RK-EI / RKFlex (Saint-Gilles, 35) — rachat Polymécanic;email;"Seul email trouvé (info@rk-ei.com) sur Crunchbase, info@rkflex.com non confirmé : source incertaine ; effectif 10-19";CC8
+GCC Énergie (rachat Groupe SME, Vitrolles);privée;Filiale d'un grand groupe BTP (GCC), hors cible PME;CC8
+Groupe Micholet (rachat Sermeca);besoin;Rachat daté fin 2025 (non confirmé 2026), non poursuivi pour économiser le quota;CC8
+Saprena (rachat Delta 86);score;"Entreprise adaptée de 500 salariés, hors cible 30-250 ; activité de maintenance industrielle";CC8
+Groupe Lignage (Nice, Julien Bounicaud);email;"Aucun email ni téléphone trouvé ; opposition à la prospection signalée sur la fiche entreprise";CC8
+ATESIS (reprise par David Bartoletti avec FÉTIS Group);contrôle qualité;"QA : email issu d'un résumé citant plusieurs pages ; page exacte non confirmée";CC8
 Bureau Alpes Contrôles;score;DSI d'une trentaine de personnes, offre développeur web référencée janvier 2026 : fit et urgence faibles (<70);T01
 Primal (ex-Solem);score;"Fabricant IoT avec équipes de développement internes ; téléphone non trouvé ; fit faible";T01
 LIP Tertiaire;privée;Agence d'intérim/recrutement : l'offre est pour un client, pas un besoin propre;T01

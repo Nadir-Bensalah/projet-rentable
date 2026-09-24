@@ -72,9 +72,11 @@ def main():
         w.writeheader()
         for r in R:
             w.writerow(r)
-    opp = os.path.join(outd, "opposition.csv")
-    if not os.path.exists(opp):
-        open(opp, "w", encoding="utf-8").write("entreprise;domaine;email;telephone;date;motif\n")
+    with open(os.path.join(outd, "opposition.csv"), "w", newline="", encoding="utf-8-sig") as fh:
+        w = csv.DictWriter(fh, fieldnames=["entreprise", "domaine", "email", "telephone", "date", "motif"], delimiter=";", extrasaction="ignore")
+        w.writeheader()
+        for o in m.get("opposition", []):
+            w.writerow(o)
 
     top100 = P[:100]
     md = ["# Top 100 — opportunités à contacter en priorité", "",
