@@ -2,7 +2,6 @@ import { z } from "zod";
 import { env } from "@/lib/env";
 import { processWebhook } from "@/lib/billing";
 import { mockProvider, signMockWebhook, verifyMockToken, type MockCheckoutToken } from "@/lib/billing/providers/mock";
-import { randomToken } from "@/lib/security/tokens";
 import { getCurrentUser } from "@/lib/auth/session";
 import { HttpError, assertSameOrigin, handler, json, readJson } from "@/lib/security/request";
 
@@ -13,7 +12,7 @@ export const POST = handler(async (req) => {
   assertSameOrigin(req);
   if (env().PAYMENT_PROVIDER !== "mock") throw new HttpError(404, "Indisponible.", "not_found");
   const { token, outcome } = await readJson(req, schema);
-  const data = verifyMockToken<MockCheckoutToken>(token);
+  const data = verifyMockToken<MockCheckoutToken>(token, "checkout");
   if (!data) throw new HttpError(400, "Session de paiement expirée. Recommencez depuis la page Tarifs.", "invalid_token");
   const user = await getCurrentUser();
   if (!user || user.id !== data.userId) throw new HttpError(403, "Cette session de paiement appartient à un autre compte.", "forbidden");
@@ -25,7 +24,7 @@ export const POST = handler(async (req) => {
     userId: data.userId,
     product: data.product,
     outcome: "paid",
-    ref: `${data.nonce}${randomToken(4)}`,
+    ref: data.nonce,
   });
   await processWebhook(mockProvider, body, new Headers({ "x-mock-signature": signature }));
   return json({ redirect: data.successUrl });

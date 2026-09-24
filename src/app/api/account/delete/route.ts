@@ -20,7 +20,12 @@ export const POST = handler(async (req) => {
   try {
     result = await deleteAccount(user.id, body.password);
   } catch (e) {
-    throw new HttpError(502, e instanceof Error ? e.message : "Suppression impossible pour le moment.", "provider_error");
+    console.error("[account] deletion failed", e);
+    throw new HttpError(
+      502,
+      "La suppression n'a pas pu aboutir (résiliation de l'abonnement impossible pour le moment). Réessayez ou contactez le support.",
+      "provider_error",
+    );
   }
   if (result === "bad_password") throw new HttpError(400, "Mot de passe incorrect.", "bad_password");
   await destroySession();

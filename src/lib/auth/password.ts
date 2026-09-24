@@ -7,9 +7,29 @@ const P = 3;
 const KEYLEN = 32;
 const MAXMEM = 64 * 1024 * 1024;
 
+// At most MAX_CONCURRENT hashes run at once (~32 MiB each): bursts of logins queue
+// instead of exhausting memory or the libuv thread pool.
+const MAX_CONCURRENT = Number(process.env.SCRYPT_MAX_CONCURRENCY ?? 4);
+let running = 0;
+const waiting: (() => void)[] = [];
+
+async function withSlot<T>(fn: () => Promise<T>): Promise<T> {
+  if (running >= MAX_CONCURRENT) await new Promise<void>((r) => waiting.push(r));
+  running++;
+  try {
+    return await fn();
+  } finally {
+    running--;
+    waiting.shift()?.();
+  }
+}
+
 function scrypt(password: string, salt: Buffer, keylen: number, opts: ScryptOptions): Promise<Buffer> {
-  return new Promise((resolve, reject) =>
-    scryptCb(password.normalize("NFKC"), salt, keylen, opts, (err, key) => (err ? reject(err) : resolve(key))),
+  return withSlot(
+    () =>
+      new Promise<Buffer>((resolve, reject) =>
+        scryptCb(password.normalize("NFKC"), salt, keylen, opts, (err, key) => (err ? reject(err) : resolve(key))),
+      ),
   );
 }
 
@@ -49,7 +69,12 @@ export function passwordProblem(password: string, email?: string): string | null
   if (email && password.toLowerCase().includes(email.split("@")[0].toLowerCase()) && email.split("@")[0].length >= 4) {
     return "Le mot de passe ne doit pas contenir votre adresse e-mail.";
   }
-  const common = ["motdepasse", "password", "azertyuiop", "1234567890", "0123456789", "qwertyuiop", "azerty1234"];
+  const common = [
+    "motdepasse", "password", "azertyuiop", "1234567890", "0123456789", "qwertyuiop", "azerty1234", "azertyazerty",
+    "1111111111", "0000000000", "abcdefghij", "iloveyou12", "soleil1234", "bonjour123", "doudou1234", "loulou1234",
+    "marseille13", "football12", "chouchou12", "nicolas123", "123456789a", "a123456789", "qwerty1234", "passw0rd12",
+    "welcome123", "admin12345", "letmein123", "changeme12", "releveo123", "motdepasse1",
+  ];
   if (common.some((c) => password.toLowerCase().includes(c))) return "Ce mot de passe est trop courant.";
   return null;
 }

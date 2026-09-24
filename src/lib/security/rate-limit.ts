@@ -19,3 +19,14 @@ export async function rateLimit(key: string, limit: number, windowSeconds: numbe
   const retryAfter = row ? Math.max(1, Math.ceil((new Date(row.reset_at).getTime() - Date.now()) / 1000)) : 0;
   return { ok: count <= limit, retryAfter };
 }
+
+/** Current count of a window without incrementing it (0 when expired or absent). */
+export async function peekRateLimit(key: string): Promise<{ count: number; retryAfter: number }> {
+  const row = await queryOne<{ count: number; reset_at: Date }>(`SELECT count, reset_at FROM rate_limits WHERE key = $1 AND reset_at > now()`, [key]);
+  if (!row) return { count: 0, retryAfter: 0 };
+  return { count: row.count, retryAfter: Math.max(1, Math.ceil((new Date(row.reset_at).getTime() - Date.now()) / 1000)) };
+}
+
+export async function resetRateLimit(key: string) {
+  await queryOne(`DELETE FROM rate_limits WHERE key = $1`, [key]);
+}

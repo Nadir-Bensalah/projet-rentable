@@ -39,6 +39,7 @@ export const POST = handler(async (req) => {
     marketingOptIn: body.marketingOptIn,
     referralCode: body.referralCode?.toUpperCase(),
     firstTouch: body.firstTouch ?? null,
+    ipHash: ip,
   });
   if (res.existed || !res.user) {
     throw new HttpError(

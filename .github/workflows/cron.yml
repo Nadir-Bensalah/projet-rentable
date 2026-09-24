@@ -1,0 +1,18 @@
+name: Daily lifecycle job
+
+# Free scheduler for POST /api/cron/lifecycle (activation e-mails, cleanup, retention).
+# Requires repository secrets APP_URL and CRON_SECRET.
+on:
+  schedule:
+    - cron: "17 7 * * *"
+  workflow_dispatch:
+
+jobs:
+  lifecycle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call lifecycle endpoint
+        run: |
+          curl --fail --silent --show-error -X POST \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+            "${{ secrets.APP_URL }}/api/cron/lifecycle"

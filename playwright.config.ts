@@ -39,6 +39,7 @@ export default defineConfig({
       AUTH_SECRET: "e2e-secret-e2e-secret-e2e-secret-e2e-secret",
       PAYMENT_PROVIDER: "mock",
       ALLOW_MOCK_PAYMENTS: "true",
+      ALLOW_HTTP_APP_URL: "true",
       EMAIL_PROVIDER: "console",
       ADMIN_EMAILS: "admin@example.com",
       CRON_SECRET: "e2e-cron-secret",

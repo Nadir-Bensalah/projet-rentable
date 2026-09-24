@@ -15,6 +15,21 @@ export function normaliseEmail(email: string) {
   return email.trim().toLowerCase();
 }
 
+/**
+ * Canonical form used for abuse controls (rate limits, referral): lower-case,
+ * "+tag" removed, and dots removed for Gmail addresses.
+ */
+export function canonicalEmail(email: string) {
+  const e = normaliseEmail(email);
+  const at = e.lastIndexOf("@");
+  if (at < 0) return e;
+  let local = e.slice(0, at).split("+")[0];
+  let domain = e.slice(at + 1);
+  if (domain === "googlemail.com") domain = "gmail.com";
+  if (domain === "gmail.com") local = local.replace(/\./g, "");
+  return `${local}@${domain}`;
+}
+
 export async function findUserByEmail(email: string) {
   return queryOne<{ id: string; email: string; password_hash: string; email_verified_at: Date | null; name: string | null }>(
     `SELECT id, email, password_hash, email_verified_at, name FROM users WHERE lower(email) = $1`,
@@ -52,7 +67,8 @@ export async function sendVerificationEmail(user: { id: string; email: string; n
   return sendEmail(
     "verify_email",
     user.email,
-    { url: absoluteUrl(`/verifier-email?token=${token}`), name: user.name },
+    // The display name is deliberately not included: anyone can trigger this e-mail to any address.
+    { url: absoluteUrl(`/verifier-email?token=${token}`) },
     { userId: user.id },
   );
 }
@@ -66,6 +82,7 @@ export async function signup(input: {
   marketingOptIn?: boolean;
   referralCode?: string | null;
   firstTouch?: Record<string, string | null> | null;
+  ipHash?: string;
 }) {
   const email = normaliseEmail(input.email);
   const existing = await findUserByEmail(email);
@@ -80,8 +97,8 @@ export async function signup(input: {
   for (let attempt = 0; attempt < 3 && !user; attempt++) {
     try {
       user = await queryOne<{ id: string; email: string }>(
-        `INSERT INTO users (email, password_hash, name, marketing_opt_in, referral_code, referred_by, first_touch)
-         VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id, email`,
+        `INSERT INTO users (email, password_hash, name, marketing_opt_in, referral_code, referred_by, first_touch, email_canonical, signup_ip_hash)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING id, email`,
         [
           email,
           passwordHash,
@@ -90,6 +107,8 @@ export async function signup(input: {
           referralCode(),
           referredBy,
           input.firstTouch ? JSON.stringify(input.firstTouch) : null,
+          canonicalEmail(email),
+          input.ipHash ?? null,
         ],
       );
     } catch (e) {
@@ -135,16 +154,31 @@ export async function verifyEmail(token: string): Promise<{ userId: string } | n
   return { userId };
 }
 
-/** Both the referrer and the new user receive pages once the new user has verified their e-mail. */
+/**
+ * Both the referrer and the new user receive pages once the new user has verified their e-mail.
+ * Self-referrals are refused: same canonical e-mail (plus-addressing, Gmail dots), or the
+ * referee signed up from an IP the referrer has used.
+ */
 async function rewardReferral(referrerId: string, refereeId: string) {
-  const referrer = await queryOne<{ id: string; email: string; rewards: string }>(
-    `SELECT u.id, u.email, (SELECT count(*) FROM credit_grants g WHERE g.user_id = u.id AND g.source = 'referral' AND g.reference LIKE '%:referrer') AS rewards
+  const referrer = await queryOne<{ id: string; email: string; email_canonical: string | null; rewards: string }>(
+    `SELECT u.id, u.email, u.email_canonical, (SELECT count(*) FROM credit_grants g WHERE g.user_id = u.id AND g.source = 'referral' AND g.reference LIKE '%:referrer') AS rewards
        FROM users u WHERE u.id = $1 AND u.email_verified_at IS NOT NULL`,
     [referrerId],
   );
+  const referee = await queryOne<{ email: string; signup_ip_hash: string | null }>(`SELECT email, signup_ip_hash FROM users WHERE id = $1`, [refereeId]);
+  if (!referrer || !referee) return;
+  const sameIdentity = canonicalEmail(referee.email) === (referrer.email_canonical ?? canonicalEmail(referrer.email));
+  const sharedIp = referee.signup_ip_hash
+    ? !!(await queryOne(`SELECT 1 FROM sessions WHERE user_id = $1 AND ip_hash = $2 LIMIT 1`, [referrer.id, referee.signup_ip_hash])) ||
+      !!(await queryOne(`SELECT 1 FROM users WHERE id = $1 AND signup_ip_hash = $2`, [referrer.id, referee.signup_ip_hash]))
+    : false;
+  if (sameIdentity || sharedIp) {
+    await trackServer("referral_rewarded", { userId: referrerId, props: { refused: sameIdentity ? "same_identity" : "same_ip" } });
+    return;
+  }
   await transaction(async (db) => {
     await grantCredits(db, refereeId, REFERRAL_REWARD_PAGES, "referral", `${refereeId}:referee`);
-    if (referrer && Number(referrer.rewards) < MAX_REFERRAL_REWARDS) {
+    if (Number(referrer.rewards) < MAX_REFERRAL_REWARDS) {
       const granted = await grantCredits(db, referrer.id, REFERRAL_REWARD_PAGES, "referral", `${refereeId}:referrer`);
       if (granted) {
         await sendEmail(
@@ -163,7 +197,10 @@ export async function requestPasswordReset(email: string) {
   const user = await findUserByEmail(email);
   if (!user) return;
   const token = await createEmailToken(user.id, "reset_password", 60);
-  await sendEmail("reset_password", user.email, { url: absoluteUrl(`/reinitialiser-mot-de-passe?token=${token}`) }, { userId: user.id });
+  // Not awaited: the response time must not reveal whether the account exists.
+  void sendEmail("reset_password", user.email, { url: absoluteUrl(`/reinitialiser-mot-de-passe?token=${token}`) }, { userId: user.id }).catch(
+    (e) => console.error("[auth] reset e-mail failed", e),
+  );
 }
 
 export async function resetPassword(token: string, newPassword: string): Promise<{ id: string; email: string } | null> {
@@ -195,7 +232,7 @@ export async function exportUserData(userId: string) {
     `SELECT id, email, name, email_verified_at, marketing_opt_in, referral_code, first_touch, created_at, last_login_at FROM users WHERE id = $1`,
     [userId],
   );
-  const [subscriptions, orders, credits, usage, sessions] = await Promise.all([
+  const [subscriptions, orders, credits, usage, sessions, contactMessages, layoutReports, emails, analytics] = await Promise.all([
     query(
       `SELECT provider, plan, interval, status, current_period_end, cancel_at_period_end, created_at FROM subscriptions WHERE user_id = $1`,
       [userId],
@@ -209,6 +246,10 @@ export async function exportUserData(userId: string) {
       [userId],
     ),
     query(`SELECT created_at, last_seen_at, expires_at, user_agent FROM sessions WHERE user_id = $1`, [userId]),
+    query(`SELECT email, topic, message, created_at FROM contact_messages WHERE user_id = $1 ORDER BY created_at`, [userId]),
+    query(`SELECT bank_id, summary, comment, created_at FROM layout_reports WHERE user_id = $1 ORDER BY created_at`, [userId]),
+    query(`SELECT template, status, created_at FROM email_log WHERE user_id = $1 ORDER BY created_at`, [userId]),
+    query(`SELECT name, path, props, created_at FROM analytics_events WHERE user_id = $1 ORDER BY created_at DESC LIMIT 5000`, [userId]),
   ]);
   return {
     exportedAt: new Date().toISOString(),
@@ -219,6 +260,10 @@ export async function exportUserData(userId: string) {
     credits,
     usage,
     sessions,
+    contactMessages,
+    layoutReports,
+    emails,
+    analytics,
   };
 }
 
@@ -237,7 +282,14 @@ export async function deleteAccount(userId: string, password: string): Promise<"
     }
   }
   await trackServer("account_deleted", { props: { hadSubscription: !!sub } });
-  await query(`DELETE FROM users WHERE id = $1`, [userId]);
-  await sendEmail("account_deleted", row.email, {} as Record<string, never>);
+  await transaction(async (db) => {
+    // Rows that reference the user with ON DELETE SET NULL but still contain personal data.
+    await db.query(`DELETE FROM contact_messages WHERE user_id = $1`, [userId]);
+    await db.query(`DELETE FROM layout_reports WHERE user_id = $1`, [userId]);
+    await db.query(`DELETE FROM analytics_events WHERE user_id = $1`, [userId]);
+    await db.query(`DELETE FROM users WHERE id = $1`, [userId]);
+  });
+  // The confirmation is logged without the address.
+  await sendEmail("account_deleted", row.email, {} as Record<string, never>, { logAddress: false });
   return "ok";
 }

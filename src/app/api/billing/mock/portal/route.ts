@@ -18,7 +18,7 @@ export const POST = handler(async (req) => {
   assertSameOrigin(req);
   if (env().PAYMENT_PROVIDER !== "mock") throw new HttpError(404, "Indisponible.", "not_found");
   const { token, action } = await readJson(req, schema);
-  const data = verifyMockToken<{ userId: string; subscriptionId: string; returnUrl: string }>(token);
+  const data = verifyMockToken<{ userId: string; subscriptionId: string; returnUrl: string }>(token, "portal");
   if (!data) throw new HttpError(400, "Session expirée.", "invalid_token");
   const user = await getCurrentUser();
   if (!user || user.id !== data.userId) throw new HttpError(403, "Accès refusé.", "forbidden");

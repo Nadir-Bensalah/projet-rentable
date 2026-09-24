@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { createSession, getCurrentUser } from "@/lib/auth/session";
+import { getCurrentUser } from "@/lib/auth/session";
 import { verifyEmail } from "@/lib/auth/service";
 import { rateLimit } from "@/lib/security/rate-limit";
 import { HttpError, assertSameOrigin, handler, ipHash, json, readJson } from "@/lib/security/request";
@@ -14,9 +14,8 @@ export const POST = handler(async (req) => {
   const { token } = await readJson(req, schema);
   const res = await verifyEmail(token);
   if (!res) throw new HttpError(400, "Ce lien est invalide ou a expiré. Demandez un nouvel e-mail de confirmation.", "invalid_token");
+  // The link only confirms the address. It never signs anyone in: a forwarded or planted
+  // link must not attach the visitor's browser to someone else's account.
   const current = await getCurrentUser();
-  if (!current || current.id !== res.userId) {
-    await createSession(res.userId, { userAgent: req.headers.get("user-agent"), ipHash: ip });
-  }
-  return json({ ok: true });
+  return json({ ok: true, signedIn: current?.id === res.userId });
 });

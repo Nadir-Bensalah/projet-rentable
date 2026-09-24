@@ -78,9 +78,9 @@ export function collectErrors(page: Page) {
  * per-IP rate limits behave like in production instead of piling up across tests.
  */
 export const test = base.extend({
-  page: async ({ page }, use) => {
+  page: async ({ page }, provide) => {
     await page.setExtraHTTPHeaders({ "x-forwarded-for": `10.${rand()}.${rand()}.${rand()}` });
-    await use(page);
+    await provide(page);
   },
 });
 

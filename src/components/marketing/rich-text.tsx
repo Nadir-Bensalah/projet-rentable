@@ -16,7 +16,7 @@ export function RichText({ text }: { text: string }) {
     if (m[1]) out.push(<strong key={i++}>{m[1]}</strong>);
     else {
       const href = m[3];
-      if (href.startsWith("/"))
+      if (/^\/(?!\/)/.test(href))
         out.push(
           <Link key={i++} href={href}>
             {m[2]}

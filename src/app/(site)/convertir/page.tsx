@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import { ConverterApp } from "@/components/converter/converter-app";
-import { Spinner } from "@/components/ui/spinner";
 
 export const metadata: Metadata = {
   title: "Convertir un relevé bancaire PDF en Excel, CSV ou OFX",
@@ -19,15 +17,7 @@ export default function ConvertPage() {
           Le fichier est lu par votre navigateur : il n&apos;est jamais envoyé. Chaque relevé est contrôlé au centime avant l&apos;export.
         </p>
       </div>
-      <Suspense
-        fallback={
-          <div className="surface flex items-center gap-2 p-8 text-muted">
-            <Spinner /> Chargement du convertisseur…
-          </div>
-        }
-      >
-        <ConverterApp />
-      </Suspense>
+      <ConverterApp />
     </div>
   );
 }

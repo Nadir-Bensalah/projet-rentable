@@ -1,0 +1,68 @@
+# Render Blueprint (https://render.com/docs/blueprint-spec).
+# Free web service + external Postgres (Neon free tier recommended, EU region).
+services:
+  - type: web
+    name: releveo
+    runtime: docker
+    plan: free
+    region: frankfurt
+    healthCheckPath: /api/health
+    envVars:
+      - key: APP_URL
+        sync: false # e.g. https://releveo.fr
+      - key: NEXT_PUBLIC_APP_URL
+        sync: false
+      - key: DATABASE_URL
+        sync: false # Neon connection string (sslmode=require)
+      - key: DATABASE_SSL
+        value: "true"
+      - key: AUTH_SECRET
+        generateValue: true
+      - key: CRON_SECRET
+        generateValue: true
+      - key: TRUSTED_PROXY_HOPS
+        value: "1"
+      - key: PAYMENT_PROVIDER
+        value: lemonsqueezy
+      - key: LEMONSQUEEZY_API_KEY
+        sync: false
+      - key: LEMONSQUEEZY_STORE_ID
+        sync: false
+      - key: LEMONSQUEEZY_WEBHOOK_SECRET
+        sync: false
+      - key: LEMONSQUEEZY_VARIANT_PACK
+        sync: false
+      - key: LEMONSQUEEZY_VARIANT_PRO_MONTHLY
+        sync: false
+      - key: LEMONSQUEEZY_VARIANT_PRO_YEARLY
+        sync: false
+      - key: LEMONSQUEEZY_VARIANT_BUSINESS_MONTHLY
+        sync: false
+      - key: LEMONSQUEEZY_VARIANT_BUSINESS_YEARLY
+        sync: false
+      - key: EMAIL_PROVIDER
+        value: resend
+      - key: RESEND_API_KEY
+        sync: false
+      - key: EMAIL_FROM
+        sync: false
+      - key: SUPPORT_EMAIL
+        sync: false
+      - key: NEXT_PUBLIC_SUPPORT_EMAIL
+        sync: false
+      - key: ADMIN_EMAILS
+        sync: false
+      - key: NEXT_PUBLIC_LEGAL_NAME
+        sync: false
+      - key: NEXT_PUBLIC_LEGAL_STATUS
+        sync: false
+      - key: NEXT_PUBLIC_LEGAL_SIREN
+        sync: false
+      - key: NEXT_PUBLIC_LEGAL_ADDRESS
+        sync: false
+      - key: NEXT_PUBLIC_LEGAL_VAT
+        sync: false
+      - key: NEXT_PUBLIC_LEGAL_DIRECTOR
+        sync: false
+      - key: NEXT_PUBLIC_LEGAL_HOST
+        sync: false

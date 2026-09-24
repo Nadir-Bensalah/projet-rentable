@@ -13,7 +13,7 @@ export const metadata: Metadata = { title: "Gestion de l'abonnement (simulation)
 export default async function MockPortalPage(props: { searchParams: Promise<{ token?: string }> }) {
   if (env().PAYMENT_PROVIDER !== "mock") notFound();
   const { token } = await props.searchParams;
-  const data = token ? verifyMockToken<{ userId: string; subscriptionId: string }>(token) : null;
+  const data = token ? verifyMockToken<{ userId: string; subscriptionId: string }>(token, "portal") : null;
   const user = await getCurrentUser();
   const sub =
     data && user && user.id === data.userId

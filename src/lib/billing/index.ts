@@ -86,8 +86,10 @@ export async function accountState(userId: string, db: Pick<PoolClient, "query">
     `SELECT COALESCE(SUM(from_allowance), 0) AS pages FROM usage_events WHERE user_id = $1 AND period = $2`,
     [userId, period],
   );
-  const [credits] = await run<{ remaining: string | null; next_expiry: Date | null }>(
-    `SELECT COALESCE(SUM(remaining), 0) AS remaining, MIN(expires_at) AS next_expiry
+  const [credits] = await run<{ remaining: string | null; paid_remaining: string | null; next_expiry: Date | null }>(
+    `SELECT COALESCE(SUM(remaining), 0) AS remaining,
+            COALESCE(SUM(remaining) FILTER (WHERE source <> 'referral'), 0) AS paid_remaining,
+            MIN(expires_at) AS next_expiry
        FROM credit_grants WHERE user_id = $1 AND remaining > 0 AND (expires_at IS NULL OR expires_at > now())`,
     [userId],
   );
@@ -104,10 +106,14 @@ export async function accountState(userId: string, db: Pick<PoolClient, "query">
     allowanceRemaining,
     credits: creditCount,
     creditsNextExpiry: credits?.next_expiry ?? null,
-    paidFeatures: plan !== "free" || creditCount > 0,
+    // Referral pages add volume but do not unlock paid formats (prevents self-referral farming).
+    paidFeatures: plan !== "free" || Number(credits?.paid_remaining ?? 0) > 0,
     totalAvailable: allowanceRemaining + creditCount,
   };
 }
+
+/** Free re-exports of the same document per month before it is charged again. */
+export const MAX_FREE_REEXPORTS = 10;
 
 export class QuotaError extends Error {
   constructor(
@@ -153,19 +159,30 @@ export async function consumePages(input: ConsumeInput): Promise<{ charged: numb
       );
     }
     const period = state.period;
-    const existing = await db.query(`SELECT id FROM usage_events WHERE user_id = $1 AND document_hash = $2 AND period = $3`, [
-      input.userId,
-      input.documentHash,
-      period,
-    ]);
-    if (existing.rows.length) return { charged: 0, alreadyPaid: true, email: user.email };
+    const existing = (
+      await db.query(`SELECT id, pages, reexports FROM usage_events WHERE user_id = $1 AND document_hash = $2 AND period = $3 FOR UPDATE`, [
+        input.userId,
+        input.documentHash,
+        period,
+      ])
+    ).rows[0] as { id: string; pages: number; reexports: number } | undefined;
+    // A document already charged this month can be re-exported for free, but only up to the
+    // page count first charged (the page count comes from the browser) and a limited number of times.
+    let toCharge = input.pages;
+    if (existing) {
+      toCharge = existing.reexports >= MAX_FREE_REEXPORTS ? input.pages : Math.max(0, input.pages - existing.pages);
+      if (toCharge === 0) {
+        await db.query(`UPDATE usage_events SET reexports = reexports + 1 WHERE id = $1`, [existing.id]);
+        return { charged: 0, alreadyPaid: true, email: user.email };
+      }
+    }
 
-    const fromAllowance = Math.min(input.pages, state.allowanceRemaining);
-    let rest = input.pages - fromAllowance;
+    const fromAllowance = Math.min(toCharge, state.allowanceRemaining);
+    let rest = toCharge - fromAllowance;
     if (rest > state.credits) {
       throw new QuotaError(
         "quota_exceeded",
-        `Ce relevé compte ${input.pages} page(s) et il vous en reste ${state.totalAvailable}. Achetez un pack ou changez d'offre pour continuer.`,
+        `Ce relevé compte ${toCharge} page(s) à décompter et il vous en reste ${state.totalAvailable}. Achetez un pack ou changez d'offre pour continuer.`,
       );
     }
     const fromCredits = rest;
@@ -185,22 +202,31 @@ export async function consumePages(input: ConsumeInput): Promise<{ charged: numb
         rest -= take;
       }
     }
-    await db.query(
-      `INSERT INTO usage_events (user_id, period, pages, from_allowance, from_credits, document_hash, format, bank_id, reconciled)
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)`,
-      [
-        input.userId,
-        period,
-        input.pages,
-        fromAllowance,
-        fromCredits,
-        input.documentHash,
-        input.format,
-        input.bankId ?? null,
-        input.reconciled ?? null,
-      ],
-    );
-    return { charged: input.pages, alreadyPaid: false, email: user.email };
+    if (existing) {
+      await db.query(
+        `UPDATE usage_events SET pages = GREATEST(pages, $2), from_allowance = from_allowance + $3, from_credits = from_credits + $4,
+                reexports = reexports + 1, format = $5
+          WHERE id = $1`,
+        [existing.id, input.pages, fromAllowance, fromCredits, input.format],
+      );
+    } else {
+      await db.query(
+        `INSERT INTO usage_events (user_id, period, pages, from_allowance, from_credits, document_hash, format, bank_id, reconciled)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)`,
+        [
+          input.userId,
+          period,
+          input.pages,
+          fromAllowance,
+          fromCredits,
+          input.documentHash,
+          input.format,
+          input.bankId ?? null,
+          input.reconciled ?? null,
+        ],
+      );
+    }
+    return { charged: toCharge, alreadyPaid: false, email: user.email };
   });
   const state = await accountState(input.userId);
   // Lifecycle: warn once per month at 80 % of the allowance (not for users with credits left).
@@ -333,15 +359,18 @@ async function applyEvent(db: PoolClient, providerName: string, ev: BillingEvent
         ])
       ).rows[0] as { status: string; cancel_at_period_end: boolean } | undefined;
       await db.query(
-        `INSERT INTO subscriptions (user_id, provider, provider_subscription_id, provider_customer_id, plan, interval, status, current_period_end, cancel_at_period_end, portal_url)
-         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+        `INSERT INTO subscriptions (user_id, provider, provider_subscription_id, provider_customer_id, plan, interval, status, current_period_end, cancel_at_period_end, portal_url, last_event_at)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
          ON CONFLICT (provider, provider_subscription_id) DO UPDATE SET
            provider_customer_id = COALESCE(EXCLUDED.provider_customer_id, subscriptions.provider_customer_id),
            plan = EXCLUDED.plan, interval = EXCLUDED.interval, status = EXCLUDED.status,
            current_period_end = COALESCE(EXCLUDED.current_period_end, subscriptions.current_period_end),
            cancel_at_period_end = EXCLUDED.cancel_at_period_end,
            portal_url = COALESCE(EXCLUDED.portal_url, subscriptions.portal_url),
-           updated_at = now()`,
+           last_event_at = COALESCE(EXCLUDED.last_event_at, subscriptions.last_event_at),
+           updated_at = now()
+         -- Providers do not guarantee delivery order: never let an older event overwrite a newer state.
+         WHERE subscriptions.last_event_at IS NULL OR EXCLUDED.last_event_at IS NULL OR EXCLUDED.last_event_at >= subscriptions.last_event_at`,
         [
           user.id,
           providerName,
@@ -353,6 +382,7 @@ async function applyEvent(db: PoolClient, providerName: string, ev: BillingEvent
           ev.currentPeriodEnd ?? null,
           ev.cancelAtPeriodEnd,
           ev.portalUrl ?? null,
+          ev.eventTime ?? null,
         ],
       );
       const planName = PLANS[ev.plan].name;

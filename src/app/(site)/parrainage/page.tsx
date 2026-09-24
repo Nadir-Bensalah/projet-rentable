@@ -34,7 +34,7 @@ export default function ReferralPage() {
             Copiez votre lien de parrainage depuis votre espace <Link href="/compte">Mon compte</Link>.
           </li>
           <li>La personne crée un compte gratuit avec ce lien, puis confirme son adresse e-mail.</li>
-          <li>Vous recevez chacun {REFERRAL_REWARD_PAGES} pages de crédit, valables 12 mois, utilisables avec tous les formats.</li>
+          <li>Vous recevez chacun {REFERRAL_REWARD_PAGES} pages de crédit, valables 12 mois (formats Excel et CSV ; les autres formats restent réservés aux offres payantes).</li>
         </ol>
         <h2 id="conditions">Conditions</h2>
         <ul>

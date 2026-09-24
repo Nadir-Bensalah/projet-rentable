@@ -31,3 +31,4 @@ next-env.d.ts
 
 # generated at install time
 /public/pdf.worker.min.mjs
+.sandbox-ca.crt

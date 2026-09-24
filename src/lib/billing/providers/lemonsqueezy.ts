@@ -113,18 +113,29 @@ export const lemonSqueezyProvider: PaymentProvider = {
     if (!secret) throw new ProviderConfigError("LEMONSQUEEZY_WEBHOOK_SECRET is not configured");
     verifyLemonSignature(rawBody, headers.get("x-signature"), secret);
     const body = JSON.parse(rawBody) as {
-      meta: { event_name: string; custom_data?: Record<string, string> };
+      meta: { event_name: string; test_mode?: boolean; custom_data?: Record<string, string> };
       data: { id: string; attributes: Record<string, unknown> };
     };
     const name = body.meta.event_name;
     const a = body.data.attributes;
     const userId = body.meta.custom_data?.user_id;
     const events: BillingEvent[] = [];
+    const eventId = `${name}:${sha256(rawBody).slice(0, 32)}`;
+    if (env().PAYMENT_MODE === "live" && body.meta.test_mode) {
+      return { eventId, eventType: name, events: [{ type: "ignored", reason: "test-mode event in live mode" }] };
+    }
+    // Only events of our own store count (custom data can be set by anyone on a public checkout).
+    const storeId = env().LEMONSQUEEZY_STORE_ID;
+    if (storeId && a.store_id !== undefined && String(a.store_id) !== String(storeId)) {
+      return { eventId, eventType: name, events: [{ type: "ignored", reason: "other store" }] };
+    }
+    const eventTime = typeof a.updated_at === "string" ? new Date(a.updated_at) : undefined;
     switch (name) {
       case "order_created": {
         const item = a.first_order_item as { variant_id?: number } | undefined;
-        const product = productFromVariant(item?.variant_id) ?? (body.meta.custom_data?.product as ProductId | undefined);
-        if (a.status === "paid" && product === "pack" && userId) {
+        // The product is derived from the configured variant only — never from custom data.
+        const product = productFromVariant(item?.variant_id);
+        if (a.status === "paid" && product === "pack" && userId && Number(a.total) >= PRODUCTS.pack.price) {
           events.push({
             type: "pack.paid",
             userId,
@@ -145,7 +156,7 @@ export const lemonSqueezyProvider: PaymentProvider = {
       case "subscription_expired":
       case "subscription_paused":
       case "subscription_unpaused": {
-        const product = productFromVariant(a.variant_id as number) ?? (body.meta.custom_data?.product as ProductId | undefined);
+        const product = productFromVariant(a.variant_id as number);
         const info = product ? PRODUCTS[product] : undefined;
         if (!info || info.kind !== "subscription") {
           events.push({ type: "ignored", reason: "unknown variant" });
@@ -164,6 +175,7 @@ export const lemonSqueezyProvider: PaymentProvider = {
           currentPeriodEnd: end ? new Date(end) : undefined,
           cancelAtPeriodEnd: !!a.cancelled && status !== "expired",
           portalUrl: (a.urls as { customer_portal?: string } | undefined)?.customer_portal,
+          eventTime,
         });
         break;
       }
@@ -171,7 +183,8 @@ export const lemonSqueezyProvider: PaymentProvider = {
       case "subscription_payment_failed":
       case "subscription_payment_recovered": {
         const subscriptionId = String(a.subscription_id);
-        const product = (body.meta.custom_data?.product as ProductId | undefined) ?? undefined;
+        // Product label comes from the stored subscription (see billing service).
+        const product: ProductId | undefined = undefined;
         events.push({
           type: "subscription.payment",
           userId,
@@ -192,6 +205,6 @@ export const lemonSqueezyProvider: PaymentProvider = {
         events.push({ type: "ignored", reason: name });
     }
     // Lemon Squeezy does not send an event id: the body hash makes retries idempotent.
-    return { eventId: `${name}:${sha256(rawBody).slice(0, 32)}`, eventType: name, events };
+    return { eventId, eventType: name, events };
   },
 };

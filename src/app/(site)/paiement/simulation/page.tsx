@@ -11,7 +11,7 @@ export const metadata: Metadata = { title: "Paiement (simulation)", robots: { in
 export default async function MockCheckoutPage(props: { searchParams: Promise<{ token?: string }> }) {
   if (env().PAYMENT_PROVIDER !== "mock") notFound();
   const { token } = await props.searchParams;
-  const data = token ? verifyMockToken<MockCheckoutToken>(token) : null;
+  const data = token ? verifyMockToken<MockCheckoutToken>(token, "checkout") : null;
   return (
     <div className="mx-auto max-w-md px-4 py-14">
       <div className="surface p-6 sm:p-8">

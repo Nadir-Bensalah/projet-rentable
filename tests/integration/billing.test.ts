@@ -231,3 +231,60 @@ describe("Lemon Squeezy webhooks", () => {
     expect((await billing.accountState(u.id)).credits).toBe(0);
   });
 });
+
+describe("security hardening", () => {
+  it("re-export is free only up to the pages first charged, and capped", async () => {
+    const u = await createUser();
+    await billing.consumePages({ userId: u.id, pages: 1, documentHash: HASH(900), format: "xlsx", paidFormat: false, batch: false });
+    // Claiming more pages for the same fingerprint charges the difference.
+    const more = await billing.consumePages({ userId: u.id, pages: 5, documentHash: HASH(900), format: "xlsx", paidFormat: false, batch: false });
+    expect(more).toMatchObject({ charged: 4, alreadyPaid: false });
+    for (let i = 0; i < billing.MAX_FREE_REEXPORTS - 1; i++) {
+      const r = await billing.consumePages({ userId: u.id, pages: 5, documentHash: HASH(900), format: "csv-fr", paidFormat: false, batch: false });
+      expect(r.alreadyPaid).toBe(true);
+    }
+    const capped = await billing.consumePages({ userId: u.id, pages: 5, documentHash: HASH(900), format: "csv-fr", paidFormat: false, batch: false });
+    expect(capped.charged).toBe(5);
+    expect(capped.state.usedThisMonth).toBe(10);
+  });
+
+  it("referral credits add pages but do not unlock paid formats", async () => {
+    const u = await createUser();
+    await db.query(`INSERT INTO credit_grants (user_id, pages, remaining, source, reference) VALUES ($1, 30, 30, 'referral', $2)`, [u.id, `t-${u.id}`]);
+    const state = await billing.accountState(u.id);
+    expect(state.credits).toBe(30);
+    expect(state.paidFeatures).toBe(false);
+    await expect(billing.consumePages({ userId: u.id, pages: 1, documentHash: HASH(901), format: "ofx", paidFormat: true, batch: false })).rejects.toMatchObject({
+      code: "paid_feature",
+    });
+  });
+
+  it("ignores out-of-order subscription events", async () => {
+    const u = await createUser();
+    const sub = (t: number, status: string) =>
+      JSON.stringify({
+        id: `evt_ooo_${t}`,
+        type: "customer.subscription.updated",
+        created: t,
+        data: { object: { id: "sub_ooo", customer: "cus_ooo", status, cancel_at_period_end: false, metadata: { user_id: u.id }, items: { data: [{ price: { id: "price_pro_m" }, current_period_end: t + 86400 * 30 }] } } },
+      });
+    const now = Math.floor(Date.now() / 1000);
+    const newer = sub(now, "canceled");
+    const older = sub(now - 100, "active");
+    await billing.processWebhook(stripe.stripeProvider, newer, stripeHeader(newer));
+    await billing.processWebhook(stripe.stripeProvider, older, stripeHeader(older));
+    const row = await db.queryOne<{ status: string }>(`SELECT status FROM subscriptions WHERE provider_subscription_id = 'sub_ooo'`);
+    expect(row?.status).toBe("canceled");
+  });
+
+  it("Lemon Squeezy never trusts custom_data for the product", async () => {
+    const u = await createUser();
+    const body = JSON.stringify({
+      meta: { event_name: "order_created", custom_data: { user_id: u.id, product: "pack" } },
+      data: { id: "9100", attributes: { status: "paid", total: 100, currency: "EUR", first_order_item: { variant_id: 999 } } },
+    });
+    const sig = createHmac("sha256", "ls_test_secret").update(body).digest("hex");
+    await billing.processWebhook(ls.lemonSqueezyProvider, body, new Headers({ "x-signature": sig }));
+    expect((await billing.accountState(u.id)).credits).toBe(0);
+  });
+});

@@ -17,6 +17,8 @@ const schema = z.object({
 
   // Payments
   PAYMENT_PROVIDER: z.enum(["mock", "stripe", "lemonsqueezy"]).default("mock"),
+  // "live" ignores provider test-mode events; keep "test" while configuring the provider.
+  PAYMENT_MODE: z.enum(["test", "live"]).default("test"),
   STRIPE_SECRET_KEY: z.string().optional(),
   STRIPE_WEBHOOK_SECRET: z.string().optional(),
   STRIPE_PRICE_PACK: z.string().optional(),
@@ -67,6 +69,9 @@ function load(): Env {
 /** Fail fast instead of silently running production on dev defaults. */
 export function assertProductionReady(env: Env) {
   const problems: string[] = [];
+  if (!env.APP_URL.startsWith("https://") && process.env.ALLOW_HTTP_APP_URL !== "true") {
+    problems.push("APP_URL must use https:// in production (secure cookies); set ALLOW_HTTP_APP_URL=true only for local production tests");
+  }
   if (env.AUTH_SECRET.length < 32 || env.AUTH_SECRET.startsWith("dev-only")) {
     problems.push("AUTH_SECRET must be a random string of at least 32 characters");
   }

@@ -14,8 +14,16 @@ import { LoginForm, SignupForm } from "./forms";
 
 /** Only same-site relative paths are accepted as post-login destinations (no open redirect). */
 export function safeNext(v: string | null, fallback = "/convertir") {
-  if (!v || !v.startsWith("/") || v.startsWith("//") || v.startsWith("/\\")) return fallback;
-  return v;
+  // Reject control characters (browsers strip TAB/CR/LF: "/\t/evil.com" becomes "//evil.com") and backslashes.
+  if (!v || !v.startsWith("/") || /[\u0000-\u001f\u007f\\]/.test(v)) return fallback;
+  try {
+    const base = typeof window !== "undefined" ? window.location.origin : "http://localhost";
+    const u = new URL(v, base);
+    if (u.origin !== base) return fallback;
+    return u.pathname + u.search + u.hash;
+  } catch {
+    return fallback;
+  }
 }
 
 export function LoginPageClient() {
@@ -172,14 +180,16 @@ export function VerifyPageClient() {
   const params = useSearchParams();
   const token = params.get("token") ?? "";
   const [state, setState] = useState<"loading" | "ok" | "error">(token ? "loading" : "error");
+  const [signedIn, setSignedIn] = useState(false);
   const [error, setError] = useState<string | null>(token ? null : "Ce lien de confirmation est incomplet.");
   const once = useRef(false);
   useEffect(() => {
     if (!token || once.current) return;
     once.current = true;
-    api("/api/auth/verify", { body: { token } }).then(async (res) => {
+    api<{ signedIn: boolean }>("/api/auth/verify", { body: { token } }).then(async (res) => {
       if (res.ok) {
         await fetchMe(true);
+        setSignedIn(!!res.data.signedIn);
         setState("ok");
       } else {
         setState("error");
@@ -201,10 +211,12 @@ export function VerifyPageClient() {
         <div>
           <p className="text-lg font-semibold">Adresse confirmée, merci !</p>
           <p className="mt-1 text-muted">
-            Si une conversion attend dans un autre onglet, votre téléchargement y démarre automatiquement. Vous pouvez fermer cet onglet.
+            {signedIn
+              ? "Si une conversion attend dans un autre onglet, votre téléchargement y démarre automatiquement. Vous pouvez fermer cet onglet."
+              : "Si une conversion attend dans l'onglet où vous vous êtes inscrit, le téléchargement y démarre automatiquement. Sinon, connectez-vous pour continuer."}
           </p>
         </div>
-        <ButtonLink href="/convertir">Convertir un relevé</ButtonLink>
+        {signedIn ? <ButtonLink href="/convertir">Convertir un relevé</ButtonLink> : <ButtonLink href="/connexion?suite=/convertir">Me connecter</ButtonLink>}
       </div>
     );
   }

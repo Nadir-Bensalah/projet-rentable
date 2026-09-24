@@ -15,7 +15,7 @@ const csp = [
   "img-src 'self' data: blob:",
   "font-src 'self'",
   `connect-src 'self'${isDev ? " ws: wss:" : ""}`,
-  "worker-src 'self' blob:",
+  "worker-src 'self'",
   "frame-src 'none'",
   "object-src 'none'",
   "base-uri 'self'",

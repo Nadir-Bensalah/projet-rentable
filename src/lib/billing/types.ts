@@ -23,6 +23,8 @@ export type BillingEvent =
       currentPeriodEnd?: Date;
       cancelAtPeriodEnd: boolean;
       portalUrl?: string;
+      /** Time the provider produced this state, used to discard out-of-order deliveries. */
+      eventTime?: Date;
     }
   | {
       type: "subscription.payment";

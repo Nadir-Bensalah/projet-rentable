@@ -8,5 +8,6 @@ if (!fs.existsSync(src)) {
   console.error("pdfjs-dist is not installed");
   process.exit(1);
 }
+fs.mkdirSync(path.dirname(dest), { recursive: true });
 fs.copyFileSync(src, dest);
 console.log("pdf.js worker copied to public/");

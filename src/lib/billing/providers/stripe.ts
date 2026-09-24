@@ -97,7 +97,7 @@ interface StripeSubscription {
   items?: { data?: { price?: { id?: string }; current_period_end?: number }[] };
 }
 
-function subscriptionEvent(sub: StripeSubscription): BillingEvent {
+function subscriptionEvent(sub: StripeSubscription, eventTime?: Date): BillingEvent {
   const item = sub.items?.data?.[0];
   const product = productFromPrice(item?.price?.id) ?? (sub.metadata?.product as ProductId | undefined);
   const info = product ? PRODUCTS[product] : undefined;
@@ -114,6 +114,7 @@ function subscriptionEvent(sub: StripeSubscription): BillingEvent {
     status: mapStatus(sub.status),
     currentPeriodEnd: end ? new Date(end * 1000) : undefined,
     cancelAtPeriodEnd: !!sub.cancel_at_period_end,
+    eventTime,
   };
 }
 
@@ -166,9 +167,14 @@ export const stripeProvider: PaymentProvider = {
     const secret = env().STRIPE_WEBHOOK_SECRET;
     if (!secret) throw new ProviderConfigError("STRIPE_WEBHOOK_SECRET is not configured");
     verifyStripeSignature(rawBody, headers.get("stripe-signature"), secret);
-    const evt = JSON.parse(rawBody) as { id: string; type: string; data: { object: Record<string, unknown> } };
+    const evt = JSON.parse(rawBody) as { id: string; type: string; created?: number; livemode?: boolean; data: { object: Record<string, unknown> } };
     const obj = evt.data.object;
     const events: BillingEvent[] = [];
+    // In live mode, test-mode events (sent with test keys) must never grant anything.
+    if (env().PAYMENT_MODE === "live" && evt.livemode === false) {
+      return { eventId: evt.id, eventType: evt.type, events: [{ type: "ignored", reason: "test-mode event in live mode" }] };
+    }
+    const eventTime = evt.created ? new Date(evt.created * 1000) : undefined;
     switch (evt.type) {
       case "checkout.session.completed":
       case "checkout.session.async_payment_succeeded": {
@@ -180,10 +186,12 @@ export const stripeProvider: PaymentProvider = {
           currency: string;
           metadata?: Record<string, string>;
           client_reference_id?: string;
+          payment_intent?: string | null;
         };
         const userId = s.metadata?.user_id ?? s.client_reference_id;
         if (s.mode === "payment" && s.payment_status === "paid" && userId && s.metadata?.product === "pack") {
-          events.push({ type: "pack.paid", userId, orderId: s.id, amount: s.amount_total, currency: s.currency.toUpperCase() });
+          // Stored under the PaymentIntent id so that charge.refunded events match the order.
+          events.push({ type: "pack.paid", userId, orderId: s.payment_intent ?? s.id, amount: s.amount_total, currency: s.currency.toUpperCase() });
         } else {
           events.push({ type: "ignored", reason: `checkout ${s.mode} ${s.payment_status}` });
         }
@@ -194,7 +202,7 @@ export const stripeProvider: PaymentProvider = {
       case "customer.subscription.deleted":
       case "customer.subscription.paused":
       case "customer.subscription.resumed":
-        events.push(subscriptionEvent(obj as unknown as StripeSubscription));
+        events.push(subscriptionEvent(obj as unknown as StripeSubscription, eventTime));
         break;
       case "invoice.paid":
       case "invoice.payment_failed": {

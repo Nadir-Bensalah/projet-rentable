@@ -3,7 +3,6 @@
 import { strToU8, zipSync } from "fflate";
 import { AlertTriangle, Download, FileText, Flag, KeyRound, Lock, Printer, RotateCcw, Sparkles, Upload, X } from "lucide-react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { ProductId } from "@/config/plans";
 import { track } from "@/lib/analytics/client";
@@ -53,7 +52,6 @@ function download(data: Uint8Array | string, mime: string, filename: string) {
 export function ConverterApp() {
   const { state: me } = useAccount();
   const account: AccountView | null = me.status === "authenticated" ? me.account : null;
-  const params = useSearchParams();
   const [docs, setDocs] = useState<Doc[]>([]);
   const [activeId, setActiveId] = useState<string | null>(null);
   const [format, setFormat] = useState<ExportFormat>("xlsx");
@@ -199,6 +197,7 @@ export function ConverterApp() {
   useEffect(() => {
     if (restored.current) return;
     restored.current = true;
+    const params = new URLSearchParams(window.location.search);
     const saved = loadWorkspace();
     if (saved.length) {
       // eslint-disable-next-line react-hooks/set-state-in-effect

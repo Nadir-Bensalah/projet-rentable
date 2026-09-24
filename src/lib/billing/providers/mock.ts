@@ -1,6 +1,6 @@
 import "server-only";
 import { PRODUCTS, isProductId, type ProductId } from "@/config/plans";
-import { env } from "@/lib/env";
+import { deriveKey } from "@/lib/security/request";
 import { hmacSha256Hex, randomToken, safeEqualHex, sha256 } from "@/lib/security/tokens";
 import { WebhookSignatureError, type BillingEvent, type PaymentProvider, type SubscriptionStatus } from "../types";
 
@@ -11,7 +11,7 @@ import { WebhookSignatureError, type BillingEvent, type PaymentProvider, type Su
  */
 
 function secret() {
-  return `mock-webhook:${env().AUTH_SECRET}`;
+  return deriveKey("mock-payments");
 }
 
 export interface MockCheckoutToken {
@@ -29,12 +29,13 @@ export function signMockToken(payload: object): string {
   return `${body}.${hmacSha256Hex(secret(), body)}`;
 }
 
-export function verifyMockToken<T>(token: string): T | null {
+export function verifyMockToken<T>(token: string, typ: "checkout" | "portal"): T | null {
   const [body, sig] = token.split(".");
   if (!body || !sig || !safeEqualHex(sig, hmacSha256Hex(secret(), body))) return null;
   try {
-    const data = JSON.parse(Buffer.from(body, "base64url").toString("utf8")) as T & { exp?: number };
-    if (data.exp && data.exp < Date.now()) return null;
+    const data = JSON.parse(Buffer.from(body, "base64url").toString("utf8")) as T & { exp?: number; typ?: string };
+    if (data.typ !== typ) return null;
+    if (!data.exp || data.exp < Date.now()) return null;
     return data;
   } catch {
     return null;
@@ -64,6 +65,7 @@ export const mockProvider: PaymentProvider = {
 
   async createCheckout({ product, user, successUrl, cancelUrl }) {
     const token = signMockToken({
+      typ: "checkout",
       userId: user.id,
       email: user.email,
       product: product.id,
@@ -71,12 +73,13 @@ export const mockProvider: PaymentProvider = {
       cancelUrl,
       exp: Date.now() + 30 * 60_000,
       nonce: randomToken(8),
-    } satisfies MockCheckoutToken);
+    } satisfies MockCheckoutToken & { typ: string });
     return { url: `/paiement/simulation?token=${encodeURIComponent(token)}` };
   },
 
   async createPortal({ user, subscription, returnUrl }) {
     const token = signMockToken({
+      typ: "portal",
       userId: user.id,
       subscriptionId: subscription.providerSubscriptionId,
       returnUrl,
@@ -92,7 +95,8 @@ export const mockProvider: PaymentProvider = {
   async parseWebhook(rawBody, headers) {
     const sig = headers.get("x-mock-signature") ?? "";
     if (!safeEqualHex(sig, hmacSha256Hex(secret(), rawBody))) throw new WebhookSignatureError();
-    const parsed = JSON.parse(rawBody) as { id: string; payload: MockWebhookPayload };
+    const parsed = JSON.parse(rawBody) as { id: string; created?: number; payload: MockWebhookPayload };
+    const eventTime = parsed.created ? new Date(parsed.created) : undefined;
     const p = parsed.payload;
     if (!isProductId(p.product)) return { eventId: parsed.id, eventType: p.kind, events: [{ type: "ignored", reason: "unknown product" }] };
     const product = PRODUCTS[p.product];
@@ -113,6 +117,7 @@ export const mockProvider: PaymentProvider = {
           status: "active",
           currentPeriodEnd: end,
           cancelAtPeriodEnd: false,
+          eventTime,
         });
         events.push({
           type: "subscription.payment",
@@ -135,6 +140,7 @@ export const mockProvider: PaymentProvider = {
         status: p.status,
         currentPeriodEnd: new Date(p.periodEnd),
         cancelAtPeriodEnd: p.cancelAtPeriodEnd,
+        eventTime,
       });
     } else if (p.kind === "subscription.renewal") {
       events.push({

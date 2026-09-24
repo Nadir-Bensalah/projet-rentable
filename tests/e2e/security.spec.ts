@@ -1,4 +1,4 @@
-import { signupViaApi, expect, test } from "./helpers";
+import { createEmailToken, signupViaApi, sql, uniqueEmail, expect, test } from "./helpers";
 
 test.describe("security", () => {
   test("security headers are set", async ({ request }) => {
@@ -103,5 +103,58 @@ test.describe("security", () => {
     const ok = await request.post("/api/cron/lifecycle", { headers: { Authorization: "Bearer e2e-cron-secret" } });
     expect(ok.status()).toBe(200);
     expect(await ok.json()).toMatchObject({ ok: true });
+  });
+
+  test("control characters cannot turn the post-login redirect into another site", async ({ page }) => {
+    const email = await signupViaApi(page);
+    await page.context().clearCookies();
+    await page.goto("/connexion?suite=%2F%09%2Fattacker.invalid%2Fphish");
+    await page.getByLabel("Adresse e-mail").fill(email);
+    await page.getByLabel("Mot de passe", { exact: true }).fill("correct horse battery staple");
+    await page.getByRole("button", { name: "Se connecter" }).click();
+    await expect(page).toHaveURL(/localhost:3100\/compte/);
+  });
+
+  test("an e-mail verification link never signs the visitor in", async ({ page, browser }) => {
+    const email = await signupViaApi(page, uniqueEmail("verifycsrf"), { verify: false });
+    const token = await createEmailToken(email, "verify_email");
+    const victim = await browser.newContext({ extraHTTPHeaders: { "x-forwarded-for": "10.77.1.1" } });
+    const v = await victim.newPage();
+    await v.goto(`/verifier-email?token=${token}`);
+    await expect(v.getByText("Adresse confirmée, merci !")).toBeVisible();
+    await expect(v.getByRole("link", { name: "Me connecter" })).toBeVisible();
+    await v.goto("/compte");
+    await expect(v).toHaveURL(/\/connexion/);
+    await victim.close();
+    const [u] = await sql<{ email_verified_at: Date | null }>(`SELECT email_verified_at FROM users WHERE lower(email) = lower($1)`, [email]);
+    expect(u.email_verified_at).not.toBeNull();
+  });
+
+  test("analytics from another origin are ignored and bodies are size-capped", async ({ request }) => {
+    const before = await sql<{ n: string }>(`SELECT count(*) AS n FROM analytics_events WHERE name = 'checkout_clicked' AND path = '/forged'`);
+    await request.post("/api/events", {
+      headers: { Origin: "http://evil.example", "Content-Type": "text/plain" },
+      data: JSON.stringify({ name: "checkout_clicked", anonId: "x", path: "/forged" }),
+    });
+    const after = await sql<{ n: string }>(`SELECT count(*) AS n FROM analytics_events WHERE name = 'checkout_clicked' AND path = '/forged'`);
+    expect(after[0].n).toBe(before[0].n);
+    const big = await request.post("/api/webhooks/mock", { headers: { "x-mock-signature": "00" }, data: "x".repeat(600 * 1024) });
+    expect(big.status()).toBe(413);
+  });
+
+  test("login lockout by a third party does not block the owner", async ({ page, request, baseURL }) => {
+    const email = await signupViaApi(page, uniqueEmail("lockout"));
+    for (let i = 0; i < 12; i++) {
+      await request.post("/api/auth/login", {
+        headers: { Origin: baseURL!, "x-forwarded-for": `10.66.0.${i + 1}` },
+        data: { email, password: "wrong-password!" },
+      });
+    }
+    await page.context().clearCookies();
+    await page.goto("/connexion");
+    await page.getByLabel("Adresse e-mail").fill(email);
+    await page.getByLabel("Mot de passe", { exact: true }).fill("correct horse battery staple");
+    await page.getByRole("button", { name: "Se connecter" }).click();
+    await expect(page).toHaveURL(/\/compte/);
   });
 });

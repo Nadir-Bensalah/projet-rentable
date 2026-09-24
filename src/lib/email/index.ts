@@ -89,14 +89,15 @@ export async function sendEmail<T extends TemplateName>(
   name: T,
   to: string,
   data: TemplateData[T],
-  opts: { userId?: string | null; dedupeKey?: string; replyTo?: string } = {},
+  opts: { userId?: string | null; dedupeKey?: string; replyTo?: string; logAddress?: boolean } = {},
 ): Promise<boolean> {
   const provider = emailProvider();
+  const logged = opts.logAddress === false ? "[supprimé]" : to;
   if (opts.dedupeKey) {
     const claimed = await query(
       `INSERT INTO email_log (user_id, to_address, template, dedupe_key, provider, status)
        VALUES ($1, $2, $3, $4, $5, 'pending') ON CONFLICT (dedupe_key) WHERE dedupe_key IS NOT NULL DO NOTHING RETURNING id`,
-      [opts.userId ?? null, to, name, opts.dedupeKey, provider.name],
+      [opts.userId ?? null, logged, name, opts.dedupeKey, provider.name],
     );
     if (!claimed.length) return false;
   }
@@ -108,20 +109,20 @@ export async function sendEmail<T extends TemplateName>(
     } else {
       await query(
         `INSERT INTO email_log (user_id, to_address, template, provider, provider_id, status) VALUES ($1, $2, $3, $4, $5, 'sent')`,
-        [opts.userId ?? null, to, name, provider.name, id ?? null],
+        [opts.userId ?? null, logged, name, provider.name, id ?? null],
       );
     }
     return true;
   } catch (e) {
     const error = e instanceof Error ? e.message.slice(0, 500) : "unknown";
-    console.error(`[email] ${name} to ${to} failed: ${error}`);
+    console.error(`[email] ${name} failed: ${error}`);
     if (opts.dedupeKey) {
       // Release the dedupe key so a later retry can send it.
       await query(`DELETE FROM email_log WHERE dedupe_key = $1`, [opts.dedupeKey]).catch(() => {});
     }
     await query(`INSERT INTO email_log (user_id, to_address, template, provider, status, error) VALUES ($1, $2, $3, $4, 'failed', $5)`, [
       opts.userId ?? null,
-      to,
+      logged,
       name,
       provider.name,
       error,

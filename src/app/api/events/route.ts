@@ -3,13 +3,18 @@ import { isClientEvent } from "@/lib/analytics/events";
 import { trackServer } from "@/lib/analytics/server";
 import { getCurrentUser } from "@/lib/auth/session";
 import { rateLimit } from "@/lib/security/rate-limit";
-import { ipHash } from "@/lib/security/request";
+import { assertSameOrigin, ipHash, readBodyLimited } from "@/lib/security/request";
 
 const primitive = z.union([z.string().max(120), z.number().finite(), z.boolean(), z.null()]);
 const schema = z.object({
   name: z.string().max(40),
   anonId: z.string().max(64).optional().nullable(),
-  path: z.string().max(200).optional().nullable(),
+  path: z
+    .string()
+    .max(200)
+    .regex(/^\/[A-Za-z0-9\-_/.]*$/)
+    .optional()
+    .nullable(),
   referrer: z.string().max(300).optional().nullable(),
   utm: z
     .object({
@@ -24,8 +29,9 @@ const schema = z.object({
 /** First-party analytics intake. Always answers 204 so tracking can never break a page. */
 export async function POST(req: Request) {
   try {
-    const raw = await req.text();
-    if (raw.length > 4096) return new Response(null, { status: 204 });
+    // Beacons are same-origin: anything else is ignored (protects the funnel metrics).
+    assertSameOrigin(req);
+    const raw = await readBodyLimited(req, 4096);
     const parsed = schema.safeParse(JSON.parse(raw));
     if (!parsed.success || !isClientEvent(parsed.data.name)) return new Response(null, { status: 204 });
     const props = parsed.data.props ?? {};
@@ -37,7 +43,8 @@ export async function POST(req: Request) {
       userId: user?.id,
       anonId: parsed.data.anonId,
       path: parsed.data.path,
-      referrer: parsed.data.referrer,
+      // Keep only the referring origin, never a full URL with its query string.
+      referrer: referrerOrigin(parsed.data.referrer),
       utm: parsed.data.utm,
       props,
     });
@@ -45,4 +52,13 @@ export async function POST(req: Request) {
     /* swallow */
   }
   return new Response(null, { status: 204 });
+}
+
+function referrerOrigin(v: string | null | undefined): string | null {
+  if (!v) return null;
+  try {
+    return new URL(v).origin;
+  } catch {
+    return null;
+  }
 }
