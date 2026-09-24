@@ -54,5 +54,8 @@
  },
  "Z03-001": {
   "rejet": "page source de l'email incertaine ; téléphone 08 90 surtaxé, alternative de source incertaine"
+ },
+ "AA2-001": {
+  "rejet": "email vu uniquement dans des résumés ; source probable = page d'un club partenaire, non officielle"
  }
 }

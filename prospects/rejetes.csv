@@ -1,4 +1,61 @@
 ﻿entreprise;etape;raison;equipe
+Ortec Environnement (rachat Brun Nettoyage);privée;Filiale d'un grand groupe (Ortec, >900 salariés) et opération antérieure à 2026;AA1
+VDS (Esthète Propreté, Eco-C.l.e.a.n, Ecla Propreté);score;"1 200 salariés, hors cible 50-900 ; date des rachats non confirmée 2026";AA1
+EMN (rachat Solynet);score;~70 M€ de CA (hors cible effectif) et rachats datés 2025;AA1
+Costa Expansion (rachat EGP Nettoyage);score;Opération ancienne (avant 2026), pas de signal récent;AA1
+NGE (Clarac Espaces Verts);doublon;NGE déjà dans les exclusions (grand groupe);AA1
+Furnace Solutions by Sten;besoin;Nouvel atelier au Havre sans besoin digital observable ni coordonnées vérifiées;AA1
+Boma (reprise ASP Environnement);preuves;Date et taille non vérifiées, budget de recherche épuisé;AA1
+Tissendo (Lyon, ex-Aurys + Hexia + CDLA);email;Signal excellent (création 2026, fonds minoritaire sept. 2026, 5 sites, 120 salariés) mais aucun email ni téléphone visible dans les résultats après 3 recherches;AA2
+PKF Arsilon (rachat Lumia Conseils, Pau);score;1 000 salariés, hors cible 30-500;AA2
+Groupe Cogedis / Icoopa (Brest);score;"Fusion au 1/09/2026 : 1 200 salariés, 100 agences, hors cible ; structure associative (AGC) ; pas d'email trouvé";AA2
+Exco Nexiom (Villers-lès-Nancy, rapprochement Comptalor / Confente Knob);email;"Seul email visible = info@exco.fr (réseau national Exco, pas le groupe) ; site hébergé par le réseau";AA2
+Safigec / Ekylis (Lyon);doublon;Safigec = Numans (exclu), opération ancienne;AA2
+Groupe BBM (Forvis Mazars);score;Absorbé par Forvis Mazars (très grand groupe), décision non régionale;AA2
+Adecia (La Roche-sur-Yon);besoin;Aucune opération datée 2026 trouvée (rachat Ponts-de-Cé ancien), coordonnées non vérifiées;AA2
+Altonéo (Altonéo Développement);contrôle qualité;"QA : email vu uniquement dans des résumés ; source probable = page d'un club partenaire, non officielle";AA2
+Transports Veynat (Tresses, 33);privée;"Hors cible : 1 235 salariés (CA 2024 : 217 M€), bien au-dessus de 300 ; rachat de Translait Mauges en déc. 2025";AA3
+Groupe Jardel (Saint-Jory, 31);privée;Hors cible : 2 400 salariés, 250 M€ de CA;AA3
+FL Trans (Fayssac, 81);besoin;Trop petit (4 conducteurs + 4 salariés repris chez Transports Lombard), capacité insuffisante;AA3
+Groupe Brun (Eybens, 38);privée;"Hors cible : 1 400 salariés ; reprise de Transports Chalot en sept. 2025 (> 6 mois)";AA3
+Transports Malgogne (Châteaubriant / Feillens);privée;"Hors cible : environ 420 salariés ; email masqué dans le résumé de recherche";AA3
+Groupe Vingeanne (52);privée;Hors cible : 500 salariés après le rachat de Transports Adam (mars 2026);AA3
+Transports Bon SA (Vaudherland, 95);email;"49 salariés, article diversification de sept. 2026, mais aucun email vu dans les résultats ; téléphone incomplet dans le résumé";AA3
+Groupe Capelle;privée;Hors cible : environ 2 000 salariés;AA3
+Groupe Simon (Cailleau Pneus);besoin;Réseau de pneumatiques de 92 agences, pas un transporteur PME, taille hors cible;AA3
+GCA (acquisition SD Services);doublon;"Groupe GCA déjà traité ; taille hors cible";AA3
+Groupe Ageneau (Vendée);privée;"Groupe régional de grande taille, ouverture d'agence non datée 2026 ; non poursuivi";AA3
+Seatruck (Naviland Cargo / SNCF);privée;Racheté par une filiale SNCF (groupe public);AA3
+Groupe BMS (FINANCAB, Évreux — BMW/MINI/BYD);score;Email/tél trouvés (contact.evreux@groupebms.fr, 02 32 62 25 50) mais un seul site groupe, signal BYD non daté précisément : score estimé ~61;AA4
+Groupe Nedey Automobiles (Voujeaucourt, 25);email;Emails vus uniquement nominatifs/rh via résumés mêlant Facebook, rocketreach, annuaires : source incertaine;AA4
+Groupe Péricaud Automobiles (Limoges);email;"marketing@pericaud-automobiles.fr vu dans un résumé mêlant pagesjaunes/annuaires, source exacte incertaine ; siège hors régions ciblées";AA4
+Bony auto-mobile (Holding Bony, Clermont-Ferrand);email;31 sites, rachats Meignan/Fabre, nombreux sous-domaines par concession (fort besoin), mais contact@ vu seulement via Facebook/zeliq/lusha, mentions légales sans email dans le résumé;AA4
+Amplitude (Gérald Richard, rachat Nudant Automobiles Dijon);privée;Grand groupe de distribution (Top 30), hors cible;AA4
+Bodemer (Electrik Automobile / BYD);privée;Grand groupe de distribution (Top 30), hors cible;AA4
+Berceau des Rois (BDR Group, rachat des P'tits Babadins);urgence;Rachat des P'tits Babadins annoncé en mars 2024 (pas 2026) et article faisant état d'une liquidation judiciaire de micro-crèches du réseau : risque élevé;AA5
+Les Jeunes Pousses (micro-crèches d entreprise, Hérouville-Saint-Clair, SIREN 793319955);besoin;"Ouverture Honfleur janvier 2026 mais aucun besoin numérique documenté ; source de l email info@ incertaine";AA5
+Nos Aimés (Groupe Domia / Acadomia);privée;"Filiale d un grand groupe national (Domia : Acadomia, Shiva), hors cible ; aucun signal 2026 trouvé";AA5
+Maisons de l'Avenir (Quimper);doublon;"Groupe porteur de la marque Avenir Rénovations (déjà dans EXCLUSIONS) ; score estimé 67 sans signal digital observé";AA6
+Lelièvre Immobilier / Atrealis Promotion (Le Mans);email;Seul email trouvé nominatif d'un agent via annuaire tiers (source incertaine), pas d'email générique publié;AA6
+Les Constructeurs du Bois (Epinal);email;Mentions légales sans email ni téléphone de l'entreprise (seul contact webmaster);AA6
+Groupe Lamotte (Rennes);score;347 M€ de CA, taille hors cible 20-300 salariés;AA6
+Booa (Châtenois, groupe Burger & Cie);email;"Coordonnées non trouvées dans les résultats ; CA en chute de 40 % (capacité faible)";AA6
+Groupe Barraine (Imhotep Quimper);besoin;"Réseau d'agences immobilières (transaction), hors cible constructeur/promoteur ; non approfondi";AA6
+Aditec (négoce façade/gros œuvre, Cholet, adhérent France Matériaux);score;Contacts trouvés (contact@aditec-materiaux.com, 02 41 55 65 58), 16e agence à Quimper début 2026, mais catalogue/boutique en ligne déjà présent : besoin faible, score 65;AA7
+IDK Climatisation;besoin;Ouverture de la 8e agence datée de 2024, catalogue 2026 très structuré : pas de besoin web observable récent;AA7
+Tanguy Matériaux (Lannilis);besoin;"60 agences, dernier rachat (Le Nouy) oct. 2024 ; groupe déjà très outillé, pas de besoin observable";AA7
+Cédéo / PUM (Colomiers, Marcq-en-Barœul);privée;Enseignes de grands groupes (Saint-Gobain / exclusion);AA7
+Pillaud Matériaux (Épaux-Bézu, 02);email;"Rachats Chrétien Matériaux Péronne/Amiens (Somme), 29 agences ; téléphones trouvés (03 22 84 00 30) mais aucun email publié dans les résultats";AA7
+Gedimat Stoker / BigMat Gourmand (Côte-d'Or, Yonne);score;Rachat Gourmand daté de 2023 (signal ancien) et aucun email trouvé;AA7
+Wendel Distribution (Samazan, 47, adhérent Algorel);email;"10 agences, rénovation des showrooms 2026, mais aucun email publié trouvé ; site marchand Sanitaire-Distribution.fr déjà existant (besoin e-commerce faible)";AA7
+Loft One (rachat TG Immo, Montauban);besoin;Rachat non daté 2026 (brève ancienne) et outils numériques déjà déployés selon la presse;AA8
+Lelièvre Immobilier (Le Mans, absorption Atrealis);email;"Emails vus seulement dans un résumé mêlant LinkedIn/Facebook/rocketreach : source incertaine ; mentions légales sans email";AA8
+AGDA Immobilier (Isère);privée;Intégré à Foncia depuis 2022 (exclu);AA8
+Manda (fusion Hello Syndic / Flatlooker);besoin;Proptech avec sa propre technologie (concurrent / pas client);AA8
+Groupe Pichet (rachats Burban, Dodim);score;"Grand promoteur national, rachats non datés 2026 dans les résultats ; hors cible 5-50 agences";AA8
+Evoriel (ex-Nexity Services aux particuliers + Oralia, fonds Bridgepoint);privée;"Groupe national de 200 agences / 3 100 salariés intégrant Oralia et Nexity (exclus) ; hors cible 5-50 agences";AA8
+Catanéo Groupe (Lyon);email;Pas de rachat (croissance organique) et aucun email de l'entreprise trouvé dans les mentions légales;AA8
+Groupe L2M (Brest, reprise des agences Océanic);email;"Email masqué dans le résultat ; sites en marque blanche Orpi ; rachat non daté 2026";AA8
 Bureau Alpes Contrôles;score;DSI d'une trentaine de personnes, offre développeur web référencée janvier 2026 : fit et urgence faibles (<70);T01
 Primal (ex-Solem);score;"Fabricant IoT avec équipes de développement internes ; téléphone non trouvé ; fit faible";T01
 LIP Tertiaire;privée;Agence d'intérim/recrutement : l'offre est pour un client, pas un besoin propre;T01
