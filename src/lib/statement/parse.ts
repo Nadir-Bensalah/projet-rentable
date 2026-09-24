@@ -22,7 +22,8 @@ interface Anchor {
   line: Line;
   date: RawDate;
   valueDate?: RawDate;
-  descParts: string[];
+  /** Label fragments with their vertical position (sorted before joining). */
+  descParts: { y: number; text: string }[];
   descX0?: number;
   lastY: number;
   lastPage: number;
@@ -138,7 +139,8 @@ function nearestIndex(centers: number[], v: number) {
 }
 
 /** Joins wrapped label lines; a line ending with "-" or "/" was cut inside a word or reference. */
-function joinLabel(parts: string[]): string {
+function joinLabel(fragments: { y: number; text: string }[]): string {
+  const parts = [...fragments].sort((a, b) => a.y - b.y).map((f) => f.text);
   let out = "";
   for (const p of parts) {
     if (!out) out = p;
@@ -150,14 +152,22 @@ function joinLabel(parts: string[]): string {
 
 function detectPeriod(text: string, order: DateOrder): { start?: string; end?: string } {
   const n = normaliseText(text);
-  // "du 01/08/2026 au 31/08/2026", "période du ... au ...", "from ... to ..."
+  // "du 01/08/2026 au 31/08/2026", "période du ... au ...", "from ... to ...", also 2-digit years.
   const m = /(?:du|periode du|period|from|statement period|releve du)\s*:?\s*(.{6,22}?)\s+(?:au|to|-|–)\s+(.{6,22}?)(?:\s|$|,|\))/.exec(n);
   if (m) {
-    const a = findFullDates(m[1], order)[0];
-    const b = findFullDates(m[2], order)[0];
+    const full = (t: string) => findFullDates(t, order)[0] ?? shortYearDate(t, order);
+    const a = full(m[1]);
+    const b = full(m[2]);
     if (a && b) return a <= b ? { start: a, end: b } : { start: b, end: a };
   }
   return {};
+}
+
+function shortYearDate(text: string, order: DateOrder): string | undefined {
+  const m = /(\d{1,2})[/.\-](\d{1,2})[/.\-](\d{2})(?!\d)/.exec(text);
+  if (!m) return undefined;
+  const raw = parseRawDate(m[0]);
+  return raw ? (resolveDate(raw, order) ?? undefined) : undefined;
 }
 
 export function parseStatement(pages: PageText[], fileName = "releve.pdf"): ParsedStatement {
@@ -180,7 +190,11 @@ export function parseStatement(pages: PageText[], fileName = "releve.pdf"): Pars
     kind,
   });
 
-  if (pageCount === 0 || textChars === 0) return empty(pageCount === 0 ? "empty" : "scanned");
+  if (pageCount === 0) return empty("empty");
+  if (textChars === 0) {
+    warnings.push("Aucun texte lisible : ce PDF est vide ou il s'agit d'une image (document scanné).");
+    return empty("scanned");
+  }
   if (textChars < 40 * pageCount) {
     warnings.push("Très peu de texte détecté : ce PDF ressemble à un document scanné (image).");
     return empty("scanned");
@@ -189,18 +203,24 @@ export function parseStatement(pages: PageText[], fileName = "releve.pdf"): Pars
   // Locale detection from all amounts in the document.
   let commaCount = 0;
   let dotCount = 0;
+  const amountCellTexts: string[] = [];
   for (const l of lines)
     for (const c of l.cells) {
       const a = parseAmount(c.text);
+      if (a) amountCellTexts.push(c.text);
       if (a?.decimal === ",") commaCount++;
       else if (a) dotCount++;
     }
   const decimalSeparator: "," | "." = dotCount > commaCount ? "." : ",";
-  const currency = detectCurrency(allText);
   const firstPageText = lines
     .filter((l) => l.page === 1)
     .map((l) => l.text)
     .join("\n");
+  const balanceText = lines
+    .filter((l) => /\bsolde\b|\bbalance\b|\bdevise\b|\bcurrency\b|\bcompte en\b|\baccount\b/i.test(normaliseText(l.text)))
+    .map((l) => l.text)
+    .join("\n");
+  const currency = detectCurrency(allText, `${amountCellTexts.join(" ")}\n${balanceText}`);
   const bank = detectBank(firstPageText) ?? detectBank(allText);
 
   // Date order from the leading dates of every line.
@@ -219,13 +239,17 @@ export function parseStatement(pages: PageText[], fileName = "releve.pdf"): Pars
 
   const pageWidth = new Map(pages.map((p) => [p.page, p.width]));
 
-  // Pass 1: find headers, anchors (dated rows) and balance lines.
+  // Pass 1: find headers, anchors (dated rows), label continuations and balance lines.
   let header: HeaderCol[] = [];
   const headerByPage = new Map<number, HeaderCol[]>();
   const anchors: Anchor[] = [];
+  const continuations: { anchor: Anchor; line: Line; text: string }[] = [];
   const balanceLines: { line: Line; kind: "opening" | "closing" | "generic"; beforeFirstAnchor: boolean }[] = [];
   const totalLines: Line[] = [];
   let current: Anchor | undefined;
+  // Text lines seen just before a dated row (possible first half of a vertically centred label).
+  let orphans: Line[] = [];
+  const orphanLinks: { anchor: Anchor; line: Line }[] = [];
 
   for (const line of lines) {
     const width = pageWidth.get(line.page) ?? 600;
@@ -287,6 +311,15 @@ export function parseStatement(pages: PageText[], fileName = "releve.pdf"): Pars
         if (d) continue;
         descCells.push(c);
       }
+      // Plain-text statements may put label and amounts in one run: take trailing amounts.
+      if (!amounts.length && descCells.length) {
+        const last = descCells[descCells.length - 1];
+        const trailing = trailingAmounts(last);
+        if (trailing) {
+          amounts.push(...trailing.amounts);
+          last.text = trailing.rest;
+        }
+      }
       const desc = descCells
         .map((c) => c.text)
         .join(" ")
@@ -299,21 +332,36 @@ export function parseStatement(pages: PageText[], fileName = "releve.pdf"): Pars
         line,
         date: ld.date,
         valueDate,
-        descParts: desc ? [desc] : [],
+        descParts: desc ? [{ y: line.y, text: desc }] : [],
         descX0: descCells[0]?.x0,
         lastY: line.y,
         lastPage: line.page,
         amounts,
       };
+      // Walk up the chain of label lines stacked right above this row.
+      let below = line.y;
+      for (let i = orphans.length - 1; i >= 0; i--) {
+        const o = orphans[i];
+        const aligned = current.descX0 === undefined || Math.abs(o.cells[0].x0 - current.descX0) < o.height * 3;
+        if (o.page !== line.page || below - o.y <= 0 || below - o.y > line.height * 1.6 || !aligned) break;
+        orphanLinks.push({ anchor: current, line: o });
+        below = o.y;
+      }
+      orphans = [];
       anchors.push(current);
       continue;
     }
 
-    // Undated line: continuation of the previous label, or a same-day operation.
-    if (!current) continue;
+    // Undated line: continuation of a label, or a same-day operation.
+    if (!current) {
+      if (!amountCells(line, 0).length) orphans = [...orphans.filter((o) => o.page === line.page), line].slice(-8);
+      continue;
+    }
     const gap = line.page === current.lastPage ? line.y - current.lastY : Infinity;
     if (gap > line.height * 2.6) {
       current = undefined;
+      // Text at the top of a new page may continue the previous row or start the next one.
+      if (!amountCells(line, 0).length) orphans = [line];
       continue;
     }
     const amounts = amountCells(line, 0);
@@ -326,19 +374,19 @@ export function parseStatement(pages: PageText[], fileName = "releve.pdf"): Pars
     if (!aligned) continue;
 
     if (amounts.length === 0) {
-      if (text) current.descParts.push(text);
+      if (text) continuations.push({ anchor: current, line, text });
       current.lastY = line.y;
     } else if (current.amounts.length === 0) {
       // Label on the dated line, amount on the following line.
-      current.amounts.push(...amounts.map((a) => a));
-      if (text) current.descParts.push(text);
+      current.amounts.push(...amounts);
+      if (text) current.descParts.push({ y: line.y, text });
       current.lastY = line.y;
     } else if (text) {
       const inherited: Anchor = {
         line,
         date: current.date,
         valueDate: current.valueDate,
-        descParts: [text],
+        descParts: [{ y: line.y, text }],
         descX0: textCells[0]?.x0,
         lastY: line.y,
         lastPage: line.page,
@@ -348,6 +396,42 @@ export function parseStatement(pages: PageText[], fileName = "releve.pdf"): Pars
       anchors.push(inherited);
       current = inherited;
     }
+  }
+
+  // Attach label continuations. Normally a wrapped label continues below its dated row. When cells
+  // are vertically centred, the first half of a label sits just above its own dated row, so the
+  // closest row wins. Evidence of centring: label text between the column header and the very first
+  // dated row of the document, or most dated rows carrying no label on their own line.
+  const anchorsWithoutOwnLabel = anchors.filter((a) => !a.descParts.some((d) => d.y === a.line.y)).length;
+  const centered = orphanLinks.some((o) => o.anchor === anchors[0]) || anchorsWithoutOwnLabel > anchors.length / 2;
+  for (const c of continuations) {
+    const idx = anchors.indexOf(c.anchor);
+    const next = anchors[idx + 1];
+    const dPrev = c.line.y - c.anchor.line.y;
+    const dNext = next && next.line.page === c.line.page ? next.line.y - c.line.y : Infinity;
+    const target = centered && dNext < dPrev * 0.8 ? next : c.anchor;
+    target.descParts.push({ y: c.line.y, text: c.text });
+  }
+
+  // Label lines stacked above a row: in centred layouts they belong to that row, except at the top of a
+  // page where the first lines usually finish the last row of the previous page (a centred label has as
+  // many lines above its date as below it).
+  const orphansByAnchor = new Map<Anchor, Line[]>();
+  for (const o of orphanLinks) orphansByAnchor.set(o.anchor, [...(orphansByAnchor.get(o.anchor) ?? []), o.line]);
+  for (const [anchor, ls] of orphansByAnchor) {
+    ls.sort((a, b) => a.y - b.y);
+    const idx = anchors.indexOf(anchor);
+    const prev = anchors[idx - 1];
+    let own = centered ? ls.length : 0;
+    if (centered && prev && prev.line.page !== anchor.line.page) {
+      const below = anchor.descParts.filter((d) => d.y > anchor.line.y).length;
+      own = Math.min(ls.length, Math.max(below, 1));
+    }
+    ls.forEach((l, i) => {
+      const mine = i >= ls.length - own;
+      const target = mine ? anchor : prev;
+      target?.descParts.push({ y: mine ? l.y : Number.MAX_SAFE_INTEGER - 1000 + l.y, text: l.text });
+    });
   }
 
   // Anchors without any amount are not operations.
@@ -371,16 +455,18 @@ export function parseStatement(pages: PageText[], fileName = "releve.pdf"): Pars
   const useLeft = byLeft.length < byRight.length;
   const centers = useLeft ? byLeft : byRight;
   const key = (a: PositionedAmount) => (useLeft ? a.x0 : a.x1);
+  const clusterOf = (a: PositionedAmount) => nearestIndex(centers, key(a));
 
-  const roleOfCluster: AmountRole[] = new Array(centers.length).fill("amount");
   const headerAmountCols = (header.length ? header : ([...headerByPage.values()][0] ?? [])).filter((c) =>
     ["debit", "credit", "amount", "balance"].includes(c.role),
   );
 
+  const primary: AmountRole[] = new Array(centers.length).fill("amount");
+  const candidates: AmountRole[][] = [];
   if (headerAmountCols.length) {
     const hc = [...headerAmountCols].sort((a, b) => a.x0 - b.x0);
     if (hc.length === centers.length) {
-      hc.forEach((c, i) => (roleOfCluster[i] = c.role as AmountRole));
+      hc.forEach((c, i) => (primary[i] = c.role as AmountRole));
     } else {
       centers.forEach((cx, i) => {
         let best = hc[0];
@@ -392,29 +478,57 @@ export function parseStatement(pages: PageText[], fileName = "releve.pdf"): Pars
             best = c;
           }
         }
-        roleOfCluster[i] = best.role as AmountRole;
+        primary[i] = best.role as AmountRole;
       });
+    }
+    candidates.push(primary);
+    // Alternatives: every left-to-right assignment of the amount columns to the header roles
+    // (header alignment does not always match amount alignment). The balance check decides.
+    for (const combo of orderedCombinations(
+      hc.map((c) => c.role as AmountRole),
+      centers.length,
+    )) {
+      if (combo.join() !== primary.join()) candidates.push(combo);
     }
   } else {
     warnings.push("Pas d'en-tête de colonnes reconnu : les colonnes ont été déduites de la mise en page.");
     const fill = centers.map(() => 0);
     for (const r of rows) {
-      const seen = new Set(r.amounts.map((a) => nearestIndex(centers, key(a))));
+      const seen = new Set(r.amounts.map((a) => clusterOf(a)));
       seen.forEach((i) => fill[i]++);
     }
     const k = centers.length;
     let remaining = [...Array(k).keys()];
     if (k >= 2 && fill[k - 1] >= rows.length * 0.85) {
-      roleOfCluster[k - 1] = "balance";
+      primary[k - 1] = "balance";
       remaining = remaining.slice(0, -1);
     }
     if (remaining.length >= 2) {
       const [d, c] = remaining.slice(-2);
-      roleOfCluster[d] = "debit";
-      roleOfCluster[c] = "credit";
-      remaining.slice(0, -2).forEach((i) => (roleOfCluster[i] = "amount"));
+      primary[d] = "debit";
+      primary[c] = "credit";
+      remaining.slice(0, -2).forEach((i) => (primary[i] = "amount"));
     } else if (remaining.length === 1) {
-      roleOfCluster[remaining[0]] = "amount";
+      primary[remaining[0]] = "amount";
+    }
+    candidates.push(primary);
+    if (primary.includes("debit")) candidates.push(primary.map((r) => (r === "debit" ? "credit" : r === "credit" ? "debit" : r)));
+  }
+
+  const evaluate = (roles: AmountRole[]) =>
+    buildResult({ rows, roles, clusterOf, centers, key, dateOrder, period, balanceLines, totalLines });
+
+  let chosen = evaluate(candidates[0]);
+  let chosenRoles = candidates[0];
+  if (chosen.reconciliation.status !== "verified") {
+    for (const roles of candidates.slice(1, 25)) {
+      const alt = evaluate(roles);
+      if (alt.reconciliation.status === "verified") {
+        chosen = alt;
+        chosenRoles = roles;
+        warnings.push("Les colonnes de montants ont été attribuées d'après la vérification du solde.");
+        break;
+      }
     }
   }
 
@@ -422,25 +536,112 @@ export function parseStatement(pages: PageText[], fileName = "releve.pdf"): Pars
   if (rows.some((r) => r.valueDate)) columns.push("valueDate");
   columns.push("description");
   for (const r of ["debit", "credit", "amount", "balance"] as AmountRole[]) {
-    if (roleOfCluster.includes(r)) columns.push(r);
+    if (chosenRoles.includes(r)) columns.push(r);
   }
 
-  // Pass 3: build transactions.
-  let guessed = 0;
+  warnings.push(...chosen.warnings);
+  const undated = chosen.transactions.filter((t) => !t.date).length;
+  if (undated) warnings.push(`${undated} date(s) n'ont pas pu être complétées (année manquante).`);
+
+  return {
+    fileName,
+    pageCount,
+    bankId: bank?.id,
+    bankName: bank?.name,
+    currency,
+    decimalSeparator,
+    dateOrder,
+    periodStart: period.start,
+    periodEnd: period.end,
+    openingBalance: chosen.opening,
+    closingBalance: chosen.closing,
+    printedTotals: chosen.printedTotals,
+    transactions: chosen.transactions,
+    columns,
+    reconciliation: chosen.reconciliation,
+    warnings,
+    kind: "text",
+  };
+}
+
+/** All ways to pick `k` roles from `roles` keeping their left-to-right order. */
+function orderedCombinations<T>(roles: T[], k: number): T[][] {
+  const out: T[][] = [];
+  const rec = (start: number, acc: T[]) => {
+    if (acc.length === k) {
+      out.push([...acc]);
+      return;
+    }
+    for (let i = start; i < roles.length; i++) rec(i + 1, [...acc, roles[i]]);
+  };
+  if (k > 0 && k <= roles.length) rec(0, []);
+  return out;
+}
+
+/** Extracts amounts at the very end of a text cell ("VIR SALAIRE   2 000,00"). */
+function trailingAmounts(cell: Cell): { amounts: PositionedAmount[]; rest: string } | null {
+  const found = scanAmounts(cell.text);
+  if (!found.length) return null;
+  const lastFound = found[found.length - 1];
+  if (lastFound.index + lastFound.text.length < cell.text.trimEnd().length) return null;
+  // Keep a chain of amounts that ends the string (e.g. "... 45,10 1 234,56").
+  const chain: typeof found = [lastFound];
+  for (let i = found.length - 2; i >= 0; i--) {
+    const between = cell.text.slice(found[i].index + found[i].text.length, chain[0].index);
+    if (between.trim()) break;
+    chain.unshift(found[i]);
+  }
+  const rest = cell.text.slice(0, chain[0].index).trim();
+  if (!rest) return null;
+  const len = Math.max(1, cell.text.length);
+  const w = cell.x1 - cell.x0;
+  return {
+    rest,
+    amounts: chain.map((a) => ({
+      ...a,
+      x0: cell.x0 + (a.index / len) * w,
+      x1: cell.x0 + ((a.index + a.text.length) / len) * w,
+    })),
+  };
+}
+
+interface BuildInput {
+  rows: Anchor[];
+  roles: AmountRole[];
+  clusterOf: (a: PositionedAmount) => number;
+  centers: number[];
+  key: (a: PositionedAmount) => number;
+  dateOrder: DateOrder;
+  period: { start?: string; end?: string };
+  balanceLines: { line: Line; kind: "opening" | "closing" | "generic"; beforeFirstAnchor: boolean }[];
+  totalLines: Line[];
+}
+
+/** Pass 3: transactions, balances, running-balance checks, printed totals and reconciliation for one column model. */
+function buildResult({ rows, roles, clusterOf, centers, key, dateOrder, period, balanceLines, totalLines }: BuildInput) {
+  const warnings: string[] = [];
+  // In a single signed "amount" column, if some amounts carry an explicit minus (or parentheses),
+  // unsigned ones are credits.
+  const clusterHasNegative = centers.map(() => false);
+  for (const r of rows) for (const a of r.amounts) if (a.sign === -1) clusterHasNegative[clusterOf(a)] = true;
+
   const transactions: Transaction[] = rows.map((r, idx) => {
     let debit: number | undefined;
     let credit: number | undefined;
     let amount: number | undefined;
     let amountSign: -1 | 0 | 1 = 0;
+    let amountCluster = -1;
     let balance: number | undefined;
     for (const a of r.amounts) {
-      const role = roleOfCluster[nearestIndex(centers, key(a))];
+      const ci = clusterOf(a);
+      const role = roles[ci];
       if (role === "debit") debit = (debit ?? 0) + a.cents;
       else if (role === "credit") credit = (credit ?? 0) + a.cents;
       else if (role === "balance") balance = a.sign === -1 ? -a.cents : a.cents;
       else {
         amount = a.cents;
         amountSign = a.sign;
+        amountCluster = ci;
       }
     }
     let signed = 0;
@@ -449,14 +650,14 @@ export function parseStatement(pages: PageText[], fileName = "releve.pdf"): Pars
       signed = (credit ?? 0) - (debit ?? 0);
     } else if (amount !== undefined) {
       if (amountSign !== 0) signed = amountSign * amount;
+      else if (clusterHasNegative[amountCluster]) signed = amount;
       else {
         signed = -amount;
         signGuessed = true;
       }
     }
-    const period2 = period;
-    const date = resolveDate(r.date, dateOrder, period2) ?? "";
-    const valueDate = r.valueDate ? (resolveDate(r.valueDate, dateOrder, period2) ?? undefined) : undefined;
+    const date = resolveDate(r.date, dateOrder, period) ?? "";
+    const valueDate = r.valueDate ? (resolveDate(r.valueDate, dateOrder, period) ?? undefined) : undefined;
     return {
       id: `t${idx + 1}`,
       date,
@@ -469,7 +670,6 @@ export function parseStatement(pages: PageText[], fileName = "releve.pdf"): Pars
     };
   });
 
-  // Balances.
   const balanceAmount = (line: Line): number | undefined => {
     const amounts = amountCells(line, 0);
     const scanned = amounts.length ? amounts : scanAmounts(line.text).map((a) => ({ ...a, x0: 0, x1: 0 }));
@@ -479,9 +679,8 @@ export function parseStatement(pages: PageText[], fileName = "releve.pdf"): Pars
     let sign = a.sign === -1 ? -1 : 1;
     if (NEGATIVE_BALANCE_RE.test(n)) sign = -1;
     if (a.x1 > 0 && amounts.length) {
-      const role = roleOfCluster[nearestIndex(centers, key(a as PositionedAmount))];
-      if (role === "debit" && Math.abs(key(a as PositionedAmount) - centers[nearestIndex(centers, key(a as PositionedAmount))]) < 30)
-        sign = -1;
+      const ci = clusterOf(a as PositionedAmount);
+      if (roles[ci] === "debit" && Math.abs(key(a as PositionedAmount) - centers[ci]) < 30) sign = -1;
     }
     return sign * a.cents;
   };
@@ -508,8 +707,7 @@ export function parseStatement(pages: PageText[], fileName = "releve.pdf"): Pars
   }
 
   // Row-level running balance → infer unknown signs and check rows.
-  const hasBalances = transactions.some((t) => t.balance !== undefined);
-  if (hasBalances) {
+  if (transactions.some((t) => t.balance !== undefined)) {
     let prev = opening;
     for (const t of transactions) {
       if (t.balance === undefined) {
@@ -526,7 +724,6 @@ export function parseStatement(pages: PageText[], fileName = "releve.pdf"): Pars
       }
       prev = t.balance;
     }
-    // Derive missing opening from the first printed running balance.
     const firstWithBalance = transactions.find((t) => t.balance !== undefined);
     if (opening === undefined && firstWithBalance && firstWithBalance === transactions[0] && transactions[0].balance !== undefined) {
       openingDerived = true;
@@ -538,6 +735,7 @@ export function parseStatement(pages: PageText[], fileName = "releve.pdf"): Pars
   }
 
   // Remaining guessed signs: use label keywords.
+  let guessed = 0;
   for (const t of transactions) {
     if (!t.signGuessed) continue;
     const n = normaliseText(t.description);
@@ -552,55 +750,43 @@ export function parseStatement(pages: PageText[], fileName = "releve.pdf"): Pars
     warnings.push("Aucun solde de départ imprimé : il a été déduit du solde de la première opération.");
   }
 
-  // Printed totals ("Total des opérations 1 234,56 2 345,67").
-  let printedTotals: ParsedStatement["printedTotals"];
+  // Printed totals ("Total des opérations ..."). Statements may print one per page (page subtotals)
+  // and/or a grand total: use the reading that matches the computed totals, else the sum of page totals.
+  const totalsByLine: { debits?: number; credits?: number }[] = [];
   for (const l of totalLines) {
     const amounts = amountCells(l, 0);
     if (!amounts.length) continue;
     const t: { debits?: number; credits?: number } = {};
     for (const a of amounts) {
-      const role = roleOfCluster[nearestIndex(centers, key(a))];
+      const role = roles[clusterOf(a)];
       if (role === "debit") t.debits = a.cents;
       if (role === "credit") t.credits = a.cents;
     }
-    if (t.debits !== undefined || t.credits !== undefined) printedTotals = t;
+    if (t.debits !== undefined || t.credits !== undefined) totalsByLine.push(t);
   }
-
-  let rec = reconcile(transactions, opening, closing, printedTotals);
-
-  // If debit/credit columns were inferred (no header), a swap may be the right reading.
-  if (rec.status === "mismatch" && !headerAmountCols.length && roleOfCluster.includes("debit")) {
-    const swapped = transactions.map((t) => ({ ...t, amount: -t.amount }));
-    const rec2 = reconcile(swapped, opening, closing, printedTotals);
-    if (rec2.status === "verified") {
-      transactions.splice(0, transactions.length, ...swapped);
-      rec = rec2;
-      warnings.push("Les colonnes débit et crédit ont été inversées d'après la vérification du solde.");
+  let printedTotals: ParsedStatement["printedTotals"];
+  if (totalsByLine.length) {
+    let computedDebits = 0;
+    let computedCredits = 0;
+    for (const t of transactions) {
+      if (t.amount >= 0) computedCredits += t.amount;
+      else computedDebits -= t.amount;
     }
+    const last = totalsByLine[totalsByLine.length - 1];
+    const sum = totalsByLine.reduce(
+      (acc, t) => ({
+        debits: t.debits !== undefined ? (acc.debits ?? 0) + t.debits : acc.debits,
+        credits: t.credits !== undefined ? (acc.credits ?? 0) + t.credits : acc.credits,
+      }),
+      {} as { debits?: number; credits?: number },
+    );
+    const matches = (t: { debits?: number; credits?: number }) =>
+      (t.debits === undefined || t.debits === computedDebits) && (t.credits === undefined || t.credits === computedCredits);
+    printedTotals = matches(last) ? last : matches(sum) ? sum : totalsByLine.length > 1 ? sum : last;
   }
 
+  const reconciliation = reconcile(transactions, opening, closing, printedTotals);
   if (opening === undefined && !openingDerived) warnings.push("Solde de départ introuvable sur le relevé.");
   if (closing === undefined) warnings.push("Solde final introuvable sur le relevé.");
-  const undated = transactions.filter((t) => !t.date).length;
-  if (undated) warnings.push(`${undated} date(s) n'ont pas pu être complétées (année manquante).`);
-
-  return {
-    fileName,
-    pageCount,
-    bankId: bank?.id,
-    bankName: bank?.name,
-    currency,
-    decimalSeparator,
-    dateOrder,
-    periodStart: period.start,
-    periodEnd: period.end,
-    openingBalance: opening,
-    closingBalance: closing,
-    printedTotals,
-    transactions,
-    columns,
-    reconciliation: rec,
-    warnings,
-    kind: "text",
-  };
+  return { transactions, opening, closing, printedTotals, reconciliation, warnings };
 }

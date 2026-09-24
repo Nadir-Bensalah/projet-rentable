@@ -78,12 +78,17 @@ export function scanAmounts(text: string): ScannedAmount[] {
   return out;
 }
 
-export function detectCurrency(text: string): string {
-  const counts: Record<string, number> = { EUR: 0, USD: 0, GBP: 0, CHF: 0 };
-  counts.EUR += (text.match(/€|\bEUR\b|\beuros?\b/gi) || []).length;
-  counts.USD += (text.match(/\$|\bUSD\b/g) || []).length;
-  counts.GBP += (text.match(/£|\bGBP\b/g) || []).length;
-  counts.CHF += (text.match(/\bCHF\b/g) || []).length;
+/**
+ * Currency of the account. Markers next to amounts and on balance/header lines are strong
+ * signals; currencies quoted inside operation labels (card payments abroad) are not.
+ */
+export function detectCurrency(text: string, strongText?: string): string {
+  if (strongText) {
+    const strong = detectCurrencyCounts(strongText);
+    const best = Object.entries(strong).sort((a, b) => b[1] - a[1])[0];
+    if (best && best[1] > 0) return best[0];
+  }
+  const counts = detectCurrencyCounts(text);
   let best = "EUR";
   let max = 0;
   for (const [k, v] of Object.entries(counts)) {
@@ -93,6 +98,15 @@ export function detectCurrency(text: string): string {
     }
   }
   return best;
+}
+
+function detectCurrencyCounts(text: string): Record<string, number> {
+  return {
+    EUR: (text.match(/€|\bEUR\b|\beuros?\b/gi) || []).length,
+    USD: (text.match(/\$|\bUSD\b/g) || []).length,
+    GBP: (text.match(/£|\bGBP\b/g) || []).length,
+    CHF: (text.match(/\bCHF\b/g) || []).length,
+  };
 }
 
 /** Formats cents for display, e.g. 123456 -> "1 234,56" (fr) or "1,234.56" (en). */

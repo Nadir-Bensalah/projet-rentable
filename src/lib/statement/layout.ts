@@ -36,6 +36,7 @@ export function buildLines(pages: PageText[]): Line[] {
         }
       }
       for (const c of cells) c.text = c.text.replace(/\s+/g, " ").trim();
+      mergeSplitThousands(cells, Math.max(...row.map((it) => it.height)));
       const nonEmpty = cells.filter((c) => c.text.length > 0);
       if (!nonEmpty.length) continue;
       const y = row.reduce((s, it) => s + it.y, 0) / row.length;
@@ -56,4 +57,24 @@ export function buildLines(pages: PageText[]): Line[] {
 /** Lower-case, accent-free, single-spaced text for keyword matching. */
 export function normaliseText(s: string) {
   return s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/\s+/g, " ").trim();
+}
+
+/**
+ * Some PDFs (monospaced text statements, justified columns) emit "2 000,00" as two runs,
+ * "2" and "000,00", far enough apart to become separate cells. Re-join them.
+ */
+export function mergeSplitThousands(cells: Cell[], height: number) {
+  for (let i = cells.length - 1; i > 0; i--) {
+    const right = cells[i];
+    const left = cells[i - 1];
+    if (!/^\d{3}(?:[ .\u00a0\u202f]\d{3})*[,.]\d{2}\)?(?:\s?(?:€|EUR|CR|DB|-))?$/.test(right.text)) continue;
+    const m = /(^|[\s(+\-−–])(\d{1,3})$/.exec(left.text);
+    if (!m) continue;
+    if (right.x0 - left.x1 > height * 1.6) continue;
+    const digits = (m[1] === "(" || m[1] === "-" || m[1] === "−" || m[1] === "–" || m[1] === "+" ? m[1] : "") + m[2];
+    right.text = `${digits} ${right.text}`;
+    right.x0 = left.x1 - (left.x1 - left.x0) * (digits.length / Math.max(1, left.text.length));
+    left.text = left.text.slice(0, left.text.length - digits.length).trim();
+    if (!left.text) cells.splice(i - 1, 1);
+  }
 }

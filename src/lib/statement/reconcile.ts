@@ -37,8 +37,10 @@ export function reconcile(
     }
     return { status: "unverifiable", opening, closing, totalCredits, totalDebits };
   }
+  // The printed balances are the authority; printed totals are only used when balances are absent
+  // (page subtotals are easy to misread, balances are not).
   const difference = closing - (opening + totalCredits - totalDebits);
-  const ok = difference === 0 && (printedTotals ? printedTotals.match : true);
+  const ok = difference === 0;
   return {
     status: ok ? "verified" : "mismatch",
     opening,
