@@ -181,6 +181,73 @@ Groupe Micholet (rachat Sermeca);besoin;Rachat daté fin 2025 (non confirmé 202
 Saprena (rachat Delta 86);score;"Entreprise adaptée de 500 salariés, hors cible 30-250 ; activité de maintenance industrielle";CC8
 Groupe Lignage (Nice, Julien Bounicaud);email;"Aucun email ni téléphone trouvé ; opposition à la prospection signalée sur la fiche entreprise";CC8
 ATESIS (reprise par David Bartoletti avec FÉTIS Group);contrôle qualité;"QA : email issu d'un résumé citant plusieurs pages ; page exacte non confirmée";CC8
+Younight Hospitality (SAS Younight by Vicartem, Rennes);téléphone;"Seul numéro publié = mobile 06 (probablement personnel) ; rachat Les Brises daté 2025 ; société de gestion hôtelière (APE 7311Z)";DD1
+Dunamis Hospitality (Rennes, SIREN 953380797);téléphone;"Aucun téléphone professionnel trouvé ; email contact.hotels@groupe-dunamis.com vu seulement dans un contexte recrutement/source incertaine";DD1
+Groupe Sebban (Aix-en-Provence, SIREN 450795935);email;"Aucun email ni téléphone publié trouvé ; profil foncier/immobilier (projet hôtel lifestyle sous enseigne internationale)";DD1
+Ben Touch Groupe (Château du Portereau, Château de Noirieux, L'Attilio);besoin;"Sites édités par une entité digitale interne (Ben Touch Digital) ; seul email trouvé = réservation d'un établissement (reservation-briollay@lattilio.com)";DD1
+Otelium (Paris, 5 hôtels, rachat Relais Saint-Éloi Tours fév. 2026);email;"Aucun email ni téléphone publié trouvé dans les résultats ; plateforme d'investissement adossée à Alpera Partners";DD1
+Best Mont-Blanc (Groupe Best Mont-Blanc);contrôle qualité;"QA : deux standards téléphoniques contradictoires ; date d'article non lue";DD1
+Groupe Charlemagne (librairies-papeteries, Toulon);besoin;"200 salariés, e-commerce déjà en place probable ; rachat du Bateau Blanc contesté par la SCIC, pas de besoin observable";DD2
+Achat Solutions (Grabels, 34) — rachat Spock Gestion;score;article antérieur à mars 2026 (hors fenêtre), non poursuivi;DD2
+Comtat & Allardet-Espace Aubade (Nîmes) — rachat Moulis;score;article antérieur à 2026, hors fenêtre;DD2
+Roussillhotel;doublon;déjà dans les exclusions;DD2
+Groupe Clareton (Transports HTA);doublon;déjà dans les exclusions;DD2
+La Table de Charlotte (FS Holding);doublon;déjà dans les exclusions;DD2
+Groupe Ducournau (Daziano);doublon;déjà dans les exclusions;DD2
+Resma (Gallargues-le-Montueux) — rachat Palkit;score;rachat 2024, hors fenêtre;DD2
+Medivar (Hyères) racheté par Permobil;privée;cible rachetée par un groupe européen, pas l'acquéreur PME;DD2
+LocaCuisines (Locaconcept, groupe ALVAD);contrôle qualité;QA : page source de l'email incertaine (résumé multi-pages);DD2
+Groupe Gonzales (Estrablin, 38);score;470 salariés (hors cible 20-300) et rachat de PSI effectif en janvier 2026, hors fenêtre mars-septembre;DD3
+Groupe M (Drôme, rachat DPI mai 2026);score;Ensemblier industriel de plus de 300 M€ de CA : hors cible PME 20-300 salariés;DD3
+Altivio / Groupe Stebat (Albertville, 73);email;"Seul email trouvé = adresse nominative de la responsable RH utilisée pour le recrutement (inadaptée) ; aucun contact@ publié. Tél 04 79 10 42 15 trouvé ; signal : nouveau groupe Altivio (160 salariés) créé en 2026 après rachat Stebat (oct. 2025)";DD3
+Friendly Hotels (Friendly Hotel Collection);contrôle qualité;QA : seule adresse = réservations d'un hôtel (canal client), inadaptée à la prise de contact commerciale;DD3
+Trenois (Wasquehal, rachat Devel);privée;Hors cible : environ 800 salariés, au-delà de 300;DD4
+Positive (Nord, rachat Iconosquare);privée;Agence et éditeur tech (concurrent), 400 salariés;DD4
+Groupe M (rachat DPI, Feuchy 62);privée;Acquéreur drômois, plus de 300 M€ de CA, hors zone et hors taille;DD4
+Leroy TP (Escœuilles, rachat Sodeka);besoin;Rachat de septembre 2024, hors fenêtre mars-septembre 2026;DD4
+Goubault Imprimeur (rachat ValPG);privée;Loire-Atlantique, hors des régions ciblées;DD4
+Groupe Blondel (rachat Sobotram);besoin;Opération de 2023 et plus de 3 000 salariés;DD4
+Minilions (rachat Les Petits Poneys, Gouzeaucourt);privée;"Siège à Paris 15e, hors zone ; date de l'opération non vérifiée";DD4
+Sofrilog (rachat Trace & Go);besoin;Opération probablement antérieure à mars 2026 (non vérifiée) et taille supérieure à la cible;DD4
+Baker Tilly (rachat Corex, Saint-André-lez-Lille);privée;Grand réseau national (2 200 collaborateurs);DD4
+Unipres (Biache-Saint-Vaast);privée;Filiale d'un groupe japonais, hors cible PME;DD4
+Constructel (reprise de Marron TP);besoin;Acquéreur drômois, opération de février 2026 hors fenêtre;DD4
+Palm (reprise de 3 usines International Paper en Normandie);privée;Grand groupe allemand;DD4
+Starwash;contrôle qualité;score < 70;DD4
+Groupe Guillerm (Plouvorn, rachat Maisons Bois GLV);score;Rachat de GLV daté d'avril 2025 : hors fenêtre mars-sept 2026, urgence insuffisante;DD5
+Sill Entreprises (rachat Puffy's);privée;1 700 salariés, hors cible PME 20-300;DD5
+HomeServe France (rachat Scotti, Prigent Abiven, Élorn Gaz);privée;"Acquéreur grand groupe lyonnais hors cible ; cibles rachetées non acquéreuses";DD5
+Scania France / DIAN (Nantes);privée;Grand groupe constructeur, hors cible PME;DD5
+A2Com (Pacé, rachat Alor);privée;Éditeur/intégrateur IT = concurrent, et rachat daté 2025;DD5
+Verdoso / Siradel (Rennes);privée;Family office acquéreur et cible éditeur logiciel (tech) — hors cible;DD5
+Hunyvers / Caravanes Cassegrain (Chinon);privée;Hunyvers groupe coté (>300 salariés) et négociation datée 2025;DD5
+Groupe Ducournau (rachat RTMD, Tours);doublon;Groupe Ducournau déjà dans les exclusions;DD5
+Transports Courcelle (Toulouse, rachat Transports JPC, agence Pau);privée;"Siège en Occitanie, hors régions ciblées ; agence Pau ouverte hors signal acquéreur régional";DD5
+Mecadaq (rachats Lopez-Paul, Tarnos);score;"Rachat daté de janvier 2026, hors fenêtre ; sous-traitance aéronautique";DD5
+PLC Cosmetic & Nutraceutic (Ille-et-Vilaine, rachat Floralpina);email;Aucun email/mentions légales trouvés dans les résultats;DD5
+Carrières de l'Ouest (rachat Béton Tavano);score;Rachat non daté 2026 (article ancien);DD5
+Sofrilog (rachat Trace & Go);privée;1 700 salariés, siège Normandie, article novembre 2025;DD5
+SAB France (rachat FBB Automation, Poitiers);besoin;"Automatisme industriel à profil technique, aucun besoin web documenté ; non approfondi faute de budget";DD5
+ATESSIA Vigilances (AnticipSanté);score;Acquisition effective au 1er janvier 2025, hors fenêtre mars-septembre 2026;DD6
+IDEA Ile-de-France (La Francilienne d'Expertise);preuves;"Date de l'opération non vérifiée ; non approfondi faute de budget";DD6
+Sepur (reprise propreté urbaine IDF de Samsic);privée;Grand groupe (plusieurs milliers de salariés), hors cible PME 20-300;DD6
+CFN (fusion CFN / Abyss / AB Entretien);score;"Fusion au 1er janvier 2026, hors fenêtre mars-septembre 2026 ; coordonnées non recherchées";DD6
+A.M.P.I (Agence Maintenance Prestation Industrielle);besoin;Groupe basé dans la Marne (51, Grand Est), hors Île-de-France;DD6
+Olifan Group;besoin;"Siège Aix-en-Provence (hors Île-de-France), acquisitions 2025 ; groupe sous LBO Seven2";DD6
+La Route (reprise Fredon Logistique International);besoin;Transporteur de Gironde, hors Île-de-France;DD6
+Artemis Design & Build (rachat Clue Me);score;Rachat d'août 2023, hors fenêtre;DD6
+Brique House;besoin;Brasseur lillois, hors Île-de-France;DD6
+Batisanté (rachat Techmo Hygiène);privée;"Réseau national de taille importante, siège hors IDF ; non approfondi";DD6
+Cobalys;contrôle qualité;"QA : source de l'email mêlée à Corporama ; filiale d'un groupe coopératif de 1 200 salariés";DD6
+Groupe Prismeo (transport, Houplines, 59);email;"Deux recherches dédiées (mentions légales, @prismeo) : aucune adresse email publiée ; en outre ~1000 salariés/12 sites selon Hellowork, taille limite";DD7
+Brasserie Akerbeltz (Ascain, 64);besoin;Aucun signal 2026 : dernier investissement connu (800 k€, distillerie) en 2017;DD7
+Groupe Ogeu (eaux minérales);besoin;Aucun signal daté 2026 (rachats Luchon, Plancoët… anciens);DD7
+Campings Tikayan (Sud Est Investments, Agay/Le Muy, 83);score;Email ce@tikayan.fr et tél. 04 94 82 16 04 trouvés, site CE encore sous l'ancien nom (comites-entreprises-sudestvacances.fr), mais dernier rachat (16e camping) en mars 2024 : signal trop ancien;DD7
+ClicoChic (camping Les Bastets, Marsanne, 26);privée;Marque rattachée au groupe Capfun (dpo@capfun.com) : grand groupe;DD7
+Capfun / Sandaya / Yelloh! Village / Flower Campings;score;Grands groupes/chaînes HPA vus sur ot-campings.com, inaccessibles;DD7
+Groupe Seasonova;contrôle qualité;QA : source du téléphone incertaine (résumé multi-pages / page non vue);DD7
+Slow Village (Inspire Villages / Groupe Inspire);contrôle qualité;QA : source du téléphone incertaine (résumé multi-pages / page non vue);DD7
+La Trinitaine (Biscuiterie La Trinitaine);contrôle qualité;QA : source du téléphone incertaine (résumé multi-pages / page non vue);DD7
 Bureau Alpes Contrôles;score;DSI d'une trentaine de personnes, offre développeur web référencée janvier 2026 : fit et urgence faibles (<70);T01
 Primal (ex-Solem);score;"Fabricant IoT avec équipes de développement internes ; téléphone non trouvé ; fit faible";T01
 LIP Tertiaire;privée;Agence d'intérim/recrutement : l'offre est pour un client, pas un besoin propre;T01
@@ -389,6 +456,7 @@ Novastruct (ex-Kawneer, Vendargues);score;"400 salariés, hors cible 20-250 ; si
 Provence Rugby (SASP, Aix-en-Provence);score;Contacts OK (billetterie@provencerugby.com, 04 86 22 01 60) mais billetterie déjà migrée vers Ticketchainer (marque blanche), changement de président côté association seulement, aucun signal digital daté : score estimé 64;W05
 Valence Romans Drôme Rugby (SASP VRDR, Romans-sur-Isère);besoin;Contacts trouvés (boutique@vrdr.fr, 04 75 05 59 10) mais signal stade caduc : Koesio s'est retiré du projet de Koesio Stadium (communiqué 16/04/2025, budget passé de 44 à 76 M€), aucun signal digital 2025-2026 observé;W05
 Paris Basketball (Omar Sy co-propriétaire);score;"Club déjà très structuré et doté en outils digitaux, organisation difficilement accessible pour Capmedia ; non approfondi";W05
+Nissa Rugby (SAS Nissa Rugby, ex-Stade Niçois Rugby);contrôle qualité;QA : audit QA : téléphone contradictoire entre sources et décideur démissionnaire;W05
 Génération SAS (app GENERATION - Espace assuré);besoin;App notée 4,5/5 sur ~49 000 avis : pas de défaut significatif;W06
 La Bonne App (Bertrand Franchise);privée;Grand groupe (Groupe Bertrand), hors cible;W06
 Flunch;besoin;Grand réseau, un seul signalement forum non daté;W06
@@ -525,6 +593,7 @@ Inoku Manga Store;preuves;"Signal de lancement franchise daté ~2023, pas d'actu
 Jack's Burgers / La Brigade / Dom&Vie / Neoness / La Foir'Fouille;doublon;Déjà dans les exclusions;Y05
 Perene (groupe Fournier);privée;Filiale d'un grand groupe cuisiniste, hors cible jeune réseau;Y05
 Tout & Bon;besoin;Vient de moderniser son site e-commerce : besoin déjà couvert;Y05
+Your Personal Lab (YPL, enseigne DJ Lab);contrôle qualité;score < 70;Y05
 New Jump (Groupe 2TS, Langon, 33);besoin;8 parcs, ouverture Châtelineau août 2026 et coordonnées trouvées (contact@groupe-2ts.com, 05 33 90 01 18), mais app en marque blanche (com.trenicom.newjump) et aucun défaut documenté;Y06
 Vertical Art (salles d'escalade de bloc);score;Réseau ~12 salles, ouverture Auxerre nov. 2026, contact@vertical-art.fr / 01 75 21 38 59 trouvés, mais aucun besoin digital observé (pas d'app ni de défaut documenté) : score ~64;Y06
 UrbanSoccer / UrbanPadel (Soccer 5 France SAS);score;"Filiale Compagnie des Alpes (grand groupe, peu accessible) ; app MyUrban récemment refaite ; contacts trouvés mais score ~65";Y06
@@ -596,6 +665,7 @@ Groupe EJ (rachat Ets Hanny);preuves;"Date du rachat non confirmée 2026 ; non a
 Repair and Run (Louviers, 27);téléphone;"Email contact@repairandrun.com confirmé (mentions légales/CGV) mais aucun téléphone siège ni boutique en propre lisible dans les résumés ; le 02 32 62 03 05 évoqué n'a pas pu être rattaché à une source";Z07
 Ecova (pièces auto de réemploi, Elven/Vannes);email;Page contact eco-va.fr : téléphones des 7 sites mais uniquement un formulaire, aucun email lisible;Z07
 Gagao (levée LITA.co);email;Mentions légales introuvables (résultats sur homonymes Gago, Gageo...);Z07
+Kangourou Kids (tête de réseau : Kangourou Kids Développement);contrôle qualité;score < 70;Z07
 EMOA Mutuelle du Var (Toulon/Six-Fours, SIREN 783169220);email;Absorption par la Mutuelle des Assurés Sociaux annoncée au JO du 2/09/2026 (newsassurancespro) et espace adhérent en 'maintenance technique' vu dans un résultat, tél 09 71 09 09 09 / 04 94 09 50 00 trouvés, mais email masqué dans tous les résumés (formulaire de contact uniquement). De plus, entité absorbée = décision IT côté absorbant.;Z08
 Mutuelle des Assurés Sociaux (MAS, Marseille, SIREN 329678205);email;Mutuelle absorbante d'EMOA (JO 2/09/2026), signal fort mais aucun email ni téléphone visible dans les résumés (mentions légales mutuel.org sans coordonnées).;Z08
 Choralis – Mutuelle Le Libre Choix (Maubeuge, SIREN 783747793);score;"contact@lelibrechoix.fr et 03 27 53 19 90 (mentions légales lelibrechoix.fr), absorption de la CMIP effective au 1/01/2026 (ACPR 19/11/2025, Légifrance) et pas d'app store trouvée ; mais signal vieux de ~9 mois, aucun avis négatif daté propre à l'espace adhérent (seulement pages SEO génériques 'site en panne ?'). Score honnête 67/100 (17/12/16/6/7/9).";Z08

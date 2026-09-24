@@ -78,6 +78,91 @@
   "equipe": "AA8"
  },
  {
+  "id": "DD2-001",
+  "entreprise": "Maison Sarroche (Maison Sarroche Développement)",
+  "siren": "423849660",
+  "secteur": "Boulangerie-pâtisserie artisanale, traiteur (chaîne de boutiques)",
+  "ville": "Le Pradet",
+  "departement": "83",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "site_web": "https://www.maison-sarroche.com/",
+  "email": "contact@maison-sarroche.com",
+  "telephone": "04 94 75 83 42",
+  "source_email": "https://www.maison-sarroche.com/mentions-legales/",
+  "source_telephone": "https://www.maison-sarroche.com/mentions-legales/",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Juin 2026 : rachat du Groupe Le Moulin de Flor (boulangeries entre Cagnes-sur-Mer et Saint-Laurent-du-Var, 06).",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Unifier deux enseignes (deux sites web) après rachat et proposer la commande en ligne / click & collect traiteur",
+  "faits": [
+   {
+    "fait": "Maison Sarroche (Le Pradet, 83) signe l'acquisition du Groupe Le Moulin de Flor, situé entre Cagnes-sur-Mer et Saint-Laurent-du-Var",
+    "url": "https://provenceactu.fr/2026/06/15/maison-sarroche-achete-moulin-de-flor/",
+    "source_type": "presse",
+    "date": "2026-06-15"
+   },
+   {
+    "fait": "Avant le rachat, deux ateliers de production (Le Pradet, Solliès-Ville) alimentaient une vingtaine de boutiques dans le Var",
+    "url": "https://provenceactu.fr/2026/06/15/maison-sarroche-achete-moulin-de-flor/",
+    "source_type": "presse",
+    "date": "2026-06-15"
+   },
+   {
+    "fait": "Le Moulin de Flor dispose de son propre site (lemoulindeflor.com), distinct de maison-sarroche.com",
+    "url": "https://lemoulindeflor.com/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Le site Maison Sarroche indique que les commandes se font en boutique ou par téléphone",
+    "url": "https://www.maison-sarroche.com/mentions-legales/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Vente à emporter/livraison passant par Uber Eats (Toulon)",
+    "url": "https://www.ubereats.com/fr/store/maison-sarroche/QSFY-qLpQPCdGOOcqFbgFQ",
+    "source_type": "plateforme",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Avec ~20 boutiques varoises + le réseau Moulin de Flor, le groupe gère deux marques en ligne et des commandes traiteur par téléphone : l'intégration post-rachat est le bon moment pour un outil de commande commun.",
+  "opportunite": "Site groupe multi-enseignes avec localisateur de boutiques commun + module de commande en ligne / click & collect (traiteur, pâtisserie) relié aux ateliers de production.",
+  "service": "Refonte site multi-marques + commande en ligne / click & collect",
+  "signal_achat": "Rachat Moulin de Flor (juin 2026)",
+  "urgence": "moyenne à haute — rachat de juin 2026, intégration en cours",
+  "score_detail": {
+   "besoin": 20,
+   "urgence": 17,
+   "fit": 17,
+   "capacite": 7,
+   "accessibilite": 7,
+   "preuves": 11
+  },
+  "score": 79,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://provenceactu.fr/2026/06/15/maison-sarroche-achete-moulin-de-flor/",
+   "https://www.cfnews.net/L-actualite/M-A-Corporate/Operations/100/Maison-Sarroche-incorpore-un-azureen-a-sa-recette-711932",
+   "https://www.maison-sarroche.com/mentions-legales/",
+   "https://lemoulindeflor.com/",
+   "https://www.lejournaldesentreprises.com/regions/france/region-sud/var"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Maison Sarroche et Moulin de Flor — commandes en ligne",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu qu'en juin Maison Sarroche a repris le Groupe Le Moulin de Flor, qui garde pour l'instant son propre site. J'ai aussi remarqué que sur maison-sarroche.com, les commandes se passent en boutique ou par téléphone.\n\nAvec une vingtaine de boutiques dans le Var et un nouveau réseau sur la Côte d'Azur, les commandes traiteur et pâtisserie par téléphone peuvent vite devenir lourdes à gérer.\n\nChez Capmedia, nous réalisons des sites multi-enseignes avec commande en ligne et retrait en boutique. Je peux vous montrer en 20 minutes à quoi cela ressemblerait pour vos deux marques.\n\nQui s'occupe de ce sujet chez vous ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que Maison Sarroche a repris Le Moulin de Flor en juin. Aujourd'hui les deux enseignes ont chacune leur site et les commandes se font par téléphone ou en boutique. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Avant les commandes de bûches et galettes de fin d'année, un module de précommande en ligne pourrait soulager les boutiques au téléphone : est-ce un sujet envisagé ?",
+  "pourquoi_demain": "Rachat de juin 2026 avec deux sites séparés et aucune commande en ligne, à trois mois du pic des commandes de Noël.",
+  "equipe": "DD2"
+ },
+ {
   "id": "CC2-001",
   "entreprise": "Château Picque Caillou",
   "siren": "",
@@ -1204,6 +1289,80 @@
   "equipe": "Y08"
  },
  {
+  "id": "DD1-002",
+  "entreprise": "LJ Hôtels & Co (H2G)",
+  "siren": "529166571",
+  "secteur": "Groupe hôtelier et restaurants indépendants (Béziers)",
+  "ville": "Béziers",
+  "departement": "34",
+  "region": "Occitanie",
+  "site_web": "https://ljhco.fr",
+  "email": "contact@ljhco.fr",
+  "telephone": "04 48 11 00 25",
+  "source_email": "https://ljhco.fr/contact/",
+  "source_telephone": "https://ljhco.fr/contact/",
+  "contact_nom": "Alexandre Bachelier",
+  "contact_fonction": "Directeur général (nomination annoncée à la création du groupe)",
+  "linkedin": "https://fr.linkedin.com/company/lj-hotels-co",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Réouverture en 2026 du Château de Lignan en premier 5 étoiles du groupe, après plus de 20 M€ de travaux (spa de 700 m²) ; portefeuille de 4 hôtels (In Situ, Le XIX, Imperator, Hôtel Particulier) et de restaurants à Béziers.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Accompagner la montée en gamme (premier 5*) avec un écosystème web cohérent entre site groupe et sites par hôtel, et plus de réservation directe.",
+  "faits": [
+   {
+    "fait": "LJ Hôtels transforme le Château de Lignan (racheté en 2019, fermé en 2024) en premier 5 étoiles du groupe : plus de 20 M€ d'investissement, rénovation jusqu'à début 2026, spa de 700 m².",
+    "url": "https://www.lejournaldesentreprises.com/article/lj-hotels-transforme-un-chateau-biterrois-en-futur-5-etoiles-2108334",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Le groupe a racheté l'Hôtel Imperator à Béziers et compte 4 hôtels et plusieurs restaurants (Pica Pica, Calice).",
+    "url": "https://www.classtourisme.com/Le-Groupe-LJ-Hotels-CO-rachete-l-Hotel-Imperator-a-Beziers_a1793.html",
+    "source_type": "presse",
+    "date": ""
+   },
+   {
+    "fait": "Un site groupe (ljhco.fr) coexiste avec des sites propres par hôtel (ex : hotelparticulierbeziers.com), l'Hôtel Particulier étant aussi commercialisé via Expedia et Kayak.",
+    "url": "https://hotelparticulierbeziers.com/en/contact/",
+    "source_type": "site officiel / plateformes",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "L'arrivée d'un 5 étoiles et d'un spa haut de gamme appelle une expérience digitale au niveau (site vitrine premium, réservation directe spa/séjours, parcours séminaires) et une harmonisation des sites dispersés.",
+  "opportunite": "Refonte/harmonisation des sites du groupe (socle commun multi-établissements), site premium Château de Lignan avec réservation spa et coffrets, parcours devis groupes/séminaires.",
+  "service": "Refonte site groupe multi-établissements + site premium 5*",
+  "signal_achat": "Ouverture 2026 d'un premier 5* après 20 M€ de travaux",
+  "urgence": "moyenne — réouverture 2026, date exacte de l'article non vue",
+  "score_detail": {
+   "besoin": 18,
+   "urgence": 14,
+   "fit": 17,
+   "capacite": 9,
+   "accessibilite": 7,
+   "preuves": 10
+  },
+  "score": 75,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lejournaldesentreprises.com/article/lj-hotels-transforme-un-chateau-biterrois-en-futur-5-etoiles-2108334",
+   "https://ljhco.fr/contact/",
+   "https://ljhco.fr/nos-etablissements/",
+   "https://hotelparticulierbeziers.com/en/contact/",
+   "https://annuaire-entreprises.data.gouv.fr/entreprise/h2g-lj-hotels-co-529166571",
+   "https://www.classtourisme.com/Le-Groupe-LJ-Hotels-CO-rachete-l-Hotel-Imperator-a-Beziers_a1793.html"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "LJ Hôtels & Co — le Château de Lignan en 5 étoiles",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu que le Château de Lignan rouvrait comme premier 5 étoiles de LJ Hôtels & Co, après plus de 20 M€ de travaux et la création d'un spa de 700 m². J'ai aussi remarqué que le groupe s'appuie sur ljhco.fr et sur des sites propres à certains hôtels, comme l'Hôtel Particulier.\n\nAvec un 5 étoiles, le parcours en ligne (séjour, spa, séminaire) pèse souvent dans la décision de réserver en direct.\n\nChez Capmedia, nous concevons des sites multi-établissements avec un socle commun et des parcours de réservation adaptés à chaque maison.\n\nSeriez-vous ouvert à un court échange sur ce sujet ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que le Château de Lignan rouvrait en 5 étoiles avec un spa de 700 m². Le groupe a aujourd'hui un site groupe et des sites séparés par hôtel ; je voulais savoir qui s'occupe du digital chez vous.",
+  "relance": "Au-delà du Château de Lignan, un parcours unique pour les demandes de groupes et séminaires sur vos quatre hôtels de Béziers pourrait-il vous être utile ?",
+  "pourquoi_demain": "Le groupe lance son premier 5 étoiles en 2026 et son web reste réparti entre un site groupe et des sites par hôtel.",
+  "equipe": "DD1"
+ },
+ {
   "id": "BB3-002",
   "entreprise": "Groupe Thivolle (Compagnie Financière Thivolle)",
   "siren": "379436850",
@@ -1898,6 +2057,86 @@
   "id": "Y07-001",
   "equipe": "Y07",
   "date_verification": "2026-09-24"
+ },
+ {
+  "id": "DD5-002",
+  "entreprise": "Groupe Savarieau (G. Savarieau SAS)",
+  "siren": "547350546",
+  "secteur": "Maintenance et distribution de véhicules industriels (MAN, Piaggio, réseau TVI)",
+  "ville": "La Roche-sur-Yon",
+  "departement": "85",
+  "region": "Pays de la Loire",
+  "site_web": "https://groupesavarieau.com",
+  "email": "contact@groupesavarieau.com",
+  "telephone": "02 51 37 17 53",
+  "source_email": "https://groupesavarieau.com/mentions-legales/",
+  "source_telephone": "https://groupesavarieau.com/mentions-legales/",
+  "contact_nom": "Patrick Savarieau",
+  "contact_fonction": "Président-directeur général",
+  "linkedin": "https://www.linkedin.com/company/groupesavarieau",
+  "effectif": "270 salariés (dont 120 techniciens)",
+  "capital": "224 000 €",
+  "actualite": "Septembre 2026 : le groupe investit dans un nouvel établissement à Poitiers (86) pour véhicules industriels, bâtiment livré fin été 2026, ouverture fin 2026 ; CA 2025 de 78,6 M€ (+12,8 %).",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Groupe multi-sites (85, 86, Auvergne-Rhône-Alpes) avec au moins trois sites web distincts dont un ancien en .htm : unification web et outils clients flotte à l'ouverture de Poitiers.",
+  "faits": [
+   {
+    "fait": "Le groupe vendéen Savarieau investit à Poitiers et poursuit sa croissance dans les véhicules industriels ; nouvel établissement ouvert aux véhicules industriels fin 2026.",
+    "url": "https://www.lejournaldesentreprises.com/article/le-groupe-vendeen-savarieau-investit-poitiers-et-poursuit-sa-croissance-dans-les-vehicules-2134312",
+    "source_type": "presse",
+    "date": "2026-09"
+   },
+   {
+    "fait": "270 salariés dont 120 techniciens, CA 2025 près de 78,6 M€ (+12,8 %), sites agréés MAN à Challans, Les Essarts en Bocage, La Roche-sur-Yon et Poitiers.",
+    "url": "https://groupesavarieau.com/vehicule-industriel/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Trois domaines web coexistent dans les résultats : groupesavarieau.com, savarieau.com (pages « notre réseau », mentions légales) et savarieau-tvi.com (mentions-legales.htm, entretien poids lourds La Verrie).",
+    "url": "http://www.savarieau-tvi.com/mentions-legales.htm",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Le groupe prépare la relève de sa direction tout en poursuivant son développement.",
+    "url": "https://j2rauto.com/rechange/savarieau-prepare-sa-releve-sans-ralentir-son-developpement/",
+    "source_type": "presse",
+    "date": ""
+   }
+  ],
+  "inference": "Avec un nouveau site à Poitiers et une présence web éclatée sur trois domaines, le groupe va devoir présenter une offre flotte multimarque cohérente aux transporteurs de la Vienne ; une transition de direction est souvent le moment où les outils (prise de RDV atelier, espace client flotte) sont remis à plat.",
+  "opportunite": "Consolidation des sites web en un site groupe multi-établissements + prise de rendez-vous atelier en ligne et espace client flotte (suivi des interventions, contrôles techniques, devis).",
+  "service": "Refonte site groupe multi-sites + espace client flotte / prise de RDV atelier",
+  "signal_achat": "Ouverture d'un nouveau site à Poitiers (2026)",
+  "urgence": "haute — article de septembre 2026, ouverture Poitiers fin 2026",
+  "score_detail": {
+   "besoin": 19,
+   "urgence": 12,
+   "fit": 16,
+   "capacite": 8,
+   "accessibilite": 8,
+   "preuves": 11
+  },
+  "score": 74,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lejournaldesentreprises.com/article/le-groupe-vendeen-savarieau-investit-poitiers-et-poursuit-sa-croissance-dans-les-vehicules-2134312",
+   "https://groupesavarieau.com/mentions-legales/",
+   "https://groupesavarieau.com/vehicule-industriel/",
+   "http://www.savarieau-tvi.com/mentions-legales.htm",
+   "http://www.savarieau.com/notre-r%C3%A9seau.html",
+   "https://j2rauto.com/rechange/savarieau-prepare-sa-releve-sans-ralentir-son-developpement/"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Savarieau Poitiers : prise de rendez-vous atelier en ligne",
+  "email_personnalise": "Bonjour Monsieur Savarieau,\n\nJ'ai lu votre investissement à Poitiers, avec une ouverture aux véhicules industriels prévue fin 2026. En cherchant le groupe en ligne, on tombe aujourd'hui sur trois sites différents : groupesavarieau.com, savarieau.com et savarieau-tvi.com.\n\nPour un transporteur de la Vienne qui vous découvre, cela peut rendre moins lisibles vos ateliers, vos agréments MAN et la prise de rendez-vous.\n\nCapmedia conçoit des sites multi-établissements et des espaces clients (rendez-vous atelier, suivi des interventions) pour des PME. Je peux vous envoyer un court état des lieux de vos trois sites.\n\nCela vous serait-il utile avant l'ouverture de Poitiers ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que le groupe Savarieau ouvre un établissement véhicules industriels à Poitiers fin 2026. J'ai aussi remarqué que le groupe apparaît en ligne sous trois sites distincts. Je voulais savoir qui s'occupe du site et des outils clients chez vous.",
+  "relance": "Autre angle : vos clients flotte pourraient-ils suivre en ligne leurs interventions et échéances de contrôle technique sur l'ensemble de vos sites, Poitiers compris ?",
+  "pourquoi_demain": "Le groupe (270 salariés) ouvre Poitiers d'ici fin 2026 avec une présence web éclatée sur trois domaines.",
+  "equipe": "DD5"
  },
  {
   "id": "CC7-001",
@@ -2740,6 +2979,85 @@
   "equipe": "Z02"
  },
  {
+  "id": "DD3-001",
+  "entreprise": "Odyssée Technologies (Gresset et Associés)",
+  "siren": "534033402",
+  "secteur": "Mécanique de précision (aéronautique, défense, spatial)",
+  "ville": "Les Premiers Sapins",
+  "departement": "25",
+  "region": "Bourgogne-Franche-Comté",
+  "site_web": "https://www.odyssee-technologies.com/",
+  "email": "contact@gresset-sas.com",
+  "telephone": "03 81 60 04 27",
+  "source_email": "https://www.gifas.fr/membre/gresset-associes-sas",
+  "source_telephone": "https://www.gifas.fr/membre/gresset-associes-sas",
+  "contact_nom": "Christian Mary",
+  "contact_fonction": "Dirigeant de Gresset et Associés (filiale historique du groupe)",
+  "linkedin": "",
+  "effectif": "environ 175 salariés (groupe)",
+  "capital": "",
+  "actualite": "Finalisation le 13/07/2026 du rachat de 100 % de SMES (Wittelsheim, 68), mécanique de précision aéronautique, après compromis signé le 23/06/2026 ; société cotée sur Euronext Growth (ALODY).",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Intégrer SMES dans une présence web de groupe aujourd'hui éclatée entre plusieurs sites de filiales, et outiller la relation clients/fournisseurs multi-sites.",
+  "faits": [
+   {
+    "fait": "Odyssée Technologies finalise l'acquisition de 100 % de SMES (Wittelsheim, Haut-Rhin), spécialiste de la mécanique de précision aéronautique.",
+    "url": "https://www.actusnews.com/fr/amp/odyssee-technologies/cp/2026/07/13/odyssee-technologies-finalise-l_acquisition-de-100-pour-cent-de-smes",
+    "source_type": "communiqué",
+    "date": "2026-07-13"
+   },
+   {
+    "fait": "Compromis signé le 23/06/2026 ; le groupe (175 salariés, 20,8 M€ de CA consolidé 2025) poursuit une stratégie de croissance mixte organique + acquisitions annoncée lors de son introduction en Bourse.",
+    "url": "https://www.actusnews.com/fr/odyssee-technologies/cp/2026/06/24/signature-d_un-compromis-en-vue-de-l_acquisition-de-100-pour-cent-de-la-societe-smes-specialiste-de-la-mecanique-de-precision",
+    "source_type": "communiqué",
+    "date": "2026-06-24"
+   },
+   {
+    "fait": "Le groupe s'affiche sur plusieurs sites distincts : odyssee-technologies.com (holding), gresset-sas.com (Gresset et Associés, avec une page Fournisseurs) et snl-sas.com (Société Nouvelle Lafourcade).",
+    "url": "https://www.gresset-sas.com/fournisseurs/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Article du Journal des Entreprises : Odyssée Technologies en passe d'absorber SMES pour étoffer son portefeuille dans l'aéronautique.",
+    "url": "https://www.lejournaldesentreprises.com/breve/odyssee-technologies-en-passe-dabsorber-smes-pour-etoffer-son-portefeuille-dans-laeronautique-2145568",
+    "source_type": "presse",
+    "date": "2026-06"
+   }
+  ],
+  "inference": "Un groupe coté qui enchaîne les acquisitions doit présenter une offre unifiée à ses donneurs d'ordre aéronautiques et intégrer chaque nouvelle filiale (site, référencement fournisseurs, consultation/devis) ; la multiplicité des sites de filiales rend l'exercice plus coûteux à chaque rachat.",
+  "opportunite": "Plateforme web de groupe multi-filiales (gabarit commun déclinable par site) intégrant SMES, avec un portail clients/fournisseurs (demandes de devis, documents qualité) ; audit technique des sites existants en préalable.",
+  "service": "Refonte / plateforme web multi-sites + portail clients-fournisseurs",
+  "signal_achat": "Rachat de SMES finalisé en juillet 2026",
+  "urgence": "moyenne à haute — intégration post-acquisition en cours (juillet 2026)",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 17,
+   "fit": 13,
+   "capacite": 9,
+   "accessibilite": 6,
+   "preuves": 10
+  },
+  "score": 72,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.actusnews.com/fr/amp/odyssee-technologies/cp/2026/07/13/odyssee-technologies-finalise-l_acquisition-de-100-pour-cent-de-smes",
+   "https://www.lejournaldesentreprises.com/breve/odyssee-technologies-en-passe-dabsorber-smes-pour-etoffer-son-portefeuille-dans-laeronautique-2145568",
+   "https://www.gifas.fr/membre/gresset-associes-sas",
+   "https://www.odyssee-technologies.com/le-groupe/",
+   "https://www.gresset-sas.com/fournisseurs/"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Intégration de SMES chez Odyssée Technologies",
+  "email_personnalise": "Bonjour Monsieur Mary,\n\nJ'ai lu que le rachat de SMES à Wittelsheim a été finalisé en juillet. Aujourd'hui, le groupe apparaît en ligne sur plusieurs sites distincts (Odyssée Technologies, Gresset, SNL), et SMES va s'y ajouter.\n\nChaque intégration pose alors la même question : comment présenter une offre cohérente aux donneurs d'ordre et centraliser les demandes de devis et documents fournisseurs.\n\nChez Capmedia, nous construisons des plateformes web de groupe déclinables par filiale, avec espace clients-fournisseurs.\n\nSeriez-vous d'accord pour un échange de 20 minutes sur ce sujet ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que le rachat de SMES a été finalisé en juillet. Le groupe est aujourd'hui présent en ligne sur plusieurs sites de filiales, et je voulais savoir qui s'occupe de l'intégration web et des outils clients chez vous.",
+  "relance": "Pour aller plus loin que le site : un portail unique où vos clients aéronautiques déposent leurs consultations et récupèrent certificats et documents qualité, quelle que soit la filiale — est-ce un sujet ouvert après l'arrivée de SMES ?",
+  "pourquoi_demain": "Groupe coté en pleine phase d'acquisitions qui vient d'intégrer SMES en juillet 2026 avec une présence web éclatée entre filiales.",
+  "equipe": "DD3"
+ },
+ {
   "id": "V01-002",
   "entreprise": "Jack's Burgers",
   "siren": "953904463",
@@ -3257,85 +3575,6 @@
   "relance": "Autre angle : avec les ouvertures prévues à Nice, un socle web commun permettrait de mettre en ligne chaque nouvel hôtel en quelques semaines. Est-ce prévu chez vous ?",
   "pourquoi_demain": "Groupe tout juste constitué par rachats, qui doit bâtir sa présence en ligne avant ses ouvertures niçoises.",
   "equipe": "W08"
- },
- {
-  "siren": "",
-  "linkedin": "",
-  "effectif": "",
-  "capital": "",
-  "contact_nom": "Jean-Baptiste Aldigé",
-  "contact_fonction": "Président de la SAS Nissa Rugby (démissionnaire en juillet 2026, annonce une réélection)",
-  "entreprise": "Nissa Rugby (SAS Nissa Rugby, ex-Stade Niçois Rugby)",
-  "secteur": "Club de rugby professionnel (Pro D2)",
-  "ville": "Nice",
-  "departement": "06",
-  "region": "Provence-Alpes-Côte d'Azur",
-  "site_web": "https://nissarugby.fr/",
-  "email": "contact@stadenicois.fr",
-  "telephone": "04 93 21 62 63",
-  "source_email": "https://nissarugby.fr/contacts/",
-  "source_telephone": "https://monclubhouse.ffr.fr/clubs/nissa-rugby",
-  "actualite": "Promotion historique en Pro D2 (juin 2026, barrage gagné contre Mont-de-Marsan) ; double démission des présidents le 17 juillet 2026 sur fond de stade non conforme et de manque à gagner billetterie estimé à 1,5-2 M€.",
-  "site_existant": "oui",
-  "app_ios": "inconnu",
-  "app_android": "inconnu",
-  "besoin": "Club fraîchement promu en Pro D2 qui doit professionnaliser billetterie, partenariats et outils digitaux avec un budget contraint.",
-  "faits": [
-   {
-    "fait": "Nissa Rugby, promu en Pro D2 après le barrage contre Mont-de-Marsan, voit ses deux présidents (association et SAS) démissionner le 17 juillet 2026 : stade jugé non conforme et tribune provisoire de 1 400 places abandonnée (perte estimée 1,5 à 2 M€).",
-    "url": "https://info.fr/nissa-rugby-demission-presidents-aldige-prevot-pro-d2/",
-    "source_type": "presse",
-    "date": "2026-07-17"
-   },
-   {
-    "fait": "France 3 Côte d'Azur : « Le Nissa Rugby, à peine promu en ProD2, est déjà dans la tourmente : son président emblématique démissionne ».",
-    "url": "https://france3-regions.franceinfo.fr/provence-alpes-cote-d-azur/alpes-maritimes/nice/le-nissa-rugby-a-peine-promu-en-prod2-est-deja-dans-la-tourmente-son-president-emblematique-demissionne-3388579.html",
-    "source_type": "presse",
-    "date": "2026-07"
-   },
-   {
-    "fait": "Jean-Baptiste Aldigé reste en fonction (statuts : 3 mois) et se dit « en voie d'être réélu ».",
-    "url": "https://www.rugbyscope.fr/nissa-rugby-jean-baptiste-aldige-se-dit-en-voie-detre-reelu-apres-sa-demission/",
-    "source_type": "presse",
-    "date": "2026-07"
-   },
-   {
-    "fait": "Le site nissarugby.fr (nouvelle marque) coexiste avec les emails @stadenicois.fr ; la page effectif est encore titrée « effectif Nissa Rugby 2024-2025 » dans les résultats de recherche.",
-    "url": "https://nissarugby.fr/effectif-equipe-professionnelle",
-    "source_type": "site officiel",
-    "date": "2026-09-24"
-   }
-  ],
-  "inference": "Un club promu qui perd des recettes billetterie (tribune abandonnée) doit maximiser chaque place vendue et chaque partenaire : outils digitaux de billetterie, espace partenaires/VIP et site à jour deviennent prioritaires, avec un changement de marque (Stade Niçois → Nissa Rugby) pas totalement achevé.",
-  "opportunite": "Refonte/consolidation du site nissarugby.fr (effectifs, calendrier Pro D2, billetterie), espace partenaires et hospitalités, éventuellement app club légère (abonnés, billets, contenus).",
-  "service": "Refonte site + espace partenaires / billetterie",
-  "signal_achat": "Montée en Pro D2 2026 + changement de marque + enjeu recettes",
-  "urgence": "moyenne : montée et crise de gouvernance datées de juin-juillet 2026 (<6 mois), mais gouvernance à stabiliser avant tout achat",
-  "score_detail": {
-   "besoin": 18,
-   "urgence": 15,
-   "fit": 15,
-   "capacite": 5,
-   "accessibilite": 8,
-   "preuves": 11
-  },
-  "sources": [
-   "https://info.fr/nissa-rugby-demission-presidents-aldige-prevot-pro-d2/",
-   "https://france3-regions.franceinfo.fr/provence-alpes-cote-d-azur/alpes-maritimes/nice/le-nissa-rugby-a-peine-promu-en-prod2-est-deja-dans-la-tourmente-son-president-emblematique-demissionne-3388579.html",
-   "https://www.rugbyscope.fr/nissa-rugby-jean-baptiste-aldige-se-dit-en-voie-detre-reelu-apres-sa-demission/",
-   "https://nissarugby.fr/contacts/",
-   "https://monclubhouse.ffr.fr/clubs/nissa-rugby"
-  ],
-  "objet_email": "Nissa Rugby — première saison en Pro D2",
-  "email_personnalise": "Bonjour,\n\nJ'ai suivi la montée de Nissa Rugby en Pro D2, puis l'abandon de la tribune provisoire de 1 400 places, avec un manque à gagner annoncé entre 1,5 et 2 M€. J'ai aussi remarqué que le site nissarugby.fr affiche encore certaines pages de la saison 2024-2025 et des adresses @stadenicois.fr.\n\nQuand chaque place et chaque partenaire comptent, un site à jour, une billetterie fluide et un espace partenaires simple aident à récupérer une partie de ces recettes. Chez Capmedia, nous concevons ce type d'outils web et mobiles.\n\nSeriez-vous ouvert à un échange de 15 minutes pour voir ce qui serait prioritaire pour cette saison ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
-  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu la montée de Nissa Rugby en Pro D2 et le manque à gagner lié à la tribune abandonnée. Votre site nissarugby.fr porte encore des pages de 2024-2025 ; je voulais savoir qui s'occupe du digital et de la billetterie chez vous.",
-  "relance": "Je reviens vers vous sous un autre angle : un espace partenaires en ligne (hospitalités, visibilité, suivi) peut aider à compenser une jauge réduite. Voulez-vous un exemple concret ?",
-  "pourquoi_demain": "Club promu en Pro D2 il y a trois mois, qui cherche des recettes hors billetterie et dont le digital n'a pas suivi la nouvelle marque.",
-  "id": "W05-001",
-  "equipe": "W05",
-  "date_verification": "2026-09-24",
-  "score": 72,
-  "niveau": "QUALIFIÉ"
  },
  {
   "id": "Z01-001",
@@ -4328,6 +4567,86 @@
   "date_verification": "2026-09-24"
  },
  {
+  "id": "DD5-001",
+  "entreprise": "Chocodic (Choco-Dic)",
+  "siren": "433645488",
+  "secteur": "Chocolaterie / confiserie artisanale, cadeaux d'affaires",
+  "ville": "La Roche-sur-Yon",
+  "departement": "85",
+  "region": "Pays de la Loire",
+  "site_web": "https://www.chocodic.com",
+  "email": "direction@chocodic.com",
+  "telephone": "02 51 36 14 14",
+  "source_email": "https://www.chocodic.com/pages/8/service-client",
+  "source_telephone": "https://www.chocodic.com/pages/8/service-client",
+  "contact_nom": "Gaylord Graveleau",
+  "contact_fonction": "Dirigeant",
+  "linkedin": "https://fr.linkedin.com/company/chocodic",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Juin 2026 : prise de 30 % du capital de Muroise & Compagnie (confitures, Vallet) après l'intégration du torréfacteur choletais Le Caféier (2025) et le rachat de la marque Les Cartes à Croquer (2024).",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Pôle gourmand multi-marques en construction (Chocodic, Le Caféier, Muroise, Cartes à Croquer, Ma Vente Solidaire) : présence web éclatée à unifier (commande B2B, catalogue commun).",
+  "faits": [
+   {
+    "fait": "Chocodic entre à 30 % au capital de Muroise & Compagnie, un an après l'alliance avec le torréfacteur Le Caféier.",
+    "url": "https://www.lejournaldesentreprises.com/regions/france/pays-de-la-loire/vendee",
+    "source_type": "presse",
+    "date": "2026-06"
+   },
+   {
+    "fait": "Article du 11 juin 2026 : après Les Cartes à Croquer (2024) et Le Caféier (Cholet, 2025), Chocodic intègre Muroise & Compagnie (Vallet) et construit une filière gourmande ligérienne.",
+    "url": "https://www.informateurjudiciaire.fr/actualites/chocodic-elargit-son-pole-gourmand-avec-muroise-compagnie/",
+    "source_type": "presse",
+    "date": "2026-06-11"
+   },
+   {
+    "fait": "Au moins deux sites distincts visibles : chocodic.com (boutique, pages cadeaux entreprise personnalisés, ancienne page /html/contact.htm encore indexée) et maventesolidaire.fr (vente solidaire aux associations/écoles, mentions légales Chocodic).",
+    "url": "https://www.maventesolidaire.fr/pages/4/mentions-legales",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Offre B2B : coffrets, macarons et calendriers de l'Avent personnalisés au logo d'entreprise vendus en ligne.",
+    "url": "https://www.chocodic.com/s/51423_365187_calendrier-avent-entreprise",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Un dirigeant « repreneur-développeur » qui agrège quatre marques en deux ans doit faire cohabiter plusieurs boutiques et catalogues ; à l'approche de la saison de Noël (cadeaux d'affaires, ventes solidaires), un espace commande B2B commun ou une vitrine de pôle devient un levier direct de chiffre d'affaires.",
+  "opportunite": "Audit rapide de l'écosystème web (chocodic.com, maventesolidaire.fr, sites Le Caféier/Muroise) puis portail commandes B2B/CE multi-marques (devis coffrets personnalisés, suivi de commandes) et vitrine du pôle gourmand.",
+  "service": "Espace client B2B / refonte e-commerce multi-marques",
+  "signal_achat": "Prise de participation Muroise & Compagnie (juin 2026)",
+  "urgence": "moyenne — signal de juin 2026 (< 4 mois) et saison cadeaux de fin d'année imminente",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 15,
+   "fit": 15,
+   "capacite": 6,
+   "accessibilite": 8,
+   "preuves": 10
+  },
+  "score": 71,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.informateurjudiciaire.fr/actualites/chocodic-elargit-son-pole-gourmand-avec-muroise-compagnie/",
+   "https://www.lejournaldesentreprises.com/regions/france/pays-de-la-loire/vendee",
+   "https://monde-epicerie-fine.fr/alliance-chocodic-le-cafeier-muroise-2026/",
+   "https://www.chocodic.com/pages/8/service-client",
+   "https://www.maventesolidaire.fr/pages/4/mentions-legales",
+   "https://annuaire-entreprises.data.gouv.fr/entreprise/433645488"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Chocodic, Le Caféier, Muroise : un seul espace de commande ?",
+  "email_personnalise": "Bonjour Monsieur Graveleau,\n\nJ'ai lu l'arrivée de Muroise & Compagnie aux côtés de Chocodic et du Caféier en juin. Aujourd'hui, les commandes semblent passer par plusieurs sites distincts (chocodic.com, Ma Vente Solidaire, et ceux des marques associées).\n\nÀ l'approche des commandes de Noël des entreprises et des associations, cette dispersion peut compliquer les devis de coffrets mixtes chocolat-café-confiture et leur suivi.\n\nChez Capmedia, nous concevons des espaces de commande B2B et des boutiques multi-marques pour des PME. Je peux vous proposer un court état des lieux de vos sites, sans engagement.\n\nSeriez-vous disponible 20 minutes la semaine prochaine ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que Chocodic est entré en juin au capital de Muroise & Compagnie, après Le Caféier. Vos offres sont aujourd'hui réparties sur plusieurs sites. Je voulais savoir qui s'occupe des sujets web et commandes en ligne chez vous.",
+  "relance": "Je reviens vers vous sous un autre angle : un configurateur de coffrets cadeaux d'entreprise mêlant chocolat, café et confitures pourrait-il vous faire gagner du temps sur les devis de fin d'année ?",
+  "pourquoi_demain": "Le dirigeant vient d'agréger une quatrième marque en juin 2026 et entre dans sa saison cadeaux d'affaires avec des sites éclatés.",
+  "equipe": "DD5"
+ },
+ {
   "id": "W01-001",
   "entreprise": "Les Halles de la Transition (L'Agence des Halles de la Transition)",
   "siren": "919296293",
@@ -4883,85 +5202,6 @@
   "equipe": "X08"
  },
  {
-  "id": "Y05-001",
-  "entreprise": "Your Personal Lab (YPL, enseigne DJ Lab)",
-  "siren": "",
-  "secteur": "Loisirs / studios DJ et enregistrement en libre-service (franchise)",
-  "ville": "Villeurbanne",
-  "departement": "69",
-  "region": "Auvergne-Rhône-Alpes",
-  "site_web": "https://yourpersonallab.com/",
-  "email": "hello@yourpersonallab.com",
-  "telephone": "04 28 29 38 31",
-  "source_email": "https://www.facebook.com/YourPersonalLab/",
-  "source_telephone": "https://www.facebook.com/YourPersonalLab/",
-  "contact_nom": "",
-  "contact_fonction": "",
-  "linkedin": "https://fr.linkedin.com/company/your-personal-lab",
-  "effectif": "",
-  "capital": "",
-  "actualite": "Lancement du développement en franchise de DJ Lab (premier franchisé à Rennes), objectif de plus de 10 ouvertures d'ici fin 2026 (La Rochelle, Marseille, Lille...).",
-  "site_existant": "oui",
-  "app_ios": "inconnu",
-  "app_android": "inconnu",
-  "besoin": "Faire tenir la plateforme propriétaire (réservation, accès, facturation, pilotage des studios) à l'échelle d'un réseau de franchisés multi-sites.",
-  "faits": [
-   {
-    "fait": "Chaque studio DJ Lab est entièrement automatisé : réservation, accès, éclairage, climatisation, gestion des plannings et facturation pilotés par une plateforme digitale propriétaire, sans personnel permanent.",
-    "url": "https://lexpress-franchise.com/franchise/dj-lab/",
-    "source_type": "presse franchise",
-    "date": "2026-09-24"
-   },
-   {
-    "fait": "YPL annonce le lancement officiel du développement en franchise de DJ Lab et vise plus de 10 ouvertures d'ici fin 2026 (Rennes, La Rochelle, Marseille, Lille).",
-    "url": "https://lexpress-franchise.com/franchise/dj-lab/actualites/dj-lab-transforme-la-musique-en-experience-accessible-a-tous/",
-    "source_type": "presse franchise",
-    "date": "2026"
-   },
-   {
-    "fait": "Ouverture du premier franchisé DJ Lab à Rennes.",
-    "url": "https://lexpress-franchise.com/franchise/dj-lab/actualites/ouverture-du-premier-franchise-dj-lab-a-rennes/",
-    "source_type": "presse franchise",
-    "date": "2026-09-24"
-   },
-   {
-    "fait": "Studios accessibles 24h/24 sans réservation humaine via une application mobile (entreprise fondée en 2021).",
-    "url": "https://lexpress-franchise.com/franchise/dj-lab/",
-    "source_type": "presse franchise",
-    "date": "2026-09-24"
-   }
-  ],
-  "inference": "Un modèle 100 % autonome repose entièrement sur l'outil numérique : passer de quelques studios en propre à 10+ franchisés impose multi-sites, espaces franchisés, reporting, fiabilité de l'accès et de la facturation, et une app mobile robuste.",
-  "opportunite": "Audit technique de la plateforme de réservation/accès et de l'app, puis évolution vers une version multi-franchisés (back-office franchiseur, dashboards par studio, espace franchisé) et maintenance.",
-  "service": "Audit + évolution/maintenance de plateforme et d'application mobile (multi-sites franchise)",
-  "signal_achat": "Lancement franchise + objectif 10+ ouvertures fin 2026 sur une plateforme propriétaire",
-  "urgence": "moyenne — ouvertures annoncées d'ici fin 2026, mais date exacte des articles non confirmée",
-  "score_detail": {
-   "besoin": 17,
-   "urgence": 14,
-   "fit": 18,
-   "capacite": 5,
-   "accessibilite": 8,
-   "preuves": 9
-  },
-  "score": 71,
-  "niveau": "QUALIFIÉ",
-  "sources": [
-   "https://lexpress-franchise.com/franchise/dj-lab/",
-   "https://lexpress-franchise.com/franchise/dj-lab/actualites/dj-lab-transforme-la-musique-en-experience-accessible-a-tous/",
-   "https://lexpress-franchise.com/franchise/dj-lab/actualites/ouverture-du-premier-franchise-dj-lab-a-rennes/",
-   "https://www.facebook.com/YourPersonalLab/",
-   "https://yourpersonallab.com/"
-  ],
-  "date_verification": "2026-09-24",
-  "objet_email": "DJ Lab — la plateforme face aux ouvertures en franchise",
-  "email_personnalise": "Bonjour,\n\nJ'ai lu que DJ Lab vise plus de 10 ouvertures en franchise d'ici fin 2026, avec des studios où réservation, accès, éclairage et facturation passent entièrement par votre plateforme propriétaire.\n\nSur ce type de modèle sans personnel, chaque nouveau site ajoute de la charge sur l'outil : gestion multi-franchisés, reporting par studio, fiabilité de l'accès et de l'app.\n\nChez Capmedia, nous auditons et faisons évoluer des applications web et mobiles existantes (back-offices, espaces clients, dashboards), puis en assurons la maintenance.\n\nSeriez-vous ouvert à un échange de 20 minutes pour voir où en est votre plateforme avant les prochaines ouvertures ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
-  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que DJ Lab prévoit plus de 10 ouvertures en franchise d'ici fin 2026. Vos studios fonctionnent entièrement via votre plateforme de réservation et d'accès. Je voulais savoir qui s'occupe de ce sujet chez vous.",
-  "relance": "Je me permets de revenir vers vous sous un autre angle : un back-office franchiseur avec tableau de bord par studio (taux d'occupation, CA, incidents d'accès) peut-il vous être utile pour suivre vos nouveaux franchisés ?",
-  "pourquoi_demain": "Un réseau dont tout le fonctionnement repose sur une plateforme maison annonce 10+ ouvertures en franchise d'ici fin 2026.",
-  "equipe": "Y05"
- },
- {
   "id": "Z04-002",
   "entreprise": "Numéral Groupe (SECIF Audit)",
   "siren": "408223030",
@@ -5110,6 +5350,85 @@
   "relance": "Avec des clients CHR à Paris et en Corse, un portail de commande commun aux marques du groupe peut simplifier le travail des commerciaux. Voulez-vous voir un exemple ?",
   "pourquoi_demain": "Le groupe finalise en 2026 le regroupement de deux brasseries parisiennes rachetées : ses outils de vente doivent suivre.",
   "equipe": "BB8"
+ },
+ {
+  "id": "DD2-003",
+  "entreprise": "Burotik Group",
+  "siren": "503669442",
+  "secteur": "Bureautique, impression, informatique et télécoms pour entreprises",
+  "ville": "Saint-Laurent-du-Var",
+  "departement": "06",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "site_web": "https://burotikgroup.com/",
+  "email": "info@burotik.com",
+  "telephone": "04 92 17 11 71",
+  "source_email": "https://burotikgroup.com/?page_id=24",
+  "source_telephone": "https://burotikgroup.com/?page_id=24",
+  "contact_nom": "Éric Nicaise",
+  "contact_fonction": "Président-fondateur",
+  "linkedin": "https://fr.linkedin.com/company/burotik-group",
+  "effectif": "35 salariés",
+  "capital": "270 000 €",
+  "actualite": "Début 2026 : reprise de 60 % de MyTi (télécoms) ; déménagement en juin 2026 dans des locaux rénovés de 800 m² à Saint-Laurent-du-Var ; autre acquisition visée d'ici fin 2026.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Regrouper plusieurs marques (Burotik, Burotik'R, MyTi) et mettre à jour un site dont la page contact affiche encore l'ancienne adresse",
+  "faits": [
+   {
+    "fait": "Burotik Group (35 salariés) a repris début 2026 60 % de MyTi (télécoms) et vise une autre acquisition d'ici fin 2026",
+    "url": "https://www.lejournaldesentreprises.com/article/burotik-group-imprime-sa-marque-par-acquisitions-2138863",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Déménagement prévu en juin 2026 dans des locaux rénovés de 800 m² à Saint-Laurent-du-Var",
+    "url": "https://www.lejournaldesentreprises.com/article/burotik-group-imprime-sa-marque-par-acquisitions-2138863",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Siège désormais au 1667 avenue Pierre et Marie Curie, Saint-Laurent-du-Var, alors que la page Contacts indexée affiche encore Villeneuve-Loubet (866 route départementale 6007)",
+    "url": "https://burotikgroup.com/?page_id=24",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Le site burotikgroup.com utilise des adresses de type ?page_id= ; une seconde marque dispose de son propre site (burotikr.fr)",
+    "url": "https://www.burotikr.fr/privacy-policy",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Un groupe qui empile les acquisitions (bureautique, informatique, télécoms) avec des sites séparés et une adresse obsolète en ligne gagnerait à un site groupe unique et un espace client (commandes consommables, tickets maintenance).",
+  "opportunite": "Refonte du site groupe multi-activités + espace client (demande d'intervention, commande de consommables, suivi des contrats).",
+  "service": "Refonte site + espace client",
+  "signal_achat": "Acquisition MyTi + déménagement siège (juin 2026)",
+  "urgence": "moyenne — déménagement récent, nouvelle acquisition annoncée d'ici fin 2026",
+  "score_detail": {
+   "besoin": 18,
+   "urgence": 13,
+   "fit": 16,
+   "capacite": 6,
+   "accessibilite": 8,
+   "preuves": 10
+  },
+  "score": 71,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lejournaldesentreprises.com/article/burotik-group-imprime-sa-marque-par-acquisitions-2138863",
+   "https://burotikgroup.com/?page_id=24",
+   "https://annuaire-entreprises.data.gouv.fr/entreprise/503669442",
+   "https://www.pappers.fr/entreprise/burotik-group-503669442",
+   "https://www.burotikr.fr/privacy-policy"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Burotik Group — adresse de Saint-Laurent-du-Var en ligne",
+  "email_personnalise": "Bonjour Monsieur Nicaise,\n\nJ'ai lu que Burotik Group s'était installé en juin dans ses nouveaux locaux de Saint-Laurent-du-Var, après la reprise de MyTi. En consultant burotikgroup.com, la page Contacts indique encore l'adresse de Villeneuve-Loubet.\n\nAvec plusieurs activités et marques (bureautique, informatique, télécoms, Burotik'R), un client peut avoir du mal à trouver le bon interlocuteur.\n\nCapmedia réalise des sites de groupe et des espaces clients (demandes d'intervention, commandes de consommables). Seriez-vous ouvert à un échange de 20 minutes ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que Burotik Group a déménagé à Saint-Laurent-du-Var après avoir repris MyTi. Votre page contact en ligne affiche encore l'ancienne adresse de Villeneuve-Loubet. Je voulais savoir qui s'occupe du site chez vous.",
+  "relance": "Avec l'acquisition annoncée d'ici fin 2026, préparer dès maintenant un site groupe capable d'accueillir une nouvelle marque éviterait de refaire le travail : est-ce un sujet ?",
+  "pourquoi_demain": "Adresse obsolète visible sur le site juste après un déménagement et une acquisition, avec un dirigeant nommé et joignable.",
+  "equipe": "DD2"
  },
  {
   "id": "Y08-003",
@@ -5423,86 +5742,6 @@
   "equipe": "Z02"
  },
  {
-  "id": "Z07-001",
-  "entreprise": "Kangourou Kids (tête de réseau : Kangourou Kids Développement)",
-  "siren": "991870668",
-  "secteur": "Garde d'enfants à domicile / micro-crèches (réseau de franchise)",
-  "ville": "Montpellier",
-  "departement": "34",
-  "region": "Occitanie",
-  "site_web": "https://www.kangouroukids.fr",
-  "email": "contact@kangouroukids.fr",
-  "telephone": "04 88 70 01 44",
-  "source_email": "https://www.kangouroukids.fr/contact",
-  "source_telephone": "https://www.kangouroukids.fr/mentions-legales",
-  "contact_nom": "Amandine Zissler",
-  "contact_fonction": "Responsable Développement du réseau",
-  "linkedin": "https://fr.linkedin.com/company/kangourou-kids",
-  "effectif": "",
-  "capital": "20 000 €",
-  "actualite": "Nouvelle tête de réseau Kangourou Kids Développement (SAS présidée par LSK Groupe, Montpellier) ; l'ancienne SAS rennaise (SIREN 529190787) est inactive depuis le 30/09/2025. Réseau de 80 à 120 agences en France.",
-  "site_existant": "oui",
-  "app_ios": "oui",
-  "app_android": "oui",
-  "besoin": "App familles/intervenants (pointage, validation des heures) critiquée publiquement pour bugs de comptes et de saisie des heures",
-  "faits": [
-   {
-    "fait": "Avis App Store : un intervenant travaillant pour deux familles doit gérer deux comptes, se déconnecter/reconnecter chaque jour pour saisir ses heures ; l'un des accès ne fonctionne plus depuis plus d'un mois, e-mails au support restés sans solution",
-    "url": "https://apps.apple.com/fr/app/kangourou-kids/id1623154825?l=en-GB",
-    "source_type": "avis store",
-    "date": "2026-09-24"
-   },
-   {
-    "fait": "L'application sert au pointage (heures d'arrivée/départ) et à la validation des heures par l'intervenant et la famille, en remplacement du papier",
-    "url": "https://mobizel.com/realisation/kangourou-kids-la-garde-denfants-a-domicile/",
-    "source_type": "site prestataire (référence Mobizel)",
-    "date": "2026-09-24"
-   },
-   {
-    "fait": "App aussi publiée sur Google Play (fr.kangouroukids.app)",
-    "url": "https://play.google.com/store/apps/details?id=fr.kangouroukids.app&hl=en_US",
-    "source_type": "store",
-    "date": "2026-09-24"
-   },
-   {
-    "fait": "Tête de réseau reprise par Kangourou Kids Développement (SAS, capital 20 000 €, présidée par LSK Groupe, Montpellier) ; ancienne SAS Kangourou Kids Rennes inactive depuis le 30/09/2025",
-    "url": "https://www.kangouroukids.fr/mentions-legales",
-    "source_type": "site officiel",
-    "date": "2026-09-24"
-   }
-  ],
-  "inference": "L'app est au coeur de la paie (heures pointées = heures payées et facturées) : les bugs de double compte génèrent des erreurs de paie/facturation et une charge support pour les agences. Le changement de tête de réseau (2025) est un moment naturel pour réauditer ou reprendre l'app, aujourd'hui développée par Mobizel.",
-  "opportunite": "Audit technique et QA de l'app mobile (parcours multi-familles, pointage, synchronisation), puis proposition de reprise/maintenance ou refonte du module intervenant.",
-  "service": "Audit + QA mobile / reprise et maintenance d'application existante",
-  "signal_achat": "App intervenants critiquée (bugs de comptes et de pointage) + nouvelle tête de réseau",
-  "urgence": "moyenne — bugs impactant la paie des intervenants, mais avis non daté précisément ; restructuration de la tête de réseau fin 2025",
-  "score_detail": {
-   "besoin": 19,
-   "urgence": 11,
-   "fit": 17,
-   "capacite": 8,
-   "accessibilite": 6,
-   "preuves": 10
-  },
-  "sources": [
-   "https://apps.apple.com/fr/app/kangourou-kids/id1623154825?l=en-GB",
-   "https://mobizel.com/realisation/kangourou-kids-la-garde-denfants-a-domicile/",
-   "https://play.google.com/store/apps/details?id=fr.kangouroukids.app&hl=en_US",
-   "https://www.kangouroukids.fr/mentions-legales",
-   "https://www.kangouroukids.fr/contact",
-   "https://ac-franchise.com/article/focus-sur-la-franchise-kangourou-kids-avec-amandine-zissler-responsable-developpement-du-reseau-9205"
-  ],
-  "date_verification": "2026-09-24",
-  "objet_email": "À propos de l'app Kangourou Kids (pointage des intervenants)",
-  "email_personnalise": "Bonjour,\n\nSur l'App Store, un intervenant Kangourou Kids qui travaille pour deux familles explique devoir jongler entre deux comptes et se reconnecter chaque jour pour saisir ses heures, l'un des accès ne fonctionnant plus depuis plus d'un mois.\n\nComme ces heures servent à la paie et à la facturation, ce type de blocage peut vite peser sur les agences et sur le support.\n\nChez Capmedia, nous auditons et reprenons des applications mobiles existantes : tests des parcours multi-familles et du pointage, diagnostic, puis corrections ou maintenance.\n\nQui suit le sujet de l'application côté tête de réseau ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
-  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu sur l'App Store des avis d'intervenants Kangourou Kids qui n'arrivent pas à gérer deux familles dans le même compte pour pointer leurs heures. Je voulais savoir qui s'occupe de l'application chez vous.",
-  "relance": "Avec la nouvelle structure Kangourou Kids Développement, un audit rapide de l'app (pointage, comptes multi-familles) pourrait vous donner un état des lieux avant de décider de la suite : est-ce un sujet ouvert ?",
-  "pourquoi_demain": "L'app de pointage, qui conditionne la paie de centaines d'intervenants, est publiquement critiquée pour des bugs de comptes, et la tête de réseau vient de changer de structure.",
-  "equipe": "Z07",
-  "score": 71,
-  "niveau": "QUALIFIÉ"
- },
- {
   "id": "U04-001",
   "entreprise": "France Taxi (application Allexi)",
   "siren": "524119948",
@@ -5738,6 +5977,79 @@
   "relance": "Je reviens vers vous sous un autre angle : la prise de rendez-vous atelier et la reprise de véhicule sur vos dix concessions — est-ce un parcours que vous souhaitez simplifier en ligne ?",
   "pourquoi_demain": "Groupe régional de 300 salariés qui vient d'ajouter deux marques en 2026 avec une présence web déjà éclatée sur plusieurs sites.",
   "equipe": "AA4"
+ },
+ {
+  "id": "DD2-004",
+  "entreprise": "Senfas (groupe Ozen Invest)",
+  "siren": "379402878",
+  "secteur": "Fabrication et distribution de produits biologiques (épicerie, vrac, ingrédients)",
+  "ville": "Méjannes-lès-Alès",
+  "departement": "30",
+  "region": "Occitanie",
+  "site_web": "https://www.senfas.com/",
+  "email": "senfas30@senfas.com",
+  "telephone": "04 66 54 33 50",
+  "source_email": "https://www.senfas.com/mentions-legales/",
+  "source_telephone": "https://www.senfas.com/mentions-legales/",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "",
+  "effectif": "120 salariés (groupe Ozen Invest) + 26 (Céréalpes)",
+  "capital": "172 500 €",
+  "actualite": "Fin avril 2026 : Ozen Invest (holding de Senfas, Alès) finalise le rachat de Céréalpes (Mane, 04, 26 salariés) ; recrutements prévus chez Senfas et Céréalpes.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Catalogue pro de ~1 500 références présenté en vitrine ; intégrer l'offre frais de Céréalpes dans un espace de commande pro",
+  "faits": [
+   {
+    "fait": "Ozen Invest (120 salariés, bassin alésien) a finalisé fin avril 2026 le rachat de Céréalpes (26 salariés, Mane, 04), présent chez Biocoop, Naturalia, La Fourche",
+    "url": "https://www.lejournaldesentreprises.com/breve/le-specialiste-alesien-du-bio-ozen-invest-acquiert-le-bas-alpin-cerealpes-2144484",
+    "source_type": "presse",
+    "date": "2026-04"
+   },
+   {
+    "fait": "Ozen Invest prévoit plusieurs recrutements chez Senfas et Céréalpes",
+    "url": "https://lemag.ales.fr/actualites/ozen-invest-renforce-son-pole-bio-avec-le-rachat-de-cerealpes/",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Senfas propose près de 1 500 références et une rubrique « Espace pro » / « Nos produits - Pro » de présentation du catalogue",
+    "url": "https://www.senfas.com/grossiste-bio-ingredients-et-matieres-premieres-bio/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Un grossiste-fabricant bio avec 1 500 références, des magasins spécialisés clients et une nouvelle filiale produits frais a intérêt à un portail B2B de commande et de fiches produits partagé entre filiales.",
+  "opportunite": "Portail pro B2B (catalogue, prix pro, commande, fiches techniques) intégrant les gammes Senfas et Céréalpes.",
+  "service": "Portail client B2B / outil de commande",
+  "signal_achat": "Rachat de Céréalpes (avril 2026)",
+  "urgence": "moyenne — rachat finalisé fin avril 2026, recrutements en cours",
+  "score_detail": {
+   "besoin": 16,
+   "urgence": 15,
+   "fit": 16,
+   "capacite": 7,
+   "accessibilite": 6,
+   "preuves": 10
+  },
+  "score": 70,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lejournaldesentreprises.com/breve/le-specialiste-alesien-du-bio-ozen-invest-acquiert-le-bas-alpin-cerealpes-2144484",
+   "https://lemag.ales.fr/actualites/ozen-invest-renforce-son-pole-bio-avec-le-rachat-de-cerealpes/",
+   "https://www.circuits-bio.com/index.php/vie-des-fournisseurs/ozen-invest-senfas-acquiert-cerealpes",
+   "https://www.senfas.com/mentions-legales/",
+   "https://www.senfas.com/grossiste-bio-ingredients-et-matieres-premieres-bio/"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Senfas et Céréalpes — catalogue pro",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu qu'Ozen Invest a finalisé fin avril le rachat de Céréalpes. Sur senfas.com, l'Espace pro présente près de 1 500 références, sans commande en ligne visible.\n\nAvec l'arrivée des produits frais de Céréalpes, les magasins bio clients vont devoir s'y retrouver entre plusieurs gammes et interlocuteurs.\n\nCapmedia développe des portails de commande B2B : catalogue avec prix pro, commande, fiches techniques. Je peux vous montrer un exemple en 20 minutes.\n\nQui suit ce sujet chez Senfas ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu qu'Ozen Invest a racheté Céréalpes en avril. Senfas présente près de 1 500 références pro en ligne. Je voulais savoir qui s'occupe des outils de commande des professionnels chez vous.",
+  "relance": "Une fiche produit unique partagée entre Senfas et Céréalpes (allergènes, fiches techniques) peut aussi faire gagner du temps aux équipes commerciales : est-ce en réflexion ?",
+  "pourquoi_demain": "Rachat récent d'une filiale produits frais par un grossiste bio de 1 500 références sans commande pro en ligne visible.",
+  "equipe": "DD2"
  },
  {
   "id": "U03-001",

@@ -78,5 +78,61 @@
  },
  "CC8-002": {
   "rejet": "email issu d'un résumé citant plusieurs pages ; page exacte non confirmée"
+ },
+ "Z07-001": {
+  "set": {
+   "score_detail": {
+    "besoin": 15
+   }
+  },
+  "note": "audit QA : signal reposant sur un seul avis non daté, besoin plafonné à 15"
+ },
+ "Y05-001": {
+  "set": {
+   "score_detail": {
+    "urgence": 8
+   }
+  },
+  "note": "audit QA : annonce d'ouvertures possiblement de 2024"
+ },
+ "W05-001": {
+  "rejet": "audit QA : téléphone contradictoire entre sources et décideur démissionnaire"
+ },
+ "DD5-002": {
+  "set": {
+   "score_detail": {
+    "urgence": 12
+   }
+  },
+  "note": "date d'article déduite, non lue : urgence plafonnée à 12"
+ },
+ "DD4-001": {
+  "set": {
+   "score_detail": {
+    "urgence": 12
+   }
+  },
+  "note": "date d'article estimée, non lue : urgence plafonnée à 12"
+ },
+ "DD3-002": {
+  "rejet": "seule adresse = réservations d'un hôtel (canal client), inadaptée à la prise de contact commerciale"
+ },
+ "DD2-002": {
+  "rejet": "page source de l'email incertaine (résumé multi-pages)"
+ },
+ "DD6-001": {
+  "rejet": "source de l'email mêlée à Corporama ; filiale d'un groupe coopératif de 1 200 salariés"
+ },
+ "DD1-001": {
+  "rejet": "deux standards téléphoniques contradictoires ; date d'article non lue"
+ },
+ "DD7-001": {
+  "rejet": "source du téléphone incertaine (résumé multi-pages / page non vue)"
+ },
+ "DD7-002": {
+  "rejet": "source du téléphone incertaine (résumé multi-pages / page non vue)"
+ },
+ "DD7-003": {
+  "rejet": "source du téléphone incertaine (résumé multi-pages / page non vue)"
  }
 }
