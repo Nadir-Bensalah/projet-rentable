@@ -1,0 +1,107 @@
+{
+  "opening": 12000,
+  "closing": 614109,
+  "status": "verified",
+  "transactions": [
+    {
+      "date": "2025-12-15",
+      "description": "CARTE X4821 AMAZON EU SARL LUXEMBOURG",
+      "amount": -7500
+    },
+    {
+      "date": "2025-12-16",
+      "description": "REMBOURSEMENT CARTE X4821 FNAC",
+      "amount": 110246
+    },
+    {
+      "date": "2025-12-18",
+      "description": "VIR SEPA RECU /DE ACME CONSEIL SARL /MOTIF FACTURE 2026-031",
+      "amount": 265984
+    },
+    {
+      "date": "2025-12-19",
+      "description": "COTISATION OFFRE ESSENTIEL",
+      "amount": -400000
+    },
+    {
+      "date": "2025-12-21",
+      "description": "FRAIS TENUE DE COMPTE",
+      "amount": -9508
+    },
+    {
+      "date": "2025-12-22",
+      "description": "PRLV SEPA URSSAF ILE DE FRANCE COTISATIONS T2",
+      "amount": -4500
+    },
+    {
+      "date": "2025-12-24",
+      "description": "VIREMENT SALAIRE AOUT",
+      "amount": 228550
+    },
+    {
+      "date": "2025-12-25",
+      "description": "PRLV SEPA EDF CLIENTS PARTICULIERS REF: 7788221 MANDAT FR12EDF",
+      "amount": -176867
+    },
+    {
+      "date": "2025-12-27",
+      "description": "COTISATION OFFRE ESSENTIEL",
+      "amount": -19591
+    },
+    {
+      "date": "2025-12-28",
+      "description": "FRAIS TENUE DE COMPTE",
+      "amount": -1164
+    },
+    {
+      "date": "2025-12-30",
+      "description": "RETRAIT DAB LYON BELLECOUR",
+      "amount": -7236
+    },
+    {
+      "date": "2025-12-31",
+      "description": "COTISATION OFFRE ESSENTIEL",
+      "amount": -8690
+    },
+    {
+      "date": "2026-01-02",
+      "description": "REMBOURSEMENT CARTE X4821 FNAC",
+      "amount": 176394
+    },
+    {
+      "date": "2026-01-03",
+      "description": "CARTE X4821 AMAZON EU SARL LUXEMBOURG",
+      "amount": -5965
+    },
+    {
+      "date": "2026-01-05",
+      "description": "CARTE X4821 AMAZON EU SARL LUXEMBOURG",
+      "amount": -7206
+    },
+    {
+      "date": "2026-01-06",
+      "description": "VIR SEPA RECU /DE CAF DE PARIS",
+      "amount": 64641
+    },
+    {
+      "date": "2026-01-08",
+      "description": "VIREMENT SALAIRE AOUT",
+      "amount": 210010
+    },
+    {
+      "date": "2026-01-09",
+      "description": "VIR SEPA RECU /DE CAF DE PARIS",
+      "amount": 205473
+    },
+    {
+      "date": "2026-01-11",
+      "description": "PRLV SEPA FREE MOBILE",
+      "amount": -5030
+    },
+    {
+      "date": "2026-01-12",
+      "description": "COTISATION OFFRE ESSENTIEL",
+      "amount": -5932
+    }
+  ]
+}

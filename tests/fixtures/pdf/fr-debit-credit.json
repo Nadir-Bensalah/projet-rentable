@@ -1,0 +1,237 @@
+{
+  "opening": 152034,
+  "closing": 748246,
+  "status": "verified",
+  "transactions": [
+    {
+      "date": "2026-08-01",
+      "description": "PRLV SEPA FREE MOBILE",
+      "amount": -6201
+    },
+    {
+      "date": "2026-08-01",
+      "description": "REMISE CHEQUE N 1234567",
+      "amount": 213691
+    },
+    {
+      "date": "2026-08-02",
+      "description": "CARTE X4821 MONOPRIX PARIS 11",
+      "amount": -7821
+    },
+    {
+      "date": "2026-08-02",
+      "description": "VIR SEPA EMIS VERS DUPONT MARTIN MOTIF: LOYER AOUT",
+      "amount": -10193
+    },
+    {
+      "date": "2026-08-03",
+      "description": "PRLV SEPA URSSAF ILE DE FRANCE COTISATIONS T2",
+      "amount": -4073
+    },
+    {
+      "date": "2026-08-04",
+      "description": "RETRAIT DAB LYON BELLECOUR",
+      "amount": -18966
+    },
+    {
+      "date": "2026-08-04",
+      "description": "PRLV SEPA EDF CLIENTS PARTICULIERS REF: 7788221 MANDAT FR12EDF",
+      "amount": -8637
+    },
+    {
+      "date": "2026-08-05",
+      "description": "RETRAIT DAB LYON BELLECOUR",
+      "amount": -9161
+    },
+    {
+      "date": "2026-08-05",
+      "description": "REMISE CHEQUE N 1234567",
+      "amount": 265810
+    },
+    {
+      "date": "2026-08-06",
+      "description": "VIR SEPA EMIS VERS DUPONT MARTIN MOTIF: LOYER AOUT",
+      "amount": -5743
+    },
+    {
+      "date": "2026-08-07",
+      "description": "CARTE X4821 BOULANGERIE DU MARCHE",
+      "amount": -11643
+    },
+    {
+      "date": "2026-08-07",
+      "description": "REMISE CHEQUE N 1234567",
+      "amount": 191541
+    },
+    {
+      "date": "2026-08-08",
+      "description": "VIR SEPA RECU /DE CAF DE PARIS",
+      "amount": 63474
+    },
+    {
+      "date": "2026-08-08",
+      "description": "PRLV SEPA URSSAF ILE DE FRANCE COTISATIONS T2",
+      "amount": -59665
+    },
+    {
+      "date": "2026-08-09",
+      "description": "RETRAIT DAB LYON BELLECOUR",
+      "amount": -149826
+    },
+    {
+      "date": "2026-08-10",
+      "description": "CARTE X4821 MONOPRIX PARIS 11",
+      "amount": -62344
+    },
+    {
+      "date": "2026-08-10",
+      "description": "PRLV SEPA FREE MOBILE",
+      "amount": -1918
+    },
+    {
+      "date": "2026-08-11",
+      "description": "CARTE X4821 AMAZON EU SARL LUXEMBOURG",
+      "amount": -2159
+    },
+    {
+      "date": "2026-08-11",
+      "description": "FRAIS TENUE DE COMPTE",
+      "amount": -5614
+    },
+    {
+      "date": "2026-08-12",
+      "description": "CARTE X4821 AMAZON EU SARL LUXEMBOURG",
+      "amount": -8954
+    },
+    {
+      "date": "2026-08-13",
+      "description": "PRLV SEPA EDF CLIENTS PARTICULIERS REF: 7788221 MANDAT FR12EDF",
+      "amount": -10975
+    },
+    {
+      "date": "2026-08-13",
+      "description": "VIR SEPA EMIS VERS DUPONT MARTIN MOTIF: LOYER AOUT",
+      "amount": -97168
+    },
+    {
+      "date": "2026-08-14",
+      "description": "VIR SEPA EMIS VERS DUPONT MARTIN MOTIF: LOYER AOUT",
+      "amount": -11506
+    },
+    {
+      "date": "2026-08-15",
+      "description": "CARTE X4821 SNCF VOYAGEURS INTERNET",
+      "amount": -11083
+    },
+    {
+      "date": "2026-08-15",
+      "description": "PRLV SEPA FREE MOBILE",
+      "amount": -63766
+    },
+    {
+      "date": "2026-08-16",
+      "description": "FRAIS TENUE DE COMPTE",
+      "amount": -5453
+    },
+    {
+      "date": "2026-08-16",
+      "description": "CARTE X4821 SNCF VOYAGEURS INTERNET",
+      "amount": -169
+    },
+    {
+      "date": "2026-08-17",
+      "description": "CARTE X4821 MONOPRIX PARIS 11",
+      "amount": -3687
+    },
+    {
+      "date": "2026-08-18",
+      "description": "FRAIS TENUE DE COMPTE",
+      "amount": -6168
+    },
+    {
+      "date": "2026-08-18",
+      "description": "CARTE X4821 AMAZON EU SARL LUXEMBOURG",
+      "amount": -5900
+    },
+    {
+      "date": "2026-08-19",
+      "description": "CARTE X4821 BOULANGERIE DU MARCHE",
+      "amount": -7681
+    },
+    {
+      "date": "2026-08-19",
+      "description": "PRLV SEPA EDF CLIENTS PARTICULIERS REF: 7788221 MANDAT FR12EDF",
+      "amount": -11421
+    },
+    {
+      "date": "2026-08-20",
+      "description": "VIR SEPA RECU /DE ACME CONSEIL SARL /MOTIF FACTURE 2026-031",
+      "amount": 160584
+    },
+    {
+      "date": "2026-08-21",
+      "description": "VIR SEPA RECU /DE CAF DE PARIS",
+      "amount": 138796
+    },
+    {
+      "date": "2026-08-21",
+      "description": "PRLV SEPA FREE MOBILE",
+      "amount": -384
+    },
+    {
+      "date": "2026-08-22",
+      "description": "FRAIS TENUE DE COMPTE",
+      "amount": -6225
+    },
+    {
+      "date": "2026-08-22",
+      "description": "CARTE X4821 BOULANGERIE DU MARCHE",
+      "amount": -11750
+    },
+    {
+      "date": "2026-08-23",
+      "description": "VIR SEPA EMIS VERS DUPONT MARTIN MOTIF: LOYER AOUT",
+      "amount": -104531
+    },
+    {
+      "date": "2026-08-24",
+      "description": "VIR SEPA RECU /DE CAF DE PARIS",
+      "amount": 229000
+    },
+    {
+      "date": "2026-08-24",
+      "description": "VIR SEPA RECU /DE ACME CONSEIL SARL /MOTIF FACTURE 2026-031",
+      "amount": 259886
+    },
+    {
+      "date": "2026-08-25",
+      "description": "CARTE X4821 SNCF VOYAGEURS INTERNET",
+      "amount": -3667
+    },
+    {
+      "date": "2026-08-25",
+      "description": "CARTE X4821 SNCF VOYAGEURS INTERNET",
+      "amount": -43438
+    },
+    {
+      "date": "2026-08-26",
+      "description": "CARTE X4821 BOULANGERIE DU MARCHE",
+      "amount": -6430
+    },
+    {
+      "date": "2026-08-27",
+      "description": "CARTE X4821 MONOPRIX PARIS 11",
+      "amount": -126421
+    },
+    {
+      "date": "2026-08-27",
+      "description": "CARTE X4821 BOULANGERIE DU MARCHE",
+      "amount": -7502
+    },
+    {
+      "date": "2026-08-28",
+      "description": "RETRAIT DAB LYON BELLECOUR",
+      "amount": -8327
+    }
+  ]
+}

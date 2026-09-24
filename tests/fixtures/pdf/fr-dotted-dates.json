@@ -1,0 +1,117 @@
+{
+  "opening": 48210,
+  "closing": 274732,
+  "status": "verified",
+  "transactions": [
+    {
+      "date": "2026-07-01",
+      "description": "COTISATION OFFRE ESSENTIEL",
+      "amount": -2417
+    },
+    {
+      "date": "2026-07-02",
+      "description": "PRLV SEPA EDF CLIENTS PARTICULIERS REF: 7788221 MANDAT FR12EDF",
+      "amount": -2620
+    },
+    {
+      "date": "2026-07-03",
+      "description": "CARTE X4821 BOULANGERIE DU MARCHE",
+      "amount": -126902
+    },
+    {
+      "date": "2026-07-04",
+      "description": "FRAIS TENUE DE COMPTE",
+      "amount": -5711
+    },
+    {
+      "date": "2026-07-06",
+      "description": "REMISE CHEQUE N 1234567",
+      "amount": 265297
+    },
+    {
+      "date": "2026-07-07",
+      "description": "PRLV SEPA URSSAF ILE DE FRANCE COTISATIONS T2",
+      "amount": -8158
+    },
+    {
+      "date": "2026-07-08",
+      "description": "RETRAIT DAB LYON BELLECOUR",
+      "amount": -1939
+    },
+    {
+      "date": "2026-07-09",
+      "description": "VIR SEPA RECU /DE ACME CONSEIL SARL /MOTIF FACTURE 2026-031",
+      "amount": 112054
+    },
+    {
+      "date": "2026-07-11",
+      "description": "CARTE X4821 SNCF VOYAGEURS INTERNET",
+      "amount": -3720
+    },
+    {
+      "date": "2026-07-12",
+      "description": "COTISATION OFFRE ESSENTIEL",
+      "amount": -4022
+    },
+    {
+      "date": "2026-07-13",
+      "description": "PRLV SEPA URSSAF ILE DE FRANCE COTISATIONS T2",
+      "amount": -8433
+    },
+    {
+      "date": "2026-07-15",
+      "description": "CARTE X4821 AMAZON EU SARL LUXEMBOURG",
+      "amount": -3631
+    },
+    {
+      "date": "2026-07-16",
+      "description": "CARTE X4821 AMAZON EU SARL LUXEMBOURG",
+      "amount": -10830
+    },
+    {
+      "date": "2026-07-17",
+      "description": "PRLV SEPA URSSAF ILE DE FRANCE COTISATIONS T2",
+      "amount": -421
+    },
+    {
+      "date": "2026-07-18",
+      "description": "PRLV SEPA FREE MOBILE",
+      "amount": -4338
+    },
+    {
+      "date": "2026-07-20",
+      "description": "FRAIS TENUE DE COMPTE",
+      "amount": -5630
+    },
+    {
+      "date": "2026-07-21",
+      "description": "VIREMENT SALAIRE AOUT",
+      "amount": 49720
+    },
+    {
+      "date": "2026-07-22",
+      "description": "FRAIS TENUE DE COMPTE",
+      "amount": -3270
+    },
+    {
+      "date": "2026-07-23",
+      "description": "PRLV SEPA EDF CLIENTS PARTICULIERS REF: 7788221 MANDAT FR12EDF",
+      "amount": -163315
+    },
+    {
+      "date": "2026-07-25",
+      "description": "CARTE X4821 AMAZON EU SARL LUXEMBOURG",
+      "amount": -803
+    },
+    {
+      "date": "2026-07-26",
+      "description": "REMBOURSEMENT CARTE X4821 FNAC",
+      "amount": 163739
+    },
+    {
+      "date": "2026-07-27",
+      "description": "CARTE X4821 BOULANGERIE DU MARCHE",
+      "amount": -8128
+    }
+  ]
+}

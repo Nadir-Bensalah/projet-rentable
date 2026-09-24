@@ -1,0 +1,97 @@
+{
+  "opening": 1250000,
+  "closing": 1393609,
+  "status": "verified",
+  "transactions": [
+    {
+      "date": "2026-06-01",
+      "description": "VIR SEPA EMIS VERS DUPONT MARTIN MOTIF: LOYER AOUT",
+      "amount": -10634
+    },
+    {
+      "date": "2026-06-02",
+      "description": "PRLV SEPA URSSAF ILE DE FRANCE COTISATIONS T2",
+      "amount": -7792
+    },
+    {
+      "date": "2026-06-04",
+      "description": "VIREMENT SALAIRE AOUT",
+      "amount": 59476
+    },
+    {
+      "date": "2026-06-05",
+      "description": "COTISATION OFFRE ESSENTIEL",
+      "amount": -9037
+    },
+    {
+      "date": "2026-06-07",
+      "description": "PRLV SEPA EDF CLIENTS PARTICULIERS REF: 7788221 MANDAT FR12EDF",
+      "amount": -4437
+    },
+    {
+      "date": "2026-06-08",
+      "description": "VIR SEPA EMIS VERS DUPONT MARTIN MOTIF: LOYER AOUT",
+      "amount": -2912
+    },
+    {
+      "date": "2026-06-10",
+      "description": "PRLV SEPA FREE MOBILE",
+      "amount": -7240
+    },
+    {
+      "date": "2026-06-11",
+      "description": "PRLV SEPA URSSAF ILE DE FRANCE COTISATIONS T2",
+      "amount": -177545
+    },
+    {
+      "date": "2026-06-13",
+      "description": "RETRAIT DAB LYON BELLECOUR",
+      "amount": -2502
+    },
+    {
+      "date": "2026-06-15",
+      "description": "PRLV SEPA EDF CLIENTS PARTICULIERS REF: 7788221 MANDAT FR12EDF",
+      "amount": -7810
+    },
+    {
+      "date": "2026-06-16",
+      "description": "VIR SEPA RECU /DE CAF DE PARIS",
+      "amount": 208562
+    },
+    {
+      "date": "2026-06-18",
+      "description": "COTISATION OFFRE ESSENTIEL",
+      "amount": -10878
+    },
+    {
+      "date": "2026-06-19",
+      "description": "CARTE X4821 BOULANGERIE DU MARCHE",
+      "amount": -2404
+    },
+    {
+      "date": "2026-06-21",
+      "description": "FRAIS TENUE DE COMPTE",
+      "amount": -773
+    },
+    {
+      "date": "2026-06-22",
+      "description": "PRLV SEPA URSSAF ILE DE FRANCE COTISATIONS T2",
+      "amount": -3920
+    },
+    {
+      "date": "2026-06-24",
+      "description": "PRLV SEPA FREE MOBILE",
+      "amount": -1394
+    },
+    {
+      "date": "2026-06-25",
+      "description": "REMBOURSEMENT CARTE X4821 FNAC",
+      "amount": 130871
+    },
+    {
+      "date": "2026-06-27",
+      "description": "COTISATION OFFRE ESSENTIEL",
+      "amount": -6022
+    }
+  ]
+}

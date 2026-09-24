@@ -1,0 +1,128 @@
+{
+  "opening": 98000,
+  "closing": 738788,
+  "status": "verified",
+  "currency": "GBP",
+  "transactions": [
+    {
+      "date": "2026-03-01",
+      "description": "ONLINE TRANSFER TO SAVINGS",
+      "amount": -3067
+    },
+    {
+      "date": "2026-03-01",
+      "description": "ATM WITHDRAWAL 5TH AVE",
+      "amount": -6137
+    },
+    {
+      "date": "2026-03-01",
+      "description": "REFUND ACME STORE",
+      "amount": 36338
+    },
+    {
+      "date": "2026-03-02",
+      "description": "TRANSFER FROM J SMITH",
+      "amount": 181051
+    },
+    {
+      "date": "2026-03-02",
+      "description": "REFUND ACME STORE",
+      "amount": 138376
+    },
+    {
+      "date": "2026-03-03",
+      "description": "CARD PURCHASE AMAZON MKTPLACE SEATTLE WA",
+      "amount": -1093
+    },
+    {
+      "date": "2026-03-03",
+      "description": "ONLINE TRANSFER TO SAVINGS",
+      "amount": -7419
+    },
+    {
+      "date": "2026-03-03",
+      "description": "CARD PURCHASE AMAZON MKTPLACE SEATTLE WA",
+      "amount": -5521
+    },
+    {
+      "date": "2026-03-04",
+      "description": "ATM WITHDRAWAL 5TH AVE",
+      "amount": -9723
+    },
+    {
+      "date": "2026-03-04",
+      "description": "CARD PURCHASE AMAZON MKTPLACE SEATTLE WA",
+      "amount": -3019
+    },
+    {
+      "date": "2026-03-05",
+      "description": "DIRECT DEBIT CITY WATER",
+      "amount": -3720
+    },
+    {
+      "date": "2026-03-05",
+      "description": "ATM WITHDRAWAL 5TH AVE",
+      "amount": -107889
+    },
+    {
+      "date": "2026-03-06",
+      "description": "PAYROLL DEPOSIT ACME CORP",
+      "amount": 55421
+    },
+    {
+      "date": "2026-03-06",
+      "description": "ATM WITHDRAWAL 5TH AVE",
+      "amount": -1349
+    },
+    {
+      "date": "2026-03-06",
+      "description": "TRANSFER FROM J SMITH",
+      "amount": 20626
+    },
+    {
+      "date": "2026-03-07",
+      "description": "ATM WITHDRAWAL 5TH AVE",
+      "amount": -3809
+    },
+    {
+      "date": "2026-03-07",
+      "description": "ATM WITHDRAWAL 5TH AVE",
+      "amount": -115827
+    },
+    {
+      "date": "2026-03-08",
+      "description": "CARD PURCHASE WHOLE FOODS #123",
+      "amount": -6946
+    },
+    {
+      "date": "2026-03-08",
+      "description": "CARD PURCHASE WHOLE FOODS #123",
+      "amount": -5994
+    },
+    {
+      "date": "2026-03-08",
+      "description": "CARD PURCHASE WHOLE FOODS #123",
+      "amount": -7669
+    },
+    {
+      "date": "2026-03-09",
+      "description": "ATM WITHDRAWAL 5TH AVE",
+      "amount": -6952
+    },
+    {
+      "date": "2026-03-09",
+      "description": "REFUND ACME STORE",
+      "amount": 243536
+    },
+    {
+      "date": "2026-03-10",
+      "description": "TRANSFER FROM J SMITH",
+      "amount": 265121
+    },
+    {
+      "date": "2026-03-10",
+      "description": "CARD PURCHASE AMAZON MKTPLACE SEATTLE WA",
+      "amount": -3547
+    }
+  ]
+}

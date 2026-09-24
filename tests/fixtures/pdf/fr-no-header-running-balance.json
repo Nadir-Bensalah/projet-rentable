@@ -1,0 +1,88 @@
+{
+  "allowGuessed": 1,
+  "opening": 300000,
+  "closing": 187501,
+  "status": "verified",
+  "transactions": [
+    {
+      "date": "2026-05-01",
+      "description": "PRLV SEPA URSSAF ILE DE FRANCE COTISATIONS T2",
+      "amount": -11283
+    },
+    {
+      "date": "2026-05-02",
+      "description": "PRLV SEPA EDF CLIENTS PARTICULIERS REF: 7788221 MANDAT FR12EDF",
+      "amount": -167541
+    },
+    {
+      "date": "2026-05-04",
+      "description": "CARTE X4821 AMAZON EU SARL LUXEMBOURG",
+      "amount": -6379
+    },
+    {
+      "date": "2026-05-06",
+      "description": "VIR SEPA EMIS VERS DUPONT MARTIN MOTIF: LOYER AOUT",
+      "amount": -4671
+    },
+    {
+      "date": "2026-05-08",
+      "description": "PRLV SEPA FREE MOBILE",
+      "amount": -2256
+    },
+    {
+      "date": "2026-05-09",
+      "description": "CARTE X4821 AMAZON EU SARL LUXEMBOURG",
+      "amount": -5211
+    },
+    {
+      "date": "2026-05-11",
+      "description": "CARTE X4821 AMAZON EU SARL LUXEMBOURG",
+      "amount": -7104
+    },
+    {
+      "date": "2026-05-13",
+      "description": "PRLV SEPA URSSAF ILE DE FRANCE COTISATIONS T2",
+      "amount": -10575
+    },
+    {
+      "date": "2026-05-15",
+      "description": "VIR SEPA RECU /DE ACME CONSEIL SARL /MOTIF FACTURE 2026-031",
+      "amount": 113864
+    },
+    {
+      "date": "2026-05-16",
+      "description": "VIREMENT SALAIRE AOUT",
+      "amount": 46087
+    },
+    {
+      "date": "2026-05-18",
+      "description": "PRLV SEPA FREE MOBILE",
+      "amount": -7593
+    },
+    {
+      "date": "2026-05-20",
+      "description": "PRLV SEPA EDF CLIENTS PARTICULIERS REF: 7788221 MANDAT FR12EDF",
+      "amount": -8620
+    },
+    {
+      "date": "2026-05-22",
+      "description": "PRLV SEPA URSSAF ILE DE FRANCE COTISATIONS T2",
+      "amount": -1127
+    },
+    {
+      "date": "2026-05-23",
+      "description": "CARTE X4821 SNCF VOYAGEURS INTERNET",
+      "amount": -36737
+    },
+    {
+      "date": "2026-05-25",
+      "description": "CARTE X4821 MONOPRIX PARIS 11",
+      "amount": -2667
+    },
+    {
+      "date": "2026-05-27",
+      "description": "CARTE X4821 SNCF VOYAGEURS INTERNET",
+      "amount": -686
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "opening": 342015,
+  "closing": 1332345,
+  "status": "verified",
+  "currency": "USD",
+  "transactions": [
+    {
+      "date": "2026-08-01",
+      "description": "ONLINE TRANSFER TO SAVINGS",
+      "amount": -6850
+    },
+    {
+      "date": "2026-08-02",
+      "description": "TRANSFER FROM J SMITH",
+      "amount": 36969
+    },
+    {
+      "date": "2026-08-03",
+      "description": "DIRECT DEBIT CITY WATER",
+      "amount": -9889
+    },
+    {
+      "date": "2026-08-05",
+      "description": "DIRECT DEBIT CITY WATER",
+      "amount": -8459
+    },
+    {
+      "date": "2026-08-06",
+      "description": "ATM WITHDRAWAL 5TH AVE",
+      "amount": -4620
+    },
+    {
+      "date": "2026-08-08",
+      "description": "PAYROLL DEPOSIT ACME CORP",
+      "amount": 218255
+    },
+    {
+      "date": "2026-08-09",
+      "description": "TRANSFER FROM J SMITH",
+      "amount": 140502
+    },
+    {
+      "date": "2026-08-10",
+      "description": "TRANSFER FROM J SMITH",
+      "amount": 190134
+    },
+    {
+      "date": "2026-08-12",
+      "description": "ONLINE TRANSFER TO SAVINGS",
+      "amount": -8472
+    },
+    {
+      "date": "2026-08-13",
+      "description": "CARD PURCHASE AMAZON MKTPLACE SEATTLE WA",
+      "amount": -7118
+    },
+    {
+      "date": "2026-08-15",
+      "description": "TRANSFER FROM J SMITH",
+      "amount": 162597
+    },
+    {
+      "date": "2026-08-16",
+      "description": "PAYROLL DEPOSIT ACME CORP",
+      "amount": 180969
+    },
+    {
+      "date": "2026-08-17",
+      "description": "CARD PURCHASE WHOLE FOODS #123",
+      "amount": -6126
+    },
+    {
+      "date": "2026-08-19",
+      "description": "ATM WITHDRAWAL 5TH AVE",
+      "amount": -5979
+    },
+    {
+      "date": "2026-08-20",
+      "description": "DIRECT DEBIT CITY WATER",
+      "amount": -1379
+    },
+    {
+      "date": "2026-08-22",
+      "description": "PAYROLL DEPOSIT ACME CORP",
+      "amount": 89843
+    },
+    {
+      "date": "2026-08-23",
+      "description": "ATM WITHDRAWAL 5TH AVE",
+      "amount": -949
+    },
+    {
+      "date": "2026-08-24",
+      "description": "PAYROLL DEPOSIT ACME CORP",
+      "amount": 39251
+    },
+    {
+      "date": "2026-08-26",
+      "description": "CARD PURCHASE AMAZON MKTPLACE SEATTLE WA",
+      "amount": -2445
+    },
+    {
+      "date": "2026-08-27",
+      "description": "CARD PURCHASE AMAZON MKTPLACE SEATTLE WA",
+      "amount": -5904
+    }
+  ]
+}
