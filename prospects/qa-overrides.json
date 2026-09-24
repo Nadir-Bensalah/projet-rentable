@@ -21,5 +21,8 @@
  },
  "V06-001": {
   "rejet": "email vu dans un résumé mêlant plusieurs pages du club ; page source non confirmée"
+ },
+ "W02-001": {
+  "rejet": "coordonnées nominatives (portable) dont la page source n'est pas certaine ; besoin déduit uniquement de l'URL"
  }
 }

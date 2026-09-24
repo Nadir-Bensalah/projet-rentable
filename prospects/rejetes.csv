@@ -182,3 +182,48 @@ Fresh (groupe Prosol / Grand Frais);score;Filiale d'un grand groupe national (68
 Jardineries Monplaisir (Océalia);besoin;"Rachat de 12 magasins (juin 2025) mais sous franchise Gamm Vert : site/e-commerce gérés par le franchiseur ; seul contact = attachée de presse sur mobile";V08
 Le Moulin d'Élise (boulangeries, Morlaix);email;Signal fort (8 boulangeries, Carquefou fév. 2026, lancement franchise) et téléphone 02 44 84 29 29 trouvé, mais aucun email complet visible dans les résultats (3 recherches);V08
 Groupe Schertz / Opticiens Balouzat;besoin;Rachat des 10 magasins Balouzat antérieur à 2023 (hors fenêtre 2025-2026), aucun email/tél siège trouvé;V08
+La Brigade (street food carnivore, Paris);email;"Signal daté (3 ouvertures franchisées Brest/Blagnac/Anglet avril 2026, Lyon juillet 2026, 20 restaurants visés fin 2026) mais aucun email publié trouvé (recherche ""@la-brigade.fr"" sans résultat).";W01
+ÔCargo Food Court (Jeff Concept / OCARGO DEVELOPPEMENT, La Garde 83);besoin;Coordonnées trouvées (contact@ocargofoodcourt.com, 04 94 75 05 87) mais app iOS/Android Ôcargo déjà publiée en 2026 (éditeur tiers ncrts) + site franchise dédié : pas de besoin observable non couvert.;W01
+PizzaCosy (Cosy Développement, La Talaudière 42);privée;"Hors cible taille : 70 établissements (juin 2026) > 60 ; commande en ligne déjà outillée ; pas de téléphone siège trouvé et email ambigu (serviceclient@ / service-client@).";W01
+Dom&Vie / Dom&Vie Access Pro;besoin;"Réseau d'environ 70 unités (hors cible 2-60) ; aucun besoin digital observable dans les résultats";W02
+PASSTIME;besoin;App native iOS/Android, site client et back-office franchisés refaits en 2026 : prestataire déjà en place;W02
+Yakavan;besoin;Nouveau site internet déjà inauguré, aucun autre besoin observé;W02
+X'pert Impact;besoin;Plateforme digitale franchisés et appli métier déjà déployées en 2026;W02
+Yiango (Yiango Care, Albi);score;Email hello@yiango.io et téléphone trouvés, objectif de 50 stores en 3 ans (mai 2026), mais plateforme de coaching iPad déjà conçue en interne : aucun besoin précis observé, score estimé à 64;W02
+Domianim (Blagnac, 31);score;"Téléphone 05 61 40 92 17 et email domianim@orange.fr trouvés (source indirecte), mais aucune actualité datée de 2026 (seulement des fiches d'annuaires franchise) et taille du réseau inconnue ; besoin supposé d'après un site .php ancien, non vérifié ; score estimé à 55";W02
+Twiice Auto (AUTODEV TWIICE);contrôle qualité;"QA : coordonnées nominatives (portable) dont la page source n'est pas certaine ; besoin déduit uniquement de l'URL";W02
+Aber Propreté (Aber-Propreté Saphir, Saint-Jacques-de-la-Lande);score;"Coordonnées siège trouvées (siege@aberproprete.fr, 02 99 35 66 66) mais article de fin 2025 sans signal digital ; score honnête ~62";W03
+Guibout Matériaux (Flers, 61);score;"Rachat Bracq Orbec juin 2026, coordonnées trouvées (guiboutmat@guibout.fr, 02 33 65 65 00), mais catalogue en marque blanche Negoguide et aucun besoin documenté ; score ~67";W03
+Inter Déménagement (Riedisheim, 68);score;"Reprise fin 2025 (agence Déménageurs Bretons), contact trouvé mais signal ancien et aucun besoin documenté ; score ~58";W03
+Deslog (Téteghem, 59);email;"Rachat de Sroad Logistic 2026 ; aucun email trouvé, et même localisation que Marquis Transports déjà traité (risque de doublon)";W03
+Immopropre (repreneur des Nettoyeurs);email;Aucune coordonnée trouvée;W03
+NSI Groupe;doublon;Déjà traité (exclusions);W03
+Océan Industrie (Commes, 14);besoin;Croissance et nouveau bâtiment 2026 mais aucun besoin numérique observé;W04
+Medicos (Izernore, 01);besoin;"Investissement d'automatisation (ligne de laquage), groupe ; aucun besoin numérique observé";W04
+Lilano (Laboratoire Interprofessionnel Laitier de Normandie, Saint-Lô);besoin;Structure associative (lilano.asso.fr), signal de déménagement 2025 > 6 mois, aucun besoin numérique documenté;W04
+Celtigel (groupe Le Graët, Plélo);besoin;"250 salariés, investissement 7,5 M€ purement industriel ; aucun besoin numérique ni coordonnées trouvés";W04
+Brasserie Lancelot (filiale Agrial);besoin;Investissement outil industriel 1,5 M€ 2026, filiale d'un grand groupe coopératif, pas de besoin numérique;W04
+Novastruct (ex-Kawneer, Vendargues);score;"400 salariés, hors cible 20-250 ; signal de marque sans besoin web documenté";W04
+Provence Rugby (SASP, Aix-en-Provence);score;Contacts OK (billetterie@provencerugby.com, 04 86 22 01 60) mais billetterie déjà migrée vers Ticketchainer (marque blanche), changement de président côté association seulement, aucun signal digital daté : score estimé 64;W05
+Valence Romans Drôme Rugby (SASP VRDR, Romans-sur-Isère);besoin;Contacts trouvés (boutique@vrdr.fr, 04 75 05 59 10) mais signal stade caduc : Koesio s'est retiré du projet de Koesio Stadium (communiqué 16/04/2025, budget passé de 44 à 76 M€), aucun signal digital 2025-2026 observé;W05
+Paris Basketball (Omar Sy co-propriétaire);score;"Club déjà très structuré et doté en outils digitaux, organisation difficilement accessible pour Capmedia ; non approfondi";W05
+Génération SAS (app GENERATION - Espace assuré);besoin;App notée 4,5/5 sur ~49 000 avis : pas de défaut significatif;W06
+La Bonne App (Bertrand Franchise);privée;Grand groupe (Groupe Bertrand), hors cible;W06
+Flunch;besoin;Grand réseau, un seul signalement forum non daté;W06
+Bodyminute;besoin;Aucun avis d'app défavorable trouvé;W06
+Mutuelle Intérimaires Santé;privée;Régime de branche géré par un grand groupe de protection sociale;W06
+La Boutique Officielle.com (Chaponost, 69);score;Contacts trouvés (contact@laboutiqueofficielle.com, 04 82 54 01 70) et bugs connexion/paiement signalés, mais app mise à jour chaque semaine (équipe interne probable), avis non datés : 66/100;W06
+Smart Pizza (Smart Machine);email;"App de distributeurs mal notée mais aucun email/téléphone de l'éditeur trouvé ; réseau en partie disparu";W06
+Gang of Pizza (groupe Adial);besoin;Aucun avis négatif sourcé sur l'app, rattachée à un groupe industriel;W06
+Toosla;besoin;App bien notée (4,6/5, ~10 000 notes), éditeur tech avec équipe interne;W06
+Créateur de Sommeil (Créateur de Sommeil Retail, Brignais, reprise des 35 Maliterie);email;Aucun email professionnel visible dans les résultats (mentions légales .com introuvables, seul le .be belge ressort);W07
+Groupe Maxiam (Maxi Literie Prestige, Montreuil);score;"Email developpement@groupemaxiam.fr vu seulement dans un résumé d'agrégateur ; besoin peu documenté (site Shopify par magasin) ; lancement nov. 2025, score 68";W07
+Edgard Opticiens (Orléans, 12-17 boutiques, rachats Lyon/Bordeaux);email;Mentions légales et contact repérés mais aucune adresse email visible dans les résumés;W07
+Les Opticiens Mobiles (Lyon);score;"Coordonnées OK (contact@lesopticiensmobiles.com, 04 82 90 49 82) mais rachat des Opticiens à Domicile daté juin 2024, aucun manque numérique observé ; score 65";W07
+La Vignery (cavistes, siège Rambouillet);score;"Coordonnées OK (service-client@lavignery.fr, 01 34 85 45 85) mais signal peu daté (objectif 40 magasins d'ici 2030) et besoin non documenté ; score 68";W07
+Envia Cuisines / Géant du Meuble / SoCoo'c / But;score;"Enseignes nationales ou filiales de grands groupes, peu accessibles ; non approfondies";W07
+Ciela Village (Bandol);score;"callcenter@cielavillage.com + 04 22 54 73 55 trouvés, mais app mobile déjà en place (com.cnc.cielavillage, probablement marque blanche) et rachat Koawa daté de mi-2024 ; score estimé 66";W08
+Poulain Traiteur (SARL Poulain et Fils, Hennebont);score;"accueil@poulain-traiteur.com et 02 97 36 53 37 trouvés, mais investissement 2026 sur bâtiments/flotte, aucun signal digital ; score estimé 62";W08
+La Table de Charlotte (FS Holding, Saint-Cannat);email;rachat début 2025, aucun email trouvé;W08
+YOU Famille Hôtelière (Caen);email;seuls emails d'agrégateurs (rocketreach), pas d'email ni de téléphone publiés;W08
+European Camping Group / Huttopia / Sandaya;score;grands groupes HPA avec équipes digitales internes, inaccessibles;W08

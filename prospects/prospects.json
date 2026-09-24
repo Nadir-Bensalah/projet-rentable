@@ -1,5 +1,71 @@
 [
  {
+  "id": "W04-001",
+  "entreprise": "Eurobrillance",
+  "siren": "830830311",
+  "secteur": "Industrie – fabrication de matériaux métallisés (papiers/films)",
+  "ville": "Altorf",
+  "departement": "67",
+  "region": "Grand Est",
+  "site_web": "https://eurobrillance.com",
+  "email": "contact@eurobrillance.com",
+  "telephone": "+33 3 88 55 32 55",
+  "source_email": "https://eurobrillance.com/legale-notice/",
+  "source_telephone": "https://eurobrillance.com/contact/",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "",
+  "effectif": "62 salariés (35 recrutements prévus)",
+  "capital": "500 000 €",
+  "actualite": "Septembre 2026 : programme d'investissement de 7,5 M€ sur le site d'Altorf (équipements, extension, automatisation, ERP renouvelé, IA) et 35 recrutements",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Renouvellement de l'ERP et projet IA dans un plan d'investissement de 7,5 M€ : besoin d'outils connectés (tableaux de bord, portail, apps terrain) autour du nouveau système",
+  "faits": [
+   {
+    "fait": "Eurobrillance (62 salariés) annonce un programme de 7,5 M€ à Altorf incluant automatisation, renouvellement de l'ERP et usage de l'intelligence artificielle, avec 35 recrutements",
+    "url": "https://www.lejournaldesentreprises.com/article/eurobrillance-investit-75-millions-deuros-sur-son-site-daltorf-et-prevoit-35-recrutements-2147623",
+    "source_type": "presse",
+    "date": "2026-09"
+   },
+   {
+    "fait": "Coordonnées publiées : contact@eurobrillance.com, tél. 00 33 388 55 32 55, 2 rue Lindberg 67120 Altorf, SAS RCS Saverne 830 830 311",
+    "url": "https://eurobrillance.com/legale-notice/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Un changement d'ERP associé à 35 recrutements et à de l'automatisation crée des besoins d'interfaces sur mesure (tableaux de bord de production, portail client/commandes, applications d'atelier) que l'éditeur ERP ne couvre généralement pas.",
+  "opportunite": "Proposer un cadrage court des besoins périphériques au nouvel ERP : dashboard de pilotage production, portail client (suivi commandes/échantillons), app d'atelier connectée.",
+  "service": "Outil métier / dashboard et portail client connectés à l'ERP",
+  "signal_achat": "Investissement 7,5 M€ incluant nouvel ERP et IA (sept. 2026)",
+  "urgence": "haute – annonce de septembre 2026, projet ERP en cours de lancement",
+  "score_detail": {
+   "besoin": 18,
+   "urgence": 18,
+   "fit": 14,
+   "capacite": 9,
+   "accessibilite": 7,
+   "preuves": 11
+  },
+  "score": 77,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lejournaldesentreprises.com/article/eurobrillance-investit-75-millions-deuros-sur-son-site-daltorf-et-prevoit-35-recrutements-2147623",
+   "https://eurobrillance.com/legale-notice/",
+   "https://eurobrillance.com/contact/",
+   "https://www.societe.com/societe/eurobrillance-830830311.html"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Eurobrillance — autour du nouvel ERP d'Altorf",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu dans Le Journal des Entreprises que votre programme de 7,5 M€ à Altorf comprend un ERP renouvelé et de l'intelligence artificielle, avec 35 recrutements à la clé.\n\nDans ce type de projet, l'ERP couvre le cœur, mais il reste souvent des besoins autour : tableau de bord de production, suivi des commandes pour les clients, écrans simples pour l'atelier.\n\nCapmedia conçoit ce type d'outils sur mesure, connectés aux systèmes existants. Je peux vous proposer un échange de 20 minutes pour voir si l'un de ces sujets est ouvert chez vous.\n\nQui pilote le projet ERP de votre côté ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu votre plan de 7,5 M€ à Altorf, qui inclut un nouvel ERP et de l'IA. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Avec 35 personnes à intégrer, un tableau de bord de production lisible par tous peut accélérer la montée en compétence : est-ce un sujet que vous avez prévu dans le projet ?",
+  "pourquoi_demain": "Eurobrillance vient d'annoncer (sept. 2026) un nouvel ERP et un projet IA dans un plan de 7,5 M€ : c'est le moment où les besoins d'outils périphériques se décident.",
+  "equipe": "W04"
+ },
+ {
   "entreprise": "Crêpe Touch (CT CO)",
   "siren": "837781566",
   "secteur": "Restauration crêperie fast casual en franchise",
@@ -679,6 +745,159 @@
   "equipe": "V06"
  },
  {
+  "id": "W03-001",
+  "entreprise": "ED-Trans",
+  "siren": "453080848",
+  "secteur": "Organisation de transport / commission de transport (affrètement national et international)",
+  "ville": "Le Mans",
+  "departement": "72",
+  "region": "Pays de la Loire",
+  "site_web": "https://www.ed-trans.com",
+  "email": "contact@ed-trans.com",
+  "telephone": "02 43 52 02 77",
+  "source_email": "https://www.ed-trans.com/en/contact-us-new/",
+  "source_telephone": "https://www.ed-trans.com/en/contact-us-new/",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "https://fr.linkedin.com/company/ed-trans",
+  "effectif": "environ 108 salariés (selon JDE)",
+  "capital": "210 200 €",
+  "actualite": "11e agence ouverte en métropole lilloise (2026) ; fusion de ses deux sociétés sous la marque unique ED-Trans avec nouvelle identité visuelle ; CA d'environ 75 M€, objectif 100 M€ en 2028 puis feuille de route « Connect 2030 » : 125 M€, 15 agences, ~150 salariés.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Accompagner le passage de 11 à 15 agences avec des outils clients/agences unifiés (demande de cotation, suivi d'expéditions, espace client)",
+  "faits": [
+   {
+    "fait": "ED-Trans ouvre une 11e agence en métropole lilloise",
+    "url": "https://www.lejournaldesentreprises.com/breve/le-commissionnaire-de-transport-ed-trans-ouvre-une-11e-agence-en-metropole-lilloise-2140516",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Fusion des deux sociétés du groupe sous la bannière unique ED-Trans avec nouvelle identité visuelle ; objectif 100 M€ de CA ; l'entreprise indique avoir dû digitaliser son savoir-faire (« phygitalisation »)",
+    "url": "https://www.lejournaldesentreprises.com/article/en-plein-essor-lorganisateur-de-transport-ed-trans-vise-les-100-millions-deuros-de-chiffre-daffaires-2126179",
+    "source_type": "presse",
+    "date": "2025"
+   },
+   {
+    "fait": "CA d'environ 75 M€, objectif 100 M€ en 2028 (année de transmission prévue aux salariés)",
+    "url": "https://www.lejournaldesentreprises.com/article/lorganisateur-de-transports-ed-trans-vise-100-millions-deuros-de-chiffre-daffaires-en-2028-2058755",
+    "source_type": "presse",
+    "date": "2024"
+   },
+   {
+    "fait": "Feuille de route « Connect 2030 » : 125 M€ de CA, 15 agences et environ 150 salariés visés",
+    "url": "https://www.ed-trans.com/laissez-vous-transporter/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Un commissionnaire qui multiplie les agences (11 vers 15) et unifie deux entités sous une seule marque doit harmoniser l'expérience client entre agences : cotation, suivi, documents. Le nom même du plan (« Connect 2030 ») et la « phygitalisation » revendiquée indiquent que le digital fait partie de la stratégie.",
+  "opportunite": "Audit de l'outillage client existant puis espace client web/mobile : demande de cotation en ligne, suivi des expéditions, documents de transport (CMR, POD), tableau de bord par agence.",
+  "service": "Espace client / portail de cotation et suivi transport",
+  "signal_achat": "Nouvelle agence 2026 + plan de croissance Connect 2030",
+  "urgence": "moyenne : ouverture d'agence récente et plan à 15 agences en cours",
+  "score_detail": {
+   "besoin": 15,
+   "urgence": 15,
+   "fit": 16,
+   "capacite": 9,
+   "accessibilite": 7,
+   "preuves": 11
+  },
+  "score": 73,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lejournaldesentreprises.com/breve/le-commissionnaire-de-transport-ed-trans-ouvre-une-11e-agence-en-metropole-lilloise-2140516",
+   "https://www.lejournaldesentreprises.com/article/en-plein-essor-lorganisateur-de-transport-ed-trans-vise-les-100-millions-deuros-de-chiffre-daffaires-2126179",
+   "https://www.lejournaldesentreprises.com/article/lorganisateur-de-transports-ed-trans-vise-100-millions-deuros-de-chiffre-daffaires-en-2028-2058755",
+   "https://www.ed-trans.com/en/contact-us-new/",
+   "https://annuaire-entreprises.data.gouv.fr/entreprise/ed-trans-453080848",
+   "https://www.ed-trans.com/laissez-vous-transporter/"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "ED-Trans — 11e agence et plan Connect 2030",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu dans Le Journal des Entreprises l'ouverture de votre 11e agence en métropole lilloise, et votre objectif de 15 agences avec le plan Connect 2030.\n\nQuand le réseau s'étend, les demandes de cotation, le suivi des expéditions et les documents passent souvent par des canaux différents selon l'agence, ce qui complique la vision d'ensemble pour vos clients.\n\nChez Capmedia, nous concevons des espaces clients web et mobiles (cotation, suivi, documents) reliés aux outils existants.\n\nQui pilote ces sujets digitaux chez ED-Trans ? Un échange de 20 minutes vous conviendrait-il ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu l'ouverture de votre 11e agence près de Lille et le plan Connect 2030 à 15 agences. Je voulais savoir qui s'occupe chez vous des outils clients, comme la cotation et le suivi des expéditions.",
+  "relance": "Avec la marque unique ED-Trans, vos clients ont-ils aujourd'hui un seul point d'accès pour suivre leurs envois, quelle que soit l'agence ? C'est précisément ce que nous construisons.",
+  "pourquoi_demain": "ED-Trans vient d'ouvrir sa 11e agence et vise 15 agences avec un plan explicitement nommé « Connect 2030 » : le moment idéal pour parler outils clients unifiés.",
+  "equipe": "W03"
+ },
+ {
+  "id": "W06-001",
+  "entreprise": "Sergic (éseis Syndic)",
+  "siren": "428748909",
+  "secteur": "Administration de biens / syndic de copropriété",
+  "ville": "Villeneuve-d'Ascq",
+  "departement": "59",
+  "region": "Hauts-de-France",
+  "site_web": "https://www.sergic.com",
+  "email": "serviceclient@sergic.com",
+  "telephone": "03 28 35 07 12",
+  "source_email": "https://www.sergic.com/mentions-legales/",
+  "source_telephone": "https://www.sergic.com/agence-immobiliere/villeneuve-d-ascq-59170/",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Marque syndic rebaptisée éseis ; deux apps copropriétaires coexistent (éseis Syndic par Sergic et Sergic Viva Syndic)",
+  "site_existant": "oui",
+  "app_ios": "oui",
+  "app_android": "oui",
+  "besoin": "Fiabiliser et unifier l'app copropriétaires éseis, critiquée pour ses bugs",
+  "faits": [
+   {
+    "fait": "Avis 2026 sur l'app éseis Syndic : page d'accueil buguée « une erreur inattendue s'est produite », liens des notifications inopérants, temps de chargement très longs, app qui ne s'ouvre pas malgré les mises à jour",
+    "url": "https://justuseapp.com/fr/app/1282400959/%C3%83%C2%A9seis-syndic-par-sergic/reviews",
+    "source_type": "avis store (agrégateur)",
+    "date": "2026"
+   },
+   {
+    "fait": "Deux apps distinctes publiées sur l'App Store : « éseis Syndic par Sergic » et « Sergic Viva Syndic » ; notes de version mentionnant des corrections de connexion, d'accès messagerie et de fermetures inattendues",
+    "url": "https://apps.apple.com/fr/app/%C3%A9seis-syndic-par-sergic/id1282400959",
+    "source_type": "avis store",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Deuxième app Sergic Viva Syndic toujours en ligne",
+    "url": "https://apps.apple.com/fr/app/sergic-viva-syndic/id1121168368",
+    "source_type": "avis store",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "L'app est un canal central de la relation copropriétaires ; bugs récurrents et doublon d'apps alimentent l'insatisfaction et la charge du service client.",
+  "opportunite": "Audit technique et QA de l'app éseis (crash, erreurs d'accueil, deep links de notifications), puis plan de reprise/maintenance ou consolidation des deux apps.",
+  "service": "Audit technique + QA mobile / maintenance d'app existante",
+  "signal_achat": "App copropriétaires critiquée (bugs 2026)",
+  "urgence": "moyenne — avis négatifs 2026 récurrents malgré les mises à jour",
+  "score_detail": {
+   "besoin": 20,
+   "urgence": 12,
+   "fit": 15,
+   "capacite": 10,
+   "accessibilite": 5,
+   "preuves": 11
+  },
+  "score": 73,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://justuseapp.com/fr/app/1282400959/%C3%83%C2%A9seis-syndic-par-sergic/reviews",
+   "https://apps.apple.com/fr/app/%C3%A9seis-syndic-par-sergic/id1282400959",
+   "https://apps.apple.com/fr/app/sergic-viva-syndic/id1121168368",
+   "https://www.sergic.com/mentions-legales/",
+   "https://www.sergic.com/agence-immobiliere/villeneuve-d-ascq-59170/"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "À propos de l'app éseis Syndic",
+  "email_personnalise": "Bonjour,\n\nEn parcourant les avis 2026 de l'app éseis Syndic par Sergic, plusieurs copropriétaires décrivent le même point : une page d'accueil qui affiche « une erreur inattendue s'est produite », des liens de notifications qui n'ouvrent rien et des chargements très longs. Ces irritants reviennent souvent vers le service client.\n\nChez Capmedia, nous réalisons des audits techniques et de la QA d'apps mobiles existantes, puis nous pouvons en assurer la maintenance. Un diagnostic court permettrait d'identifier les causes des erreurs les plus citées.\n\nQui suit l'application côté digital chez vous ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai lu les avis 2026 de l'app éseis Syndic : plusieurs copropriétaires signalent une erreur à l'ouverture et des notifications qui ne mènent nulle part. Je voulais savoir qui s'occupe de l'application chez vous.",
+  "relance": "Je me permets de revenir vers vous sous un autre angle : deux apps copropriétaires (éseis Syndic et Sergic Viva Syndic) sont encore en ligne, ce qui peut semer la confusion ; nous pouvons vous aider à les consolider.",
+  "pourquoi_demain": "L'app copropriétaires d'un syndic de premier plan régional accumule en 2026 des avis sur des erreurs bloquantes, avec deux apps concurrentes encore en ligne.",
+  "equipe": "W06"
+ },
+ {
   "id": "V01-002",
   "entreprise": "Jack's Burgers",
   "siren": "953904463",
@@ -888,6 +1107,238 @@
   "relance": "Sur un autre angle : vos clients restaurateurs et collectivités pourraient suivre l'avancement de leur projet et déclarer une panne depuis un espace client unique Lanef. Est-ce une piste que vous avez déjà envisagée ?",
   "pourquoi_demain": "Le groupe vient de réaliser sa 3e acquisition (juin 2026) et doit maintenant faire fonctionner 9 agences ensemble.",
   "equipe": "V07"
+ },
+ {
+  "id": "W03-002",
+  "entreprise": "Bobet Matériel (Groupe Bobet)",
+  "siren": "379880933",
+  "secteur": "Distribution B2B d'équipements et fournitures pour l'industrie agroalimentaire",
+  "ville": "Champagné",
+  "departement": "72",
+  "region": "Pays de la Loire",
+  "site_web": "https://www.bobet-materiel.com",
+  "email": "infoweb@bobet-materiel.com",
+  "telephone": "02 43 74 33 74",
+  "source_email": "https://www.bobet-materiel.com/magasin/rsc/legal",
+  "source_telephone": "https://www.infobel.com/fr/france/bobet_materiel/champagne/FR112885091-0243743374/businessdetails.aspx",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Plateforme logistique de Champagné pleinement opérationnelle début avril 2026 (6 M€, extension de 4 500 m²) ; nouvelle agence à Mordelles (35) ; 3 nouveaux commerciaux, 41 au total en France.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Outiller une force de vente de 41 commerciaux et une nouvelle plateforme logistique : prise de commande terrain et espace client B2B",
+  "faits": [
+   {
+    "fait": "Plateforme logistique de Champagné pleinement opérationnelle début avril 2026 après 6 M€ d'investissement (extension de 4 500 m²), gestion des stocks modernisée",
+    "url": "https://www.lejournaldesentreprises.com/article/le-groupe-bobet-investit-dans-ses-capacites-logistiques-et-commerciales-pour-avancer-2140240",
+    "source_type": "presse",
+    "date": "2026-04"
+   },
+   {
+    "fait": "Ouverture d'une agence à Mordelles (Ille-et-Vilaine) et arrivée de 3 nouveaux commerciaux (41 au total sur le territoire national)",
+    "url": "https://www.lejournaldesentreprises.com/article/le-groupe-bobet-investit-dans-ses-capacites-logistiques-et-commerciales-pour-avancer-2140240",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Lancement du chantier de la nouvelle plateforme logistique « tant attendue »",
+    "url": "https://www.lejournaldesentreprises.com/article/en-sarthe-bobet-materiel-lance-son-chantier-de-nouvelle-plateforme-logistique-tant-attendue-2097617",
+    "source_type": "presse",
+    "date": "2025"
+   },
+   {
+    "fait": "Le site bobet-materiel.com comporte une boutique en ligne (/magasin, /shop)",
+    "url": "https://www.bobet-materiel.com/magasin/rsc/legal",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Avec 41 commerciaux itinérants, une nouvelle agence et un entrepôt modernisé, la valeur se joue sur la prise de commande terrain et la visibilité stock/délai côté client. La boutique en ligne existe déjà : l'ouverture porte plutôt sur un outil commercial mobile ou un espace client relié au nouveau stock.",
+  "opportunite": "Application mobile commerciale (catalogue, stock en temps réel, prise de commande, historique client) et/ou refonte de l'espace client B2B, connectés à l'ERP et à la nouvelle plateforme logistique.",
+  "service": "App mobile force de vente / espace client B2B",
+  "signal_achat": "Nouvelle plateforme logistique (avril 2026) + nouvelle agence + recrutement commerciaux",
+  "urgence": "moyenne-haute : investissements opérationnels depuis avril 2026, montée en charge commerciale en cours",
+  "score_detail": {
+   "besoin": 14,
+   "urgence": 16,
+   "fit": 15,
+   "capacite": 9,
+   "accessibilite": 7,
+   "preuves": 11
+  },
+  "score": 72,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lejournaldesentreprises.com/article/le-groupe-bobet-investit-dans-ses-capacites-logistiques-et-commerciales-pour-avancer-2140240",
+   "https://www.lejournaldesentreprises.com/article/en-sarthe-bobet-materiel-lance-son-chantier-de-nouvelle-plateforme-logistique-tant-attendue-2097617",
+   "https://www.bobet-materiel.com/magasin/rsc/legal",
+   "https://www.infobel.com/fr/france/bobet_materiel/champagne/FR112885091-0243743374/businessdetails.aspx",
+   "https://annuaire-entreprises.data.gouv.fr/etablissement/37988093300021",
+   "https://www.news-eco.com/communique/en-2025-le-groupe-bobet-confirme-sa-resilience-et-prepare-lavenir/"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Bobet Matériel — plateforme de Champagné et vos 41 commerciaux",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu dans Le Journal des Entreprises que votre plateforme logistique de Champagné tourne à plein depuis avril, avec une nouvelle agence à Mordelles et 41 commerciaux sur le terrain.\n\nQuand le stock est mieux géré mais que les commandes arrivent encore par plusieurs canaux, une partie du bénéfice se perd entre le commercial et l'entrepôt.\n\nCapmedia conçoit des applications de prise de commande et des espaces clients B2B reliés à l'ERP : catalogue, disponibilité, historique client.\n\nQui suit ce sujet chez vous ? Un échange de 20 minutes serait-il possible ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que votre plateforme logistique de Champagné est opérationnelle depuis avril et que vous avez ouvert une agence à Mordelles. Je voulais savoir qui s'occupe chez vous des outils de vos commerciaux et de la commande en ligne.",
+  "relance": "Vos 41 commerciaux voient-ils aujourd'hui le stock de la nouvelle plateforme en temps réel depuis leur téléphone ? C'est typiquement ce que nous mettons en place.",
+  "pourquoi_demain": "Bobet Matériel vient de mettre en service un entrepôt de 6 M€ et d'étoffer sa force de vente : c'est le moment où l'outil de commande devient le goulot.",
+  "equipe": "W03"
+ },
+ {
+  "id": "W08-002",
+  "entreprise": "Solestia (Solestia Cannes)",
+  "siren": "483617874",
+  "secteur": "Groupe hôtelier indépendant familial (4* Côte d'Azur)",
+  "ville": "Nice",
+  "departement": "06",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "site_web": "https://www.hotel-verlaine-cannes.com",
+  "email": "reception.verlaine@hgb-cannes.com",
+  "telephone": "04 93 43 30 80",
+  "source_email": "https://www.hotel-verlaine-cannes.com/en/contact-the-hotel/",
+  "source_telephone": "https://www.hotel-verlaine-cannes.com/en/contact-the-hotel/",
+  "contact_nom": "Rodolphe Chupin",
+  "contact_fonction": "Dirigeant",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Groupe familial fondé en octobre 2025 ; acquisition de 3 hôtels 4* à Cannes (Verlaine, Cézanne, Renoir) puis annonce de 4 établissements et un restaurant ; projets à Nice d'ici fin d'année.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Nouveau groupe issu de rachats : les hôtels utilisent encore l'adresse email du domaine hgb-cannes.com, identité groupe à construire en ligne",
+  "faits": [
+   {
+    "fait": "Solestia, nouveau groupe hôtelier indépendant, acquiert trois 4* à Cannes et prévoit des ouvertures à Nice d'ici la fin de l'année.",
+    "url": "https://www.lhotellerie-restauration.fr/actualite/solestia-nouveau-groupe-hotelier-independant-sur-la-cote-d-azur",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Le groupe annonce l'acquisition de quatre établissements et un restaurant sur la Côte d'Azur.",
+    "url": "https://www.journaldespalaces.com/communique-77480-france-ouvertures-d-hotels-rachats-groupes-cote-d-azur-le-groupe-hotelier-solestia-annonce-l-acquisition-de-quatre-etablissements-et-un-restaurant.html",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "La page contact de l'Hôtel Verlaine affiche l'email reception.verlaine@hgb-cannes.com (domaine différent du site hôtel et du nom Solestia).",
+    "url": "https://www.hotel-verlaine-cannes.com/en/contact-the-hotel/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Un groupe créé par rachats hérite de sites et d'outils disparates ; la construction d'une marque Solestia (site groupe, réservation directe, restaurant) est probablement à faire. Aucun site groupe n'est apparu dans les recherches (non vérifié).",
+  "opportunite": "Site groupe Solestia + harmonisation des sites des hôtels (Verlaine, Cézanne, Renoir) et du restaurant, réservation directe et maintenance.",
+  "service": "Création site groupe / refonte multi-sites hôtellerie",
+  "signal_achat": "Rachats d'hôtels 2025-2026, groupe nouvellement créé",
+  "urgence": "haute — groupe en phase de constitution, ouvertures Nice annoncées",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 16,
+   "fit": 15,
+   "capacite": 8,
+   "accessibilite": 5,
+   "preuves": 11
+  },
+  "score": 72,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lhotellerie-restauration.fr/actualite/solestia-nouveau-groupe-hotelier-independant-sur-la-cote-d-azur",
+   "https://www.journaldespalaces.com/communique-77480-france-ouvertures-d-hotels-rachats-groupes-cote-d-azur-le-groupe-hotelier-solestia-annonce-l-acquisition-de-quatre-etablissements-et-un-restaurant.html",
+   "https://www.tendancehotellerie.fr/articles-breves/communique-de-presse/25376-article/le-nouveau-groupe-hotelier-solestia-annonce-l-acquisition-de-3-hotels-a-cannes-dont-le-verlaine",
+   "https://www.hotel-verlaine-cannes.com/en/contact-the-hotel/",
+   "https://annuaire-entreprises.data.gouv.fr/entreprise/483617874"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Solestia — sites des hôtels Verlaine, Cézanne et Renoir",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu l'annonce de la création de Solestia et du rachat du Verlaine, du Cézanne et du Renoir à Cannes, avec des projets à Nice. En consultant le site du Verlaine, j'ai remarqué que l'adresse de contact est encore sur le domaine hgb-cannes.com.\n\nAprès des rachats, sites et outils restent souvent ceux des anciens propriétaires. Capmedia peut créer un site groupe et harmoniser ceux des hôtels et du restaurant, avec réservation directe et maintenance.\n\nPourriez-vous m'indiquer qui suit ce sujet chez Solestia ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que Solestia a repris le Verlaine, le Cézanne et le Renoir à Cannes. Sur le site du Verlaine, l'email de contact est encore sur le domaine hgb-cannes.com. Je voulais savoir qui s'occupe des sites web des hôtels au niveau du groupe.",
+  "relance": "Autre angle : avec les ouvertures prévues à Nice, un socle web commun permettrait de mettre en ligne chaque nouvel hôtel en quelques semaines. Est-ce prévu chez vous ?",
+  "pourquoi_demain": "Groupe tout juste constitué par rachats, qui doit bâtir sa présence en ligne avant ses ouvertures niçoises.",
+  "equipe": "W08"
+ },
+ {
+  "siren": "",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "contact_nom": "Jean-Baptiste Aldigé",
+  "contact_fonction": "Président de la SAS Nissa Rugby (démissionnaire en juillet 2026, annonce une réélection)",
+  "entreprise": "Nissa Rugby (SAS Nissa Rugby, ex-Stade Niçois Rugby)",
+  "secteur": "Club de rugby professionnel (Pro D2)",
+  "ville": "Nice",
+  "departement": "06",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "site_web": "https://nissarugby.fr/",
+  "email": "contact@stadenicois.fr",
+  "telephone": "04 93 21 62 63",
+  "source_email": "https://nissarugby.fr/contacts/",
+  "source_telephone": "https://monclubhouse.ffr.fr/clubs/nissa-rugby",
+  "actualite": "Promotion historique en Pro D2 (juin 2026, barrage gagné contre Mont-de-Marsan) ; double démission des présidents le 17 juillet 2026 sur fond de stade non conforme et de manque à gagner billetterie estimé à 1,5-2 M€.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Club fraîchement promu en Pro D2 qui doit professionnaliser billetterie, partenariats et outils digitaux avec un budget contraint.",
+  "faits": [
+   {
+    "fait": "Nissa Rugby, promu en Pro D2 après le barrage contre Mont-de-Marsan, voit ses deux présidents (association et SAS) démissionner le 17 juillet 2026 : stade jugé non conforme et tribune provisoire de 1 400 places abandonnée (perte estimée 1,5 à 2 M€).",
+    "url": "https://info.fr/nissa-rugby-demission-presidents-aldige-prevot-pro-d2/",
+    "source_type": "presse",
+    "date": "2026-07-17"
+   },
+   {
+    "fait": "France 3 Côte d'Azur : « Le Nissa Rugby, à peine promu en ProD2, est déjà dans la tourmente : son président emblématique démissionne ».",
+    "url": "https://france3-regions.franceinfo.fr/provence-alpes-cote-d-azur/alpes-maritimes/nice/le-nissa-rugby-a-peine-promu-en-prod2-est-deja-dans-la-tourmente-son-president-emblematique-demissionne-3388579.html",
+    "source_type": "presse",
+    "date": "2026-07"
+   },
+   {
+    "fait": "Jean-Baptiste Aldigé reste en fonction (statuts : 3 mois) et se dit « en voie d'être réélu ».",
+    "url": "https://www.rugbyscope.fr/nissa-rugby-jean-baptiste-aldige-se-dit-en-voie-detre-reelu-apres-sa-demission/",
+    "source_type": "presse",
+    "date": "2026-07"
+   },
+   {
+    "fait": "Le site nissarugby.fr (nouvelle marque) coexiste avec les emails @stadenicois.fr ; la page effectif est encore titrée « effectif Nissa Rugby 2024-2025 » dans les résultats de recherche.",
+    "url": "https://nissarugby.fr/effectif-equipe-professionnelle",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Un club promu qui perd des recettes billetterie (tribune abandonnée) doit maximiser chaque place vendue et chaque partenaire : outils digitaux de billetterie, espace partenaires/VIP et site à jour deviennent prioritaires, avec un changement de marque (Stade Niçois → Nissa Rugby) pas totalement achevé.",
+  "opportunite": "Refonte/consolidation du site nissarugby.fr (effectifs, calendrier Pro D2, billetterie), espace partenaires et hospitalités, éventuellement app club légère (abonnés, billets, contenus).",
+  "service": "Refonte site + espace partenaires / billetterie",
+  "signal_achat": "Montée en Pro D2 2026 + changement de marque + enjeu recettes",
+  "urgence": "moyenne : montée et crise de gouvernance datées de juin-juillet 2026 (<6 mois), mais gouvernance à stabiliser avant tout achat",
+  "score_detail": {
+   "besoin": 18,
+   "urgence": 15,
+   "fit": 15,
+   "capacite": 5,
+   "accessibilite": 8,
+   "preuves": 11
+  },
+  "sources": [
+   "https://info.fr/nissa-rugby-demission-presidents-aldige-prevot-pro-d2/",
+   "https://france3-regions.franceinfo.fr/provence-alpes-cote-d-azur/alpes-maritimes/nice/le-nissa-rugby-a-peine-promu-en-prod2-est-deja-dans-la-tourmente-son-president-emblematique-demissionne-3388579.html",
+   "https://www.rugbyscope.fr/nissa-rugby-jean-baptiste-aldige-se-dit-en-voie-detre-reelu-apres-sa-demission/",
+   "https://nissarugby.fr/contacts/",
+   "https://monclubhouse.ffr.fr/clubs/nissa-rugby"
+  ],
+  "objet_email": "Nissa Rugby — première saison en Pro D2",
+  "email_personnalise": "Bonjour,\n\nJ'ai suivi la montée de Nissa Rugby en Pro D2, puis l'abandon de la tribune provisoire de 1 400 places, avec un manque à gagner annoncé entre 1,5 et 2 M€. J'ai aussi remarqué que le site nissarugby.fr affiche encore certaines pages de la saison 2024-2025 et des adresses @stadenicois.fr.\n\nQuand chaque place et chaque partenaire comptent, un site à jour, une billetterie fluide et un espace partenaires simple aident à récupérer une partie de ces recettes. Chez Capmedia, nous concevons ce type d'outils web et mobiles.\n\nSeriez-vous ouvert à un échange de 15 minutes pour voir ce qui serait prioritaire pour cette saison ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu la montée de Nissa Rugby en Pro D2 et le manque à gagner lié à la tribune abandonnée. Votre site nissarugby.fr porte encore des pages de 2024-2025 ; je voulais savoir qui s'occupe du digital et de la billetterie chez vous.",
+  "relance": "Je reviens vers vous sous un autre angle : un espace partenaires en ligne (hospitalités, visibilité, suivi) peut aider à compenser une jauge réduite. Voulez-vous un exemple concret ?",
+  "pourquoi_demain": "Club promu en Pro D2 il y a trois mois, qui cherche des recettes hors billetterie et dont le digital n'a pas suivi la nouvelle marque.",
+  "id": "W05-001",
+  "equipe": "W05",
+  "date_verification": "2026-09-24",
+  "score": 72,
+  "niveau": "QUALIFIÉ"
  },
  {
   "entreprise": "Société Française de Garantie (SFG)",
@@ -1120,6 +1571,156 @@
   "equipe": "V08"
  },
  {
+  "siren": "793861089",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "56 000 €",
+  "contact_nom": "Anthony Marques",
+  "contact_fonction": "Directeur de la publication (mentions légales)",
+  "entreprise": "Nanterre 92 (SAS Nanterre 92)",
+  "secteur": "Club de basket professionnel (Betclic Élite)",
+  "ville": "Nanterre",
+  "departement": "92",
+  "region": "Île-de-France",
+  "site_web": "https://www.nanterre92.com/",
+  "email": "siege@nanterre92.com",
+  "telephone": "01 47 24 31 85",
+  "source_email": "https://www.nanterre92.com/club/club/",
+  "source_telephone": "https://www.nanterre92.com/club/club/",
+  "actualite": "Victor Wembanyama devient le premier actionnaire individuel (minoritaire) de la société Nanterre 92 via une ouverture de capital annoncée le 3 mars 2026 ; objectif affiché : structurer le club sur le long terme.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Club qui ouvre son capital pour se structurer et bénéficie d'une forte exposition médiatique : outils digitaux fans/billetterie/partenaires à muscler.",
+  "faits": [
+   {
+    "fait": "Victor Wembanyama devient actionnaire minoritaire de Nanterre 92 via une ouverture de capital (annonce L'Équipe du 3 mars 2026) ; l'association détenait jusque-là 100 % de la société.",
+    "url": "https://www.nanterre92.com/victor-wembanyama-devient-actionnaire-de-nanterre92/",
+    "source_type": "site officiel",
+    "date": "2026-03-03"
+   },
+   {
+    "fait": "Sport Business Club relaie l'entrée de Wembanyama au capital ; l'opération vise à structurer le club au-delà de l'apport financier.",
+    "url": "https://www.sportbusiness.club/basket-ball-victor-wembanyama-actionnaire-de-nanterre-92/",
+    "source_type": "presse",
+    "date": "2026-03"
+   },
+   {
+    "fait": "Les Echos : « Victor Wembanyama investit dans le club de Nanterre ».",
+    "url": "https://www.sportbusiness.club/les-echos-victor-wembanyama-investit-dans-le-club-de-nanterre/",
+    "source_type": "presse",
+    "date": "2026-03"
+   },
+   {
+    "fait": "Mentions légales : SAS Nanterre 92, capital 56 000 €, contact uniquement via formulaire ou courrier ; billetterie gérée par téléphone (01 85 78 60 45).",
+    "url": "https://www.nanterre92.com/mentions-legales/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "L'arrivée médiatique de Wembanyama au capital attire une nouvelle audience (y compris internationale) vers un club dont les moyens restent modestes (capital 56 k€) : capter ces fans (billetterie, contenus, boutique, partenaires) passe par des outils digitaux plus solides.",
+  "opportunite": "Audit et modernisation du parcours digital fan (site, billetterie, espace abonnés/partenaires), voire app club légère.",
+  "service": "Audit digital + refonte parcours fan/partenaires",
+  "signal_achat": "Ouverture de capital (Wembanyama actionnaire, mars 2026)",
+  "urgence": "moyenne : signal de mars 2026 (~6 mois), saison 2026-2027 qui démarre",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 14,
+   "fit": 15,
+   "capacite": 7,
+   "accessibilite": 8,
+   "preuves": 11
+  },
+  "sources": [
+   "https://www.nanterre92.com/victor-wembanyama-devient-actionnaire-de-nanterre92/",
+   "https://www.sportbusiness.club/basket-ball-victor-wembanyama-actionnaire-de-nanterre-92/",
+   "https://www.nanterre92.com/mentions-legales/",
+   "https://www.nanterre92.com/club/club/"
+  ],
+  "objet_email": "Nanterre 92 — l'effet Wembanyama côté digital",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu que Victor Wembanyama est entré au capital de Nanterre 92 en mars, avec l'objectif annoncé de structurer le club sur le long terme. Une telle annonce amène souvent de nouveaux publics vers le site, la billetterie et la boutique, parfois plus vite que les outils ne suivent.\n\nChez Capmedia, nous concevons et modernisons des sites, espaces abonnés/partenaires et applications mobiles. Nous pourrions regarder avec vous le parcours actuel d'un nouveau fan, de la découverte du club jusqu'à l'achat d'un billet.\n\nSeriez-vous d'accord pour un échange de 15 minutes ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu l'entrée de Victor Wembanyama au capital de Nanterre 92, avec l'objectif de structurer le club. Je voulais savoir qui s'occupe du digital et de la billetterie chez vous.",
+  "relance": "Autre angle : un espace partenaires en ligne (visibilité, hospitalités, suivi des contreparties) peut valoriser la nouvelle exposition du club auprès des sponsors. Voulez-vous un exemple ?",
+  "pourquoi_demain": "Le club vit une ouverture de capital très médiatisée pour se structurer, et la saison 2026-2027 démarre.",
+  "id": "W05-002",
+  "equipe": "W05",
+  "date_verification": "2026-09-24",
+  "score": 72,
+  "niveau": "QUALIFIÉ"
+ },
+ {
+  "id": "W07-001",
+  "entreprise": "Story France (enseigne de meubles Story)",
+  "siren": "345185151",
+  "secteur": "Distribution de meubles et décoration (réseau de franchise)",
+  "ville": "Rezé",
+  "departement": "44",
+  "region": "Pays de la Loire",
+  "site_web": "https://www.story.fr",
+  "email": "story-france@story.fr",
+  "telephone": "02 40 63 76 76",
+  "source_email": "https://shop.story.fr/mentions-legales",
+  "source_telephone": "https://shop.story.fr/mentions-legales",
+  "contact_nom": "Xavier Rondeau",
+  "contact_fonction": "Dirigeant, directeur de la publication",
+  "linkedin": "https://fr.linkedin.com/in/xavier-rondeau-45401a51",
+  "effectif": "",
+  "capital": "150 000 €",
+  "actualite": "Réseau d'environ 50 magasins franchisés, CA prévisionnel 60 M€ ; quatre ouvertures franchisées au premier semestre 2026 (Val-d'Oise, Tarn-et-Garonne, Loire, Vaucluse).",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Réseau en croissance (≈50 franchisés) avec site vitrine et e-shop séparés : outils réseau et parcours web-to-store à faire évoluer.",
+  "faits": [
+   {
+    "fait": "L'enseigne rezéenne Story (près de 50 magasins franchisés, 60 M€ de CA prévisionnel) ouvre quatre nouveaux magasins franchisés au premier semestre 2026.",
+    "url": "https://www.lejournaldesentreprises.com/breve/lenseigne-rezeenne-de-meubles-story-ouvre-quatre-nouveaux-magasins-franchises-au-premier-semestre-2137867",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Story vise la cinquantaine de magasins en 2026 ; ouvertures Herblay (décembre 2025) et Avignon (mars 2026).",
+    "url": "https://www.franchise-magazine.com/news-franchise/reseau-story-meuble-decoration-developpement-novembre-2025",
+    "source_type": "presse",
+    "date": "2025-11"
+   },
+   {
+    "fait": "Le site e-commerce (E-story, lancé en janvier 2023) est hébergé sur un sous-domaine distinct (shop.story.fr) du site vitrine story.fr ; l'enseigne s'appuie aussi sur une application de modélisation 3D et un catalogue à QR codes.",
+    "url": "https://shop.story.fr/mentions-legales",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Avec 4 ouvertures au S1 2026 et un réseau qui approche 50 franchisés, l'outillage numérique (site vitrine, e-shop sur sous-domaine distinct, outil 3D, lien vers les magasins) doit suivre le rythme ; un réseau de franchise de cette taille a souvent besoin d'un espace franchisés et d'un parcours web-to-store unifié.",
+  "opportunite": "Audit du parcours story.fr / shop.story.fr (prise de rendez-vous en magasin, stock local, fiches magasins) puis espace franchisés ou outil de remontée des leads vers les magasins.",
+  "service": "Audit technique et refonte/unification web-to-store + espace franchisés",
+  "signal_achat": "4 ouvertures franchisées S1 2026, objectif 50 magasins",
+  "urgence": "moyenne : ouvertures datées du premier semestre 2026, réseau en expansion continue",
+  "score_detail": {
+   "besoin": 14,
+   "urgence": 14,
+   "fit": 16,
+   "capacite": 8,
+   "accessibilite": 9,
+   "preuves": 11
+  },
+  "score": 72,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lejournaldesentreprises.com/breve/lenseigne-rezeenne-de-meubles-story-ouvre-quatre-nouveaux-magasins-franchises-au-premier-semestre-2137867",
+   "https://www.franchise-magazine.com/news-franchise/reseau-story-meuble-decoration-developpement-novembre-2025",
+   "https://shop.story.fr/mentions-legales",
+   "https://www.pappers.fr/entreprise/story-france-345185151"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Story — 4 ouvertures et le lien site / magasins",
+  "email_personnalise": "Bonjour Monsieur Rondeau,\n\nJ'ai lu dans Le Journal des Entreprises que Story ouvrait quatre magasins franchisés au premier semestre 2026, avec un réseau qui approche les 50 points de vente. J'ai aussi remarqué que la boutique en ligne vit sur un sous-domaine séparé (shop.story.fr) du site principal.\n\nQuand un réseau grandit à ce rythme, le passage du site au magasin (rendez-vous, projet 3D, contact du franchisé local) devient souvent le point sensible.\n\nChez Capmedia, nous concevons et reprenons des sites, espaces franchisés et outils métiers pour des réseaux de magasins. Seriez-vous d'accord pour un échange de 20 minutes sur la façon dont les demandes web arrivent aujourd'hui à vos franchisés ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que Story ouvrait quatre magasins franchisés au premier semestre 2026. Le site vitrine et la boutique en ligne sont sur deux adresses séparées, et je voulais savoir qui s'occupe chez vous des outils web et du lien avec les franchisés.",
+  "relance": "Je reviens vers vous sous un autre angle : avec bientôt 50 franchisés, un espace réseau unique (leads, supports, catalogue) évite beaucoup d'échanges par email ; est-ce un sujet chez Story ?",
+  "pourquoi_demain": "Story enchaîne les ouvertures franchisées en 2026 et publie une adresse email et un dirigeant identifiés, donc une porte d'entrée directe.",
+  "equipe": "W07"
+ },
+ {
   "id": "U05-001",
   "entreprise": "Monky (groupe de complexes de loisirs indoor)",
   "siren": "",
@@ -1197,6 +1798,94 @@
   "relance": "Autre angle : une app Monky commune à tous les parcs, avec des points de fidélité utilisables d'une ville à l'autre, pourrait faire venir aux ouvertures les clients des parcs existants. Voulez-vous que je vous envoie un exemple ?",
   "pourquoi_demain": "Monky ouvre Niort dans environ deux mois et annonce d'autres parcs : c'est le moment où les outils de réservation du réseau sont revus.",
   "equipe": "U05"
+ },
+ {
+  "id": "W01-001",
+  "entreprise": "Les Halles de la Transition (L'Agence des Halles de la Transition)",
+  "siren": "919296293",
+  "secteur": "Restauration / tiers-lieu (cantine bio, café-bar, coworking, événements) — franchiseur en lancement",
+  "ville": "Toulouse",
+  "departement": "31",
+  "region": "Occitanie",
+  "site_web": "https://www.leshallesdelatransition.com",
+  "email": "admin@leshallesdelatransition.com",
+  "telephone": "05 32 59 05 97",
+  "source_email": "https://www.leshallesdelatransition.com/politique-de-confidentialite",
+  "source_telephone": "https://www.pagesjaunes.fr/pros/61757916",
+  "contact_nom": "Chloé Cohen / Mélanie Moresve",
+  "contact_fonction": "Co-fondatrices",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Levée de près d'1 M€ (Banque des Territoires, Crédit Coopératif, Caisse d'Épargne, la NEF, privés) pour lancer un réseau en franchise : 3 établissements annoncés début 2027 (2 en Occitanie, 1 dans le Nord), ~50 visés d'ici 2030.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Passage d'un site unique à un réseau franchisé (3 ouvertures début 2027) : outillage réseau à construire (sites/pages par établissement, réservation d'espaces et d'événements, espace franchisés).",
+  "faits": [
+   {
+    "fait": "Les Halles de la Transition se lancent en franchise",
+    "url": "https://lexpress-franchise.com/actualites/les-halles-de-la-transition-se-lancent-en-franchise/",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Près d'un million d'euros levés pour ouvrir 50 franchises partout en France",
+    "url": "https://www.lejournaltoulousain.fr/occitanie/haute-garonne/toulouse/pres-un-million-euros-leves-concept-toulousain-ouvrir-50-franchises-partout-france-389519/",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Trois établissements annoncés pour début 2027 (deux en Occitanie, un dans le Nord), une cinquantaine d'ici 2030",
+    "url": "https://gazette-du-midi.fr/au-sommaire/entreprises/depuis-toulouse-les-halles-de-la-transition-visent-50-tiers-lieux-franchises-d",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Lieu pilote de 350 m² au 7 rue du Canon d'Arcole depuis 2022, ~30 000 visiteurs/an, équilibre atteint dès la 2e année",
+    "url": "https://www.touleco.fr/Les-Halles-de-la-Transition-le-pari-d-une-franchise-a-impact,53631",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Entité commerciale dédiée : L'AGENCE DES HALLES DE LA TRANSITION (SIREN 919296293), distincte de l'association du tiers-lieu (SIREN 912780079)",
+    "url": "https://www.pappers.fr/entreprise/lagence-des-halles-de-la-transition-919296293",
+    "source_type": "annuaire",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Un franchiseur qui ouvre 3 lieux multi-activités (restauration, coworking, salles, événements) en quelques mois doit dupliquer sa présence en ligne et ses processus de réservation/billetterie par établissement ; la levée récente donne le budget pour le faire avant les ouvertures de début 2027.",
+  "opportunite": "Plateforme web multi-sites (une page par Halle), module de réservation coworking/salles/événements et espace franchisés (procédures, reporting, supports marketing), prêt pour les ouvertures de début 2027.",
+  "service": "Site multi-établissements + outil de réservation / espace franchisés",
+  "signal_achat": "Levée ~1 M€ + lancement du réseau en franchise (3 ouvertures début 2027)",
+  "urgence": "moyenne — ouvertures annoncées début 2027 : les outils doivent être prêts d'ici fin 2026",
+  "score_detail": {
+   "besoin": 15,
+   "urgence": 15,
+   "fit": 16,
+   "capacite": 7,
+   "accessibilite": 8,
+   "preuves": 10
+  },
+  "score": 71,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://lexpress-franchise.com/actualites/les-halles-de-la-transition-se-lancent-en-franchise/",
+   "https://www.lejournaltoulousain.fr/occitanie/haute-garonne/toulouse/pres-un-million-euros-leves-concept-toulousain-ouvrir-50-franchises-partout-france-389519/",
+   "https://gazette-du-midi.fr/au-sommaire/entreprises/depuis-toulouse-les-halles-de-la-transition-visent-50-tiers-lieux-franchises-d",
+   "https://www.vie-economique.com/actualites/les-halles-de-la-transition-levent-1-million-deuros-pour-lancer-leur-franchise/",
+   "https://www.touleco.fr/Les-Halles-de-la-Transition-le-pari-d-une-franchise-a-impact,53631",
+   "https://www.pappers.fr/entreprise/lagence-des-halles-de-la-transition-919296293",
+   "https://www.leshallesdelatransition.com/politique-de-confidentialite",
+   "https://www.pagesjaunes.fr/pros/61757916"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Les Halles de la Transition — outils pour les ouvertures 2027",
+  "email_personnalise": "Bonjour Madame Cohen, Madame Moresve,\n\nJ'ai lu que Les Halles de la Transition ont levé près d'un million d'euros et prévoient trois ouvertures en franchise début 2027. Passer d'un lieu à plusieurs demande souvent de dupliquer rapidement la réservation des salles et du coworking, la billetterie des événements et l'information des franchisés.\n\nChez Capmedia, nous concevons des sites multi-établissements et des outils métier (réservation, espace franchisés) pour des réseaux en croissance. Je peux vous montrer en 20 minutes ce qui pourrait être prêt avant vos premières ouvertures.\n\nSeriez-vous disponibles pour un court échange dans les prochaines semaines ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu votre levée de près d'un million d'euros et les trois Halles annoncées en franchise pour début 2027. Je voulais savoir qui s'occupe chez vous des outils numériques du réseau (site, réservations, espace franchisés).",
+  "relance": "Pour vos futurs franchisés, un espace en ligne unique (procédures, supports, reporting) évite de tout gérer par e-mail dès la deuxième ouverture : je peux vous envoyer un exemple concret si cela vous intéresse.",
+  "pourquoi_demain": "Réseau fraîchement financé qui doit outiller trois ouvertures début 2027 et n'a pas encore d'infrastructure numérique multi-sites visible.",
+  "equipe": "W01"
  },
  {
   "id": "U08-001",
@@ -1289,6 +1978,228 @@
   "relance": "Autre piste : un petit outil pour les vendeuses de Toulouse et du Marais, qui leur montre le stock en ligne et l'historique de la cliente. Voulez-vous que je vous montre à quoi cela peut ressembler ?",
   "pourquoi_demain": "Une marque à 15 M€ qui vient d'ouvrir sa deuxième boutique avec une app template est exactement au moment où l'omnicanal sur mesure devient rentable.",
   "equipe": "U08"
+ },
+ {
+  "id": "W04-002",
+  "entreprise": "Deltafluid",
+  "siren": "437969538",
+  "secteur": "Industrie – instruments de mesure de débit, température et régulation de fluides",
+  "ville": "Lacq",
+  "departement": "64",
+  "region": "Nouvelle-Aquitaine",
+  "site_web": "https://www.deltafluid.fr",
+  "email": "delta64@deltafluid.fr",
+  "telephone": "05 59 30 85 20",
+  "source_email": "https://www.deltafluid.fr/fr/page/mentions-legales",
+  "source_telephone": "https://www.deltafluid.fr/fr/page/mentions-legales",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "",
+  "effectif": "26 salariés",
+  "capital": "",
+  "actualite": "2026 : investissement de 1,7 M€ pour doubler la surface à Lacq (+1 000 m² ateliers et bureaux), montée en puissance dans le nucléaire ; filiale du groupe Alfeor (Otium Capital)",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Objectif affiché de traçabilité totale du cycle de production pour le nucléaire : outil de traçabilité / suivi de fabrication sur mesure",
+  "faits": [
+   {
+    "fait": "La PME béarnaise double sa surface à Lacq (1,7 M€, +1 000 m²) et vise une traçabilité totale et une sécurité complète du cycle de production pour accélérer dans le nucléaire",
+    "url": "https://www.lejournaldesentreprises.com/article/la-pme-bearnaise-deltafluid-double-sa-surface-lacq-et-accelere-sa-montee-en-puissance-dans-le-2142897",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Coordonnées publiées : delta64@deltafluid.fr, +33 (0)5 59 30 85 20, RD 817 Chemin Les Augas 64170 Lacq",
+    "url": "https://www.deltafluid.fr/fr/page/mentions-legales",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Deltafluid rachetée par Alfeor (Otium Capital)",
+    "url": "https://www.otiumcapital.com/actualites/alfeor-franchit-une-nouvelle-etape-strategique-avec-lacquisition-de-deltafluid/",
+    "source_type": "presse",
+    "date": ""
+   }
+  ],
+  "inference": "Les exigences documentaires du nucléaire (dossiers de fabrication, traçabilité pièce par pièce) sont souvent gérées sur papier/Excel dans une PME de 26 personnes ; l'extension des ateliers est le moment de les outiller.",
+  "opportunite": "Application de traçabilité de fabrication (saisie atelier sur tablette, dossiers de suivi, export PDF qualité) connectée à l'existant.",
+  "service": "Outil métier de traçabilité / suivi de production",
+  "signal_achat": "Extension 1,7 M€ + objectif de traçabilité totale (nucléaire)",
+  "urgence": "moyenne – projet d'extension 2026 en cours, date exacte de l'article non confirmée",
+  "score_detail": {
+   "besoin": 16,
+   "urgence": 14,
+   "fit": 14,
+   "capacite": 7,
+   "accessibilite": 9,
+   "preuves": 11
+  },
+  "score": 71,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lejournaldesentreprises.com/article/la-pme-bearnaise-deltafluid-double-sa-surface-lacq-et-accelere-sa-montee-en-puissance-dans-le-2142897",
+   "https://www.deltafluid.fr/fr/page/mentions-legales",
+   "https://annuaire-entreprises.data.gouv.fr/entreprise/437969538"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Deltafluid — traçabilité de production à Lacq",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu dans Le Journal des Entreprises que Deltafluid double sa surface à Lacq et vise une traçabilité totale du cycle de production pour le nucléaire.\n\nDans une équipe de 26 personnes, ce niveau d'exigence repose souvent sur des fichiers et des dossiers papier qui prennent du temps à tenir à jour.\n\nCapmedia développe des outils simples de suivi de fabrication (saisie en atelier, dossiers de traçabilité générés automatiquement). Nous pourrions regarder ensemble comment vous gérez ces dossiers aujourd'hui.\n\nSeriez-vous disponible pour un court échange dans les prochaines semaines ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que Deltafluid double sa surface à Lacq et vise une traçabilité totale de sa production pour le nucléaire. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Les nouveaux ateliers vont changer vos flux : c'est souvent le bon moment pour passer les dossiers de fabrication sur tablette. Voulez-vous un exemple concret ?",
+  "pourquoi_demain": "Deltafluid agrandit ses ateliers en 2026 et affiche publiquement un objectif de traçabilité totale : un outil métier sur mesure répond exactement à ce point.",
+  "equipe": "W04"
+ },
+ {
+  "id": "W04-003",
+  "entreprise": "Maviflex",
+  "siren": "328025721",
+  "secteur": "Industrie – fabrication de portes industrielles souples et rapides",
+  "ville": "Décines-Charpieu",
+  "departement": "69",
+  "region": "Auvergne-Rhône-Alpes",
+  "site_web": "https://www.maviflex.com",
+  "email": "maviflex@maviflex.com",
+  "telephone": "04 72 15 88 88",
+  "source_email": "https://www.maviflex.com/en/legal-disclaimer/",
+  "source_telephone": "https://www.maviflex.com/en/legal-disclaimer/",
+  "contact_nom": "Anne-Sophie Panseri",
+  "contact_fonction": "Représentante légale (dirigeante)",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "1 677 500 €",
+  "actualite": "2026 : poursuite d'un plan de modernisation de 14 M€ pour doubler la production (objectif 10 000 portes/an et 50 M€ de CA en 2030), 1,5 à 2 M€ prévus en 2026-2027 pour automatiser l'atelier d'assemblage",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Connexion des machines au CRM et digitalisation du process industriel en cours : développements sur mesure (portail revendeurs, dashboards, interfaces atelier)",
+  "faits": [
+   {
+    "fait": "Maviflex poursuit son plan de transformation pour doubler sa production et prévoit 1,5 à 2 M€ en 2026-2027 pour rénover et automatiser son atelier d'assemblage",
+    "url": "https://www.lejournaldesentreprises.com/article/maviflex-poursuit-son-plan-de-transformation-pour-doubler-sa-production-2142978",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Le plan vise à transformer tout le process industriel avec de nouvelles machines et des technologies numériques pour connecter les machines au CRM ; showroom et espaces de formation revendeurs",
+    "url": "https://www.lyon-entreprises.com/actualites/article/maviflex-modernise-son-site-de-decines-et-renforce-son-outil-industriel",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Transformation numérique accompagnée par Visiativ (témoignage)",
+    "url": "https://www.visiativ.com/temoignage/maviflex-transformation-numerique/",
+    "source_type": "site prestataire",
+    "date": ""
+   }
+  ],
+  "inference": "Un réseau de revendeurs formés sur site et un objectif de doublement des volumes appellent des outils de configuration/devis, de suivi de commande et de pilotage ; l'intégrateur ERP/CRM en place laisse souvent la couche sur mesure à d'autres.",
+  "opportunite": "Portail revendeurs (configurateur, suivi de commandes, SAV) et dashboards de production connectés au CRM existant.",
+  "service": "Portail revendeurs / espace client et dashboards",
+  "signal_achat": "Plan de modernisation 14 M€, nouvelle tranche 2026-2027",
+  "urgence": "moyenne – tranche d'investissement 2026-2027 annoncée, partenaire Visiativ déjà en place",
+  "score_detail": {
+   "besoin": 15,
+   "urgence": 14,
+   "fit": 13,
+   "capacite": 9,
+   "accessibilite": 8,
+   "preuves": 12
+  },
+  "score": 71,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lejournaldesentreprises.com/article/maviflex-poursuit-son-plan-de-transformation-pour-doubler-sa-production-2142978",
+   "https://www.lyon-entreprises.com/actualites/article/maviflex-modernise-son-site-de-decines-et-renforce-son-outil-industriel",
+   "https://www.maviflex.com/en/legal-disclaimer/",
+   "https://www.visiativ.com/temoignage/maviflex-transformation-numerique/"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Maviflex — vos revendeurs et le doublement de production",
+  "email_personnalise": "Bonjour Madame Panseri,\n\nJ'ai lu que Maviflex poursuit son plan de transformation pour doubler sa production, avec une nouvelle tranche de 1,5 à 2 M€ sur l'atelier d'assemblage et des machines connectées au CRM.\n\nQuand les volumes doublent, les échanges avec les revendeurs (devis, suivi de commande, SAV) deviennent souvent le point de friction suivant.\n\nCapmedia réalise des portails et tableaux de bord sur mesure qui se branchent sur les outils existants. Je vous propose un échange de 20 minutes pour voir si un portail revendeurs est un sujet pour vous.\n\nQui suit ces questions chez Maviflex ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que Maviflex vise à doubler sa production, avec des machines connectées à votre CRM. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Autre angle : un tableau de bord de production lisible en atelier et en direction, alimenté par vos machines connectées. Est-ce un chantier prévu ?",
+  "pourquoi_demain": "Maviflex engage une nouvelle tranche 2026-2027 de son plan de 14 M€ avec machines connectées au CRM : la couche portail/dashboard sur mesure est le prochain maillon.",
+  "equipe": "W04"
+ },
+ {
+  "id": "W08-001",
+  "entreprise": "Assas Hotels (Assas Asset Management SAS)",
+  "siren": "",
+  "secteur": "Groupe hôtelier indépendant (montagne, urbain, littoral)",
+  "ville": "La Clusaz",
+  "departement": "74",
+  "region": "Auvergne-Rhône-Alpes",
+  "site_web": "https://www.assas-hotels.com",
+  "email": "commercial@assas-am.com",
+  "telephone": "04 58 10 10 18",
+  "source_email": "https://www.assas-hotels.com/en/contact-us/",
+  "source_telephone": "https://www.assas-hotels.com/en/contact-us/",
+  "contact_nom": "Romain Trollet",
+  "contact_fonction": "Président-fondateur",
+  "linkedin": "https://fr.linkedin.com/company/assas-am",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Ouverture de la Maison Barbillon (Grenoble, 3*) le 11 janvier 2026 ; ouverture d'un 4* à Cannes prévue au printemps 2026 ; 14 établissements (Chamonix, La Plagne, La Clusaz, Val Thorens, Les Ménuires, Flaine, Grenoble, Banyuls, Paris, Wengen).",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Parc en croissance rapide avec des sites web éclatés (site groupe + sites propres par hôtel) et un recrutement marketing/digital en cours",
+  "faits": [
+   {
+    "fait": "La Maison Barbillon, premier établissement du groupe à Grenoble, a ouvert le 11 janvier 2026 (créé par Romain Trollet, président-fondateur).",
+    "url": "https://www.lhotellerie-restauration.fr/actualite/la-maison-barbillon-premier-etablissement-du-groupe-assas-hotel-a-grenoble",
+    "source_type": "presse",
+    "date": "2026-01"
+   },
+   {
+    "fait": "La Maison Barbillon dispose de son propre site (maisonbarbillon.com) distinct de la page hôtel sur assas-hotels.com.",
+    "url": "https://maisonbarbillon.com/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Le groupe gère 14 établissements et annonce un 4* à Cannes pour le printemps 2026.",
+    "url": "https://www.assas-hotels.com/en/our-hotels/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Offre « Chargé de Marketing et Digital (H/F) » publiée par Assas Hotels à Chamonix ; 13 offres d'emploi ouvertes.",
+    "url": "https://jobs-stages.letudiant.fr/entreprises/assas-hotels/offres/charge-de-marketing-et-digital-h-f-assas-hotels-chamonix-mont-blanc-france-1",
+    "source_type": "offre d'emploi",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Avec 2 ouvertures en 2026 et des sites par établissement, le groupe doit multiplier les mises en ligne et la maintenance de sites ; le recrutement d'un profil marketing/digital montre que le sujet est structuré en interne mais sans équipe de développement.",
+  "opportunite": "Socle web commun multi-hôtels (charte, moteur de réservation intégré, pages séminaires/groupes) déclinable à chaque ouverture, + maintenance.",
+  "service": "Refonte / plateforme multi-sites hôtellerie",
+  "signal_achat": "Ouvertures Grenoble (janv. 2026) et Cannes (printemps 2026)",
+  "urgence": "moyenne — ouvertures récentes, rythme de croissance soutenu",
+  "score_detail": {
+   "besoin": 15,
+   "urgence": 14,
+   "fit": 15,
+   "capacite": 9,
+   "accessibilite": 7,
+   "preuves": 11
+  },
+  "score": 71,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.lhotellerie-restauration.fr/actualite/la-maison-barbillon-premier-etablissement-du-groupe-assas-hotel-a-grenoble",
+   "https://www.assas-hotels.com/en/contact-us/",
+   "https://www.assas-hotels.com/en/our-hotels/",
+   "https://maisonbarbillon.com/",
+   "https://jobs-stages.letudiant.fr/entreprises/assas-hotels/offres/charge-de-marketing-et-digital-h-f-assas-hotels-chamonix-mont-blanc-france-1"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Assas Hotels — un site par ouverture ?",
+  "email_personnalise": "Bonjour,\n\nJ'ai vu l'ouverture de la Maison Barbillon à Grenoble en janvier, puis le projet cannois du printemps : la Maison Barbillon a son propre site, à côté de la page sur assas-hotels.com. Avec 14 établissements, chaque ouverture peut devenir un nouveau chantier web à créer puis à maintenir.\n\nChez Capmedia, nous construisons des socles web communs : une base unique, déclinée par hôtel, avec réservation, pages groupes/séminaires et maintenance incluse.\n\nSeriez-vous d'accord pour un échange de 15 minutes afin de voir comment vous gérez aujourd'hui les sites de vos hôtels ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu l'ouverture de la Maison Barbillon à Grenoble et le projet de Cannes. La Maison Barbillon a son propre site, distinct de celui du groupe. Je voulais savoir qui s'occupe des sites web des hôtels chez vous.",
+  "relance": "Je reviens vers vous sous un autre angle : pour vos séminaires et groupes (groupes@assas-hotels.com), un formulaire de demande commun à tous les hôtels pourrait centraliser les demandes. Est-ce un sujet chez vous ?",
+  "pourquoi_demain": "Un groupe de 14 hôtels qui ouvre deux adresses en 2026 et recrute en digital, avec des sites déjà éclatés.",
+  "equipe": "W08"
  },
  {
   "id": "T05-001",
@@ -1447,6 +2358,78 @@
   "relance": "Je me permets de revenir vers vous : les mêmes corrections pourraient profiter aussi à vos apps France Taxi et Radio Taxis Saint Etienne. Un audit rapide de l'ensemble vous intéresserait-il ?",
   "pourquoi_demain": "Leur app grand public est notée 1,6/5 et le dirigeant est directement joignable.",
   "equipe": "U04"
+ },
+ {
+  "id": "W06-002",
+  "entreprise": "Mutuelle Générale des Cheminots (Mutuelle MGC)",
+  "siren": "775678550",
+  "secteur": "Mutuelle santé",
+  "ville": "Paris",
+  "departement": "75",
+  "region": "Île-de-France",
+  "site_web": "https://www.mutuellemgc.fr",
+  "email": "service.developpement@m-g-c.com",
+  "telephone": "01 40 78 57 10",
+  "source_email": "https://www.mutuellemgc.fr/mentions-legales/",
+  "source_telephone": "https://www.mutuellemgc.fr/mentions-legales/",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Mutuelle historique des cheminots désormais ouverte à tous ; app « Mutuelle MGC – Espace Adhérent »",
+  "site_existant": "oui",
+  "app_ios": "oui",
+  "app_android": "inconnu",
+  "besoin": "Stabiliser l'authentification et l'affichage des remboursements de l'app adhérents",
+  "faits": [
+   {
+    "fait": "Avis App Store : bugs multiples liés à l'identification, app jugée obsolète, rafraîchissements nécessaires pour afficher les remboursements, identifiants non mémorisés",
+    "url": "https://apps.apple.com/fr/app/mutuelle-mgc-espace-adh%C3%A9rent/id1480854694?see-all=reviews&platform=iphone",
+    "source_type": "avis store",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Signalement adhérent : « Authentification en cours » pendant plus de 2 minutes puis « Erreur : une erreur inconnue est survenue »",
+    "url": "https://forums.justuseapp.com/fr/post/I27JQGAAVG/inposible-de-se-connecter",
+    "source_type": "forum d'avis d'apps",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Page de suivi de pannes dédiée à l'app Mutuelle MGC en 2026",
+    "url": "https://www.totalbug.com/mutuelle-mgc/",
+    "source_type": "suivi de pannes",
+    "date": "2026"
+   }
+  ],
+  "inference": "Les échecs de connexion sur l'espace adhérent mobile dégradent l'expérience d'une mutuelle qui cherche à recruter au-delà de son public cheminot.",
+  "opportunite": "Audit de l'app adhérents (parcours d'authentification, gestion de session, affichage remboursements) puis refonte ciblée ou maintenance évolutive.",
+  "service": "Audit technique + QA mobile / modernisation d'app",
+  "signal_achat": "App adhérents critiquée (connexion)",
+  "urgence": "moyenne — plaintes récurrentes sur la connexion, pas de date précise",
+  "score_detail": {
+   "besoin": 19,
+   "urgence": 10,
+   "fit": 16,
+   "capacite": 9,
+   "accessibilite": 6,
+   "preuves": 11
+  },
+  "score": 71,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://apps.apple.com/fr/app/mutuelle-mgc-espace-adh%C3%A9rent/id1480854694?see-all=reviews&platform=iphone",
+   "https://forums.justuseapp.com/fr/post/I27JQGAAVG/inposible-de-se-connecter",
+   "https://www.totalbug.com/mutuelle-mgc/",
+   "https://www.mutuellemgc.fr/mentions-legales/"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "À propos de l'app Mutuelle MGC – Espace Adhérent",
+  "email_personnalise": "Bonjour,\n\nDans les avis de l'app Mutuelle MGC – Espace Adhérent, plusieurs adhérents décrivent un blocage sur « Authentification en cours » suivi d'une « erreur inconnue », ainsi que des remboursements qui ne s'affichent qu'après plusieurs rafraîchissements. Pour une mutuelle ouverte à de nouveaux publics, c'est souvent le premier contact numérique.\n\nCapmedia réalise des audits et de la QA d'apps mobiles existantes, et en reprend la maintenance si besoin. Un diagnostic du parcours de connexion serait un point de départ simple.\n\nÀ qui faudrait-il en parler chez vous ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu plusieurs avis sur l'app Mutuelle MGC – Espace Adhérent. Des adhérents restent bloqués sur « Authentification en cours » puis obtiennent une erreur inconnue. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Autre angle : nous pouvons mettre en place une campagne de tests sur les parcours clés (connexion, remboursements, documents) avant votre prochaine mise à jour.",
+  "pourquoi_demain": "Une mutuelle de taille moyenne dont l'app adhérents échoue sur la connexion, avec un email de service développement publié.",
+  "equipe": "W06"
  },
  {
   "id": "U03-001",
