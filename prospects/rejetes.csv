@@ -289,3 +289,79 @@ Poulaillon (Poulaillon SA, Wittelsheim, 68);besoin;"8 ouvertures 2026 mais bouti
 Eleni Group (Paris 9e);email;aucun email complet publié dans les résultats (formulaire contact uniquement);X08
 Maison Bécam (Bouchemaine, 49);besoin;click & collect (commande.maisonbecam.com), app marque blanche Local Tomorrow et programme fidélité déjà en place;X08
 Fabioli (Fontaines-sur-Saône / Villeurbanne, 69);email;"seul email vu : rh@fabioli.fr (RH, source incertaine) ; commande Fabioli Presto et réservation en ligne déjà en place";X08
+Mutuelle Just (Valenciennes);score;"Email contact@just.fr et tél. 0 809 546 000 trouvés, avis App Store (connexion aléatoire, upload) mais non datés ; crise de gouvernance/solvabilité 2026 limite la capacité → score 68";Y01
+AMPLI Mutuelle;besoin;App notée 4,6/5 sur l'App Store, problèmes signalés anciens (2022) : besoin non démontré;Y01
+Prévalois (app MWM – Ma Web Mutuelle);email;Seul email trouvé : prestations@prevalois.fr (service de gestion), source mêlée, inadapté;Y01
+mySofie;privée;Insurtech éditrice de sa propre app (métier numérique, concurrent potentiel);Y01
+Mobilité Mutuelle;score;Membre du groupe Malakoff Humanis (grand groupe exclu);Y01
+La Mutuelle Générale;score;3e mutuelle de France (1,5 M d'assurés) : grand groupe inaccessible;Y01
+KLESIA Mut'Vous;score;Groupe de protection sociale KLESIA : grand groupe inaccessible;Y01
+AÉSIO mutuelle;score;Groupe Aéma (avec Macif) : grand groupe exclu;Y01
+La Mutuelle Familiale / Mutuelle Entrenous;besoin;Apps en marque blanche Mutlab;Y01
+Mutuelle Intériale;contrôle qualité;QA : seule adresse = presse (inadaptée) et page source non confirmée;Y01
+Iziwork;privée;Startup d'intérim digital dont le métier repose sur sa propre plateforme tech (équipe produit interne), hors cible;Y02
+Mistertemp Group;besoin;"Pure player digital de l'intérim avec équipe tech interne ; un seul avis justuseapp non daté";Y02
+Staffme;privée;Plateforme freelance/intérim tech-native (éditeur de sa propre app), concurrent plutôt que client;Y02
+Gojob;privée;Pure player tech de l'intérim, développe sa propre plateforme;Y02
+Groupe Sovitrat (app mySovitrat / Sov');besoin;"Aucun avis négatif ou panne 2026 trouvé ; app refondue récemment, package « temwo » (probable solution tierce)";Y02
+Groupe Interaction (app Interaction Groupe);besoin;Aucune panne ni avis négatif documenté dans les résultats;Y02
+Groupe Adéquat (MyAdéquat Intérim);besoin;App récente décrite positivement, aucun incident sourcé;Y02
+Samsic Emploi;besoin;App bien notée, filiale du groupe Samsic (grand groupe);Y02
+Ohm Énergie;email;"Seul email publié : service-client@ohm-energie.com (adresse SAV, inadaptée) ; en outre acteur tech avec équipe interne";Y02
+Alterna énergie;besoin;Avis globalement bons (4,5/5), seule remarque « interface peu intuitive » sans panne datée;Y02
+Cercles de la Forme;besoin;App en marque blanche ClubConnect (support contact@clubconnect.fr);Y02
+Fitness Park;privée;Réseau national de ~300 clubs, hors cible « salle de sport régionale », pas de piste de contact;Y02
+Auto-ecole.net;privée;Éditeur de logiciel pour auto-écoles : concurrent, pas client;Y02
+Stych;privée;Auto-école en ligne tech-native, développe sa propre plateforme;Y02
+Pass Rousseau (Codes Rousseau);besoin;Éditeur de contenus/outils de code : app cœur de métier gérée en interne, hors cible;Y02
+Wecasa;privée;Plateforme tech-native de services à domicile avec équipe produit interne;Y02
+Kangourou Kids (SAS, Rennes, SIREN 529190787);email;"Besoin réel (avis store : double compte intervenant, erreurs de comptage d'heures ; app réalisée par Mobizel) mais aucun email ni téléphone du siège trouvé dans les résultats";Y02
+Babychou / Family Sphere;besoin;Rachat de Family Sphere (sept. 2025) mais aucune panne ni avis négatif d'app documenté;Y02
+ECF (École de Conduite Française) — ECF Services;contrôle qualité;"QA : téléphone issu d'un résumé mêlant plusieurs pages ; tête de réseau associative (email @ecf.asso.fr)";Y02
+LORCA – Lorraine Céréales Approvisionnement (app « Mon Appli Point Vert Est », Lemud 57);score;"Avis App Store signalant échec d'enregistrement de la carte fidélité (« aucune information ») mais non datés ; email digital@lorca.fr vu seulement sur la fiche Google Play d'une autre app (Lorca Connect), téléphone 03 87 56 44 00 non rattaché à une URL précise ; score estimé 59/100 (besoin 15, urgence 7, fit 15, capacité 8, accessibilité 6, preuves 8)";Y03
+Supermarchés Match;score;"Enseigne passée dans le giron de Carrefour (rachat Cora/Match 2024) : grand groupe national, app développée par Pictime ; aucun avis négatif 2026 trouvé";Y03
+Maison Thiriet (surgelés, Grand Est);besoin;Avis négatifs Trustpilot portant sur livraison/qualité, aucune preuve d'app fidélité propre ni de panne d'app;Y03
+L'Entrepôt du Bricolage (groupe SAMSE);besoin;"Carte Sourire documentée, aucun avis négatif sur une application trouvé ; filiale d'un groupe coté";Y03
+Villaverde (jardineries);besoin;Programme de fidélité cité positivement, aucune panne ou avis négatif d'application trouvé;Y03
+Pharmacie Lafayette;besoin;"Avis Trustpilot 4/5 portant sur l'e-commerce, pas d'incident d'application 2026 ; réseau national de grande taille";Y03
+Gion Duck Noodles;privée;Enseigne japonaise (Kyoto, franchise opérée par Menroku) : aucune implantation ni société française trouvée, pas de contact FR.;Y04
+Yūjō Ramen (YŪJŌ DEVELOPPEMENT, Toulouse);score;"Signal 2026 réel (franchise, Blagnac fin 2026, Franchise Expo Paris 2026, 2 restaurants) et coordonnées vues (05 61 21 56 44, email affiché de façon obfusquée 'info at yujoramen dot com' sur yujoramen.com/en/contact) mais aucun besoin digital observable ; score estimé ~62/100.";Y04
+Ponzu (LBF PARIS, Levallois/Paris 16);score;"2 restaurants + page franchise ponzu.fr, aucun signal daté 2026 ni besoin observable ; seul email vu = ponzulevallois@gmail.com (01 80 87 40 40). Score < 70.";Y04
+K Beauty Cosmetics (SAS, Nice);besoin;Coordonnées OK (contact@kbeauty-cosmetics.com, 04 93 53 36 49, mentions légales) mais pas de signal daté 2026 ni besoin observable (e-commerce Shopify existant, réservation via Planity).;Y04
+SavoirIA (SAS Académie SavoirIA, Beauvais);score;"Signaux 2026 (Franchise Expo Paris 2026, tournée mai 2026 : 37 villes / 69 ateliers, 23 franchisés avec chacun un site distinct : savoiria-isere.fr, savoiria-valdoise.fr…), tél 03 75 15 03 20, mais email des mentions légales sur un autre domaine (romain@bplusconseil.com) et besoin seulement inféré ; score honnête 69/100.";Y04
+RSAD;besoin;Aucune entreprise identifiable sous ce nom dans les résultats (ni lauréat Réseau Entreprendre ni franchise).;Y04
+Shop for Geek;email;"Réseau belge (créé 2016) qui recrute des franchisés en 2026 mais pas de signal précis ni coordonnées FR recherchées faute de budget ; tête de réseau hors France.";Y04
+Asstal (Deuil-la-Barre, 95);email;"Lauréat Start Reprise Réseau Entreprendre Val d'Oise 2026, tél 01 34 05 08 38 trouvé mais aucun email publié ; TPE 1-2 salariés.";Y04
+Locwatt (Cergy, 95);téléphone;"Startup photovoltaïque créée déc. 2025, lauréat RE Val d'Oise 2026 ; email antoine.petitpre@locwatt.fr de source incertaine et tél +33 1 34 40 65 00 = standard de l'incubateur La Turbine (32 bd du Port) ; site locwatt.fr déjà en ligne, besoin non observable.";Y04
+JMT Le Royaume des Animaux;besoin;Non traité : budget de recherches consacré aux pistes prioritaires, aucun signal 2026 obtenu.;Y04
+Raison Home (ex-Cuisines Raison, Vern-sur-Seiche, 35);score;"Signal fév. 2026 (3 nouveaux franchisés, meuble-info.fr), coordonnées OK (contact@cuisines-raison.com, 02 99 27 75 14, franchise.raisonhome.com/mentions-legales), sites franchisés hétérogènes (raisonhome-toulouse.fr, raisonhome-brest.fr…) mais besoin seulement inféré ; score 66/100.";Y04
+Les Services d'Aline (conciergerie, Morzine);email;Pas de signal daté 2026 ni mentions légales/coordonnées dans les résultats.;Y04
+LDLC ASVEL (SASP, Villeurbanne);email;"Nouveaux actionnaires 2026 (Inspiring Sport Capital, SKR Ventures), app iOS existante avec demandes d'amélioration, tél 04 72 14 17 17, mais seul email vu = billetterie@ldlcasvel.com (inadapté) ; club budget 40 M€ peu accessible.";Y04
+Repair and Run (Louviers, 27);téléphone;Email contact@ trouvé en mentions légales mais téléphone siège non confirmé (seul un numéro de franchisé Aubagne vérifié);Y05
+Au Fût et à Mesure (SARL AFEAM, Lille);email;"contact@aufut.fr vu uniquement sur agrégateurs tiers (services-client.net, mindtrip) : source incertaine ; pas de besoin observable";Y05
+Inoku Manga Store;preuves;"Signal de lancement franchise daté ~2023, pas d'actualité 2026 ; emails uniquement de magasins";Y05
+Jack's Burgers / La Brigade / Dom&Vie / Neoness / La Foir'Fouille;doublon;Déjà dans les exclusions;Y05
+Perene (groupe Fournier);privée;Filiale d'un grand groupe cuisiniste, hors cible jeune réseau;Y05
+Tout & Bon;besoin;Vient de moderniser son site e-commerce : besoin déjà couvert;Y05
+New Jump (Groupe 2TS, Langon, 33);besoin;8 parcs, ouverture Châtelineau août 2026 et coordonnées trouvées (contact@groupe-2ts.com, 05 33 90 01 18), mais app en marque blanche (com.trenicom.newjump) et aucun défaut documenté;Y06
+Vertical Art (salles d'escalade de bloc);score;Réseau ~12 salles, ouverture Auxerre nov. 2026, contact@vertical-art.fr / 01 75 21 38 59 trouvés, mais aucun besoin digital observé (pas d'app ni de défaut documenté) : score ~64;Y06
+UrbanSoccer / UrbanPadel (Soccer 5 France SAS);score;"Filiale Compagnie des Alpes (grand groupe, peu accessible) ; app MyUrban récemment refaite ; contacts trouvés mais score ~65";Y06
+Esprit Padel (Saint-Priest, 69);téléphone;"Seul numéro trouvé = mobile 06 de la boutique/club, pas de ligne pro claire ; peu de sites et besoin non documenté";Y06
+Youpi Parc (SA Youpi Parc France);téléphone;Email contact@youpiparc.com trouvé, aucun téléphone dans les résultats;Y06
+Jump Session (Vannes);besoin;Parc unique repris, hors cible 5-50 sites;Y06
+Climb Up (réseau escalade);preuves;32 salles, levée envisagée 2026-2027, mais signal non daté 2026 et coordonnées non recherchées faute de quota;Y06
+Armoric Sports (Saint-Brieuc, 22);besoin;3 clubs de padel seulement, aucun besoin digital documenté;Y06
+4PADEL (exploité par Le Five SAS);contrôle qualité;QA : source du téléphone incertaine (résumé mêlant page centre et annuaires);Y06
+Olympic Location (Marseille);score;Rachat de Lutam (juin 2026) mais activité surtout location de voitures B2C, besoin digital non documenté, source exacte de contact@olympiclocation.com incertaine (résumé multi-pages) : score estimé 64.;Y07
+Manuloc (Metz);score;1 400 salariés, 400 M€ de CA (hors cible PME) et dernière acquisition connue en 2024 : signal pas récent.;Y07
+Guibout Matériaux;doublon;Déjà dans la liste d'exclusions.;Y07
+Ouest Boissons (SN Ouest Boissons, Brech/Auray);score;Investissement logistique 4,5 M€ à Auray (juin 2026) mais pas de rachat ni d'agence 2026 et aucun besoin digital documenté : score estimé 67.;Y07
+Ecova (pièces auto de réemploi, Elven/Vannes);email;"Rachat des Ets Poirier (Mayenne, 2026, 150 salariés, 7 sites) = bon signal, mais l'adresse agence.vannes@eco-va.fr n'a pu être rattachée à aucune URL précise ; seul le téléphone 02 97 53 20 59 est confirmé.";Y07
+Groupe FB (sécurité, Château-Gontier);besoin;Reprise d'Event Safety et MIG annoncée probablement fin 2025 (>6 mois), gardiennage hors secteurs visés, aucune coordonnée trouvée.;Y07
+Rubix / Thomé (Manom, 57);privée;Thomé racheté par Rubix, grand groupe international : décideur inaccessible.;Y07
+Acces Industrie (rachat Huet Location);score;ETI de location de nacelles de taille nationale (hors cible PME), non approfondie faute de budget de recherche.;Y07
+Groupe GCA (Cholet, 146 concessions);email;"aucun email professionnel lisible dans les résultats (page contact seulement) ; groupe très grand, site déjà unifié";Y08
+Groupe Chopard Automobile (Besançon);email;"seul email visible = médiateur CNPA ; groupe >130 points de vente avec site unifié";Y08
+Bruschet Automobiles (Marseille);email;mentions légales trouvées mais email non affiché dans les résultats;Y08
+Groupe T3M (Revel, machinisme agricole);score;email/tel OK (t3m@groupet3m.com, 05 62 18 60 60) mais signal (rachat Occitaine Agri) daté de mars 2025, pas de signal 2026 ni besoin web observé;Y08
+BPM Agri (groupe BPM, John Deere Ouest);score;rachat Chesneau non daté précisément, emails par site uniquement, groupe 2 600 salariés : score estimé 67;Y08

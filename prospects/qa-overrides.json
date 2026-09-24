@@ -42,5 +42,14 @@
  },
  "X04-002": {
   "rejet": "seule adresse trouvée = service réclamations, inadaptée à une prise de contact commerciale"
+ },
+ "Y01-001": {
+  "rejet": "seule adresse = presse (inadaptée) et page source non confirmée"
+ },
+ "Y06-001": {
+  "rejet": "source du téléphone incertaine (résumé mêlant page centre et annuaires)"
+ },
+ "Y02-001": {
+  "rejet": "téléphone issu d'un résumé mêlant plusieurs pages ; tête de réseau associative (email @ecf.asso.fr)"
  }
 }

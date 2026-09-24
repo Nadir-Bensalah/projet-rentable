@@ -210,6 +210,164 @@
   "equipe": "V06"
  },
  {
+  "id": "Y08-002",
+  "entreprise": "Debard Automobiles",
+  "siren": "407957687",
+  "secteur": "Négoce de véhicules d'occasion et zéro kilomètre (réseau d'agences)",
+  "ville": "Albi",
+  "departement": "81",
+  "region": "Occitanie",
+  "site_web": "https://www.debardautomobiles.com/",
+  "email": "marketing@debardautomobiles.com",
+  "telephone": "05 63 49 16 16",
+  "source_email": "https://www.debardautomobiles.com/actualites/information/mentions-legales",
+  "source_telephone": "https://www.debardautomobiles.com/actualites/information/mentions-legales",
+  "contact_nom": "Sophie Dubosclard",
+  "contact_fonction": "Directrice de la publication (mentions légales)",
+  "linkedin": "",
+  "effectif": "300 salariés (objectif doublement)",
+  "capital": "5 051 550 €",
+  "actualite": "12/02/2026 : levée de 80 M€ pour ouvrir 8 agences (Angoulême, Laval, Nantes, Clermont-Ferrand, Orléans, Carcassonne, Narbonne, Châteauroux) ; 16 → 24 agences d'ici mi-2027, 120 embauches ; CA ≈300 M€.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Passage de 16 à 24 agences en 18 mois : site, parcours de commande/reprise et outils internes à dimensionner pour le nouveau réseau.",
+  "faits": [
+   {
+    "fait": "Debard Automobiles engage 80 M€ pour accélérer le déploiement de ses agences",
+    "url": "https://www.lejournaldesentreprises.com/article/debard-automobiles-engage-80-millions-deuros-pour-accelerer-le-deploiement-de-ses-agences-2136272",
+    "source_type": "presse",
+    "date": "2026-02"
+   },
+   {
+    "fait": "8 ouvertures prévues (Angoulême dès mars 2026, puis Laval, Nantes, Clermont-Ferrand, Orléans, Carcassonne, Narbonne, Châteauroux) ; 24 établissements visés mi-2027 ; 300 salariés, 300 M€ de CA",
+    "url": "https://journalauto.com/distribution/debard-automobiles-va-investir-80-millions-deuros-dans-son-expansion/",
+    "source_type": "presse",
+    "date": "2026-02-12"
+   },
+   {
+    "fait": "Ouverture d'un point de vente près d'Angoulême",
+    "url": "https://journalauto.com/distribution/debard-automobiles-va-ouvrir-un-nouveau-point-de-vente-pres-dangouleme/",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Le site actuel est édité avec le prestataire WEB&DESIGN (Montbéliard) et propose une page 'mon agence la plus proche'",
+    "url": "https://www.debardautomobiles.com/mon-agence-la-plus-proche",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Doubler le réseau et l'effectif en 18 mois met sous tension le site (pages agences, leads, reprise) et les outils internes (suivi commandes, livraisons, préparation) ; un complément sur-mesure (espace client suivi de commande, outil métier) est plausible.",
+  "opportunite": "Espace client de suivi de commande/livraison + outil métier de suivi des dossiers entre agences ; audit du parcours web avant les 8 ouvertures.",
+  "service": "Espace client / outil métier multi-agences",
+  "signal_achat": "Levée de 80 M€ et 8 ouvertures d'agences 2026-2027",
+  "urgence": "moyenne-haute — ouvertures en cours jusqu'à mi-2027",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 16,
+   "fit": 14,
+   "capacite": 10,
+   "accessibilite": 7,
+   "preuves": 11
+  },
+  "score": 75,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://journalauto.com/distribution/debard-automobiles-va-investir-80-millions-deuros-dans-son-expansion/",
+   "https://journalauto.com/distribution/debard-automobiles-va-ouvrir-un-nouveau-point-de-vente-pres-dangouleme/",
+   "https://www.debardautomobiles.com/actualites/information/mentions-legales",
+   "https://www.debardautomobiles.com/mon-agence-la-plus-proche",
+   "https://www.lejournaldesentreprises.com/article/debard-automobiles-engage-80-millions-deuros-pour-accelerer-le-deploiement-de-ses-agences-2136272"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Debard Automobiles — vos 8 nouvelles agences",
+  "email_personnalise": "Bonjour Madame Dubosclard,\n\nJ'ai lu que Debard Automobiles investit 80 M€ pour passer de 16 à 24 agences d'ici mi-2027, avec Angoulême, Nantes ou Clermont-Ferrand au programme.\n\nQuand un réseau et ses équipes doublent aussi vite, le suivi des commandes et des livraisons entre agences devient souvent le point de friction, côté clients comme côté équipes.\n\nCapmedia conçoit des espaces clients et des outils métiers sur-mesure, en complément d'un site existant. Je peux vous partager deux ou trois pistes concrètes sur votre parcours actuel.\n\nSeriez-vous la bonne personne pour en parler ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que Debard Automobiles ouvre huit agences d'ici mi-2027 après une levée de 80 millions. Ce type de croissance pèse souvent sur le suivi client entre agences. Je voulais savoir qui s'occupe du digital chez vous.",
+  "relance": "Autre angle : un espace client où l'acheteur suit sa commande jusqu'à la livraison, en réduisant les appels aux agences. Cela vous intéresserait-il d'en voir un exemple ?",
+  "pourquoi_demain": "Debard double son réseau (16 → 24 agences) et ses effectifs en 18 mois grâce à 80 M€ levés en février 2026.",
+  "equipe": "Y08"
+ },
+ {
+  "id": "Y08-001",
+  "entreprise": "Scala Groupe (Scala Auto, concessions Audi / Volkswagen / Škoda)",
+  "siren": "724201769",
+  "secteur": "Distribution automobile (concessions VW, Audi, Škoda)",
+  "ville": "Perpignan",
+  "departement": "66",
+  "region": "Occitanie",
+  "site_web": "https://scala-auto.com/",
+  "email": "contact.perpignan@scalagroupe.com",
+  "telephone": "04 68 68 52 52",
+  "source_email": "https://www.volkswagen.fr/fr/partenaire/scala-perpignan.html/prendre-rdv",
+  "source_telephone": "https://www.volkswagen.fr/fr/partenaire/scala-perpignan.html/prendre-rdv",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "https://www.linkedin.com/company/scala-groupe/",
+  "effectif": "",
+  "capital": "",
+  "actualite": "2026 : Scala prépare la reprise des concessions Volkswagen/Audi/Škoda de Béziers et d'un site à Carcassonne auprès du groupe Tressol-Chabrier (≈1 600 VN, ≈100 M€ de CA).",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Présence web éclatée sur plusieurs domaines (scala-auto.com, scala-perpignan.com, volkswagen-perpignan.com, pro.scala-auto.com) au moment d'intégrer de nouvelles concessions.",
+  "faits": [
+   {
+    "fait": "Scala se prépare à reprendre les concessions Volkswagen, Audi et Skoda de Béziers (34) et un site à Carcassonne (11) de Tressol-Chabrier",
+    "url": "https://journalauto.com/distribution/",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Reprise de concessions VW/Audi de Béziers et Carcassonne représentant ~1 600 VN et ~100 M€ de CA",
+    "url": "https://www.autoactu.com/actualites/le-groupe-scala-va-reprendre-les-concessions-volkswagen-du-groupe-tressol-chabrier",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Plusieurs sites distincts observés dans les résultats : scala-auto.com, scala-perpignan.com, volkswagen-perpignan.com et un espace pro.scala-auto.com (hébergé sur une plateforme VO tierce)",
+    "url": "http://scala-perpignan.com/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Le groupe est présent dans 7 villes d'Occitanie (Auch, Narbonne, Pamiers, Perpignan, Saint-Gaudens, Tarbes, Lannemezan) ; prise de RDV via formulaires par concession",
+    "url": "https://scala-auto.com/formulaire/prendre-rdv-chez-volkswagen-scala-perpignan/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Avec l'arrivée de Béziers et Carcassonne, le groupe va devoir intégrer de nouvelles concessions dans une présence web déjà répartie sur plusieurs domaines ; le moment est propice pour unifier site groupe, RDV atelier et espace client.",
+  "opportunite": "Site groupe unifié multi-concessions (stock VN/VO, fiches concessions, RDV atelier en ligne centralisé) + espace client (historique entretien, devis) ; audit préalable des domaines existants.",
+  "service": "Refonte / unification du site groupe + prise de RDV atelier en ligne",
+  "signal_achat": "Reprise de concessions Tressol-Chabrier (Béziers, Carcassonne) 2026",
+  "urgence": "moyenne — intégration des concessions reprises en 2026",
+  "score_detail": {
+   "besoin": 19,
+   "urgence": 15,
+   "fit": 16,
+   "capacite": 9,
+   "accessibilite": 5,
+   "preuves": 11
+  },
+  "score": 75,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "http://scala-perpignan.com/",
+   "https://journalauto.com/distribution/",
+   "https://scala-auto.com/formulaire/prendre-rdv-chez-volkswagen-scala-perpignan/",
+   "https://www.autoactu.com/actualites/le-groupe-scala-va-reprendre-les-concessions-volkswagen-du-groupe-tressol-chabrier",
+   "https://www.volkswagen.fr/fr/partenaire/scala-perpignan.html/prendre-rdv"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Scala — intégration de Béziers et Carcassonne en ligne",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu que Scala se prépare à reprendre les concessions Volkswagen et Audi de Béziers et Carcassonne. En regardant votre présence en ligne, j'ai trouvé plusieurs sites distincts : scala-auto.com, scala-perpignan.com, volkswagen-perpignan.com et un espace pro sur une autre plateforme.\n\nAvec deux sites de plus à intégrer, les clients risquent de chercher la bonne porte d'entrée pour prendre un rendez-vous atelier.\n\nChez Capmedia, nous concevons des sites groupe multi-concessions avec prise de RDV atelier centralisée et espace client. Je peux vous envoyer une courte analyse de l'existant, sans engagement.\n\nQui pilote ce sujet chez vous ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que Scala reprend les concessions VW et Audi de Béziers et Carcassonne. J'ai aussi remarqué que votre présence web est répartie sur plusieurs sites. Je voulais savoir qui s'occupe du digital chez vous.",
+  "relance": "Je reviens vers vous sous un autre angle : la prise de RDV atelier en ligne centralisée pour vos 7 villes d'Occitanie, avec un seul parcours client. Voulez-vous que je vous montre un exemple ?",
+  "pourquoi_demain": "Scala intègre deux nouvelles concessions en 2026 alors que sa présence web est déjà éclatée sur au moins quatre domaines.",
+  "equipe": "Y08"
+ },
+ {
   "entreprise": "Supplay",
   "siren": "337080543",
   "secteur": "Travail temporaire / recrutement",
@@ -439,6 +597,78 @@
   "relance": "Autre angle : un espace client commun permettrait au particulier de suivre son projet (allée, clôture, piscine) et à vos franchisés de proposer les autres métiers du réseau. Est-ce que ce sujet est déjà prévu ?",
   "pourquoi_demain": "Le réseau vient d'ajouter une 4e enseigne en promettant un interlocuteur unique, alors que ses parcours web restent séparés par métier.",
   "equipe": "V07"
+ },
+ {
+  "entreprise": "ADI – Azuréenne d'Incendie (Groupe ADI)",
+  "siren": "341235679",
+  "secteur": "Sécurité incendie (vente, installation, maintenance, formation)",
+  "ville": "Six-Fours-les-Plages",
+  "departement": "83",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "site_web": "https://www.adi-incendie.fr/",
+  "email": "info@adi-incendie.fr",
+  "telephone": "04 94 10 57 10",
+  "source_email": "https://www.adi-incendie.fr/mentions-legales/",
+  "source_telephone": "https://www.adi-incendie.fr/mentions-legales/",
+  "contact_nom": "Yoël Sayrous",
+  "contact_fonction": "Président Directeur Général",
+  "linkedin": "https://fr.linkedin.com/company/adi-protection-incendie",
+  "effectif": "plus de 300 salariés (Le Journal des Entreprises)",
+  "capital": "",
+  "actualite": "Rachat de MSI Système de Sécurité Incendie (Occitanie) début 2026, intégré à l'agence de Montpellier : 7e croissance externe depuis 2020 ; ambitions nationales, notamment Paris.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Intégrer rapidement les sociétés rachetées (clients, contrats de maintenance, techniciens) dans des outils communs à l'échelle nationale.",
+  "faits": [
+   {
+    "fait": "Le groupe varois ADI acquiert MSI Système de Sécurité Incendie, intégrée à son agence de Montpellier ; 7e opération de croissance externe depuis 2020.",
+    "url": "https://www.lejournaldesentreprises.com/breve/le-groupe-varois-adi-acquiert-la-societe-occitane-msi-systeme-de-securite-incendie-2134700",
+    "source_type": "presse",
+    "date": "2026-03-27"
+   },
+   {
+    "fait": "ADI (+ de 300 salariés), premier groupe indépendant en sécurité incendie du sud de la France, affiche ses ambitions pour 2026 : « Nous avons construit en 2024, consolidé en 2025. Nous accélérons en 2026 » (Yoël Sayrous).",
+    "url": "https://www.lejournaldesentreprises.com/article/adi-la-croissance-externe-comme-vecteur-dacceleration-nationale-2139896",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Implantations à Six-Fours, Marseille, Fréjus, Avignon, Nice, Gap, Digne, Corte, Toulouse, Montpellier et Monaco ; ADI exploite aussi un site dédié au registre de sécurité en ligne (adi-registre.fr).",
+    "url": "https://www.adi-incendie.fr/mentions-legales/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Un groupe de maintenance incendie qui enchaîne les rachats doit faire converger des parcs clients, des plannings de vérifications périodiques et des équipes terrain venant de structures différentes ; l'outil registre en ligne existant devra suivre l'échelle nationale.",
+  "opportunite": "Application techniciens (tournées de vérification, rapports, signature client, photos) connectée au registre en ligne, plus un espace client unifié pour les clients des sociétés rachetées ; audit/modernisation de l'outil registre existant.",
+  "service": "Application métier techniciens + espace client B2B (intégration des sociétés rachetées)",
+  "signal_achat": "Rachat de MSI (7e croissance externe) + ambition nationale 2026",
+  "urgence": "moyenne — rachat annoncé fin mars 2026 (6 mois), accélération revendiquée pour 2026",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 14,
+   "fit": 17,
+   "capacite": 9,
+   "accessibilite": 7,
+   "preuves": 10
+  },
+  "sources": [
+   "https://www.lejournaldesentreprises.com/breve/le-groupe-varois-adi-acquiert-la-societe-occitane-msi-systeme-de-securite-incendie-2134700",
+   "https://www.lejournaldesentreprises.com/article/adi-la-croissance-externe-comme-vecteur-dacceleration-nationale-2139896",
+   "https://www.adi-incendie.fr/mentions-legales/",
+   "https://www.adi-registre.fr/mentions-legales"
+  ],
+  "objet_email": "ADI — intégration de MSI et outils terrain",
+  "email_personnalise": "Bonjour Monsieur Sayrous,\n\nJ'ai lu dans Le Journal des Entreprises l'intégration de MSI à votre agence de Montpellier, votre septième rachat depuis 2020, et votre volonté d'accélérer en 2026 au niveau national.\n\nÀ chaque rachat, les contrats de maintenance, les plannings de vérification et les habitudes des techniciens arrivent souvent avec leurs propres outils, ce qui ralentit l'harmonisation.\n\nChez Capmedia, nous concevons des applications métier pour techniciens terrain et des espaces clients B2B, et nous reprenons aussi des outils existants comme un registre en ligne.\n\nSeriez-vous d'accord pour un échange de 20 minutes sur la façon dont vos équipes intègrent les sociétés rachetées ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que vous avez intégré MSI à votre agence de Montpellier, votre septième rachat depuis 2020. Je voulais savoir qui s'occupe chez vous des outils des techniciens et du registre en ligne.",
+  "relance": "Je reviens vers vous sous un autre angle : si vos clients de Montpellier et de Paris doivent consulter leurs rapports de vérification au même endroit, une maquette d'espace client peut être prête en quelques jours pour en discuter.",
+  "pourquoi_demain": "Groupe incendie de 300+ salariés en pleine série de rachats, qui dit lui-même accélérer en 2026 et doit harmoniser les outils terrain des sociétés reprises.",
+  "score": 74,
+  "niveau": "QUALIFIÉ",
+  "id": "Y07-001",
+  "equipe": "Y07",
+  "date_verification": "2026-09-24"
  },
  {
   "entreprise": "Beer's Corner",
@@ -2417,6 +2647,164 @@
   "relance": "Pour un réseau en franchise, une commande en direct commune à toutes les adresses permet de garder les données clients plutôt que de les laisser aux plateformes : est-ce un point que vous avez déjà tranché ?",
   "pourquoi_demain": "Choukran vient de lever 5 M€ pour passer de 2 à plus de 30 restaurants en franchise et doit poser son socle digital avant les ouvertures.",
   "equipe": "X08"
+ },
+ {
+  "id": "Y05-001",
+  "entreprise": "Your Personal Lab (YPL, enseigne DJ Lab)",
+  "siren": "",
+  "secteur": "Loisirs / studios DJ et enregistrement en libre-service (franchise)",
+  "ville": "Villeurbanne",
+  "departement": "69",
+  "region": "Auvergne-Rhône-Alpes",
+  "site_web": "https://yourpersonallab.com/",
+  "email": "hello@yourpersonallab.com",
+  "telephone": "04 28 29 38 31",
+  "source_email": "https://www.facebook.com/YourPersonalLab/",
+  "source_telephone": "https://www.facebook.com/YourPersonalLab/",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "https://fr.linkedin.com/company/your-personal-lab",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Lancement du développement en franchise de DJ Lab (premier franchisé à Rennes), objectif de plus de 10 ouvertures d'ici fin 2026 (La Rochelle, Marseille, Lille...).",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Faire tenir la plateforme propriétaire (réservation, accès, facturation, pilotage des studios) à l'échelle d'un réseau de franchisés multi-sites.",
+  "faits": [
+   {
+    "fait": "Chaque studio DJ Lab est entièrement automatisé : réservation, accès, éclairage, climatisation, gestion des plannings et facturation pilotés par une plateforme digitale propriétaire, sans personnel permanent.",
+    "url": "https://lexpress-franchise.com/franchise/dj-lab/",
+    "source_type": "presse franchise",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "YPL annonce le lancement officiel du développement en franchise de DJ Lab et vise plus de 10 ouvertures d'ici fin 2026 (Rennes, La Rochelle, Marseille, Lille).",
+    "url": "https://lexpress-franchise.com/franchise/dj-lab/actualites/dj-lab-transforme-la-musique-en-experience-accessible-a-tous/",
+    "source_type": "presse franchise",
+    "date": "2026"
+   },
+   {
+    "fait": "Ouverture du premier franchisé DJ Lab à Rennes.",
+    "url": "https://lexpress-franchise.com/franchise/dj-lab/actualites/ouverture-du-premier-franchise-dj-lab-a-rennes/",
+    "source_type": "presse franchise",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Studios accessibles 24h/24 sans réservation humaine via une application mobile (entreprise fondée en 2021).",
+    "url": "https://lexpress-franchise.com/franchise/dj-lab/",
+    "source_type": "presse franchise",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Un modèle 100 % autonome repose entièrement sur l'outil numérique : passer de quelques studios en propre à 10+ franchisés impose multi-sites, espaces franchisés, reporting, fiabilité de l'accès et de la facturation, et une app mobile robuste.",
+  "opportunite": "Audit technique de la plateforme de réservation/accès et de l'app, puis évolution vers une version multi-franchisés (back-office franchiseur, dashboards par studio, espace franchisé) et maintenance.",
+  "service": "Audit + évolution/maintenance de plateforme et d'application mobile (multi-sites franchise)",
+  "signal_achat": "Lancement franchise + objectif 10+ ouvertures fin 2026 sur une plateforme propriétaire",
+  "urgence": "moyenne — ouvertures annoncées d'ici fin 2026, mais date exacte des articles non confirmée",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 14,
+   "fit": 18,
+   "capacite": 5,
+   "accessibilite": 8,
+   "preuves": 9
+  },
+  "score": 71,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://lexpress-franchise.com/franchise/dj-lab/",
+   "https://lexpress-franchise.com/franchise/dj-lab/actualites/dj-lab-transforme-la-musique-en-experience-accessible-a-tous/",
+   "https://lexpress-franchise.com/franchise/dj-lab/actualites/ouverture-du-premier-franchise-dj-lab-a-rennes/",
+   "https://www.facebook.com/YourPersonalLab/",
+   "https://yourpersonallab.com/"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "DJ Lab — la plateforme face aux ouvertures en franchise",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu que DJ Lab vise plus de 10 ouvertures en franchise d'ici fin 2026, avec des studios où réservation, accès, éclairage et facturation passent entièrement par votre plateforme propriétaire.\n\nSur ce type de modèle sans personnel, chaque nouveau site ajoute de la charge sur l'outil : gestion multi-franchisés, reporting par studio, fiabilité de l'accès et de l'app.\n\nChez Capmedia, nous auditons et faisons évoluer des applications web et mobiles existantes (back-offices, espaces clients, dashboards), puis en assurons la maintenance.\n\nSeriez-vous ouvert à un échange de 20 minutes pour voir où en est votre plateforme avant les prochaines ouvertures ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que DJ Lab prévoit plus de 10 ouvertures en franchise d'ici fin 2026. Vos studios fonctionnent entièrement via votre plateforme de réservation et d'accès. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Je me permets de revenir vers vous sous un autre angle : un back-office franchiseur avec tableau de bord par studio (taux d'occupation, CA, incidents d'accès) peut-il vous être utile pour suivre vos nouveaux franchisés ?",
+  "pourquoi_demain": "Un réseau dont tout le fonctionnement repose sur une plateforme maison annonce 10+ ouvertures en franchise d'ici fin 2026.",
+  "equipe": "Y05"
+ },
+ {
+  "id": "Y08-003",
+  "entreprise": "Groupe Lecluse Automobiles (branche poids lourds Sarevi Revmat)",
+  "siren": "480117662",
+  "secteur": "Distribution automobile (VW, Audi, Seat, Cupra, Škoda, Porsche) et poids lourds MAN",
+  "ville": "Le Mans",
+  "departement": "72",
+  "region": "Pays de la Loire",
+  "site_web": "https://www.groupelecluseautomobiles.fr/",
+  "email": "vwaccueil@lecluseautomobiles.fr",
+  "telephone": "02 43 78 50 50",
+  "source_email": "https://www.volkswagen.fr/fr/partenaire/lecluseautomobiles-lemans.html",
+  "source_telephone": "https://www.volkswagen.fr/fr/partenaire/lecluseautomobiles-lemans.html",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "https://fr.linkedin.com/company/grouperevmat",
+  "effectif": "",
+  "capital": "",
+  "actualite": "14/01/2026 : Sarevi (groupe Lecluse) rachète Revmat (Le Mans, MAN, 110 salariés, 45 M€, 6 sites) → Sarevi Revmat ; ouverture de Guilberville (50) en novembre 2025.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Branche poids lourds répartie sur plusieurs sites web distincts (sarevi.com, revmat-tvi.com encore référencé en http) à côté du site groupe.",
+  "faits": [
+   {
+    "fait": "Le groupe Revmat (110 salariés, 45 M€, 6 sites : Le Mans, Tours, Orléans, Chartres, Blois, Châteauroux) rejoint la branche poids lourds de Lecluse Automobiles",
+    "url": "https://www.lejournaldesentreprises.com/breve/le-groupe-revmat-rejoint-la-branche-poids-lourds-de-lecluse-automobiles-2138851",
+    "source_type": "presse",
+    "date": "2026-03"
+   },
+   {
+    "fait": "Le 14 janvier 2026, Sarevi | Groupe Lecluse Automobiles a acquis Revmat, devenue Sarevi Revmat",
+    "url": "https://www.sarevi.com/lecluse-croissance-poids-lourd-rachat-revmat-le-mans/",
+    "source_type": "site officiel",
+    "date": "2026-01-14"
+   },
+   {
+    "fait": "Site historique Revmat toujours référencé sur un domaine distinct en http : revmat-tvi.com",
+    "url": "http://www.revmat-tvi.com/garage-poids-lourds-le-mans.htm",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Les groupes Dubreuil et Lecluse poursuivent leur développement dans le poids lourd",
+    "url": "https://www.largus.fr/pros/actualite-automobile/les-groupes-dubreuil-et-lecluse-poursuivent-leur-developpement-dans-le-secteur-du-poids-lourd-30045980.html",
+    "source_type": "presse",
+    "date": "2026"
+   }
+  ],
+  "inference": "Après deux rachats PL (Sarevi 2024, Revmat 2026), la branche poids lourds coexiste sur plusieurs domaines ; une prise de RDV atelier PL en ligne et un espace client flotte (transporteurs) seraient cohérents.",
+  "opportunite": "Unification web de la branche PL (Sarevi Revmat) + prise de RDV atelier poids lourds en ligne + espace client flotte (historique, devis, disponibilité véhicules).",
+  "service": "Site unifié + RDV atelier PL + espace client flotte",
+  "signal_achat": "Rachat de Revmat par Sarevi (groupe Lecluse), janvier 2026",
+  "urgence": "moyenne — rachat de janvier 2026, intégration en cours",
+  "score_detail": {
+   "besoin": 18,
+   "urgence": 13,
+   "fit": 15,
+   "capacite": 9,
+   "accessibilite": 5,
+   "preuves": 11
+  },
+  "score": 71,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "http://www.revmat-tvi.com/garage-poids-lourds-le-mans.htm",
+   "https://www.largus.fr/pros/actualite-automobile/les-groupes-dubreuil-et-lecluse-poursuivent-leur-developpement-dans-le-secteur-du-poids-lourd-30045980.html",
+   "https://www.lejournaldesentreprises.com/breve/le-groupe-revmat-rejoint-la-branche-poids-lourds-de-lecluse-automobiles-2138851",
+   "https://www.sarevi.com/lecluse-croissance-poids-lourd-rachat-revmat-le-mans/",
+   "https://www.volkswagen.fr/fr/partenaire/lecluseautomobiles-lemans.html"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Sarevi Revmat — RDV atelier poids lourds en ligne",
+  "email_personnalise": "Bonjour,\n\nJ'ai vu que Sarevi, la branche poids lourds du groupe Lecluse, a repris Revmat en janvier 2026. En cherchant Sarevi Revmat en ligne, on tombe sur plusieurs sites : groupelecluseautomobiles.fr, sarevi.com et l'ancien revmat-tvi.com, toujours référencé.\n\nPour un transporteur, cela peut compliquer la prise de rendez-vous atelier sur l'un des six centres.\n\nCapmedia conçoit des sites unifiés avec RDV atelier en ligne et espace client flotte. Pourriez-vous me dire qui suit ce sujet dans le groupe ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que le groupe Lecluse a repris Revmat en janvier via Sarevi. J'ai remarqué que l'ancien site revmat-tvi.com est toujours référencé à côté de sarevi.com. Je voulais savoir qui s'occupe du digital pour la branche poids lourds.",
+  "relance": "Autre piste : un espace client flotte pour vos transporteurs (historique d'entretien, devis, RDV) commun aux six centres Sarevi Revmat. Un échange de 15 minutes vous conviendrait-il ?",
+  "pourquoi_demain": "Lecluse vient d'intégrer Revmat (6 sites PL) et sa branche poids lourds reste éclatée entre plusieurs sites web.",
+  "equipe": "Y08"
  },
  {
   "id": "T05-001",
