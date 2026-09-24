@@ -7,10 +7,16 @@ RUN npm ci --no-audit --no-fund
 
 FROM node:22-alpine AS build
 WORKDIR /app
+# Build-time values: canonical URLs, sitemap and the optional Plausible proxy are
+# baked into the build. (Render passes service env vars as build args.) The legal
+# identity (LEGAL_*) and all secrets are read at runtime instead.
 ARG APP_URL
 ARG NEXT_PUBLIC_APP_URL
 ARG NEXT_PUBLIC_SUPPORT_EMAIL
-ENV APP_URL=$APP_URL NEXT_PUBLIC_APP_URL=$NEXT_PUBLIC_APP_URL NEXT_PUBLIC_SUPPORT_EMAIL=$NEXT_PUBLIC_SUPPORT_EMAIL NEXT_TELEMETRY_DISABLED=1
+ARG PLAUSIBLE_DOMAIN
+ARG PLAUSIBLE_HOST
+ENV APP_URL=$APP_URL NEXT_PUBLIC_APP_URL=$NEXT_PUBLIC_APP_URL NEXT_PUBLIC_SUPPORT_EMAIL=$NEXT_PUBLIC_SUPPORT_EMAIL \
+    PLAUSIBLE_DOMAIN=$PLAUSIBLE_DOMAIN PLAUSIBLE_HOST=$PLAUSIBLE_HOST NEXT_TELEMETRY_DISABLED=1
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 RUN npm run build
@@ -26,6 +32,6 @@ COPY --from=build --chown=app:app /app/migrations ./migrations
 COPY --from=build --chown=app:app /app/scripts/migrate.mjs ./scripts/migrate.mjs
 USER app
 EXPOSE 3000
-HEALTHCHECK --interval=30s --timeout=5s --start-period=20s CMD wget -qO- http://127.0.0.1:3000/api/health || exit 1
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s CMD wget -qO- "http://127.0.0.1:${PORT:-3000}/api/health" || exit 1
 # Apply pending migrations, then start the server.
 CMD ["sh", "-c", "node scripts/migrate.mjs && node server.js"]

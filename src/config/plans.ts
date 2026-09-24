@@ -128,3 +128,6 @@ export function formatPrice(cents: number): string {
   const euros = cents / 100;
   return euros % 1 === 0 ? `${euros} €` : `${euros.toFixed(2).replace(".", ",")} €`;
 }
+
+/** Free re-exports of the same document per month before it is charged again. */
+export const MAX_FREE_REEXPORTS = 10;

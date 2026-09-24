@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
-import { PLANS, formatPrice } from "@/config/plans";
+import { PLANS, formatNumber, formatPrice } from "@/config/plans";
 import { getCurrentUser } from "@/lib/auth/session";
 import { loadAccountView } from "@/lib/account-view";
 import { latestSubscription } from "@/lib/billing";
@@ -36,6 +36,9 @@ export default async function BillingPage(props: { searchParams: Promise<Record<
   );
   const d = (v: Date | null) =>
     v ? new Intl.DateTimeFormat("fr-FR", { dateStyle: "long", timeZone: "Europe/Paris" }).format(new Date(v)) : "—";
+  const subProduct = sub ? `${sub.plan}_${sub.interval === "year" ? "yearly" : "monthly"}` : null;
+  // Amount actually paid (discount codes, older prices), rather than the current list price.
+  const lastPaid = orders.find((o) => o.status === "paid" && o.product === subProduct);
   const PRODUCT_LABEL: Record<string, string> = {
     pack: "Pack 150 pages",
     pro_monthly: "Pro mensuel",
@@ -75,8 +78,11 @@ export default async function BillingPage(props: { searchParams: Promise<Record<
               </Badge>
             </div>
             <p className="text-sm text-muted">
-              {formatPrice(sub.interval === "year" ? PLANS[sub.plan].priceYearly : PLANS[sub.plan].priceMonthly)} par{" "}
-              {sub.interval === "year" ? "an" : "mois"} · {PLANS[sub.plan].monthlyPages} pages par mois.{" "}
+              {lastPaid
+                ? money(lastPaid.amount_cents, lastPaid.currency)
+                : formatPrice(sub.interval === "year" ? PLANS[sub.plan].priceYearly : PLANS[sub.plan].priceMonthly)}{" "}
+              {lastPaid ? "payés pour la dernière" : "par"} {sub.interval === "year" ? "année" : "mois"} ·{" "}
+              {formatNumber(PLANS[sub.plan].monthlyPages)} pages par mois.{" "}
               {sub.status === "past_due"
                 ? "Renouvellement en attente de paiement."
                 : sub.cancel_at_period_end || sub.status === "canceled"
@@ -109,69 +115,85 @@ export default async function BillingPage(props: { searchParams: Promise<Record<
           Paiements
         </h2>
         {orders.length ? (
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm">
-              <thead className="bg-[var(--bg-subtle)] text-xs uppercase tracking-wide text-subtle">
-                <tr>
-                  <th scope="col" className="px-6 py-2.5">
-                    Date
-                  </th>
-                  <th scope="col" className="px-3 py-2.5">
-                    Offre
-                  </th>
-                  <th scope="col" className="px-3 py-2.5">
-                    Montant
-                  </th>
-                  <th scope="col" className="px-3 py-2.5">
-                    Statut
-                  </th>
-                  <th scope="col" className="px-6 py-2.5">
-                    Facture
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-[var(--border)]">
-                {orders.map((o, i) => (
-                  <tr key={i}>
-                    <td className="whitespace-nowrap px-6 py-2.5 text-muted">{d(o.created_at)}</td>
-                    <td className="px-3 py-2.5">{PRODUCT_LABEL[o.product] ?? o.product}</td>
-                    <td className="tabular px-3 py-2.5">
-                      {(o.amount_cents / 100).toFixed(2).replace(".", ",")} {o.currency === "EUR" ? "€" : o.currency}
-                    </td>
-                    <td className="px-3 py-2.5">
-                      {o.status === "paid" ? (
-                        <Badge tone="success">Payé</Badge>
-                      ) : o.status === "refunded" ? (
-                        <Badge>Remboursé</Badge>
-                      ) : (
-                        <Badge tone="error">Échec</Badge>
-                      )}
-                    </td>
-                    <td className="px-6 py-2.5">
-                      {o.status === "failed" ? (
-                        <span className="text-subtle">—</span>
-                      ) : o.receipt_url && /^https:\/\//.test(o.receipt_url) ? (
-                        <a
-                          href={o.receipt_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-medium text-brand-600 underline dark:text-brand-300"
-                        >
-                          Voir
-                        </a>
-                      ) : (
-                        <span className="text-subtle">Envoyée par e-mail</span>
-                      )}
-                    </td>
+          <>
+            <ul className="divide-y divide-[var(--border)] sm:hidden">
+              {orders.map((o, i) => (
+                <li key={i} className="grid gap-1 px-6 py-3 text-sm">
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="font-medium">{PRODUCT_LABEL[o.product] ?? o.product}</span>
+                    <span className="tabular">{money(o.amount_cents, o.currency)}</span>
+                  </div>
+                  <div className="flex flex-wrap items-center justify-between gap-3 text-muted">
+                    <span>{d(o.created_at)}</span>
+                    <OrderStatus status={o.status} />
+                  </div>
+                  {o.status !== "failed" ? <Receipt url={o.receipt_url} /> : null}
+                </li>
+              ))}
+            </ul>
+            <div className="hidden overflow-x-auto sm:block">
+              <table className="w-full text-left text-sm">
+                <thead className="bg-[var(--bg-subtle)] text-xs uppercase tracking-wide text-subtle">
+                  <tr>
+                    <th scope="col" className="px-6 py-2.5">
+                      Date
+                    </th>
+                    <th scope="col" className="px-3 py-2.5">
+                      Offre
+                    </th>
+                    <th scope="col" className="px-3 py-2.5">
+                      Montant
+                    </th>
+                    <th scope="col" className="px-3 py-2.5">
+                      Statut
+                    </th>
+                    <th scope="col" className="px-6 py-2.5">
+                      Facture
+                    </th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                </thead>
+                <tbody className="divide-y divide-[var(--border)]">
+                  {orders.map((o, i) => (
+                    <tr key={i}>
+                      <td className="whitespace-nowrap px-6 py-2.5 text-muted">{d(o.created_at)}</td>
+                      <td className="px-3 py-2.5">{PRODUCT_LABEL[o.product] ?? o.product}</td>
+                      <td className="tabular px-3 py-2.5">{money(o.amount_cents, o.currency)}</td>
+                      <td className="px-3 py-2.5">
+                        <OrderStatus status={o.status} />
+                      </td>
+                      <td className="px-6 py-2.5">
+                        {o.status === "failed" ? <span className="text-subtle">—</span> : <Receipt url={o.receipt_url} />}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </>
         ) : (
           <p className="px-6 py-8 text-center text-sm text-muted">Aucun paiement pour le moment.</p>
         )}
       </section>
     </div>
+  );
+}
+
+function money(cents: number, currency: string) {
+  return `${(cents / 100).toFixed(2).replace(".", ",")} ${currency === "EUR" ? "€" : currency}`;
+}
+
+function OrderStatus({ status }: { status: string }) {
+  if (status === "paid") return <Badge tone="success">Payé</Badge>;
+  if (status === "refunded") return <Badge>Remboursé</Badge>;
+  return <Badge tone="error">Échec</Badge>;
+}
+
+function Receipt({ url }: { url: string | null }) {
+  return url && /^https:\/\//.test(url) ? (
+    <a href={url} target="_blank" rel="noopener noreferrer" className="font-medium text-brand-600 underline dark:text-brand-300">
+      Voir la facture
+    </a>
+  ) : (
+    <span className="text-subtle">Facture envoyée par e-mail par le prestataire de paiement</span>
   );
 }

@@ -76,8 +76,10 @@ function mapStatus(s: string): SubscriptionStatus {
     case "trialing":
       return "active";
     case "past_due":
-    case "unpaid":
       return "past_due";
+    // Retries exhausted ("mark as unpaid" setting): no access.
+    case "unpaid":
+      return "unpaid";
     case "paused":
       return "paused";
     case "canceled":
@@ -121,7 +123,7 @@ function subscriptionEvent(sub: StripeSubscription, eventTime?: Date): BillingEv
 export const stripeProvider: PaymentProvider = {
   name: "stripe",
 
-  async createCheckout({ product, user, successUrl, cancelUrl }) {
+  async createCheckout({ product, user, successUrl, cancelUrl, customerId }) {
     const price = priceMap()[product.id];
     if (!price) throw new ProviderConfigError(`No Stripe price configured for ${product.id}`);
     const isSub = product.kind === "subscription";
@@ -130,7 +132,8 @@ export const stripeProvider: PaymentProvider = {
       "line_items[0][price]": price,
       "line_items[0][quantity]": 1,
       client_reference_id: user.id,
-      customer_email: user.email,
+      // Reuse the customer so that the billing portal lists all of their subscriptions and invoices.
+      ...(customerId ? { customer: customerId } : { customer_email: user.email }),
       "metadata[user_id]": user.id,
       "metadata[product]": product.id,
       ...(isSub
@@ -167,7 +170,13 @@ export const stripeProvider: PaymentProvider = {
     const secret = env().STRIPE_WEBHOOK_SECRET;
     if (!secret) throw new ProviderConfigError("STRIPE_WEBHOOK_SECRET is not configured");
     verifyStripeSignature(rawBody, headers.get("stripe-signature"), secret);
-    const evt = JSON.parse(rawBody) as { id: string; type: string; created?: number; livemode?: boolean; data: { object: Record<string, unknown> } };
+    const evt = JSON.parse(rawBody) as {
+      id: string;
+      type: string;
+      created?: number;
+      livemode?: boolean;
+      data: { object: Record<string, unknown> };
+    };
     const obj = evt.data.object;
     const events: BillingEvent[] = [];
     // In live mode, test-mode events (sent with test keys) must never grant anything.
@@ -191,7 +200,13 @@ export const stripeProvider: PaymentProvider = {
         const userId = s.metadata?.user_id ?? s.client_reference_id;
         if (s.mode === "payment" && s.payment_status === "paid" && userId && s.metadata?.product === "pack") {
           // Stored under the PaymentIntent id so that charge.refunded events match the order.
-          events.push({ type: "pack.paid", userId, orderId: s.payment_intent ?? s.id, amount: s.amount_total, currency: s.currency.toUpperCase() });
+          events.push({
+            type: "pack.paid",
+            userId,
+            orderId: s.payment_intent ?? s.id,
+            amount: s.amount_total,
+            currency: s.currency.toUpperCase(),
+          });
         } else {
           events.push({ type: "ignored", reason: `checkout ${s.mode} ${s.payment_status}` });
         }
@@ -245,8 +260,19 @@ export const stripeProvider: PaymentProvider = {
       }
       case "charge.refunded": {
         const ch = obj as { payment_intent?: string; invoice?: string; amount_refunded: number };
-        // Packs are stored by checkout session id; refunds are matched by the admin via the provider dashboard.
-        events.push({ type: "order.refunded", orderId: ch.invoice ?? ch.payment_intent ?? "", amount: ch.amount_refunded });
+        // Packs are stored under their PaymentIntent id, subscription payments under their invoice id.
+        // Recent API versions no longer expose charge.invoice: the invoice is looked up by payment.
+        let invoiceId = ch.invoice;
+        if (!invoiceId && ch.payment_intent) {
+          invoiceId = await stripe<{ data?: { invoice?: string }[] }>(
+            "GET",
+            `/invoice_payments?payment[type]=payment_intent&payment[payment_intent]=${encodeURIComponent(ch.payment_intent)}&limit=1`,
+          )
+            .then((r) => r.data?.[0]?.invoice)
+            .catch(() => undefined);
+        }
+        const ids = [invoiceId, ch.payment_intent].filter((x): x is string => !!x);
+        events.push({ type: "order.refunded", orderId: ids[0] ?? "", alternateOrderIds: ids.slice(1), amount: ch.amount_refunded });
         break;
       }
       default:

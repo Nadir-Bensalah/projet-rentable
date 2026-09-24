@@ -4,6 +4,8 @@ services:
   - type: web
     name: releveo
     runtime: docker
+    # "free" sleeps after 15 min idle (~50 s cold start; providers retry webhooks).
+    # Fine for the test-mode launch; switch to "starter" before PAYMENT_MODE=live.
     plan: free
     region: frankfurt
     healthCheckPath: /api/health
@@ -24,6 +26,8 @@ services:
         value: "1"
       - key: PAYMENT_PROVIDER
         value: lemonsqueezy
+      - key: PAYMENT_MODE
+        value: test # switch to "live" after the end-to-end test purchase
       - key: LEMONSQUEEZY_API_KEY
         sync: false
       - key: LEMONSQUEEZY_STORE_ID
@@ -52,17 +56,22 @@ services:
         sync: false
       - key: ADMIN_EMAILS
         sync: false
-      - key: NEXT_PUBLIC_LEGAL_NAME
+      # Legal identity, read at runtime; the server refuses to start while incomplete.
+      - key: LEGAL_NAME
         sync: false
-      - key: NEXT_PUBLIC_LEGAL_STATUS
+      - key: LEGAL_STATUS
         sync: false
-      - key: NEXT_PUBLIC_LEGAL_SIREN
+      - key: LEGAL_SIREN
         sync: false
-      - key: NEXT_PUBLIC_LEGAL_ADDRESS
+      - key: LEGAL_ADDRESS
         sync: false
-      - key: NEXT_PUBLIC_LEGAL_VAT
+      - key: LEGAL_VAT
         sync: false
-      - key: NEXT_PUBLIC_LEGAL_DIRECTOR
+      - key: LEGAL_DIRECTOR
         sync: false
-      - key: NEXT_PUBLIC_LEGAL_HOST
+      - key: LEGAL_HOST
+        sync: false
+      - key: LEGAL_DB_HOST
+        sync: false
+      - key: LEGAL_MEDIATOR
         sync: false

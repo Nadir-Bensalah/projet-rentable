@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const FAQ: FaqItem[] = [
   {
     q: "Comment sont comptées les pages ?",
-    a: "Une page = une page du relevé PDF que vous exportez. Un relevé de 3 pages consomme 3 pages. Ré-exporter le même relevé dans un autre format pendant le même mois ne consomme rien.",
+    a: "Une page = une page du relevé PDF que vous exportez. Un relevé de 3 pages consomme 3 pages. Ré-exporter le même relevé dans un autre format pendant le même mois ne consomme rien (jusqu'à 10 ré-exports par relevé et par mois).",
   },
   {
     q: "Que se passe-t-il si je dépasse mon forfait ?",

@@ -83,7 +83,7 @@ test.describe("security", () => {
   test("sandbox checkout tokens cannot be reused by another account", async ({ page, browser }) => {
     await signupViaApi(page);
     const url = await page.evaluate(async () => {
-      const r = await fetch("/api/billing/checkout", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ product: "pack" }) });
+      const r = await fetch("/api/billing/checkout", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ product: "pack", consent: true }) });
       return (await r.json()).url as string;
     });
     const token = new URL(url, "http://x").searchParams.get("token");
@@ -96,6 +96,30 @@ test.describe("security", () => {
     }, token);
     expect(status).toBe(403);
     await other.close();
+  });
+
+  test("checkout requires the withdrawal-waiver consent, which is recorded", async ({ page }) => {
+    const email = await signupViaApi(page);
+    const without = await page.evaluate(async () => {
+      const r = await fetch("/api/billing/checkout", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ product: "pack" }) });
+      return r.status;
+    });
+    expect(without).toBe(422);
+    const withConsent = await page.evaluate(async () => {
+      const r = await fetch("/api/billing/checkout", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ product: "pack", consent: true }) });
+      return r.status;
+    });
+    expect(withConsent).toBe(200);
+    const rows = await sql<{ product: string }>(
+      `SELECT c.product FROM checkout_consents c JOIN users u ON u.id = c.user_id WHERE u.email = $1`,
+      [email],
+    );
+    expect(rows.map((r) => r.product)).toEqual(["pack"]);
+  });
+
+  test("legal pages read the publisher identity at runtime", async ({ page }) => {
+    await page.goto("/mentions-legales");
+    await expect(page.getByText("Camille Exemple (E2E)").first()).toBeVisible();
   });
 
   test("cron endpoint requires its secret", async ({ request }) => {

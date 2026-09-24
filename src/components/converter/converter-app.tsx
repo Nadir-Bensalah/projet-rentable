@@ -383,7 +383,7 @@ export function ConverterApp() {
     track("checkout_clicked", { product });
     saveWorkspace(docs);
     const res = await api<{ url: string }>("/api/billing/checkout", {
-      body: { product, from: "convertir" },
+      body: { product, from: "convertir", consent: true },
     });
     if (!res.ok || !res.data.url) return res.data.error ?? "Le paiement est indisponible pour le moment.";
     window.location.href = res.data.url;

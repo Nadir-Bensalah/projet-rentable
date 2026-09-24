@@ -58,8 +58,10 @@ function mapStatus(s: string): SubscriptionStatus {
     case "on_trial":
       return "active";
     case "past_due":
-    case "unpaid":
       return "past_due";
+    // Dunning is over and the payment still failed: no access.
+    case "unpaid":
+      return "unpaid";
     case "paused":
       return "paused";
     case "cancelled":
@@ -95,13 +97,18 @@ export const lemonSqueezyProvider: PaymentProvider = {
   },
 
   async createPortal({ subscription }) {
-    // Signed portal URLs are provided on the subscription object and refreshed on each webhook.
-    if (subscription.portalUrl) return { url: subscription.portalUrl };
-    const res = await ls<{ data: { attributes: { urls: { customer_portal: string } } } }>(
-      "GET",
-      `/subscriptions/${encodeURIComponent(subscription.providerSubscriptionId)}`,
-    );
-    return { url: res.data.attributes.urls.customer_portal };
+    // The signed portal URL expires (24 h), so a fresh one is fetched on every request;
+    // the URL stored from the last webhook is only a fallback when the API is unreachable.
+    try {
+      const res = await ls<{ data: { attributes: { urls: { customer_portal: string } } } }>(
+        "GET",
+        `/subscriptions/${encodeURIComponent(subscription.providerSubscriptionId)}`,
+      );
+      return { url: res.data.attributes.urls.customer_portal };
+    } catch (e) {
+      if (subscription.portalUrl) return { url: subscription.portalUrl };
+      throw e;
+    }
   },
 
   async cancelSubscription(subscription) {
@@ -135,7 +142,8 @@ export const lemonSqueezyProvider: PaymentProvider = {
         const item = a.first_order_item as { variant_id?: number } | undefined;
         // The product is derived from the configured variant only — never from custom data.
         const product = productFromVariant(item?.variant_id);
-        if (a.status === "paid" && product === "pack" && userId && Number(a.total) >= PRODUCTS.pack.price) {
+        // The variant identifies the product; the amount may be lower with a discount code.
+        if (a.status === "paid" && product === "pack" && userId) {
           events.push({
             type: "pack.paid",
             userId,
@@ -200,6 +208,10 @@ export const lemonSqueezyProvider: PaymentProvider = {
       }
       case "order_refunded":
         events.push({ type: "order.refunded", orderId: body.data.id, amount: Number(a.refunded_amount ?? a.total) });
+        break;
+      // Subscription payments are stored as inv_<subscription invoice id>.
+      case "subscription_payment_refunded":
+        events.push({ type: "order.refunded", orderId: `inv_${body.data.id}`, amount: Number(a.refunded_amount ?? a.total) });
         break;
       default:
         events.push({ type: "ignored", reason: name });

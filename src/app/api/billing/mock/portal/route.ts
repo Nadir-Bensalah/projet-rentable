@@ -33,6 +33,10 @@ export const POST = handler(async (req) => {
     [data.subscriptionId, user.id],
   );
   if (!sub) throw new HttpError(404, "Abonnement introuvable.", "not_found");
+  // Like a real portal: an ended subscription cannot be renewed or resumed (a new checkout is needed).
+  if (["expired", "unpaid"].includes(sub.status) || (sub.status === "canceled" && action !== "expire")) {
+    throw new HttpError(409, "Cet abonnement est terminé. Souscrivez une nouvelle offre depuis la page Tarifs.", "subscription_ended");
+  }
   const product = `${sub.plan}_${sub.interval === "year" ? "yearly" : "monthly"}` as ProductId;
   const periodEnd = sub.current_period_end ?? new Date();
   const base = { userId: user.id, subscriptionId: data.subscriptionId, product };

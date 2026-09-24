@@ -1,5 +1,6 @@
 import "server-only";
 import { z } from "zod";
+import { missingLegalFields } from "@/config/site";
 
 /**
  * Centralised, validated server configuration.
@@ -44,7 +45,6 @@ const schema = z.object({
 
   // Analytics (first-party events are always stored; Plausible is optional)
   PLAUSIBLE_DOMAIN: z.string().optional(),
-  PLAUSIBLE_SRC: z.string().optional(),
 
   // Operations
   ADMIN_EMAILS: z.string().default(""),
@@ -68,6 +68,14 @@ function load(): Env {
 
 /** Fail fast instead of silently running production on dev defaults. */
 export function assertProductionReady(env: Env) {
+  const problems = productionProblems(env);
+  if (problems.length) {
+    throw new Error("Production configuration incomplete:\n- " + problems.join("\n- "));
+  }
+}
+
+/** List of reasons why this configuration must not serve production traffic. */
+export function productionProblems(env: Env): string[] {
   const problems: string[] = [];
   if (!env.APP_URL.startsWith("https://") && process.env.ALLOW_HTTP_APP_URL !== "true") {
     problems.push("APP_URL must use https:// in production (secure cookies); set ALLOW_HTTP_APP_URL=true only for local production tests");
@@ -89,9 +97,23 @@ export function assertProductionReady(env: Env) {
   }
   if (env.EMAIL_PROVIDER === "resend" && !env.RESEND_API_KEY) problems.push("RESEND_API_KEY missing");
   if (env.EMAIL_PROVIDER === "smtp" && !env.SMTP_URL) problems.push("SMTP_URL missing");
-  if (problems.length) {
-    throw new Error("Production configuration incomplete:\n- " + problems.join("\n- "));
+  if (env.PAYMENT_PROVIDER !== "mock" && env.PAYMENT_MODE === "live" && env.EMAIL_PROVIDER === "console") {
+    problems.push("EMAIL_PROVIDER=console cannot be used with live payments (customers would get no e-mail)");
   }
+  const legal = missingLegalFields();
+  if (legal.length && process.env.ALLOW_INCOMPLETE_LEGAL !== "true") {
+    problems.push(
+      `Legal identity incomplete (${legal.join(", ")}): set the LEGAL_* variables (see .env.example), or ALLOW_INCOMPLETE_LEGAL=true for a non-public staging`,
+    );
+  }
+  return problems;
+}
+
+/** Validates the environment (schema + production rules) without throwing. */
+export function configurationProblems(): string[] {
+  const parsed = schema.safeParse(process.env);
+  if (!parsed.success) return parsed.error.issues.map((i) => `${i.path.join(".")}: ${i.message}`);
+  return parsed.data.NODE_ENV === "production" ? productionProblems(parsed.data) : [];
 }
 
 let cached: Env | undefined;

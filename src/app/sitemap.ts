@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { absoluteUrl } from "@/config/site";
 import { FORMAT_PAGES } from "@/content/formats";
 import { GUIDES } from "@/content/guides";
-import { LEGAL_PAGES } from "@/content/legal";
+import { LEGAL_SLUGS } from "@/content/legal";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date("2026-09-24");
@@ -26,8 +26,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     page("/outils/modele-rapprochement-bancaire", 0.6),
     page("/parrainage", 0.3),
     page("/contact", 0.3, "yearly"),
-    page("/inscription", 0.3, "yearly"),
-    page("/connexion", 0.2, "yearly"),
-    ...LEGAL_PAGES.map((l) => page(`/${l.slug}`, 0.1, "yearly")),
+    ...LEGAL_SLUGS.map((l) => page(`/${l}`, 0.1, "yearly")),
   ];
 }

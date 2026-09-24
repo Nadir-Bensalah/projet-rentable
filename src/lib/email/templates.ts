@@ -69,14 +69,16 @@ export type TemplateName =
   | "activation_nudge"
   | "account_deleted"
   | "referral_reward"
-  | "support_message";
+  | "support_message"
+  | "renewal_reminder"
+  | "admin_alert";
 
 export type TemplateData = {
   verify_email: { url: string; name?: string | null };
   reset_password: { url: string };
   password_changed: Record<string, never>;
-  pack_purchased: { pages: number; expires: string; appUrl: string };
-  subscription_started: { planName: string; pages: number; appUrl: string };
+  pack_purchased: { pages: number; expires: string; appUrl: string; consent?: string | null };
+  subscription_started: { planName: string; pages: number; appUrl: string; consent?: string | null };
   subscription_canceled: { planName: string; endDate: string | null; billingUrl: string };
   payment_failed: { planName: string; billingUrl: string };
   quota_warning: { used: number; limit: number; pricingUrl: string };
@@ -84,7 +86,18 @@ export type TemplateData = {
   account_deleted: Record<string, never>;
   referral_reward: { pages: number; appUrl: string };
   support_message: { from: string; topic: string; message: string };
+  renewal_reminder: { planName: string; amount: string; date: string; billingUrl: string };
+  admin_alert: { subject: string; lines: string[] };
 };
+
+/** Durable-medium confirmation of the consent given at checkout (art. L221-13 C. conso). */
+function consentParagraph(consent: unknown): string[] {
+  return consent
+    ? [
+        `Confirmation de votre demande lors de la commande (${String(consent)}) : vous avez demandé l'exécution immédiate du service et reconnu perdre votre droit de rétractation dès la première page payante utilisée. Tant qu'aucune page payante n'est utilisée, vous pouvez vous rétracter dans les 14 jours.`,
+      ]
+    : [];
+}
 
 export function renderTemplate<T extends TemplateName>(name: T, data: TemplateData[T]): EmailContent {
   const d = data as Record<string, unknown>;
@@ -135,6 +148,7 @@ export function renderTemplate<T extends TemplateName>(name: T, data: TemplateDa
         paragraphs: [
           `${d.pages} pages ont été ajoutées à votre compte. Elles sont utilisables jusqu'au ${d.expires}, avec tous les formats d'export.`,
           "Votre facture vous est envoyée séparément par notre prestataire de paiement.",
+          ...consentParagraph(d.consent),
         ],
         cta: { label: "Convertir un relevé", url: String(d.appUrl) },
       });
@@ -147,6 +161,7 @@ export function renderTemplate<T extends TemplateName>(name: T, data: TemplateDa
         paragraphs: [
           `Votre abonnement est actif : ${d.pages} pages par mois, tous les formats, la conversion de plusieurs relevés à la fois et la fusion.`,
           "Vous pouvez gérer ou résilier votre abonnement à tout moment depuis votre espace, rubrique Abonnement.",
+          ...consentParagraph(d.consent),
         ],
         cta: { label: "Convertir un relevé", url: String(d.appUrl) },
       });
@@ -159,7 +174,9 @@ export function renderTemplate<T extends TemplateName>(name: T, data: TemplateDa
         title: "Résiliation confirmée",
         paragraphs: [
           `Votre abonnement ${d.planName} est résilié. ${until}`,
-          "Vous restez sur le plan gratuit, et vos données de compte sont conservées. Vous pouvez vous réabonner à tout moment.",
+          d.endDate
+            ? "Ensuite, votre compte passera automatiquement sur le plan gratuit ; vos données de compte sont conservées. Vous pouvez vous réabonner à tout moment."
+            : "Votre compte est désormais sur le plan gratuit ; vos données de compte sont conservées. Vous pouvez vous réabonner à tout moment.",
         ],
         cta: { label: "Gérer mon abonnement", url: String(d.billingUrl) },
       });
@@ -198,7 +215,8 @@ export function renderTemplate<T extends TemplateName>(name: T, data: TemplateDa
           "Le fichier reste sur votre ordinateur. Vos pages gratuites du mois sont disponibles.",
         ],
         cta: { label: "Convertir mon premier relevé", url: String(d.appUrl) },
-        footerNote: "Vous recevez ce message une seule fois, après votre inscription.",
+        footerNote:
+          "Vous recevez ce message une seule fois, après votre inscription. Pour ne plus recevoir aucun message non indispensable, décochez l'option dans Mon compte > Paramètres.",
       });
       return { subject: "Il ne manque plus que votre premier relevé — Relevéo", ...l };
     }
@@ -231,6 +249,28 @@ export function renderTemplate<T extends TemplateName>(name: T, data: TemplateDa
         footerNote: "Message transmis par le formulaire de contact.",
       });
       return { subject: `[Contact] ${d.topic}`, ...l };
+    }
+    case "renewal_reminder": {
+      const l = layout({
+        preheader: `Votre abonnement ${d.planName} sera renouvelé le ${d.date}.`,
+        title: "Renouvellement de votre abonnement annuel",
+        paragraphs: [
+          `Votre abonnement ${d.planName} sera renouvelé automatiquement le ${d.date}, pour ${d.amount} TTC.`,
+          "Si vous ne souhaitez pas le reconduire, vous pouvez le résilier en ligne avant cette date depuis votre espace, rubrique Abonnement : vous garderez l'accès jusqu'à la fin de la période en cours.",
+        ],
+        cta: { label: "Gérer mon abonnement", url: String(d.billingUrl) },
+        footerNote: "Message d'information obligatoire avant la reconduction d'un abonnement (art. L215-1 du Code de la consommation).",
+      });
+      return { subject: `Votre abonnement sera renouvelé le ${d.date} — Relevéo`, ...l };
+    }
+    case "admin_alert": {
+      const l = layout({
+        preheader: String(d.subject),
+        title: String(d.subject),
+        paragraphs: (d.lines as string[]).map(String),
+        footerNote: "Alerte automatique de Relevéo.",
+      });
+      return { subject: `[Relevéo — action requise] ${d.subject}`, ...l };
     }
   }
   throw new Error(`Unknown template ${name}`);

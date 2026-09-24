@@ -49,7 +49,7 @@ const FAQ: FaqItem[] = [
   },
   {
     q: "Qu'est-ce qu'une « page » dans les offres ?",
-    a: `Une page de relevé PDF exportée. Un relevé mensuel de particulier fait souvent 1 à 3 pages. Le plan gratuit inclut ${FREE_MONTHLY_PAGES} pages par mois, et ré-exporter le même relevé dans un autre format pendant le mois ne coûte rien.`,
+    a: `Une page de relevé PDF exportée. Un relevé mensuel de particulier fait souvent 1 à 3 pages. Le plan gratuit inclut ${FREE_MONTHLY_PAGES} pages par mois, et ré-exporter le même relevé dans un autre format pendant le mois ne coûte rien (jusqu'à 10 fois).`,
   },
   {
     q: "Puis-je importer le résultat dans mon logiciel de comptabilité ?",

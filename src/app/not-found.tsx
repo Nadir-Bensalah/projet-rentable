@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { ButtonLink } from "@/components/ui/button";
+
+export const metadata: Metadata = {
+  title: "Page introuvable",
+  robots: { index: false, follow: true },
+  alternates: { canonical: null },
+};
 
 export default function RootNotFound() {
   return (

@@ -39,6 +39,10 @@ test.describe("export, paywall and payments", () => {
     await page.getByTestId("export-button").click();
     const dialog = page.getByRole("dialog");
     await expect(dialog).toContainText("Ce format est inclus dans les offres payantes");
+    // The withdrawal-waiver consent is required before the payment page.
+    await dialog.getByRole("button", { name: "Choisir" }).first().click();
+    await expect(dialog.getByText("Cochez cette case pour continuer")).toBeVisible();
+    await dialog.getByLabel(/Je demande l'accès immédiat/).check();
     await dialog.getByRole("button", { name: "Choisir" }).first().click();
     await expect(page).toHaveURL(/\/paiement\/simulation/);
     await expect(page.getByText("Pack 150 pages")).toBeVisible();
@@ -65,6 +69,7 @@ test.describe("export, paywall and payments", () => {
   test("subscription lifecycle through the sandbox portal", async ({ page }) => {
     await signupViaApi(page);
     await page.goto("/tarifs");
+    await page.getByLabel(/Je demande l'accès immédiat/).check();
     await page.getByRole("button", { name: "Choisir Pro" }).click();
     await expect(page).toHaveURL(/\/paiement\/simulation/);
     await page.getByTestId("mock-pay").click();

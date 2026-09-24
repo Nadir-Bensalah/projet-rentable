@@ -2,13 +2,23 @@
 
 import { Check } from "lucide-react";
 import { useState } from "react";
-import { FREE_MONTHLY_PAGES, PACK, PLANS, formatPrice } from "@/config/plans";
+import { FREE_MONTHLY_PAGES, MAX_FREE_REEXPORTS, PACK, PLANS, formatPrice } from "@/config/plans";
 import { ButtonLink } from "@/components/ui/button";
 import { cn } from "@/lib/cn";
 import { CheckoutButton } from "./checkout-button";
+import { WithdrawalConsent } from "./withdrawal-consent";
 
 export function PricingTable() {
   const [yearly, setYearly] = useState(false);
+  const [consent, setConsent] = useState(false);
+  const [consentMissing, setConsentMissing] = useState(false);
+  const consentProps = {
+    consent,
+    onMissingConsent: () => {
+      setConsentMissing(true);
+      document.getElementById("withdrawal-consent")?.focus();
+    },
+  };
   const plan = (id: "pro" | "business") => {
     const p = PLANS[id];
     const price = yearly ? p.priceYearly / 12 : p.priceMonthly;
@@ -46,7 +56,7 @@ export function PricingTable() {
           </ButtonLink>
         </Card>
         <Card title={PACK.name} price={formatPrice(PACK.price)} note="paiement unique" features={PACK.features}>
-          <CheckoutButton product="pack" label="Acheter le pack" variant="secondary" />
+          <CheckoutButton product="pack" label="Acheter le pack" variant="secondary" {...consentProps} />
         </Card>
         {(["pro", "business"] as const).map((id) => {
           const { p, price } = plan(id);
@@ -63,14 +73,25 @@ export function PricingTable() {
                 product={`${id}_${yearly ? "yearly" : "monthly"}`}
                 label={`Choisir ${p.name}`}
                 variant={p.highlight ? "primary" : "secondary"}
+                {...consentProps}
               />
             </Card>
           );
         })}
       </div>
+      <WithdrawalConsent
+        className="mx-auto mt-6 max-w-2xl"
+        checked={consent}
+        invalid={consentMissing && !consent}
+        onChange={(v) => {
+          setConsent(v);
+          if (v) setConsentMissing(false);
+        }}
+      />
       <p className="mt-6 text-center text-sm text-subtle">
         Prix TTC. Une « page » = une page de relevé PDF exportée. {FREE_MONTHLY_PAGES} pages gratuites renouvelées chaque mois. Les pages du
-        pack s&apos;ajoutent à votre forfait mensuel. Ré-exporter un même relevé dans un autre format pendant le mois ne consomme pas de page (toutes offres).
+        pack s&apos;ajoutent à votre forfait mensuel. Ré-exporter un même relevé dans un autre format pendant le mois ne consomme pas de
+        page, jusqu&apos;à {MAX_FREE_REEXPORTS} fois par relevé (toutes offres).
       </p>
     </div>
   );
@@ -100,7 +121,7 @@ function Card({
     >
       {highlight ? (
         <span className="absolute -top-3 left-6 rounded-full bg-brand-600 px-3 py-1 text-xs font-semibold text-white">
-          Le plus choisi par les indépendants
+          Recommandé pour les indépendants
         </span>
       ) : null}
       <h2 className="text-lg font-bold">{title}</h2>

@@ -1,7 +1,7 @@
 import { ArrowRight, Gift } from "lucide-react";
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { REFERRAL_REWARD_PAGES } from "@/config/plans";
+import { REFERRAL_REWARD_PAGES, formatNumber } from "@/config/plans";
 import { absoluteUrl } from "@/config/site";
 import { getCurrentUser } from "@/lib/auth/session";
 import { loadAccountView } from "@/lib/account-view";
@@ -47,7 +47,7 @@ export default async function AccountOverview(props: { searchParams: Promise<Rec
           </div>
           <p className="mt-4">
             <span className="tabular text-3xl font-bold">{account.usedThisMonth}</span>{" "}
-            <span className="text-muted">/ {account.monthlyLimit} pages</span>
+            <span className="text-muted">/ {formatNumber(account.monthlyLimit)} pages</span>
           </p>
           <div
             className="mt-3 h-2.5 overflow-hidden rounded-full bg-[var(--bg-subtle)]"
@@ -63,7 +63,8 @@ export default async function AccountOverview(props: { searchParams: Promise<Rec
             />
           </div>
           <p className="mt-3 text-sm text-muted">
-            {account.allowanceRemaining} page{account.allowanceRemaining > 1 ? "s" : ""} restante{account.allowanceRemaining > 1 ? "s" : ""}, renouvelées le 1er du mois.
+            {account.allowanceRemaining} page{account.allowanceRemaining > 1 ? "s" : ""} restante{account.allowanceRemaining > 1 ? "s" : ""}
+            , renouvelées le 1er du mois.
             {account.credits
               ? ` Plus ${account.credits} pages de crédit${account.creditsNextExpiry ? ` (première expiration le ${new Intl.DateTimeFormat("fr-FR", { dateStyle: "long" }).format(new Date(account.creditsNextExpiry))})` : ""}.`
               : ""}

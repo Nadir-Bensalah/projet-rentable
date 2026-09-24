@@ -9,6 +9,7 @@ import type { ParsedStatement } from "@/lib/statement/types";
 import { LoginForm, SignupForm } from "@/components/auth/forms";
 import { fetchMe } from "@/components/layout/use-account";
 import { Alert } from "@/components/ui/alert";
+import { WithdrawalConsent } from "@/components/billing/withdrawal-consent";
 import { Button } from "@/components/ui/button";
 import { Dialog } from "@/components/ui/dialog";
 import { Textarea } from "@/components/ui/field";
@@ -122,10 +123,17 @@ export function PaywallDialog({
 }) {
   const [loading, setLoading] = useState<ProductId | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [consent, setConsent] = useState(false);
+  const [consentMissing, setConsentMissing] = useState(false);
   useEffect(() => {
     if (open) track("paywall_shown", { reason: reason.slice(0, 60) });
   }, [open, reason]);
   const go = async (p: ProductId) => {
+    if (!consent) {
+      setConsentMissing(true);
+      document.getElementById("withdrawal-consent")?.focus();
+      return;
+    }
     setLoading(p);
     setError(null);
     const err = await onCheckout(p);
@@ -195,6 +203,15 @@ export function PaywallDialog({
           </div>
         ))}
       </div>
+      <WithdrawalConsent
+        className="mt-4"
+        checked={consent}
+        invalid={consentMissing && !consent}
+        onChange={(v) => {
+          setConsent(v);
+          if (v) setConsentMissing(false);
+        }}
+      />
       <p className="mt-4 text-center text-xs text-subtle">
         Paiement sécurisé par notre prestataire. Votre conversion est conservée dans cet onglet pendant le paiement.
       </p>

@@ -697,7 +697,7 @@ export const GUIDES: Guide[] = [
       },
       {
         q: "Que se passe-t-il si je reconvertis un relevé déjà traité ?",
-        a: "Réexporter le même relevé au cours du même mois ne consomme pas de pages supplémentaires.",
+        a: "Réexporter le même relevé au cours du même mois ne consomme pas de pages supplémentaires (jusqu'à 10 ré-exports par relevé).",
       },
     ],
     related: [

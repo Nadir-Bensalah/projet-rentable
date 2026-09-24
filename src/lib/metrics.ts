@@ -42,7 +42,13 @@ export async function loadMetrics(days: number) {
       ),
       count("export_clicked"),
       count("paywall_shown"),
-      Number((await queryOne<{ n: string }>(`SELECT count(*) AS n FROM analytics_events WHERE name = 'checkout_clicked' AND created_at > ${since}`))?.n ?? 0),
+      Number(
+        (
+          await queryOne<{ n: string }>(
+            `SELECT count(*) AS n FROM analytics_events WHERE name = 'checkout_clicked' AND created_at > ${since}`,
+          )
+        )?.n ?? 0,
+      ),
     ]);
   const signups = Number((await queryOne<{ n: string }>(`SELECT count(*) AS n FROM users WHERE created_at > ${since}`))?.n ?? 0);
   const verified = Number(
@@ -67,9 +73,10 @@ export async function loadMetrics(days: number) {
             count(*) FILTER (WHERE status = 'paid') AS orders
        FROM orders WHERE created_at > ${since} GROUP BY currency`,
   );
+  // MRR only counts subscriptions that will renew: in good standing and not scheduled to end.
   const activeSubs = await query<{ plan: "pro" | "business"; interval: string; n: string }>(
     `SELECT plan, interval, count(*) AS n FROM subscriptions
-      WHERE status IN ('active','past_due') OR (status = 'canceled' AND current_period_end > now())
+      WHERE status = 'active' AND NOT cancel_at_period_end
       GROUP BY plan, interval`,
   );
   const mrr = activeSubs.reduce(

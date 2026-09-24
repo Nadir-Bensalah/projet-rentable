@@ -4,7 +4,7 @@ import { absoluteUrl } from "@/config/site";
 import { query, queryOne, transaction } from "@/lib/db";
 import { sendEmail } from "@/lib/email";
 import { trackServer } from "@/lib/analytics/server";
-import { grantCredits, latestSubscription, paymentProvider, toRef } from "@/lib/billing";
+import { grantCredits, liveSubscriptions, paymentProvider, toRef } from "@/lib/billing";
 import { randomToken, referralCode, sha256 } from "@/lib/security/tokens";
 import { dummyPasswordHash, hashPassword, verifyPassword } from "./password";
 
@@ -39,8 +39,9 @@ export async function findUserByEmail(email: string) {
 
 async function createEmailToken(userId: string, purpose: "verify_email" | "reset_password", ttlMinutes: number) {
   const token = randomToken(32);
-  // Only one live token per purpose.
-  await query(`DELETE FROM email_tokens WHERE user_id = $1 AND purpose = $2`, [userId, purpose]);
+  // A password reset keeps a single live link. Verification links stay valid until they expire
+  // (48 h), so clicking an earlier e-mail after a resend still works.
+  if (purpose === "reset_password") await query(`DELETE FROM email_tokens WHERE user_id = $1 AND purpose = $2`, [userId, purpose]);
   await query(`INSERT INTO email_tokens (id, user_id, purpose, expires_at) VALUES ($1, $2, $3, now() + make_interval(mins => $4))`, [
     sha256(token),
     userId,
@@ -174,7 +175,10 @@ async function rewardReferral(referrerId: string, refereeId: string) {
        FROM users u WHERE u.id = $1 AND u.email_verified_at IS NOT NULL`,
     [referrerId],
   );
-  const referee = await queryOne<{ email: string; signup_ip_hash: string | null }>(`SELECT email, signup_ip_hash FROM users WHERE id = $1`, [refereeId]);
+  const referee = await queryOne<{ email: string; signup_ip_hash: string | null }>(
+    `SELECT email, signup_ip_hash FROM users WHERE id = $1`,
+    [refereeId],
+  );
   if (!referrer || !referee) return;
   const sameIdentity = canonicalEmail(referee.email) === (referrer.email_canonical ?? canonicalEmail(referrer.email));
   const sharedIp = referee.signup_ip_hash
@@ -207,9 +211,12 @@ export async function requestPasswordReset(email: string) {
   if (!user) return;
   const token = await createEmailToken(user.id, "reset_password", 60);
   // Not awaited: the response time must not reveal whether the account exists.
-  void sendEmail("reset_password", user.email, { url: absoluteUrl(`/reinitialiser-mot-de-passe?token=${token}`) }, { userId: user.id }).catch(
-    (e) => console.error("[auth] reset e-mail failed", e),
-  );
+  void sendEmail(
+    "reset_password",
+    user.email,
+    { url: absoluteUrl(`/reinitialiser-mot-de-passe?token=${token}`) },
+    { userId: user.id },
+  ).catch((e) => console.error("[auth] reset e-mail failed", e));
 }
 
 export async function resetPassword(token: string, newPassword: string): Promise<{ id: string; email: string } | null> {
@@ -241,25 +248,30 @@ export async function exportUserData(userId: string) {
     `SELECT id, email, name, email_verified_at, marketing_opt_in, referral_code, first_touch, created_at, last_login_at FROM users WHERE id = $1`,
     [userId],
   );
-  const [subscriptions, orders, credits, usage, sessions, contactMessages, layoutReports, emails, analytics] = await Promise.all([
-    query(
-      `SELECT provider, plan, interval, status, current_period_end, cancel_at_period_end, created_at FROM subscriptions WHERE user_id = $1`,
-      [userId],
-    ),
-    query(`SELECT provider, kind, product, amount_cents, currency, status, created_at FROM orders WHERE user_id = $1 ORDER BY created_at`, [
-      userId,
-    ]),
-    query(`SELECT pages, remaining, source, expires_at, created_at FROM credit_grants WHERE user_id = $1`, [userId]),
-    query(
-      `SELECT period, pages, from_allowance, from_credits, format, bank_id, reconciled, created_at FROM usage_events WHERE user_id = $1 ORDER BY created_at`,
-      [userId],
-    ),
-    query(`SELECT created_at, last_seen_at, expires_at, user_agent FROM sessions WHERE user_id = $1`, [userId]),
-    query(`SELECT email, topic, message, created_at FROM contact_messages WHERE user_id = $1 ORDER BY created_at`, [userId]),
-    query(`SELECT bank_id, summary, comment, created_at FROM layout_reports WHERE user_id = $1 ORDER BY created_at`, [userId]),
-    query(`SELECT template, status, created_at FROM email_log WHERE user_id = $1 ORDER BY created_at`, [userId]),
-    query(`SELECT name, path, props, created_at FROM analytics_events WHERE user_id = $1 ORDER BY created_at DESC LIMIT 5000`, [userId]),
-  ]);
+  const [subscriptions, orders, credits, usage, sessions, contactMessages, layoutReports, emails, analytics, checkoutConsents] =
+    await Promise.all([
+      query(
+        `SELECT provider, plan, interval, status, current_period_end, cancel_at_period_end, created_at FROM subscriptions WHERE user_id = $1`,
+        [userId],
+      ),
+      query(
+        `SELECT provider, kind, product, amount_cents, currency, status, created_at FROM orders WHERE user_id = $1 ORDER BY created_at`,
+        [userId],
+      ),
+      query(`SELECT pages, remaining, source, expires_at, created_at FROM credit_grants WHERE user_id = $1`, [userId]),
+      query(
+        `SELECT period, pages, from_allowance, from_credits, format, bank_id, reconciled, created_at FROM usage_events WHERE user_id = $1 ORDER BY created_at`,
+        [userId],
+      ),
+      query(`SELECT created_at, last_seen_at, expires_at, user_agent FROM sessions WHERE user_id = $1`, [userId]),
+      query(`SELECT email, topic, message, created_at FROM contact_messages WHERE user_id = $1 ORDER BY created_at`, [userId]),
+      query(`SELECT bank_id, summary, comment, created_at FROM layout_reports WHERE user_id = $1 ORDER BY created_at`, [userId]),
+      query(`SELECT template, status, created_at FROM email_log WHERE user_id = $1 ORDER BY created_at`, [userId]),
+      query(`SELECT name, path, props, created_at FROM analytics_events WHERE user_id = $1 ORDER BY created_at DESC LIMIT 5000`, [userId]),
+      query(`SELECT product, text_version, consent_text, created_at FROM checkout_consents WHERE user_id = $1 ORDER BY created_at`, [
+        userId,
+      ]),
+    ]);
   return {
     exportedAt: new Date().toISOString(),
     note: "Relevéo ne stocke jamais le contenu de vos relevés : ils sont lus dans votre navigateur. Cet export contient toutes les données de votre compte.",
@@ -273,6 +285,7 @@ export async function exportUserData(userId: string) {
     layoutReports,
     emails,
     analytics,
+    checkoutConsents,
   };
 }
 
@@ -280,9 +293,10 @@ export async function deleteAccount(userId: string, password: string): Promise<"
   const row = await queryOne<{ password_hash: string; email: string }>(`SELECT password_hash, email FROM users WHERE id = $1`, [userId]);
   if (!row) return "ok";
   if (!(await verifyPassword(password, row.password_hash))) return "bad_password";
-  // Stop any running subscription at the provider first.
-  const sub = await latestSubscription(userId);
-  if (sub && ["active", "past_due", "paused"].includes(sub.status)) {
+  // Stop every running subscription at the provider first (including one scheduled to end:
+  // it would otherwise stay attached to a customer we no longer know).
+  const subs = await liveSubscriptions(userId);
+  for (const sub of subs) {
     try {
       await paymentProvider(sub.provider as "mock" | "stripe" | "lemonsqueezy").cancelSubscription(toRef(sub));
     } catch (e) {
@@ -290,7 +304,7 @@ export async function deleteAccount(userId: string, password: string): Promise<"
       throw new Error("La résiliation de l'abonnement a échoué. Réessayez ou contactez le support.");
     }
   }
-  await trackServer("account_deleted", { props: { hadSubscription: !!sub } });
+  await trackServer("account_deleted", { props: { hadSubscription: subs.length > 0 } });
   await transaction(async (db) => {
     // Rows that reference the user with ON DELETE SET NULL but still contain personal data.
     await db.query(`DELETE FROM contact_messages WHERE user_id = $1`, [userId]);

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Créer un compte gratuit",
   description: "Créez votre compte Relevéo gratuit : 15 pages de relevés bancaires converties chaque mois, sans carte bancaire.",
   alternates: { canonical: "/inscription" },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: true },
 };
 
 export default function Page() {

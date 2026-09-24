@@ -1,7 +1,6 @@
 import { z } from "zod";
 import { isClientEvent } from "@/lib/analytics/events";
 import { trackServer } from "@/lib/analytics/server";
-import { getCurrentUser } from "@/lib/auth/session";
 import { rateLimit } from "@/lib/security/rate-limit";
 import { assertSameOrigin, ipHash, readBodyLimited } from "@/lib/security/request";
 
@@ -38,9 +37,9 @@ export async function POST(req: Request) {
     if (Object.keys(props).length > 12) return new Response(null, { status: 204 });
     const rl = await rateLimit(`events:${ipHash(req)}`, 300, 3600);
     if (!rl.ok) return new Response(null, { status: 204 });
-    const user = await getCurrentUser().catch(() => null);
+    // Audience measurement stays anonymous: browser events are never linked to an account
+    // (condition of the CNIL consent exemption).
     await trackServer(parsed.data.name, {
-      userId: user?.id,
       anonId: parsed.data.anonId,
       path: parsed.data.path,
       // Keep only the referring origin, never a full URL with its query string.

@@ -288,3 +288,129 @@ describe("security hardening", () => {
     expect((await billing.accountState(u.id)).credits).toBe(0);
   });
 });
+
+function lsSigned(body: string) {
+  return new Headers({ "x-signature": createHmac("sha256", "ls_test_secret").update(body).digest("hex") });
+}
+
+describe("final red team regressions", () => {
+  it("cancels a second live subscription instead of billing twice", async () => {
+    const u = await createUser();
+    await mockWebhook({ kind: "checkout.completed", userId: u.id, product: "pro_monthly", outcome: "paid", ref: "dup1" });
+    await mockWebhook({ kind: "checkout.completed", userId: u.id, product: "business_monthly", outcome: "paid", ref: "dup2" });
+    const live = await db.query<{ plan: string }>(
+      `SELECT plan FROM subscriptions WHERE user_id = $1 AND status IN ('active', 'past_due') AND NOT cancel_at_period_end`,
+      [u.id],
+    );
+    expect(live.map((r) => r.plan)).toEqual(["business"]);
+    expect(email.sentInMemory.some((m) => m.subject.includes("Double abonnement"))).toBe(true);
+  });
+
+  it("stops access when a failed payment is not recovered (unpaid, or past the grace period)", async () => {
+    const u = await createUser();
+    await mockWebhook({ kind: "checkout.completed", userId: u.id, product: "pro_monthly", outcome: "paid", ref: "unp1" });
+    // past_due within the grace period keeps access.
+    await db.query(`UPDATE subscriptions SET status = 'past_due', current_period_end = now() - interval '3 days' WHERE user_id = $1`, [u.id]);
+    expect((await billing.accountState(u.id)).plan).toBe("pro");
+    // past_due beyond the grace period: no access.
+    await db.query(`UPDATE subscriptions SET current_period_end = now() - interval '20 days' WHERE user_id = $1`, [u.id]);
+    expect((await billing.accountState(u.id)).plan).toBe("free");
+    // Provider "unpaid" status: no access.
+    const body = JSON.stringify({
+      id: "evt_unpaid",
+      type: "customer.subscription.updated",
+      data: {
+        object: {
+          id: "sub_unpaid",
+          customer: "cus_unpaid",
+          status: "unpaid",
+          cancel_at_period_end: false,
+          metadata: { user_id: u.id },
+          items: { data: [{ price: { id: "price_pro_m" }, current_period_end: Math.floor(Date.now() / 1000) + 86400 }] },
+        },
+      },
+    });
+    const u2 = await createUser();
+    await billing.processWebhook(stripe.stripeProvider, body.replace(u.id, u2.id), stripeHeader(body.replace(u.id, u2.id)));
+    expect((await db.queryOne<{ status: string }>(`SELECT status FROM subscriptions WHERE provider_subscription_id = 'sub_unpaid'`))?.status).toBe("unpaid");
+    expect((await billing.accountState(u2.id)).plan).toBe("free");
+  });
+
+  it("acknowledges webhooks for deleted accounts instead of failing forever", async () => {
+    const ghost = "00000000-0000-4000-8000-000000000000";
+    const r = await mockWebhook({
+      kind: "subscription.change",
+      userId: ghost,
+      subscriptionId: "mock_sub_ghost",
+      product: "pro_monthly",
+      status: "canceled",
+      cancelAtPeriodEnd: false,
+      periodEnd: new Date().toISOString(),
+    });
+    expect(r).toEqual({ duplicate: false });
+    const pack = JSON.stringify({
+      meta: { event_name: "order_created", custom_data: { user_id: ghost } },
+      data: { id: "9300", attributes: { status: "paid", total: 1500, currency: "EUR", first_order_item: { variant_id: 111 } } },
+    });
+    await expect(billing.processWebhook(ls.lemonSqueezyProvider, pack, lsSigned(pack))).resolves.toEqual({ duplicate: false });
+    expect(email.sentInMemory.some((m) => m.subject.includes("compte inexistant"))).toBe(true);
+    const row = await db.queryOne<{ processed_at: Date | null; error: string | null }>(
+      `SELECT processed_at, error FROM webhook_events WHERE provider = 'lemonsqueezy' AND event_type = 'order_created' ORDER BY received_at DESC LIMIT 1`,
+    );
+    expect(row?.processed_at).not.toBeNull();
+    expect(row?.error).toMatch(/unknown user/);
+  });
+
+  it("credits a pack bought with a discount code (product identified by variant)", async () => {
+    const u = await createUser();
+    const body = JSON.stringify({
+      meta: { event_name: "order_created", custom_data: { user_id: u.id } },
+      data: { id: "9400", attributes: { status: "paid", total: 750, currency: "EUR", first_order_item: { variant_id: 111 } } },
+    });
+    await billing.processWebhook(ls.lemonSqueezyProvider, body, lsSigned(body));
+    expect((await billing.accountState(u.id)).credits).toBe(150);
+  });
+
+  it("matches refunds of subscription payments (Lemon Squeezy invoices, Stripe alternate ids)", async () => {
+    const u = await createUser();
+    await db.query(
+      `INSERT INTO orders (user_id, provider, provider_order_id, kind, product, amount_cents, currency, status)
+       VALUES ($1, 'lemonsqueezy', 'inv_77', 'subscription_payment', 'pro_monthly', 1200, 'EUR', 'paid'),
+              ($1, 'stripe', 'in_88', 'subscription_payment', 'pro_monthly', 1200, 'EUR', 'paid')`,
+      [u.id],
+    );
+    const refund = JSON.stringify({ meta: { event_name: "subscription_payment_refunded" }, data: { id: "77", attributes: { refunded_amount: 1200 } } });
+    await billing.processWebhook(ls.lemonSqueezyProvider, refund, lsSigned(refund));
+    const charge = JSON.stringify({ id: "evt_ref_88", type: "charge.refunded", data: { object: { invoice: "in_88", payment_intent: "pi_88", amount_refunded: 1200 } } });
+    await billing.processWebhook(stripe.stripeProvider, charge, stripeHeader(charge));
+    const rows = await db.query<{ status: string }>(`SELECT status FROM orders WHERE user_id = $1`, [u.id]);
+    expect(rows.map((r) => r.status)).toEqual(["refunded", "refunded"]);
+  });
+
+  it("confirms the withdrawal consent in the purchase e-mail", async () => {
+    const u = await createUser();
+    await db.query(`INSERT INTO checkout_consents (user_id, product, text_version, consent_text) VALUES ($1, 'pack', 'v', 't')`, [u.id]);
+    await mockWebhook({ kind: "checkout.completed", userId: u.id, product: "pack", outcome: "paid", ref: "consent1" });
+    const mail = email.sentInMemory.find((m) => m.to === u.email && m.subject.includes("pages sont disponibles"));
+    expect(mail?.text).toMatch(/droit de rétractation/);
+  });
+
+  it("charges a batch atomically (nothing charged when one document fails)", async () => {
+    const u = await createUser();
+    await db.query(`INSERT INTO credit_grants (user_id, pages, remaining, source, reference) VALUES ($1, 5, 5, 'pack', $2)`, [u.id, `b-${u.id}`]);
+    const doc = (n: number, pages: number) => ({ userId: u.id, pages, documentHash: HASH(5000 + n), format: "ofx", paidFormat: true, batch: true });
+    // 15 free + 5 credits = 20 pages available; 12 + 12 does not fit.
+    await expect(billing.consumeBatch([doc(1, 12), doc(2, 12)])).rejects.toMatchObject({ code: "quota_exceeded" });
+    const state = await billing.accountState(u.id);
+    expect(state.usedThisMonth).toBe(0);
+    expect(state.credits).toBe(5);
+    const ok = await billing.consumeBatch([doc(1, 12), doc(2, 8)]);
+    expect(ok).toMatchObject({ charged: 20, reExports: 0 });
+  });
+
+  it("uses the Paris calendar month for allowances", () => {
+    // 31 Dec 23:30 UTC is already 1 Jan in Paris.
+    expect(billing.currentPeriod(new Date("2026-12-31T23:30:00Z"))).toBe("2027-01");
+    expect(billing.currentPeriod(new Date("2026-06-15T12:00:00Z"))).toBe("2026-06");
+  });
+});

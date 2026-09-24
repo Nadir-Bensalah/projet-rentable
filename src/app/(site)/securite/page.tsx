@@ -69,8 +69,9 @@ export default function SecurityPage() {
             </p>
             <p>
               Le site applique une <strong>politique de sécurité du contenu</strong> (Content-Security-Policy) qui n&apos;autorise les
-              connexions que vers notre propre domaine : même par erreur, le code de la page ne peut pas envoyer vos données vers un service
-              tiers, une IA externe ou une régie publicitaire.
+              connexions (requêtes réseau) que vers notre propre domaine : le navigateur bloque toute requête du code de la page vers un
+              service tiers, une IA externe ou une régie publicitaire. Et notre propre code n&apos;envoie jamais le fichier ni son contenu :
+              seuls un nombre de pages et une empreinte non réversible sont transmis au moment de l&apos;export.
             </p>
             <p>
               Votre conversion en cours est gardée dans la mémoire de l&apos;onglet (stockage de session du navigateur) pour survivre à un

@@ -48,7 +48,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const plausibleDomain = process.env.PLAUSIBLE_DOMAIN;
-  const plausibleSrc = process.env.PLAUSIBLE_SRC ?? "/js/script.js";
+  const plausibleSrc = "/js/script.js";
   return (
     <html lang="fr" className={inter.variable} suppressHydrationWarning>
       <head>

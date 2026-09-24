@@ -4,7 +4,7 @@ import { formatInfo, type ExportFormat } from "@/lib/statement/export";
 import { trackServer } from "@/lib/analytics/server";
 import { loadAccountView } from "@/lib/account-view";
 import { requireUser } from "@/lib/auth/guard";
-import { QuotaError, accountState, consumePages } from "@/lib/billing";
+import { QuotaError, accountState, consumeBatch } from "@/lib/billing";
 import { query } from "@/lib/db";
 import { rateLimit } from "@/lib/security/rate-limit";
 import { HttpError, assertSameOrigin, handler, json, readJson } from "@/lib/security/request";
@@ -66,10 +66,9 @@ export const POST = handler(async (req) => {
     }
   }
   try {
-    // Documents are charged one by one so a re-exported statement stays free even inside a batch.
-    // The whole batch is checked up-front against the available pages to avoid partial charges.
-    for (const d of body.documents) {
-      const r = await consumePages({
+    // One transaction for the whole batch: either every document is charged, or none.
+    const r = await consumeBatch(
+      body.documents.map((d) => ({
         userId: user.id,
         pages: d.pages,
         documentHash: d.hash,
@@ -78,14 +77,14 @@ export const POST = handler(async (req) => {
         batch,
         bankId: d.bankId ?? undefined,
         reconciled: d.reconciled ?? undefined,
-      });
-      charged += r.charged;
-      if (r.alreadyPaid) reExports++;
-    }
+      })),
+    );
+    charged = r.charged;
+    reExports = r.reExports;
   } catch (e) {
     if (e instanceof QuotaError) {
       const status = e.code === "email_unverified" ? 403 : 402;
-      return json({ error: e.message, code: e.code, charged, account: await loadAccountView(user) }, status);
+      return json({ error: e.message, code: e.code, charged: 0, account: await loadAccountView(user) }, status);
     }
     throw e;
   }

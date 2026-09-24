@@ -88,7 +88,7 @@ export default function FirmsPage() {
           </div>
           <div className="surface p-6 font-mono text-xs leading-relaxed">
             <p className="mb-2 font-sans text-sm font-semibold">Extrait d&apos;export « Écritures (colonnes FEC) » — données fictives</p>
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto" tabIndex={0} role="region" aria-label="Extrait d'export FEC (défilement horizontal)">
               <pre className="text-muted">{`JournalCode  EcritureDate  CompteNum  EcritureLib                     Debit    Credit
 BQ           20260803      512000     VIR SEPA RECU /DE ACME CONSEIL  1850,00  0,00
 BQ           20260803      471000     VIR SEPA RECU /DE ACME CONSEIL  0,00     1850,00

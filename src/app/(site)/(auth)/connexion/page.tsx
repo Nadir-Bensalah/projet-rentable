@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Connexion",
   description: "Connectez-vous à votre compte Relevéo pour convertir vos relevés bancaires PDF et gérer votre abonnement.",
   alternates: { canonical: "/connexion" },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: true },
 };
 
 export default function Page() {

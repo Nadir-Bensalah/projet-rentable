@@ -5,9 +5,9 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/cn";
 
 const ITEMS = [
-  { href: "/compte", label: "Aperçu" },
-  { href: "/compte/abonnement", label: "Abonnement et factures" },
-  { href: "/compte/parametres", label: "Paramètres et données" },
+  { href: "/compte", label: "Aperçu", short: "Aperçu" },
+  { href: "/compte/abonnement", label: "Abonnement et factures", short: "Abonnement" },
+  { href: "/compte/parametres", label: "Paramètres et données", short: "Paramètres" },
 ];
 
 export function AccountNav() {
@@ -24,7 +24,8 @@ export function AccountNav() {
             pathname === i.href ? "border-brand-600 text-[var(--fg)]" : "border-transparent text-muted hover:text-[var(--fg)]",
           )}
         >
-          {i.label}
+          <span className="sm:hidden">{i.short}</span>
+          <span className="hidden sm:inline">{i.label}</span>
         </Link>
       ))}
     </nav>

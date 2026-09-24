@@ -1,27 +1,28 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { connection } from "next/server";
 import { AnalyticsOptOut } from "@/components/marketing/analytics-opt-out";
 import { Blocks } from "@/components/marketing/rich-text";
 import { PageHeader } from "@/components/marketing/page-header";
-import { LEGAL_PAGES } from "@/content/legal";
+import { LEGAL_SLUGS, getLegalPage } from "@/content/legal";
 
-// Unknown slugs render the 404 page (notFound below) instead of raising NoFallbackError.
-export const dynamicParams = true;
-
-export function generateStaticParams() {
-  return LEGAL_PAGES.map((p) => ({ legal: p.slug }));
-}
+// Rendered at request time: the publisher identity comes from runtime environment
+// variables, so one Docker image can be configured without rebuilding.
 
 export async function generateMetadata(props: { params: Promise<{ legal: string }> }): Promise<Metadata> {
   const { legal } = await props.params;
-  const p = LEGAL_PAGES.find((x) => x.slug === legal);
+  if (!(LEGAL_SLUGS as readonly string[]).includes(legal)) return {};
+  await connection();
+  const p = getLegalPage(legal);
   if (!p) return {};
   return { title: p.title, description: p.description, alternates: { canonical: `/${p.slug}` } };
 }
 
 export default async function LegalPageView(props: { params: Promise<{ legal: string }> }) {
   const { legal } = await props.params;
-  const p = LEGAL_PAGES.find((x) => x.slug === legal);
+  if (!(LEGAL_SLUGS as readonly string[]).includes(legal)) notFound();
+  await connection();
+  const p = getLegalPage(legal);
   if (!p) notFound();
   const updated = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long" }).format(new Date(p.updated));
   return (

@@ -12,10 +12,15 @@ export function CheckoutButton({
   product,
   label,
   variant = "primary",
+  consent,
+  onMissingConsent,
 }: {
   product: ProductId;
   label: string;
   variant?: "primary" | "secondary";
+  /** Withdrawal-waiver consent (see WithdrawalConsent), required before the payment page. */
+  consent: boolean;
+  onMissingConsent: () => void;
 }) {
   const { state } = useAccount();
   const router = useRouter();
@@ -43,9 +48,13 @@ export function CheckoutButton({
             router.push("/compte/abonnement");
             return;
           }
+          if (!consent) {
+            onMissingConsent();
+            return;
+          }
           setLoading(true);
           setError(null);
-          const res = await api<{ url: string }>("/api/billing/checkout", { body: { product } });
+          const res = await api<{ url: string }>("/api/billing/checkout", { body: { product, consent: true } });
           if (res.ok && res.data.url) {
             window.location.href = res.data.url;
             return;

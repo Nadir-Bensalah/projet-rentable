@@ -40,6 +40,9 @@ export default defineConfig({
       PAYMENT_PROVIDER: "mock",
       ALLOW_MOCK_PAYMENTS: "true",
       ALLOW_HTTP_APP_URL: "true",
+      ALLOW_INCOMPLETE_LEGAL: "true",
+      // Runtime-only value: proves the legal pages are not frozen at build time.
+      LEGAL_NAME: "Camille Exemple (E2E)",
       EMAIL_PROVIDER: "console",
       ADMIN_EMAILS: "admin@example.com",
       CRON_SECRET: "e2e-cron-secret",

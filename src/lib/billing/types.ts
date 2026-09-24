@@ -1,6 +1,6 @@
 import type { BillingInterval, PlanId, ProductId, ProductInfo } from "@/config/plans";
 
-export type SubscriptionStatus = "active" | "past_due" | "canceled" | "expired" | "paused";
+export type SubscriptionStatus = "active" | "past_due" | "unpaid" | "canceled" | "expired" | "paused";
 
 /** Provider-agnostic events produced by webhook parsing. */
 export type BillingEvent =
@@ -38,7 +38,7 @@ export type BillingEvent =
       /** When unknown, the product is taken from the stored subscription. */
       product?: ProductId;
     }
-  | { type: "order.refunded"; orderId: string; amount?: number }
+  | { type: "order.refunded"; orderId: string; alternateOrderIds?: string[]; amount?: number }
   | { type: "ignored"; reason: string };
 
 export interface ParsedWebhook {
@@ -52,6 +52,8 @@ export interface CheckoutInput {
   user: { id: string; email: string };
   successUrl: string;
   cancelUrl: string;
+  /** Existing provider customer of this user, reused when the provider supports it. */
+  customerId?: string;
 }
 
 export interface SubscriptionRef {
