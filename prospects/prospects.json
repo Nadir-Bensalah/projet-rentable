@@ -66,6 +66,78 @@
   "equipe": "W04"
  },
  {
+  "id": "Z06-001",
+  "entreprise": "Groupe Poussin (SNEG Propreté / Clémot Environnement)",
+  "siren": "388713992",
+  "secteur": "Propreté / nettoyage professionnel et environnement",
+  "ville": "Spay (Le Mans)",
+  "departement": "72",
+  "region": "Pays de la Loire",
+  "site_web": "https://www.groupe-poussin.com/",
+  "email": "contact@sneg-proprete.com",
+  "telephone": "02 43 87 38 38",
+  "source_email": "https://sneg-proprete.com/index.php?section=implantations&ville=4",
+  "source_telephone": "https://sneg-proprete.com/index.php?section=implantations&ville=4",
+  "contact_nom": "Mathieu Poussin",
+  "contact_fonction": "Président (co-dirige le groupe avec Anne Poussin depuis début 2026)",
+  "linkedin": "",
+  "effectif": "plus de 800 salariés",
+  "capital": "",
+  "actualite": "Rachat de Suntech (La Séguinière, 49, 80 salariés) le 21 juillet 2026 ; 9 agences dans le Grand Ouest ; nouveau siège à Spay (plus de 2 M€) ; vues sur Nantes et Laval.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Harmoniser le suivi des interventions et la relation client sur 9 agences après plusieurs rachats",
+  "faits": [
+   {
+    "fait": "Groupe Poussin a acquis le 21 juillet 2026 l'entreprise de nettoyage Suntech (La Séguinière, 49), qui compte 80 salariés",
+    "url": "https://www.lejournaldesentreprises.com/breve/base-au-mans-groupe-poussin-renforce-ses-activites-de-nettoyage-industriel-dans-le-choletais-2145978",
+    "source_type": "presse",
+    "date": "2026-07-21"
+   },
+   {
+    "fait": "Le groupe compte plus de 800 salariés, environ 23 M€ de CA, 9 agences dans le Grand Ouest, et vise Nantes et Laval ; Anne Poussin co-dirige depuis début 2026",
+    "url": "https://www.lejournaldesentreprises.com/article/depuis-le-mans-le-groupe-poussin-deploie-son-reseau-de-service-de-nettoyage-2135626",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Communiqué d'acquisition de Suntech par le groupe Poussin",
+    "url": "https://www.usinenouvelle.com/pays-de-la-loire/maine-et-loire/communique-maine-et-loire-acquisition-de-suntech-par-le-groupe-poussin.76O6Y432E5H2ZGREBT643ML2CA.html",
+    "source_type": "presse",
+    "date": "2026-07"
+   }
+  ],
+  "inference": "Avec plusieurs marques (SNEG, Clémot, Suntech) et 9 agences, l'intégration des équipes rachetées pose la question d'outils communs : suivi des prestations, contrôles qualité sur site, remontées clients.",
+  "opportunite": "Application mobile agents/chefs d'équipe (pointage, contrôles qualité, photos) et espace client multi-sites commun aux marques du groupe.",
+  "service": "Application métier mobile + espace client",
+  "signal_achat": "Rachat de Suntech (juillet 2026) + expansion réseau",
+  "urgence": "haute — intégration d'une acquisition datant de 2 mois",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 17,
+   "fit": 15,
+   "capacite": 9,
+   "accessibilite": 8,
+   "preuves": 11
+  },
+  "sources": [
+   "https://www.lejournaldesentreprises.com/breve/base-au-mans-groupe-poussin-renforce-ses-activites-de-nettoyage-industriel-dans-le-choletais-2145978",
+   "https://www.lejournaldesentreprises.com/article/depuis-le-mans-le-groupe-poussin-deploie-son-reseau-de-service-de-nettoyage-2135626",
+   "https://sneg-proprete.com/index.php?section=implantations&ville=4",
+   "https://annuaire-entreprises.data.gouv.fr/entreprise/388713992"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Groupe Poussin — intégration de Suntech",
+  "email_personnalise": "Bonjour Monsieur Poussin,\n\nJ'ai lu que le groupe a intégré Suntech en juillet et compte désormais 9 agences et plus de 800 salariés, avec Nantes et Laval en vue.\n\nQuand plusieurs sociétés rachetées se rejoignent, le suivi des prestations et des contrôles qualité reste souvent sur des outils différents d'une agence à l'autre.\n\nChez Capmedia, nous concevons des applications mobiles pour les équipes terrain et des espaces clients multi-sites, en reprenant l'existant quand il y en a.\n\nSeriez-vous d'accord pour un échange de 20 minutes sur la façon dont vos agences suivent aujourd'hui les interventions ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que le groupe Poussin a repris Suntech à La Séguinière en juillet. Avec 9 agences et plusieurs marques, je voulais savoir qui s'occupe chez vous des outils de suivi des interventions et de la relation client.",
+  "relance": "Je reviens vers vous sous un autre angle : un espace client commun à SNEG, Clémot et Suntech permettrait à vos clients multi-sites de suivre leurs prestations au même endroit. Est-ce un sujet ouvert ?",
+  "pourquoi_demain": "Le groupe intègre une acquisition de 80 salariés depuis deux mois et prépare de nouvelles agences : c'est le moment où l'on choisit les outils communs.",
+  "equipe": "Z06",
+  "score": 77,
+  "niveau": "QUALIFIÉ"
+ },
+ {
   "entreprise": "Crêpe Touch (CT CO)",
   "siren": "837781566",
   "secteur": "Restauration crêperie fast casual en franchise",
@@ -287,6 +359,79 @@
   "relance": "Autre angle : un espace client où l'acheteur suit sa commande jusqu'à la livraison, en réduisant les appels aux agences. Cela vous intéresserait-il d'en voir un exemple ?",
   "pourquoi_demain": "Debard double son réseau (16 → 24 agences) et ses effectifs en 18 mois grâce à 80 M€ levés en février 2026.",
   "equipe": "Y08"
+ },
+ {
+  "id": "Z04-001",
+  "entreprise": "Fidsud (Fid Sud Groupe)",
+  "siren": "414557116",
+  "secteur": "Expertise comptable, audit et conseil",
+  "ville": "Toulouse",
+  "departement": "31",
+  "region": "Occitanie",
+  "site_web": "https://fidsud.fr/",
+  "email": "toulouse@fidsud.fr",
+  "telephone": "05 62 30 69 95",
+  "source_email": "https://fidsud.fr/agences/fidsud-toulouse/",
+  "source_telephone": "https://fidsud.fr/mentions-legales/",
+  "contact_nom": "Patricia Moquay",
+  "contact_fonction": "Responsable de la publication du site (mentions légales)",
+  "linkedin": "https://fr.linkedin.com/company/fidsud",
+  "effectif": "430 à 450 collaborateurs, 25 associés, 34 bureaux",
+  "capital": "",
+  "actualite": "3 reprises de cabinets au 1er semestre 2026 (dont Axia à Agen au 1er janvier 2026), nouvelle gouvernance en 2026, objectif de doubler le chiffre d'affaires d'ici 2030 (croissance organique et acquisitions ciblées).",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Unifier outils et parcours client d'un réseau de 34 bureaux qui intègre des cabinets rachetés",
+  "faits": [
+   {
+    "fait": "Fidsud a intégré 1,5 M€ de chiffre d'affaires via 3 reprises au premier semestre 2026, dont le cabinet Axia (Agen) au 1er janvier 2026",
+    "url": "https://www.compta-online.com/fidsud-cabinet-expertise-comptable-ao8832",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Cabinet de 430 collaborateurs répartis sur 34 bureaux dans le Sud, nouvelle équipe dirigeante, objectif de doubler le CA d'ici 2030 par croissance organique et acquisitions ciblées",
+    "url": "https://gazette-du-midi.fr/au-sommaire/informations-juridiques/metiers-du-chiffre-fidsud-renouvelle-sa-gouvernance-pour-accelerer-sa",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "50 M€ de CA, 14 500 clients (dirigeants de TPE/PME), 34 bureaux en Aquitaine, Occitanie et vallée du Rhône",
+    "url": "https://fidsud.fr/qui-sommes-nous-fidsud/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Un réseau de 34 bureaux qui absorbe plusieurs cabinets par an et veut doubler de taille doit harmoniser l'expérience des 14 500 clients (espace client, prise de rendez-vous, échanges de pièces) et outiller l'intégration des équipes reprises. Aucun audit du site effectué.",
+  "opportunite": "Portail client unifié multi-agences et outil interne d'intégration des cabinets rachetés (checklist, reprise des dossiers, onboarding collaborateurs), plus harmonisation des pages agences du site.",
+  "service": "Espace client / outil métier d'intégration",
+  "signal_achat": "3 rachats S1 2026 + nouvelle gouvernance + objectif x2 d'ici 2030",
+  "urgence": "moyenne — rachats et gouvernance datés 2026, dates exactes non vues",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 16,
+   "fit": 15,
+   "capacite": 10,
+   "accessibilite": 6,
+   "preuves": 11
+  },
+  "score": 75,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.compta-online.com/fidsud-cabinet-expertise-comptable-ao8832",
+   "https://gazette-du-midi.fr/au-sommaire/informations-juridiques/metiers-du-chiffre-fidsud-renouvelle-sa-gouvernance-pour-accelerer-sa",
+   "https://fidsud.fr/qui-sommes-nous-fidsud/",
+   "https://fidsud.fr/mentions-legales/",
+   "https://fidsud.fr/agences/fidsud-toulouse/"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Fidsud — intégration des cabinets repris en 2026",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu que Fidsud avait repris trois cabinets au premier semestre 2026, dont Axia à Agen, avec l'objectif de doubler son chiffre d'affaires d'ici 2030 sur un réseau de 34 bureaux.\n\nÀ ce rythme, chaque intégration pose souvent les mêmes questions : reprise des dossiers, accès des nouveaux clients aux outils du groupe, harmonisation d'un bureau à l'autre.\n\nChez Capmedia, nous concevons des espaces clients et des outils métiers sur mesure, par exemple un portail unique pour tous les bureaux ou un outil de suivi des intégrations.\n\nQui pilote ces sujets chez vous ? Un échange de 20 minutes serait-il utile ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que Fidsud avait repris trois cabinets au premier semestre 2026. Avec 34 bureaux et un objectif de doubler d'ici 2030, l'intégration des clients repris dans vos outils devient un vrai chantier. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Je reviens vers vous sous un autre angle : avec 14 500 clients répartis sur 34 bureaux, un espace client commun (documents, rendez-vous, échanges) simplifie aussi le travail des collaborateurs. Est-ce un sujet ouvert pour 2027 ?",
+  "pourquoi_demain": "Fidsud enchaîne les rachats en 2026 avec une nouvelle direction qui veut doubler la taille du cabinet : c'est le moment où les outils d'intégration et le portail client se décident.",
+  "equipe": "Z04"
  },
  {
   "id": "Y08-001",
@@ -1272,6 +1417,86 @@
   "date_verification": "2026-09-24"
  },
  {
+  "id": "Z02-001",
+  "entreprise": "Pelras SA (BMW / MINI Pelras Toulouse)",
+  "siren": "326125879",
+  "secteur": "Distribution automobile premium (BMW, MINI, BMW Motorrad, Alpina)",
+  "ville": "Toulouse",
+  "departement": "31",
+  "region": "Occitanie",
+  "site_web": "https://www.pelras.fr",
+  "email": "marketing@pelras.fr",
+  "telephone": "05 34 608 608",
+  "source_email": "https://partenaire.bmw.fr/pelras-sa/mentions-legales",
+  "source_telephone": "https://partenaire.bmw.fr/pelras-sa/mentions-legales",
+  "contact_nom": "",
+  "contact_fonction": "Service marketing",
+  "linkedin": "https://fr.linkedin.com/company/bmw-&-mini-store-toulouse-pelras",
+  "effectif": "125 salariés",
+  "capital": "200 000 €",
+  "actualite": "Entre pour la première fois en 2026 dans le classement du Journal de l'Automobile (groupes de distribution, bas du Top 100 / portes du Top 100) après avoir accepté de communiquer ses résultats ; près de 4 000 véhicules VN/VO par an.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Présence web éclatée sur au moins 5 sites distincts, dont un parcours de prise de RDV séparé sur le site de ventes privées.",
+  "faits": [
+   {
+    "fait": "Pelras fait son entrée dans le classement des groupes de distribution du Journal de l'Automobile 2026 (distributeur mono-marque BMW, première communication de ses résultats).",
+    "url": "https://journalauto.com/distribution/les-groupes-de-distribution-aux-portes-du-top-100/",
+    "source_type": "presse",
+    "date": "2026-07"
+   },
+   {
+    "fait": "Le groupe exploite plusieurs sites distincts : pelras.fr, ventespriveespelras.fr, pelraslegend.fr (véhicules d'exception), partenaire.bmw.fr/pelras-sa et partenaire.mini.fr/minitoulouse, chacun avec ses propres mentions légales.",
+    "url": "https://www.pelraslegend.fr/fr/mentions-legales",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Le site ventespriveespelras.fr dispose de sa propre page de prise de rendez-vous (« Prise de RDV - Ventes Privées PELRAS Toulouse »), distincte des sites constructeurs BMW/MINI.",
+    "url": "https://www.ventespriveespelras.fr/rdv-prospect/fr/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Pelras distribue près de 4 000 véhicules par an sur un site de 4 hectares avec 125 salariés.",
+    "url": "https://partenaire.bmw.fr/pelras-sa/concession-bmw-pelras-toulouse",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Avec 5 sites et au moins deux parcours de RDV séparés (constructeur et ventes privées), les leads et demandes d'essai/atelier arrivent probablement par des canaux différents, difficiles à consolider pour le marketing.",
+  "opportunite": "Proposer un audit du parcours client multi-sites puis un hub unique (portail ou espace client) centralisant prises de RDV atelier/essai et leads ventes privées / Legend, connecté aux outils existants.",
+  "service": "Audit technique + plateforme de prise de RDV / espace client unifié",
+  "signal_achat": "Entrée au classement Journal de l'Automobile 2026",
+  "urgence": "moyenne — signal presse de juillet 2026 (< 6 mois) mais pas de projet digital annoncé",
+  "score_detail": {
+   "besoin": 19,
+   "urgence": 12,
+   "fit": 16,
+   "capacite": 8,
+   "accessibilite": 8,
+   "preuves": 10
+  },
+  "score": 73,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://journalauto.com/distribution/les-groupes-de-distribution-aux-portes-du-top-100/",
+   "https://partenaire.bmw.fr/pelras-sa/mentions-legales",
+   "https://partenaire.mini.fr/minitoulouse/mentions-legales",
+   "https://www.ventespriveespelras.fr/rdv-prospect/fr/",
+   "https://www.pelraslegend.fr/fr/mentions-legales",
+   "https://annuaire-entreprises.data.gouv.fr/entreprise/pelras-sa-326125879"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Pelras — 5 sites, un seul parcours client ?",
+  "email_personnalise": "Bonjour,\n\nEn préparant un échange, j'ai relevé que Pelras est présent sur au moins cinq sites distincts : pelras.fr, ventespriveespelras.fr (avec sa propre page de prise de rendez-vous), pelraslegend.fr et les sites partenaires BMW et MINI.\n\nDans ce type de configuration, les demandes d'essai, d'atelier et de ventes privées arrivent souvent par des canaux séparés, ce qui complique leur suivi.\n\nChez Capmedia, nous concevons des espaces clients et des outils de prise de rendez-vous qui regroupent ces flux sans remplacer les sites constructeurs.\n\nSeriez-vous d'accord pour un échange de 15 minutes sur la façon dont vous centralisez aujourd'hui ces demandes ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que Pelras vient d'entrer dans le classement du Journal de l'Automobile. J'ai aussi remarqué que vos clients passent par cinq sites différents, dont un avec sa propre prise de rendez-vous pour les ventes privées. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Pour rebondir sur mon message : avez-vous une vue consolidée des rendez-vous pris via ventespriveespelras.fr et via les sites BMW/MINI ? C'est souvent là que se perdent des leads.",
+  "pourquoi_demain": "Un distributeur BMW de 125 salariés qui vient d'entrer au classement et dont le parcours client est éclaté sur cinq sites avec des prises de RDV séparées.",
+  "equipe": "Z02"
+ },
+ {
   "id": "V01-002",
   "entreprise": "Jack's Burgers",
   "siren": "953904463",
@@ -1715,6 +1940,96 @@
   "niveau": "QUALIFIÉ"
  },
  {
+  "id": "Z01-001",
+  "entreprise": "Groupe GRIM",
+  "siren": "908608854",
+  "secteur": "Distribution automobile multimarque (auto, moto, vélo, loisirs motorisés)",
+  "ville": "Lattes",
+  "departement": "34",
+  "region": "Occitanie",
+  "site_web": "https://groupe-grim.com/",
+  "email": "contactezmoi@groupe-grim.com",
+  "telephone": "04 67 06 88 04",
+  "source_email": "https://groupe-grim.com/",
+  "source_telephone": "https://partenaire.mini.fr/ministoremontpellier/mentions-legales",
+  "contact_nom": "",
+  "contact_fonction": "",
+  "linkedin": "https://fr.linkedin.com/company/groupe-grim",
+  "effectif": "environ 600 salariés (data-surfer)",
+  "capital": "",
+  "actualite": "Ouverture au printemps 2026 d'une concession OMODA & JAECOO à Montpellier (parmi les 74 premiers points de vente en France), présence aussi à Rodez et Valence ; distribution XPENG à Béziers et Montpellier.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Présence web éclatée sur au moins six sites/domaines distincts pour un même groupe (15 marques, 75+ points de vente).",
+  "faits": [
+   {
+    "fait": "Le groupe exploite un site principal groupe-grim.com (avec module de prise de RDV) et un site séparé grim-occasion.com (avec ses propres mentions légales).",
+    "url": "https://www.grim-occasion.com/mentions-legales/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Autres domaines distincts du groupe : fordgroupegrim.fr (mentions légales propres), ventes-privees-grim.com, carriere.groupe-grim.com, et la page MINI Grim Passion hébergée sur partenaire.mini.fr.",
+    "url": "https://www.fordgroupegrim.fr/page/40",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Concession OMODA & JAECOO ouverte à Montpellier depuis le printemps 2026, l'un des 74 premiers points de vente en France ; groupe retenu aussi pour Rodez et Valence.",
+    "url": "https://groupe-grim.com/omoda-jaecoo/omoda-jaecoo-montpellier/",
+    "source_type": "site officiel",
+    "date": "2026 (printemps)"
+   },
+   {
+    "fait": "XPENG désormais distribué à Béziers et Montpellier par le groupe.",
+    "url": "https://groupe-grim.com/xpeng/concessions-xpeng-groupe-grim/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "15 marques, plus de 75 points de vente sur 11 départements du Sud.",
+    "url": "https://groupe-grim.com/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Chaque nouvelle marque (OMODA, JAECOO, XPENG) ajoute des pages et parcours ; avec six domaines distincts, le parcours client (VO, RDV atelier, ventes privées, recrutement) est dispersé et coûteux à maintenir.",
+  "opportunite": "Audit de la présence web du groupe puis plan de rationalisation : socle unique multimarque, prise de RDV atelier et reprise VO centralisées, espace client commun.",
+  "service": "Audit technique + refonte/consolidation de plateforme web multimarque",
+  "signal_achat": "Nouvelles marques 2026 (OMODA/JAECOO, XPENG)",
+  "urgence": "moyenne — ouverture de concession au printemps 2026 (< 6 mois), mais aucune recherche de prestataire publiée",
+  "score_detail": {
+   "besoin": 17,
+   "urgence": 15,
+   "fit": 15,
+   "capacite": 9,
+   "accessibilite": 6,
+   "preuves": 10
+  },
+  "score": 72,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://groupe-grim.com/",
+   "https://www.grim-occasion.com/mentions-legales/",
+   "https://www.fordgroupegrim.fr/page/40",
+   "https://ventes-privees-grim.com/",
+   "https://carriere.groupe-grim.com/jobs/8356868-vendeur-automobile-confirme-h-f",
+   "https://partenaire.mini.fr/ministoremontpellier/mentions-legales",
+   "https://groupe-grim.com/omoda-jaecoo/omoda-jaecoo-montpellier/",
+   "https://groupe-grim.com/xpeng/concessions-xpeng-groupe-grim/",
+   "https://groupe-grim.com/rendez-vous/",
+   "https://www.pappers.fr/entreprise/groupe-grim-908608854"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Groupe GRIM — six sites pour un même parcours client",
+  "email_personnalise": "Bonjour,\n\nEn préparant l'arrivée d'OMODA & JAECOO à Montpellier ce printemps, j'ai relevé que le Groupe GRIM s'appuie aujourd'hui sur plusieurs domaines distincts : groupe-grim.com, grim-occasion.com, fordgroupegrim.fr, ventes-privees-grim.com, le site carrière et la page MINI Grim Passion.\n\nÀ chaque nouvelle marque, cela peut multiplier les parcours (RDV atelier, reprise, occasions) et le travail de mise à jour.\n\nChez Capmedia, nous réalisons des audits courts pour cartographier ces sites et proposer un socle commun, sans tout refaire d'un coup.\n\nQui suit ce sujet chez vous ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu l'ouverture de votre concession OMODA & JAECOO à Montpellier ce printemps. J'ai aussi remarqué que le groupe gère au moins six sites distincts, entre occasions, Ford, ventes privées et MINI. Je voulais savoir qui s'occupe de la partie web chez vous.",
+  "relance": "Avec XPENG à Béziers et Montpellier en plus d'OMODA & JAECOO, un point de 20 minutes pour voir comment centraliser RDV atelier et reprise VO sur un seul parcours vous intéresserait-il ?",
+  "pourquoi_demain": "Groupe régional de 75+ points de vente qui ajoute trois marques en 2026 tout en gérant six domaines web distincts.",
+  "equipe": "Z01"
+ },
+ {
   "entreprise": "Société Française de Garantie (SFG)",
   "siren": "391952264",
   "secteur": "Assurance / garanties et réparation d'appareils (filiale WERTGARANTIE)",
@@ -2093,6 +2408,79 @@
   "relance": "Je reviens vers vous sous un autre angle : avec bientôt 50 franchisés, un espace réseau unique (leads, supports, catalogue) évite beaucoup d'échanges par email ; est-ce un sujet chez Story ?",
   "pourquoi_demain": "Story enchaîne les ouvertures franchisées en 2026 et publie une adresse email et un dirigeant identifiés, donc une porte d'entrée directe.",
   "equipe": "W07"
+ },
+ {
+  "id": "Z05-001",
+  "entreprise": "Transports Darrieussecq David",
+  "siren": "801262692",
+  "secteur": "Transport routier de marchandises et logistique (entreposage)",
+  "ville": "Mouguerre",
+  "departement": "64",
+  "region": "Nouvelle-Aquitaine",
+  "site_web": "https://www.transports-darrieussecq.fr/",
+  "email": "contact@transports-darrieussecq.fr",
+  "telephone": "05 59 63 23 25",
+  "source_email": "https://www.transports-darrieussecq.fr/contact/",
+  "source_telephone": "https://www.transports-darrieussecq.fr/contact/",
+  "contact_nom": "David Darrieussecq",
+  "contact_fonction": "Dirigeant",
+  "linkedin": "https://www.linkedin.com/in/david-darrieussecq/",
+  "effectif": "30 salariés (après reprise)",
+  "capital": "",
+  "actualite": "Reprise en mai-juillet 2026 de l'agence Nortrans de Mouguerre (groupe Eurorail/Regiorail) : bâtiments, 4 800 m² de stockage couvert + 2 000 m² extérieurs, pont roulant 20 t, 4 salariés intégrés ; CA consolidé visé 7 M€.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Outiller la nouvelle activité logistique (stock, cotation, suivi) pour les clients repris de Nortrans via un espace client.",
+  "faits": [
+   {
+    "fait": "Les Transports Darrieussecq reprennent l'agence Nortrans de Mouguerre : activité, bâtiments, installations ; 4 salariés intégrés au 13 mai",
+    "url": "https://www.lofficieldestransporteurs.fr/strategie/les-transports-darrieussecq-reprennent-lagence-nortrans-de-mouguerre-64-974353.php",
+    "source_type": "presse",
+    "date": "2026-07-10"
+   },
+   {
+    "fait": "Site repris : 4 800 m² de stockage intérieur, 2 000 m² extérieurs, pont roulant 20 t ; CA consolidé 7,0 M€ et 30 salariés",
+    "url": "https://www.vie-economique.com/actualites/les-transports-darrieussecq-reprennent-lagence-nortrans/",
+    "source_type": "presse",
+    "date": "2026-07"
+   },
+   {
+    "fait": "Le site de l'entreprise présente une offre entrepôt logistique à Mouguerre",
+    "url": "https://www.transports-darrieussecq.fr/nos-solutions/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Une PME de 30 personnes qui ajoute d'un coup près de 7 000 m² de stockage et une clientèle logistique reprise doit donner de la visibilité aux clients (stocks, enlèvements, demandes de cotation) sans alourdir l'exploitation ; aucun portail client n'est mentionné dans les sources.",
+  "opportunite": "Espace client web simple : demande de cotation/enlèvement en ligne, suivi des expéditions et état de stock de l'entrepôt, relié aux outils d'exploitation existants.",
+  "service": "Espace client / outil métier web (cotation + suivi + stock)",
+  "signal_achat": "Reprise d'agence et d'entrepôt (juillet 2026)",
+  "urgence": "haute — reprise annoncée le 10 juillet 2026, intégration des clients Nortrans en cours",
+  "score_detail": {
+   "besoin": 16,
+   "urgence": 17,
+   "fit": 14,
+   "capacite": 5,
+   "accessibilite": 9,
+   "preuves": 10
+  },
+  "sources": [
+   "https://www.lofficieldestransporteurs.fr/strategie/les-transports-darrieussecq-reprennent-lagence-nortrans-de-mouguerre-64-974353.php",
+   "https://www.vie-economique.com/actualites/les-transports-darrieussecq-reprennent-lagence-nortrans/",
+   "https://www.usinenouvelle.com/occitanie/pyrenees-orientales/communique-pyrenees-orientales-reprise-de-lagence-nortrans-de-mouguerre-par-les-transports-darrieussecq.OOSSBBTFRBGHTJZW6LOZRWHPXQ.html",
+   "https://www.transports-darrieussecq.fr/contact/",
+   "https://annuaire-entreprises.data.gouv.fr/entreprise/transports-darrieussecq-david-801262692"
+  ],
+  "objet_email": "Reprise de l'agence Nortrans — suivi client",
+  "email_personnalise": "Bonjour Monsieur Darrieussecq,\n\nJ'ai lu dans L'Officiel des Transporteurs que vous avez repris l'agence Nortrans de Mouguerre, avec 4 800 m² de stockage couvert et son pont roulant 20 t.\n\nAvec une activité entrepôt qui s'ajoute au transport, les clients repris demandent souvent où en sont leurs stocks et leurs enlèvements, ce qui mobilise l'exploitation au téléphone.\n\nChez Capmedia, nous réalisons des espaces clients simples : demande de cotation en ligne, suivi des expéditions, consultation du stock.\n\nEst-ce un sujet que vous regardez en ce moment, ou plutôt plus tard dans l'année ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que vous aviez repris l'agence Nortrans de Mouguerre cet été, avec près de 7 000 m² de stockage. Je voulais savoir qui s'occupe chez vous du suivi et des demandes des clients logistiques.",
+  "relance": "Pour faire suite : un simple formulaire de cotation et d'enlèvement en ligne, branché sur votre exploitation, peut être un premier pas léger avant un vrai espace client. Voulez-vous que je vous montre un exemple ?",
+  "pourquoi_demain": "Reprise d'entrepôt annoncée le 10 juillet 2026 par une PME de 30 salariés : les outils de suivi client sont à construire maintenant.",
+  "score": 71,
+  "niveau": "QUALIFIÉ",
+  "date_verification": "2026-09-24",
+  "equipe": "Z05"
  },
  {
   "id": "U05-001",
@@ -2728,6 +3116,78 @@
   "equipe": "Y05"
  },
  {
+  "id": "Z04-002",
+  "entreprise": "Numéral Groupe (SECIF Audit)",
+  "siren": "408223030",
+  "secteur": "Expertise comptable, audit et conseil",
+  "ville": "Troyes",
+  "departement": "10",
+  "region": "Grand Est",
+  "site_web": "https://www.numeral.fr/",
+  "email": "contact@numeral.fr",
+  "telephone": "03 25 40 87 87",
+  "source_email": "https://www.numeral.fr/mentions-legales/",
+  "source_telephone": "https://www.numeral.fr/mentions-legales/",
+  "contact_nom": "Denis Defer",
+  "contact_fonction": "Associé, responsable de la publication",
+  "linkedin": "https://www.linkedin.com/in/denis-defer-2784a432/",
+  "effectif": "environ 60 collaborateurs, 5 bureaux (Troyes, Reims, Châlons-en-Champagne, Épernay, Chaumont)",
+  "capital": "",
+  "actualite": "Entrée de Scale Up Capital (fonds Experts Génération) au capital en 2026 pour préparer la sortie du cofondateur Bertrand Croisey et lancer une stratégie de build-up.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Transformation digitale annoncée pour clients et collaborateurs + croissance externe sur 5 sites",
+  "faits": [
+   {
+    "fait": "Scale Up Capital entre au capital de Numéral pour préparer la sortie du cofondateur et une stratégie de build-up",
+    "url": "https://www.cfnews.net/L-actualite/Capital-developpement/Operations/Augmentation-de-capital/Numeral-compte-sur-un-fonds-specialise-pour-consolider-723523",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Priorités annoncées du partenariat : missions de conseil à forte valeur ajoutée, accélération de la transformation digitale pour les clients et les collaborateurs, croissance externe pour renforcer l'ancrage régional",
+    "url": "https://scaleup-capital.com/",
+    "source_type": "site officiel (investisseur)",
+    "date": "2026"
+   },
+   {
+    "fait": "Environ 60 collaborateurs répartis sur 5 bureaux en Champagne-Ardenne",
+    "url": "https://www.numeral.fr/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "La transformation digitale côté clients et collaborateurs est une priorité écrite du nouvel actionnariat ; avec 5 sites et des rachats à venir, un espace client commun et des outils internes partagés sont des chantiers probables. Taille modeste : budget limité.",
+  "opportunite": "Espace client unifié pour les 5 bureaux (dépôt de pièces, suivi des missions, rendez-vous) et outil interne pour intégrer les cabinets rachetés.",
+  "service": "Espace client / digitalisation de processus",
+  "signal_achat": "Entrée d'un fonds au capital en 2026 avec feuille de route digitale",
+  "urgence": "moyenne — opération 2026, date exacte non vue",
+  "score_detail": {
+   "besoin": 18,
+   "urgence": 14,
+   "fit": 15,
+   "capacite": 6,
+   "accessibilite": 8,
+   "preuves": 10
+  },
+  "score": 71,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.cfnews.net/L-actualite/Capital-developpement/Operations/Augmentation-de-capital/Numeral-compte-sur-un-fonds-specialise-pour-consolider-723523",
+   "https://scaleup-capital.com/",
+   "https://www.numeral.fr/",
+   "https://www.numeral.fr/mentions-legales/"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Numéral — transformation digitale après l'entrée de Scale Up Capital",
+  "email_personnalise": "Bonjour Monsieur Defer,\n\nJ'ai vu que Scale Up Capital était entré au capital de Numéral cette année, avec parmi les priorités annoncées l'accélération de la transformation digitale pour vos clients et vos collaborateurs, et une croissance externe sur la région.\n\nAvec cinq bureaux et de futurs rachats, disposer d'un espace client et d'outils communs évite que chaque site garde ses propres habitudes.\n\nCapmedia conçoit des espaces clients et des outils internes sur mesure, à une échelle adaptée à un cabinet de votre taille.\n\nSeriez-vous d'accord pour un premier échange de 20 minutes ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu l'entrée de Scale Up Capital au capital de Numéral, avec la transformation digitale parmi les priorités annoncées. Vous avez cinq bureaux et une stratégie de rachats. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Autre angle : quand un cabinet repris rejoint le groupe, un outil simple de reprise des dossiers et d'accueil des clients fait gagner plusieurs semaines. Est-ce un point que vous anticipez ?",
+  "pourquoi_demain": "Le nouvel actionnaire de Numéral a mis par écrit la transformation digitale clients et collaborateurs comme priorité : c'est un chantier qui s'ouvre maintenant.",
+  "equipe": "Z04"
+ },
+ {
   "id": "Y08-003",
   "entreprise": "Groupe Lecluse Automobiles (branche poids lourds Sarevi Revmat)",
   "siren": "480117662",
@@ -2957,6 +3417,166 @@
   "score": 71,
   "niveau": "QUALIFIÉ",
   "date_verification": "2026-09-24"
+ },
+ {
+  "id": "Z02-002",
+  "entreprise": "Groupe L. Warsemann",
+  "siren": "509534459",
+  "secteur": "Distribution automobile (Renault, Dacia, Audi, Volkswagen, Seat, Škoda, VW Utilitaires, Nissan)",
+  "ville": "Bracieux",
+  "departement": "41",
+  "region": "Centre-Val de Loire",
+  "site_web": "https://www.warsemann.fr",
+  "email": "bdogniez@groupewarsemann.fr",
+  "telephone": "02 54 55 33 33",
+  "source_email": "https://www.warsemann.fr/mentions-legales",
+  "source_telephone": "https://www.warsemann.fr/mentions-legales",
+  "contact_nom": "B. Dogniez",
+  "contact_fonction": "",
+  "linkedin": "https://fr.linkedin.com/company/l.warsemann",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Cité par le Journal de l'Automobile parmi les groupes rejoignant le classement Top 100 2026 ; 23 points de vente sur le 41, le 37 et le 45 ; nouvelle concession aux nouvelles normes ouverte le 7 juin 2025.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Présence web répartie entre un site groupe, un sous-domaine par concession et un domaine séparé pour Nissan (Warsemann Auto Evasion).",
+  "faits": [
+   {
+    "fait": "Warsemann est cité parmi les groupes qui rejoignent le classement Top 100 2026 du Journal de l'Automobile ou s'en approchent.",
+    "url": "https://journalauto.com/distribution/les-groupes-de-distribution-aux-portes-du-top-100/",
+    "source_type": "presse",
+    "date": "2026-07"
+   },
+   {
+    "fait": "Chaque concession a son propre sous-domaine avec ses pages et mentions légales (renault-blois.warsemann.fr, dacia-blois.warsemann.fr, renault-bracieux.warsemann.fr, renault-orleans.warsemann.fr).",
+    "url": "https://renault-blois.warsemann.fr/mentions-legales-renault",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "L'activité Nissan (Warsemann Auto Evasion) est sur un domaine entièrement séparé, nissan-blois.fr, avec ses propres mentions légales.",
+    "url": "https://nissan-blois.fr/mentions-legales/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Le groupe compte 23 points de vente et 7 marques sur le Loir-et-Cher, l'Indre-et-Loire et le Loiret.",
+    "url": "https://www.warsemann.fr/le-groupe",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Avec 23 points de vente, des sous-domaines par concession et un domaine séparé pour Nissan, les contenus et les prises de contact sont dispersés ; la maintenance de ce patrimoine web devient plus lourde à mesure que le groupe grossit.",
+  "opportunite": "Audit du patrimoine web (sous-domaines, domaine Nissan) puis mise en place d'un portail client unifié (RDV atelier, reprise VO, suivi) commun aux 23 sites.",
+  "service": "Audit technique + refonte / unification du parcours client multi-concessions",
+  "signal_achat": "Entrée au classement Top 100 2026",
+  "urgence": "moyenne — signal presse de juillet 2026, dernière ouverture de concession en juin 2025",
+  "score_detail": {
+   "besoin": 18,
+   "urgence": 11,
+   "fit": 16,
+   "capacite": 8,
+   "accessibilite": 8,
+   "preuves": 10
+  },
+  "score": 71,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://journalauto.com/distribution/les-groupes-de-distribution-aux-portes-du-top-100/",
+   "https://www.warsemann.fr/mentions-legales",
+   "https://www.warsemann.fr/le-groupe",
+   "https://renault-blois.warsemann.fr/mentions-legales-renault",
+   "https://dacia-blois.warsemann.fr/mentions-legales-dacia",
+   "https://nissan-blois.fr/mentions-legales/"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Warsemann — sous-domaines par concession et site Nissan",
+  "email_personnalise": "Bonjour,\n\nJ'ai remarqué que chaque concession du groupe Warsemann a son propre sous-domaine (Renault Blois, Dacia Blois, Renault Bracieux, Renault Orléans…) et que l'activité Nissan est sur un domaine à part, nissan-blois.fr.\n\nAvec 23 points de vente, ce type d'organisation rend souvent plus difficile le suivi des demandes de rendez-vous et la mise à jour des contenus.\n\nCapmedia accompagne des entreprises multi-sites sur des audits techniques et des portails clients qui centralisent ces demandes.\n\nQui est la bonne personne pour en parler 15 minutes chez vous ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que le groupe Warsemann rejoint le Top 100 du Journal de l'Automobile. J'ai aussi remarqué que vos concessions ont chacune leur sous-domaine et que Nissan est sur un site à part. Je voulais savoir qui s'occupe de ce sujet chez vous.",
+  "relance": "Autre angle : aujourd'hui, un client qui entretient une Renault à Blois et une Nissan chez Warsemann Auto Evasion passe-t-il par deux parcours différents ? Un espace client unique peut régler ça.",
+  "pourquoi_demain": "Groupe familial de 23 points de vente qui entre au Top 100 et dont la présence web est éclatée entre sous-domaines et un domaine Nissan séparé.",
+  "equipe": "Z02"
+ },
+ {
+  "id": "Z07-001",
+  "entreprise": "Kangourou Kids (tête de réseau : Kangourou Kids Développement)",
+  "siren": "991870668",
+  "secteur": "Garde d'enfants à domicile / micro-crèches (réseau de franchise)",
+  "ville": "Montpellier",
+  "departement": "34",
+  "region": "Occitanie",
+  "site_web": "https://www.kangouroukids.fr",
+  "email": "contact@kangouroukids.fr",
+  "telephone": "04 88 70 01 44",
+  "source_email": "https://www.kangouroukids.fr/contact",
+  "source_telephone": "https://www.kangouroukids.fr/mentions-legales",
+  "contact_nom": "Amandine Zissler",
+  "contact_fonction": "Responsable Développement du réseau",
+  "linkedin": "https://fr.linkedin.com/company/kangourou-kids",
+  "effectif": "",
+  "capital": "20 000 €",
+  "actualite": "Nouvelle tête de réseau Kangourou Kids Développement (SAS présidée par LSK Groupe, Montpellier) ; l'ancienne SAS rennaise (SIREN 529190787) est inactive depuis le 30/09/2025. Réseau de 80 à 120 agences en France.",
+  "site_existant": "oui",
+  "app_ios": "oui",
+  "app_android": "oui",
+  "besoin": "App familles/intervenants (pointage, validation des heures) critiquée publiquement pour bugs de comptes et de saisie des heures",
+  "faits": [
+   {
+    "fait": "Avis App Store : un intervenant travaillant pour deux familles doit gérer deux comptes, se déconnecter/reconnecter chaque jour pour saisir ses heures ; l'un des accès ne fonctionne plus depuis plus d'un mois, e-mails au support restés sans solution",
+    "url": "https://apps.apple.com/fr/app/kangourou-kids/id1623154825?l=en-GB",
+    "source_type": "avis store",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "L'application sert au pointage (heures d'arrivée/départ) et à la validation des heures par l'intervenant et la famille, en remplacement du papier",
+    "url": "https://mobizel.com/realisation/kangourou-kids-la-garde-denfants-a-domicile/",
+    "source_type": "site prestataire (référence Mobizel)",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "App aussi publiée sur Google Play (fr.kangouroukids.app)",
+    "url": "https://play.google.com/store/apps/details?id=fr.kangouroukids.app&hl=en_US",
+    "source_type": "store",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Tête de réseau reprise par Kangourou Kids Développement (SAS, capital 20 000 €, présidée par LSK Groupe, Montpellier) ; ancienne SAS Kangourou Kids Rennes inactive depuis le 30/09/2025",
+    "url": "https://www.kangouroukids.fr/mentions-legales",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "L'app est au coeur de la paie (heures pointées = heures payées et facturées) : les bugs de double compte génèrent des erreurs de paie/facturation et une charge support pour les agences. Le changement de tête de réseau (2025) est un moment naturel pour réauditer ou reprendre l'app, aujourd'hui développée par Mobizel.",
+  "opportunite": "Audit technique et QA de l'app mobile (parcours multi-familles, pointage, synchronisation), puis proposition de reprise/maintenance ou refonte du module intervenant.",
+  "service": "Audit + QA mobile / reprise et maintenance d'application existante",
+  "signal_achat": "App intervenants critiquée (bugs de comptes et de pointage) + nouvelle tête de réseau",
+  "urgence": "moyenne — bugs impactant la paie des intervenants, mais avis non daté précisément ; restructuration de la tête de réseau fin 2025",
+  "score_detail": {
+   "besoin": 19,
+   "urgence": 11,
+   "fit": 17,
+   "capacite": 8,
+   "accessibilite": 6,
+   "preuves": 10
+  },
+  "sources": [
+   "https://apps.apple.com/fr/app/kangourou-kids/id1623154825?l=en-GB",
+   "https://mobizel.com/realisation/kangourou-kids-la-garde-denfants-a-domicile/",
+   "https://play.google.com/store/apps/details?id=fr.kangouroukids.app&hl=en_US",
+   "https://www.kangouroukids.fr/mentions-legales",
+   "https://www.kangouroukids.fr/contact",
+   "https://ac-franchise.com/article/focus-sur-la-franchise-kangourou-kids-avec-amandine-zissler-responsable-developpement-du-reseau-9205"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "À propos de l'app Kangourou Kids (pointage des intervenants)",
+  "email_personnalise": "Bonjour,\n\nSur l'App Store, un intervenant Kangourou Kids qui travaille pour deux familles explique devoir jongler entre deux comptes et se reconnecter chaque jour pour saisir ses heures, l'un des accès ne fonctionnant plus depuis plus d'un mois.\n\nComme ces heures servent à la paie et à la facturation, ce type de blocage peut vite peser sur les agences et sur le support.\n\nChez Capmedia, nous auditons et reprenons des applications mobiles existantes : tests des parcours multi-familles et du pointage, diagnostic, puis corrections ou maintenance.\n\nQui suit le sujet de l'application côté tête de réseau ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu sur l'App Store des avis d'intervenants Kangourou Kids qui n'arrivent pas à gérer deux familles dans le même compte pour pointer leurs heures. Je voulais savoir qui s'occupe de l'application chez vous.",
+  "relance": "Avec la nouvelle structure Kangourou Kids Développement, un audit rapide de l'app (pointage, comptes multi-familles) pourrait vous donner un état des lieux avant de décider de la suite : est-ce un sujet ouvert ?",
+  "pourquoi_demain": "L'app de pointage, qui conditionne la paie de centaines d'intervenants, est publiquement critiquée pour des bugs de comptes, et la tête de réseau vient de changer de structure.",
+  "equipe": "Z07",
+  "score": 71,
+  "niveau": "QUALIFIÉ"
  },
  {
   "id": "U04-001",
@@ -3326,6 +3946,150 @@
   "relance": "Autre angle : pour Beg Salus, une demande de dépannage en ligne avec photos et créneau proposé peut réduire les appels de qualification. Voulez-vous que je vous montre un exemple ?",
   "pourquoi_demain": "Le groupe vient d'unifier ses cinq sociétés sous une marque et prépare l'ouverture de nouvelles agences : c'est le moment où l'on choisit les outils communs.",
   "equipe": "V07"
+ },
+ {
+  "id": "Z05-002",
+  "entreprise": "Transports Gauthier",
+  "siren": "395054372",
+  "secteur": "Transport routier de marchandises, location de véhicules, stockage",
+  "ville": "Craon",
+  "departement": "53",
+  "region": "Pays de la Loire",
+  "site_web": "https://transports-gauthier.fr/",
+  "email": "exploitation@transports-gauthier.fr",
+  "telephone": "02 43 06 23 49",
+  "source_email": "https://transports-gauthier.fr/contact/",
+  "source_telephone": "https://transports-gauthier.fr/contact/",
+  "contact_nom": "Julien et Samuel Gauthier",
+  "contact_fonction": "Cogérants",
+  "linkedin": "",
+  "effectif": "160 salariés (ensemble après rachat)",
+  "capital": "",
+  "actualite": "Au 1er janvier 2026, rachat du groupe Roche (et des Transports Laigneau) : l'ensemble passe de 60 à 160 salariés, 122 camions, près de 18,5 M€ de CA ; transmission progressive par Philippe Roche dans les mois suivants.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Unifier sous une même interface les commandes, le suivi et la communication chauffeurs de trois entités désormais réunies.",
+  "faits": [
+   {
+    "fait": "Les Transports Gauthier doublent de taille avec le rachat de Roche et Laigneau (1er janvier 2026) : 160 salariés, 122 camions, ~18,5 M€ de CA, contre 60 salariés et 50 véhicules avant",
+    "url": "https://www.lofficieldestransporteurs.fr/strategie/les-transports-gauthier-doublent-de-taille-avec-le-rachat-de-roche-et-laigneau-971654.php",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Les Transports Gauthier doublent de taille et se diversifient avec la reprise d'une autre société mayennaise",
+    "url": "https://www.lejournaldesentreprises.com/article/les-transports-gauthier-doublent-de-taille-et-se-diversifient-avec-la-reprise-dune-autre-societe-2134437",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Le site présente transport régional/national, location de véhicules avec chauffeur et utilitaires, stockage et garde-meubles ; contact par email d'exploitation et téléphone",
+    "url": "https://transports-gauthier.fr/contact/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Tripler l'effectif en intégrant deux transporteurs aux outils et habitudes différents crée un besoin d'outils communs (commande client, suivi, remontées chauffeurs) ; l'intégration se poursuit en 2026 avec le départ progressif du cédant.",
+  "opportunite": "Portail client unique (commande/cotation, suivi) pour les clients des trois entités et application chauffeurs (missions, preuves de livraison, photos), plus refonte du site sous une marque commune.",
+  "service": "Espace client + application chauffeurs",
+  "signal_achat": "Rachat doublant la taille (janvier 2026), intégration en cours",
+  "urgence": "moyenne — rachat daté de janvier 2026, transmission et intégration en cours dans les mois suivants",
+  "score_detail": {
+   "besoin": 16,
+   "urgence": 13,
+   "fit": 15,
+   "capacite": 7,
+   "accessibilite": 8,
+   "preuves": 11
+  },
+  "sources": [
+   "https://www.lofficieldestransporteurs.fr/strategie/les-transports-gauthier-doublent-de-taille-avec-le-rachat-de-roche-et-laigneau-971654.php",
+   "https://www.lejournaldesentreprises.com/article/les-transports-gauthier-doublent-de-taille-et-se-diversifient-avec-la-reprise-dune-autre-societe-2134437",
+   "https://transports-gauthier.fr/contact/",
+   "https://annuaire-entreprises.data.gouv.fr/entreprise/395054372"
+  ],
+  "objet_email": "Transports Gauthier, Roche et Laigneau — outils communs",
+  "email_personnalise": "Bonjour Messieurs Gauthier,\n\nJ'ai lu que le rachat de Roche et Laigneau vous amène à 160 salariés et 122 camions, contre 60 salariés auparavant.\n\nQuand trois entreprises se réunissent, les clients et les chauffeurs gardent souvent chacun leurs canaux (téléphone, mails, papiers), ce qui complique le suivi.\n\nCapmedia conçoit des espaces clients (commande, suivi) et des applications chauffeurs simples, adaptés aux PME de transport.\n\nSeriez-vous d'accord pour un échange de 20 minutes sur la façon dont vous organisez cela aujourd'hui ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que les Transports Gauthier avaient repris Roche et Laigneau, pour passer à 160 salariés. Je voulais savoir qui s'occupe chez vous des outils de suivi clients et chauffeurs depuis ce rapprochement.",
+  "relance": "Autre angle : une application chauffeurs commune (missions, photos, émargement) est souvent le moyen le plus rapide d'harmoniser les pratiques entre entités rachetées. Est-ce un sujet chez vous ?",
+  "pourquoi_demain": "Un transporteur mayennais qui a triplé son effectif en 2026 et doit encore faire fonctionner trois entités ensemble.",
+  "score": 70,
+  "niveau": "QUALIFIÉ",
+  "date_verification": "2026-09-24",
+  "equipe": "Z05"
+ },
+ {
+  "id": "Z06-002",
+  "entreprise": "Groupe JBS (JBS Propreté)",
+  "siren": "438706657",
+  "secteur": "Propreté / nettoyage industriel et tertiaire",
+  "ville": "Saint-Pair-sur-Mer (Granville)",
+  "departement": "50",
+  "region": "Normandie",
+  "site_web": "https://groupe-jbs.fr/",
+  "email": "granville@jbs-proprete.fr",
+  "telephone": "02 33 49 64 80",
+  "source_email": "https://groupe-jbs.fr/jbs-proprete-granville/",
+  "source_telephone": "https://groupe-jbs.fr/jbs-proprete-granville/",
+  "contact_nom": "Jean-Baptiste Larue",
+  "contact_fonction": "Dirigeant du Groupe JBS",
+  "linkedin": "https://www.linkedin.com/in/jean-baptiste-larue-2b6a1189/",
+  "effectif": "800 salariés",
+  "capital": "",
+  "actualite": "Acquisition de PLVS (Cherbourg, 20 salariés) signée le 8 janvier 2026 : 6e rachat depuis 2018, 11e agence ; CA 2025 de 22 M€, objectif 23 M€ en 2026.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Outiller 11 agences (Normandie/Bretagne) issues de rachats successifs pour le suivi terrain et la relation client",
+  "faits": [
+   {
+    "fait": "JBS a acquis PLVS (Cherbourg, 20 salariés), acte signé le 8 janvier 2026 ; 6e acquisition depuis 2018, 11e agence, 800 salariés, CA 2025 22 M€, objectif 23 M€ en 2026",
+    "url": "https://www.lejournaldesentreprises.com/article/le-groupe-de-proprete-normand-jbs-acquiert-plvs-et-poursuit-sa-croissance-2135885",
+    "source_type": "presse",
+    "date": "2026-01-08"
+   },
+   {
+    "fait": "Brève sur la nouvelle acquisition du Groupe JBS",
+    "url": "https://services-proprete.fr/entreprises-marches/31216/nouvelle-acquisition-pour-le-groupe-jbs",
+    "source_type": "presse",
+    "date": "2026"
+   },
+   {
+    "fait": "Le groupe affiche des agences distinctes (Granville, Caen, Saint-Lô, Avranches, PLVS Cherbourg, HIL Propreté, Normanet, ABC du Nettoyage) avec emails et sites propres",
+    "url": "https://groupe-jbs.fr/nos-entreprises/",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Un groupe constitué de rachats conservant des marques et coordonnées séparées doit coordonner suivi qualité et reporting client sur 11 agences.",
+  "opportunite": "Application mobile de contrôle qualité et de suivi des prestations pour les chefs d'équipe, avec espace client unifié pour les clients multi-sites.",
+  "service": "Application métier mobile + espace client",
+  "signal_achat": "Rachat de PLVS (janvier 2026), 11e agence",
+  "urgence": "moyenne — acquisition de janvier 2026 (8 mois)",
+  "score_detail": {
+   "besoin": 16,
+   "urgence": 12,
+   "fit": 15,
+   "capacite": 9,
+   "accessibilite": 7,
+   "preuves": 11
+  },
+  "sources": [
+   "https://www.lejournaldesentreprises.com/article/le-groupe-de-proprete-normand-jbs-acquiert-plvs-et-poursuit-sa-croissance-2135885",
+   "https://services-proprete.fr/entreprises-marches/31216/nouvelle-acquisition-pour-le-groupe-jbs",
+   "https://groupe-jbs.fr/jbs-proprete-granville/",
+   "https://groupe-jbs.fr/nos-entreprises/"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Groupe JBS — 11 agences après PLVS",
+  "email_personnalise": "Bonjour,\n\nJ'ai vu que le Groupe JBS a intégré PLVS à Cherbourg en janvier, sa sixième acquisition, et compte désormais 11 agences et 800 salariés.\n\nAvec des sociétés qui gardent leur nom et leurs coordonnées, le suivi des contrôles qualité et des demandes clients peut vite se répartir entre plusieurs outils.\n\nCapmedia conçoit des applications mobiles pour les équipes terrain et des espaces clients, adaptées aux entreprises multi-agences.\n\nPourriez-vous me dire qui suit ce sujet chez vous, pour un échange rapide ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu que le Groupe JBS a repris PLVS à Cherbourg en début d'année et compte maintenant 11 agences. Je voulais savoir qui s'occupe chez vous des outils de suivi des équipes terrain et des clients.",
+  "relance": "Autre angle : vos clients multi-sites en Normandie et Bretagne pourraient suivre passages et contrôles qualité depuis un seul espace, quelle que soit l'agence. Est-ce que cela vous parle ?",
+  "pourquoi_demain": "Six rachats depuis 2018 et un objectif de croissance 2026 : le groupe doit homogénéiser ses outils entre 11 agences.",
+  "equipe": "Z06",
+  "score": 70,
+  "niveau": "QUALIFIÉ"
  },
  {
   "id": "U04-002",

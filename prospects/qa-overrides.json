@@ -51,5 +51,8 @@
  },
  "Y02-001": {
   "rejet": "téléphone issu d'un résumé mêlant plusieurs pages ; tête de réseau associative (email @ecf.asso.fr)"
+ },
+ "Z03-001": {
+  "rejet": "page source de l'email incertaine ; téléphone 08 90 surtaxé, alternative de source incertaine"
  }
 }

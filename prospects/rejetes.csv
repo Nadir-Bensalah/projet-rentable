@@ -365,3 +365,60 @@ Groupe Chopard Automobile (Besançon);email;"seul email visible = médiateur CNP
 Bruschet Automobiles (Marseille);email;mentions légales trouvées mais email non affiché dans les résultats;Y08
 Groupe T3M (Revel, machinisme agricole);score;email/tel OK (t3m@groupet3m.com, 05 62 18 60 60) mais signal (rachat Occitaine Agri) daté de mars 2025, pas de signal 2026 ni besoin web observé;Y08
 BPM Agri (groupe BPM, John Deere Ouest);score;rachat Chesneau non daté précisément, emails par site uniquement, groupe 2 600 salariés : score estimé 67;Y08
+HESS Automobile (Bischheim, 67);email;"Seul email trouvé = serviceclient@ (service client, inadapté) ; groupe de 86 points/2 300 salariés probablement hors plage 30-60 et digital déjà structuré (Service Client de l'Année 2026)";Z01
+Groupe Mary / Mary Automobiles (Normandie);email;"relationclient@mary.fr vu dans un résumé à source incertaine (Facebook/rocketreach mêlés) ; pas de page officielle confirmée";Z01
+Groupe Jeannin Automobiles (Auxerre/Sens, 89);score;Email jasens@ + tél 03 86 65 90 13 trouvés, mais besoin faible (site groupe unifié + nouveau site occasions déjà lancé), signal Maxus/Champlay non daté : 58/100;Z01
+Groupe Vulcain (Lyon, 37 concessions);email;"Aucun email publié trouvé (pages contact par concession uniquement) ; tél 04 72 20 51 51 seul";Z01
+Louyet Group;score;"Groupe belge (siège Belgique, 50 concessions, 1 500 salariés) hors cible « groupe français régional » ; décision digitale centralisée hors de France";Z02
+Mozart Autos (Le Cannet, 06);email;"Mentions légales trouvées (SIREN 306328378) mais aucun email ni téléphone dans les résultats ; site unique mozart-autos.com";Z02
+Groupe Saint-Clair (Saint Clair Automobiles, Hérouville-Saint-Clair);score;Email marketing@sca14.com et tél. 02 31 06 15 15 trouvés, mais besoin faible (site groupe + site Mazda constructeur seulement), pas d'actualité 2026 datée : score estimé 65;Z02
+Agri Montauban / Socotam (groupe Dubreuil);doublon;Filiale du groupe Dubreuil, déjà traité (Clarens Automobiles);Z03
+Sicloé Machini (fusion SICOIT + Gonnin Duris, groupe Dubreuil);doublon;Filiale du groupe Dubreuil, déjà traité;Z03
+Bernis Trucks (reprise par Dubreuil);doublon;En cours d'absorption par le groupe Dubreuil, déjà traité;Z03
+GCA Trucks / GSVI;doublon;Groupe GCA déjà traité;Z03
+Chesneau Agri (BPM Agri);doublon;"BPM Agri déjà traité ; rachat de 2025";Z03
+Emil Frey France / Kertrucks / Gorrias;privée;"Très grand groupe international inaccessible ; Gorrias absorbé par Emil Frey";Z03
+Gueudet Agri (reprise Claas Primault);score;Grand groupe automobile, rachat de 2025 : signal ancien, décideur peu accessible;Z03
+Collet Est (ex-Claas Est);score;Rachat daté de mars 2025 (plus de 6 mois), pas de besoin digital sourcé;Z03
+Groupe Narbonne (Narbonne Accessoires);besoin;Article de mars 2025, filiale de vente de camping-cars cédée en 2024, pas de besoin observé;Z03
+Krvacamp (importateur Adria / Elios);email;Email masqué dans les résultats ([email protected]), pas de téléphone public;Z03
+Yuniboat (Batz-sur-Mer, 44);besoin;Coordonnées trouvées (hello@yuniboat.com) mais aucun besoin digital documenté : actualité de levée de fonds et nouveau site industriel uniquement;Z03
+Déméterre (passage de John Deere à Massey Ferguson);score;Signal de janvier 2025, trop ancien;Z03
+Groupe de Willermin (Mécanique Automobile SA);contrôle qualité;"QA : page source de l'email incertaine ; téléphone 08 90 surtaxé, alternative de source incertaine";Z03
+Impulsa (Groupe Impulsa, Paris);score;"LBO Activa 2026, 160 salariés, mais processus déjà très digitalisés avec outils propriétaires ; score estimé 66";Z04
+Tyls Conseil (ex-Comptacom, Laval);besoin;Près de 1 000 collaborateurs (hors cible 50-500), rebranding et espace client déjà en place;Z04
+Lorgec (Metz);besoin;Intégré au réseau Tyls au 1er avril 2026 : décisions outils prises au niveau du réseau;Z04
+Kerogo Finance (dont Keobiz);besoin;Groupe détenu par Perwyn, 90 M€ de CA, hors taille régionale;Z04
+Rydge Conseil;besoin;4 500 collaborateurs, hors cible;Z04
+Fiteco (Laval);besoin;Groupe national de grande taille, hors cible 50-500;Z04
+Numeris Groupe;preuves;Plateforme nationale de consolidation (30 M€ levés), taille et contacts non vérifiés faute de quota;Z04
+Groupe CF (Bordeaux);preuves;Rachats trouvés datés d'avant 2026, pas de signal récent;Z04
+Amarris;doublon;Déjà traité (liste d'exclusions);Z04
+Groupe Archipel;doublon;Déjà traité (liste d'exclusions);Z04
+Numans;doublon;Déjà traité (liste d'exclusions);Z04
+WeMa;doublon;Exclu par la mission;Z04
+Groupe Ducournau (Transports Ducournau);privée;Hors cible taille : environ 900 salariés et 110 M€ visés en 2026 (rachat Hamon Frères);Z05
+Houtch (Houtch Distribution Europe);privée;Hors cible taille : 450-570 salariés, entrepôt automatisé 62 400 m² (groupe trop grand pour la mission 20-300);Z05
+Groupe Coué TRM;privée;"ETI mayennaise hors cible taille ; reprise partielle STH (14 salariés) datée d'avril 2025, signal ancien";Z05
+Dimotrans;privée;Groupe national hors cible taille (plusieurs centaines de salariés);Z05
+Groupe Brangeon (Bernard Michel Transports);preuves;Groupe de grande taille, article sans date 2026 confirmée;Z05
+Groupe Jeantet (Transports Jeantet, Besançon);privée;Hors cible taille : 400 salariés après rachat des Transports Barbier (mars 2026);Z05
+TCMG (Transports Christian et Martine Gaillard, Melle 79);email;Email accueil@tcmg.fr vu dans un résumé mêlant plusieurs annuaires, domaine différent du site transports-tcmg.com : source incertaine;Z05
+Ilex Ascenseurs (Antibes);email;"Seul un format d'email nominatif (déduit) trouvé, aucune adresse publiée ; formulaire de contact uniquement";Z06
+Abers Protection Incendie / Groupe A.P.I. (Brest);email;"Téléphone 02 98 40 88 25 trouvé mais aucune adresse email publiée ; rachat daté mai 2025";Z06
+Adexsi (Luynes, 37);téléphone;contact@adexsi.com trouvé en mentions légales mais aucun téléphone complet dans les résultats;Z06
+Groupe Vert (Plérin, 22);score;"Email/téléphone seulement de la filiale rachetée Sovenet (proprete@sovenet.com) ; rachat fin déc. 2025 ; accessibilité faible, score 67";Z06
+Leader Group (Normandie, équipements anti-incendie);score;"Acquisition au Canada, groupe international peu accessible ; non approfondi";Z06
+Groupe Kiping (Marseille, CVC);preuves;"Entrée de Siparex au capital, date non vérifiée ; non approfondi faute de budget";Z06
+Groupe EJ (rachat Ets Hanny);preuves;"Date du rachat non confirmée 2026 ; non approfondi";Z06
+Repair and Run (Louviers, 27);téléphone;"Email contact@repairandrun.com confirmé (mentions légales/CGV) mais aucun téléphone siège ni boutique en propre lisible dans les résumés ; le 02 32 62 03 05 évoqué n'a pas pu être rattaché à une source";Z07
+Ecova (pièces auto de réemploi, Elven/Vannes);email;Page contact eco-va.fr : téléphones des 7 sites mais uniquement un formulaire, aucun email lisible;Z07
+Gagao (levée LITA.co);email;Mentions légales introuvables (résultats sur homonymes Gago, Gageo...);Z07
+EMOA Mutuelle du Var (Toulon/Six-Fours, SIREN 783169220);email;Absorption par la Mutuelle des Assurés Sociaux annoncée au JO du 2/09/2026 (newsassurancespro) et espace adhérent en 'maintenance technique' vu dans un résultat, tél 09 71 09 09 09 / 04 94 09 50 00 trouvés, mais email masqué dans tous les résumés (formulaire de contact uniquement). De plus, entité absorbée = décision IT côté absorbant.;Z08
+Mutuelle des Assurés Sociaux (MAS, Marseille, SIREN 329678205);email;Mutuelle absorbante d'EMOA (JO 2/09/2026), signal fort mais aucun email ni téléphone visible dans les résumés (mentions légales mutuel.org sans coordonnées).;Z08
+Choralis – Mutuelle Le Libre Choix (Maubeuge, SIREN 783747793);score;"contact@lelibrechoix.fr et 03 27 53 19 90 (mentions légales lelibrechoix.fr), absorption de la CMIP effective au 1/01/2026 (ACPR 19/11/2025, Légifrance) et pas d'app store trouvée ; mais signal vieux de ~9 mois, aucun avis négatif daté propre à l'espace adhérent (seulement pages SEO génériques 'site en panne ?'). Score honnête 67/100 (17/12/16/6/7/9).";Z08
+Mutuelle de France Unie (MFU, Annecy/Cran-Gevrier);email;"Absorptions MMCA et Fraternelle des Territoriaux (groupe Entis) ; seul email visible = dpo@mutuelles-entis.fr (DPO interdit). Tél 09 69 39 96 96.";Z08
+HEYME (LUTECEA SAS, Marseille);score;"App notée 1,3/5 avec erreurs de connexion (justuseapp 2026), horaires conseillers réduits sept.-oct. 2026 pour 'contraintes organisationnelles' ; tél 09 71 09 07 07 ; mais email mentions légales = dpo@, seuls emails presse nominatifs (fdecarvalho@heyme.care) non reconfirmés, néo-assureur 100 % digital probablement doté d'équipe tech interne, avis non datés. Score 66/100.";Z08
+Mutuelle Mutaero;besoin;App en marque blanche Mutlab (fr.mutlab.mutaero), aucun avis négatif trouvé.;Z08
+Prévifrance (Toulouse);besoin;"Avis négatifs App Store anciens/non datés ; nouvel espace adhérent et Face ID déjà livrés récemment : pas de besoin 2026 observable.";Z08
+Matmut Santé Prévoyance (fusion au 1/01/2027);privée;Groupe Matmut = très grand groupe, hors cible Capmedia (+ Ociane rattachée).;Z08
