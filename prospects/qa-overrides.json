@@ -24,5 +24,23 @@
  },
  "W02-001": {
   "rejet": "coordonnées nominatives (portable) dont la page source n'est pas certaine ; besoin déduit uniquement de l'URL"
+ },
+ "X01-001": {
+  "rejet": "source du téléphone supposée (fiche PagesJaunes citée par défaut, non lue dans le résultat)"
+ },
+ "X02-001": {
+  "rejet": "page source de l'email non confirmée ; besoin déduit uniquement des URL du site"
+ },
+ "X02-002": {
+  "rejet": "SEM (société d'économie mixte, capital en partie public) en cours de privatisation : hors cible entreprise privée à ce jour"
+ },
+ "X05-001": {
+  "rejet": "email non rattaché à une page précise (source attribuée par défaut)"
+ },
+ "X03-001": {
+  "rejet": "preuve du besoin trop mince (avis rares, non datés, note globale bonne) ; filiale d'un grand fonds, accessibilité faible"
+ },
+ "X04-002": {
+  "rejet": "seule adresse trouvée = service réclamations, inadaptée à une prise de contact commerciale"
  }
 }

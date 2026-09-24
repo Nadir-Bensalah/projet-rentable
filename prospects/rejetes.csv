@@ -227,3 +227,65 @@ Poulain Traiteur (SARL Poulain et Fils, Hennebont);score;"accueil@poulain-traite
 La Table de Charlotte (FS Holding, Saint-Cannat);email;rachat début 2025, aucun email trouvé;W08
 YOU Famille Hôtelière (Caen);email;seuls emails d'agrégateurs (rocketreach), pas d'email ni de téléphone publiés;W08
 European Camping Group / Huttopia / Sandaya;score;grands groupes HPA avec équipes digitales internes, inaccessibles;W08
+Hospya (ex-Oréa, 27 hôtels, Paris);besoin;Groupe privé (SIREN 420 442 139), rebranding 2026, mais aucun email ni téléphone trouvé dans les résultats et aucun manque numérique observé (hospya.com + site carrières déjà en place).;X01
+Inwood Hotels (groupe, Paris 7e);téléphone;"Email contact@inwood-hotels.com vu (CGV/site officiel) mais aucun téléphone siège trouvé ; signal (réouverture La Bourdonnais printemps 2026) sans besoin numérique documenté.";X01
+The Social Club (groupe hôtelier gardois, Château de Barbegal);email;"Projet 5* Barbegal 2026 confirmé mais aucun email ni téléphone trouvé dans les résultats ; besoin numérique non documenté.";X01
+Salad&Co (SAS Salad&Co, Lezennes, 59);email;"Signal daté (kiosque BtoB Ronchin 11 mai 2026) mais aucun email publié (recherche ""@saladandco.fr"" vide) ; possède déjà commande en ligne, épicerie en ligne et fidélité digitale.";X01
+Alive Group (rachat traiteur Butterfly, Tourcoing);score;"Rachat de Butterfly daté de fin 2023 (non récent), aucun besoin numérique observé ; coordonnées non recherchées.";X01
+Le Moulin d'Élise (Penn Ar Vilin, boulangeries, Morlaix);score;"Email trouvé (boutique.morlaix.moulindelise@gmail.com, page Facebook officielle) et téléphone 02 44 84 29 29 (PagesJaunes), mais email boutique gmail (pas siège) et besoin numérique seulement inféré de la croissance (lancement franchise, 10 implantations 2026) ; score 68.";X01
+Les Opticiens Mobiles (Lyon);score;"Aucun signal récent daté trouvé : levée de 3,2 M€ de juin 2024, offre « Responsable développement réseau » non datée ; aucun manque numérique observé ; score < 70.";X01
+La Vignery (cavistes, Rambouillet);score;"Pas de signal récent daté (20 ans en 2025, ouverture Barentin non datée, objectif 50 magasins) ; besoin non documenté ; score < 70.";X01
+Epil Clinic (épilation laser, Levallois-Perret);email;Signal : objectif 20-25 centres fin 2026 (lexpress-franchise), mais aucun email ni téléphone dans les résultats.;X01
+Venidom (Venidom France, Coulounieix-Chamiers, 24);email;Mentions légales trouvées (SIREN 820 833 697) mais ni email ni téléphone visibles dans les résultats.;X01
+JMT Le Royaume des Animaux;besoin;Non traité : quota de 22 recherches épuisé.;X01
+Cuisines Raison;besoin;Non traité : quota de 22 recherches épuisé.;X01
+Les Services d'Aline;besoin;Non traité : quota de 22 recherches épuisé.;X01
+La Brigade (street food carnivore — Big Str'EAT SAS / La Brigade Expansion);contrôle qualité;QA : source du téléphone supposée (fiche PagesJaunes citée par défaut, non lue dans le résultat);X01
+FC Girondins de Bordeaux (SASP);besoin;Coordonnées trouvées (contact@girondins.com, 08 92 68 34 33) mais club maintenu en Régional 1 et en route vers la liquidation (sept. 2026) : pas de capacité d'investissement.;X02
+Sélestat Alsace Handball (SASP Alsace Promo Handball);score;Promu en Starligue 2026-27, coordonnées trouvées (secretariat@sa-hb.com, 03 67 17 60 80) mais besoin digital faible (seul signal : post billetterie « à nouveau accessible » non daté) et budget modeste : 68/100.;X02
+AS Monaco Basket;privée;Hors France (Monaco) et non maintenu en championnat professionnel français malgré nouvel investisseur (août 2026).;X02
+Le Mans FC (SASP Le Mans FC);contrôle qualité;"QA : page source de l'email non confirmée ; besoin déduit uniquement des URL du site";X02
+Orléans Loiret Basket (SEMSL Orléans Loiret Basket, en cours de privatisation);contrôle qualité;QA : SEM (société d'économie mixte, capital en partie public) en cours de privatisation : hors cible entreprise privée à ce jour;X02
+Wash par TotalEnergies;privée;Grand groupe (TotalEnergies), hors cible malgré des avis de bugs;X03
+Bestwash;besoin;App introuvable/non identifiable dans les résultats;X03
+Annexx (self-stockage);besoin;Aucun avis négatif sur l'app trouvé, mises à jour régulières;X03
+Wash.ME (ex-Revolution Laundry, groupe Me Group);besoin;"Groupe coté, 4 500 laveries, app développée en interne (KIS) ; avis plutôt positifs";X03
+IMO Car Wash;privée;Groupe international (hors cible PME/ETI);X03
+Wash Avenue;besoin;Société éditrice non identifiée, app récente sans avis;X03
+Getaround;privée;Plateforme tech développant son app en interne (concurrent/éditeur);X03
+Homebox;besoin;Pas d'avis négatif trouvé sur l'app;X03
+Une Pièce en Plus;besoin;Pas d'app ni d'avis négatif documenté;X03
+WashOnline;privée;Éditeur de solution laverie en marque blanche (métier = logiciel);X03
+TaM / M'Ticket (recharge e-totem Montpellier);privée;Opérateur de transport public / collectivité;X03
+Ecolave;besoin;Réseau a déjà son outil digital, aucun signal de difficulté;X03
+Lockall;contrôle qualité;"QA : preuve du besoin trop mince (avis rares, non datés, note globale bonne) ; filiale d'un grand fonds, accessibilité faible";X03
+Partnaire (Groupe Partnaire);besoin;App Partnaire - Intérim notée 4,8/5, avis majoritairement positifs, pas de signal de bug;X04
+Oralia (MyOralia);besoin;Aucun avis négatif sourcé sur l'espace client/app MyOralia, seulement des tutoriels de connexion;X04
+Groupe France Mutuelle (France Mutuelle);score;Coordonnées trouvées (09 77 40 28 35, adherent@francemutuelle.fr) mais une seule source non datée (TotalBug) sur les problèmes de connexion : score honnête 68/100;X04
+Solimut Mutuelle de France;contrôle qualité;QA : seule adresse trouvée = service réclamations, inadaptée à une prise de contact commerciale;X04
+DMAX (Groupe DMAX, Clichy);score;Coordonnées OK (contact@dmax.fr, +33 1 41 34 33 33) et rachat Normandy Transferts 2026, mais outillage déjà avancé (e-Tracs depuis 10 ans, app iPad, TRACK-MAX RFID, suivi véhicules) : besoin observable faible, score estimé 66.;X05
+Groupe Guyamier (Ambès, 33);score;Rachat d'Aquidis daté de mars 2023 : signal trop ancien, aucune brève 2026 trouvée.;X05
+Multi-Transports (Solignac-sur-Loire, 43);score;570 salariés et 75 M€ de CA : hors cible 20-300 salariés.;X05
+Envoyé Spécial (Fretin, 59);score;"Plus de 600 salariés, ~100 M€ de CA : hors cible ; rachat Dispac non daté 2026.";X05
+Jung Logistique (Sélestat, 67);score;700 salariés, 22 sites : hors cible PME 20-300.;X05
+Axal (Bennwihr, 68);besoin;Coordonnées trouvées (contact@axal.fr, 03 89 23 43 23) mais aucun signal daté 2026 ni besoin digital documenté (Elsass Office créé en 2023).;X05
+Groupe Clareton (Transport Clareton);contrôle qualité;QA : email non rattaché à une page précise (source attribuée par défaut);X05
+Lambert Menuiserie (Saint-Phal, 10, SIREN 552882151);score;Contacts trouvés (info@lambert-menuiserie.fr via lambert-menuiserie.fr/nous-contacter, 03 25 42 16 34). Investissement de 2,6 M€ dans une ligne automatisée en service depuis janvier 2026, traçabilité par code-barres (JdE brève 2143732, vers mai 2026, canal32, business-sud-champagne), 45-50 salariés, environ 10 recrutements prévus. Mais le projet numérique est déjà en place et aucun besoin web ou app n'est observé. Signal hors de la fenêtre juillet-septembre. Score honnête 65/100 (besoin 15, urgence 13, fit 14, capacité 7, accessibilité 6, preuves 10);X06
+Windelo (chantier de catamarans, Canet-en-Roussillon, 66);score;"4 M€ d'extension, 56 emplois, 110 salariés (JdE/boatindustry, 2026), mais aucun volet numérique mentionné. L'email nominatif julie.rosiere@ vient d'un annuaire de salon dont la source reste incertaine ; téléphone 04 11 30 01 43 vu seulement dans un résumé (pagesjaunes). Score estimé 60";X06
+Winckelmans (carreaux grès cérame, Lomme, 59);besoin;Investissements de 1,5 M€ et 3,5 M€ (four, automatisation), 130 salariés. Article JdE d'environ mars 2026, hors fenêtre, sans aucun volet numérique;X06
+IPC (plasturgie/composites, Bellignat, 01);besoin;Nouveau site de 3 à 3,5 M€ près de Clermont (JdE 2135033, vers avril 2026), hors fenêtre, aucun volet numérique mentionné;X06
+Eur'Ohm (matériel électrique, Isère);besoin;Investissement de 15 M€ sur 5 ans (JdE 2137765, vers mars 2026), hors fenêtre, pas de volet numérique observé;X06
+Almeria (Le Bignon, 44);privée;ESN spécialisée dans les systèmes d'information des PME : concurrent, exclue;X06
+Révélations de la Franchise 2026 : 9 finalistes (Beer's Corner, Cafés BOC, Chikin Bang, Family Plus, Gyraya, Le Roi Solaire, Novettino, Work&You, Yatta!);doublon;Tous déjà présents dans EXCLUSIONS;X07
+DO&KA (animalerie, franchise depuis 2023);email;Mentions légales/annuaire FFF sans email ni téléphone visibles dans les résumés;X07
+CedSportSanté (Clermont-Ferrand);email;"Aucun email publié trouvé ; seul un 06 visible (cedsportsante.fr/contact)";X07
+Kurry Up (Paris);email;"Seulement des sociétés d'exploitation par restaurant ; pas d'email de tête de réseau trouvé";X07
+LF' Pilates Center;email;"Page contact sans email dans les résumés ; confusion avec un homonyme à Miami";X07
+Nalios;privée;Solution de digitalisation d'entreprise : concurrent de Capmedia;X07
+BH Car (Groupe BH, Fay-aux-Loges 45);score;contact@bhcar.fr (bhcar.fr/mentions-legales) + 02 38 25 15 09 trouvés, mais le nouveau site + espace fidélité BH Shop annoncé en nov. 2025 a été dévoilé à Franchise Expo en mars 2026 et CarBox AI est déjà déployé : besoin déjà couvert, score estimé 62/100;X07
+ARJOMECA (reprise, Vendée, lauréat Réseau Entreprendre 2026);besoin;Réparation de pompes/moteurs, aucun besoin digital observable;X07
+Storise / LumenAI (lauréats Réseau Entreprendre 2026);privée;Éditeurs tech : concurrents, pas des clients;X07
+Poulaillon (Poulaillon SA, Wittelsheim, 68);besoin;"8 ouvertures 2026 mais boutique en ligne, espace client et carte fidélité déjà en place ; email info@ vu seulement dans un résumé mêlé (source incertaine)";X08
+Eleni Group (Paris 9e);email;aucun email complet publié dans les résultats (formulaire contact uniquement);X08
+Maison Bécam (Bouchemaine, 49);besoin;click & collect (commande.maisonbecam.com), app marque blanche Local Tomorrow et programme fidélité déjà en place;X08
+Fabioli (Fontaines-sur-Saône / Villeurbanne, 69);email;"seul email vu : rh@fabioli.fr (RH, source incertaine) ; commande Fabioli Presto et réservation en ligne déjà en place";X08

@@ -210,6 +210,78 @@
   "equipe": "V06"
  },
  {
+  "entreprise": "Supplay",
+  "siren": "337080543",
+  "secteur": "Travail temporaire / recrutement",
+  "ville": "Reims",
+  "departement": "51",
+  "region": "Grand Est",
+  "site_web": "https://www.supplay.fr",
+  "email": "webmaster@supplay.fr",
+  "telephone": "03 26 48 43 70",
+  "source_email": "https://www.supplay.fr/mentions-legales-supplay/",
+  "source_telephone": "https://www.supplay.fr/mentions-legales-supplay/",
+  "contact_nom": "Nicolas Paillier",
+  "contact_fonction": "Directeur de la publication",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "9 000 000 €",
+  "actualite": "Réseau d'intérim fondé en 1968, siège à Reims",
+  "site_existant": "oui",
+  "app_ios": "oui",
+  "app_android": "oui",
+  "besoin": "Fiabiliser l'app intérimaires Supplayer (signature de contrats, connexion, mot de passe)",
+  "faits": [
+   {
+    "fait": "Avis sur l'app Supplayer signalant des bugs persistants à l'inscription, à la modification des informations personnelles et à la signature des contrats (contrats à signer qui n'apparaissent plus)",
+    "url": "https://justuseapp.com/en/app/1365620746/supplayer/problems",
+    "source_type": "avis store",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Utilisateurs signalant l'impossibilité de se connecter après installation : l'app indique qu'un nouveau mot de passe a été envoyé mais l'email n'arrive pas",
+    "url": "https://mwm.ai/fr/apps/supplayer/1365620746",
+    "source_type": "avis store",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Fil de forum 'Erreur de connexion, impossible de se connecter à son espace intérimaire' sur Supplayer",
+    "url": "https://forums.justuseapp.com/fr/post/G6MIUBDPSW/erreur-de-connexion-impossible-de-se-connecter-a-son-espace-interimaire",
+    "source_type": "forum avis app",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "L'app porte un flux critique (signature dématérialisée des contrats de mission) : chaque bug génère des appels en agence et des retards de signature.",
+  "opportunite": "Audit technique et QA mobile de Supplayer, puis reprise/maintenance corrective ciblée sur l'authentification et la signature.",
+  "service": "Audit / QA mobile et maintenance d'application existante",
+  "signal_achat": "App intérimaires critiquée (bugs signature et connexion)",
+  "urgence": "moyenne : avis négatifs récurrents mais non datés précisément",
+  "score_detail": {
+   "besoin": 20,
+   "urgence": 12,
+   "fit": 18,
+   "capacite": 9,
+   "accessibilite": 6,
+   "preuves": 10
+  },
+  "sources": [
+   "https://justuseapp.com/en/app/1365620746/supplayer/problems",
+   "https://mwm.ai/fr/apps/supplayer/1365620746",
+   "https://www.supplay.fr/mentions-legales-supplay/",
+   "https://apps.apple.com/fr/app/supplayer/id1365620746"
+  ],
+  "objet_email": "À propos de l'app Supplayer",
+  "email_personnalise": "Bonjour,\n\nEn parcourant les avis publiés sur l'application Supplayer, j'ai relevé plusieurs retours d'intérimaires sur la signature des contrats (contrats qui n'apparaissent plus) et sur la connexion (email de réinitialisation du mot de passe non reçu).\n\nSur une app dont le rôle principal est la signature des missions, ces blocages se traduisent souvent par des appels en agence et des signatures retardées.\n\nChez Capmedia, nous réalisons des audits et de la QA sur des applications mobiles existantes, puis corrigeons les parcours critiques sans refonte complète.\n\nQui suit l'application chez Supplay ? Un échange de 20 minutes aurait-il du sens ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu plusieurs avis sur l'app Supplayer qui évoquent des contrats à signer qui n'apparaissent plus et des problèmes de connexion. Je voulais savoir qui s'occupe de l'application chez vous.",
+  "relance": "Je peux vous envoyer une courte liste des points relevés dans les avis Supplayer (connexion, mot de passe, signature), classés par impact sur vos agences, si cela vous est utile.",
+  "pourquoi_demain": "Leur app porte la signature des contrats de mission et les avis décrivent précisément des bugs sur ce parcours.",
+  "equipe": "X04",
+  "id": "X04-001",
+  "score": 75,
+  "niveau": "QUALIFIÉ",
+  "date_verification": "2026-09-24"
+ },
+ {
   "id": "V05-001",
   "entreprise": "WASHiN",
   "siren": "852726165",
@@ -896,6 +968,78 @@
   "relance": "Je me permets de revenir vers vous sous un autre angle : deux apps copropriétaires (éseis Syndic et Sergic Viva Syndic) sont encore en ligne, ce qui peut semer la confusion ; nous pouvons vous aider à les consolider.",
   "pourquoi_demain": "L'app copropriétaires d'un syndic de premier plan régional accumule en 2026 des avis sur des erreurs bloquantes, avec deux apps concurrentes encore en ligne.",
   "equipe": "W06"
+ },
+ {
+  "entreprise": "Mutuelle de Poitiers Assurances",
+  "siren": "775715683",
+  "secteur": "Assurance mutuelle (IARD, santé)",
+  "ville": "Ligugé",
+  "departement": "86",
+  "region": "Nouvelle-Aquitaine",
+  "site_web": "https://www.assurance-mutuelle-poitiers.fr",
+  "email": "accueil@mutuelledepoitiers.fr",
+  "telephone": "05 49 37 49 37",
+  "source_email": "https://www.assurance-mutuelle-poitiers.fr/page-mentions-legales",
+  "source_telephone": "https://www.assurance-mutuelle-poitiers.fr/page-mentions-legales",
+  "contact_nom": "Emmanuel Ballif",
+  "contact_fonction": "Directeur commercial (Directeur général : Stéphane Désert)",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "actualite": "",
+  "site_existant": "oui",
+  "app_ios": "oui",
+  "app_android": "oui",
+  "besoin": "Stabiliser la connexion à l'app « Mon agence & moi » et à l'espace client web",
+  "faits": [
+   {
+    "fait": "Page TotalBug 2026 dédiée à Mutuelle de Poitiers Assurances : signalements de connexion impossible au site et d'application qui ne fonctionne pas",
+    "url": "https://www.totalbug.com/mutuelle-poitiers-assurances/",
+    "source_type": "signalement de pannes",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Avis indépendants (08/2026) mitigés : certains utilisateurs signalent des difficultés de connexion à l'application et des incompatibilités avec certains appareils, d'autres saluent sa simplicité",
+    "url": "https://www.green-opinion.com/avis-assurance/mutuelle-de-poitiers/",
+    "source_type": "avis clients",
+    "date": "2026-08"
+   },
+   {
+    "fait": "L'éditeur publie plusieurs apps (Mon agence & moi, Mon SARPGN) sous son compte développeur App Store",
+    "url": "https://apps.apple.com/fr/developer/mutuelle-de-poitiers-assurances/id1270224665",
+    "source_type": "App Store",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "Plusieurs apps à maintenir et des retours de connexion / compatibilité appareils : besoin probable de QA multi-appareils et de maintenance corrective.",
+  "opportunite": "Campagne de QA mobile multi-appareils (iOS/Android) sur Mon agence & moi, puis maintenance corrective ou TMA.",
+  "service": "QA mobile et maintenance d'applications existantes",
+  "signal_achat": "Signalements de connexion impossible (app + site) et incompatibilités appareils",
+  "urgence": "moyenne : avis datés d'août 2026 mais signal mitigé",
+  "score_detail": {
+   "besoin": 18,
+   "urgence": 12,
+   "fit": 18,
+   "capacite": 9,
+   "accessibilite": 7,
+   "preuves": 9
+  },
+  "sources": [
+   "https://www.totalbug.com/mutuelle-poitiers-assurances/",
+   "https://www.green-opinion.com/avis-assurance/mutuelle-de-poitiers/",
+   "https://www.assurance-mutuelle-poitiers.fr/page-mentions-legales",
+   "https://apps.apple.com/fr/developer/mutuelle-de-poitiers-assurances/id1270224665"
+  ],
+  "objet_email": "À propos de l'app Mon agence & moi",
+  "email_personnalise": "Bonjour,\n\nEn consultant les retours publiés sur l'application Mon agence & moi, j'ai noté que les avis sont globalement positifs sur la simplicité, mais que plusieurs sociétaires signalent des difficultés de connexion et des incompatibilités avec certains appareils ; TotalBug recense aussi des signalements de connexion impossible au site.\n\nCe type de problème touche souvent une minorité d'appareils mais pèse sur le support en agence.\n\nCapmedia réalise des campagnes de tests iOS/Android sur des applications existantes et corrige les parcours concernés.\n\nQui suit l'application chez vous ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu des avis sur votre app Mon agence & moi qui évoquent des difficultés de connexion et des incompatibilités avec certains téléphones. Je voulais savoir qui s'occupe de l'application chez vous.",
+  "relance": "Je peux tester gratuitement la connexion à Mon agence & moi sur une dizaine d'appareils courants et vous envoyer le résultat.",
+  "pourquoi_demain": "Mutuelle régionale solide avec plusieurs apps en propre et des retours de connexion récents : une QA multi-appareils est une porte d'entrée simple.",
+  "equipe": "X04",
+  "id": "X04-003",
+  "score": 73,
+  "niveau": "QUALIFIÉ",
+  "date_verification": "2026-09-24"
  },
  {
   "id": "V01-002",
@@ -2202,6 +2346,79 @@
   "equipe": "W08"
  },
  {
+  "id": "X08-001",
+  "entreprise": "Choukran (Choukran Founders / Choukran Sentier)",
+  "siren": "928027952",
+  "secteur": "Restauration rapide / cantine franco-marocaine",
+  "ville": "Paris",
+  "departement": "75",
+  "region": "Île-de-France",
+  "site_web": "https://www.choukran.fr",
+  "email": "yallah@choukran.fr",
+  "telephone": "01 53 40 87 32",
+  "source_email": "https://choukran.fr/politique.html",
+  "source_telephone": "https://www.pagesjaunes.fr/pros/63645433",
+  "contact_nom": "Abdel Alaoui",
+  "contact_fonction": "Chef et cofondateur (cofondateur : Otto Nijdam)",
+  "linkedin": "https://fr.linkedin.com/company/choukran-club",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Levée de plus de 5 M€ en février 2026 pour ouvrir plus de 30 restaurants en trois ans (objectif 37 fin 2029, majoritairement en franchise) ; 2 restaurants à Paris (2e et 9e), 2,3 M€ de CA.",
+  "site_existant": "oui",
+  "app_ios": "inconnu",
+  "app_android": "inconnu",
+  "besoin": "Passer de 2 restaurants à un réseau de franchise : site multi-établissements, commande/click & collect en propre, fidélité, outils franchisés.",
+  "faits": [
+   {
+    "fait": "Choukran a levé plus de 5 millions d'euros en février 2026 et prévoit plus de 30 restaurants en trois ans, 37 fin 2029, majoritairement en franchise",
+    "url": "https://www.neorestauration.com/article/choukran-leve-plus-de-5-millions-d-euros-pour-accelerer-son-developpement,73977",
+    "source_type": "presse",
+    "date": "2026-02"
+   },
+   {
+    "fait": "Deux restaurants parisiens (69 rue d'Aboukir, 29 rue Saint-Georges) générant 2,3 M€ de CA",
+    "url": "https://www.neorestauration.com/article/choukran-leve-plus-de-5-millions-d-euros-pour-accelerer-son-developpement,73977",
+    "source_type": "presse",
+    "date": "2026-02"
+   },
+   {
+    "fait": "Communication de l'enseigne : réservation en ligne et vente à emporter/livraison via Uber Eats",
+    "url": "https://www.tiktok.com/@choukranclub/video/7467994212227714306",
+    "source_type": "réseau social officiel",
+    "date": "2025-02"
+   }
+  ],
+  "inference": "Un réseau qui veut passer de 2 à plus de 30 points de vente en franchise devra structurer son socle digital : pages par établissement, commande en direct (moins de dépendance aux plateformes), fidélité commune et outils pour les franchisés.",
+  "opportunite": "Site multi-établissements + module de commande/click & collect et fidélité en propre, puis extranet franchisés (reporting, documentation, commandes).",
+  "service": "Site web multi-établissements et application de commande/fidélité",
+  "signal_achat": "Levée de fonds 5 M€ (février 2026) + plan de franchise",
+  "urgence": "moyenne — levée datée de 7 mois, ouvertures planifiées sur 2026-2029",
+  "score_detail": {
+   "besoin": 16,
+   "urgence": 14,
+   "fit": 17,
+   "capacite": 8,
+   "accessibilite": 6,
+   "preuves": 10
+  },
+  "score": 71,
+  "niveau": "QUALIFIÉ",
+  "sources": [
+   "https://www.neorestauration.com/article/choukran-leve-plus-de-5-millions-d-euros-pour-accelerer-son-developpement,73977",
+   "https://choukran.fr/politique.html",
+   "https://www.pagesjaunes.fr/pros/63645433",
+   "https://www.118712.fr/professionnels/WUFXWlJRHgI",
+   "https://www.tiktok.com/@choukranclub/video/7467994212227714306"
+  ],
+  "date_verification": "2026-09-24",
+  "objet_email": "Choukran — commande en direct pour le futur réseau",
+  "email_personnalise": "Bonjour,\n\nJ'ai lu dans Néorestauration que Choukran a levé plus de 5 M€ pour ouvrir une trentaine de restaurants d'ici 2029, en grande partie en franchise. Aujourd'hui, la vente à emporter passe notamment par Uber Eats et la réservation par un outil en ligne.\n\nAvec l'arrivée de franchisés, chaque adresse aura besoin de sa page, de la commande en direct et d'une fidélité commune, sans multiplier les commissions des plateformes.\n\nChez Capmedia, nous concevons des sites multi-établissements et des applications de commande et de fidélité pour des réseaux en croissance.\n\nQui pilote ce sujet chez vous ? Un échange de 20 minutes serait-il utile ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu la levée de plus de 5 M€ de Choukran pour ouvrir une trentaine de restaurants, surtout en franchise. Je voulais savoir qui s'occupe chez vous du site et de la commande en ligne pour les futures adresses.",
+  "relance": "Pour un réseau en franchise, une commande en direct commune à toutes les adresses permet de garder les données clients plutôt que de les laisser aux plateformes : est-ce un point que vous avez déjà tranché ?",
+  "pourquoi_demain": "Choukran vient de lever 5 M€ pour passer de 2 à plus de 30 restaurants en franchise et doit poser son socle digital avant les ouvertures.",
+  "equipe": "X08"
+ },
+ {
   "id": "T05-001",
   "entreprise": "Keepcool (DG Développement)",
   "siren": "",
@@ -2280,6 +2497,78 @@
   "relance": "Je peux vous envoyer une courte synthèse des irritants relevés dans les avis Keepcool et Neoness (connexion, réservation, notifications), sans engagement : cela vous serait-il utile ?",
   "pourquoi_demain": "Leurs adhérents signalent publiquement ne plus pouvoir se connecter à l'app et l'app sœur Neoness est à 1,9/5 : un audit/QA est un point d'entrée concret.",
   "equipe": "T05"
+ },
+ {
+  "entreprise": "Mutualia (UMG Mutualia)",
+  "siren": "823416359",
+  "secteur": "Mutuelle santé / prévoyance (monde agricole et rural)",
+  "ville": "Bobigny",
+  "departement": "93",
+  "region": "Île-de-France",
+  "site_web": "https://www.mutualia.fr",
+  "email": "com@mutualia.fr",
+  "telephone": "09 78 35 33 53",
+  "source_email": "https://espace.mutualia.fr/shell/eav/page/ESP_ADH_CGU",
+  "source_telephone": "https://www.mutualia.fr/faq",
+  "contact_nom": "Alain Plouzennec",
+  "contact_fonction": "Directeur de la publication",
+  "linkedin": "",
+  "effectif": "",
+  "capital": "",
+  "actualite": "Union regroupant Mutualia Alliance Santé, Mutualia Grand Ouest et Mutualia Territoires Solidaires",
+  "site_existant": "oui",
+  "app_ios": "oui",
+  "app_android": "inconnu",
+  "besoin": "Corriger les refus de connexion avec identifiants valides sur l'app « Mutualia votre mutuelle santé »",
+  "faits": [
+   {
+    "fait": "Avis App Store de l'app « Mutualia votre mutuelle santé » : plusieurs utilisateurs signalent des problèmes de connexion malgré des identifiants corrects",
+    "url": "https://apps.apple.com/fr/app/1438018325?see-all=reviews&platform=iphone",
+    "source_type": "avis store",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "Page TotalBug 2026 Mutualia : utilisateurs n'arrivant pas à se connecter, même via l'application, identifiants non reconnus",
+    "url": "https://www.totalbug.com/mutualia/",
+    "source_type": "signalement de pannes",
+    "date": "2026-09-24"
+   },
+   {
+    "fait": "La FAQ officielle consacre une rubrique aux identifiants rejetés (vérifier le nom de la mutuelle sur la carte de tiers payant et repasser par mutualia.fr), signe d'un aiguillage multi-entités source de confusion",
+    "url": "https://www.mutualia.fr/faq/espace-adherent",
+    "source_type": "site officiel",
+    "date": "2026-09-24"
+   }
+  ],
+  "inference": "L'union de trois mutuelles derrière une même app crée un aiguillage d'authentification confus : des adhérents valides sont rejetés, ce qui alimente le support téléphonique.",
+  "opportunite": "Audit UX/technique du parcours de connexion multi-entités de l'app et de l'espace adhérent, puis correctifs (sélection automatique de l'entité, messages d'erreur).",
+  "service": "Audit technique et UX + maintenance d'application existante",
+  "signal_achat": "Avis App Store et TotalBug : identifiants valides refusés",
+  "urgence": "moyenne : signal récurrent, non daté précisément",
+  "score_detail": {
+   "besoin": 19,
+   "urgence": 11,
+   "fit": 17,
+   "capacite": 9,
+   "accessibilite": 5,
+   "preuves": 10
+  },
+  "sources": [
+   "https://apps.apple.com/fr/app/1438018325?see-all=reviews&platform=iphone",
+   "https://www.totalbug.com/mutualia/",
+   "https://www.mutualia.fr/faq/espace-adherent",
+   "https://espace.mutualia.fr/shell/eav/page/ESP_ADH_CGU"
+  ],
+  "objet_email": "Connexion à l'app Mutualia",
+  "email_personnalise": "Bonjour,\n\nEn lisant les avis de l'application « Mutualia votre mutuelle santé » sur l'App Store et sur TotalBug, j'ai relevé plusieurs adhérents dont les identifiants sont refusés alors qu'ils sont corrects. Votre FAQ explique d'ailleurs qu'il faut vérifier le nom de la mutuelle sur la carte de tiers payant.\n\nCe type d'aiguillage entre plusieurs entités est souvent à l'origine d'appels évitables au service adhérents.\n\nCapmedia audite et corrige des parcours de connexion sur des applications existantes, sans refonte complète.\n\nQui pilote l'application chez Mutualia ?\n\nNadir — Capmedia\nSi ce n'est pas un sujet pour vous, répondez simplement \"stop\" et je ne vous recontacterai pas.",
+  "accroche_tel": "Bonjour, Nadir de Capmedia. Je vous appelle parce que j'ai vu sur l'App Store plusieurs avis d'adhérents Mutualia dont les identifiants sont refusés alors qu'ils sont corrects. Je voulais savoir qui s'occupe de l'application chez vous.",
+  "relance": "Je peux vous proposer une maquette simple de choix automatique de l'entité Mutualia à la connexion, pour réduire les rejets d'identifiants.",
+  "pourquoi_demain": "Le problème de connexion est visible à la fois dans les avis App Store, sur TotalBug et dans leur propre FAQ.",
+  "equipe": "X04",
+  "id": "X04-004",
+  "score": 71,
+  "niveau": "QUALIFIÉ",
+  "date_verification": "2026-09-24"
  },
  {
   "id": "U04-001",
